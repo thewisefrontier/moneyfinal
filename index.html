@@ -434,7 +434,7 @@
     <div class="kpi-card">
       <div class="kpi-label">시중 유동성 M2</div>
       <div class="kpi-value" id="kpi-m2">-</div>
-      <div class="kpi-change neutral">십억원</div>
+      <div class="kpi-change neutral">광의통화(M2)</div>
       <div class="kpi-source">한국은행 ECOS</div>
     </div>
   </div>
@@ -564,24 +564,25 @@
         if (ind.indicator_code === 'USD_KRW') {
           document.getElementById('kpi-usdkrw').textContent = fmt(ind.value, '원', 0);
           const el = document.getElementById('kpi-usdkrw-signal');
-          el.innerHTML = `<span class="signal-dot ${ind.signal}"></span> ${ind.signal === 'red' ? '고위험' : ind.signal === 'yellow' ? '주의' : '안정'}`;
+          const diff1 = ind.prev_value ? (ind.value - ind.prev_value).toFixed(0) : null;
+          el.innerHTML = diff1 ? `<span class="${ind.signal === 'red' ? 'down' : ind.signal === 'yellow' ? 'neutral' : 'up'}">전일대비 ${diff1 > 0 ? '+' : ''}${diff1}원</span>` : '';
           // 티커
           const v = fmt(ind.value, '원', 0);
           ['t-usdkrw','t-usdkrw2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = v; });
         }
         if (ind.indicator_code === 'BASE_RATE') {
           document.getElementById('kpi-baserate').textContent = fmt(ind.value, '%');
-          document.getElementById('kpi-baserate-signal').innerHTML = `<span class="signal-dot ${ind.signal}"></span> ${ind.signal === 'yellow' ? '주의 수준' : '정상'}`;
+          document.getElementById('kpi-baserate-signal').innerHTML = `<span class="neutral">한국은행 결정</span>`;
           ['t-baserate','t-baserate2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,'%'); });
         }
         if (ind.indicator_code === 'FED_RATE') {
           document.getElementById('kpi-fedrate').textContent = fmt(ind.value, '%');
-          document.getElementById('kpi-fedrate-signal').innerHTML = `<span class="signal-dot ${ind.signal}"></span> Fed Rate`;
+          document.getElementById('kpi-fedrate-signal').innerHTML = `<span class="neutral">Fed Funds Rate</span>`;
           ['t-fedrate','t-fedrate2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,'%'); });
         }
         if (ind.indicator_code === 'M2_TOTAL') {
-          const m2T = (ind.value / 1000000).toFixed(0);
-          document.getElementById('kpi-m2').textContent = m2T + '조';
+          const m2T = (ind.value / 1000000).toFixed(1);
+          document.getElementById('kpi-m2').textContent = m2T + '조원';
           ['t-m2','t-m22'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = m2T + '조'; });
         }
         if (ind.indicator_code === 'USD_INDEX') {
