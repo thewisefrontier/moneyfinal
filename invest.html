@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>투자 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:13px;font-weight:600}
+.badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600}
+.badge-blue{background:rgba(56,139,253,.15);color:var(--blue)}
+.badge-green{background:rgba(63,185,80,.15);color:var(--green)}
+.badge-red{background:rgba(248,81,73,.15);color:var(--red)}
+.badge-yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+/* 티커 */
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+/* 신호등 */
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot.green{background:var(--green);box-shadow:0 0 5px var(--green)}
+.dot.yellow{background:var(--yellow);box-shadow:0 0 5px var(--yellow)}
+.dot.red{background:var(--red);box-shadow:0 0 5px var(--red)}
+/* 금리 행 */
+.rate-row{grid-template-columns:2fr 1fr auto auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+/* 지표 행 */
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+/* 공시 행 */
+.disc-row{grid-template-columns:auto 1fr auto;gap:16px}
+.disc-date{font-size:11px;color:var(--text2);white-space:nowrap}
+.disc-co{font-size:13px;font-weight:600}
+.disc-type{font-size:11px;color:var(--text2)}
+.dart-link{font-size:11px;color:var(--accent);padding:3px 8px;border:1px solid var(--accent);border-radius:4px;transition:all .15s}
+.dart-link:hover{background:var(--accent);color:#fff}
+/* 브리핑 */
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:12px}
+/* 주식 행 */
+.stock-row{grid-template-columns:auto 1fr auto auto auto;gap:12px}
+.s-rank{font-size:12px;color:var(--text2);width:20px}
+.s-name{font-size:13px;font-weight:600}
+.s-mkt{font-size:10px;color:var(--text2);margin-top:2px}
+.s-price{font-size:14px;font-weight:700;text-align:right}
+.s-change{font-size:11px;text-align:right}
+.s-cap{font-size:11px;color:var(--text2);text-align:right}</style>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html" class="">홈</a><a href="rates.html" class="">예금·적금</a><a href="invest.html" class="active">투자</a><a href="savings.html" class="">절세·연금</a><a href="insurance.html" class="">보험</a><a href="company.html" class="">기업정보</a><a href="macro.html" class="">경제지표</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">시장 지수</div></div>
+<div class="grid4" id="idx-grid">
+  <div class="kpi"><div class="kpi-label">코스피</div><div class="kpi-value" id="i-kospi">-</div><div class="kpi-sub" id="i-kospi-sub"></div></div>
+  <div class="kpi"><div class="kpi-label">코스닥</div><div class="kpi-value" id="i-kosdaq">-</div><div class="kpi-sub" id="i-kosdaq-sub"></div></div>
+  <div class="kpi"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="i-usd">-</div><div class="kpi-sub" id="i-usd-sub"></div></div>
+  <div class="kpi"><div class="kpi-label">달러 인덱스</div><div class="kpi-value" id="i-dxy">-</div><div class="kpi-sub"></div></div>
+</div>
+
+<div class="grid2">
+  <div>
+    <div class="sec-hd"><div class="sec-title">시가총액 상위 종목</div></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">전일 기준</span><span class="badge badge-blue">공공데이터포털</span></div>
+      <div class="filter-tabs">
+        <button class="ft active" onclick="filterS('ALL',this)">전체</button>
+        <button class="ft" onclick="filterS('KOSPI',this)">코스피</button>
+        <button class="ft" onclick="filterS('KOSDAQ',this)">코스닥</button>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+        <span>#</span><span>종목</span><span style="text-align:right">종가</span><span style="text-align:right">등락률</span><span style="text-align:right">시가총액</span>
+      </div>
+      <div id="stock-list"><div class="loading">로딩 중...</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-hd"><div class="sec-title">기업 재무지표</div></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">주요 20개 종목</span><span class="badge badge-blue">공공데이터포털</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:8px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+        <span>기업</span><span>PER</span><span>PBR</span><span>ROE</span><span>EPS</span>
+      </div>
+      <div id="finance-list"><div class="loading">로딩 중...</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">시장 위험 지표</div></div>
+<div class="grid3" id="risk-grid"><div class="loading">로딩 중...</div></div>
+
+<script>
+let stockAll=[];
+function stockHtml(list){
+  return list.slice(0,20).map((s,i)=>{
+    const cap=s.market_cap?((s.market_cap/1e12).toFixed(1)+'조'):'';
+    const chg=parseFloat(s.flt_rt||0);
+    return `<div class="row stock-row">
+      <div class="s-rank">${i+1}</div>
+      <div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.market_type||''} ${s.stock_code||''}</div></div>
+      <div class="s-price">${fmt(s.close_price,'',0)}</div>
+      <div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div>
+      <div class="s-cap">${cap}</div>
+    </div>`;
+  }).join('')||'<div class="empty">데이터 없음 (월요일 이후 갱신)</div>';
+}
+function filterS(mkt,btn){
+  btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const list=mkt==='ALL'?stockAll:stockAll.filter(s=>s.market_type===mkt);
+  document.getElementById('stock-list').innerHTML=stockHtml(list);
+}
+async function loadInvest(){
+  try{
+    const r=await fetch('data/market.json');
+    const d=await r.json();
+    const inds=d.indicators||[];
+    inds.forEach(i=>{
+      if(i.indicator_code==='KOSPI'){document.getElementById('i-kospi').textContent=fmt(i.value,'',2);document.getElementById('i-kospi-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
+      if(i.indicator_code==='KOSDAQ'){document.getElementById('i-kosdaq').textContent=fmt(i.value,'',2);document.getElementById('i-kosdaq-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
+      if(i.indicator_code==='USD_KRW'){document.getElementById('i-usd').textContent=fmt(i.value,'원',0);}
+      if(i.indicator_code==='USD_INDEX'){document.getElementById('i-dxy').textContent=fmt(i.value,'',2);}
+    });
+    // 위험 지표
+    const risk=['USD_KRW','US_YIELD_CURVE','USD_INDEX'];
+    const riskInds=inds.filter(i=>risk.includes(i.indicator_code));
+    const rg=document.getElementById('risk-grid');
+    if(riskInds.length){
+      rg.innerHTML=riskInds.map(i=>`
+        <div class="kpi">
+          <div class="kpi-label">${i.indicator_name}</div>
+          <div class="kpi-value ${sc(i.signal)}">${fmt(i.value,'',2)}</div>
+          <div class="kpi-sub">${i.unit}</div>
+        </div>`).join('');
+    } else {
+      rg.innerHTML='<div class="empty" style="grid-column:1/-1">데이터 없음</div>';
+    }
+  }catch(e){}
+  try{
+    const r=await fetch('data/stocks.json');
+    const d=await r.json();
+    stockAll=[...(d.kospi||[]),...(d.kosdaq||[])].sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));
+    document.getElementById('stock-list').innerHTML=stockHtml(stockAll);
+  }catch(e){document.getElementById('stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';}
+  try{
+    const r=await fetch('data/corp_finance.json');
+    const d=await r.json();
+    const cs=d.companies||[];
+    const fl=document.getElementById('finance-list');
+    fl.innerHTML=cs.length?cs.slice(0,20).map(c=>`
+      <div class="row" style="grid-template-columns:1fr auto auto auto auto;gap:8px">
+        <div style="font-size:13px;font-weight:600">${c.corp_name}</div>
+        <div style="font-size:12px;text-align:right">${fmt(c.per,'',1)}</div>
+        <div style="font-size:12px;text-align:right">${fmt(c.pbr,'',1)}</div>
+        <div style="font-size:12px;text-align:right;color:var(--green)">${fmt(c.roe,'%',1)}</div>
+        <div style="font-size:12px;text-align:right">${fmt(c.eps,'',0)}</div>
+      </div>`).join(''):'<div class="empty">기업재무 데이터 수집 예정</div>';
+  }catch(e){document.getElementById('finance-list').innerHTML='<div class="empty">기업재무 데이터 수집 예정</div>';}
+}
+loadInvest();
+</script></main>
+<div class="disclaimer">
+    ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
+    데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
+  </div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+
+function toggleTheme(){
+  const h=document.documentElement;
+  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
+  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
+}
+function fmt(v,u='',d=2){
+  if(v===null||v===undefined)return'-';
+  const n=parseFloat(v);
+  if(isNaN(n))return'-';
+  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
+}
+function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+
+async function loadTicker(){
+  try{
+    const r=await fetch('data/market.json');
+    const d=await r.json();
+    const inds=d.indicators||[];
+    const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};
+    let html='';
+    inds.forEach(i=>{
+      if(!labels[i.indicator_code])return;
+      const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');
+      html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
+    });
+    const el=document.getElementById('ticker-inner');
+    el.innerHTML=html+html; // 반복
+  }catch(e){}
+}
+loadTicker();
+</script>
+</body>
+</html>
