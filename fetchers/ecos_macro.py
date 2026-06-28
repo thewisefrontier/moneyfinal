@@ -1,6 +1,7 @@
 """
 한국은행 ECOS API 거시지표 수집기
 출처: https://ecos.bok.or.kr
+URL 형식: /api/StatisticSearch/{키}/json/kr/{시작건수}/{종료건수}/{통계코드}/{주기}/{시작일}/{종료일}/{항목코드}
 """
 import logging
 import requests
@@ -44,15 +45,6 @@ INDICATORS = [
         'unit': '백만달러',
         'category': '외화'
     },
-    {
-        'stat_code': '731Y003',
-        'cycle': 'M',
-        'item_code': '0000001',
-        'indicator_code': 'USD_KRW',
-        'indicator_name': '원달러 환율',
-        'unit': '원',
-        'category': '환율'
-    },
 ]
 
 
@@ -66,27 +58,18 @@ def fetch_ecos_stat(indicator: dict):
         start = (now - timedelta(days=30)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
 
-    # ECOS API: 시작순번/끝순번은 숫자로 URL에 직접 포함
-    url = "/".join([
-        "https://ecos.bok.or.kr/api/StatisticSearch",
-        ECOS_API_KEY,
-        "json",
-        "kr",
-        indicator['stat_code'],
-        indicator['cycle'],
-        start,
-        end,
-        indicator['item_code'],
-        "1",
-        "10"
-    ])
+    # 올바른 URL 형식: 시작건수/종료건수 가 통계코드 앞에 와야 함
+    url = (
+        f"https://ecos.bok.or.kr/api/StatisticSearch"
+        f"/{ECOS_API_KEY}/json/kr/1/10"
+        f"/{indicator['stat_code']}/{indicator['cycle']}"
+        f"/{start}/{end}/{indicator['item_code']}"
+    )
 
-    logger.info(f"ECOS URL: {url[:80]}...")
+    logger.info(f"ECOS 요청: {indicator['indicator_name']}")
 
     try:
         res = requests.get(url, timeout=15)
-        logger.info(f"ECOS 응답코드: {res.status_code}")
-        logger.info(f"ECOS 응답 앞부분: {res.text[:200]}")
         res.raise_for_status()
         data = res.json()
 
@@ -104,7 +87,6 @@ def fetch_ecos_stat(indicator: dict):
         prev = rows[-2] if len(rows) >= 2 else None
         value = float(latest.get('DATA_VALUE', 0) or 0)
         prev_value = float(prev.get('DATA_VALUE', 0) or 0) if prev else None
-        ref_date = str(latest.get('TIME', today_kst()))
 
         return {
             'indicator_code': indicator['indicator_code'],
@@ -126,14 +108,13 @@ def fetch_ecos_stat(indicator: dict):
 
 def main():
     logger.info("=== ECOS 거시지표 수집 시작 ===")
-    logger.info(f"ECOS_API_KEY 앞4자리: {ECOS_API_KEY[:4] if ECOS_API_KEY else '없음'}")
     results = []
 
     for indicator in INDICATORS:
         result = fetch_ecos_stat(indicator)
         if result:
             results.append(result)
-            logger.info(f"✅ {indicator['indicator_name']}: {result['value']}")
+            logger.info(f"✅ {indicator['indicator_name']}: {result['value']} {indicator['unit']}")
         else:
             logger.warning(f"❌ {indicator['indicator_name']}: 수집 실패")
 
