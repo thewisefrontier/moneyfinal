@@ -13,7 +13,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-06-26",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:20:27.498096+00:00",
+      "fetched_at": "2026-06-28T06:30:16.472181+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -28,7 +28,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-06-18",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:20:27.249324+00:00",
+      "fetched_at": "2026-06-28T06:30:16.1433+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -43,7 +43,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-05-01",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:20:26.960987+00:00",
+      "fetched_at": "2026-06-28T06:30:15.676296+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -58,7 +58,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-05-01",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:20:26.620891+00:00",
+      "fetched_at": "2026-06-28T06:30:15.452281+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -69,11 +69,11 @@
       "value": 2.5,
       "prev_value": 2.5,
       "unit": "%",
-      "signal": "green",
+      "signal": "yellow",
       "source": "한국은행 ECOS",
       "reference_date": "2026-06-28",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:20:21.773653+00:00",
+      "fetched_at": "2026-06-28T06:30:07.071764+00:00",
       "created_at": "2026-06-28T06:20:22.870866+00:00"
     }
   ]
