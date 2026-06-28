@@ -24,8 +24,7 @@ def save_json(filename: str, data: any):
 
 
 def export_rates():
-    """금리 데이터 export"""
-    # Supabase REST API: order 형식은 'column.desc' 또는 'column.asc'
+    """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)"""
     rates = supabase_select('rates', {
         'select': '*',
         'is_published': 'eq.true',
@@ -49,11 +48,11 @@ def export_rates():
 
 
 def export_market():
-    """거시지표 export"""
+    """거시지표 export (채권/ISA/KOFIA/ECOS/FRED/KRX 포함)"""
     indicators = supabase_select('market_indicators', {
         'select': '*',
         'order': 'fetched_at.desc',
-        'limit': '100'
+        'limit': '200'
     })
 
     # 지표별 최신값만
@@ -63,9 +62,18 @@ def export_market():
         if code not in latest:
             latest[code] = i
 
+    # 카테고리별 분류
+    by_category = {}
+    for i in latest.values():
+        cat = i.get('category', '기타')
+        if cat not in by_category:
+            by_category[cat] = []
+        by_category[cat].append(i)
+
     save_json('market.json', {
         'updated_at': today_kst(),
-        'indicators': list(latest.values())
+        'indicators': list(latest.values()),
+        'by_category': by_category
     })
 
 
@@ -84,7 +92,7 @@ def export_briefing():
 
 
 def export_corporate_alerts():
-    """기업 공시 알림 export - needs_review=false인 것만"""
+    """기업 공시 알림 export"""
     alerts = supabase_select('corporate_alerts', {
         'select': '*',
         'is_published': 'eq.true',
@@ -112,7 +120,6 @@ def export_ipo():
 
 def export_stocks():
     """주식 시세 export - 시가총액 상위 50"""
-    # KOSPI 상위 25 + KOSDAQ 상위 25
     kospi = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.KOSPI',
@@ -125,7 +132,6 @@ def export_stocks():
         'order': 'market_cap.desc',
         'limit': '25'
     })
-    # 최신 날짜만
     all_stocks = kospi + kosdaq
     save_json('stocks.json', {
         'updated_at': today_kst(),
@@ -148,6 +154,34 @@ def export_corp_finance():
     })
 
 
+def export_dividends():
+    """주식 배당 정보 export"""
+    dividends = supabase_select('stock_dividends', {
+        'select': '*',
+        'order': 'dps.desc',
+        'limit': '100'
+    })
+    save_json('dividends.json', {
+        'updated_at': today_kst(),
+        'total': len(dividends),
+        'dividends': dividends
+    })
+
+
+def export_short_selling():
+    """공매도(대차) 정보 export - 잔고 상위"""
+    short_data = supabase_select('stock_short', {
+        'select': '*',
+        'order': 'short_amount.desc',
+        'limit': '100'
+    })
+    save_json('short_selling.json', {
+        'updated_at': today_kst(),
+        'total': len(short_data),
+        'short_list': short_data
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -157,6 +191,8 @@ def main():
     export_ipo()
     export_stocks()
     export_corp_finance()
+    export_dividends()
+    export_short_selling()
     logger.info("=== JSON Export 완료 ===")
 
 
