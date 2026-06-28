@@ -1,5 +1,6 @@
 """
 한국은행 ECOS API 거시지표 수집기
+출처: https://ecos.bok.or.kr
 """
 import logging
 import requests
@@ -15,19 +16,11 @@ logger = logging.getLogger(__name__)
 ECOS_API_KEY = os.environ.get('ECOS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 
+# 검증된 ECOS 통계코드 목록
+# URL 형식: /api/StatisticSearch/{키}/json/kr/1/10/{통계코드}/{주기}/{시작}/{종료}/{항목코드}
 INDICATORS = [
     {
-        'stat_code': '101Y004',   # M2 광의통화
-        'cycle': 'M',
-        'item_code': 'BBLA00',
-        'indicator_code': 'M2_TOTAL',
-        'indicator_name': '시중 유동성(M2)',
-        'unit': '십억원',
-        'category': '유동성',
-        'start_days': 90
-    },
-    {
-        'stat_code': '722Y001',   # 기준금리
+        'stat_code': '722Y001',   # 한국은행 기준금리 (검증됨 - 수집 성공)
         'cycle': 'D',
         'item_code': '0101000',
         'indicator_code': 'BASE_RATE',
@@ -37,24 +30,44 @@ INDICATORS = [
         'start_days': 30
     },
     {
-        'stat_code': '036Y001',   # 거주자외화예금
+        'stat_code': '101Y002',   # M2 광의통화 (말잔, 원계열)
         'cycle': 'M',
-        'item_code': 'A',
+        'item_code': 'BBLA00',
+        'indicator_code': 'M2_TOTAL',
+        'indicator_name': '시중 유동성(M2)',
+        'unit': '십억원',
+        'category': '유동성',
+        'start_days': 120
+    },
+    {
+        'stat_code': '036Y001',   # 거주자외화예금 (전체)
+        'cycle': 'M',
+        'item_code': '*AA',
         'indicator_code': 'FOREIGN_DEPOSIT',
         'indicator_name': '거주자 외화예금',
         'unit': '백만달러',
         'category': '외화',
-        'start_days': 90
+        'start_days': 120
     },
     {
-        'stat_code': '731Y003',   # 원달러환율
+        'stat_code': '731Y003',   # 원달러 환율 (매매기준율)
         'cycle': 'M',
         'item_code': '0000001',
         'indicator_code': 'USD_KRW',
         'indicator_name': '원달러 환율',
         'unit': '원',
         'category': '환율',
-        'start_days': 90
+        'start_days': 60
+    },
+    {
+        'stat_code': '121Y002',   # 가계신용
+        'cycle': 'Q',
+        'item_code': 'S10A',
+        'indicator_code': 'HOUSEHOLD_CREDIT',
+        'indicator_name': '가계신용 잔액',
+        'unit': '십억원',
+        'category': '가계부채',
+        'start_days': 365
     },
 ]
 
@@ -62,18 +75,22 @@ INDICATORS = [
 def fetch_ecos_stat(indicator: dict):
     now = datetime.now(KST)
     days = indicator.get('start_days', 90)
+    cycle = indicator['cycle']
 
-    if indicator['cycle'] == 'M':
+    if cycle == 'M':
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
-    else:
+    elif cycle == 'Q':
+        start = (now - timedelta(days=days)).strftime('%Y%m')
+        end = now.strftime('%Y%m')
+    else:  # D
         start = (now - timedelta(days=days)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
 
     url = (
         f"https://ecos.bok.or.kr/api/StatisticSearch"
         f"/{ECOS_API_KEY}/json/kr/1/10"
-        f"/{indicator['stat_code']}/{indicator['cycle']}"
+        f"/{indicator['stat_code']}/{cycle}"
         f"/{start}/{end}/{indicator['item_code']}"
     )
 
@@ -92,8 +109,7 @@ def fetch_ecos_stat(indicator: dict):
             logger.warning(f"{indicator['indicator_name']}: 데이터 없음")
             return None
 
-        # 유효한 값만 필터
-        valid = [r for r in rows if r.get('DATA_VALUE') and r['DATA_VALUE'] != '0']
+        valid = [r for r in rows if r.get('DATA_VALUE') and r['DATA_VALUE'] not in ('0', '', None)]
         if not valid:
             logger.warning(f"{indicator['indicator_name']}: 유효 데이터 없음")
             return None
@@ -103,6 +119,14 @@ def fetch_ecos_stat(indicator: dict):
         value = float(latest.get('DATA_VALUE', 0) or 0)
         prev_value = float(prev.get('DATA_VALUE', 0) or 0) if prev else None
 
+        # 신호등 판단
+        signal = 'green'
+        if indicator['indicator_code'] == 'BASE_RATE':
+            if value >= 3.5:
+                signal = 'red'
+            elif value >= 2.5:
+                signal = 'yellow'
+
         return {
             'indicator_code': indicator['indicator_code'],
             'indicator_name': indicator['indicator_name'],
@@ -110,14 +134,14 @@ def fetch_ecos_stat(indicator: dict):
             'value': value,
             'prev_value': prev_value,
             'unit': indicator['unit'],
-            'signal': 'green',
+            'signal': signal,
             'source': '한국은행 ECOS',
             'reference_date': today_kst(),
             'fetched_at': now_kst()
         }
 
     except Exception as e:
-        logger.error(f"{indicator['indicator_name']} 수집 오류: {e}")
+        logger.error(f"{indicator['indicator_name']} 수집 오류: {type(e).__name__}")
         return None
 
 
