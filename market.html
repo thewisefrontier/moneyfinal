@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>투자 지표 | 머니파이널</title>
+  <style>
+
+    :root[data-theme="dark"] {
+      --bg: #0d1117; --bg2: #161b22; --bg3: #1c2128;
+      --border: #30363d; --text: #e6edf3; --text2: #8b949e;
+      --green: #3fb950; --red: #f85149; --yellow: #d29922; --blue: #388bfd; --accent: #388bfd;
+    }
+    :root[data-theme="light"] {
+      --bg: #ffffff; --bg2: #f6f8fa; --bg3: #eaeef2;
+      --border: #d0d7de; --text: #1f2328; --text2: #656d76;
+      --green: #1a7f37; --red: #cf222e; --yellow: #9a6700; --blue: #0969da; --accent: #0969da;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+    header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; height: 52px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 18px; font-weight: 700; color: var(--accent); text-decoration: none; letter-spacing: -0.5px; }
+    nav { display: flex; gap: 4px; }
+    nav a { color: var(--text2); text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; transition: all 0.15s; }
+    nav a:hover, nav a.active { color: var(--text); background: var(--bg3); }
+    .theme-btn { background: none; border: 1px solid var(--border); color: var(--text2); padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .section-title { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .section-title::before { content: ""; display: block; width: 3px; height: 16px; background: var(--accent); border-radius: 2px; }
+    .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 32px; }
+    .card-header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .card-title { font-size: 13px; font-weight: 600; }
+    .badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+    .badge-blue { background: rgba(56,139,253,0.15); color: var(--blue); }
+    .badge-green { background: rgba(63,185,80,0.15); color: var(--green); }
+    .filter-tabs { display: flex; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .filter-tab { font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border); background: none; color: var(--text2); cursor: pointer; transition: all 0.15s; }
+    .filter-tab.active, .filter-tab:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,139,253,0.1); }
+    .loading { color: var(--text2); font-size: 13px; padding: 20px 16px; text-align: center; }
+    .empty { color: var(--text2); font-size: 13px; padding: 40px 16px; text-align: center; }
+    .disclaimer { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 11px; color: var(--text2); text-align: center; margin-top: 32px; }
+    footer { border-top: 1px solid var(--border); padding: 20px; text-align: center; font-size: 11px; color: var(--text2); margin-top: 40px; }
+
+    .indicator-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+    @media (max-width: 900px) { .indicator-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .indicator-grid { grid-template-columns: 1fr; } }
+
+    .ind-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; transition: border-color 0.15s; }
+    .ind-card:hover { border-color: var(--accent); }
+    .ind-card-label { font-size: 11px; color: var(--text2); font-weight: 500; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ind-card-value { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .ind-card-change { font-size: 12px; color: var(--text2); }
+    .ind-card-source { font-size: 10px; color: var(--text2); margin-top: 8px; }
+
+    .signal-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .signal-dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .signal-dot.yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+    .signal-dot.red { background: var(--red); box-shadow: 0 0 6px var(--red); }
+
+    .gauge-wrap { padding: 4px 0; }
+    .gauge-bar { height: 3px; background: var(--bg3); border-radius: 2px; overflow: hidden; margin: 6px 0 2px; }
+    .gauge-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--green), var(--yellow), var(--red)); }
+    .gauge-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--text2); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+
+    .ind-row { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--border); align-items: center; }
+    .ind-row:last-child { border-bottom: none; }
+    .ind-row:hover { background: var(--bg3); }
+    .ind-name { font-size: 13px; font-weight: 500; }
+    .ind-cat { font-size: 11px; color: var(--text2); margin-top: 2px; }
+    .ind-val { font-size: 15px; font-weight: 700; text-align: right; }
+    .ind-unit { font-size: 11px; color: var(--text2); text-align: right; }
+    .up { color: var(--green); } .down { color: var(--red); } .neutral { color: var(--text2); }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">💰 머니파이널</a>
+  <nav>
+    <a href="index.html">홈</a>
+    <a href="rates.html" >금리</a>
+    <a href="market.html" class="active">투자</a>
+    <a href="alerts.html" >기업정보</a>
+  </nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div>
+</header>
+<main>
+
+  <div class="section-header">
+    <div class="section-title">시장 컨텍스트</div>
+  </div>
+  <div class="indicator-grid" id="market-cards">
+    <div class="loading">로딩 중...</div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-header">
+        <div class="section-title">국내 거시지표</div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">한국은행 ECOS</span>
+          <span class="badge badge-green">공공데이터</span>
+        </div>
+        <div id="domestic-list"><div class="loading">로딩 중...</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">
+        <div class="section-title">글로벌 지표</div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">미국 연준 FRED</span>
+          <span class="badge badge-green">공공데이터</span>
+        </div>
+        <div id="global-list"><div class="loading">로딩 중...</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
+    데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
+  </div>
+</main>
+<footer>© 2026 머니파이널 | 세상의 모든 재테크</footer>
+<script>
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    document.querySelector('.theme-btn').textContent = html.getAttribute('data-theme') === 'dark' ? '🌙' : '🌑';
+  }
+  function fmt(val, unit='', decimals=2) {
+    if (val === null || val === undefined) return '-';
+    const n = parseFloat(val);
+    if (isNaN(n)) return '-';
+    return n.toLocaleString('ko-KR', {minimumFractionDigits: decimals, maximumFractionDigits: decimals}) + (unit ? ' ' + unit : '');
+  }
+
+  function signalClass(s) { return s === 'red' ? 'down' : s === 'yellow' ? 'neutral' : 'up'; }
+
+  // 지표별 범위 설정 (게이지용)
+  const RANGES = {
+    'USD_KRW': [1100, 1800],
+    'BASE_RATE': [0, 6],
+    'FED_RATE': [0, 6],
+    'USD_INDEX': [80, 140],
+    'US_YIELD_CURVE': [-1, 3],
+    'US_CPI': [250, 380],
+  };
+
+  function gaugePercent(code, value) {
+    const r = RANGES[code];
+    if (!r) return 50;
+    return Math.min(100, Math.max(0, (value - r[0]) / (r[1] - r[0]) * 100));
+  }
+
+  async function loadMarket() {
+    try {
+      const res = await fetch('data/market.json');
+      const data = await res.json();
+      const indicators = data.indicators || [];
+
+      // 시장 컨텍스트 카드 (주요 지표)
+      const keyCards = ['USD_KRW','BASE_RATE','FED_RATE','USD_INDEX','US_YIELD_CURVE','M2_TOTAL'];
+      const cardEl = document.getElementById('market-cards');
+      const cardInds = keyCards.map(k => indicators.find(i => i.indicator_code === k)).filter(Boolean);
+
+      if (cardInds.length) {
+        cardEl.innerHTML = cardInds.map(i => {
+          const pct = gaugePercent(i.indicator_code, i.value);
+          const decimals = i.unit === '%' ? 2 : i.indicator_code === 'M2_TOTAL' ? 0 : 2;
+          const displayVal = i.indicator_code === 'M2_TOTAL'
+            ? (i.value/1000000).toFixed(1) + '조원'
+            : fmt(i.value, i.unit, decimals);
+          return `
+          <div class="ind-card">
+            <div class="ind-card-label">${i.indicator_name}</div>
+            <div class="ind-card-value ${signalClass(i.signal)}">${displayVal}</div>
+            <div class="gauge-wrap">
+              <div class="gauge-bar"><div class="gauge-fill" style="width:${pct}%"></div></div>
+              <div class="gauge-labels"><span>낮음</span><span>높음</span></div>
+            </div>
+          </div>`;
+        }).join('');
+      }
+
+      // 국내 지표
+      const domestic = indicators.filter(i => ['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'].includes(i.indicator_code));
+      const domEl = document.getElementById('domestic-list');
+      domEl.innerHTML = domestic.length ? domestic.map(i => `
+        <div class="ind-row">
+          <div>
+            <div class="ind-name">${i.indicator_name}</div>
+          </div>
+          <div>
+            <div class="ind-val ${signalClass(i.signal)}">${fmt(i.value, '', i.unit === '%' ? 2 : 0)} <span class="ind-unit">${i.unit}</span></div>
+          </div>
+        </div>
+      `).join('') : '<div class="empty">데이터 없음</div>';
+
+      // 글로벌 지표
+      const global = indicators.filter(i => ['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE'].includes(i.indicator_code));
+      const globEl = document.getElementById('global-list');
+      globEl.innerHTML = global.length ? global.map(i => `
+        <div class="ind-row">
+          <div>
+            <div class="ind-name">${i.indicator_name}</div>
+          </div>
+          <div>
+            <div class="ind-val ${signalClass(i.signal)}">${fmt(i.value, '', 2)} <span class="ind-unit">${i.unit}</span></div>
+          </div>
+        </div>
+      `).join('') : '<div class="empty">데이터 없음</div>';
+
+    } catch(e) { console.error(e); }
+  }
+
+  loadMarket();
+</script>
+</body>
+</html>
