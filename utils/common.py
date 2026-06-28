@@ -17,13 +17,20 @@ KST = pytz.timezone('Asia/Seoul')
 SUPABASE_URL = os.environ['SUPABASE_URL'].rstrip('/')
 SUPABASE_KEY = os.environ['SUPABASE_KEY']
 
-# URL 마스킹 (로그용)
-_URL_MASKED = SUPABASE_URL[:8] + '***' + SUPABASE_URL[-10:] if len(SUPABASE_URL) > 18 else '***'
-
 HEADERS = {
     'apikey': SUPABASE_KEY,
     'Authorization': f'Bearer {SUPABASE_KEY}',
     'Content-Type': 'application/json',
+}
+
+# 테이블별 upsert conflict 컬럼 지정
+CONFLICT_COLUMNS = {
+    'rates': 'institution,product_name,category,period',
+    'market_indicators': 'indicator_code,reference_date',
+    'corporate_alerts': 'company_name,alert_type,disclosure_date',
+    'ipo_status': 'company_name,status,request_date',
+    'financial_health': 'institution,reference_date',
+    'daily_briefing': 'briefing_date',
 }
 
 
@@ -31,15 +38,21 @@ def supabase_upsert(table: str, data: list) -> bool:
     if not data:
         return True
     url = f"{SUPABASE_URL}/rest/v1/{table}"
+    
+    # 테이블별 conflict 컬럼 지정
+    conflict = CONFLICT_COLUMNS.get(table, '')
+    prefer = 'resolution=merge-duplicates,return=minimal'
+    if conflict:
+        prefer += f',on_conflict={conflict}'
+
     try:
         res = requests.post(
             url,
-            headers={**HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal'},
+            headers={**HEADERS, 'Prefer': prefer},
             json=data,
             timeout=30
         )
         if res.status_code >= 400:
-            # URL 마스킹 후 로그
             logging.error(f"[{table}] upsert 실패 ({res.status_code}): {res.text[:200]}")
             res.raise_for_status()
         logging.info(f"[{table}] {len(data)}건 upsert 완료")
