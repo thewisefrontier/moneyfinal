@@ -1,0 +1,55 @@
+name: Weekly Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch bank rates (FSS)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/bank_rates.py
+        timeout-minutes: 15
+        continue-on-error: true
+
+      - name: Fetch global indicators (FRED)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python fetchers/fred_global.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Export data to JSON
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+        timeout-minutes: 10
+
+      - name: Commit & push JSON
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || git commit -m "data: $(date +'%Y-%m-%d') weekly update"
+          git push
