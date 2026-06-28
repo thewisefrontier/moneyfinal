@@ -21,6 +21,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Fetch daily exchange rate (ECOS)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python fetchers/ecos_daily.py
+        timeout-minutes: 10
+        continue-on-error: true
+
       - name: Fetch DART disclosures
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
