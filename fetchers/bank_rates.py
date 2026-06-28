@@ -1,5 +1,6 @@
 """
-은행연합회/금감원 금리 수집기 (디버그 버전)
+금감원 금융상품한눈에 금리 수집기
+출처: finlife.fss.or.kr
 """
 import logging
 import requests
@@ -17,6 +18,7 @@ CATEGORY_MAP = {
     'savingProductsSearch': '적금',
 }
 
+
 def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> list:
     results = []
     url = f"{FSS_BASE_URL}/{product_type}.json"
@@ -27,14 +29,16 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
     }
     try:
         res = requests.get(url, params=params, timeout=15)
-        logger.info(f"FSS API 상태코드: {res.status_code}")
-        logger.info(f"FSS API 응답 앞부분: {res.text[:300]}")
         res.raise_for_status()
         data = res.json()
 
-        base_list = data.get('result', {}).get('baseList', [])
-        option_list = data.get('result', {}).get('optionList', [])
-        logger.info(f"baseList: {len(base_list)}건, optionList: {len(option_list)}건")
+        result = data.get('result', {})
+        if result.get('err_cd') != '000':
+            logger.error(f"FSS API 오류: {result.get('err_msg')}")
+            return []
+
+        base_list = result.get('baseList', [])
+        option_list = result.get('optionList', [])
 
         for product in base_list:
             fin_prdt_cd = product.get('fin_prdt_cd')
@@ -55,22 +59,25 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
                     'fetched_at': now_kst()
                 })
     except Exception as e:
-        logger.error(f"FSS API 오류: {e}")
+        logger.error(f"FSS API 수집 오류: {type(e).__name__}")
     return results
 
 
 def main():
     logger.info("=== 은행 금리 수집 시작 ===")
-        all_rates = []
+    all_rates = []
 
+    # 은행 예금/적금
     for product_type in ['depositProductsSearch', 'savingProductsSearch']:
         rates = fetch_fss_products(product_type, '020000')
         logger.info(f"{CATEGORY_MAP.get(product_type)} {len(rates)}건 수집")
         all_rates.extend(rates)
 
-    savings = fetch_fss_products('depositProductsSearch', '030300')
-    logger.info(f"저축은행 {len(savings)}건 수집")
-    all_rates.extend(savings)
+    # 저축은행
+    for product_type in ['depositProductsSearch', 'savingProductsSearch']:
+        rates = fetch_fss_products(product_type, '030300')
+        logger.info(f"저축은행 {CATEGORY_MAP.get(product_type)} {len(rates)}건 수집")
+        all_rates.extend(rates)
 
     valid = [r for r in all_rates if r['rate'] > 0]
     logger.info(f"유효 금리 총 {len(valid)}건")
