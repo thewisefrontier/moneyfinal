@@ -110,6 +110,44 @@ def export_ipo():
     })
 
 
+def export_stocks():
+    """주식 시세 export - 시가총액 상위 50"""
+    # KOSPI 상위 25 + KOSDAQ 상위 25
+    kospi = supabase_select('stock_prices', {
+        'select': '*',
+        'market_type': 'eq.KOSPI',
+        'order': 'market_cap.desc',
+        'limit': '25'
+    })
+    kosdaq = supabase_select('stock_prices', {
+        'select': '*',
+        'market_type': 'eq.KOSDAQ',
+        'order': 'market_cap.desc',
+        'limit': '25'
+    })
+    # 최신 날짜만
+    all_stocks = kospi + kosdaq
+    save_json('stocks.json', {
+        'updated_at': today_kst(),
+        'kospi': kospi,
+        'kosdaq': kosdaq,
+        'total': len(all_stocks)
+    })
+
+
+def export_corp_finance():
+    """기업 재무정보 export"""
+    finance = supabase_select('corp_finance', {
+        'select': 'stock_code,corp_name,fiscal_year,revenue,operating_profit,net_profit,per,pbr,roe,eps',
+        'order': 'fetched_at.desc',
+        'limit': '50'
+    })
+    save_json('corp_finance.json', {
+        'updated_at': today_kst(),
+        'companies': finance
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -117,6 +155,8 @@ def main():
     export_briefing()
     export_corporate_alerts()
     export_ipo()
+    export_stocks()
+    export_corp_finance()
     logger.info("=== JSON Export 완료 ===")
 
 
