@@ -61,8 +61,7 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
 
 def main():
     logger.info("=== 은행 금리 수집 시작 ===")
-    logger.info(f"FSS_API_KEY 길이: {len(FSS_API_KEY)} (앞4자리: {FSS_API_KEY[:4] if FSS_API_KEY else '없음'})")
-    all_rates = []
+        all_rates = []
 
     for product_type in ['depositProductsSearch', 'savingProductsSearch']:
         rates = fetch_fss_products(product_type, '020000')
