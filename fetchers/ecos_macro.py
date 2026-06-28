@@ -1,6 +1,7 @@
 """
 한국은행 ECOS API 거시지표 수집기
 출처: https://ecos.bok.or.kr
+URL: /api/StatisticSearch/{키}/json/kr/1/10/{통계코드}/{주기}/{시작}/{종료}/{항목코드}
 """
 import logging
 import requests
@@ -16,11 +17,10 @@ logger = logging.getLogger(__name__)
 ECOS_API_KEY = os.environ.get('ECOS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 
-# 검증된 ECOS 통계코드 목록
-# URL 형식: /api/StatisticSearch/{키}/json/kr/1/10/{통계코드}/{주기}/{시작}/{종료}/{항목코드}
+# ECOS 통계코드 (통계표 파일 및 사이트에서 직접 확인)
 INDICATORS = [
     {
-        'stat_code': '722Y001',   # 한국은행 기준금리 (검증됨 - 수집 성공)
+        'stat_code': '722Y001',   # 한국은행 기준금리 (검증됨)
         'cycle': 'D',
         'item_code': '0101000',
         'indicator_code': 'BASE_RATE',
@@ -30,44 +30,34 @@ INDICATORS = [
         'start_days': 30
     },
     {
-        'stat_code': '101Y002',   # M2 광의통화 (말잔, 원계열)
+        'stat_code': '161Y006',   # M2 상품별 구성내역(평잔, 원계열)
         'cycle': 'M',
-        'item_code': 'BBLA00',
+        'item_code': 'BBHA00',
         'indicator_code': 'M2_TOTAL',
-        'indicator_name': '시중 유동성(M2)',
+        'indicator_name': '시중 유동성(M2, 평잔)',
         'unit': '십억원',
         'category': '유동성',
         'start_days': 120
     },
     {
-        'stat_code': '036Y001',   # 거주자외화예금 (전체)
-        'cycle': 'M',
-        'item_code': '*AA',
-        'indicator_code': 'FOREIGN_DEPOSIT',
-        'indicator_name': '거주자 외화예금',
-        'unit': '백만달러',
-        'category': '외화',
-        'start_days': 120
-    },
-    {
-        'stat_code': '731Y003',   # 원달러 환율 (매매기준율)
-        'cycle': 'M',
+        'stat_code': '731Y001',   # 주요국 통화의 대원화환율 (일별)
+        'cycle': 'D',
         'item_code': '0000001',
         'indicator_code': 'USD_KRW',
         'indicator_name': '원달러 환율',
         'unit': '원',
         'category': '환율',
-        'start_days': 60
+        'start_days': 30
     },
     {
-        'stat_code': '121Y002',   # 가계신용
+        'stat_code': '151Y001',   # 가계신용(업권별, 분기)
         'cycle': 'Q',
         'item_code': 'S10A',
         'indicator_code': 'HOUSEHOLD_CREDIT',
         'indicator_name': '가계신용 잔액',
         'unit': '십억원',
         'category': '가계부채',
-        'start_days': 365
+        'start_days': 400
     },
 ]
 
@@ -77,10 +67,7 @@ def fetch_ecos_stat(indicator: dict):
     days = indicator.get('start_days', 90)
     cycle = indicator['cycle']
 
-    if cycle == 'M':
-        start = (now - timedelta(days=days)).strftime('%Y%m')
-        end = now.strftime('%Y%m')
-    elif cycle == 'Q':
+    if cycle in ('M', 'Q'):
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
     else:  # D
@@ -119,12 +106,16 @@ def fetch_ecos_stat(indicator: dict):
         value = float(latest.get('DATA_VALUE', 0) or 0)
         prev_value = float(prev.get('DATA_VALUE', 0) or 0) if prev else None
 
-        # 신호등 판단
         signal = 'green'
         if indicator['indicator_code'] == 'BASE_RATE':
             if value >= 3.5:
                 signal = 'red'
             elif value >= 2.5:
+                signal = 'yellow'
+        elif indicator['indicator_code'] == 'USD_KRW':
+            if value >= 1400:
+                signal = 'red'
+            elif value >= 1300:
                 signal = 'yellow'
 
         return {
