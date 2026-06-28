@@ -82,8 +82,16 @@ def main():
     valid = [r for r in all_rates if r['rate'] > 0]
     logger.info(f"유효 금리 총 {len(valid)}건")
 
-    if valid:
-        supabase_upsert('rates', valid)
+    # 배치 내 중복 제거 (같은 기관+상품+카테고리+기간 중복 시 마지막 값 유지)
+    seen = {}
+    for r in valid:
+        key = (r['institution'], r['product_name'], r['category'], r['period'])
+        seen[key] = r
+    deduped = list(seen.values())
+    logger.info(f"중복 제거 후 {len(deduped)}건")
+
+    if deduped:
+        supabase_upsert('rates', deduped)
 
     logger.info("=== 은행 금리 수집 완료 ===")
 
