@@ -27,9 +27,22 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
         'topFinGrpNo': top_fin_grp_no,
         'pageNo': 1
     }
+    # 재시도 로직 (최대 3회)
+    for attempt in range(3):
+        try:
+            res = requests.get(url, params=params, timeout=30)
+            res.raise_for_status()
+            break
+        except requests.exceptions.Timeout:
+            logger.warning(f"FSS API 타임아웃 (시도 {attempt+1}/3)")
+            if attempt == 2:
+                logger.error("FSS API 최대 재시도 초과")
+                return results
+            import time; time.sleep(5)
+        except Exception as e:
+            logger.error(f"FSS API 수집 오류: {type(e).__name__}")
+            return results
     try:
-        res = requests.get(url, params=params, timeout=15)
-        res.raise_for_status()
         data = res.json()
 
         result = data.get('result', {})
@@ -59,7 +72,7 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
                     'fetched_at': now_kst()
                 })
     except Exception as e:
-        logger.error(f"FSS API 수집 오류: {type(e).__name__}")
+        logger.error(f"FSS API 데이터 파싱 오류: {type(e).__name__}")
     return results
 
 
