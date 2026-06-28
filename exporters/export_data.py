@@ -19,18 +19,20 @@ def save_json(filename: str, data: any):
     path = os.path.join(DATA_DIR, filename)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
-    logger.info(f"저장 완료: {filename} ({len(data) if isinstance(data, list) else 1}건)")
+    count = len(data) if isinstance(data, list) else 1
+    logger.info(f"저장 완료: {filename} ({count}건)")
 
 
 def export_rates():
     """금리 데이터 export"""
+    # Supabase REST API: order 형식은 'column.desc' 또는 'column.asc'
     rates = supabase_select('rates', {
         'select': '*',
         'is_published': 'eq.true',
-        'order': 'max_rate.desc'
+        'order': 'max_rate.desc',
+        'limit': '2000'
     })
 
-    # 카테고리별 분류
     by_category = {}
     for r in rates:
         cat = r.get('category', '기타')
@@ -50,7 +52,8 @@ def export_market():
     """거시지표 export"""
     indicators = supabase_select('market_indicators', {
         'select': '*',
-        'order': 'fetched_at.desc'
+        'order': 'fetched_at.desc',
+        'limit': '100'
     })
 
     # 지표별 최신값만
@@ -81,12 +84,12 @@ def export_briefing():
 
 
 def export_corporate_alerts():
-    """기업 공시 알림 export"""
+    """기업 공시 알림 export - needs_review=false인 것만"""
     alerts = supabase_select('corporate_alerts', {
         'select': '*',
         'is_published': 'eq.true',
         'order': 'fetched_at.desc',
-        'limit': '50'
+        'limit': '100'
     })
     save_json('alerts.json', {
         'updated_at': today_kst(),
