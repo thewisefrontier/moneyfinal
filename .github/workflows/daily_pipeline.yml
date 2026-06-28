@@ -21,6 +21,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Fetch stock prices (주식시세)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/stock_prices.py
+        timeout-minutes: 15
+        continue-on-error: true
+
       - name: Fetch KRX index (코스피/코스닥)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
