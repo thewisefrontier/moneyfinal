@@ -53,7 +53,7 @@ def generate_rate_summary(rates: list) -> str:
         f"- {r['institution']} {r['product_name']}: 최고 {r.get('max_rate', r['rate'])}% ({r.get('period','')})"
         for r in top
     ])
-    return call_gemini(f"다음 금리 TOP5를 3문장 이내로 요약:\n{rate_text}", 200)
+    return call_gemini(f"다음 금리 TOP5를 3문장 이내로 요약하세요. 마크다운 기호 사용 금지:\n{rate_text}", 200)
 
 
 def generate_market_summary(indicators: list) -> str:
@@ -63,13 +63,21 @@ def generate_market_summary(indicators: list) -> str:
         f"- {i['indicator_name']}: {i['value']} {i.get('unit','')} (신호: {i.get('signal','green')})"
         for i in indicators
     ])
-    return call_gemini(f"다음 거시지표를 3문장 이내로 객관적 요약:\n{text}", 200)
+    return call_gemini(f"다음 거시지표를 3문장 이내로 객관적으로 요약하세요. 마크다운 기호 사용 금지:\n{text}", 200)
 
 
 def generate_headline(rate_summary: str, market_summary: str) -> str:
     return call_gemini(
-        f"다음 요약 바탕으로 오늘의 헤드라인 20자 이내 작성 (투자권유 없이 팩트만):\n금리: {rate_summary[:100]}\n시장: {market_summary[:100]}",
-        50
+        f"""오늘의 금융 헤드라인을 작성하세요.
+규칙:
+- 반드시 20자 이내
+- 마크다운 기호 절대 금지 (**, [], # 등)
+- 투자 권유 없이 팩트만
+- 헤드라인 텍스트만 출력 (설명 없이)
+
+금리: {rate_summary[:100]}
+시장: {market_summary[:100]}""",
+        30
     )
 
 
