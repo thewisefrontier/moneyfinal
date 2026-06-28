@@ -1,719 +1,261 @@
 <!DOCTYPE html>
 <html lang="ko" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>머니파이널 | 대한민국 재테크 데이터 허브</title>
-  <meta name="description" content="세상의 모든 재테크">
-  <style>
-    :root[data-theme="dark"] {
-      --bg: #0d1117;
-      --bg2: #161b22;
-      --bg3: #1c2128;
-      --border: #30363d;
-      --text: #e6edf3;
-      --text2: #8b949e;
-      --green: #3fb950;
-      --red: #f85149;
-      --yellow: #d29922;
-      --blue: #388bfd;
-      --accent: #388bfd;
-    }
-    :root[data-theme="light"] {
-      --bg: #ffffff;
-      --bg2: #f6f8fa;
-      --bg3: #eaeef2;
-      --border: #d0d7de;
-      --text: #1f2328;
-      --text2: #656d76;
-      --green: #1a7f37;
-      --red: #cf222e;
-      --yellow: #9a6700;
-      --blue: #0969da;
-      --accent: #0969da;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    /* 상단 티커 */
-    .ticker-bar {
-      background: var(--bg2);
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-      height: 32px;
-      display: flex;
-      align-items: center;
-    }
-    .ticker-inner {
-      display: flex;
-      gap: 32px;
-      animation: ticker 40s linear infinite;
-      white-space: nowrap;
-      padding: 0 16px;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .ticker-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      color: var(--text2);
-    }
-    .ticker-item .name { color: var(--text); font-weight: 500; }
-    .ticker-item .val { font-weight: 600; }
-    .up { color: var(--green); }
-    .down { color: var(--red); }
-    .neutral { color: var(--text2); }
-
-    /* 헤더 */
-    header {
-      background: var(--bg2);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .logo {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: -0.5px;
-    }
-    nav { display: flex; gap: 4px; }
-    nav a {
-      color: var(--text2);
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.15s;
-    }
-    nav a:hover, nav a.active {
-      color: var(--text);
-      background: var(--bg3);
-    }
-    .header-right { display: flex; align-items: center; gap: 12px; }
-    .theme-btn {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text2);
-      padding: 5px 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 13px;
-      transition: all 0.15s;
-    }
-    .theme-btn:hover { color: var(--text); border-color: var(--text2); }
-
-    /* 메인 */
-    main { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
-
-    /* 섹션 헤더 */
-    .section-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-    .section-title {
-      font-size: 15px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .section-title::before {
-      content: '';
-      display: block;
-      width: 3px;
-      height: 16px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-    .updated {
-      font-size: 11px;
-      color: var(--text2);
-    }
-
-    /* 핵심 지표 그리드 */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-    @media (max-width: 768px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .kpi-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px;
-      transition: border-color 0.15s;
-    }
-    .kpi-card:hover { border-color: var(--accent); }
-    .kpi-label {
-      font-size: 11px;
-      color: var(--text2);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-    .kpi-value {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-    }
-    .kpi-change {
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .kpi-source { font-size: 10px; color: var(--text2); margin-top: 8px; }
-
-    /* 신호등 */
-    .signal-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    .signal-dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
-    .signal-dot.yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
-    .signal-dot.red { background: var(--red); box-shadow: 0 0 6px var(--red); }
-
-    /* 2컬럼 레이아웃 */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-    @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
-
-    /* 카드 */
-    .card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .card-header {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .card-title { font-size: 13px; font-weight: 600; }
-    .card-body { padding: 0; }
-
-    /* 금리 테이블 */
-    .rate-table { width: 100%; }
-    .rate-row {
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-      gap: 12px;
-      padding: 10px 16px;
-      border-bottom: 1px solid var(--border);
-      align-items: center;
-      transition: background 0.1s;
-    }
-    .rate-row:last-child { border-bottom: none; }
-    .rate-row:hover { background: var(--bg3); }
-    .rate-bank { font-size: 12px; font-weight: 500; }
-    .rate-product { font-size: 11px; color: var(--text2); }
-    .rate-period {
-      font-size: 11px;
-      color: var(--text2);
-      background: var(--bg3);
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-    .rate-value {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--green);
-      text-align: right;
-    }
-    .rate-base { font-size: 11px; color: var(--text2); text-align: right; }
-
-    /* 시장 지표 */
-    .indicator-row {
-      display: grid;
-      grid-template-columns: 1fr auto auto auto;
-      gap: 12px;
-      padding: 10px 16px;
-      border-bottom: 1px solid var(--border);
-      align-items: center;
-    }
-    .indicator-row:last-child { border-bottom: none; }
-    .indicator-row:hover { background: var(--bg3); }
-    .ind-name { font-size: 12px; font-weight: 500; }
-    .ind-source { font-size: 11px; color: var(--text2); }
-    .ind-value { font-size: 14px; font-weight: 700; text-align: right; display: inline; }
-    .ind-unit { font-size: 11px; color: var(--text2); display: inline; margin-left: 2px; }
-    .ind-value-wrap { text-align: right; }
-
-    /* 게이지 바 */
-    .gauge-wrap { padding: 8px 16px 12px; }
-    .gauge-bar {
-      height: 4px;
-      background: var(--bg3);
-      border-radius: 2px;
-      overflow: hidden;
-      margin: 6px 0;
-    }
-    .gauge-fill {
-      height: 100%;
-      border-radius: 2px;
-      background: linear-gradient(90deg, var(--green), var(--yellow), var(--red));
-    }
-    .gauge-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      color: var(--text2);
-    }
-
-    /* 브리핑 */
-    .briefing-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 32px;
-    }
-    .briefing-date { font-size: 11px; color: var(--text2); margin-bottom: 8px; }
-    .briefing-headline {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-    .briefing-section { margin-bottom: 12px; }
-    .briefing-section-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-    .briefing-text { font-size: 13px; color: var(--text2); line-height: 1.6; }
-
-    /* 면책 */
-    .disclaimer {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 11px;
-      color: var(--text2);
-      text-align: center;
-      margin-top: 32px;
-    }
-
-    /* 로딩 */
-    .loading { color: var(--text2); font-size: 13px; padding: 20px 16px; }
-
-    /* 뱃지 */
-    .badge {
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-    .badge-blue { background: rgba(56,139,253,0.15); color: var(--blue); }
-    .badge-green { background: rgba(63,185,80,0.15); color: var(--green); }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px;
-      text-align: center;
-      font-size: 11px;
-      color: var(--text2);
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>머니파이널 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:13px;font-weight:600}
+.badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600}
+.badge-blue{background:rgba(56,139,253,.15);color:var(--blue)}
+.badge-green{background:rgba(63,185,80,.15);color:var(--green)}
+.badge-red{background:rgba(248,81,73,.15);color:var(--red)}
+.badge-yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+/* 티커 */
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+/* 신호등 */
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot.green{background:var(--green);box-shadow:0 0 5px var(--green)}
+.dot.yellow{background:var(--yellow);box-shadow:0 0 5px var(--yellow)}
+.dot.red{background:var(--red);box-shadow:0 0 5px var(--red)}
+/* 금리 행 */
+.rate-row{grid-template-columns:2fr 1fr auto auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+/* 지표 행 */
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+/* 공시 행 */
+.disc-row{grid-template-columns:auto 1fr auto;gap:16px}
+.disc-date{font-size:11px;color:var(--text2);white-space:nowrap}
+.disc-co{font-size:13px;font-weight:600}
+.disc-type{font-size:11px;color:var(--text2)}
+.dart-link{font-size:11px;color:var(--accent);padding:3px 8px;border:1px solid var(--accent);border-radius:4px;transition:all .15s}
+.dart-link:hover{background:var(--accent);color:#fff}
+/* 브리핑 */
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:12px}
+/* 주식 행 */
+.stock-row{grid-template-columns:auto 1fr auto auto auto;gap:12px}
+.s-rank{font-size:12px;color:var(--text2);width:20px}
+.s-name{font-size:13px;font-weight:600}
+.s-mkt{font-size:10px;color:var(--text2);margin-top:2px}
+.s-price{font-size:14px;font-weight:700;text-align:right}
+.s-change{font-size:11px;text-align:right}
+.s-cap{font-size:11px;color:var(--text2);text-align:right}</style>
 </head>
 <body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html" class="active">홈</a><a href="rates.html" class="">예금·적금</a><a href="invest.html" class="">투자</a><a href="savings.html" class="">절세·연금</a><a href="insurance.html" class="">보험</a><a href="company.html" class="">기업정보</a><a href="macro.html" class="">경제지표</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<div class="briefing" id="briefing" style="display:none">
+  <div class="br-date" id="br-date"></div>
+  <div class="br-hl" id="br-hl"></div>
+  <div class="br-sec-label">💰 금리 현황</div>
+  <div class="br-text" id="br-rate"></div>
+  <div class="br-sec-label">📈 시장 현황</div>
+  <div class="br-text" id="br-market"></div>
+</div>
 
-<!-- 티커 바 -->
-<div class="ticker-bar">
-  <div class="ticker-inner" id="ticker">
-    <div class="ticker-item"><span class="name">원달러</span><span class="val" id="t-usdkrw">-</span></div>
-    <div class="ticker-item"><span class="name">미국금리</span><span class="val" id="t-fedrate">-</span></div>
-    <div class="ticker-item"><span class="name">달러인덱스</span><span class="val" id="t-dxy">-</span></div>
-    <div class="ticker-item"><span class="name">한은기준금리</span><span class="val" id="t-baserate">-</span></div>
-    <div class="ticker-item"><span class="name">M2</span><span class="val" id="t-m2">-</span></div>
-    <div class="ticker-item"><span class="name">장단기금리차</span><span class="val" id="t-yieldcurve">-</span></div>
-    <!-- 반복 -->
-    <div class="ticker-item"><span class="name">원달러</span><span class="val" id="t-usdkrw2">-</span></div>
-    <div class="ticker-item"><span class="name">미국금리</span><span class="val" id="t-fedrate2">-</span></div>
-    <div class="ticker-item"><span class="name">달러인덱스</span><span class="val" id="t-dxy2">-</span></div>
-    <div class="ticker-item"><span class="name">한은기준금리</span><span class="val" id="t-baserate2">-</span></div>
-    <div class="ticker-item"><span class="name">M2</span><span class="val" id="t-m22">-</span></div>
-    <div class="ticker-item"><span class="name">장단기금리차</span><span class="val" id="t-yieldcurve2">-</span></div>
+<div class="sec-hd"><div class="sec-title">시장 한눈에</div></div>
+<div class="grid4" id="kpi-grid">
+  <div class="kpi"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="k-usdkrw">-</div><div class="kpi-sub" id="k-usdkrw-sub">-</div></div>
+  <div class="kpi"><div class="kpi-label">한은 기준금리</div><div class="kpi-value" id="k-baserate">-</div><div class="kpi-sub">한국은행 결정</div></div>
+  <div class="kpi"><div class="kpi-label">미국 기준금리</div><div class="kpi-value" id="k-fedrate">-</div><div class="kpi-sub">Fed Funds Rate</div></div>
+  <div class="kpi"><div class="kpi-label">시중 유동성 M2</div><div class="kpi-value" id="k-m2">-</div><div class="kpi-sub">광의통화(M2)</div></div>
+</div>
+
+<div class="grid2">
+  <div>
+    <div class="sec-hd"><div class="sec-title">적금 금리 TOP5</div><a href="rates.html" class="sec-more">전체보기 →</a></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">최고금리 기준</span><span class="badge badge-blue">금융감독원</span></div>
+      <div id="savings-top"><div class="loading">로딩 중...</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-hd"><div class="sec-title">예금 금리 TOP5</div><a href="rates.html" class="sec-more">전체보기 →</a></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">최고금리 기준</span><span class="badge badge-blue">금융감독원</span></div>
+      <div id="deposit-top"><div class="loading">로딩 중...</div></div>
+    </div>
   </div>
 </div>
 
-<!-- 헤더 -->
-<header>
-  <div class="logo">💰 머니파이널</div>
-  <nav>
-    <a href="index.html" class="active">홈</a>
-    <a href="rates.html">금리</a>
-    <a href="market.html">투자</a>
-    <a href="alerts.html">기업정보</a>
-  </nav>
-  <div class="header-right">
-    <span class="updated" id="updated-at">-</span>
-    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
-  </div>
-</header>
-
-<main>
-
-  <!-- AI 브리핑 -->
-  <div class="briefing-card" id="briefing-section" style="display:none">
-    <div class="briefing-date" id="briefing-date">-</div>
-    <div class="briefing-headline" id="briefing-headline">-</div>
-    <div class="briefing-section">
-      <div class="briefing-section-label">💰 금리 현황</div>
-      <div class="briefing-text" id="briefing-rate">-</div>
-    </div>
-    <div class="briefing-section">
-      <div class="briefing-section-label">📈 시장 현황</div>
-      <div class="briefing-text" id="briefing-market">-</div>
+<div class="grid2">
+  <div>
+    <div class="sec-hd"><div class="sec-title">국내 거시지표</div><a href="macro.html" class="sec-more">전체보기 →</a></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">한국은행 ECOS</span><span class="badge badge-green">공공데이터</span></div>
+      <div id="domestic-ind"><div class="loading">로딩 중...</div></div>
     </div>
   </div>
-
-  <!-- 핵심 지표 KPI -->
-  <div class="section-header">
-    <div class="section-title">시장 한눈에</div>
-  </div>
-  <div class="kpi-grid" id="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label">원달러 환율</div>
-      <div class="kpi-value" id="kpi-usdkrw">-</div>
-      <div class="kpi-change neutral" id="kpi-usdkrw-signal">-</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">한은 기준금리</div>
-      <div class="kpi-value" id="kpi-baserate">-</div>
-      <div class="kpi-change" id="kpi-baserate-signal">-</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">미국 기준금리</div>
-      <div class="kpi-value" id="kpi-fedrate">-</div>
-      <div class="kpi-change" id="kpi-fedrate-signal">-</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">시중 유동성 M2</div>
-      <div class="kpi-value" id="kpi-m2">-</div>
-      <div class="kpi-change neutral">광의통화(M2)</div>
+  <div>
+    <div class="sec-hd"><div class="sec-title">글로벌 지표</div><a href="macro.html" class="sec-more">전체보기 →</a></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">FRED (미국 연준)</span><span class="badge badge-green">공공데이터</span></div>
+      <div id="global-ind"><div class="loading">로딩 중...</div></div>
     </div>
   </div>
-
-  <!-- 금리 + 시장지표 -->
-  <div class="two-col">
-
-    <!-- 적금 금리 TOP5 -->
-    <div>
-      <div class="section-header">
-        <div class="section-title">적금 금리 TOP5</div>
-        <a href="rates.html" style="font-size:12px;color:var(--text2);text-decoration:none;">전체보기 →</a>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">최고금리 기준</span>
-          <span class="badge badge-blue">금융감독원</span>
-        </div>
-        <div class="card-body">
-          <div id="savings-list" class="loading">데이터 로딩 중...</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 예금 금리 TOP5 -->
-    <div>
-      <div class="section-header">
-        <div class="section-title">예금 금리 TOP5</div>
-        <a href="rates.html" style="font-size:12px;color:var(--text2);text-decoration:none;">전체보기 →</a>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">최고금리 기준</span>
-          <span class="badge badge-blue">금융감독원</span>
-        </div>
-        <div class="card-body">
-          <div id="deposit-list" class="loading">데이터 로딩 중...</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- 거시지표 + 글로벌 -->
-  <div class="two-col">
-
-    <!-- 국내 거시지표 -->
-    <div>
-      <div class="section-header">
-        <div class="section-title">국내 거시지표</div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">한국은행 ECOS</span>
-          <span class="badge badge-green">공공데이터</span>
-        </div>
-        <div class="card-body">
-          <div id="domestic-indicators" class="loading">데이터 로딩 중...</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 글로벌 지표 -->
-    <div>
-      <div class="section-header">
-        <div class="section-title">글로벌 지표</div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">FRED (미국 연준)</span>
-          <span class="badge badge-green">공공데이터</span>
-        </div>
-        <div class="card-body">
-          <div id="global-indicators" class="loading">데이터 로딩 중...</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- 면책 -->
-  <div class="disclaimer">
-    ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
-    데이터 출처: 금융감독원 금융상품한눈에 · 한국은행 ECOS · 미국 연준 FRED · 금융위원회 (공공데이터포털)
-  </div>
-
-</main>
-
-<footer>
-  © 2026 머니파이널 | 세상의 모든 재테크
-</footer>
+</div>
 
 <script>
-  const DATA_BASE = 'data/';
-
-  // 테마
-  function toggleTheme() {
-    const html = document.documentElement;
-    const current = html.getAttribute('data-theme');
-    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    document.querySelector('.theme-btn').textContent = current === 'dark' ? '🌑' : '🌙';
-  }
-
-  // 숫자 포맷
-  function fmt(val, unit='', decimals=2) {
-    if (val === null || val === undefined) return '-';
-    const n = parseFloat(val);
-    if (isNaN(n)) return '-';
-    return n.toLocaleString('ko-KR', {minimumFractionDigits: decimals, maximumFractionDigits: decimals}) + (unit ? ' ' + unit : '');
-  }
-
-  function signalClass(signal) {
-    if (signal === 'red') return 'down';
-    if (signal === 'yellow') return 'neutral';
-    return 'up';
-  }
-
-  // 지표 로드
-  async function loadMarket() {
-    try {
-      const res = await fetch(DATA_BASE + 'market.json');
-      const data = await res.json();
-      const indicators = data.indicators || [];
-
-      // KPI 카드
-      indicators.forEach(ind => {
-        if (ind.indicator_code === 'USD_KRW') {
-          document.getElementById('kpi-usdkrw').textContent = fmt(ind.value, '원', 0);
-          const el = document.getElementById('kpi-usdkrw-signal');
-          const diff1 = ind.prev_value ? (ind.value - ind.prev_value).toFixed(0) : null;
-          el.innerHTML = diff1 ? `<span class="${ind.signal === 'red' ? 'down' : ind.signal === 'yellow' ? 'neutral' : 'up'}">전일대비 ${diff1 > 0 ? '+' : ''}${diff1}원</span>` : '';
-          // 티커
-          const v = fmt(ind.value, '원', 0);
-          ['t-usdkrw','t-usdkrw2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = v; });
-        }
-        if (ind.indicator_code === 'BASE_RATE') {
-          document.getElementById('kpi-baserate').textContent = fmt(ind.value, '%');
-          document.getElementById('kpi-baserate-signal').innerHTML = `<span class="neutral">한국은행 결정</span>`;
-          ['t-baserate','t-baserate2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,'%'); });
-        }
-        if (ind.indicator_code === 'FED_RATE') {
-          document.getElementById('kpi-fedrate').textContent = fmt(ind.value, '%');
-          document.getElementById('kpi-fedrate-signal').innerHTML = `<span class="neutral">Fed Funds Rate</span>`;
-          ['t-fedrate','t-fedrate2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,'%'); });
-        }
-        if (ind.indicator_code === 'M2_TOTAL') {
-          const m2T = (ind.value / 1000000).toFixed(1);
-          document.getElementById('kpi-m2').textContent = m2T + '조원';
-          ['t-m2','t-m22'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = m2T + '조'; });
-        }
-        if (ind.indicator_code === 'USD_INDEX') {
-          ['t-dxy','t-dxy2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,''); });
-        }
-        if (ind.indicator_code === 'US_YIELD_CURVE') {
-          ['t-yieldcurve','t-yieldcurve2'].forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = fmt(ind.value,'%'); });
-        }
-      });
-
-      // 국내 지표
-      const domestic = indicators.filter(i => ['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'].includes(i.indicator_code));
-      const domEl = document.getElementById('domestic-indicators');
-      if (domestic.length) {
-        domEl.innerHTML = domestic.map(i => `
-          <div class="indicator-row">
-            <div>
-              <div class="ind-name">${i.indicator_name}</div>
-            </div>
-            <span class="signal-dot ${i.signal}"></span>
-            <div>
-              <div class="ind-value ${signalClass(i.signal)}">${fmt(i.value, '', i.unit === '%' ? 2 : 0)}</div>
-              <div class="ind-unit">${i.unit}</div>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        domEl.innerHTML = '<div class="loading">데이터 없음</div>';
-      }
-
-      // 글로벌 지표
-      const global = indicators.filter(i => ['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE'].includes(i.indicator_code));
-      const globEl = document.getElementById('global-indicators');
-      if (global.length) {
-        globEl.innerHTML = global.map(i => `
-          <div class="indicator-row">
-            <div>
-              <div class="ind-name">${i.indicator_name}</div>
-            </div>
-            <span class="signal-dot ${i.signal}"></span>
-            <div>
-              <div class="ind-value ${signalClass(i.signal)}">${fmt(i.value, '', 2)}</div>
-              <div class="ind-unit">${i.unit}</div>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        globEl.innerHTML = '<div class="loading">데이터 없음</div>';
-      }
-
-      // 업데이트 시각
-      document.getElementById('updated-at').textContent = '업데이트: ' + data.updated_at;
-
-    } catch(e) {
-      console.error('market.json 로드 실패:', e);
+async function loadHome(){
+  // 금리
+  try{
+    const r=await fetch('data/rates.json');
+    const d=await r.json();
+    const bc=d.by_category||{};
+    const sav=(bc['적금']||[]).slice(0,5);
+    const dep=(bc['예금']||[]).slice(0,5);
+    function rateHtml(list){
+      if(!list.length)return '<div class="empty">데이터 없음</div>';
+      return list.map((r,i)=>`
+        <div class="row rate-row">
+          <div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div>
+          <div class="period">${r.period}</div>
+          <div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div>
+        </div>`).join('');
     }
-  }
+    document.getElementById('savings-top').innerHTML=rateHtml(sav);
+    document.getElementById('deposit-top').innerHTML=rateHtml(dep);
+  }catch(e){}
 
-  // 금리 로드
-  async function loadRates() {
-    try {
-      const res = await fetch(DATA_BASE + 'rates.json');
-      const data = await res.json();
-      const byCategory = data.by_category || {};
-
-      // 적금 TOP5
-      const savings = (byCategory['적금'] || []).slice(0, 5);
-      const savingsEl = document.getElementById('savings-list');
-      if (savings.length) {
-        savingsEl.innerHTML = savings.map((r, i) => `
-          <div class="rate-row">
-            <div>
-              <div class="rate-bank">${i+1}. ${r.institution}</div>
-              <div class="rate-product">${r.product_name}</div>
-            </div>
-            <span class="rate-period">${r.period}</span>
-            <div>
-              <div class="rate-value">${fmt(r.max_rate, '%')}</div>
-              <div class="rate-base">기본 ${fmt(r.rate, '%')}</div>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        savingsEl.innerHTML = '<div class="loading">데이터 없음</div>';
+  // 지표
+  try{
+    const r=await fetch('data/market.json');
+    const d=await r.json();
+    const inds=d.indicators||[];
+    inds.forEach(i=>{
+      if(i.indicator_code==='USD_KRW'){
+        document.getElementById('k-usdkrw').textContent=fmt(i.value,'원',0);
+        const diff=i.prev_value?Math.round(i.value-i.prev_value):null;
+        document.getElementById('k-usdkrw-sub').innerHTML=diff!==null?`<span class="${diff>0?'down':'up'}">전일대비 ${diff>0?'+':''}${diff}원</span>`:'';
       }
-
-      // 예금 TOP5
-      const deposit = (byCategory['예금'] || []).slice(0, 5);
-      const depositEl = document.getElementById('deposit-list');
-      if (deposit.length) {
-        depositEl.innerHTML = deposit.map((r, i) => `
-          <div class="rate-row">
-            <div>
-              <div class="rate-bank">${i+1}. ${r.institution}</div>
-              <div class="rate-product">${r.product_name}</div>
-            </div>
-            <span class="rate-period">${r.period}</span>
-            <div>
-              <div class="rate-value">${fmt(r.max_rate, '%')}</div>
-              <div class="rate-base">기본 ${fmt(r.rate, '%')}</div>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        depositEl.innerHTML = '<div class="loading">데이터 없음</div>';
-      }
-
-    } catch(e) {
-      console.error('rates.json 로드 실패:', e);
+      if(i.indicator_code==='BASE_RATE')document.getElementById('k-baserate').textContent=fmt(i.value,'%');
+      if(i.indicator_code==='FED_RATE')document.getElementById('k-fedrate').textContent=fmt(i.value,'%');
+      if(i.indicator_code==='M2_TOTAL')document.getElementById('k-m2').textContent=(i.value/1000000).toFixed(1)+'조원';
+    });
+    const dom=['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'];
+    const glob=['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE'];
+    function indHtml(list,codes){
+      const f=list.filter(i=>codes.includes(i.indicator_code));
+      if(!f.length)return '<div class="empty">데이터 없음</div>';
+      return f.map(i=>`
+        <div class="row ind-row">
+          <div class="ind-name">${i.indicator_name}</div>
+          <div><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',i.unit==='%'?2:0)}</span> <span class="ind-unit">${i.unit}</span></div>
+        </div>`).join('');
     }
-  }
+    document.getElementById('domestic-ind').innerHTML=indHtml(inds,dom);
+    document.getElementById('global-ind').innerHTML=indHtml(inds,glob);
+  }catch(e){}
 
-  // 브리핑 로드
-  async function loadBriefing() {
-    try {
-      const res = await fetch(DATA_BASE + 'briefing.json');
-      const data = await res.json();
-      const briefings = data.briefings || [];
-      if (!briefings.length) return;
-
-      const b = briefings[0];
-      document.getElementById('briefing-date').textContent = b.briefing_date + ' AI 데이터 분석';
-      document.getElementById('briefing-headline').textContent = b.headline || '';
-      document.getElementById('briefing-rate').textContent = b.rate_summary || '';
-      document.getElementById('briefing-market').textContent = b.market_summary || '';
-      document.getElementById('briefing-section').style.display = 'block';
-    } catch(e) {
-      console.error('briefing.json 로드 실패:', e);
+  // 브리핑
+  try{
+    const r=await fetch('data/briefing.json');
+    const d=await r.json();
+    const b=(d.briefings||[])[0];
+    if(b){
+      document.getElementById('br-date').textContent=b.briefing_date+' AI 데이터 분석';
+      document.getElementById('br-hl').textContent=b.headline||'';
+      document.getElementById('br-rate').textContent=b.rate_summary||'';
+      document.getElementById('br-market').textContent=b.market_summary||'';
+      document.getElementById('briefing').style.display='block';
     }
-  }
+  }catch(e){}
+}
+loadHome();
+</script></main>
+<div class="disclaimer">
+    ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
+    데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
+  </div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
 
-  // 초기화
-  loadMarket();
-  loadRates();
-  loadBriefing();
+function toggleTheme(){
+  const h=document.documentElement;
+  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
+  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
+}
+function fmt(v,u='',d=2){
+  if(v===null||v===undefined)return'-';
+  const n=parseFloat(v);
+  if(isNaN(n))return'-';
+  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
+}
+function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+
+async function loadTicker(){
+  try{
+    const r=await fetch('data/market.json');
+    const d=await r.json();
+    const inds=d.indicators||[];
+    const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};
+    let html='';
+    inds.forEach(i=>{
+      if(!labels[i.indicator_code])return;
+      const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');
+      html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
+    });
+    const el=document.getElementById('ticker-inner');
+    el.innerHTML=html+html; // 반복
+  }catch(e){}
+}
+loadTicker();
 </script>
 </body>
 </html>
