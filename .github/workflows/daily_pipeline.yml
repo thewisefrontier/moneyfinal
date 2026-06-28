@@ -57,6 +57,33 @@ jobs:
         timeout-minutes: 10
         continue-on-error: true
 
+
+      - name: Fetch bond prices (채권시세)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/bond_info.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch stock short (대차/공매도)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/stock_short.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch derivatives (파생상품)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/derivatives_info.py
+        timeout-minutes: 10
+        continue-on-error: true
       - name: Gemini analyze
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
