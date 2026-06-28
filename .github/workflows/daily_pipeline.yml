@@ -25,7 +25,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
+          KRX_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/krx_index.py
         timeout-minutes: 10
         continue-on-error: true
