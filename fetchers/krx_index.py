@@ -90,7 +90,7 @@ def fetch_index(index: dict, base_date: str) -> dict | None:
             'prev_value': round(value - vs, 2),
             'unit': 'pt',
             'signal': signal,
-            'source': '한국거래소 KRX (공공데이터포털)',
+            'source': '금융위원회 (공공데이터포털)',
             'reference_date': today_kst(),
             'summary_text': f"{index['idxNm']} {value:.2f}pt ({flt_rt:+.2f}%)",
             'fetched_at': now_kst()
