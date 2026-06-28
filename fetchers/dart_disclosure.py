@@ -75,7 +75,7 @@ def process_disclosures(disclosures: list) -> list:
             'alert_type': d.get('report_nm', ''),
             'detail_text': f"{d.get('report_nm', '')} - {d.get('corp_name', '')}",
             'dart_url': f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={d.get('rcept_no', '')}",
-            'disclosure_date': d.get('rcept_dt', today_kst()),
+            'disclosure_date': (lambda dt: f"{dt[:4]}-{dt[4:6]}-{dt[6:8]}" if dt and len(dt) == 8 else today_kst())(d.get('rcept_dt', '')),
             'source': 'DART',
             'is_published': False,
             'needs_review': True,
