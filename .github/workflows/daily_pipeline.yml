@@ -1,0 +1,143 @@
+name: MoneyFinal Daily Pipeline
+
+on:
+  schedule:
+    - cron: '30 20 * * *'  # 매일 05:30 KST (UTC+9 → UTC 20:30)
+  workflow_dispatch:        # 수동 실행 가능
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Step 1: 데이터 수집
+      - name: Fetch bank rates (은행연합회)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/bank_rates.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch savings bank rates (저축은행중앙회)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/savings_rates.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch macro indicators (한국은행 ECOS)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python fetchers/ecos_macro.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch DART disclosures (금융감독원)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python fetchers/dart_disclosure.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch IPO status (한국거래소 KIND)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/kind_ipo.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch KOFIA ETF data (금융투자협회)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/kofia_etf.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch global indicators (FRED)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python fetchers/fred_global.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch financial health (저축은행 BIS 등)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/financial_health.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      # Step 2: AI 정제 (Gemini)
+      - name: Gemini analyze & generate briefing
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python processors/gemini_analyzer.py
+        timeout-minutes: 20
+
+      # Step 3: JSON export
+      - name: Export data to JSON
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+        timeout-minutes: 10
+
+      # Step 4: 레포에 JSON 커밋
+      - name: Commit & push JSON data
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || git commit -m "data: $(date +'%Y-%m-%d') 자동 업데이트"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+      # Step 5: 카드뉴스 생성 + 텔레그램 발송
+      - name: Generate card news image
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          pip install playwright
+          playwright install chromium
+          python exporters/cardnews_generator.py
+        timeout-minutes: 10
+
+      - name: Send to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/telegram_sender.py
+        timeout-minutes: 5
