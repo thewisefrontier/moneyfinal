@@ -71,9 +71,13 @@ def fetch_ecos_stat(indicator: dict):
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
     elif cycle == 'Q':
-        # 분기는 YYYYMM 형식 사용
-        start = (now - timedelta(days=days)).strftime('%Y%m')
-        end = now.strftime('%Y%m')
+        # 분기 형식: YYYYQ (예: 20251 = 2025년 1분기)
+        from datetime import timedelta as td
+        start_dt = now - timedelta(days=days)
+        start_q = (start_dt.month - 1) // 3 + 1
+        end_q = (now.month - 1) // 3 + 1
+        start = f"{start_dt.year}{start_q}"
+        end = f"{now.year}{end_q}" 
     else:  # D
         start = (now - timedelta(days=days)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
