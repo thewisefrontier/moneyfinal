@@ -21,7 +21,7 @@ INDICATORS = [
     {
         'stat_code': '101Y004',
         'cycle': 'M',
-        'item_code1': 'BBLA00',
+        'item_code': 'BBLA00',
         'indicator_code': 'M2_TOTAL',
         'indicator_name': '시중 유동성(M2)',
         'unit': '십억원',
@@ -30,7 +30,7 @@ INDICATORS = [
     {
         'stat_code': '731Y004',    # 기준금리 (수정)
         'cycle': 'M',
-        'item_code1': '0101000',
+        'item_code': '0101000',
         'indicator_code': 'BASE_RATE',
         'indicator_name': '한국은행 기준금리',
         'unit': '%',
@@ -39,7 +39,7 @@ INDICATORS = [
     {
         'stat_code': '036Y001',    # 거주자외화예금
         'cycle': 'M',
-        'item_code1': 'A',
+        'item_code': 'A',
         'indicator_code': 'FOREIGN_DEPOSIT',
         'indicator_name': '거주자 외화예금 (달러 엑소더스 지수)',
         'unit': '백만달러',
@@ -48,7 +48,7 @@ INDICATORS = [
     {
         'stat_code': '731Y003',    # 원달러 환율
         'cycle': 'M',
-        'item_code1': '0000001',
+        'item_code': '0000001',
         'indicator_code': 'USD_KRW',
         'indicator_name': '원달러 환율',
         'unit': '원',
@@ -70,9 +70,7 @@ def fetch_ecos_stat(indicator: dict) -> dict | None:
     # ECOS API URL 형식:
     # /api/StatisticSearch/{KEY}/json/kr/{통계표코드}/{주기}/{시작}/{종료}/{항목코드1}/1/10
     url = (
-        f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_API_KEY}/json/kr"
-        f"/{indicator['stat_code']}/{indicator['cycle']}"
-        f"/{start}/{end}/{indicator['item_code1']}/1/10"
+        f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_API_KEY}/json/kr/{indicator['stat_code']}/{indicator['cycle']}/{start}/{end}/{indicator['item_code']}/1/5"
     )
 
     try:
