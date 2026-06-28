@@ -31,7 +31,35 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/bank_rates.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch macro indicators (한국은행 ECOS)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python fetchers/ecos_macro.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch DART disclosures (금융감독원)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python fetchers/dart_disclosure.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch global indicators (FRED)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python fetchers/fred_global.py
         timeout-minutes: 10
         continue-on-error: true
 
