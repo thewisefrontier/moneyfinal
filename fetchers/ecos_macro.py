@@ -51,7 +51,7 @@ INDICATORS = [
     },
     {
         'stat_code': '151Y001',   # 가계신용(업권별, 분기)
-        'cycle': 'QQ',
+        'cycle': 'Q',
         'item_code': '1000000',
         'indicator_code': 'HOUSEHOLD_CREDIT',
         'indicator_name': '가계신용 잔액',
@@ -70,8 +70,8 @@ def fetch_ecos_stat(indicator: dict):
     if cycle == 'M':
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
-    elif cycle == 'QQ':
-        # 분기도 YYYYMM 형식 사용 (ECOS 공식 문서 기준)
+    elif cycle == 'Q':
+        # 분기는 YYYYMM 형식 사용
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
     else:  # D
