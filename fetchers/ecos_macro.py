@@ -67,9 +67,16 @@ def fetch_ecos_stat(indicator: dict):
     days = indicator.get('start_days', 90)
     cycle = indicator['cycle']
 
-    if cycle in ('M', 'Q'):
+    if cycle == 'M':
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
+    elif cycle == 'Q':
+        # 분기 형식: YYYYQQ (예: 202601 = 2026년 1분기)
+        start_dt = now - timedelta(days=days)
+        start_q = (start_dt.month - 1) // 3 + 1
+        end_q = (now.month - 1) // 3 + 1
+        start = f"{start_dt.year}{start_q:02d}"
+        end = f"{now.year}{end_q:02d}" 
     else:  # D
         start = (now - timedelta(days=days)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
