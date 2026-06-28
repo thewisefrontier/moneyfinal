@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Step 1: 데이터 수집 (API 키 불필요한 것만)
-      - name: Fetch bank rates (은행연합회 - 크롤링)
+      # Step 1: 데이터 수집
+      - name: Fetch bank rates (은행연합회)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
