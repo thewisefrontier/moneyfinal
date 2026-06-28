@@ -417,25 +417,21 @@
       <div class="kpi-label">원달러 환율</div>
       <div class="kpi-value" id="kpi-usdkrw">-</div>
       <div class="kpi-change neutral" id="kpi-usdkrw-signal">-</div>
-      <div class="kpi-source">한국은행 ECOS</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">한은 기준금리</div>
       <div class="kpi-value" id="kpi-baserate">-</div>
       <div class="kpi-change" id="kpi-baserate-signal">-</div>
-      <div class="kpi-source">한국은행 ECOS</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">미국 기준금리</div>
       <div class="kpi-value" id="kpi-fedrate">-</div>
       <div class="kpi-change" id="kpi-fedrate-signal">-</div>
-      <div class="kpi-source">FRED (미국 연준)</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-label">시중 유동성 M2</div>
       <div class="kpi-value" id="kpi-m2">-</div>
       <div class="kpi-change neutral">광의통화(M2)</div>
-      <div class="kpi-source">한국은행 ECOS</div>
     </div>
   </div>
 
@@ -518,7 +514,7 @@
   <!-- 면책 -->
   <div class="disclaimer">
     ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
-    출처: 금융감독원, 한국은행, FRED(미국 연준) 공공데이터
+    데이터 출처: 금융감독원 금융상품한눈에 · 한국은행 ECOS · 미국 연준 FRED · 한국거래소 KRX
   </div>
 
 </main>
@@ -601,7 +597,6 @@
           <div class="indicator-row">
             <div>
               <div class="ind-name">${i.indicator_name}</div>
-              <div class="ind-source">${i.source}</div>
             </div>
             <span class="signal-dot ${i.signal}"></span>
             <div>
@@ -622,7 +617,6 @@
           <div class="indicator-row">
             <div>
               <div class="ind-name">${i.indicator_name}</div>
-              <div class="ind-source">${i.source}</div>
             </div>
             <span class="signal-dot ${i.signal}"></span>
             <div>
