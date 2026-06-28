@@ -15,7 +15,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst, today_kst
 
 logger = logging.getLogger(__name__)
-KRX_API_KEY = os.environ.get('KRX_API_KEY', '')
+KRX_API_KEY = os.environ.get('KRX_API_KEY', os.environ.get('FSS_API_KEY', ''))
 KST = pytz.timezone('Asia/Seoul')
 
 # 공공데이터포털 지수시세정보 API
