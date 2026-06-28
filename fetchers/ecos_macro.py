@@ -1,7 +1,7 @@
 """
-한국은행 ECOS API 거시지표 수집기
+한국은행 ECOS API - 월별/분기별 수집 지표
+- 기준금리, M2, 가계신용
 출처: https://ecos.bok.or.kr
-URL: /api/StatisticSearch/{키}/json/kr/1/10/{통계코드}/{주기}/{시작}/{종료}/{항목코드}
 """
 import logging
 import requests
@@ -17,10 +17,9 @@ logger = logging.getLogger(__name__)
 ECOS_API_KEY = os.environ.get('ECOS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 
-# ECOS 통계코드 (통계표 파일 및 사이트에서 직접 확인)
 INDICATORS = [
     {
-        'stat_code': '722Y001',   # 한국은행 기준금리 (검증됨)
+        'stat_code': '722Y001',
         'cycle': 'D',
         'item_code': '0101000',
         'indicator_code': 'BASE_RATE',
@@ -30,7 +29,7 @@ INDICATORS = [
         'start_days': 30
     },
     {
-        'stat_code': '161Y006',   # M2 상품별 구성내역(평잔, 원계열)
+        'stat_code': '161Y006',
         'cycle': 'M',
         'item_code': 'BBHA00',
         'indicator_code': 'M2_TOTAL',
@@ -40,17 +39,7 @@ INDICATORS = [
         'start_days': 120
     },
     {
-        'stat_code': '731Y001',   # 주요국 통화의 대원화환율 (일별)
-        'cycle': 'D',
-        'item_code': '0000001',
-        'indicator_code': 'USD_KRW',
-        'indicator_name': '원달러 환율',
-        'unit': '원',
-        'category': '환율',
-        'start_days': 30
-    },
-    {
-        'stat_code': '151Y001',   # 가계신용(업권별, 분기)
+        'stat_code': '151Y001',
         'cycle': 'Q',
         'item_code': '1000000',
         'indicator_code': 'HOUSEHOLD_CREDIT',
@@ -71,12 +60,11 @@ def fetch_ecos_stat(indicator: dict):
         start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
     elif cycle == 'Q':
-        # 분기 형식: YYYYQn (예: 2025Q1 = 2025년 1분기)
         start_dt = now - timedelta(days=days)
         start_q = (start_dt.month - 1) // 3 + 1
         end_q = (now.month - 1) // 3 + 1
         start = f"{start_dt.year}Q{start_q}"
-        end = f"{now.year}Q{end_q}" 
+        end = f"{now.year}Q{end_q}"
     else:  # D
         start = (now - timedelta(days=days)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
@@ -94,15 +82,10 @@ def fetch_ecos_stat(indicator: dict):
         data = res.json()
 
         if 'RESULT' in data:
-            msg = data['RESULT'].get('MESSAGE', '')
-            logger.warning(f"{indicator['indicator_name']}: API 오류 - {msg}")
+            logger.warning(f"{indicator['indicator_name']}: API 오류 - {data['RESULT'].get('MESSAGE','')}")
             return None
 
         rows = data.get('StatisticSearch', {}).get('row', [])
-        if not rows:
-            logger.warning(f"{indicator['indicator_name']}: 데이터 없음")
-            return None
-
         valid = [r for r in rows if r.get('DATA_VALUE') and r['DATA_VALUE'] not in ('0', '', None)]
         if not valid:
             logger.warning(f"{indicator['indicator_name']}: 유효 데이터 없음")
@@ -118,11 +101,6 @@ def fetch_ecos_stat(indicator: dict):
             if value >= 3.5:
                 signal = 'red'
             elif value >= 2.5:
-                signal = 'yellow'
-        elif indicator['indicator_code'] == 'USD_KRW':
-            if value >= 1400:
-                signal = 'red'
-            elif value >= 1300:
                 signal = 'yellow'
 
         return {
@@ -144,7 +122,7 @@ def fetch_ecos_stat(indicator: dict):
 
 
 def main():
-    logger.info("=== ECOS 거시지표 수집 시작 ===")
+    logger.info("=== ECOS 월별 지표 수집 시작 ===")
     results = []
 
     for indicator in INDICATORS:
@@ -158,7 +136,7 @@ def main():
     if results:
         supabase_upsert('market_indicators', results)
 
-    logger.info(f"=== ECOS 수집 완료: {len(results)}/{len(INDICATORS)}건 ===")
+    logger.info(f"=== ECOS 월별 수집 완료: {len(results)}/{len(INDICATORS)}건 ===")
 
 
 if __name__ == '__main__':
