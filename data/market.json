@@ -13,7 +13,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-06-26",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:30:16.472181+00:00",
+      "fetched_at": "2026-06-28T06:40:47.834092+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -28,7 +28,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-06-18",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:30:16.1433+00:00",
+      "fetched_at": "2026-06-28T06:40:47.585276+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -43,7 +43,7 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-05-01",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:30:15.676296+00:00",
+      "fetched_at": "2026-06-28T06:40:47.293494+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
@@ -58,8 +58,38 @@
       "source": "FRED (미국 연준)",
       "reference_date": "2026-05-01",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:30:15.452281+00:00",
+      "fetched_at": "2026-06-28T06:40:46.995967+00:00",
       "created_at": "2026-06-28T06:20:27.688845+00:00"
+    },
+    {
+      "id": 15,
+      "indicator_code": "USD_KRW",
+      "indicator_name": "원달러 환율",
+      "category": "환율",
+      "value": 1527.0,
+      "prev_value": 1522.4,
+      "unit": "원",
+      "signal": "red",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-06-28",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:40:40.652159+00:00",
+      "created_at": "2026-06-28T06:40:42.084283+00:00"
+    },
+    {
+      "id": 14,
+      "indicator_code": "M2_TOTAL",
+      "indicator_name": "시중 유동성(M2, 평잔)",
+      "category": "유동성",
+      "value": 4160887.5,
+      "prev_value": 4139870.6,
+      "unit": "십억원",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-06-28",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:40:39.927752+00:00",
+      "created_at": "2026-06-28T06:40:42.084283+00:00"
     },
     {
       "id": 1,
@@ -73,7 +103,7 @@
       "source": "한국은행 ECOS",
       "reference_date": "2026-06-28",
       "summary_text": null,
-      "fetched_at": "2026-06-28T06:30:07.071764+00:00",
+      "fetched_at": "2026-06-28T06:40:39.174935+00:00",
       "created_at": "2026-06-28T06:20:22.870866+00:00"
     }
   ]
