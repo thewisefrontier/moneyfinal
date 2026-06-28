@@ -5,6 +5,9 @@ on:
     - cron: '30 20 * * *'  # 매일 05:30 KST
   workflow_dispatch:        # 수동 실행 가능
 
+permissions:
+  contents: write           # git push 권한 자동 부여
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -13,9 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -89,5 +89,3 @@ jobs:
           git add data/
           git diff --staged --quiet || git commit -m "data: $(date +'%Y-%m-%d') 자동 업데이트"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
