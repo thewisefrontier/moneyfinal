@@ -1,7 +1,5 @@
 """
 한국은행 ECOS API 거시지표 수집기
-출처: https://ecos.bok.or.kr
-URL 형식: /api/StatisticSearch/{키}/json/kr/{시작건수}/{종료건수}/{통계코드}/{주기}/{시작일}/{종료일}/{항목코드}
 """
 import logging
 import requests
@@ -19,54 +17,65 @@ KST = pytz.timezone('Asia/Seoul')
 
 INDICATORS = [
     {
-        'stat_code': '101Y004',
+        'stat_code': '101Y004',   # M2 광의통화
         'cycle': 'M',
         'item_code': 'BBLA00',
         'indicator_code': 'M2_TOTAL',
         'indicator_name': '시중 유동성(M2)',
         'unit': '십억원',
-        'category': '유동성'
+        'category': '유동성',
+        'start_days': 90
     },
     {
-        'stat_code': '722Y001',
+        'stat_code': '722Y001',   # 기준금리
         'cycle': 'D',
         'item_code': '0101000',
         'indicator_code': 'BASE_RATE',
         'indicator_name': '한국은행 기준금리',
         'unit': '%',
-        'category': '금리'
+        'category': '금리',
+        'start_days': 30
     },
     {
-        'stat_code': '036Y001',
+        'stat_code': '036Y001',   # 거주자외화예금
         'cycle': 'M',
         'item_code': 'A',
         'indicator_code': 'FOREIGN_DEPOSIT',
         'indicator_name': '거주자 외화예금',
         'unit': '백만달러',
-        'category': '외화'
+        'category': '외화',
+        'start_days': 90
+    },
+    {
+        'stat_code': '731Y003',   # 원달러환율
+        'cycle': 'M',
+        'item_code': '0000001',
+        'indicator_code': 'USD_KRW',
+        'indicator_name': '원달러 환율',
+        'unit': '원',
+        'category': '환율',
+        'start_days': 90
     },
 ]
 
 
 def fetch_ecos_stat(indicator: dict):
     now = datetime.now(KST)
+    days = indicator.get('start_days', 90)
 
     if indicator['cycle'] == 'M':
-        start = (now - timedelta(days=90)).strftime('%Y%m')
+        start = (now - timedelta(days=days)).strftime('%Y%m')
         end = now.strftime('%Y%m')
     else:
-        start = (now - timedelta(days=30)).strftime('%Y%m%d')
+        start = (now - timedelta(days=days)).strftime('%Y%m%d')
         end = now.strftime('%Y%m%d')
 
-    # 올바른 URL 형식: 시작건수/종료건수 가 통계코드 앞에 와야 함
     url = (
         f"https://ecos.bok.or.kr/api/StatisticSearch"
         f"/{ECOS_API_KEY}/json/kr/1/10"
         f"/{indicator['stat_code']}/{indicator['cycle']}"
         f"/{start}/{end}/{indicator['item_code']}"
     )
-
-    logger.info(f"ECOS 요청: {indicator['indicator_name']}")
 
     try:
         res = requests.get(url, timeout=15)
@@ -83,8 +92,14 @@ def fetch_ecos_stat(indicator: dict):
             logger.warning(f"{indicator['indicator_name']}: 데이터 없음")
             return None
 
-        latest = rows[-1]
-        prev = rows[-2] if len(rows) >= 2 else None
+        # 유효한 값만 필터
+        valid = [r for r in rows if r.get('DATA_VALUE') and r['DATA_VALUE'] != '0']
+        if not valid:
+            logger.warning(f"{indicator['indicator_name']}: 유효 데이터 없음")
+            return None
+
+        latest = valid[-1]
+        prev = valid[-2] if len(valid) >= 2 else None
         value = float(latest.get('DATA_VALUE', 0) or 0)
         prev_value = float(prev.get('DATA_VALUE', 0) or 0) if prev else None
 
