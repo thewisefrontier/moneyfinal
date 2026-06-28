@@ -48,6 +48,51 @@ jobs:
         timeout-minutes: 10
         continue-on-error: true
 
+
+      - name: Fetch CMA/parking rates (CMA/파킹)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/cma_rates.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch fund info (펀드)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/fund_info.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch ISA info (ISA)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/isa_info.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch insurance info (실손보험)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/insurance_info.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch stock dividend (배당)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/stock_dividend.py
+        timeout-minutes: 10
+        continue-on-error: true
       - name: Export data to JSON
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
