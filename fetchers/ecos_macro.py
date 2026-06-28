@@ -52,7 +52,7 @@ INDICATORS = [
     {
         'stat_code': '151Y001',   # 가계신용(업권별, 분기)
         'cycle': 'QQ',
-        'item_code': 'S10A',
+        'item_code': '1000000',
         'indicator_code': 'HOUSEHOLD_CREDIT',
         'indicator_name': '가계신용 잔액',
         'unit': '십억원',
