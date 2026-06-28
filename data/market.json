@@ -1,4 +1,80 @@
 {
   "updated_at": "2026-06-28",
-  "indicators": []
+  "indicators": [
+    {
+      "id": 5,
+      "indicator_code": "US_YIELD_CURVE",
+      "indicator_name": "미국 장단기 금리차 (10Y-2Y)",
+      "category": "금리",
+      "value": 0.31,
+      "prev_value": 0.31,
+      "unit": "%",
+      "signal": "yellow",
+      "source": "FRED (미국 연준)",
+      "reference_date": "2026-06-26",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:20:27.498096+00:00",
+      "created_at": "2026-06-28T06:20:27.688845+00:00"
+    },
+    {
+      "id": 4,
+      "indicator_code": "USD_INDEX",
+      "indicator_name": "달러 인덱스",
+      "category": "환율",
+      "value": 120.3958,
+      "prev_value": 119.3871,
+      "unit": "Index",
+      "signal": "green",
+      "source": "FRED (미국 연준)",
+      "reference_date": "2026-06-18",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:20:27.249324+00:00",
+      "created_at": "2026-06-28T06:20:27.688845+00:00"
+    },
+    {
+      "id": 3,
+      "indicator_code": "US_CPI",
+      "indicator_name": "미국 소비자물가지수 (CPI)",
+      "category": "물가",
+      "value": 333.979,
+      "prev_value": 332.407,
+      "unit": "Index",
+      "signal": "green",
+      "source": "FRED (미국 연준)",
+      "reference_date": "2026-05-01",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:20:26.960987+00:00",
+      "created_at": "2026-06-28T06:20:27.688845+00:00"
+    },
+    {
+      "id": 2,
+      "indicator_code": "FED_RATE",
+      "indicator_name": "미국 기준금리 (Fed Funds Rate)",
+      "category": "금리",
+      "value": 3.63,
+      "prev_value": 3.64,
+      "unit": "%",
+      "signal": "green",
+      "source": "FRED (미국 연준)",
+      "reference_date": "2026-05-01",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:20:26.620891+00:00",
+      "created_at": "2026-06-28T06:20:27.688845+00:00"
+    },
+    {
+      "id": 1,
+      "indicator_code": "BASE_RATE",
+      "indicator_name": "한국은행 기준금리",
+      "category": "금리",
+      "value": 2.5,
+      "prev_value": 2.5,
+      "unit": "%",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-06-28",
+      "summary_text": null,
+      "fetched_at": "2026-06-28T06:20:21.773653+00:00",
+      "created_at": "2026-06-28T06:20:22.870866+00:00"
+    }
+  ]
 }
