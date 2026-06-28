@@ -73,8 +73,11 @@ def fetch_index(index: dict, base_date: str) -> dict | None:
             'fetched_at': now_kst()
         }
 
+    except requests.exceptions.HTTPError as e:
+        logger.error(f"{index['name']} HTTP 오류: {e.response.status_code} - {e.response.text[:200]}")
+        return None
     except Exception as e:
-        logger.error(f"{index['name']} 수집 오류: {type(e).__name__}")
+        logger.error(f"{index['name']} 수집 오류: {type(e).__name__} - {e}")
         return None
 
 
