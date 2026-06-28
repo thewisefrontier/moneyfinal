@@ -23,7 +23,7 @@ HEADERS = {
     'Content-Type': 'application/json',
 }
 
-# 테이블별 upsert conflict 컬럼 지정
+# 테이블별 upsert conflict 컬럼
 CONFLICT_COLUMNS = {
     'rates': 'institution,product_name,category,period',
     'market_indicators': 'indicator_code,reference_date',
@@ -37,18 +37,16 @@ CONFLICT_COLUMNS = {
 def supabase_upsert(table: str, data: list) -> bool:
     if not data:
         return True
-    url = f"{SUPABASE_URL}/rest/v1/{table}"
-    
-    # 테이블별 conflict 컬럼 지정
+
     conflict = CONFLICT_COLUMNS.get(table, '')
-    prefer = 'resolution=merge-duplicates,return=minimal'
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
     if conflict:
-        prefer += f',on_conflict={conflict}'
+        url += f"?on_conflict={conflict}"
 
     try:
         res = requests.post(
             url,
-            headers={**HEADERS, 'Prefer': prefer},
+            headers={**HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal'},
             json=data,
             timeout=30
         )
