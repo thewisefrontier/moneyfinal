@@ -104,7 +104,14 @@ def main():
 
     if all_disclosures:
         processed = process_disclosures(all_disclosures)
-        supabase_upsert('corporate_alerts', processed)
+        # 배치 내 중복 제거
+        seen = {}
+        for p in processed:
+            key = (p['company_name'], p['alert_type'], p['disclosure_date'])
+            seen[key] = p
+        deduped = list(seen.values())
+        logger.info(f"중복 제거 후 {len(deduped)}건")
+        supabase_upsert('corporate_alerts', deduped)
 
     logger.info(f"=== DART 수집 완료: {len(all_disclosures)}건 ===")
 
