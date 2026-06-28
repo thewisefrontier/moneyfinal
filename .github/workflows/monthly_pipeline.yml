@@ -26,7 +26,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
-        run: python fetchers/ecos_macro.py
+        run: python fetchers/ecos_macro.py  # 기준금리, M2, 가계신용
         timeout-minutes: 10
         continue-on-error: true
 
