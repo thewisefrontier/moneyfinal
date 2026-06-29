@@ -147,6 +147,15 @@ jobs:
         timeout-minutes: 10
         continue-on-error: true
 
+      - name: Fetch intl stocks (국제거래종목)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/intl_stocks.py
+        timeout-minutes: 10
+        continue-on-error: true
+
       - name: Export data to JSON
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
