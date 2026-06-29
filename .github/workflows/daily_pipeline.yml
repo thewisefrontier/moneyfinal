@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 전체 히스토리 가져와서 push 충돌 방지
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -105,5 +107,4 @@ jobs:
           git config user.name "moneyfinal-bot"
           git config user.email "bot@moneyfinal.kr"
           git add data/
-          git diff --staged --quiet || git commit -m "data: $(date +'%Y-%m-%d') daily update"
-          git push
+          git diff --staged --quiet || (git commit -m "data: $(date +'%Y-%m-%d') daily update" && git pull --rebase origin main && git push)
