@@ -1,8 +1,6 @@
 """
-기업 재무정보 수집기
-- 금융위원회_기업재무정보 (공공데이터포털)
-- 금융위원회_기업기본정보 (공공데이터포털)
-출처: data.go.kr
+금융위원회 기업재무/기본정보 수집기
+출처: 공공데이터포털
 """
 import logging, os, sys, time
 from datetime import datetime
@@ -11,7 +9,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
-API_KEY = os.environ.get('FSS_API_KEY', '')
+API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service"
 
@@ -28,46 +26,23 @@ MAJOR_STOCKS = [
     {'code':'018260','name':'삼성에스디에스'},{'code':'009150','name':'삼성전기'},
 ]
 
-
 def fetch_corp_finance(stock: dict) -> dict | None:
     url = f"{BASE_URL}/GetFinaStatInfoService/getFinaStatInfo"
     now = datetime.now(KST)
-    fiscal_year = now.year - 1 if now.month < 4 else now.year
+    fiscal_year = now.year-1 if now.month<4 else now.year
     params = {'resultType':'json','numOfRows':1,'pageNo':1,'likeSrtnCd':stock['code'],'bizYear':str(fiscal_year)}
     try:
         res = data_go_kr_get(url, API_KEY, params)
         res.raise_for_status()
-        data = res.json()
-        body = data.get('response',{}).get('body',{})
-        if not body.get('totalCount',0):
-            logger.warning(f"{stock['name']}: 재무 데이터 없음")
-            return None
+        body = res.json().get('response',{}).get('body',{})
+        if not body.get('totalCount',0): return None
         items = body.get('items',{}).get('item',[])
-        item = items[0] if isinstance(items, list) and items else items
+        item = items[0] if isinstance(items,list) and items else items
         if not item: return None
-        return {
-            'stock_code':       stock['code'],
-            'corp_name':        item.get('corpNm', stock['name']),
-            'base_date':        f"{fiscal_year}-12-31",
-            'fiscal_year':      fiscal_year,
-            'fiscal_quarter':   4,
-            'report_type':      '연간',
-            'revenue':          int(item.get('thstrm',0) or 0),
-            'operating_profit': int(item.get('operPrfi',0) or 0),
-            'net_profit':       int(item.get('curNetPrfi',0) or 0),
-            'total_assets':     int(item.get('totalAsst',0) or 0),
-            'total_liabilities':int(item.get('totalLblt',0) or 0),
-            'total_equity':     int(item.get('totalCptl',0) or 0),
-            'per':              float(item.get('pER',0) or 0),
-            'pbr':              float(item.get('pBR',0) or 0),
-            'roe':              float(item.get('rOE',0) or 0),
-            'eps':              float(item.get('ePS',0) or 0),
-            'fetched_at':       now_kst()
-        }
+        return {'stock_code':stock['code'],'corp_name':item.get('corpNm',stock['name']),'base_date':f"{fiscal_year}-12-31",'fiscal_year':fiscal_year,'fiscal_quarter':4,'report_type':'연간','revenue':int(item.get('thstrm',0) or 0),'operating_profit':int(item.get('operPrfi',0) or 0),'net_profit':int(item.get('curNetPrfi',0) or 0),'total_assets':int(item.get('totalAsst',0) or 0),'total_liabilities':int(item.get('totalLblt',0) or 0),'total_equity':int(item.get('totalCptl',0) or 0),'per':float(item.get('pER',0) or 0),'pbr':float(item.get('pBR',0) or 0),'roe':float(item.get('rOE',0) or 0),'eps':float(item.get('ePS',0) or 0),'fetched_at':now_kst()}
     except Exception as e:
         logger.error(f"{stock['name']} 재무정보 오류: {type(e).__name__}")
         return None
-
 
 def fetch_corp_info(stock: dict) -> dict | None:
     url = f"{BASE_URL}/GetCorpBasicInfoService/getCorpOutline"
@@ -75,28 +50,15 @@ def fetch_corp_info(stock: dict) -> dict | None:
     try:
         res = data_go_kr_get(url, API_KEY, params)
         res.raise_for_status()
-        data = res.json()
-        body = data.get('response',{}).get('body',{})
+        body = res.json().get('response',{}).get('body',{})
         if not body.get('totalCount',0): return None
         items = body.get('items',{}).get('item',[])
-        item = items[0] if isinstance(items, list) and items else items
+        item = items[0] if isinstance(items,list) and items else items
         if not item: return None
-        return {
-            'stock_code':    stock['code'],
-            'corp_name':     item.get('corpNm', stock['name']),
-            'ceo_name':      item.get('enpRprFnm',''),
-            'address':       item.get('enpBsadr',''),
-            'homepage':      item.get('enpHmpgUrl',''),
-            'phone':         item.get('enpTlno',''),
-            'industry_name': item.get('enpIndutyNm',''),
-            'listing_date':  item.get('enpLstgDt', None),
-            'market_type':   item.get('enpMrktCtgNm',''),
-            'fetched_at':    now_kst()
-        }
+        return {'stock_code':stock['code'],'corp_name':item.get('corpNm',stock['name']),'ceo_name':item.get('enpRprFnm',''),'address':item.get('enpBsadr',''),'homepage':item.get('enpHmpgUrl',''),'phone':item.get('enpTlno',''),'industry_name':item.get('enpIndutyNm',''),'listing_date':item.get('enpLstgDt',None),'market_type':item.get('enpMrktCtgNm',''),'fetched_at':now_kst()}
     except Exception as e:
         logger.error(f"{stock['name']} 기본정보 오류: {type(e).__name__}")
         return None
-
 
 def main():
     logger.info("=== 기업 재무/기본정보 수집 시작 ===")
