@@ -6,7 +6,7 @@ on:
 jobs:
   weekly:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
@@ -30,7 +30,7 @@ jobs:
         timeout-minutes: 20
         continue-on-error: true
 
-      - name: Fetch bank rates (FSS)
+      - name: Fetch bank rates (FSS 예금/적금)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
@@ -99,6 +99,51 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/stock_short.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch stock rights (권리일정)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/stock_rights.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch bond issuance (채권발행)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/bond_issuance.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch KOFIA stats (금융투자협회)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/kofia_stats.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch bank stats (국내은행통계)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/bank_stats.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch financial corp info (금융회사정보)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/financial_corp_info.py
         timeout-minutes: 10
         continue-on-error: true
 
