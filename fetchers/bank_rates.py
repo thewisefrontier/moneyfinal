@@ -10,7 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst
 
 logger = logging.getLogger(__name__)
-FSS_API_KEY = os.environ.get('FSS_API_KEY', '')
+FINLIFE_API_KEY = os.environ.get('FINLIFE_API_KEY', '')
 FSS_BASE_URL = "https://finlife.fss.or.kr/finlifeapi"
 
 CATEGORY_MAP = {
@@ -23,11 +23,10 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
     results = []
     url = f"{FSS_BASE_URL}/{product_type}.json"
     params = {
-        'auth': FSS_API_KEY,
+        'auth': FINLIFE_API_KEY,
         'topFinGrpNo': top_fin_grp_no,
         'pageNo': 1
     }
-    # 재시도 로직 (최대 3회)
     for attempt in range(3):
         try:
             res = requests.get(url, params=params, timeout=30)
@@ -44,15 +43,12 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
             return results
     try:
         data = res.json()
-
         result = data.get('result', {})
         if result.get('err_cd') != '000':
             logger.error(f"FSS API 오류: {result.get('err_msg')}")
             return []
-
         base_list = result.get('baseList', [])
         option_list = result.get('optionList', [])
-
         for product in base_list:
             fin_prdt_cd = product.get('fin_prdt_cd')
             options = [o for o in option_list if o.get('fin_prdt_cd') == fin_prdt_cd]
@@ -79,33 +75,23 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
 def main():
     logger.info("=== 은행 금리 수집 시작 ===")
     all_rates = []
-
-    # 은행 예금/적금
     for product_type in ['depositProductsSearch', 'savingProductsSearch']:
         rates = fetch_fss_products(product_type, '020000')
         logger.info(f"{CATEGORY_MAP.get(product_type)} {len(rates)}건 수집")
         all_rates.extend(rates)
-
-    # 저축은행
     for product_type in ['depositProductsSearch', 'savingProductsSearch']:
         rates = fetch_fss_products(product_type, '030300')
         logger.info(f"저축은행 {CATEGORY_MAP.get(product_type)} {len(rates)}건 수집")
         all_rates.extend(rates)
-
     valid = [r for r in all_rates if r['rate'] > 0]
-    logger.info(f"유효 금리 총 {len(valid)}건")
-
-    # 배치 내 중복 제거 (같은 기관+상품+카테고리+기간 중복 시 마지막 값 유지)
     seen = {}
     for r in valid:
         key = (r['institution'], r['product_name'], r['category'], r['period'])
         seen[key] = r
     deduped = list(seen.values())
     logger.info(f"중복 제거 후 {len(deduped)}건")
-
     if deduped:
         supabase_upsert('rates', deduped)
-
     logger.info("=== 은행 금리 수집 완료 ===")
 
 

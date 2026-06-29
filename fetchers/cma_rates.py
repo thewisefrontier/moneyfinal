@@ -8,11 +8,9 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst
 
 logger = logging.getLogger(__name__)
-FSS_API_KEY = os.environ.get('FSS_API_KEY', '')
+FINLIFE_API_KEY = os.environ.get('FINLIFE_API_KEY', '')
 BASE_URL = "https://finlife.fss.or.kr/finlifeapi"
 
-# 금융권역코드
-# 020000: 은행, 030300: 저축은행, 050000: 증권사
 GROUPS = [
     ('020000', '파킹통장'),
     ('050000', 'CMA'),
@@ -20,10 +18,9 @@ GROUPS = [
 
 
 def fetch_demand_products(top_fin_grp_no: str, category: str) -> list:
-    """입출금/CMA 상품 수집"""
     url = f"{BASE_URL}/demandDepositProductsSearch.json"
     params = {
-        'auth': FSS_API_KEY,
+        'auth': FINLIFE_API_KEY,
         'topFinGrpNo': top_fin_grp_no,
         'pageNo': 1
     }
