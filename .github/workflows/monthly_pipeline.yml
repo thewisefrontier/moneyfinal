@@ -21,12 +21,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Fetch ECOS macro indicators
+      - name: Fetch ECOS macro indicators (기준금리/M2/가계신용)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
-        run: python fetchers/ecos_macro.py  # 기준금리, M2, 가계신용
+        run: python fetchers/ecos_macro.py
         timeout-minutes: 10
         continue-on-error: true
 
@@ -36,6 +36,15 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/stock_issuance.py
+        timeout-minutes: 10
+        continue-on-error: true
+
+      - name: Fetch FDI stats (외국인직접투자)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
+        run: python fetchers/fdi_stats.py
         timeout-minutes: 10
         continue-on-error: true
 
