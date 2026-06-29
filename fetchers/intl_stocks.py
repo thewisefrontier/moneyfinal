@@ -2,46 +2,37 @@
 국제거래 종목 정보 수집기
 - 금융위원회_국제거래종목정보 (공공데이터포털)
 """
-import logging, requests, os, sys
+import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst
+from utils.common import supabase_upsert, now_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
-BASE_URL = "https://apis.data.go.kr/1160100/service/GetIntlTradingItemInfoService"
+BASE_URL = "https://apis.data.go.kr/1160100/service/GetIntlTradingItemInfoService/getIntlTradingItemInfo"
 
 
 def fetch_intl_stocks() -> list:
-    url = f"{BASE_URL}/getIntlTradingItemInfo"
-    params = {
-        'serviceKey': API_KEY,
-        'resultType': 'json',
-        'numOfRows': 100,
-        'pageNo': 1,
-    }
+    params = {'resultType':'json','numOfRows':100,'pageNo':1}
     try:
-        res = requests.get(url, params=params, timeout=15)
+        res = data_go_kr_get(BASE_URL, API_KEY, params)
         res.raise_for_status()
         data = res.json()
-        body = data.get('response', {}).get('body', {})
-        if not body.get('totalCount', 0):
+        body = data.get('response',{}).get('body',{})
+        if not body.get('totalCount',0):
             logger.warning("국제거래종목: 데이터 없음")
             return []
-        items = body.get('items', {}).get('item', [])
-        if isinstance(items, dict):
-            items = [items]
+        items = body.get('items',{}).get('item',[])
+        if isinstance(items, dict): items = [items]
         results = []
         for item in items:
-            isin = item.get('isinCd', '')
-            if not isin:
-                continue
+            isin = item.get('isinCd','')
+            if not isin: continue
             results.append({
-                'stock_code': isin,           # conflict 컬럼
-                'stock_name': item.get('itmsNm', ''),
+                'stock_code':  isin,
+                'stock_name':  item.get('itmsNm',''),
                 'market_type': '해외',
-                # fix: industry 컬럼은 stocks 테이블에 없음 → corp_name에 국가명 포함
-                'corp_name': f"{item.get('itmsNm', '')} ({item.get('natnNm', '')})",
-                'fetched_at': now_kst()
+                'corp_name':   f"{item.get('itmsNm','')} ({item.get('natnNm','')})",
+                'fetched_at':  now_kst()
             })
         return results
     except Exception as e:
@@ -57,6 +48,4 @@ def main():
         logger.info(f"✅ 국제거래종목 {len(results)}건 저장")
     logger.info("=== 국제거래 종목 수집 완료 ===")
 
-
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()
