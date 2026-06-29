@@ -1,17 +1,17 @@
 """
-파생상품 시세 정보 수집기
-- 금융위원회_파생상품시세정보 (공공데이터포털)
+파생상품 지수 시세 수집기
+- 금융위원회_지수시세정보 파생상품 (공공데이터포털)
 """
-import logging, requests, os, sys
+import logging, os, sys
 from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
-BASE_URL = "https://apis.data.go.kr/1160100/service/GetDerivativeProductInfoService"
+BASE_URL = "https://apis.data.go.kr/1160100/service/GetMarketIndexInfoService/getDerivationProductMarketIndex"
 
 
 def get_base_date() -> str:
@@ -24,16 +24,14 @@ def get_base_date() -> str:
 
 
 def fetch_derivatives(base_date: str) -> list:
-    url = f"{BASE_URL}/getDerivativeProductInfo"
     params = {
-        'serviceKey': API_KEY,
         'resultType': 'json',
         'numOfRows': 20,
         'pageNo': 1,
         'basDt': base_date,
     }
     try:
-        res = requests.get(url, params=params, timeout=15)
+        res = data_go_kr_get(BASE_URL, API_KEY, params)
         res.raise_for_status()
         data = res.json()
         body = data.get('response', {}).get('body', {})
@@ -45,16 +43,19 @@ def fetch_derivatives(base_date: str) -> list:
             items = [items]
         results = []
         for item in items:
+            clpr = float(item.get('clpr', 0) or 0)
+            flt_rt = float(item.get('fltRt', 0) or 0)
+            idx_nm = item.get('idxNm', '')
             results.append({
-                'indicator_code': f"DERIV_{item.get('isinCd','')[:15]}",
-                'indicator_name': item.get('itmsNm', ''),
+                'indicator_code': f"DERIV_{idx_nm[:15]}",
+                'indicator_name': idx_nm,
                 'category': '파생상품',
-                'value': float(item.get('clpr', 0) or 0),
-                'prev_value': float(item.get('vs', 0) or 0),
+                'value': clpr,
                 'unit': 'pt',
-                'signal': 'green',
+                'signal': 'red' if flt_rt <= -3 else 'yellow' if flt_rt <= -1 else 'green',
                 'source': '금융위원회 (공공데이터포털)',
                 'reference_date': today_kst(),
+                'summary_text': f"{idx_nm} {clpr:.2f}pt ({flt_rt:+.2f}%)",
                 'fetched_at': now_kst()
             })
         return results

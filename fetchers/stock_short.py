@@ -1,17 +1,17 @@
 """
-주식 대차(공매도) 정보 수집기
+주식 대차/공매도 정보 수집기
 - 금융위원회_주식대차정보 (공공데이터포털)
 """
-import logging, requests, os, sys
+import logging, os, sys
 from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
-BASE_URL = "https://apis.data.go.kr/1160100/service/GetStockLendingInfoService"
+BASE_URL = "https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService"
 
 
 def get_base_date() -> str:
@@ -23,17 +23,16 @@ def get_base_date() -> str:
     return base.strftime('%Y%m%d')
 
 
-def fetch_short_data(base_date: str) -> list:
-    url = f"{BASE_URL}/getStockLendingInfo"
+def fetch_short(base_date: str) -> list:
+    url = f"{BASE_URL}/getStockMarginInfo"
     params = {
-        'serviceKey': API_KEY,
         'resultType': 'json',
         'numOfRows': 100,
         'pageNo': 1,
         'basDt': base_date,
     }
     try:
-        res = requests.get(url, params=params, timeout=15)
+        res = data_go_kr_get(url, API_KEY, params)
         res.raise_for_status()
         data = res.json()
         body = data.get('response', {}).get('body', {})
@@ -45,15 +44,15 @@ def fetch_short_data(base_date: str) -> list:
             items = [items]
         results = []
         for item in items:
-            base_dt = item.get('basDt', '')
             results.append({
-                'stock_code': item.get('srtnCd', ''),
-                'stock_name': item.get('itmsNm', ''),
-                'base_date': f"{base_dt[:4]}-{base_dt[4:6]}-{base_dt[6:8]}" if len(base_dt) == 8 else today_kst(),
-                'short_volume': int(item.get('lendBalQty', 0) or 0),
-                'short_amount': int(item.get('lendBalAmt', 0) or 0),
-                'short_ratio': float(item.get('lendBalQtyRto', 0) or 0),
-                'fetched_at': now_kst()
+                'stock_code':   item.get('srtnCd', ''),
+                'stock_name':   item.get('itmsNm', ''),
+                'base_date':    f"{base_date[:4]}-{base_date[4:6]}-{base_date[6:8]}",
+                'short_volume': int(item.get('ststByMrktClssScrsItmsEtfYn', 0) or 0),
+                'short_amount': int(item.get('shrtsItmsTotLoanMny', 0) or 0),
+                'short_ratio':  float(item.get('shrtsItmsShtslRt', 0) or 0),
+                'market_type':  item.get('mrktCls', ''),
+                'fetched_at':   now_kst()
             })
         return results
     except Exception as e:
@@ -64,7 +63,7 @@ def fetch_short_data(base_date: str) -> list:
 def main():
     logger.info("=== 주식 대차정보 수집 시작 ===")
     base_date = get_base_date()
-    results = fetch_short_data(base_date)
+    results = fetch_short(base_date)
     if results:
         supabase_upsert('stock_short', results)
         logger.info(f"✅ 대차정보 {len(results)}건 저장")

@@ -4,6 +4,7 @@
 import os
 import logging
 import requests
+from urllib.parse import urlencode
 from datetime import datetime
 import pytz
 
@@ -31,7 +32,6 @@ CONFLICT_COLUMNS = {
     'ipo_status': 'company_name,status,request_date',
     'financial_health': 'institution,reference_date',
     'daily_briefing': 'briefing_date',
-    # 주식/기업 관련
     'stock_prices': 'stock_code,base_date,market_type',
     'stock_short': 'stock_code,base_date',
     'stock_dividends': 'stock_code,base_date,dividend_type',
@@ -40,6 +40,17 @@ CONFLICT_COLUMNS = {
     'corp_info': 'stock_code',
     'corp_finance': 'stock_code,fiscal_year',
 }
+
+
+def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) -> requests.Response:
+    """
+    공공데이터포털 API 전용 GET 요청.
+    serviceKey는 이미 인코딩된 값이므로 requests params에 넣으면 이중 인코딩됨.
+    serviceKey를 URL에 직접 붙여서 단일 인코딩을 보장한다.
+    """
+    query = urlencode(params)  # serviceKey 제외한 나머지 파라미터
+    full_url = f"{url}?serviceKey={service_key}&{query}"
+    return requests.get(full_url, timeout=timeout)
 
 
 def supabase_upsert(table: str, data: list) -> bool:

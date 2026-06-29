@@ -1,21 +1,17 @@
 """
 채권 시세 정보 수집기
 - 금융위원회_채권시세정보 (공공데이터포털)
-- 금융위원회_채권기본정보 (공공데이터포털)
 """
-import logging, requests, os, sys
+import logging, os, sys
 from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service/GetBondSecuritiesInfoService"
-
-# 주요 채권 종류
-BOND_TYPES = ['국채', '통안채', '회사채']
 
 
 def get_base_date() -> str:
@@ -30,14 +26,13 @@ def get_base_date() -> str:
 def fetch_bond_prices(base_date: str) -> list:
     url = f"{BASE_URL}/getBondPriceInfo"
     params = {
-        'serviceKey': API_KEY,
         'resultType': 'json',
         'numOfRows': 50,
         'pageNo': 1,
         'basDt': base_date,
     }
     try:
-        res = requests.get(url, params=params, timeout=15)
+        res = data_go_kr_get(url, API_KEY, params)
         res.raise_for_status()
         data = res.json()
         body = data.get('response', {}).get('body', {})
