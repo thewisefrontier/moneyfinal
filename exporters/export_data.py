@@ -15,7 +15,7 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__
 os.makedirs(DATA_DIR, exist_ok=True)
 
 
-def save_json(filename: str, data: any):
+def save_json(filename: str, data):
     path = os.path.join(DATA_DIR, filename)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
@@ -25,9 +25,9 @@ def save_json(filename: str, data: any):
 
 def export_rates():
     """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)"""
+    # rates 테이블에 is_published 컬럼 없음 — 필터 없이 전체 조회
     rates = supabase_select('rates', {
         'select': '*',
-        'is_published': 'eq.true',
         'order': 'max_rate.desc',
         'limit': '2000'
     })
@@ -35,9 +35,7 @@ def export_rates():
     by_category = {}
     for r in rates:
         cat = r.get('category', '기타')
-        if cat not in by_category:
-            by_category[cat] = []
-        by_category[cat].append(r)
+        by_category.setdefault(cat, []).append(r)
 
     save_json('rates.json', {
         'updated_at': today_kst(),
@@ -55,20 +53,17 @@ def export_market():
         'limit': '200'
     })
 
-    # 지표별 최신값만
+    # 지표 코드별 최신값만 유지
     latest = {}
     for i in indicators:
         code = i.get('indicator_code')
-        if code not in latest:
+        if code and code not in latest:
             latest[code] = i
 
-    # 카테고리별 분류
     by_category = {}
     for i in latest.values():
         cat = i.get('category', '기타')
-        if cat not in by_category:
-            by_category[cat] = []
-        by_category[cat].append(i)
+        by_category.setdefault(cat, []).append(i)
 
     save_json('market.json', {
         'updated_at': today_kst(),
@@ -119,7 +114,7 @@ def export_ipo():
 
 
 def export_stocks():
-    """주식 시세 export - 시가총액 상위 50"""
+    """주식 시세 export - 시가총액 상위"""
     kospi = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.KOSPI',
@@ -132,12 +127,11 @@ def export_stocks():
         'order': 'market_cap.desc',
         'limit': '25'
     })
-    all_stocks = kospi + kosdaq
     save_json('stocks.json', {
         'updated_at': today_kst(),
         'kospi': kospi,
         'kosdaq': kosdaq,
-        'total': len(all_stocks)
+        'total': len(kospi) + len(kosdaq)
     })
 
 
