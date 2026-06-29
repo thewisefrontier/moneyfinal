@@ -25,7 +25,6 @@ def save_json(filename: str, data):
 
 def export_rates():
     """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)"""
-    # rates 테이블에 is_published 컬럼 없음 — 필터 없이 전체 조회
     rates = supabase_select('rates', {
         'select': '*',
         'order': 'max_rate.desc',
@@ -47,10 +46,11 @@ def export_rates():
 
 def export_market():
     """거시지표 export (채권/ISA/KOFIA/ECOS/FRED/KRX 포함)"""
+    # limit 500: 카테고리 다양화로 인해 지표 수가 200 초과 가능
     indicators = supabase_select('market_indicators', {
         'select': '*',
         'order': 'fetched_at.desc',
-        'limit': '200'
+        'limit': '500'
     })
 
     # 지표 코드별 최신값만 유지
