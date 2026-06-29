@@ -3,7 +3,7 @@
 - 금융위원회_주식배당정보 (공공데이터포털)
 """
 import logging, requests, os, sys
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst, today_kst
@@ -17,12 +17,16 @@ BASE_URL = "https://apis.data.go.kr/1160100/service/GetStockDividendInfoService"
 def fetch_dividends() -> list:
     url = f"{BASE_URL}/getStockDividendInfo"
     now = datetime.now(KST)
+    # fix: 오늘 날짜 단일 조회 → 최근 1년 범위 조회 (배당락일 기준 데이터)
+    begin = (now - timedelta(days=365)).strftime('%Y%m%d')
+    end = now.strftime('%Y%m%d')
     params = {
         'serviceKey': API_KEY,
         'resultType': 'json',
-        'numOfRows': 100,
+        'numOfRows': 200,
         'pageNo': 1,
-        'basDt': now.strftime('%Y%m%d'),
+        'beginBasDt': begin,
+        'endBasDt': end,
     }
     try:
         res = requests.get(url, params=params, timeout=15)
@@ -38,15 +42,19 @@ def fetch_dividends() -> list:
         results = []
         for item in items:
             base_dt = item.get('basDt', '')
+            dps = float(item.get('dps', 0) or 0)
+            if dps <= 0:
+                continue  # DPS 0인 항목 제외
             results.append({
                 'stock_code': item.get('srtnCd', ''),
                 'stock_name': item.get('itmsNm', ''),
                 'base_date': f"{base_dt[:4]}-{base_dt[4:6]}-{base_dt[6:8]}" if len(base_dt) == 8 else today_kst(),
-                'dps': float(item.get('dps', 0) or 0),
+                'dps': dps,
                 'dividend_type': item.get('dvdnKindNm', '현금'),
                 'fiscal_year': int(item.get('bizYear', 0) or 0),
                 'fetched_at': now_kst()
             })
+        logger.info(f"배당정보 {len(results)}건 수집 (DPS > 0)")
         return results
     except Exception as e:
         logger.error(f"배당정보 수집 오류: {type(e).__name__}")
