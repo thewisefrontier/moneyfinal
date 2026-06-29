@@ -7,7 +7,6 @@ Gemini AI 데이터 분석기
 import logging
 import os
 import time
-import json
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_select, supabase_upsert, now_kst, today_kst
@@ -39,7 +38,7 @@ def call_gemini(prompt: str, max_tokens: int = 300) -> str:
             contents=SYSTEM_PROMPT + "\n\n" + prompt,
             config=genai.types.GenerateContentConfig(
                 max_output_tokens=max_tokens,
-                temperature=0.1,  # 낮은 temperature로 할루시네이션 최소화
+                temperature=0.1,
             )
         )
         time.sleep(10)
@@ -97,10 +96,8 @@ def generate_signal(indicators: list) -> str:
     """종합 위험 신호 판단"""
     if not indicators:
         return "green"
-
     red_count = sum(1 for i in indicators if i.get('signal') == 'red')
     yellow_count = sum(1 for i in indicators if i.get('signal') == 'yellow')
-
     if red_count >= 2:
         return 'red'
     elif red_count >= 1 or yellow_count >= 2:
@@ -112,10 +109,9 @@ def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
 
-    # 수집된 데이터 조회
+    # rates 테이블에 is_published 컬럼 없음 — 필터 없이 전체 조회
     rates = supabase_select('rates', {
         'select': '*',
-        'is_published': 'eq.true',
         'order': 'max_rate.desc',
         'limit': '10'
     })
@@ -131,17 +127,14 @@ def main():
         logger.warning("분석할 데이터 없음. 종료.")
         return
 
-    # 데이터 기반 분석
     rate_analysis = analyze_rates(rates)
     logger.info("금리 분석 완료")
 
     market_analysis = analyze_market(indicators)
     logger.info("시장 분석 완료")
 
-    # 종합 신호 판단
     overall_signal = generate_signal(indicators)
 
-    # daily_briefing 저장
     briefing = {
         'briefing_date': today,
         'headline': f"{today} 금융 데이터 현황",
