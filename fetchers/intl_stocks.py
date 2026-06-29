@@ -4,7 +4,7 @@
 """
 import logging, requests, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
@@ -32,12 +32,15 @@ def fetch_intl_stocks() -> list:
             items = [items]
         results = []
         for item in items:
+            isin = item.get('isinCd', '')
+            if not isin:
+                continue
             results.append({
-                'stock_code': item.get('isinCd', ''),
+                'stock_code': isin,           # conflict 컬럼
                 'stock_name': item.get('itmsNm', ''),
                 'market_type': '해외',
-                'industry': item.get('natnNm', ''),
-                'corp_name': item.get('itmsNm', ''),
+                # fix: industry 컬럼은 stocks 테이블에 없음 → corp_name에 국가명 포함
+                'corp_name': f"{item.get('itmsNm', '')} ({item.get('natnNm', '')})",
                 'fetched_at': now_kst()
             })
         return results
