@@ -2,7 +2,6 @@
 금융회사 기본정보 / 재무신용정보 수집기
 - 금융위원회_금융회사기본정보 (공공데이터포털)
 - 금융위원회_금융회사재무신용정보 (공공데이터포털)
-- 금융위원회_금융회사지배구조정보 (공공데이터포털)
 """
 import logging, requests, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -34,8 +33,13 @@ def fetch_financial_corps() -> list:
             items = [items]
         results = []
         for item in items:
+            reg_no = item.get('fncoRegNo', '')
+            if not reg_no:
+                continue
             results.append({
-                'stock_code': item.get('fncoRegNo', ''),
+                # corp_info 테이블 conflict 컬럼은 stock_code
+                # 금융회사는 종목코드 없으므로 등록번호를 stock_code로 사용
+                'stock_code': f"FIN_{reg_no}",
                 'corp_name': item.get('fncoNm', ''),
                 'industry_name': item.get('fncoClssNm', ''),
                 'address': item.get('fncoAdr', ''),
@@ -72,9 +76,10 @@ def fetch_financial_credit() -> list:
         results = []
         for item in items:
             bis = float(item.get('bisRto', 0) or 0)
+            reg_no = item.get('fncoRegNo', '')[:10]
             results.append({
-                'indicator_code': f"BIS_{item.get('fncoRegNo','')[:10]}",
-                'indicator_name': f"{item.get('fncoNm','')} BIS비율",
+                'indicator_code': f"BIS_{reg_no}",
+                'indicator_name': f"{item.get('fncoNm', '')} BIS비율",
                 'category': '금융회사건전성',
                 'value': bis,
                 'unit': '%',
