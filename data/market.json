@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-06-28",
+  "updated_at": "2026-06-29",
   "indicators": [
+    {
+      "id": 60,
+      "indicator_code": "USD_KRW",
+      "indicator_name": "원달러 환율",
+      "category": "환율",
+      "value": 1544.2,
+      "prev_value": 1545.3,
+      "unit": "원",
+      "signal": "red",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-06-29",
+      "summary_text": null,
+      "fetched_at": "2026-06-29T08:42:56.334861+00:00",
+      "created_at": "2026-06-29T07:17:24.787482+00:00"
+    },
     {
       "id": 5,
       "indicator_code": "US_YIELD_CURVE",
@@ -62,21 +77,6 @@
       "created_at": "2026-06-28T06:20:27.688845+00:00"
     },
     {
-      "id": 15,
-      "indicator_code": "USD_KRW",
-      "indicator_name": "원달러 환율",
-      "category": "환율",
-      "value": 1527.0,
-      "prev_value": 1522.4,
-      "unit": "원",
-      "signal": "red",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-06-28",
-      "summary_text": null,
-      "fetched_at": "2026-06-28T10:34:46.33546+00:00",
-      "created_at": "2026-06-28T06:40:42.084283+00:00"
-    },
-    {
       "id": 14,
       "indicator_code": "M2_TOTAL",
       "indicator_name": "시중 유동성(M2, 평잔)",
@@ -106,5 +106,120 @@
       "fetched_at": "2026-06-28T10:34:44.971339+00:00",
       "created_at": "2026-06-28T06:20:22.870866+00:00"
     }
-  ]
+  ],
+  "by_category": {
+    "환율": [
+      {
+        "id": 60,
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "category": "환율",
+        "value": 1544.2,
+        "prev_value": 1545.3,
+        "unit": "원",
+        "signal": "red",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-06-29",
+        "summary_text": null,
+        "fetched_at": "2026-06-29T08:42:56.334861+00:00",
+        "created_at": "2026-06-29T07:17:24.787482+00:00"
+      },
+      {
+        "id": 4,
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스",
+        "category": "환율",
+        "value": 120.3958,
+        "prev_value": 119.3871,
+        "unit": "Index",
+        "signal": "green",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-06-18",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:41:49.846584+00:00",
+        "created_at": "2026-06-28T06:20:27.688845+00:00"
+      }
+    ],
+    "금리": [
+      {
+        "id": 5,
+        "indicator_code": "US_YIELD_CURVE",
+        "indicator_name": "미국 장단기 금리차 (10Y-2Y)",
+        "category": "금리",
+        "value": 0.31,
+        "prev_value": 0.31,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-06-26",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:41:50.287358+00:00",
+        "created_at": "2026-06-28T06:20:27.688845+00:00"
+      },
+      {
+        "id": 2,
+        "indicator_code": "FED_RATE",
+        "indicator_name": "미국 기준금리 (Fed Funds Rate)",
+        "category": "금리",
+        "value": 3.63,
+        "prev_value": 3.64,
+        "unit": "%",
+        "signal": "green",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-05-01",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:41:49.383106+00:00",
+        "created_at": "2026-06-28T06:20:27.688845+00:00"
+      },
+      {
+        "id": 1,
+        "indicator_code": "BASE_RATE",
+        "indicator_name": "한국은행 기준금리",
+        "category": "금리",
+        "value": 2.5,
+        "prev_value": 2.5,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-06-28",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:34:44.971339+00:00",
+        "created_at": "2026-06-28T06:20:22.870866+00:00"
+      }
+    ],
+    "물가": [
+      {
+        "id": 3,
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수 (CPI)",
+        "category": "물가",
+        "value": 333.979,
+        "prev_value": 332.407,
+        "unit": "Index",
+        "signal": "green",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-05-01",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:41:49.630134+00:00",
+        "created_at": "2026-06-28T06:20:27.688845+00:00"
+      }
+    ],
+    "유동성": [
+      {
+        "id": 14,
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "category": "유동성",
+        "value": 4160887.5,
+        "prev_value": 4139870.6,
+        "unit": "십억원",
+        "signal": "green",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-06-28",
+        "summary_text": null,
+        "fetched_at": "2026-06-28T10:34:45.784683+00:00",
+        "created_at": "2026-06-28T06:40:42.084283+00:00"
+      }
+    ]
+  }
 }
