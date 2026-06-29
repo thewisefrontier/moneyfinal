@@ -20,14 +20,10 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
-.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
 .card-title{font-size:13px;font-weight:600}
-.badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600}
-.badge-blue{background:rgba(56,139,253,.15);color:var(--blue)}
-.badge-green{background:rgba(63,185,80,.15);color:var(--green)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
-@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
 .row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
 .row:last-child{border-bottom:none}
 .row:hover{background:var(--bg3)}
@@ -54,156 +50,50 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html" class="active">경제지표</a></nav>
   <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
 <main>
-
 <div class="grid2">
-  <!-- 왼쪽 열 -->
   <div>
     <div class="sec-hd"><div class="sec-title">국내 거시지표</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">한국은행 ECOS</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="dom-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">한국은행 ECOS</span></div><div id="dom-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">은행 건전성 (BIS)</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">금융회사 BIS 자기자본비율</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="bis-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">금융회사 BIS 자기자본비율</span></div><div id="bis-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">국내은행 통계</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">NIM · 수익성 · 건전성</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="bank-stats-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">NIM · 수익성 · 건전성</span></div><div id="bank-stats-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">외국인 직접투자 (FDI)</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">산업별 FDI</span><span class="badge badge-green">KOTRA</span></div>
-      <div id="fdi-list"><div class="loading">로딩 중...</div></div>
-    </div>
+    <div class="card"><div class="card-hd"><span class="card-title">산업별 FDI</span></div><div id="fdi-list"><div class="loading">로딩 중...</div></div></div>
   </div>
-
-  <!-- 오른쪽 열 -->
   <div>
     <div class="sec-hd"><div class="sec-title">글로벌 지표</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">FRED (미국 연준)</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="glob-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">FRED</span></div><div id="glob-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">채권 시장</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">채권 시세 (YTM)</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="bond-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">채권 시세 (YTM)</span></div><div id="bond-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">채권 발행</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">최근 30일 채권발행</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="bond-iss-list"><div class="loading">로딩 중...</div></div>
-    </div>
-
+    <div class="card"><div class="card-hd"><span class="card-title">최근 30일 채권발행</span></div><div id="bond-iss-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">금융투자협회 통계</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">ETF · 펀드 통계</span><span class="badge badge-green">공공데이터</span></div>
-      <div id="kofia-list"><div class="loading">로딩 중...</div></div>
-    </div>
+    <div class="card"><div class="card-hd"><span class="card-title">ETF · 펀드 통계</span></div><div id="kofia-list"><div class="loading">로딩 중...</div></div></div>
   </div>
 </div>
-
 </main>
-<div class="disclaimer">
-  ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
-  데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · KOTRA · 공공데이터포털
-</div>
+<div class="disclaimer">⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · KOTRA · 공공데이터포털</div>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
-
 <script>
-function toggleTheme(){
-  const h=document.documentElement;
-  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
-  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
-}
-function fmt(v,u='',d=2){
-  if(v===null||v===undefined)return'-';
-  const n=parseFloat(v);
-  if(isNaN(n))return'-';
-  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
-}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
-
-function indHtml(list, empty='데이터 수집 예정'){
-  if(!list.length) return `<div class="empty">${empty}</div>`;
-  return list.map(i=>`
-    <div class="row ind-row">
-      <div>
-        <div class="ind-name">${i.indicator_name}</div>
-        ${i.summary_text?`<div class="ind-sub">${i.summary_text}</div>`:''}
-      </div>
-      <div style="text-align:right">
-        <span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',i.unit==='%'?2:0)}</span>
-        <span class="ind-unit"> ${i.unit}</span>
-      </div>
-    </div>`).join('');
-}
-
+function indHtml(list,empty='데이터 수집 예정'){if(!list.length)return `<div class="empty">${empty}</div>`;return list.map(i=>`<div class="row ind-row"><div><div class="ind-name">${i.indicator_name}</div>${i.summary_text?`<div class="ind-sub">${i.summary_text}</div>`:''}</div><div style="text-align:right"><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',i.unit==='%'?2:0)}</span><span class="ind-unit"> ${i.unit}</span></div></div>`).join('');}
 async function loadMacro(){
-  try{
-    const r=await fetch('data/market.json');
-    const d=await r.json();
-    const inds=d.indicators||[];
-    const bc=d.by_category||{};
-
-    // 국내 거시
-    const DOM_CODES=['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'];
-    document.getElementById('dom-list').innerHTML=indHtml(inds.filter(i=>DOM_CODES.includes(i.indicator_code)));
-
-    // 글로벌
-    const GLOB_CODES=['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE','VIX','WTI','GOLD'];
-    document.getElementById('glob-list').innerHTML=indHtml(inds.filter(i=>GLOB_CODES.includes(i.indicator_code)));
-
-    // 채권 시세
+  try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const bc=d.by_category||{};
+    document.getElementById('dom-list').innerHTML=indHtml(inds.filter(i=>['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'].includes(i.indicator_code)));
+    document.getElementById('glob-list').innerHTML=indHtml(inds.filter(i=>['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE','VIX','WTI','GOLD'].includes(i.indicator_code)));
     document.getElementById('bond-list').innerHTML=indHtml((bc['채권금리']||[]).slice(0,10));
-
-    // 채권 발행
     document.getElementById('bond-iss-list').innerHTML=indHtml((bc['채권발행']||[]).slice(0,10));
-
-    // BIS
     document.getElementById('bis-list').innerHTML=indHtml((bc['금융회사건전성']||[]).slice(0,10));
-
-    // 국내은행 통계
     document.getElementById('bank-stats-list').innerHTML=indHtml((bc['은행통계']||[]).slice(0,10));
-
-    // KOFIA
     document.getElementById('kofia-list').innerHTML=indHtml((bc['금융투자']||[]).slice(0,10));
-
-    // FDI
     document.getElementById('fdi-list').innerHTML=indHtml((bc['외국인직접투자']||[]).slice(0,10));
-
-  }catch(e){
-    ['dom','glob','bond','bond-iss','bis','bank-stats','kofia','fdi'].forEach(id=>{
-      const el=document.getElementById(id+'-list');
-      if(el) el.innerHTML='<div class="empty">데이터 로드 실패</div>';
-    });
-  }
+  }catch(e){['dom','glob','bond','bond-iss','bis','bank-stats','kofia','fdi'].forEach(id=>{const el=document.getElementById(id+'-list');if(el)el.innerHTML='<div class="empty">데이터 로드 실패</div>';});}
 }
 loadMacro();
-
-async function loadTicker(){
-  try{
-    const r=await fetch('data/market.json');
-    const d=await r.json();
-    const inds=d.indicators||[];
-    const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','VIX':'VIX','WTI':'WTI','GOLD':'금'};
-    let html='';
-    inds.forEach(i=>{
-      if(!labels[i.indicator_code])return;
-      const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');
-      html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
-    });
-    document.getElementById('ticker-inner').innerHTML=html+html;
-  }catch(e){}
-}
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','VIX':'VIX','WTI':'WTI','GOLD':'금'};let html='';inds.forEach(i=>{if(!labels[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=html+html;}catch(e){}}
 loadTicker();
 </script>
 </body>

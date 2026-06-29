@@ -20,10 +20,8 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
-.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
 .card-title{font-size:13px;font-weight:600}
-.badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600}
-.badge-blue{background:rgba(56,139,253,.15);color:var(--blue)}
 .row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
 .row:last-child{border-bottom:none}
 .row:hover{background:var(--bg3)}
@@ -49,67 +47,21 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <main>
 <div class="sec-hd"><div class="sec-title">실손보험</div></div>
 <div class="card" style="margin-bottom:24px">
-  <div class="card-hd"><span class="card-title">보험사별 실손보험 정보</span><span class="badge badge-blue">공공데이터포털</span></div>
+  <div class="card-hd"><span class="card-title">보험사별 실손보험 정보</span></div>
   <div id="ins-list"><div class="loading">로딩 중...</div></div>
 </div>
 </main>
-<div class="disclaimer">
-  ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
-  데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
-</div>
+<div class="disclaimer">⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털</div>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
-
 <script>
-// fmt, sc, toggleTheme 먼저 정의 — 이후 모든 함수에서 사용 가능
-function toggleTheme(){
-  const h=document.documentElement;
-  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
-  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
-}
-function fmt(v,u='',d=2){
-  if(v===null||v===undefined)return'-';
-  const n=parseFloat(v);
-  if(isNaN(n))return'-';
-  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
-}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
-
 async function loadInsurance(){
-  try{
-    const r=await fetch('data/rates.json');
-    const d=await r.json();
-    const bc=d.by_category||{};
-    const ins=bc['실손보험']||[];
-    const el=document.getElementById('ins-list');
-    el.innerHTML=ins.length
-      ? ins.slice(0,20).map((r,i)=>`
-          <div class="row" style="grid-template-columns:2fr 1fr auto">
-            <div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div>
-            <div style="font-size:11px;color:var(--text2);align-self:center">${r.join_method||''}</div>
-            <div><div class="rmax">${fmt(r.rate,'%')} 손해율</div></div>
-          </div>`).join('')
-      : '<div class="empty">실손보험 데이터 수집 예정</div>';
-  }catch(e){
-    document.getElementById('ins-list').innerHTML='<div class="empty">데이터 없음</div>';
-  }
+  try{const r=await fetch('data/rates.json');const d=await r.json();const ins=(d.by_category||{})['실손보험']||[];document.getElementById('ins-list').innerHTML=ins.length?ins.slice(0,20).map((r,i)=>`<div class="row" style="grid-template-columns:2fr 1fr auto"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div style="font-size:11px;color:var(--text2);align-self:center">${r.join_method||''}</div><div><div class="rmax">${fmt(r.rate,'%')} 손해율</div></div></div>`).join(''):'<div class="empty">실손보험 데이터 수집 예정</div>';}catch(e){document.getElementById('ins-list').innerHTML='<div class="empty">데이터 없음</div>';}
 }
 loadInsurance();
-
-async function loadTicker(){
-  try{
-    const r=await fetch('data/market.json');
-    const d=await r.json();
-    const inds=d.indicators||[];
-    const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};
-    let html='';
-    inds.forEach(i=>{
-      if(!labels[i.indicator_code])return;
-      const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');
-      html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
-    });
-    document.getElementById('ticker-inner').innerHTML=html+html;
-  }catch(e){}
-}
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};let html='';inds.forEach(i=>{if(!labels[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=html+html;}catch(e){}}
 loadTicker();
 </script>
 </body>
