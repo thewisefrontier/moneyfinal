@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 import pytz
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, supabase_select, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
@@ -106,12 +106,15 @@ def fetch_krx_stocks() -> list:
             if isinstance(items, dict):
                 items = [items]
             for item in items:
+                stock_code = item.get('srtnCd', '')
+                if not stock_code:
+                    continue
                 results.append({
                     'isin_code': item.get('isinCd', ''),
-                    'stock_code': item.get('srtnCd', ''),
+                    'stock_code': stock_code,
                     'stock_name': item.get('itmsNm', ''),
                     'market_type': market,
-                    'corp_name': item.get('crno', ''),
+                    'corp_name': item.get('corpNm', item.get('itmsNm', '')),  # fix: crno → corpNm
                     'listed_date': item.get('lstgDt', None),
                     'fetched_at': now_kst()
                 })
@@ -139,7 +142,7 @@ def main():
     if all_prices:
         supabase_upsert('stock_prices', all_prices)
 
-    # 상장종목 기본정보 (주 1회면 충분하나 일단 같이 수집)
+    # 상장종목 기본정보
     stocks = fetch_krx_stocks()
     if stocks:
         supabase_upsert('stocks', stocks)
