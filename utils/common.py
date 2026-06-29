@@ -47,10 +47,15 @@ def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) 
     공공데이터포털 API 전용 GET 요청.
     serviceKey는 이미 인코딩된 값이므로 requests params에 넣으면 이중 인코딩됨.
     serviceKey를 URL에 직접 붙여서 단일 인코딩을 보장한다.
+    오류 시 상태코드와 응답 본문을 로그에 출력한다.
     """
-    query = urlencode(params)  # serviceKey 제외한 나머지 파라미터
+    query = urlencode(params)
     full_url = f"{url}?serviceKey={service_key}&{query}"
-    return requests.get(full_url, timeout=timeout)
+    logging.debug(f"[API 호출] {full_url[:120]}...")
+    res = requests.get(full_url, timeout=timeout)
+    if res.status_code >= 400:
+        logging.error(f"[API 오류] HTTP {res.status_code} | URL: {full_url[:120]}... | 응답: {res.text[:300]}")
+    return res
 
 
 def supabase_upsert(table: str, data: list) -> bool:
