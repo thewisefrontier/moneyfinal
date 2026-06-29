@@ -34,7 +34,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          KRX_API_KEY: ${{ secrets.FSS_API_KEY }}
+          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/krx_index.py
         timeout-minutes: 10
         continue-on-error: true
@@ -56,7 +56,6 @@ jobs:
         run: python fetchers/dart_disclosure.py
         timeout-minutes: 10
         continue-on-error: true
-
 
       - name: Fetch bond prices (채권시세)
         env:
@@ -84,6 +83,7 @@ jobs:
         run: python fetchers/derivatives_info.py
         timeout-minutes: 10
         continue-on-error: true
+
       - name: Gemini analyze
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
