@@ -8,47 +8,47 @@ import logging
 import requests
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytz
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, supabase_select, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('FSS_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service"
 
-# 시가총액 상위 주요 종목 (코스피 대형주 위주)
+# 종목코드(srtnCd) → 종목명 매핑 (API는 종목코드로 조회)
+# GetFinaStatInfoService는 crno(사업자번호) 대신 likeSrtnCd(종목코드 유사검색) 사용
 MAJOR_STOCKS = [
-    '005930',  # 삼성전자
-    '000660',  # SK하이닉스
-    '005380',  # 현대차
-    '035420',  # NAVER
-    '005490',  # POSCO홀딩스
-    '051910',  # LG화학
-    '006400',  # 삼성SDI
-    '035720',  # 카카오
-    '000270',  # 기아
-    '105560',  # KB금융
-    '055550',  # 신한지주
-    '012330',  # 현대모비스
-    '028260',  # 삼성물산
-    '066570',  # LG전자
-    '017670',  # SK텔레콤
-    '030200',  # KT
-    '003550',  # LG
-    '096770',  # SK이노베이션
-    '018260',  # 삼성에스디에스
-    '009150',  # 삼성전기
+    {'code': '005930', 'name': '삼성전자'},
+    {'code': '000660', 'name': 'SK하이닉스'},
+    {'code': '005380', 'name': '현대차'},
+    {'code': '035420', 'name': 'NAVER'},
+    {'code': '005490', 'name': 'POSCO홀딩스'},
+    {'code': '051910', 'name': 'LG화학'},
+    {'code': '006400', 'name': '삼성SDI'},
+    {'code': '035720', 'name': '카카오'},
+    {'code': '000270', 'name': '기아'},
+    {'code': '105560', 'name': 'KB금융'},
+    {'code': '055550', 'name': '신한지주'},
+    {'code': '012330', 'name': '현대모비스'},
+    {'code': '028260', 'name': '삼성물산'},
+    {'code': '066570', 'name': 'LG전자'},
+    {'code': '017670', 'name': 'SK텔레콤'},
+    {'code': '030200', 'name': 'KT'},
+    {'code': '003550', 'name': 'LG'},
+    {'code': '096770', 'name': 'SK이노베이션'},
+    {'code': '018260', 'name': '삼성에스디에스'},
+    {'code': '009150', 'name': '삼성전기'},
 ]
 
 
-def fetch_corp_finance(stock_code: str) -> dict | None:
-    """기업 재무정보 조회"""
+def fetch_corp_finance(stock: dict) -> dict | None:
+    """기업 재무정보 조회 — likeSrtnCd(종목코드) 파라미터 사용"""
     url = f"{BASE_URL}/GetFinaStatInfoService/getFinaStatInfo"
     now = datetime.now(KST)
-    # 최근 사업연도
     fiscal_year = now.year - 1 if now.month < 4 else now.year
 
     params = {
@@ -56,7 +56,7 @@ def fetch_corp_finance(stock_code: str) -> dict | None:
         'resultType': 'json',
         'numOfRows': 1,
         'pageNo': 1,
-        'crno': stock_code,
+        'likeSrtnCd': stock['code'],   # fix: crno(사업자번호) → likeSrtnCd(종목코드)
         'bizYear': str(fiscal_year),
     }
     try:
@@ -65,6 +65,7 @@ def fetch_corp_finance(stock_code: str) -> dict | None:
         data = res.json()
         body = data.get('response', {}).get('body', {})
         if not body.get('totalCount', 0):
+            logger.warning(f"{stock['name']}({stock['code']}): 재무 데이터 없음")
             return None
         items = body.get('items', {}).get('item', [])
         item = items[0] if isinstance(items, list) and items else items
@@ -72,8 +73,8 @@ def fetch_corp_finance(stock_code: str) -> dict | None:
             return None
 
         return {
-            'stock_code': stock_code,
-            'corp_name': item.get('corpNm', ''),
+            'stock_code': stock['code'],
+            'corp_name': item.get('corpNm', stock['name']),
             'base_date': f"{fiscal_year}-12-31",
             'fiscal_year': fiscal_year,
             'fiscal_quarter': 4,
@@ -91,19 +92,19 @@ def fetch_corp_finance(stock_code: str) -> dict | None:
             'fetched_at': now_kst()
         }
     except Exception as e:
-        logger.error(f"{stock_code} 재무정보 오류: {type(e).__name__}")
+        logger.error(f"{stock['name']} 재무정보 오류: {type(e).__name__}")
         return None
 
 
-def fetch_corp_info(stock_code: str) -> dict | None:
-    """기업 기본정보 조회"""
+def fetch_corp_info(stock: dict) -> dict | None:
+    """기업 기본정보 조회 — likeSrtnCd(종목코드) 파라미터 사용"""
     url = f"{BASE_URL}/GetCorpBasicInfoService/getCorpOutline"
     params = {
         'serviceKey': API_KEY,
         'resultType': 'json',
         'numOfRows': 1,
         'pageNo': 1,
-        'crno': stock_code,
+        'likeSrtnCd': stock['code'],   # fix: crno → likeSrtnCd
     }
     try:
         res = requests.get(url, params=params, timeout=15)
@@ -111,6 +112,7 @@ def fetch_corp_info(stock_code: str) -> dict | None:
         data = res.json()
         body = data.get('response', {}).get('body', {})
         if not body.get('totalCount', 0):
+            logger.warning(f"{stock['name']}({stock['code']}): 기본정보 없음")
             return None
         items = body.get('items', {}).get('item', [])
         item = items[0] if isinstance(items, list) and items else items
@@ -118,8 +120,8 @@ def fetch_corp_info(stock_code: str) -> dict | None:
             return None
 
         return {
-            'stock_code': stock_code,
-            'corp_name': item.get('corpNm', ''),
+            'stock_code': stock['code'],
+            'corp_name': item.get('corpNm', stock['name']),
             'ceo_name': item.get('enpRprFnm', ''),
             'address': item.get('enpBsadr', ''),
             'homepage': item.get('enpHmpgUrl', ''),
@@ -130,7 +132,7 @@ def fetch_corp_info(stock_code: str) -> dict | None:
             'fetched_at': now_kst()
         }
     except Exception as e:
-        logger.error(f"{stock_code} 기본정보 오류: {type(e).__name__}")
+        logger.error(f"{stock['name']} 기본정보 오류: {type(e).__name__}")
         return None
 
 
@@ -141,16 +143,14 @@ def main():
     finance_results = []
     corp_results = []
 
-    for code in MAJOR_STOCKS:
-        # 재무정보
-        finance = fetch_corp_finance(code)
+    for stock in MAJOR_STOCKS:
+        finance = fetch_corp_finance(stock)
         if finance:
             finance_results.append(finance)
-            logger.info(f"✅ {code} 재무: {finance.get('corp_name','')}")
-        time.sleep(0.5)  # API 부하 방지
+            logger.info(f"✅ {stock['name']} 재무 수집")
+        time.sleep(0.5)
 
-        # 기본정보
-        corp = fetch_corp_info(code)
+        corp = fetch_corp_info(stock)
         if corp:
             corp_results.append(corp)
         time.sleep(0.5)
