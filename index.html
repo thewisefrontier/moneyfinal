@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>머니파이널 | 머니파이널</title>
+<title>홈 | 머니파이널</title>
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -49,43 +49,36 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
 .disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
-/* 티커 */
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center}
 .ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
 .ti .name{color:var(--text);font-weight:500}
-/* 신호등 */
 .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
 .dot.green{background:var(--green);box-shadow:0 0 5px var(--green)}
 .dot.yellow{background:var(--yellow);box-shadow:0 0 5px var(--yellow)}
 .dot.red{background:var(--red);box-shadow:0 0 5px var(--red)}
-/* 금리 행 */
 .rate-row{grid-template-columns:2fr 1fr auto auto}
 .rb{font-size:13px;font-weight:600}
 .rp{font-size:11px;color:var(--text2);margin-top:2px}
 .period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center}
 .rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
 .rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
-/* 지표 행 */
 .ind-row{grid-template-columns:1fr auto}
 .ind-name{font-size:13px;font-weight:500}
 .ind-val{font-size:14px;font-weight:700;text-align:right}
 .ind-unit{font-size:11px;color:var(--text2)}
-/* 공시 행 */
 .disc-row{grid-template-columns:auto 1fr auto;gap:16px}
 .disc-date{font-size:11px;color:var(--text2);white-space:nowrap}
 .disc-co{font-size:13px;font-weight:600}
 .disc-type{font-size:11px;color:var(--text2)}
 .dart-link{font-size:11px;color:var(--accent);padding:3px 8px;border:1px solid var(--accent);border-radius:4px;transition:all .15s}
 .dart-link:hover{background:var(--accent);color:#fff}
-/* 브리핑 */
 .briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
 .br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
 .br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
 .br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
 .br-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:12px}
-/* 주식 행 */
 .stock-row{grid-template-columns:auto 1fr auto auto auto;gap:12px}
 .s-rank{font-size:12px;color:var(--text2);width:20px}
 .s-name{font-size:13px;font-weight:600}
@@ -97,7 +90,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
-  <nav><a href="index.html" class="active">홈</a><a href="rates.html" class="">예금·적금</a><a href="invest.html" class="">투자</a><a href="savings.html" class="">절세·연금</a><a href="insurance.html" class="">보험</a><a href="company.html" class="">기업정보</a><a href="macro.html" class="">경제지표</a></nav>
+  <nav><a href="index.html" class="active">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a></nav>
   <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
 <main>
 <div class="briefing" id="briefing" style="display:none">
@@ -152,8 +145,20 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 </div>
 
 <script>
+function toggleTheme(){
+  const h=document.documentElement;
+  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
+  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
+}
+function fmt(v,u='',d=2){
+  if(v===null||v===undefined)return'-';
+  const n=parseFloat(v);
+  if(isNaN(n))return'-';
+  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
+}
+function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+
 async function loadHome(){
-  // 금리
   try{
     const r=await fetch('data/rates.json');
     const d=await r.json();
@@ -173,7 +178,6 @@ async function loadHome(){
     document.getElementById('deposit-top').innerHTML=rateHtml(dep);
   }catch(e){}
 
-  // 지표
   try{
     const r=await fetch('data/market.json');
     const d=await r.json();
@@ -203,7 +207,6 @@ async function loadHome(){
     document.getElementById('global-ind').innerHTML=indHtml(inds,glob);
   }catch(e){}
 
-  // 브리핑
   try{
     const r=await fetch('data/briefing.json');
     const d=await r.json();
@@ -218,26 +221,6 @@ async function loadHome(){
   }catch(e){}
 }
 loadHome();
-</script></main>
-<div class="disclaimer">
-    ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
-    데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
-  </div>
-<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
-<script>
-
-function toggleTheme(){
-  const h=document.documentElement;
-  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
-  document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';
-}
-function fmt(v,u='',d=2){
-  if(v===null||v===undefined)return'-';
-  const n=parseFloat(v);
-  if(isNaN(n))return'-';
-  return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');
-}
-function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 
 async function loadTicker(){
   try{
@@ -252,10 +235,16 @@ async function loadTicker(){
       html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
     });
     const el=document.getElementById('ticker-inner');
-    el.innerHTML=html+html; // 반복
+    el.innerHTML=html+html;
   }catch(e){}
 }
 loadTicker();
 </script>
+</main>
+<div class="disclaimer">
+  ⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>
+  데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털
+</div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
 </body>
 </html>
