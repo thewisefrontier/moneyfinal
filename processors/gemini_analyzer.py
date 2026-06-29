@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
 client = genai.Client(api_key=GEMINI_API_KEY)
-MODEL = 'gemini-3.1-flash-lite'
+MODEL = 'gemini-2.0-flash-lite'  # fix: gemini-3.1-flash-lite 존재하지 않는 모델명
 
 DISCLAIMER = "본 정보는 투자 참고용이며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: 공공기관 공시 데이터"
 
@@ -44,22 +44,19 @@ def call_gemini(prompt: str, max_tokens: int = 300) -> str:
         time.sleep(10)
         return response.text.strip()
     except Exception as e:
-        logger.error(f"Gemini 호출 오류: {type(e).__name__}")
+        logger.error(f"Gemini 호출 오류: {type(e).__name__} - {e}")
         time.sleep(15)
         return ""
 
 
 def analyze_rates(rates: list) -> str:
-    """금리 데이터 분석 - 수집된 데이터만 사용"""
     if not rates:
         return "금리 데이터 수집 중"
-
     top5 = sorted(rates, key=lambda x: x.get('max_rate') or x.get('rate', 0), reverse=True)[:5]
     data_text = "\n".join([
         f"- {r['institution']} {r['product_name']}: 기본금리 {r['rate']}%, 최고금리 {r.get('max_rate', r['rate'])}%, 기간 {r.get('period', '')}"
         for r in top5
     ])
-
     return call_gemini(
         f"""아래는 오늘 수집된 실제 금융상품 금리 데이터입니다.
 이 데이터만을 바탕으로 현황을 2-3문장으로 설명하세요.
@@ -72,15 +69,12 @@ def analyze_rates(rates: list) -> str:
 
 
 def analyze_market(indicators: list) -> str:
-    """거시지표 분석 - 수집된 데이터만 사용"""
     if not indicators:
         return "시장 지표 수집 중"
-
     data_text = "\n".join([
         f"- {i['indicator_name']}: {i['value']} {i.get('unit', '')} (출처: {i.get('source', '')})"
         for i in indicators
     ])
-
     return call_gemini(
         f"""아래는 오늘 수집된 실제 거시경제 지표 데이터입니다.
 이 수치들만을 바탕으로 현황을 2-3문장으로 객관적으로 설명하세요.
@@ -93,7 +87,6 @@ def analyze_market(indicators: list) -> str:
 
 
 def generate_signal(indicators: list) -> str:
-    """종합 위험 신호 판단"""
     if not indicators:
         return "green"
     red_count = sum(1 for i in indicators if i.get('signal') == 'red')
@@ -109,7 +102,6 @@ def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
 
-    # rates 테이블에 is_published 컬럼 없음 — 필터 없이 전체 조회
     rates = supabase_select('rates', {
         'select': '*',
         'order': 'max_rate.desc',
