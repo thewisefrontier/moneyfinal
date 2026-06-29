@@ -4,7 +4,7 @@
 import os
 import logging
 import requests
-from urllib.parse import urlencode
+from urllib.parse import urlencode, quote
 from datetime import datetime
 import pytz
 
@@ -45,16 +45,18 @@ CONFLICT_COLUMNS = {
 def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) -> requests.Response:
     """
     공공데이터포털 API 전용 GET 요청.
-    serviceKey는 이미 인코딩된 값이므로 requests params에 넣으면 이중 인코딩됨.
-    serviceKey를 URL에 직접 붙여서 단일 인코딩을 보장한다.
-    오류 시 상태코드와 응답 본문을 로그에 출력한다.
+    serviceKey를 params에 포함해 requests가 한 번만 인코딩하도록 한다.
+    (requests의 params= 방식은 safe='' 기준으로 인코딩 — 공공데이터포털 키 형식과 호환)
     """
-    query = urlencode(params)
-    full_url = f"{url}?serviceKey={service_key}&{query}"
-    logging.debug(f"[API 호출] {full_url[:120]}...")
-    res = requests.get(full_url, timeout=timeout)
+    all_params = {'serviceKey': service_key, **params}
+    res = requests.get(url, params=all_params, timeout=timeout)
     if res.status_code >= 400:
-        logging.error(f"[API 오류] HTTP {res.status_code} | URL: {full_url[:120]}... | 응답: {res.text[:300]}")
+        logging.error(
+            f"[API 오류] HTTP {res.status_code} "
+            f"| URL: {url} "
+            f"| params: {list(params.items())} "
+            f"| 응답: {res.text[:300]}"
+        )
     return res
 
 
