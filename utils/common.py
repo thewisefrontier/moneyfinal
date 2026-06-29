@@ -31,6 +31,14 @@ CONFLICT_COLUMNS = {
     'ipo_status': 'company_name,status,request_date',
     'financial_health': 'institution,reference_date',
     'daily_briefing': 'briefing_date',
+    # 주식/기업 관련
+    'stock_prices': 'stock_code,base_date,market_type',
+    'stock_short': 'stock_code,base_date',
+    'stock_dividends': 'stock_code,base_date,dividend_type',
+    'stock_issuance': 'stock_code,issuance_date,issuance_type',
+    'stocks': 'stock_code',
+    'corp_info': 'stock_code',
+    'corp_finance': 'stock_code,fiscal_year',
 }
 
 
