@@ -31,15 +31,13 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
 .ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
-@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}.grid5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid5{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.grid5{grid-template-columns:repeat(2,1fr)}}
 .kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
-.kpi-sub{font-size:12px;color:var(--text2)}
 .row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
 .row:last-child{border-bottom:none}
 .row:hover{background:var(--bg3)}
@@ -48,27 +46,23 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
 .disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
-/* 티커 */
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center}
 .ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
 .ti .name{color:var(--text);font-weight:500}
-/* 공시 행 */
 .disc-row{grid-template-columns:auto 1fr auto;gap:16px}
 .disc-date{font-size:11px;color:var(--text2);white-space:nowrap}
 .disc-co{font-size:13px;font-weight:600}
 .disc-type{font-size:11px;color:var(--text2)}
 .dart-link{font-size:11px;color:var(--accent);padding:3px 8px;border:1px solid var(--accent);border-radius:4px;transition:all .15s}
 .dart-link:hover{background:var(--accent);color:#fff}
-/* 배당 행 */
 .div-row{grid-template-columns:1fr auto auto auto}
 .div-name{font-size:13px;font-weight:600}
 .div-code{font-size:11px;color:var(--text2);margin-top:2px}
 .div-type{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 6px;border-radius:4px}
 .div-year{font-size:11px;color:var(--text2);text-align:right}
 .div-dps{font-size:15px;font-weight:700;color:var(--green);text-align:right}
-/* 공매도 행 */
 .short-row{grid-template-columns:auto 1fr auto auto}
 .sh-rank{font-size:12px;color:var(--text2);width:22px;text-align:center}
 .sh-name{font-size:13px;font-weight:600}
@@ -93,7 +87,6 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 </header>
 <main>
 
-<!-- KPI 요약 (5개) -->
 <div class="grid5">
   <div class="kpi" style="text-align:center"><div class="kpi-value" id="st-total">-</div><div class="kpi-label" style="margin:0">수집된 공시</div></div>
   <div class="kpi" style="text-align:center"><div class="kpi-value down" id="st-insincere">-</div><div class="kpi-label" style="margin:0">불성실 공시</div></div>
@@ -102,21 +95,20 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div class="kpi" style="text-align:center"><div class="kpi-value down" id="st-short-total">-</div><div class="kpi-label" style="margin:0">공매도 잔고</div></div>
 </div>
 
-<!-- DART 공시 -->
 <div class="sec-hd"><div class="sec-title">기업 공시 현황</div></div>
 <div class="card" style="margin-bottom:24px">
-  <div class="card-hd"><span class="card-title">DART 공시 목록</span><span class="badge badge-blue">금융감독원 DART</span></div>
+  <div class="card-hd"><span class="card-title">DART 공시 · 권리일정</span><span class="badge badge-blue">금융감독원 DART · 공공데이터포털</span></div>
   <div class="filter-tabs">
     <button class="ft active" onclick="filterA('all',this)">전체</button>
     <button class="ft" onclick="filterA('불성실',this)">불성실 공시</button>
     <button class="ft" onclick="filterA('주요사항',this)">주요사항보고</button>
     <button class="ft" onclick="filterA('유상증자',this)">유상증자</button>
     <button class="ft" onclick="filterA('전환사채',this)">전환사채</button>
+    <button class="ft" onclick="filterA('권리일정',this)">권리일정</button>
   </div>
   <div id="alerts-list"><div class="loading">로딩 중...</div></div>
 </div>
 
-<!-- 배당 + 공매도 -->
 <div class="grid2">
   <div>
     <div class="sec-hd"><div class="sec-title">배당 정보</div></div>
@@ -153,7 +145,6 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
 
 <script>
-// ── 유틸 ──────────────────────────────────────────────
 function toggleTheme(){
   const h=document.documentElement;
   h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
@@ -166,7 +157,6 @@ function fmt(v,d=0){
   return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d});
 }
 function fmtAmt(v){
-  // 백만 원 단위 → 억 원으로 표시
   if(v===null||v===undefined)return'-';
   const n=parseFloat(v);
   if(isNaN(n))return'-';
@@ -175,34 +165,29 @@ function fmtAmt(v){
   return n.toFixed(0)+'백만';
 }
 
-// ── DART 공시 ─────────────────────────────────────────
 let alertsAll=[];
 function alertHtml(list){
-  if(!list.length)return'<div class="empty">공시 데이터 없음</div>';
+  if(!list.length)return'<div class="empty">데이터 없음</div>';
   return list.slice(0,50).map(a=>`
     <a class="row disc-row" href="${a.dart_url||'#'}" target="_blank" rel="noopener">
       <div class="disc-date">${a.disclosure_date||'-'}</div>
       <div><div class="disc-co">${a.company_name||'-'}</div><div class="disc-type">${a.alert_type||'-'}</div></div>
-      <span class="dart-link" onclick="event.stopPropagation()">DART →</span>
+      <span class="dart-link" onclick="event.stopPropagation()">상세 →</span>
     </a>`).join('');
 }
 function filterA(kw,btn){
   btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  const filtered=kw==='all'?alertsAll:alertsAll.filter(a=>(a.alert_type||'').includes(kw)||(a.company_name||'').includes(kw));
+  const filtered=kw==='all'?alertsAll:alertsAll.filter(a=>(a.alert_type||'').includes(kw));
   document.getElementById('alerts-list').innerHTML=alertHtml(filtered);
 }
 
-// ── 배당 ──────────────────────────────────────────────
 let divsAll=[];
 function divHtml(list){
   if(!list.length)return'<div class="empty">배당 데이터 없음<br><small style="color:var(--text2)">파이프라인 실행 후 표시됩니다</small></div>';
   return list.slice(0,30).map(d=>`
     <div class="row div-row">
-      <div>
-        <div class="div-name">${d.stock_name||'-'}</div>
-        <div class="div-code">${d.stock_code||''}</div>
-      </div>
+      <div><div class="div-name">${d.stock_name||'-'}</div><div class="div-code">${d.stock_code||''}</div></div>
       <div class="div-type">${d.dividend_type||'현금'}</div>
       <div class="div-year" style="text-align:right">${d.fiscal_year||'-'}년</div>
       <div class="div-dps">${fmt(d.dps,0)}원</div>
@@ -211,44 +196,31 @@ function divHtml(list){
 function filterDiv(kw,btn){
   btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  const filtered=kw==='all'?divsAll:divsAll.filter(d=>(d.dividend_type||'').includes(kw));
-  document.getElementById('div-list').innerHTML=divHtml(filtered);
+  document.getElementById('div-list').innerHTML=divHtml(kw==='all'?divsAll:divsAll.filter(d=>(d.dividend_type||'').includes(kw)));
 }
 
-// ── 공매도 ────────────────────────────────────────────
 function shortHtml(list){
   if(!list.length)return'<div class="empty">공매도 데이터 없음<br><small style="color:var(--text2)">파이프라인 실행 후 표시됩니다</small></div>';
   return list.slice(0,20).map((s,i)=>`
     <div class="row short-row">
       <div class="sh-rank">${i+1}</div>
-      <div>
-        <div class="sh-name">${s.stock_name||'-'}</div>
-        <div class="sh-code">${s.stock_code||''} · ${s.base_date||''}</div>
-      </div>
-      <div>
-        <div class="sh-ratio">${fmt(s.short_ratio,2)}%</div>
-        <div class="sh-amt">${fmtAmt(s.short_amount)}</div>
-      </div>
+      <div><div class="sh-name">${s.stock_name||'-'}</div><div class="sh-code">${s.stock_code||''} · ${s.base_date||''}</div></div>
+      <div><div class="sh-ratio">${fmt(s.short_ratio,2)}%</div><div class="sh-amt">${fmtAmt(s.short_amount)}</div></div>
       <div style="text-align:right;font-size:12px;color:var(--text2)">${fmt(s.short_volume,0)}<br>주</div>
     </div>`).join('');
 }
 
-// ── 메인 로드 ─────────────────────────────────────────
 async function loadCompany(){
-  // 1. DART 공시
   try{
     const r=await fetch('data/alerts.json');
     const d=await r.json();
     alertsAll=d.alerts||[];
     document.getElementById('st-total').textContent=alertsAll.length;
     document.getElementById('st-insincere').textContent=alertsAll.filter(a=>(a.alert_type||'').includes('불성실')).length;
-    document.getElementById('st-major').textContent=alertsAll.filter(a=>!(a.alert_type||'').includes('불성실')).length;
+    document.getElementById('st-major').textContent=alertsAll.filter(a=>(a.alert_type||'').includes('주요사항')).length;
     document.getElementById('alerts-list').innerHTML=alertHtml(alertsAll);
-  }catch(e){
-    document.getElementById('alerts-list').innerHTML='<div class="empty">공시 데이터 없음</div>';
-  }
+  }catch(e){document.getElementById('alerts-list').innerHTML='<div class="empty">공시 데이터 없음</div>';}
 
-  // 2. 배당
   try{
     const r=await fetch('data/dividends.json');
     const d=await r.json();
@@ -257,26 +229,23 @@ async function loadCompany(){
     document.getElementById('div-list').innerHTML=divHtml(divsAll);
   }catch(e){
     document.getElementById('st-div-count').textContent='-';
-    document.getElementById('div-list').innerHTML='<div class="empty">배당 데이터 없음<br><small style="color:var(--text2)">파이프라인 실행 후 표시됩니다</small></div>';
+    document.getElementById('div-list').innerHTML='<div class="empty">배당 데이터 없음</div>';
   }
 
-  // 3. 공매도
   try{
     const r=await fetch('data/short_selling.json');
     const d=await r.json();
     const shorts=(d.short_list||[]).sort((a,b)=>(b.short_amount||0)-(a.short_amount||0));
-    // 총 잔고금액 합산 (백만 원)
     const totalAmt=shorts.reduce((s,x)=>s+(parseFloat(x.short_amount)||0),0);
     document.getElementById('st-short-total').textContent=fmtAmt(totalAmt);
     document.getElementById('short-list').innerHTML=shortHtml(shorts);
   }catch(e){
     document.getElementById('st-short-total').textContent='-';
-    document.getElementById('short-list').innerHTML='<div class="empty">공매도 데이터 없음<br><small style="color:var(--text2)">파이프라인 실행 후 표시됩니다</small></div>';
+    document.getElementById('short-list').innerHTML='<div class="empty">공매도 데이터 없음</div>';
   }
 }
 loadCompany();
 
-// ── 티커 ──────────────────────────────────────────────
 async function loadTicker(){
   try{
     const r=await fetch('data/market.json');
@@ -290,8 +259,7 @@ async function loadTicker(){
       const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?'%':'');
       html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;
     });
-    const el=document.getElementById('ticker-inner');
-    el.innerHTML=html+html;
+    document.getElementById('ticker-inner').innerHTML=html+html;
   }catch(e){}
 }
 loadTicker();
