@@ -1,6 +1,7 @@
 """
-실손보험 정보 수집기
-출처: 공공데이터포털 금융위원회
+실손보험정보 수집기
+출처: 공공데이터포털 금융위원회_실손보험정보 (GetMedicalReimbursementInsuranceInfoService/getInsuranceInfo)
+정확한 서비스명: 이전 코드는 GetRealLossInsuranceInfoService로 잘못 추측됨
 """
 import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -8,7 +9,7 @@ from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
-BASE_URL = "https://apis.data.go.kr/1160100/service/GetRealLossInsuranceInfoService/getRealLossInsuranceInfo"
+BASE_URL = "https://apis.data.go.kr/1160100/service/GetMedicalReimbursementInsuranceInfoService/getInsuranceInfo"
 
 def main():
     logger.info("=== 실손보험 정보 수집 시작 ===")
@@ -22,9 +23,27 @@ def main():
             return
         items = body.get('items',{}).get('item',[])
         if isinstance(items,dict): items=[items]
-        results = [{'institution':item.get('insrCoNm',''),'product_name':item.get('prdtNm',''),'category':'실손보험','rate':float(item.get('losRto',0) or 0),'max_rate':float(item.get('losRto',0) or 0),'period':'1년','join_method':item.get('insrKindNm',''),'source':'금융위원회 (공공데이터포털)','source_url':'https://data.go.kr','fetched_at':now_kst()} for item in items]
-        if results: supabase_upsert('rates', results)
-        logger.info(f"✅ 실손보험 {len(results)}건 저장")
+        results = []
+        for item in items:
+            ml = float(item.get('mlInsRt',0) or 0)
+            fml = float(item.get('fmlInsRt',0) or 0)
+            avg = (ml+fml)/2 if (ml>0 or fml>0) else 0
+            if avg <= 0: continue
+            results.append({
+                'institution': item.get('cmpyNm',''),
+                'product_name': item.get('prdNm',''),
+                'category': '실손보험',
+                'rate': avg,
+                'max_rate': max(ml,fml),
+                'period': f"{item.get('age','')}세",
+                'join_method': item.get('ptrn',''),
+                'source': '손해보험협회/생명보험협회 (공공데이터포털)',
+                'source_url': 'https://data.go.kr',
+                'fetched_at': now_kst()
+            })
+        if results:
+            supabase_upsert('rates', results)
+            logger.info(f"✅ 실손보험 {len(results)}건 저장")
     except Exception as e:
         logger.error(f"실손보험 수집 오류: {type(e).__name__}")
     logger.info("=== 실손보험 정보 수집 완료 ===")

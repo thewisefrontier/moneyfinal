@@ -1,6 +1,6 @@
 """
 채권 시세 수집기
-출처: 공공데이터포털 금융위원회
+출처: 공공데이터포털 금융위원회_채권시세정보 (GetBondSecuritiesInfoService/getBondPriceInfo)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -36,10 +36,23 @@ def main():
         if isinstance(items,dict): items=[items]
         results = []
         for item in items:
-            ytm = float(item.get('mktYtm',0) or 0)
-            results.append({'indicator_code':f"BOND_{item.get('isinCd','')[:10]}", 'indicator_name':item.get('bondIsurNm','')+' '+item.get('bondNm',''), 'category':'채권금리', 'value':ytm, 'unit':'%', 'signal':'green' if ytm<4 else 'yellow' if ytm<5 else 'red', 'source':'금융위원회 (공공데이터포털)', 'reference_date':today_kst(), 'fetched_at':now_kst()})
-        if results: supabase_upsert('market_indicators', results)
-        logger.info(f"✅ 채권시세 {len(results)}건 저장")
+            # 수정: clprBnfRt(종가_수익률)가 정확한 필드명. mktYtm은 존재하지 않음
+            ytm = float(item.get('clprBnfRt',0) or 0)
+            results.append({
+                'indicator_code': f"BOND_{item.get('isinCd','')[:10]}",
+                'indicator_name': item.get('itmsNm',''),
+                'category': '채권금리',
+                'value': ytm,
+                'unit': '%',
+                'signal': 'green' if ytm<4 else 'yellow' if ytm<5 else 'red',
+                'source': '금융위원회 (공공데이터포털)',
+                'reference_date': today_kst(),
+                'summary_text': f"{item.get('mrktCtg','')} 종가 {item.get('clprPrc','')}",
+                'fetched_at': now_kst()
+            })
+        if results:
+            supabase_upsert('market_indicators', results)
+            logger.info(f"✅ 채권시세 {len(results)}건 저장")
     except Exception as e:
         logger.error(f"채권시세 수집 오류: {type(e).__name__}")
     logger.info("=== 채권 시세 수집 완료 ===")
