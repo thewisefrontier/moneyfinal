@@ -5,7 +5,7 @@ import os
 import logging
 import requests
 from urllib.parse import urlencode, quote
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
 logging.basicConfig(
@@ -39,6 +39,8 @@ CONFLICT_COLUMNS = {
     'stocks': 'stock_code',
     'corp_info': 'stock_code',
     'corp_finance': 'stock_code,fiscal_year',
+    'fss_news': 'category,title,post_date',
+    'fss_jobs': 'company_name,title,post_date',
 }
 
 
@@ -46,7 +48,6 @@ def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) 
     """
     공공데이터포털 API 전용 GET 요청.
     serviceKey를 params에 포함해 requests가 한 번만 인코딩하도록 한다.
-    (requests의 params= 방식은 safe='' 기준으로 인코딩 — 공공데이터포털 키 형식과 호환)
     """
     all_params = {'serviceKey': service_key, **params}
     res = requests.get(url, params=all_params, timeout=timeout)
@@ -57,6 +58,28 @@ def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) 
             f"| params: {list(params.items())} "
             f"| 응답: {res.text[:300]}"
         )
+    return res
+
+
+def fss_open_api_get(jsp_name: str, auth_key: str, days_back: int = 7, timeout: int = 15) -> requests.Response:
+    """
+    금융감독원 오픈API 전용 GET 요청 (www.fss.or.kr/fss/kr/openApi/api/*.jsp)
+    파랄트: authKey, apiType=json, startDate/endDate (YYYY-MM-DD, 최대 1개월)
+    일 30회 호출 제한 있으므로 호출령 주의.
+    """
+    now = datetime.now(KST)
+    end_date = now.strftime('%Y-%m-%d')
+    start_date = (now - timedelta(days=days_back)).strftime('%Y-%m-%d')
+    url = f"https://www.fss.or.kr/fss/kr/openApi/api/{jsp_name}.jsp"
+    params = {
+        'apiType': 'json',
+        'startDate': start_date,
+        'endDate': end_date,
+        'authKey': auth_key,
+    }
+    res = requests.get(url, params=params, timeout=timeout)
+    if res.status_code >= 400:
+        logging.error(f"[FSS오픈API 오류] HTTP {res.status_code} | {jsp_name} | 응답: {res.text[:300]}")
     return res
 
 
