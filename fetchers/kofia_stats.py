@@ -30,10 +30,10 @@ def get_recent_date(days_back: int = 7) -> str:
     return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
 
-def fetch_operation(operation: str, params: dict) -> list:
+def fetch_operation(operation: str, params: dict, num_rows: int = 50) -> list:
     """공통 오퍼레이션 호출 헬퍼"""
     url = f"{BASE_URL}/{operation}"
-    base_params = {'resultType': 'json', 'numOfRows': 50, 'pageNo': 1}
+    base_params = {'resultType': 'json', 'numOfRows': num_rows, 'pageNo': 1}
     base_params.update(params)
     try:
         res = data_go_kr_get(url, API_KEY, base_params)
@@ -52,19 +52,26 @@ def fetch_operation(operation: str, params: dict) -> list:
 
 
 def collect_trust_scale() -> list:
-    """① 업권별신탁규모 (getTrustScaleInfo) - basYm 기준년월"""
-    items = fetch_operation('getTrustScaleInfo', {'basYm': get_recent_yyyymm(2)})
+    """
+    ① 업권별신탁규모 (getTrustScaleInfo) - basYm 기준년월
+    iqBs(조회기준)이 고객수/계약수/수탁총액 3종류가 섞여 나오므로
+    수탁총액만 명시적으로 필터링 (단위가 다른 값 혼입 방지)
+    """
+    items = fetch_operation('getTrustScaleInfo', {
+        'basYm': get_recent_yyyymm(2),
+        'iqBs': '수탁총액'
+    })
     results = []
     for item in items:
         val = float(item.get('val', 0) or 0)
         if val <= 0:
             continue
         results.append({
-            'indicator_code': f"KOFIA_TRUST_{item.get('bzds','')}_{item.get('iqBs','')}"[:50],
-            'indicator_name': f"{item.get('bzds','')} {item.get('tstCtg','')} {item.get('iqBs','')}",
+            'indicator_code': f"KOFIA_TRUST_{item.get('bzds','')}_{item.get('tstCtg','')}"[:50],
+            'indicator_name': f"{item.get('bzds','')} {item.get('tstCtg','')} 수탁총액",
             'category': '금융투자',
             'value': val,
-            'unit': '건' if item.get('iqBs') in ('고객수', '계약수') else '백만원',
+            'unit': '백만원',
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
@@ -74,7 +81,7 @@ def collect_trust_scale() -> list:
 
 
 def collect_fund_net_asset() -> list:
-    """② 펀드순자산총액 (getFundTotalNetEssetInfo) - basDt 기준일자"""
+    """② 펀드순자산총액 (getFundTotalNetEssetInfo) - basDt(8자리, 필수)"""
     items = fetch_operation('getFundTotalNetEssetInfo', {'basDt': get_recent_date(3)})
     results = []
     for item in items:
@@ -96,10 +103,15 @@ def collect_fund_net_asset() -> list:
 
 
 def collect_cma_status() -> list:
-    """③ 일자별CMA현황 (getCMAStatus) - basDt 기준일자"""
+    """
+    ③ 일자별CMA현황 (getCMAStatus) - basDt(8자리)
+    mngInvTgt='합계'는 다른 항목의 합산값이므로 제외해 중복 방지
+    """
     items = fetch_operation('getCMAStatus', {'basDt': get_recent_date(5)})
     results = []
     for item in items:
+        if item.get('mngInvTgt') == '합계':
+            continue
         bal = float(item.get('actBal', 0) or 0)
         if bal <= 0:
             continue
@@ -119,7 +131,7 @@ def collect_cma_status() -> list:
 
 
 def collect_credit_balance() -> list:
-    """④ 신용공여잔고추이 (getGrantingOfCreditBalanceInfo) - basDt 기준일자"""
+    """④ 신용공여잔고추이 (getGrantingOfCreditBalanceInfo) - basDt(8자리)"""
     items = fetch_operation('getGrantingOfCreditBalanceInfo', {'basDt': get_recent_date(5)})
     results = []
     for item in items:
@@ -141,7 +153,7 @@ def collect_credit_balance() -> list:
 
 
 def collect_market_capital() -> list:
-    """⑤ 증시자금추이 (GetSecuritiesMarketTotalCapitalInfo) - basDt 기준일자"""
+    """⑤ 증시자금추이 (GetSecuritiesMarketTotalCapitalInfo) - basDt(8자리)"""
     items = fetch_operation('GetSecuritiesMarketTotalCapitalInfo', {'basDt': get_recent_date(5)})
     results = []
     for item in items:
@@ -163,52 +175,80 @@ def collect_market_capital() -> list:
 
 
 def collect_dls_dlb() -> list:
-    """⑥ DLS/DLB발행동향 (getDLSAndDLBInfo) - basDt 기준년월(YYYYMM)"""
-    items = fetch_operation('getDLSAndDLBInfo', {'basDt': get_recent_yyyymm(2)})
+    """
+    ⑥ DLS/DLB발행동향 (getDLSAndDLBInfo) - basDt(YYYYMM, 6자리)
+    ctgDlbDls(원금보장형/원금비보장형/합계/총계)와 presCtg(발행실적/미상환잔고/상환현황)가
+    한 응답에 섞여 나오므로, presCtg='발행실적'만 명시 필터링하고 '합계','총계'는 제외
+    """
+    items = fetch_operation('getDLSAndDLBInfo', {
+        'basDt': get_recent_yyyymm(2),
+        'presCtg': '발행실적'
+    })
     results = []
     for item in items:
+        ctg = item.get('ctgDlbDls', '')
+        if ctg in ('합계', '총계'):
+            continue
         amt = float(item.get('amt', 0) or 0)
         if amt <= 0:
             continue
         results.append({
-            'indicator_code': f"KOFIA_DLS_{item.get('ctgDlbDls','')}_{item.get('presCtg','')}"[:50],
-            'indicator_name': f"DLS/DLB {item.get('ctgDlbDls','')} {item.get('presCtg','')}",
+            'indicator_code': f"KOFIA_DLS_{ctg}_{item.get('ctgPrplcPsub','')}"[:50],
+            'indicator_name': f"DLS/DLB {ctg} ({item.get('ctgPrplcPsub','')}) 발행실적",
             'category': '파생결합증권',
             'value': amt,
             'unit': '원',
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
+            'summary_text': f"건수 {item.get('ccnt','')}건",
             'fetched_at': now_kst()
         })
     return results
 
 
 def collect_els_elb() -> list:
-    """⑦ ELS/ELB발행동향 (getELSAndELBInfo) - basDt 기준년월(YYYYMM)"""
-    items = fetch_operation('getELSAndELBInfo', {'basDt': get_recent_yyyymm(2)})
+    """
+    ⑦ ELS/ELB발행동향 (getELSAndELBInfo) - basDt(YYYYMM, 6자리)
+    DLS/DLB와 동일 구조 - presCtg='발행실적'만 필터링, '합계' 제외
+    """
+    items = fetch_operation('getELSAndELBInfo', {
+        'basDt': get_recent_yyyymm(2),
+        'presCtg': '발행실적'
+    })
     results = []
     for item in items:
+        ctg = item.get('ctgElbEls', '')
+        if ctg == '합계':
+            continue
         amt = float(item.get('amt', 0) or 0)
         if amt <= 0:
             continue
         results.append({
-            'indicator_code': f"KOFIA_ELS_{item.get('ctgElbEls','')}_{item.get('presCtg','')}"[:50],
-            'indicator_name': f"ELS/ELB {item.get('ctgElbEls','')} {item.get('presCtg','')}",
+            'indicator_code': f"KOFIA_ELS_{ctg}_{item.get('ctgPrplcPsub','')}"[:50],
+            'indicator_name': f"ELS/ELB {ctg} ({item.get('ctgPrplcPsub','')}) 발행실적",
             'category': '파생결합증권',
             'value': amt,
             'unit': '원',
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
+            'summary_text': f"건수 {item.get('ccnt','')}건",
             'fetched_at': now_kst()
         })
     return results
 
 
 def collect_foreign_derivatives() -> list:
-    """⑧ 국내투자자 해외파생상품거래동향 (getDerivationProductTradingInfo) - basDt 기준년월(YYYYMM)"""
-    items = fetch_operation('getDerivationProductTradingInfo', {'basDt': get_recent_yyyymm(2), 'numOfRows': 20})
+    """
+    ⑧ 국내투자자 해외파생상품거래동향 (getDerivationProductTradingInfo) - basDt(YYYYMM, 6자리)
+    actCtg(자기/중개/총괄)가 섞여 나오므로 '총괄'만 필터링해 중복 집계 방지
+    """
+    items = fetch_operation(
+        'getDerivationProductTradingInfo',
+        {'basDt': get_recent_yyyymm(2), 'actCtg': '총괄'},
+        num_rows=20
+    )
     results = []
     for item in items:
         amt = float(item.get('trPrcUsd', 0) or 0)
