@@ -1,4 +1,4 @@
-name: ECOS일별
+name: ECOS일별환율
 on:
   workflow_dispatch:
 jobs:
