@@ -114,7 +114,7 @@ def export_ipo():
 
 
 def export_stocks():
-    """주식 시세 export - 시가총액 상위"""
+    """주식 시세 export - 시가총액 상위 (KOSPI/KOSDAQ/US)"""
     kospi = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.KOSPI',
@@ -127,11 +127,18 @@ def export_stocks():
         'order': 'market_cap.desc',
         'limit': '25'
     })
+    us = supabase_select('stock_prices', {
+        'select': '*',
+        'market_type': 'eq.US',
+        'order': 'market_cap.desc',
+        'limit': '10'
+    })
     save_json('stocks.json', {
         'updated_at': today_kst(),
         'kospi': kospi,
         'kosdaq': kosdaq,
-        'total': len(kospi) + len(kosdaq)
+        'us': us,
+        'total': len(kospi) + len(kosdaq) + len(us)
     })
 
 
