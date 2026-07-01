@@ -1,0 +1,38 @@
+name: 기준금리 (금통위 일정)
+on:
+  workflow_dispatch:
+  schedule:
+    # 2026년 통화정책방향 결정회의 다음날 08:00 KST (전날 23:00 UTC)
+    # 회의일: 7/16, 8/27, 10/22, 11/26 (한국은행 발표 기준, 매년 10월경 다음해 일정 갱신 필요)
+    - cron: '0 23 16 7 *'
+    - cron: '0 23 27 8 *'
+    - cron: '0 23 22 10 *'
+    - cron: '0 23 26 11 *'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 기준금리
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python fetchers/ecos_base_rate.py
+      - name: Export
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || (git commit -m "data: base rate update" && git pull --rebase origin main && git push)
