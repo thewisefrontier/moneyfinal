@@ -106,6 +106,15 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
 </div>
 
+<div class="sec-hd"><div class="sec-title">미국 주식</div></div>
+<div class="card">
+  <div class="card-hd"><span class="card-title">시가총액 상위 10개</span></div>
+  <div style="display:grid;grid-template-columns:auto 1fr auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+    <span>#</span><span>종목</span><span style="text-align:right">종가</span><span style="text-align:right">등락률</span><span style="text-align:right">시가총액</span>
+  </div>
+  <div id="us-stock-list"><div class="loading">로딩 중...</div></div>
+</div>
+
 <div class="sec-hd"><div class="sec-title">시장 위험 지표</div></div>
 <div class="grid4" id="risk-grid"><div class="loading" style="grid-column:1/-1">로딩 중...</div></div>
 
@@ -124,6 +133,7 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 let stockAll=[];
 function stockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.slice(0,20).map((s,i)=>{const cap=s.market_cap?((s.market_cap/1e12).toFixed(1)+'조'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row stock-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.market_type||''} ${s.stock_code||''}</div></div><div class="s-price">${fmt(s.close_price,'',0)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
+function usStockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.map((s,i)=>{const cap=s.market_cap?('$'+(s.market_cap/1e9).toFixed(1)+'B'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row stock-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.stock_code||''}</div></div><div class="s-price">$${fmt(s.close_price,'',2)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
 function filterS(mkt,btn){btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('stock-list').innerHTML=stockHtml(mkt==='ALL'?stockAll:stockAll.filter(s=>s.market_type===mkt));}
 async function loadInvest(){
   try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];
@@ -139,7 +149,7 @@ async function loadInvest(){
     const derivs=inds.filter(i=>i.category==='파생상품').slice(0,10);
     document.getElementById('deriv-list').innerHTML=derivs.length?derivs.map(i=>`<div class="row ind-row"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',2)}</span> <span class="ind-unit">${i.unit}</span></div></div>`).join(''):'<div class="empty">데이터 수집 예정</div>';
   }catch(e){}
-  try{const r=await fetch('data/stocks.json');const d=await r.json();stockAll=[...(d.kospi||[]),...(d.kosdaq||[])].sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('stock-list').innerHTML=stockHtml(stockAll);}catch(e){document.getElementById('stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';}
+  try{const r=await fetch('data/stocks.json');const d=await r.json();stockAll=[...(d.kospi||[]),...(d.kosdaq||[])].sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('stock-list').innerHTML=stockHtml(stockAll);const us=(d.us||[]).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('us-stock-list').innerHTML=usStockHtml(us);}catch(e){document.getElementById('stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';document.getElementById('us-stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';}
   try{const r=await fetch('data/corp_finance.json');const d=await r.json();const cs=d.companies||[];document.getElementById('finance-list').innerHTML=cs.length?cs.slice(0,20).map(c=>`<div class="row" style="grid-template-columns:1fr auto auto auto auto;gap:8px"><div style="font-size:13px;font-weight:600">${c.corp_name}</div><div style="font-size:12px;text-align:right">${fmt(c.per,'',1)}</div><div style="font-size:12px;text-align:right">${fmt(c.pbr,'',1)}</div><div style="font-size:12px;text-align:right;color:var(--green)">${fmt(c.roe,'%',1)}</div><div style="font-size:12px;text-align:right">${fmt(c.eps,'',0)}</div></div>`).join(''):'<div class="empty">기업재무 데이터 수집 예정</div>';}catch(e){document.getElementById('finance-list').innerHTML='<div class="empty">기업재무 데이터 수집 예정</div>';}
 }
 loadInvest();
