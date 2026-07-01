@@ -1,4 +1,4 @@
-name: 채권기본정보
+name: 채권시세
 on:
   workflow_dispatch:
 jobs:

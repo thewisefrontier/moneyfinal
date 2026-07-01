@@ -1,4 +1,4 @@
-name: 펀드상품기본정보
+name: 펀드정보
 on:
   workflow_dispatch:
 jobs:

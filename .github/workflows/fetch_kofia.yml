@@ -1,4 +1,4 @@
-name: 금투협종합통계
+name: KOFIA통계
 on:
   workflow_dispatch:
 jobs:

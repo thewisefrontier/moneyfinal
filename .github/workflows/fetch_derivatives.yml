@@ -1,4 +1,4 @@
-name: 파생상품시세
+name: 파생상품
 on:
   workflow_dispatch:
 jobs:

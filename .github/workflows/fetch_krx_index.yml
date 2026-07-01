@@ -1,4 +1,4 @@
-name: KRX상장종목정보
+name: KRX지수
 on:
   workflow_dispatch:
 jobs:

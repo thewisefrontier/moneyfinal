@@ -1,4 +1,4 @@
-name: 은행경영통계
+name: 은행통계
 on:
   workflow_dispatch:
 jobs:

@@ -1,4 +1,4 @@
-name: 실손보험정보
+name: 실손보험
 on:
   workflow_dispatch:
 jobs:
