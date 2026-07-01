@@ -1,8 +1,9 @@
 """
 FRED 글로벌 지표 수집기 (확장)
 - 미국 기준금리, CPI, 달러인덱스, 장단기금리차
-- VIX 공포지수, WTI 원유, 금 가격 추가
+- VIX 공포지수, WTI 원유
 출처: fred.stlouisfed.org
+- 금 가격(GOLDAMGBD228NLBM)은 LBMA 데이터 중단으로 FRED에서 2021년경 대체 없이 폐지되어 제외함
 """
 import logging
 import requests
@@ -58,13 +59,6 @@ SERIES = [
         'indicator_code': 'WTI',
         'indicator_name': 'WTI 원유가격',
         'unit': 'USD/배럴',
-        'category': '원자재'
-    },
-    {
-        'series_id': 'GOLDAMGBD228NLBM',
-        'indicator_code': 'GOLD',
-        'indicator_name': '금 가격',
-        'unit': 'USD/트로이온스',
         'category': '원자재'
     },
 ]
