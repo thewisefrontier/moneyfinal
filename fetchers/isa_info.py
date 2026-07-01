@@ -89,8 +89,12 @@ def main():
     logger.info("=== ISA 다모아 수집 시작 ===")
     results = collect_mp_benefit_rate() + collect_join_status()
     if results:
-        supabase_upsert('market_indicators', results)
-        logger.info(f"✅ ISA 정보 {len(results)}건 저장")
+        # 배치 내 중복 키(indicator_code) 제거 - ON CONFLICT 에러 방지
+        deduped = list({r['indicator_code']: r for r in results}.values())
+        if len(deduped) != len(results):
+            logger.warning(f"중복 제거: {len(results)}건 -> {len(deduped)}건")
+        supabase_upsert('market_indicators', deduped)
+        logger.info(f"✅ ISA 정보 {len(deduped)}건 저장")
     logger.info("=== ISA 다모아 수집 완료 ===")
 
 if __name__ == '__main__': main()
