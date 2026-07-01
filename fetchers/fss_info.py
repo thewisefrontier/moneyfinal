@@ -12,7 +12,7 @@ AUTH_KEY = os.environ.get('FSS_API_KEY', '')
 def main():
     logger.info("=== 금융감독정보 수집 시작 ===")
     try:
-        res = fss_open_api_get('fnncMngInfo', AUTH_KEY, days_back=90)
+        res = fss_open_api_get('fnncMngInfo', AUTH_KEY, days_back=14)
         res.raise_for_status()
         data = res.json()
         # 주의: FSS 응답 키는 "response"가 아니라 오타난 "reponse"
