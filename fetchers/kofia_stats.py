@@ -4,6 +4,14 @@
 - 서비스: GetKofiaStatisticsInfoService
 - 8개 오퍼레이션: 신탁규모/펀드순자산/CMA현황/신용공여/증시자금/DLS·DLB/ELS·ELB/해외파생거래
 출처: 오픈API 활용자가이드_금융위원회_금융투자협회종합통계정보.docx
+
+주의사항 (실측으로 확인된 이슈):
+- getTrustScaleInfo(basYm), getFundTotalNetEssetInfo(basDt)는 정확일치 파라미터라
+  해당 시점에 데이터가 없으면 0건이 됨 -> beginBasYm/beginBasDt 범위조회 후 최신값만 채택
+- 증시자금추이 오퍼레이션명은 문서상 대문자로 보이나 실제 Call Back URL은 소문자
+  getSecuritiesMarketTotalCapitalInfo (실측 확인)
+- market_indicators 배치 upsert 시 전체 항목의 키(컬럼) 집합이 동일해야 함(PostgREST 제약)
+  -> 모든 결과 dict에 동일한 키 세트를 보장
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -15,6 +23,17 @@ logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service/GetKofiaStatisticsInfoService"
+
+# market_indicators에 upsert할 모든 결과가 공통으로 가져야 하는 키 세트
+RESULT_KEYS = [
+    'indicator_code', 'indicator_name', 'category', 'value', 'prev_value',
+    'unit', 'signal', 'source', 'reference_date', 'summary_text', 'fetched_at'
+]
+
+
+def normalize(row: dict) -> dict:
+    """모든 결과 dict가 동일한 키 세트를 갖도록 보정 (PGRST102 방지)"""
+    return {k: row.get(k) for k in RESULT_KEYS}
 
 
 def get_recent_yyyymm(months_back: int = 1) -> str:
@@ -51,16 +70,28 @@ def fetch_operation(operation: str, params: dict, num_rows: int = 50) -> list:
         return []
 
 
+def latest_by_key(results: list, date_field: str) -> list:
+    """indicator_code별로 기준일자(_sortkey)가 가장 최신인 항목만 채택"""
+    latest = {}
+    for r in results:
+        key = r['indicator_code']
+        if key not in latest or r[date_field] > latest[key][date_field]:
+            latest[key] = r
+    for r in latest.values():
+        r.pop(date_field, None)
+    return list(latest.values())
+
+
 def collect_trust_scale() -> list:
     """
-    ① 업권별신탁규모 (getTrustScaleInfo) - basYm 기준년월
+    ① 업권별신탁규모 (getTrustScaleInfo) - basYm 정확일치라 beginBasYm 범위로 조회
     iqBs(조회기준)이 고객수/계약수/수탁총액 3종류가 섞여 나오므로
     수탁총액만 명시적으로 필터링 (단위가 다른 값 혼입 방지)
     """
     items = fetch_operation('getTrustScaleInfo', {
-        'basYm': get_recent_yyyymm(2),
+        'beginBasYm': get_recent_yyyymm(4),
         'iqBs': '수탁총액'
-    })
+    }, num_rows=100)
     results = []
     for item in items:
         val = float(item.get('val', 0) or 0)
@@ -75,14 +106,15 @@ def collect_trust_scale() -> list:
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
-            'fetched_at': now_kst()
+            'fetched_at': now_kst(),
+            '_basYm': item.get('basYm', '')
         })
-    return results
+    return latest_by_key(results, '_basYm')
 
 
 def collect_fund_net_asset() -> list:
-    """② 펀드순자산총액 (getFundTotalNetEssetInfo) - basDt(8자리, 필수)"""
-    items = fetch_operation('getFundTotalNetEssetInfo', {'basDt': get_recent_date(3)})
+    """② 펀드순자산총액 (getFundTotalNetEssetInfo) - basDt 정확일치라 beginBasDt 범위로 조회"""
+    items = fetch_operation('getFundTotalNetEssetInfo', {'beginBasDt': get_recent_date(10)}, num_rows=100)
     results = []
     for item in items:
         amt = float(item.get('nPptTotAmt', 0) or 0)
@@ -97,9 +129,10 @@ def collect_fund_net_asset() -> list:
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
-            'fetched_at': now_kst()
+            'fetched_at': now_kst(),
+            '_basDt': item.get('basDt', '')
         })
-    return results
+    return latest_by_key(results, '_basDt')
 
 
 def collect_cma_status() -> list:
@@ -153,8 +186,8 @@ def collect_credit_balance() -> list:
 
 
 def collect_market_capital() -> list:
-    """⑤ 증시자금추이 (GetSecuritiesMarketTotalCapitalInfo) - basDt(8자리)"""
-    items = fetch_operation('GetSecuritiesMarketTotalCapitalInfo', {'basDt': get_recent_date(5)})
+    """⑤ 증시자금추이 (getSecuritiesMarketTotalCapitalInfo, 소문자 g 실측 확인) - basDt(8자리)"""
+    items = fetch_operation('getSecuritiesMarketTotalCapitalInfo', {'basDt': get_recent_date(5)})
     results = []
     for item in items:
         amt = float(item.get('invrDpsgAmt', 0) or 0)
@@ -292,7 +325,11 @@ def main():
             logger.error(f"❌ {name} 처리 오류: {type(e).__name__} - {e}")
 
     if all_results:
-        supabase_upsert('market_indicators', all_results)
+        # 배치 내 키 집합 통일 (PGRST102 "All object keys must match" 방지)
+        normalized = [normalize(r) for r in all_results]
+        # indicator_code 중복 방어적 제거
+        deduped = list({r['indicator_code']: r for r in normalized}.values())
+        supabase_upsert('market_indicators', deduped)
 
     logger.info(f"=== 금융투자협회 종합통계 수집 완료: 총 {len(all_results)}건 ===")
 
