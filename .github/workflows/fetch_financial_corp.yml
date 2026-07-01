@@ -1,4 +1,4 @@
-name: 금융회사정보
+name: 금융회사기본정보
 on:
   workflow_dispatch:
 jobs:
@@ -13,5 +13,5 @@ jobs:
       - env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_ENC }}
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/financial_corp_info.py

@@ -1,4 +1,4 @@
-name: 실손보험
+name: 실손보험정보
 on:
   workflow_dispatch:
 jobs:
@@ -13,5 +13,5 @@ jobs:
       - env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_ENC }}
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/insurance_info.py

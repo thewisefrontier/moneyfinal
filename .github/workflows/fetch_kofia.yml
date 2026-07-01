@@ -1,4 +1,4 @@
-name: KOFIA통계
+name: 금투협종합통계
 on:
   workflow_dispatch:
 jobs:
@@ -13,5 +13,5 @@ jobs:
       - env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_ENC }}
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/kofia_stats.py
