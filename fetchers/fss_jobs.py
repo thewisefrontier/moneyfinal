@@ -31,8 +31,11 @@ def main():
                 'fetched_at': now_kst()
             })
         if results:
-            supabase_upsert('fss_jobs', results)
-            logger.info(f"✅ 일자리정보 {len(results)}건 저장")
+            ok = supabase_upsert('fss_jobs', results)
+            if ok:
+                logger.info(f"✅ 일자리정보 {len(results)}건 저장")
+            else:
+                logger.error(f"❌ 일자리정보 저장 실패 ({len(results)}건 시도)")
     except Exception as e:
         logger.error(f"일자리정보 수집 오류: {type(e).__name__} - {e}")
     logger.info("=== 금융권 일자리정보 수집 완료 ===")
