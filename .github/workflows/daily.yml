@@ -74,18 +74,6 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/krx_index.py
-      - name: 금융감독정보
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
-        run: python fetchers/fss_info.py
-      - name: 금융꿀팁 200선
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
-        run: python fetchers/fss_fintip.py
       - name: Gemini 분석
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
