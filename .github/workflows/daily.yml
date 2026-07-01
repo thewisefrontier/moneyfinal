@@ -1,0 +1,33 @@
+name: 데일리 통합 수집
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'   # 매일 07:00 KST (UTC 22:00 전날)
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 미국주식시세
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python fetchers/us_stocks.py
+      - name: Export
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || (git commit -m "data: $(date +'%Y-%m-%d') daily export" && git pull --rebase origin main && git push)
