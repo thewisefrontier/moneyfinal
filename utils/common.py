@@ -64,8 +64,8 @@ def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) 
 def fss_open_api_get(jsp_name: str, auth_key: str, days_back: int = 7, timeout: int = 15) -> requests.Response:
     """
     금융감독원 오픈API 전용 GET 요청 (www.fss.or.kr/fss/kr/openApi/api/*.jsp)
-    파랄트: authKey, apiType=json, startDate/endDate (YYYY-MM-DD, 최대 1개월)
-    일 30회 호출 제한 있으므로 호출령 주의.
+    파라미터: authKey, apiType=json, startDate/endDate (YYYY-MM-DD, 최대 1개월)
+    일 30회 호출 제한 있으므로 호출량 주의.
     """
     now = datetime.now(KST)
     end_date = now.strftime('%Y-%m-%d')
@@ -80,6 +80,8 @@ def fss_open_api_get(jsp_name: str, auth_key: str, days_back: int = 7, timeout: 
     res = requests.get(url, params=params, timeout=timeout)
     if res.status_code >= 400:
         logging.error(f"[FSS오픈API 오류] HTTP {res.status_code} | {jsp_name} | 응답: {res.text[:300]}")
+    elif not res.text.strip()[:1] in ('{', '['):
+        logging.error(f"[FSS오픈API 응답이상] {jsp_name} | HTTP {res.status_code} | 요청URL: {res.url} | 응답원문(500자): {res.text[:500]}")
     return res
 
 
