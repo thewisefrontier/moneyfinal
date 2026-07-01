@@ -1,6 +1,8 @@
 """
 KRX 주식 지수 수집기
 출처: 공공데이터포털 금융위원회_지수시세정보
+- basDt는 정확일치 파라미터라 그날 데이터가 아직 게시 안 됐으면 0건이 됨
+  -> beginBasDt 범위 조회 후 최신 basDt 값만 채택 (실측 확인된 이슈)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -19,23 +21,23 @@ INDICES = [
     {'idxNm': '코스피 200', 'indicator_code': 'KOSPI200', 'indicator_name': '코스피 200'},
 ]
 
-def get_base_date() -> str:
+def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
-    if now.weekday() == 0:   base = now - timedelta(days=3)
-    elif now.weekday() == 6: base = now - timedelta(days=2)
-    elif now.weekday() == 5: base = now - timedelta(days=1)
-    else:                    base = now - timedelta(days=1)
-    return base.strftime('%Y%m%d')
+    return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
-def fetch_index(index: dict, base_date: str) -> dict | None:
-    params = {'resultType':'json','numOfRows':1,'pageNo':1,'basDt':base_date,'idxNm':index['idxNm']}
+def fetch_index(index: dict, begin_date: str) -> dict | None:
+    params = {'resultType':'json','numOfRows':30,'pageNo':1,'beginBasDt':begin_date,'idxNm':index['idxNm']}
     try:
         res = data_go_kr_get(BASE_URL, API_KEY, params)
         res.raise_for_status()
         body = res.json().get('response',{}).get('body',{})
-        if not body.get('totalCount',0): return None
+        if not body.get('totalCount',0):
+            logger.warning(f"{index['idxNm']}: 데이터 없음")
+            return None
         items = body.get('items',{}).get('item',[])
-        item = items[0] if isinstance(items,list) and items else items
+        if isinstance(items,dict): items=[items]
+        # basDt가 가장 최신인 항목 채택
+        item = max(items, key=lambda x: x.get('basDt',''))
         value = float(item.get('clpr',0) or 0)
         vs = float(item.get('vs',0) or 0)
         flt_rt = float(item.get('fltRt',0) or 0)
@@ -58,9 +60,9 @@ def fetch_index(index: dict, base_date: str) -> dict | None:
 
 def main():
     logger.info("=== KRX 지수 수집 시작 ===")
-    base_date = get_base_date()
-    logger.info(f"기준일: {base_date}")
-    results = [r for idx in INDICES if (r:=fetch_index(idx,base_date))]
+    begin_date = get_recent_date(10)
+    logger.info(f"조회 시작일: {begin_date}")
+    results = [r for idx in INDICES if (r:=fetch_index(idx,begin_date))]
     if results: supabase_upsert('market_indicators', results)
     logger.info(f"=== KRX 수집 완료: {len(results)}/{len(INDICES)}건 ===")
 
