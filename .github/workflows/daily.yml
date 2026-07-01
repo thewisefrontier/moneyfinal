@@ -20,6 +20,12 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python fetchers/us_stocks.py
+      - name: DART 공시
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python fetchers/dart_disclosure.py
       - name: Export
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
