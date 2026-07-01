@@ -1,6 +1,6 @@
 """
 금융꿀팁 200선 수집기
-출처: 금융감독원 오픈API (finTip.jsp)
+출처: 금융감독원 오픈API (tip.jsp)
 """
 import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -12,10 +12,11 @@ AUTH_KEY = os.environ.get('FSS_API_KEY', '')
 def main():
     logger.info("=== 금융꿀팁 200선 수집 시작 ===")
     try:
-        res = fss_open_api_get('finTip', AUTH_KEY, days_back=30)
+        res = fss_open_api_get('tip', AUTH_KEY, days_back=30)
         res.raise_for_status()
         data = res.json()
-        items = data.get('result', {}).get('list', []) if isinstance(data, dict) else []
+        # 주의: FSS 응답 키는 "response"가 아니라 오타난 "reponse"
+        items = data.get('reponse', {}).get('result', []) if isinstance(data, dict) else []
         if not items:
             logger.warning("금융꿀팁: 데이터 없음")
             return
@@ -23,10 +24,10 @@ def main():
         for item in items:
             results.append({
                 'category': '금융꿀팁200선',
-                'title': item.get('title', item.get('TITLE', '')),
-                'content_summary': item.get('cn', item.get('CN', ''))[:500],
-                'post_date': item.get('regDate', item.get('REG_DATE', now_kst()[:10])),
-                'source_url': item.get('url', item.get('URL', '')),
+                'title': item.get('subject', ''),
+                'content_summary': item.get('contentsKor', '')[:500],
+                'post_date': item.get('regDate', now_kst()[:10])[:10],
+                'source_url': item.get('originUrl', ''),
                 'fetched_at': now_kst()
             })
         if results:
