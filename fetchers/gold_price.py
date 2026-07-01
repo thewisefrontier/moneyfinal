@@ -2,7 +2,8 @@
 KRX 금시장 금시세 수집기
 출처: 공공데이터포털 금융위원회_일반상품시세정보 (getGoldPriceInfo)
 - FRED의 GOLDAMGBD228NLBM(LBMA 금가격)이 대체 없이 폐지되어 대체 소스로 도입
-- KRX 금시장 "금 99.99_1Kg" 종목 기준 (원/g 단위)
+- KRX 금시장 "금 99.99_1kg" 종목 기준 (원/g 단위)
+  ※ 실제 API 응답은 소문자 kg (docx 가이드의 "1Kg" 표기와 다름, 실측 확인됨)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -14,7 +15,7 @@ logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service/GetGeneralProductInfoService/getGoldPriceInfo"
-ITMS_NM = "금 99.99_1Kg"
+ITMS_NM = "금 99.99_1kg"
 
 
 def get_base_date() -> str:
@@ -42,7 +43,7 @@ def fetch_gold(base_date: str) -> dict | None:
         flt_rt = float(item.get('fltRt', 0) or 0)
         return {
             'indicator_code': 'GOLD',
-            'indicator_name': '금 가격 (KRX 99.99_1Kg)',
+            'indicator_name': '금 가격 (KRX 99.99_1kg)',
             'category': '원자재',
             'value': value,
             'prev_value': round(value - vs, 2),
