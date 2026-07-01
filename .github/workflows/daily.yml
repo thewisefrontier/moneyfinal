@@ -26,6 +26,12 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: python fetchers/dart_disclosure.py
+      - name: ECOS 일별환율
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python fetchers/ecos_daily.py
       - name: Export
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
