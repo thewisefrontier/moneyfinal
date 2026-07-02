@@ -55,6 +55,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 .badge.deny2{background:rgba(210,153,34,.15);color:var(--yellow)}
 .badge.deny3{background:rgba(139,148,158,.15);color:var(--text2)}
 .badge.cond{background:rgba(56,139,253,.15);color:var(--blue)}
+.badge.small{background:rgba(139,148,158,.15);color:var(--text2)}
 .period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;justify-self:center}
 .rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
 .rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
@@ -109,6 +110,10 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
       <button class="ft active" data-f="sale" data-v="all" onclick="setF(this)">전체</button>
       <button class="ft" data-f="sale" data-v="normal" onclick="setF(this)">일반</button>
       <button class="ft" data-f="sale" data-v="special" onclick="setF(this)">특판</button>
+      <span class="tb-label" style="margin-left:12px">한도</span>
+      <button class="ft active" data-f="limit" data-v="all" onclick="setF(this)">전체</button>
+      <button class="ft" data-f="limit" data-v="small" onclick="setF(this)">100만원 미만</button>
+      <button class="ft" data-f="limit" data-v="large" onclick="setF(this)">100만원 이상</button>
       <span class="tb-label" style="margin-left:12px">기관</span>
       <button class="ft active" data-f="sec" data-v="all" onclick="setF(this)">전체</button>
       <button class="ft" data-f="sec" data-v="은행" onclick="setF(this)">은행</button>
@@ -142,7 +147,7 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 let all=[];
-const F={cat:'적금',deny:'all',cond:'all',sale:'all',sec:'all'};
+const F={cat:'적금',deny:'all',cond:'all',sale:'all',limit:'all',sec:'all'};
 let shown=50;
 let sortBy='rate';
 let sortDir='desc';
@@ -167,14 +172,17 @@ function setF(btn){const f=btn.dataset.f;F[f]=btn.dataset.v;btn.parentElement.qu
 function isSpecial(r){return !!(r.dcls_end_day&&String(r.dcls_end_day).trim());}
 function fmtDay(s){s=String(s||'');return s.length===8?`${s.slice(4,6)}/${s.slice(6,8)}`:s;}
 function denyBadge(r){if(r.join_deny===2)return'<span class="badge deny2">서민전용</span>';if(r.join_deny===3)return'<span class="badge deny3">일부제한</span>';return'';}
-function condBadge(r){if(r.spcl_cnd&&String(r.spcl_cnd).trim())return'<span class="badge cond">우대조건</span>';return'';}
+function condBadge(r){const cond=String(r.spcl_cnd||'').trim();if(cond&&cond!=='-'&&cond!=='없음')return'<span class="badge cond">우대조건</span>';return'';}
+function limitBadge(r){const limit=parseInt(r.max_limit);if(limit&&limit<1000000)return'<span class="badge small">소액</span>';return'';}
 function filtered(){
   const q=document.getElementById('q').value.trim().toLowerCase();
   const trm=document.getElementById('trm').value;
   let list=all.filter(r=>r.category===F.cat);
   if(F.deny!=='all')list=list.filter(r=>r.join_deny===parseInt(F.deny));
-  if(F.cond==='none')list=list.filter(r=>!r.spcl_cnd||!String(r.spcl_cnd).trim());
-  if(F.cond==='yes')list=list.filter(r=>r.spcl_cnd&&String(r.spcl_cnd).trim());
+  if(F.cond==='none'){const cond=r=>!r.spcl_cnd||!String(r.spcl_cnd).trim()||String(r.spcl_cnd).trim()==='-'||String(r.spcl_cnd).trim()==='없음';list=list.filter(cond);}
+  if(F.cond==='yes'){const cond=r=>r.spcl_cnd&&String(r.spcl_cnd).trim()&&String(r.spcl_cnd).trim()!=='-'&&String(r.spcl_cnd).trim()!=='없음';list=list.filter(cond);}
+  if(F.limit==='small')list=list.filter(r=>{const l=parseInt(r.max_limit);return l&&l<1000000;});
+  if(F.limit==='large')list=list.filter(r=>{const l=parseInt(r.max_limit);return l&&l>=1000000;});
   if(F.sale==='special')list=list.filter(isSpecial);
   if(F.sale==='normal')list=list.filter(r=>!isSpecial(r));
   if(F.sec!=='all')list=list.filter(r=>r.sector?r.sector===F.sec:(F.sec==='저축은행'?r.institution.includes('저축은행'):!r.institution.includes('저축은행')));
@@ -202,7 +210,7 @@ function rowHtml(r,i){
   ].filter(([k,v])=>v&&String(v).trim()).map(([k,v])=>`<div class="dt-item"><span class="dt-k">${k}</span><span class="dt-v">${esc(v)}</span></div>`).join('');
   return `<div class="row" onclick="this.classList.toggle('open')">
     <div class="row-main">
-      <div><div class="rb">${i+1}. ${esc(r.institution)} ${sp}${denyBadge(r)}${condBadge(r)}</div><div class="rp">${esc(r.product_name)}</div></div>
+      <div><div class="rb">${i+1}. ${esc(r.institution)} ${sp}${denyBadge(r)}${condBadge(r)}${limitBadge(r)}</div><div class="rp">${esc(r.product_name)}</div></div>
       <div class="period">${esc(r.period)}</div>
       <div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div>
     </div>
