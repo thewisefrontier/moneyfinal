@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>기간·날짜 계산기 | 머니파이널</title>
+<meta name="description" content="두 날짜 사이 기간(D-day), 특정일로부터 N일 후 날짜를 계산합니다.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.card-t{font-size:14px;font-weight:700;margin-bottom:14px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none;color-scheme:dark}
+:root[data-theme="light"] .field input{color-scheme:light}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}}
+.res{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;margin-top:4px}
+.res-main{font-size:22px;font-weight:700;color:var(--green)}
+.res-sub{font-size:12px;color:var(--text2);margin-top:4px;line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>기간·날짜 계산기</h1>
+<div class="sub">두 날짜 사이 기간 · N일 후 날짜</div>
+
+<div class="card">
+  <div class="card-t">📅 두 날짜 사이 기간</div>
+  <div class="grid2">
+    <div class="field"><label>시작일</label><input type="date" id="d1" onchange="calcDiff()"></div>
+    <div class="field"><label>종료일</label><input type="date" id="d2" onchange="calcDiff()"></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="diff-main">-</div>
+    <div class="res-sub" id="diff-sub"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-t">➕ 특정일로부터 N일 후/전</div>
+  <div class="grid3">
+    <div class="field"><label>기준일</label><input type="date" id="b1" onchange="calcAdd()"></div>
+    <div class="field"><label>일수</label><input type="number" id="days" value="100" oninput="calcAdd()"></div>
+    <div class="field"><label>방향</label><select id="dir" onchange="calcAdd()"><option value="1">후 (+)</option><option value="-1">전 (−)</option></select></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="add-main">-</div>
+    <div class="res-sub" id="add-sub"></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+const WD=['일','월','화','수','목','금','토'];
+function fd(d){return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} (${WD[d.getDay()]})`;}
+function toInput(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function calcDiff(){
+  const a=document.getElementById('d1').valueAsDate,b=document.getElementById('d2').valueAsDate;
+  if(!a||!b){document.getElementById('diff-main').textContent='-';return;}
+  const days=Math.round((b-a)/86400000);
+  const abs=Math.abs(days);
+  document.getElementById('diff-main').textContent=(days<0?'−':'')+abs.toLocaleString('ko-KR')+'일';
+  // 년/월/일 분해
+  let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();
+  const sign=days<0?-1:1;
+  let s=[a,b];if(days<0)s=[b,a];
+  y=s[1].getFullYear()-s[0].getFullYear();m=s[1].getMonth()-s[0].getMonth();d=s[1].getDate()-s[0].getDate();
+  if(d<0){m--;d+=new Date(s[1].getFullYear(),s[1].getMonth(),0).getDate();}
+  if(m<0){y--;m+=12;}
+  document.getElementById('diff-sub').innerHTML=
+    `약 ${y}년 ${m}개월 ${d}일 · ${Math.floor(abs/7).toLocaleString('ko-KR')}주 ${abs%7}일<br>`+
+    `시작일 포함 시(D-day 방식) <b>${(abs+1).toLocaleString('ko-KR')}일째</b>`;
+}
+function calcAdd(){
+  const b=document.getElementById('b1').valueAsDate;
+  const n=parseInt(document.getElementById('days').value,10);
+  const dir=parseInt(document.getElementById('dir').value,10);
+  if(!b||isNaN(n)){document.getElementById('add-main').textContent='-';return;}
+  const r=new Date(b.getTime()+n*dir*86400000);
+  document.getElementById('add-main').textContent=fd(r);
+  const r2=new Date(b.getTime()+(n-1)*dir*86400000);
+  document.getElementById('add-sub').innerHTML=`기준일로부터 ${n.toLocaleString('ko-KR')}일 ${dir>0?'후':'전'}<br>기준일을 1일째로 세면(백일 등) <b>${fd(r2)}</b>`;
+}
+(function(){
+  const t=new Date();
+  document.getElementById('d1').value=toInput(t);
+  document.getElementById('d2').value=toInput(new Date(t.getFullYear(),11,31));
+  document.getElementById('b1').value=toInput(t);
+  calcDiff();calcAdd();
+})();
+</script>
+</body>
+</html>
