@@ -63,6 +63,10 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 .dt-k{color:var(--text2);min-width:70px;flex-shrink:0}
 .dt-v{white-space:pre-wrap;word-break:break-word}
 .hd-grid{display:grid;grid-template-columns:2fr 1fr auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)}
+.hd-btn{background:none;border:none;color:var(--text2);cursor:pointer;text-align:left;font-size:11px;padding:0;display:flex;align-items:center;gap:4px;transition:color .15s}
+.hd-btn:hover{color:var(--text)}
+.hd-btn.active{color:var(--accent)}
+.sort-arrow{font-size:10px;opacity:.6}
 .more-btn{display:block;width:100%;padding:10px;background:none;border:none;border-top:1px solid var(--border);color:var(--accent);font-size:13px;cursor:pointer}
 .more-btn:hover{background:var(--bg3)}
 </style>
@@ -85,7 +89,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
       <button class="ft active" data-f="cat" data-v="적금" onclick="setF(this)">적금</button>
       <button class="ft" data-f="cat" data-v="예금" onclick="setF(this)">예금</button>
       <input type="text" class="search-box" id="q" placeholder="은행명·상품명 검색" oninput="render()">
-      <select class="sel" id="sort" onchange="render()">
+      <select class="sel" id="sort" onchange="render()" style="display:none">
         <option value="max">최고금리순</option>
         <option value="base">기본금리순</option>
       </select>
@@ -117,7 +121,11 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
       <span class="result-cnt" id="cnt"></span>
     </div>
   </div>
-  <div class="hd-grid"><span>기관/상품 (클릭 시 상세)</span><span style="text-align:center">기간</span><span style="text-align:right">금리</span></div>
+  <div class="hd-grid">
+    <button class="hd-btn" id="hd-org" onclick="setSortBy('org')">기관/상품 (클릭 시 상세)<span class="sort-arrow"></span></button>
+    <button class="hd-btn" id="hd-period" onclick="setSortBy('period')" style="text-align:center">기간<span class="sort-arrow"></span></button>
+    <button class="hd-btn" id="hd-rate" onclick="setSortBy('rate')" style="text-align:right">금리<span class="sort-arrow"></span></button>
+  </div>
   <div id="list"><div class="loading">로딩 중...</div></div>
 </div>
 </main>
@@ -131,6 +139,25 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 let all=[];
 const F={cat:'적금',deny:'all',sale:'all',sec:'all'};
 let shown=50;
+let sortBy='rate';
+let sortDir='desc';
+
+function setSortBy(field){
+  if(sortBy===field){sortDir=sortDir==='desc'?'asc':'desc';}else{sortBy=field;sortDir='desc';}
+  updateSortUI();
+  shown=50;
+  render();
+}
+
+function updateSortUI(){
+  ['org','period','rate'].forEach(f=>{
+    const btn=document.getElementById(`hd-${f}`);
+    btn.classList.toggle('active',sortBy===f);
+    const arrow=btn.querySelector('.sort-arrow');
+    if(sortBy===f)arrow.textContent=sortDir==='desc'?'▼':'▲';else arrow.textContent='';
+  });
+}
+
 function setF(btn){const f=btn.dataset.f;F[f]=btn.dataset.v;btn.parentElement.querySelectorAll(`[data-f="${f}"]`).forEach(b=>b.classList.remove('active'));btn.classList.add('active');shown=50;render();}
 function isSpecial(r){return !!(r.dcls_end_day&&String(r.dcls_end_day).trim());}
 function fmtDay(s){s=String(s||'');return s.length===8?`${s.slice(4,6)}/${s.slice(6,8)}`:s;}
@@ -145,8 +172,16 @@ function filtered(){
   if(F.sec!=='all')list=list.filter(r=>r.sector?r.sector===F.sec:(F.sec==='저축은행'?r.institution.includes('저축은행'):!r.institution.includes('저축은행')));
   if(trm!=='all')list=list.filter(r=>r.period===trm);
   if(q)list=list.filter(r=>(r.institution+' '+r.product_name).toLowerCase().includes(q));
-  const sort=document.getElementById('sort').value;
-  list.sort((a,b)=>sort==='base'?(b.rate-a.rate):(b.max_rate-a.max_rate));
+  
+  list.sort((a,b)=>{
+    let aVal,bVal;
+    if(sortBy==='org'){aVal=a.institution+a.product_name;bVal=b.institution+b.product_name;}
+    else if(sortBy==='period'){aVal=parseInt(a.period)||0;bVal=parseInt(b.period)||0;}
+    else{aVal=a.max_rate;bVal=b.max_rate;}
+    if(aVal<bVal)return sortDir==='asc'?-1:1;
+    if(aVal>bVal)return sortDir==='asc'?1:-1;
+    return 0;
+  });
   return list;
 }
 function rowHtml(r,i){
@@ -187,6 +222,7 @@ async function loadRates(){
   try{const r=await fetch('data/market.json');const d=await r.json();(d.indicators||[]).forEach(i=>{if(i.indicator_code==='BASE_RATE')document.getElementById('rk-base').textContent=fmt(i.value,'%');if(i.indicator_code==='FED_RATE')document.getElementById('rk-fed').textContent=fmt(i.value,'%');});}catch(e){}
 }
 loadRates();
+updateSortUI();
 async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};let html='';inds.forEach(i=>{if(!labels[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=html+html;}catch(e){}}
 loadTicker();
 </script>
