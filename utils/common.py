@@ -129,6 +129,26 @@ def supabase_select(table: str, params: dict = None) -> list:
         return []
 
 
+def supabase_select_all(table: str, params: dict = None, page_size: int = 1000, max_pages: int = 20) -> list:
+    """
+    PostgREST 기본 응답 상한(1000행)을 넘는 전체 조회.
+    offset/limit 페이징으로 반복 조회 후 병합.
+    """
+    base_params = dict(params or {'select': '*'})
+    base_params.pop('limit', None)
+    base_params.pop('offset', None)
+    all_rows = []
+    for page in range(max_pages):
+        page_params = {**base_params, 'limit': str(page_size), 'offset': str(page * page_size)}
+        batch = supabase_select(table, page_params)
+        all_rows.extend(batch)
+        if len(batch) < page_size:
+            break
+    else:
+        logging.warning(f"[{table}] select_all 최대 페이지({max_pages}) 도달 - 결과가 잘렸을 수 있음")
+    return all_rows
+
+
 def now_kst() -> str:
     return datetime.now(KST).isoformat()
 
