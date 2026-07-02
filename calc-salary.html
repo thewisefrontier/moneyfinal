@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>연봉 실수령액 계산기 (2026년 기준) | 머니파이널</title>
+<meta name="description" content="2026년 4대보험 요율(국민연금 9.5%, 건강보험 7.19%)과 소득세를 반영한 연봉 실수령액 계산기. 월 실수령액과 공제 내역을 바로 확인하세요.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:760px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:10px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.btn{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer}
+.btn:hover{opacity:.9}
+.result-hero{text-align:center;padding:24px 16px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:34px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.rh-sub{font-size:13px;color:var(--text2);margin-top:6px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.brow.total .k,.brow.total .v{color:var(--red);font-weight:700}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>연봉 실수령액 계산기</h1>
+<div class="sub">2026년 4대보험 요율 · 소득세 기본세율 반영 (근사치)</div>
+
+<div class="card">
+  <div class="field"><label>연봉 (세전, 원)</label><input type="text" id="salary" inputmode="numeric" placeholder="예: 40,000,000" oninput="fmtInput(this)"></div>
+  <div class="grid2">
+    <div class="field"><label>월 비과세액 (식대 등, 원)</label><input type="text" id="taxfree" inputmode="numeric" value="200,000" oninput="fmtInput(this)"></div>
+    <div class="field"><label>부양가족 수 (본인 포함)</label><select id="deps"><option value="1">1명 (본인)</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option><option value="6">6명</option></select></div>
+  </div>
+  <button class="btn" onclick="calc()">계산하기</button>
+</div>
+
+<div class="card" id="result" style="display:none">
+  <div class="result-hero">
+    <div class="rh-label">월 예상 실수령액</div>
+    <div class="rh-value" id="r-net">-</div>
+    <div class="rh-sub" id="r-annual"></div>
+  </div>
+  <div class="brow"><span class="k">월 급여 (세전)</span><span class="v" id="r-gross"></span></div>
+  <div class="brow"><span class="k">국민연금 (4.75%)</span><span class="v" id="r-np"></span></div>
+  <div class="brow"><span class="k">건강보험 (3.595%)</span><span class="v" id="r-hi"></span></div>
+  <div class="brow"><span class="k">장기요양 (건보료의 13.14%)</span><span class="v" id="r-ltc"></span></div>
+  <div class="brow"><span class="k">고용보험 (0.9%)</span><span class="v" id="r-ei"></span></div>
+  <div class="brow"><span class="k">소득세 (추정)</span><span class="v" id="r-it"></span></div>
+  <div class="brow"><span class="k">지방소득세 (소득세의 10%)</span><span class="v" id="r-lit"></span></div>
+  <div class="brow total"><span class="k">공제 합계</span><span class="v" id="r-ded"></span></div>
+</div>
+
+<div class="note">
+  ⚠️ 본 계산기는 <b>2026년 기준 추정치</b>를 제공합니다. 실제 급여명세서와 차이가 있을 수 있습니다.<br>
+  · 4대보험: 국민연금 9.5%(근로자 4.75%, 기준소득월액 41만~659만원), 건강보험 7.19%(근로자 3.595%), 장기요양보험료율(건강보험료 대비) 13.14%, 고용보험 실업급여 1.8%(근로자 0.9%) 적용.<br>
+  · 소득세: 국세청 근로소득 간이세액표 대신 연말정산 방식(근로소득공제·인적공제·근로소득세액공제)으로 근사 계산하며, 자녀세액공제·특별공제 등은 반영하지 않습니다. 실제 원천징수액과 다를 수 있습니다.<br>
+  · 회사 규모, 산재보험(회사 전액 부담), 개인별 공제 항목에 따라 실수령액은 달라집니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+
+// 근로소득공제 (소득세법 §47)
+function earnedIncomeDeduction(g){
+  let d;
+  if(g<=5000000)d=g*0.7;
+  else if(g<=15000000)d=3500000+(g-5000000)*0.4;
+  else if(g<=45000000)d=7500000+(g-15000000)*0.15;
+  else if(g<=100000000)d=12000000+(g-45000000)*0.05;
+  else d=14750000+(g-100000000)*0.02;
+  return Math.min(d,20000000);
+}
+// 기본세율 (2026년: 1,400만 6% ~ 10억 초과 45%)
+function basicTax(base){
+  if(base<=0)return 0;
+  const br=[[14000000,.06,0],[50000000,.15,1260000],[88000000,.24,5760000],[150000000,.35,15440000],[300000000,.38,19940000],[500000000,.40,25940000],[1000000000,.42,35940000],[Infinity,.45,65940000]];
+  for(const[lim,rate,ded]of br){if(base<=lim)return base*rate-ded;}
+}
+// 근로소득세액공제 (소득세법 §59)
+function earnedIncomeTaxCredit(calcTax,gross){
+  let c=calcTax<=1300000?calcTax*0.55:715000+(calcTax-1300000)*0.3;
+  let limit;
+  if(gross<=33000000)limit=740000;
+  else if(gross<=70000000)limit=Math.max(660000,740000-(gross-33000000)*0.008);
+  else if(gross<=120000000)limit=Math.max(500000,660000-(gross-70000000)*0.5);
+  else limit=Math.max(200000,500000-(gross-120000000)*0.5);
+  return Math.min(c,limit);
+}
+
+function calc(){
+  const annual=num('salary');
+  if(!annual){alert('연봉을 입력해주세요.');return;}
+  const taxfreeM=num('taxfree');
+  const deps=parseInt(document.getElementById('deps').value,10);
+  const grossM=annual/12;
+  const taxableM=Math.max(0,grossM-taxfreeM);
+
+  // 4대보험 (2026년 근로자 부담분)
+  const npBase=Math.min(Math.max(taxableM,410000),6590000); // 기준소득월액 41만~659만
+  const np=Math.floor(npBase*0.0475);
+  const hi=Math.floor(taxableM*0.03595);
+  const ltc=Math.floor(hi*0.1314);
+  const ei=Math.floor(taxableM*0.009);
+
+  // 소득세 근사 (연말정산 방식)
+  const grossY=taxableM*12;
+  const eiDed=earnedIncomeDeduction(grossY);
+  const taxBase=Math.max(0,grossY-eiDed-1500000*deps-np*12);
+  const calcTax=basicTax(taxBase);
+  const credit=earnedIncomeTaxCredit(calcTax,grossY);
+  const finalY=Math.max(0,calcTax-credit);
+  const it=Math.floor(finalY/12);
+  const lit=Math.floor(it*0.1);
+
+  const ded=np+hi+ltc+ei+it+lit;
+  const net=grossM-ded;
+
+  document.getElementById('r-net').textContent=won(net);
+  document.getElementById('r-annual').textContent='연 환산 약 '+won(net*12);
+  document.getElementById('r-gross').textContent=won(grossM);
+  document.getElementById('r-np').textContent='-'+won(np);
+  document.getElementById('r-hi').textContent='-'+won(hi);
+  document.getElementById('r-ltc').textContent='-'+won(ltc);
+  document.getElementById('r-ei').textContent='-'+won(ei);
+  document.getElementById('r-it').textContent='-'+won(it);
+  document.getElementById('r-lit').textContent='-'+won(lit);
+  document.getElementById('r-ded').textContent='-'+won(ded);
+  document.getElementById('result').style.display='block';
+}
+document.getElementById('salary').addEventListener('keydown',e=>{if(e.key==='Enter')calc();});
+</script>
+</body>
+</html>
