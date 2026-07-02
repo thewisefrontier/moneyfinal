@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>대출 이자·상환 계산기 | 머니파이널</title>
+<meta name="description" content="원리금균등·원금균등·만기일시 상환 방식별 월 상환액과 총 이자를 계산합니다.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:18px 0 10px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>대출 이자·상환 계산기</h1>
+<div class="sub">원리금균등 · 원금균등 · 만기일시 상환 비교</div>
+
+<div class="card">
+  <div class="field"><label>대출 금액 (원)</label><input type="text" id="amt" inputmode="numeric" value="300,000,000" oninput="fmtInput(this);calc()"></div>
+  <div class="grid2">
+    <div class="field"><label>연 금리 (%)</label><input type="number" id="rate" value="4.0" step="0.01" min="0" oninput="calc()"></div>
+    <div class="field"><label>기간 (년)</label><input type="number" id="years" value="30" min="1" max="50" oninput="calc()"></div>
+  </div>
+  <div class="field"><label>상환 방식</label><select id="method" onchange="calc()">
+    <option value="annuity">원리금균등 (매월 동일 금액)</option>
+    <option value="principal">원금균등 (매월 원금 동일, 초기 부담 큼)</option>
+    <option value="bullet">만기일시 (매월 이자만, 만기에 원금)</option>
+  </select></div>
+</div>
+
+<div class="card">
+  <div class="result-hero">
+    <div class="rh-label" id="rh-label">월 상환액</div>
+    <div class="rh-value" id="r-monthly">-</div>
+  </div>
+  <div class="brow"><span class="k">대출 원금</span><span class="v" id="r-prin"></span></div>
+  <div class="brow"><span class="k">총 이자</span><span class="v" id="r-int" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">총 상환액</span><span class="v" id="r-total"></span></div>
+  <div class="brow" id="row-first"><span class="k">첫 달 상환액</span><span class="v" id="r-first"></span></div>
+  <div class="brow" id="row-last"><span class="k">마지막 달 상환액</span><span class="v" id="r-last"></span></div>
+</div>
+
+<div class="note">
+  ⚠️ 참고용 추정치입니다. 실제 대출은 은행의 일할 계산, 중도상환수수료, 금리 변동(변동금리), 거치기간 등에 따라 달라집니다.<br>
+  · 원리금균등: 매달 같은 금액 상환. 총이자는 원금균등보다 많지만 초기 부담이 적습니다.<br>
+  · 원금균등: 매달 원금은 같고 이자가 줄어 상환액이 점점 감소. 총이자가 가장 적습니다.<br>
+  · 만기일시: 매달 이자만 내고 만기에 원금 전액 상환. 총이자가 가장 많습니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function calc(){
+  const P=parseInt((document.getElementById('amt').value||'0').replace(/[^0-9]/g,''),10)||0;
+  const r=(parseFloat(document.getElementById('rate').value)||0)/100/12;
+  const n=(parseInt(document.getElementById('years').value,10)||0)*12;
+  const m=document.getElementById('method').value;
+  if(!P||!n){document.getElementById('r-monthly').textContent='-';return;}
+  let monthly,totalInt,first,last,label='월 상환액';
+  if(m==='annuity'){
+    monthly=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    totalInt=monthly*n-P;first=monthly;last=monthly;
+  }else if(m==='principal'){
+    const prin=P/n;
+    first=prin+P*r;last=prin+prin*r;
+    totalInt=P*r*(n+1)/2;
+    monthly=null;label='첫 달 상환액 (매달 감소)';
+  }else{
+    monthly=P*r;totalInt=P*r*n;first=monthly;last=monthly+P;label='월 이자 (만기 전까지)';
+  }
+  document.getElementById('rh-label').textContent=label;
+  document.getElementById('r-monthly').textContent=won(monthly!==null?monthly:first);
+  document.getElementById('r-prin').textContent=won(P);
+  document.getElementById('r-int').textContent=won(totalInt);
+  document.getElementById('r-total').textContent=won(P+totalInt);
+  document.getElementById('r-first').textContent=won(first);
+  document.getElementById('r-last').textContent=won(last)+(m==='bullet'?' (원금 포함)':'');
+}
+calc();
+</script>
+</body>
+</html>
