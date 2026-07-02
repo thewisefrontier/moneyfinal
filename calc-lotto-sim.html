@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>로또 당첨 시뮬레이터 | 머니파이널</title>
+<meta name="description" content="로또 6/45를 가상으로 구매해보는 시뮬레이터. 수천 회를 돌려 등수별 당첨 횟수와 수익률을 확인하세요.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.balls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.ball{width:40px;height:40px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--accent)}
+.btn{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:8px}
+.btn:hover{opacity:.9}
+.btn2{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:6px;font-size:13px;cursor:pointer}
+.result-hero{text-align:center;padding:16px 0 8px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:28px;font-weight:700;letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:9px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>로또 당첨 시뮬레이터</h1>
+<div class="sub">내 번호로 가상 추첨을 반복하면 얼마나 잃을까?</div>
+
+<div class="card">
+  <div class="field"><label>내 번호 (자동 생성 또는 직접 입력, 1~45 쉼표 구분)</label><input type="text" id="nums" placeholder="예: 3, 7, 12, 24, 33, 41"></div>
+  <div class="balls" id="balls"></div>
+  <button class="btn2" onclick="autoPick()" style="margin-bottom:14px">🎲 자동 번호 생성</button>
+  <div class="field"><label>시뮬레이션 횟수 (1회 = 1게임 1,000원)</label><select id="trials">
+    <option value="52">52회 (매주 1게임 × 1년)</option>
+    <option value="520">520회 (매주 1게임 × 10년)</option>
+    <option value="2600" selected>2,600회 (매주 1게임 × 50년)</option>
+    <option value="26000">26,000회 (매주 10게임 × 50년)</option>
+    <option value="100000">100,000회</option>
+    <option value="1000000">1,000,000회 (매주 10게임 × 약 1,923년)</option>
+  </select></div>
+  <button class="btn" onclick="run()">시뮬레이션 실행</button>
+</div>
+
+<div class="card" id="result" style="display:none">
+  <div class="result-hero">
+    <div class="rh-label">최종 손익 (당첨금 − 구입비)</div>
+    <div class="rh-value" id="r-pnl">-</div>
+  </div>
+  <div class="brow"><span class="k">총 구입비</span><span class="v" id="r-cost"></span></div>
+  <div class="brow"><span class="k">총 당첨금 (추정)</span><span class="v" id="r-win" style="color:var(--green)"></span></div>
+  <div class="brow"><span class="k">회수율</span><span class="v" id="r-roi"></span></div>
+  <div class="brow"><span class="k">🥇 1등 (6개 일치)</span><span class="v" id="r-1"></span></div>
+  <div class="brow"><span class="k">🥈 2등 (5개+보너스)</span><span class="v" id="r-2"></span></div>
+  <div class="brow"><span class="k">🥉 3등 (5개 일치)</span><span class="v" id="r-3"></span></div>
+  <div class="brow"><span class="k">4등 (4개 일치)</span><span class="v" id="r-4"></span></div>
+  <div class="brow"><span class="k">5등 (3개 일치)</span><span class="v" id="r-5"></span></div>
+</div>
+
+<div class="note">
+  🎯 이론적 당첨 확률: 1등 1/8,145,060 · 2등 1/1,357,510 · 3등 약 1/35,724 · 4등 약 1/733 · 5등 약 1/45<br>
+  · 당첨금은 4등 5만원·5등 5천원(고정), 1~3등은 회차별 변동이므로 <b>평균 수준 추정치</b>(1등 20억, 2등 5천만, 3등 150만)를 사용하며 세전 기준입니다.<br>
+  · 본 시뮬레이터는 재미와 확률 체감을 위한 것으로, 실제 결과·기대수익과 다릅니다. 복권 구입은 계획적으로.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function drawSix(){
+  const pool=Array.from({length:45},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  return pool.slice(0,7); // 6개 + 보너스
+}
+function renderBalls(nums){
+  document.getElementById('balls').innerHTML=nums.map(n=>`<div class="ball">${n}</div>`).join('');
+}
+function autoPick(){
+  const n=drawSix().slice(0,6).sort((a,b)=>a-b);
+  document.getElementById('nums').value=n.join(', ');
+  renderBalls(n);
+}
+function getMyNums(){
+  const raw=(document.getElementById('nums').value||'').split(/[,\s]+/).map(s=>parseInt(s,10)).filter(n=>n>=1&&n<=45);
+  const uniq=[...new Set(raw)];
+  return uniq.length===6?uniq:null;
+}
+const PRIZE={1:2e9,2:5e7,3:15e5,4:5e4,5:5e3}; // 1~3등 평균 추정, 4~5등 고정
+function run(){
+  let my=getMyNums();
+  if(!my){autoPick();my=getMyNums();}
+  renderBalls([...my].sort((a,b)=>a-b));
+  const trials=parseInt(document.getElementById('trials').value,10);
+  const mySet=new Set(my);
+  const cnt={1:0,2:0,3:0,4:0,5:0};
+  for(let t=0;t<trials;t++){
+    const d=drawSix();
+    const bonus=d[6];
+    let m=0;
+    for(let i=0;i<6;i++)if(mySet.has(d[i]))m++;
+    if(m===6)cnt[1]++;
+    else if(m===5&&mySet.has(bonus))cnt[2]++;
+    else if(m===5)cnt[3]++;
+    else if(m===4)cnt[4]++;
+    else if(m===3)cnt[5]++;
+  }
+  const cost=trials*1000;
+  const win=cnt[1]*PRIZE[1]+cnt[2]*PRIZE[2]+cnt[3]*PRIZE[3]+cnt[4]*PRIZE[4]+cnt[5]*PRIZE[5];
+  const pnl=win-cost;
+  const el=document.getElementById('r-pnl');
+  el.textContent=(pnl>=0?'+':'')+won(pnl);
+  el.style.color=pnl>=0?'var(--green)':'var(--red)';
+  document.getElementById('r-cost').textContent=won(cost);
+  document.getElementById('r-win').textContent=won(win);
+  document.getElementById('r-roi').textContent=(win/cost*100).toFixed(1)+'%';
+  for(let i=1;i<=5;i++)document.getElementById('r-'+i).textContent=cnt[i].toLocaleString('ko-KR')+'회';
+  document.getElementById('result').style.display='block';
+}
+autoPick();
+</script>
+</body>
+</html>
