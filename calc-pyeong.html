@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>평수 계산기 (평 ↔ ㎡) | 머니파이널</title>
+<meta name="description" content="평과 제곱미터(㎡)를 양방향으로 변환하는 부동산 단위 변환기. 주요 평형 조견표 포함.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:18px;font-weight:600;outline:none}
+.field input:focus{border-color:var(--accent)}
+.swap{text-align:center;font-size:18px;color:var(--text2);margin:2px 0 10px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th,.tbl td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:right}
+.tbl th{color:var(--text2);font-size:11px;font-weight:600;background:var(--bg3)}
+.tbl td:first-child,.tbl th:first-child{text-align:left}
+.tbl tr:last-child td{border-bottom:none}
+.card-t{font-size:14px;font-weight:700;margin-bottom:14px}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>평수 계산기</h1>
+<div class="sub">평 ↔ 제곱미터(㎡) 양방향 변환</div>
+
+<div class="card">
+  <div class="field"><label>평 (坪)</label><input type="number" id="py" value="34" step="0.01" oninput="fromPy()"></div>
+  <div class="swap">⇅</div>
+  <div class="field"><label>제곱미터 (㎡)</label><input type="number" id="sqm" step="0.01" oninput="fromSqm()"></div>
+</div>
+
+<div class="card">
+  <div class="card-t">📐 아파트 주요 평형 조견표</div>
+  <table class="tbl">
+    <tr><th>통칭</th><th>전용면적(㎡)</th><th>전용 평수</th></tr>
+    <tr><td>소형 (원룸·투룸)</td><td>18~40㎡</td><td>약 5~12평</td></tr>
+    <tr><td>18평형</td><td>45.9㎡ 내외</td><td>약 13.9평</td></tr>
+    <tr><td>24·25평형 (국민 소형)</td><td>59㎡</td><td>약 17.8평</td></tr>
+    <tr><td>32~34평형 (국민평형)</td><td>84㎡</td><td>약 25.4평</td></tr>
+    <tr><td>40평형대</td><td>101~134㎡</td><td>약 30.6~40.5평</td></tr>
+    <tr><td>50평형 이상</td><td>135㎡~</td><td>약 40.8평~</td></tr>
+  </table>
+</div>
+
+<div class="note">
+  · 1평 = 400/121 ≈ <b>3.3058㎡</b>, 1㎡ ≈ 0.3025평<br>
+  · "○○평형" 통칭은 공급면적(전용+주거공용) 기준이라, 전용면적을 평으로 환산한 값과 다릅니다. 예: 국민평형 34평형의 전용면적은 84㎡(약 25.4평)입니다.<br>
+  · 2007년부터 법정 표기 단위는 ㎡이며, 평은 관습적 표현입니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+const P=400/121;
+function fromPy(){const v=parseFloat(document.getElementById('py').value);document.getElementById('sqm').value=isNaN(v)?'':(v*P).toFixed(2);}
+function fromSqm(){const v=parseFloat(document.getElementById('sqm').value);document.getElementById('py').value=isNaN(v)?'':(v/P).toFixed(2);}
+fromPy();
+</script>
+</body>
+</html>
