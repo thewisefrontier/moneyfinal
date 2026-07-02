@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>로또 세금 계산기 | 머니파이널</title>
+<meta name="description" content="로또·복권 당첨금의 세금(22%·33%)과 실수령액을 계산합니다. 200만원 이하 비과세.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none}
+.field input:focus{border-color:var(--accent)}
+.preset{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.preset button{background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer}
+.preset button:hover{border-color:var(--accent);color:var(--accent)}
+.result-hero{text-align:center;padding:18px 0 10px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>로또 세금 계산기</h1>
+<div class="sub">당첨금 세금과 실수령액 확인</div>
+
+<div class="card">
+  <div class="field"><label>당첨금 (원)</label><input type="text" id="amt" inputmode="numeric" value="2,000,000,000" oninput="fmtInput(this);calc()"></div>
+  <div class="preset">
+    <button onclick="setAmt(5000)">5등 5천원</button>
+    <button onclick="setAmt(50000)">4등 5만원</button>
+    <button onclick="setAmt(1500000)">3등 150만</button>
+    <button onclick="setAmt(50000000)">2등 5천만</button>
+    <button onclick="setAmt(2000000000)">1등 20억</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="result-hero">
+    <div class="rh-label">실수령액</div>
+    <div class="rh-value" id="r-net">-</div>
+  </div>
+  <div class="brow"><span class="k">당첨금</span><span class="v" id="r-gross"></span></div>
+  <div class="brow"><span class="k">3억 이하분 세금 (22%)</span><span class="v" id="r-t1" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">3억 초과분 세금 (33%)</span><span class="v" id="r-t2" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">총 세금</span><span class="v" id="r-tax" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">실효세율</span><span class="v" id="r-eff"></span></div>
+</div>
+
+<div class="note">
+  · 복권 당첨금은 기타소득으로 <b>분리과세(원천징수로 납세 종결)</b>되며 종합소득에 합산되지 않습니다.<br>
+  · 건별 당첨금 <b>200만원 이하는 비과세</b> — 4등(5만원)·5등(5천원)은 세금이 없습니다.<br>
+  · 200만원 초과분부터 과세: 3억원 이하분 22%(소득세 20%+지방소득세 2%), 3억원 초과분 33%(30%+3%).<br>
+  · 당첨금을 가족 등에게 나누어 줄 경우 별도로 증여세가 발생할 수 있습니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function setAmt(v){document.getElementById('amt').value=v.toLocaleString('ko-KR');calc();}
+function calc(){
+  const amt=parseInt((document.getElementById('amt').value||'0').replace(/[^0-9]/g,''),10)||0;
+  if(!amt){document.getElementById('r-net').textContent='-';return;}
+  let t1=0,t2=0;
+  if(amt>2000000){
+    // 200만원 초과 시 전체 당첨금 기준 과세 (기타소득 필요경비 없음, 원천징수)
+    const base=amt;
+    t1=Math.min(base,3e8)*0.22;
+    t2=base>3e8?(base-3e8)*0.33:0;
+  }
+  const tax=t1+t2,net=amt-tax;
+  document.getElementById('r-gross').textContent=won(amt);
+  document.getElementById('r-t1').textContent=amt<=2000000?'0원 (200만원 이하 비과세)':'-'+won(t1);
+  document.getElementById('r-t2').textContent=t2?'-'+won(t2):'-';
+  document.getElementById('r-tax').textContent=tax?'-'+won(tax):'0원';
+  document.getElementById('r-eff').textContent=(tax/amt*100).toFixed(1)+'%';
+  document.getElementById('r-net').textContent=won(net);
+}
+calc();
+</script>
+</body>
+</html>
