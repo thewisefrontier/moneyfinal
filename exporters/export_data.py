@@ -7,7 +7,7 @@ import logging
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_select, today_kst
+from utils.common import supabase_select, supabase_select_all, today_kst
 
 logger = logging.getLogger(__name__)
 
@@ -25,10 +25,9 @@ def save_json(filename: str, data):
 
 def export_rates():
     """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)"""
-    rates = supabase_select('rates', {
+    rates = supabase_select_all('rates', {
         'select': '*',
-        'order': 'max_rate.desc',
-        'limit': '2000'
+        'order': 'max_rate.desc'
     })
 
     by_category = {}
