@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>만 나이 계산기 | 머니파이널</title>
+<meta name="description" content="생년월일로 만 나이, 연 나이, 세는 나이를 한 번에 계산합니다. 다음 생일까지 남은 날도 확인하세요.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none;color-scheme:dark}
+:root[data-theme="light"] .field input{color-scheme:light}
+.field input:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:20px 0 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:36px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>만 나이 계산기</h1>
+<div class="sub">만 나이 · 연 나이 · 세는 나이를 한 번에</div>
+
+<div class="card">
+  <div class="grid2">
+    <div class="field"><label>생년월일</label><input type="date" id="birth" value="1990-01-01" onchange="calc()"></div>
+    <div class="field"><label>기준일</label><input type="date" id="base" onchange="calc()"></div>
+  </div>
+</div>
+
+<div class="card" id="result">
+  <div class="result-hero">
+    <div class="rh-label">만 나이</div>
+    <div class="rh-value" id="r-age">-</div>
+  </div>
+  <div class="brow"><span class="k">연 나이 (기준연도 − 출생연도)</span><span class="v" id="r-year"></span></div>
+  <div class="brow"><span class="k">세는 나이 (한국식)</span><span class="v" id="r-korean"></span></div>
+  <div class="brow"><span class="k">다음 생일</span><span class="v" id="r-bday"></span></div>
+  <div class="brow"><span class="k">살아온 날</span><span class="v" id="r-days"></span></div>
+</div>
+
+<div class="note">
+  · 2023년 6월부터 법적·행정적 나이는 <b>만 나이</b>로 통일되었습니다.<br>
+  · 연 나이는 병역법·청소년보호법 등 일부 법령에서, 세는 나이는 일상 관습에서 사용됩니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function calc(){
+  const b=document.getElementById('birth').valueAsDate;
+  const t=document.getElementById('base').valueAsDate;
+  if(!b||!t||b>t){document.getElementById('r-age').textContent='-';return;}
+  let age=t.getFullYear()-b.getFullYear();
+  const beforeBday=(t.getMonth()<b.getMonth())||(t.getMonth()===b.getMonth()&&t.getDate()<b.getDate());
+  if(beforeBday)age--;
+  document.getElementById('r-age').textContent=age+'세';
+  document.getElementById('r-year').textContent=(t.getFullYear()-b.getFullYear())+'세';
+  document.getElementById('r-korean').textContent=(t.getFullYear()-b.getFullYear()+1)+'세';
+  let next=new Date(t.getFullYear(),b.getMonth(),b.getDate());
+  if(next<=t)next=new Date(t.getFullYear()+1,b.getMonth(),b.getDate());
+  const dday=Math.ceil((next-t)/86400000);
+  document.getElementById('r-bday').textContent=`${next.getFullYear()}.${String(next.getMonth()+1).padStart(2,'0')}.${String(next.getDate()).padStart(2,'0')} (D-${dday})`;
+  document.getElementById('r-days').textContent=Math.floor((t-b)/86400000).toLocaleString('ko-KR')+'일';
+}
+(function(){
+  const today=new Date();
+  document.getElementById('base').value=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+  calc();
+})();
+</script>
+</body>
+</html>
