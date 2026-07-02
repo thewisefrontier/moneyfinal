@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>부동산 복비·취득세 계산기 | 머니파이널</title>
+<meta name="description" content="주택 매매·전세·월세 중개보수(복비)와 취득세를 계산합니다. 다주택 중과세율 반영.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.card-t{font-size:14px;font-weight:700;margin-bottom:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.res{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;margin-top:4px}
+.res-main{font-size:22px;font-weight:700;color:var(--green)}
+.res-sub{font-size:12px;color:var(--text2);margin-top:6px;line-height:1.8}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>부동산 복비·취득세 계산기</h1>
+<div class="sub">주택 중개보수 상한액과 취득세를 한 번에</div>
+
+<div class="card">
+  <div class="card-t">🏠 중개보수 (복비)</div>
+  <div class="grid2">
+    <div class="field"><label>거래 유형</label><select id="f-type" onchange="calcFee()"><option value="sale">매매·교환</option><option value="jeonse">전세</option><option value="wolse">월세</option></select></div>
+    <div class="field" id="f-amt-w"><label id="f-amt-label">매매가 (원)</label><input type="text" id="f-amt" inputmode="numeric" value="500,000,000" oninput="fmtInput(this);calcFee()"></div>
+  </div>
+  <div class="grid2" id="wolse-w" style="display:none">
+    <div class="field"><label>보증금 (원)</label><input type="text" id="f-dep" inputmode="numeric" value="20,000,000" oninput="fmtInput(this);calcFee()"></div>
+    <div class="field"><label>월세 (원)</label><input type="text" id="f-rent" inputmode="numeric" value="600,000" oninput="fmtInput(this);calcFee()"></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="fee-main">-</div>
+    <div class="res-sub" id="fee-sub"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-t">📋 취득세 (주택 유상취득)</div>
+  <div class="grid2">
+    <div class="field"><label>취득가액 (원)</label><input type="text" id="t-amt" inputmode="numeric" value="500,000,000" oninput="fmtInput(this);calcTax()"></div>
+    <div class="field"><label>전용면적</label><select id="t-size" onchange="calcTax()"><option value="s">85㎡ 이하</option><option value="l">85㎡ 초과</option></select></div>
+  </div>
+  <div class="grid2">
+    <div class="field"><label>취득 후 주택 수</label><select id="t-cnt" onchange="calcTax()"><option value="1">1주택</option><option value="2">2주택</option><option value="3">3주택</option><option value="4">4주택 이상·법인</option></select></div>
+    <div class="field"><label>조정대상지역 여부</label><select id="t-adj" onchange="calcTax()"><option value="n">비조정지역</option><option value="y">조정대상지역</option></select></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="tax-main">-</div>
+    <div class="res-sub" id="tax-sub"></div>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 참고용 계산입니다. 실제 세액·보수는 계약 조건과 지자체 조례, 감면 요건에 따라 달라질 수 있습니다.<br>
+  · 중개보수는 법정 <b>상한액</b>이며, 실제 금액은 상한 내에서 중개사와 협의해 결정합니다. 요율은 시·도 조례로 정해 지역별로 다를 수 있습니다(본 계산은 시행규칙 별표1 기준). 부가가치세 별도.<br>
+  · 월세 거래금액 = 보증금 + 월세×100 (5천만원 미만이면 월세×70으로 재계산)<br>
+  · 취득세: 1주택 1~3%(6억 이하 1%, 6~9억 사선 적용, 9억 초과 3%), 조정지역 2주택 8%, 3주택 조정 12%·비조정 8%, 4주택 이상·법인 12%. 일시적 2주택은 1주택 세율 적용.<br>
+  · 지방교육세·농어촌특별세(85㎡ 초과) 포함 합계를 표시하며, 생애최초 감면 등 각종 감면은 미반영입니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+
+// 중개보수 상한요율 (공인중개사법 시행규칙 별표1)
+const SALE=[[5e7,.006,25e4],[2e8,.005,8e5],[9e8,.004,null],[12e8,.005,null],[15e8,.006,null],[Infinity,.007,null]];
+const RENT=[[5e7,.005,2e5],[1e8,.004,3e5],[6e8,.003,null],[12e8,.004,null],[15e8,.005,null],[Infinity,.006,null]];
+function feeCalc(amount,table){for(const[lim,rate,cap]of table){if(amount<lim||lim===Infinity){let f=amount*rate;if(cap!==null)f=Math.min(f,cap);return{fee:f,rate:rate};}}}
+function calcFee(){
+  const type=document.getElementById('f-type').value;
+  document.getElementById('wolse-w').style.display=type==='wolse'?'grid':'none';
+  document.getElementById('f-amt-w').style.display=type==='wolse'?'none':'block';
+  document.getElementById('f-amt-label').textContent=type==='sale'?'매매가 (원)':'전세보증금 (원)';
+  let amount,extra='';
+  if(type==='wolse'){
+    const dep=num('f-dep'),rent=num('f-rent');
+    amount=dep+rent*100;
+    if(amount<5e7){amount=dep+rent*70;extra='환산보증금 5천만원 미만 → 보증금+월세×70 재계산<br>';}
+    extra+='거래금액(환산): '+won(amount)+'<br>';
+  }else{amount=num('f-amt');}
+  if(!amount){document.getElementById('fee-main').textContent='-';return;}
+  const r=feeCalc(amount,type==='sale'?SALE:RENT);
+  document.getElementById('fee-main').textContent='최대 '+won(r.fee);
+  document.getElementById('fee-sub').innerHTML=extra+'적용 상한요율 '+(r.rate*100).toFixed(1)+'% · 부가세(10%) 포함 시 '+won(r.fee*1.1);
+}
+
+// 취득세
+function calcTax(){
+  const amt=num('t-amt');
+  const large=document.getElementById('t-size').value==='l';
+  const cnt=parseInt(document.getElementById('t-cnt').value,10);
+  const adj=document.getElementById('t-adj').value==='y';
+  if(!amt){document.getElementById('tax-main').textContent='-';return;}
+  let rate,label,heavy=false;
+  const basic=()=>{if(amt<=6e8)return .01;if(amt>9e8)return .03;return Math.round(((amt/1e8)*(2/3)-3)*100)/10000;};
+  if(cnt===1||(cnt===2&&!adj)){rate=basic();label=(cnt===2?'비조정 2주택 → 기본세율 ':'1주택 기본세율 ')+(rate*100).toFixed(2)+'%';}
+  else if(cnt===2&&adj){rate=.08;heavy=true;label='조정지역 2주택 중과 8%';}
+  else if(cnt===3){rate=adj?.12:.08;heavy=true;label=(adj?'조정지역 3주택 중과 12%':'비조정 3주택 중과 8%');}
+  else{rate=.12;heavy=true;label='4주택 이상·법인 중과 12%';}
+  const acq=amt*rate;
+  // 지방교육세: 일반=취득세율×1/2×20%, 중과=0.4%
+  const edu=heavy?amt*.004:amt*(rate/2)*.2;
+  // 농특세(85㎡초과): 일반 0.2%, 8%중과 0.6%, 12%중과 1.0%
+  let farm=0;
+  if(large)farm=amt*(heavy?(rate===.08?.006:.01):.002);
+  const total=acq+edu+farm;
+  document.getElementById('tax-main').textContent=won(total);
+  document.getElementById('tax-sub').innerHTML=label+'<br>취득세 '+won(acq)+' + 지방교육세 '+won(edu)+(large?' + 농어촌특별세 '+won(farm):' (85㎡ 이하 농특세 비과세)')+'<br>실효세율 '+((total/amt)*100).toFixed(2)+'%';
+}
+calcFee();calcTax();
+</script>
+</body>
+</html>
