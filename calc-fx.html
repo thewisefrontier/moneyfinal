@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>환율 계산기 | 머니파이널</title>
+<meta name="description" content="원달러 환율 자동 반영 환율 계산기. 달러(USD)·엔화(JPY)·유로(EUR)·위안(CNY)을 원화로 즉시 환산하고 환율을 직접 수정할 수 있습니다.">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+nav{display:flex;gap:2px}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.swap{text-align:center;font-size:18px;color:var(--text2);margin:-6px 0 10px}
+.rate-info{font-size:12px;color:var(--text2);margin-top:6px}
+.rate-info .src{color:var(--accent)}
+.result-hero{text-align:center;padding:16px 0 4px}
+.rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a></nav>
+  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<main>
+<h1>환율 계산기</h1>
+<div class="sub">달러는 최신 환율 자동 반영 · 환율 직접 수정 가능</div>
+
+<div class="card">
+  <div class="field">
+    <label>통화</label>
+    <select id="cur" onchange="onCurChange()">
+      <option value="USD">🇺🇸 미국 달러 (USD)</option>
+      <option value="JPY">🇯🇵 일본 엔 (JPY, 100엔 기준)</option>
+      <option value="EUR">🇪🇺 유로 (EUR)</option>
+      <option value="CNY">🇨🇳 중국 위안 (CNY)</option>
+      <option value="ETC">기타 (직접 입력)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label id="rate-label">환율 (1달러당 원)</label>
+    <input type="text" id="rate" inputmode="decimal" placeholder="로딩 중..." oninput="convert('fx')">
+    <div class="rate-info" id="rate-info"></div>
+  </div>
+  <div class="field">
+    <label id="fx-label">외화 금액 (USD)</label>
+    <input type="text" id="fx" inputmode="decimal" value="100" oninput="convert('fx')">
+  </div>
+  <div class="swap">⇅</div>
+  <div class="field">
+    <label>원화 금액 (KRW)</label>
+    <input type="text" id="krw" inputmode="numeric" oninput="convert('krw')">
+  </div>
+  <div class="result-hero"><div class="rh-value" id="hero">-</div></div>
+</div>
+
+<div class="note">
+  ⚠️ 미국 달러 환율은 한국은행 ECOS 매매기준율(전일)을 자동 반영하며, 실제 은행 거래 환율(현찰 살 때/팔 때, 송금)과는 스프레드만큼 차이가 있습니다.<br>
+  · 엔화·유로·위안 등 기타 통화는 자동 환율 데이터를 제공하지 않으므로 환율을 직접 입력해주세요.<br>
+  · 엔화(JPY)는 관례에 따라 100엔당 원화 기준으로 계산합니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function pnum(id){return parseFloat((document.getElementById(id).value||'').replace(/,/g,''))||0;}
+function fmt(v,d){return v.toLocaleString('ko-KR',{minimumFractionDigits:0,maximumFractionDigits:d});}
+
+let usdRate=null,usdDate='';
+const CUR={USD:{label:'미국 달러',unit:1,rateLabel:'환율 (1달러당 원)'},JPY:{label:'일본 엔',unit:100,rateLabel:'환율 (100엔당 원)'},EUR:{label:'유로',unit:1,rateLabel:'환율 (1유로당 원)'},CNY:{label:'중국 위안',unit:1,rateLabel:'환율 (1위안당 원)'},ETC:{label:'외화',unit:1,rateLabel:'환율 (외화 1단위당 원)'}};
+
+function onCurChange(){
+  const c=document.getElementById('cur').value;
+  document.getElementById('rate-label').textContent=CUR[c].rateLabel;
+  document.getElementById('fx-label').textContent='외화 금액 ('+(c==='ETC'?'직접 입력 통화':c)+')';
+  const rateEl=document.getElementById('rate');
+  const info=document.getElementById('rate-info');
+  if(c==='USD'&&usdRate){rateEl.value=fmt(usdRate,2);info.innerHTML='<span class="src">자동 반영</span> · '+(usdDate?usdDate+' 기준':'최신 데이터');}
+  else if(c==='USD'){rateEl.value='';rateEl.placeholder='로딩 중...';info.textContent='';}
+  else{rateEl.value='';rateEl.placeholder='환율을 직접 입력해주세요';info.textContent='자동 환율 미제공 통화입니다. 직접 입력해주세요.';}
+  convert('fx');
+}
+
+function convert(src){
+  const c=document.getElementById('cur').value;
+  const unit=CUR[c].unit;
+  const rate=pnum('rate');
+  const hero=document.getElementById('hero');
+  if(!rate){hero.textContent='-';return;}
+  if(src==='fx'){
+    const fx=pnum('fx');
+    const krw=fx*rate/unit;
+    document.getElementById('krw').value=fmt(Math.round(krw),0);
+    hero.textContent=fmt(fx,2)+' '+(c==='ETC'?'':c)+' = '+fmt(Math.round(krw),0)+'원';
+  }else{
+    const krw=pnum('krw');
+    const fx=krw*unit/rate;
+    document.getElementById('fx').value=fmt(fx,2);
+    hero.textContent=fmt(Math.round(krw),0)+'원 = '+fmt(fx,2)+' '+(c==='ETC'?'':c);
+  }
+}
+
+async function loadRate(){
+  try{
+    const r=await fetch('data/market.json');
+    const d=await r.json();
+    const usd=(d.indicators||[]).find(i=>i.indicator_code==='USD_KRW');
+    if(usd&&usd.value){
+      usdRate=parseFloat(usd.value);
+      usdDate=usd.base_date||'';
+      if(document.getElementById('cur').value==='USD'){
+        document.getElementById('rate').value=fmt(usdRate,2);
+        document.getElementById('rate-info').innerHTML='<span class="src">자동 반영</span> · '+(usdDate?usdDate+' 기준':'최신 데이터');
+        convert('fx');
+      }
+    }else{document.getElementById('rate').placeholder='환율 로드 실패 — 직접 입력해주세요';}
+  }catch(e){document.getElementById('rate').placeholder='환율 로드 실패 — 직접 입력해주세요';}
+}
+loadRate();
+</script>
+</body>
+</html>
