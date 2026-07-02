@@ -50,7 +50,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="sub">2026년 4대보험 요율 · 소득세 기본세율 반영 (근사치)</div>
 
 <div class="card">
-  <div class="field"><label>연봉 (세전, 원)</label><input type="text" id="salary" inputmode="numeric" placeholder="예: 40,000,000" oninput="fmtInput(this)"></div>
+  <div class="field"><label>연봉 (세전, 원)</label><input type="text" id="salary" inputmode="numeric" value="40,000,000" oninput="fmtInput(this)"></div>
   <div class="grid2">
     <div class="field"><label>월 비과세액 (식대 등, 원)</label><input type="text" id="taxfree" inputmode="numeric" value="200,000" oninput="fmtInput(this)"></div>
     <div class="field"><label>부양가족 수 (본인 포함)</label><select id="deps"><option value="1">1명 (본인)</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option><option value="6">6명</option></select></div>
@@ -156,6 +156,7 @@ function calc(){
   document.getElementById('result').style.display='block';
 }
 document.getElementById('salary').addEventListener('keydown',e=>{if(e.key==='Enter')calc();});
+calc();
 </script>
 </body>
 </html>
