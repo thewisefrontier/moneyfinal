@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-03",
+  "updated_at": "2026-07-04",
   "indicators": [
     {
-      "id": 437,
+      "id": 552,
       "indicator_code": "KOSPI200",
       "indicator_name": "코스피 200",
       "category": "주식지수",
@@ -11,13 +11,13 @@
       "unit": "pt",
       "signal": "green",
       "source": "금융위원회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "코스피 200 1454.15pt (+6.17%)",
-      "fetched_at": "2026-07-02T22:59:19.236447+00:00",
-      "created_at": "2026-07-02T22:59:19.358013+00:00"
+      "fetched_at": "2026-07-03T22:57:15.203676+00:00",
+      "created_at": "2026-07-03T22:57:15.642226+00:00"
     },
     {
-      "id": 436,
+      "id": 551,
       "indicator_code": "KOSDAQ",
       "indicator_name": "코스닥 지수",
       "category": "주식지수",
@@ -26,13 +26,13 @@
       "unit": "pt",
       "signal": "yellow",
       "source": "금융위원회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "코스닥 887.81pt (-2.36%)",
-      "fetched_at": "2026-07-02T22:59:18.119494+00:00",
-      "created_at": "2026-07-02T22:59:19.358013+00:00"
+      "fetched_at": "2026-07-03T22:57:14.683724+00:00",
+      "created_at": "2026-07-03T22:57:15.642226+00:00"
     },
     {
-      "id": 435,
+      "id": 550,
       "indicator_code": "KOSPI",
       "indicator_name": "코스피 지수",
       "category": "주식지수",
@@ -41,13 +41,13 @@
       "unit": "pt",
       "signal": "green",
       "source": "금융위원회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "코스피 8930.30pt (+5.42%)",
-      "fetched_at": "2026-07-02T22:59:17.3147+00:00",
-      "created_at": "2026-07-02T22:59:19.358013+00:00"
+      "fetched_at": "2026-07-03T22:57:14.06087+00:00",
+      "created_at": "2026-07-03T22:57:15.642226+00:00"
     },
     {
-      "id": 434,
+      "id": 549,
       "indicator_code": "KOFIA_FRNDRV_JOBY AVIATION INC CO",
       "indicator_name": "해외파생 JOBY AVIATION INC COMMON STOCK (미국)",
       "category": "해외파생거래",
@@ -56,13 +56,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075985+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670217+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 433,
+      "id": 548,
       "indicator_code": "KOFIA_FRNDRV_DATADOG INC CL A COM",
       "indicator_name": "해외파생 DATADOG INC CL A COM (미국)",
       "category": "해외파생거래",
@@ -71,13 +71,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075975+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670207+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 432,
+      "id": 547,
       "indicator_code": "KOFIA_FRNDRV_ERShares Private-Pub",
       "indicator_name": "해외파생 ERShares Private-Public Crossover ETF (미국)",
       "category": "해외파생거래",
@@ -86,13 +86,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075965+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670197+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 431,
+      "id": 546,
       "indicator_code": "KOFIA_FRNDRV_Aurora Innovation In",
       "indicator_name": "해외파생 Aurora Innovation Inc Clas (미국)",
       "category": "해외파생거래",
@@ -101,13 +101,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075955+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670188+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 430,
+      "id": 545,
       "indicator_code": "KOFIA_FRNDRV_PLUG POWER INC",
       "indicator_name": "해외파생 PLUG POWER INC (미국)",
       "category": "해외파생거래",
@@ -116,13 +116,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075944+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670178+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 429,
+      "id": 544,
       "indicator_code": "KOFIA_FRNDRV_JD.COM INC SPON ADR ",
       "indicator_name": "해외파생 JD.COM INC SPON ADR CL A (미국)",
       "category": "해외파생거래",
@@ -131,13 +131,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075934+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670168+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 428,
+      "id": 543,
       "indicator_code": "KOFIA_FRNDRV_Kosmos Energy Ltd. C",
       "indicator_name": "해외파생 Kosmos Energy Ltd. Common Shares (DE) (미국)",
       "category": "해외파생거래",
@@ -146,13 +146,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075924+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670158+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 427,
+      "id": 542,
       "indicator_code": "KOFIA_FRNDRV_Wheat",
       "indicator_name": "해외파생 Wheat (미국)",
       "category": "해외파생거래",
@@ -161,13 +161,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075911+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670148+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 426,
+      "id": 541,
       "indicator_code": "KOFIA_FRNDRV_Primary Aluminum",
       "indicator_name": "해외파생 Primary Aluminum (영국)",
       "category": "해외파생거래",
@@ -176,13 +176,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075897+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670138+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 425,
+      "id": 540,
       "indicator_code": "KOFIA_FRNDRV_Cocoa",
       "indicator_name": "해외파생 Cocoa (미국)",
       "category": "해외파생거래",
@@ -191,13 +191,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075881+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670128+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 424,
+      "id": 539,
       "indicator_code": "KOFIA_FRNDRV_GLOBAL X FDS GLOBAL ",
       "indicator_name": "해외파생 GLOBAL X FDS GLOBAL X URANIUM (미국)",
       "category": "해외파생거래",
@@ -206,13 +206,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075816+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670117+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 423,
+      "id": 538,
       "indicator_code": "KOFIA_FRNDRV_GE VERNOVA INC COM",
       "indicator_name": "해외파생 GE VERNOVA INC COM (미국)",
       "category": "해외파생거래",
@@ -221,13 +221,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075805+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670106+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 422,
+      "id": 537,
       "indicator_code": "KOFIA_FRNDRV_Archer Aviation Inc ",
       "indicator_name": "해외파생 Archer Aviation Inc Class A C (미국)",
       "category": "해외파생거래",
@@ -236,13 +236,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075793+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670095+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 421,
+      "id": 536,
       "indicator_code": "KOFIA_FRNDRV_Arbe Robotics Ltd  O",
       "indicator_name": "해외파생 Arbe Robotics Ltd  Ordinary (미국)",
       "category": "해외파생거래",
@@ -251,13 +251,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.07578+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670082+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 420,
+      "id": 535,
       "indicator_code": "KOFIA_FRNDRV_E-Micro AUD/USD",
       "indicator_name": "해외파생 E-Micro AUD/USD (미국)",
       "category": "해외파생거래",
@@ -266,13 +266,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075769+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670072+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 419,
+      "id": 534,
       "indicator_code": "KOFIA_FRNDRV_Shake Shack Inc Clas",
       "indicator_name": "해외파생 Shake Shack Inc Class A Comm (미국)",
       "category": "해외파생거래",
@@ -281,13 +281,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075758+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670061+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 418,
+      "id": 533,
       "indicator_code": "KOFIA_FRNDRV_Nebius Group NV Clas",
       "indicator_name": "해외파생 Nebius Group NV Class A Or (미국)",
       "category": "해외파생거래",
@@ -296,13 +296,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075748+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.67005+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 417,
+      "id": 532,
       "indicator_code": "KOFIA_FRNDRV_NASDAQ 100 E-mini",
       "indicator_name": "해외파생 NASDAQ 100 E-mini (미국)",
       "category": "해외파생거래",
@@ -311,13 +311,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.075736+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670039+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 416,
+      "id": 531,
       "indicator_code": "KOFIA_FRNDRV_Otis Worldwide Corpo",
       "indicator_name": "해외파생 Otis Worldwide Corporation Com (미국)",
       "category": "해외파생거래",
@@ -326,13 +326,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.07572+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.670026+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 415,
+      "id": 530,
       "indicator_code": "KOFIA_FRNDRV_B2Gold Corp Common s",
       "indicator_name": "해외파생 B2Gold Corp Common shares (미국)",
       "category": "해외파생거래",
@@ -341,13 +341,13 @@
       "unit": "USD",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:16.07569+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:12.669998+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 414,
+      "id": 529,
       "indicator_code": "KOFIA_ELS_원금보장형_공모",
       "indicator_name": "ELS/ELB 원금보장형 (공모) 발행실적",
       "category": "파생결합증권",
@@ -356,13 +356,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 366건",
-      "fetched_at": "2026-07-02T22:59:15.466592+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:10.487858+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 413,
+      "id": 528,
       "indicator_code": "KOFIA_ELS_원금보장형_사모",
       "indicator_name": "ELS/ELB 원금보장형 (사모) 발행실적",
       "category": "파생결합증권",
@@ -371,13 +371,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 21건",
-      "fetched_at": "2026-07-02T22:59:15.466581+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:10.487847+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 412,
+      "id": 527,
       "indicator_code": "KOFIA_ELS_원금비보장형_공모",
       "indicator_name": "ELS/ELB 원금비보장형 (공모) 발행실적",
       "category": "파생결합증권",
@@ -386,13 +386,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 541건",
-      "fetched_at": "2026-07-02T22:59:15.46657+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:10.487835+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 411,
+      "id": 526,
       "indicator_code": "KOFIA_ELS_원금비보장형_사모",
       "indicator_name": "ELS/ELB 원금비보장형 (사모) 발행실적",
       "category": "파생결합증권",
@@ -401,13 +401,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 201건",
-      "fetched_at": "2026-07-02T22:59:15.466558+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:10.487821+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 410,
+      "id": 525,
       "indicator_code": "KOFIA_ELS_총계_합계",
       "indicator_name": "ELS/ELB 총계 (합계) 발행실적",
       "category": "파생결합증권",
@@ -416,13 +416,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 1129건",
-      "fetched_at": "2026-07-02T22:59:15.466534+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:10.487794+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 409,
+      "id": 524,
       "indicator_code": "KOFIA_DLS_원금보장형_공모",
       "indicator_name": "DLS/DLB 원금보장형 (공모) 발행실적",
       "category": "파생결합증권",
@@ -431,13 +431,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 63건",
-      "fetched_at": "2026-07-02T22:59:14.641199+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:09.363875+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 408,
+      "id": 523,
       "indicator_code": "KOFIA_DLS_원금보장형_사모",
       "indicator_name": "DLS/DLB 원금보장형 (사모) 발행실적",
       "category": "파생결합증권",
@@ -446,13 +446,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 77건",
-      "fetched_at": "2026-07-02T22:59:14.641188+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:09.363864+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 407,
+      "id": 522,
       "indicator_code": "KOFIA_DLS_원금비보장형_공모",
       "indicator_name": "DLS/DLB 원금비보장형 (공모) 발행실적",
       "category": "파생결합증권",
@@ -461,13 +461,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 2건",
-      "fetched_at": "2026-07-02T22:59:14.641176+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:09.363851+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 406,
+      "id": 521,
       "indicator_code": "KOFIA_DLS_원금비보장형_사모",
       "indicator_name": "DLS/DLB 원금비보장형 (사모) 발행실적",
       "category": "파생결합증권",
@@ -476,13 +476,193 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "건수 48건",
-      "fetched_at": "2026-07-02T22:59:14.641151+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:09.363823+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 405,
+      "id": 520,
+      "indicator_code": "KOFIA_INVESTOR_DEPOSIT",
+      "indicator_name": "투자자예탁금",
+      "category": "금융투자",
+      "value": 132469655161392.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": null,
+      "fetched_at": "2026-07-03T22:57:08.487413+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 519,
+      "indicator_code": "KOFIA_CREDIT_BALANCE",
+      "indicator_name": "신용공여잔고 (신용거래융자 전체)",
+      "category": "금융투자",
+      "value": 37807006189272.0,
+      "prev_value": null,
+      "unit": "백만원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": null,
+      "fetched_at": "2026-07-03T22:57:07.112635+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 518,
+      "indicator_code": "KOFIA_CMA_종금형_기관",
+      "indicator_name": "CMA 종금형 (기관)",
+      "category": "CMA",
+      "value": 8473587255.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 197건, 증권사 1개",
+      "fetched_at": "2026-07-03T22:57:06.194748+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 517,
+      "indicator_code": "KOFIA_CMA_종금형_개인",
+      "indicator_name": "CMA 종금형 (개인)",
+      "category": "CMA",
+      "value": 81132662499.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 42827건, 증권사 1개",
+      "fetched_at": "2026-07-03T22:57:06.194737+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 516,
+      "indicator_code": "KOFIA_CMA_발행어음형_기관",
+      "indicator_name": "CMA 발행어음형 (기관)",
+      "category": "CMA",
+      "value": 873840492058.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 9252건, 증권사 5개",
+      "fetched_at": "2026-07-03T22:57:06.194725+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 515,
+      "indicator_code": "KOFIA_CMA_발행어음형_개인",
+      "indicator_name": "CMA 발행어음형 (개인)",
+      "category": "CMA",
+      "value": 23994937669524.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 6835884건, 증권사 5개",
+      "fetched_at": "2026-07-03T22:57:06.194711+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 514,
+      "indicator_code": "KOFIA_CMA_기타형_기관",
+      "indicator_name": "CMA 기타형 (기관)",
+      "category": "CMA",
+      "value": 8002561616313.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 57046건, 증권사 14개",
+      "fetched_at": "2026-07-03T22:57:06.194701+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 513,
+      "indicator_code": "KOFIA_CMA_기타형_개인",
+      "indicator_name": "CMA 기타형 (개인)",
+      "category": "CMA",
+      "value": 25908127782342.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 3047187건, 증권사 14개",
+      "fetched_at": "2026-07-03T22:57:06.19469+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 512,
+      "indicator_code": "KOFIA_CMA_RP형_기관",
+      "indicator_name": "CMA RP형 (기관)",
+      "category": "CMA",
+      "value": 3520811787069.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 77987건, 증권사 23개",
+      "fetched_at": "2026-07-03T22:57:06.194678+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 511,
+      "indicator_code": "KOFIA_CMA_RP형_개인",
+      "indicator_name": "CMA RP형 (개인)",
+      "category": "CMA",
+      "value": 43128995800876.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 26750074건, 증권사 23개",
+      "fetched_at": "2026-07-03T22:57:06.194666+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 510,
+      "indicator_code": "KOFIA_CMA_MMF형_기관",
+      "indicator_name": "CMA MMF형 (기관)",
+      "category": "CMA",
+      "value": 71416564144.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 534건, 증권사 12개",
+      "fetched_at": "2026-07-03T22:57:06.194651+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 509,
+      "indicator_code": "KOFIA_CMA_MMF형_개인",
+      "indicator_name": "CMA MMF형 (개인)",
+      "category": "CMA",
+      "value": 4262056827281.0,
+      "prev_value": null,
+      "unit": "원",
+      "signal": "green",
+      "source": "금융투자협회 (공공데이터포털)",
+      "reference_date": "2026-07-04",
+      "summary_text": "계좌수 2871212건, 증권사 12개",
+      "fetched_at": "2026-07-03T22:57:06.194618+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
+    },
+    {
+      "id": 508,
       "indicator_code": "KOFIA_FUND_-_공모",
       "indicator_name": "펀드 - (공모)",
       "category": "금융투자",
@@ -491,13 +671,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935808+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668571+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 404,
+      "id": 507,
       "indicator_code": "KOFIA_FUND_혼합채권형_공모",
       "indicator_name": "펀드 혼합채권형 (공모)",
       "category": "금융투자",
@@ -506,13 +686,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935798+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668561+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 403,
+      "id": 506,
       "indicator_code": "KOFIA_FUND_혼합주식형_사모",
       "indicator_name": "펀드 혼합주식형 (사모)",
       "category": "금융투자",
@@ -521,13 +701,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935788+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668551+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 402,
+      "id": 505,
       "indicator_code": "KOFIA_FUND_혼합주식형_공모",
       "indicator_name": "펀드 혼합주식형 (공모)",
       "category": "금융투자",
@@ -536,13 +716,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935778+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668541+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 401,
+      "id": 504,
       "indicator_code": "KOFIA_FUND_혼합자산_사모",
       "indicator_name": "펀드 혼합자산 (사모)",
       "category": "금융투자",
@@ -551,13 +731,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935768+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668531+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 400,
+      "id": 503,
       "indicator_code": "KOFIA_FUND_혼합자산_공모",
       "indicator_name": "펀드 혼합자산 (공모)",
       "category": "금융투자",
@@ -566,13 +746,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935759+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668521+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 399,
+      "id": 502,
       "indicator_code": "KOFIA_FUND_합계_사모",
       "indicator_name": "펀드 합계 (사모)",
       "category": "금융투자",
@@ -581,13 +761,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935749+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668511+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 398,
+      "id": 501,
       "indicator_code": "KOFIA_FUND_합계_공모",
       "indicator_name": "펀드 합계 (공모)",
       "category": "금융투자",
@@ -596,13 +776,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935739+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.6685+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 397,
+      "id": 500,
       "indicator_code": "KOFIA_FUND_파생상품_사모",
       "indicator_name": "펀드 파생상품 (사모)",
       "category": "금융투자",
@@ -611,13 +791,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935729+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668469+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 396,
+      "id": 499,
       "indicator_code": "KOFIA_FUND_파생상품_공모",
       "indicator_name": "펀드 파생상품 (공모)",
       "category": "금융투자",
@@ -626,13 +806,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935719+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66846+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 395,
+      "id": 498,
       "indicator_code": "KOFIA_FUND_특별자산_사모",
       "indicator_name": "펀드 특별자산 (사모)",
       "category": "금융투자",
@@ -641,13 +821,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935709+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66845+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 394,
+      "id": 497,
       "indicator_code": "KOFIA_FUND_특별자산_공모",
       "indicator_name": "펀드 특별자산 (공모)",
       "category": "금융투자",
@@ -656,13 +836,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935699+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66844+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 393,
+      "id": 496,
       "indicator_code": "KOFIA_FUND_투자계약_사모",
       "indicator_name": "펀드 투자계약 (사모)",
       "category": "금융투자",
@@ -671,13 +851,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935689+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66843+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 392,
+      "id": 495,
       "indicator_code": "KOFIA_FUND_채권형_사모",
       "indicator_name": "펀드 채권형 (사모)",
       "category": "금융투자",
@@ -686,13 +866,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935679+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66842+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 391,
+      "id": 494,
       "indicator_code": "KOFIA_FUND_채권형_공모",
       "indicator_name": "펀드 채권형 (공모)",
       "category": "금융투자",
@@ -701,13 +881,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935669+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668409+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 390,
+      "id": 493,
       "indicator_code": "KOFIA_FUND_주식형_사모",
       "indicator_name": "펀드 주식형 (사모)",
       "category": "금융투자",
@@ -716,13 +896,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935659+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668399+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 389,
+      "id": 492,
       "indicator_code": "KOFIA_FUND_주식형_공모",
       "indicator_name": "펀드 주식형 (공모)",
       "category": "금융투자",
@@ -731,13 +911,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935648+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668388+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 388,
+      "id": 491,
       "indicator_code": "KOFIA_FUND_재간접_사모",
       "indicator_name": "펀드 재간접 (사모)",
       "category": "금융투자",
@@ -746,13 +926,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935636+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668377+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 387,
+      "id": 490,
       "indicator_code": "KOFIA_FUND_재간접_공모",
       "indicator_name": "펀드 재간접 (공모)",
       "category": "금융투자",
@@ -761,13 +941,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935624+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668364+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 386,
+      "id": 489,
       "indicator_code": "KOFIA_FUND_부동산_사모",
       "indicator_name": "펀드 부동산 (사모)",
       "category": "금융투자",
@@ -776,13 +956,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935613+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668353+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 385,
+      "id": 488,
       "indicator_code": "KOFIA_FUND_부동산_공모",
       "indicator_name": "펀드 부동산 (공모)",
       "category": "금융투자",
@@ -791,13 +971,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935602+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668342+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 384,
+      "id": 487,
       "indicator_code": "KOFIA_FUND_단기금융_사모",
       "indicator_name": "펀드 단기금융 (사모)",
       "category": "금융투자",
@@ -806,13 +986,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.93559+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66833+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 383,
+      "id": 486,
       "indicator_code": "KOFIA_FUND_단기금융_공모",
       "indicator_name": "펀드 단기금융 (공모)",
       "category": "금융투자",
@@ -821,13 +1001,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935579+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668318+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 382,
+      "id": 485,
       "indicator_code": "KOFIA_FUND_PEF_사모",
       "indicator_name": "펀드 PEF (사모)",
       "category": "금융투자",
@@ -836,13 +1016,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935565+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.668305+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 381,
+      "id": 484,
       "indicator_code": "KOFIA_FUND_혼합채권형_사모",
       "indicator_name": "펀드 혼합채권형 (사모)",
       "category": "금융투자",
@@ -851,13 +1031,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.935539+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:05.66828+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 380,
+      "id": 483,
       "indicator_code": "KOFIA_TRUST_증권_금전신탁 특정금전신탁",
       "indicator_name": "증권 금전신탁 특정금전신탁 수탁총액",
       "category": "금융투자",
@@ -866,13 +1046,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359963+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723803+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 379,
+      "id": 482,
       "indicator_code": "KOFIA_TRUST_증권_금전신탁 불특정금전신탁",
       "indicator_name": "증권 금전신탁 불특정금전신탁 수탁총액",
       "category": "금융투자",
@@ -881,13 +1061,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359951+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723787+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 378,
+      "id": 481,
       "indicator_code": "KOFIA_TRUST_증권_재산신탁 부동산신탁",
       "indicator_name": "증권 재산신탁 부동산신탁 수탁총액",
       "category": "금융투자",
@@ -896,13 +1076,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359931+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723767+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 377,
+      "id": 480,
       "indicator_code": "KOFIA_TRUST_증권_재산신탁 증권신탁",
       "indicator_name": "증권 재산신탁 증권신탁 수탁총액",
       "category": "금융투자",
@@ -911,13 +1091,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359921+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723756+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 376,
+      "id": 479,
       "indicator_code": "KOFIA_TRUST_증권_재산신탁 금전채권신탁",
       "indicator_name": "증권 재산신탁 금전채권신탁 수탁총액",
       "category": "금융투자",
@@ -926,13 +1106,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359911+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723746+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 375,
+      "id": 478,
       "indicator_code": "KOFIA_TRUST_증권_재산신탁 무체재산권",
       "indicator_name": "증권 재산신탁 무체재산권 수탁총액",
       "category": "금융투자",
@@ -941,13 +1121,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359901+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723735+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 374,
+      "id": 477,
       "indicator_code": "KOFIA_TRUST_증권_종합재산신탁",
       "indicator_name": "증권 종합재산신탁 수탁총액",
       "category": "금융투자",
@@ -956,13 +1136,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359891+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723725+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 373,
+      "id": 476,
       "indicator_code": "KOFIA_TRUST_증권_기타",
       "indicator_name": "증권 기타 수탁총액",
       "category": "금융투자",
@@ -971,13 +1151,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359879+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723713+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 372,
+      "id": 475,
       "indicator_code": "KOFIA_TRUST_합계_금전신탁 특정금전신탁",
       "indicator_name": "합계 금전신탁 특정금전신탁 수탁총액",
       "category": "금융투자",
@@ -986,13 +1166,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359566+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723377+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 371,
+      "id": 474,
       "indicator_code": "KOFIA_TRUST_합계_금전신탁 불특정금전신탁",
       "indicator_name": "합계 금전신탁 불특정금전신탁 수탁총액",
       "category": "금융투자",
@@ -1001,13 +1181,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359556+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723367+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 370,
+      "id": 473,
       "indicator_code": "KOFIA_TRUST_합계_재산신탁 부동산신탁",
       "indicator_name": "합계 재산신탁 부동산신탁 수탁총액",
       "category": "금융투자",
@@ -1016,13 +1196,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359497+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723306+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 369,
+      "id": 472,
       "indicator_code": "KOFIA_TRUST_합계_재산신탁 증권신탁",
       "indicator_name": "합계 재산신탁 증권신탁 수탁총액",
       "category": "금융투자",
@@ -1031,13 +1211,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359483+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723291+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 368,
+      "id": 471,
       "indicator_code": "KOFIA_TRUST_합계_재산신탁 금전채권신탁",
       "indicator_name": "합계 재산신탁 금전채권신탁 수탁총액",
       "category": "금융투자",
@@ -1046,13 +1226,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359472+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.72328+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 367,
+      "id": 470,
       "indicator_code": "KOFIA_TRUST_합계_재산신탁 동산신탁",
       "indicator_name": "합계 재산신탁 동산신탁 수탁총액",
       "category": "금융투자",
@@ -1061,13 +1241,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359459+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723268+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 366,
+      "id": 469,
       "indicator_code": "KOFIA_TRUST_합계_재산신탁 무체재산권",
       "indicator_name": "합계 재산신탁 무체재산권 수탁총액",
       "category": "금융투자",
@@ -1076,13 +1256,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359444+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723252+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 365,
+      "id": 468,
       "indicator_code": "KOFIA_TRUST_합계_종합재산신탁",
       "indicator_name": "합계 종합재산신탁 수탁총액",
       "category": "금융투자",
@@ -1091,13 +1271,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359431+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.723238+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 364,
+      "id": 467,
       "indicator_code": "KOFIA_TRUST_합계_기타",
       "indicator_name": "합계 기타 수탁총액",
       "category": "금융투자",
@@ -1106,13 +1286,13 @@
       "unit": "백만원",
       "signal": "green",
       "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:10.359403+00:00",
-      "created_at": "2026-07-02T22:59:16.528899+00:00"
+      "fetched_at": "2026-07-03T22:57:04.72321+00:00",
+      "created_at": "2026-07-03T22:57:12.831766+00:00"
     },
     {
-      "id": 363,
+      "id": 466,
       "indicator_code": "ISA_JOIN_신탁형 ISA_보험",
       "indicator_name": "ISA 가입현황 신탁형 ISA (보험)",
       "category": "ISA",
@@ -1121,13 +1301,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 192명, 회사수 1개",
-      "fetched_at": "2026-07-02T22:59:08.866672+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366511+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 362,
+      "id": 465,
       "indicator_code": "ISA_JOIN_신탁형 ISA_은행",
       "indicator_name": "ISA 가입현황 신탁형 ISA (은행)",
       "category": "ISA",
@@ -1136,13 +1316,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 889221명, 회사수 14개",
-      "fetched_at": "2026-07-02T22:59:08.866662+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366497+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 361,
+      "id": 464,
       "indicator_code": "ISA_JOIN_신탁형 ISA_증권",
       "indicator_name": "ISA 가입현황 신탁형 ISA (증권)",
       "category": "ISA",
@@ -1151,13 +1331,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 26527명, 회사수 15개",
-      "fetched_at": "2026-07-02T22:59:08.86665+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366464+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 360,
+      "id": 463,
       "indicator_code": "ISA_JOIN_신탁형 ISA_총합",
       "indicator_name": "ISA 가입현황 신탁형 ISA (총합)",
       "category": "ISA",
@@ -1166,13 +1346,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 915940명, 회사수 30개",
-      "fetched_at": "2026-07-02T22:59:08.866627+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366427+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 359,
+      "id": 462,
       "indicator_code": "ISA_JOIN_일임형 ISA_은행",
       "indicator_name": "ISA 가입현황 일임형 ISA (은행)",
       "category": "ISA",
@@ -1181,13 +1361,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 145675명, 회사수 10개",
-      "fetched_at": "2026-07-02T22:59:08.866611+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366411+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 358,
+      "id": 461,
       "indicator_code": "ISA_JOIN_일임형 ISA_증권",
       "indicator_name": "ISA 가입현황 일임형 ISA (증권)",
       "category": "ISA",
@@ -1196,13 +1376,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 4611명, 회사수 11개",
-      "fetched_at": "2026-07-02T22:59:08.8666+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366399+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 357,
+      "id": 460,
       "indicator_code": "ISA_JOIN_일임형 ISA_총합",
       "indicator_name": "ISA 가입현황 일임형 ISA (총합)",
       "category": "ISA",
@@ -1211,13 +1391,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 150286명, 회사수 21개",
-      "fetched_at": "2026-07-02T22:59:08.866587+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366385+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 356,
+      "id": 459,
       "indicator_code": "ISA_JOIN_투자중개형 ISA_증권",
       "indicator_name": "ISA 가입현황 투자중개형 ISA (증권)",
       "category": "ISA",
@@ -1226,13 +1406,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 8368528명, 회사수 26개",
-      "fetched_at": "2026-07-02T22:59:08.866572+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.36637+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 355,
+      "id": 458,
       "indicator_code": "ISA_JOIN_투자중개형 ISA_총합",
       "indicator_name": "ISA 가입현황 투자중개형 ISA (총합)",
       "category": "ISA",
@@ -1241,13 +1421,13 @@
       "unit": "원",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "가입자수 8368528명, 회사수 26개",
-      "fetched_at": "2026-07-02T22:59:08.866548+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:03.366345+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 354,
+      "id": 457,
       "indicator_code": "ISA_부산은행_고위험",
       "indicator_name": "부산은행 BNK부산 적극투자형 글로벌 (고위험)",
       "category": "ISA",
@@ -1256,13 +1436,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746727+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.486005+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 353,
+      "id": 456,
       "indicator_code": "ISA_삼성증권_중위험",
       "indicator_name": "삼성증권 삼성증권ISA 중위험 적립펀드형 (중위험)",
       "category": "ISA",
@@ -1271,13 +1451,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746716+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485994+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 352,
+      "id": 455,
       "indicator_code": "ISA_하나은행(구.외환은행)_초고위험",
       "indicator_name": "하나은행(구.외환은행) 하나 일임형ISA 최고위험 밸런스 (초고위험)",
       "category": "ISA",
@@ -1286,13 +1466,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746704+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485983+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 351,
+      "id": 454,
       "indicator_code": "ISA_국민은행_저위험",
       "indicator_name": "국민은행 KB국민 만능 ISA 안정수익추구 A형(적극배분형) (저위험)",
       "category": "ISA",
@@ -1301,13 +1481,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746693+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485971+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 350,
+      "id": 453,
       "indicator_code": "ISA_현대차증권_중위험",
       "indicator_name": "현대차증권 현대차증권 안정성장형 B3(신흥국 대안투자형) (중위험)",
       "category": "ISA",
@@ -1316,13 +1496,13 @@
       "unit": "%",
       "signal": "red",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746679+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485956+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 349,
+      "id": 452,
       "indicator_code": "ISA_하나은행(구.외환은행)_고위험",
       "indicator_name": "하나은행(구.외환은행) 하나 일임형ISA AI 고위험 (고위험)",
       "category": "ISA",
@@ -1331,13 +1511,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746667+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485944+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 348,
+      "id": 451,
       "indicator_code": "ISA_삼성증권_고위험",
       "indicator_name": "삼성증권 삼성증권ISA 고위험 펀드형 (고위험)",
       "category": "ISA",
@@ -1346,13 +1526,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746656+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485929+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 347,
+      "id": 450,
       "indicator_code": "ISA_우리은행_고위험",
       "indicator_name": "우리은행 우리 일임형 글로벌50 ISA (적극투자형) (고위험)",
       "category": "ISA",
@@ -1361,13 +1541,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746644+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485916+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 346,
+      "id": 449,
       "indicator_code": "ISA_광주은행_저위험",
       "indicator_name": "광주은행 쏠쏠한_ISA_저위험형(보수) (저위험)",
       "category": "ISA",
@@ -1376,13 +1556,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746632+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485903+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 345,
+      "id": 448,
       "indicator_code": "ISA_키움증권_초고위험",
       "indicator_name": "키움증권 키움배당형(초고위험) (초고위험)",
       "category": "ISA",
@@ -1391,13 +1571,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746616+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485886+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 344,
+      "id": 447,
       "indicator_code": "ISA_미래에셋증권_고위험",
       "indicator_name": "미래에셋증권 미래에셋증권 일임형ISA 글로벌자산배분 ETF 포커스 70 (고위험)",
       "category": "ISA",
@@ -1406,13 +1586,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.7466+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.48587+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 343,
+      "id": 446,
       "indicator_code": "ISA_현대차증권_초고위험",
       "indicator_name": "현대차증권 현대차증권 고수익추구형 A1(선진국형) (초고위험)",
       "category": "ISA",
@@ -1421,13 +1601,13 @@
       "unit": "%",
       "signal": "red",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746586+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485855+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 342,
+      "id": 445,
       "indicator_code": "ISA_하나은행(구.외환은행)_저위험",
       "indicator_name": "하나은행(구.외환은행) KEB하나 1Q 일임형ISA 저위험(밸런스) (저위험)",
       "category": "ISA",
@@ -1436,13 +1616,13 @@
       "unit": "%",
       "signal": "green",
       "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": "6개월 수익률",
-      "fetched_at": "2026-07-02T22:59:07.746557+00:00",
-      "created_at": "2026-07-02T22:59:09.321397+00:00"
+      "fetched_at": "2026-07-03T22:57:02.485823+00:00",
+      "created_at": "2026-07-03T22:57:03.824536+00:00"
     },
     {
-      "id": 341,
+      "id": 444,
       "indicator_code": "WTI",
       "indicator_name": "WTI 원유가격",
       "category": "원자재",
@@ -1451,13 +1631,13 @@
       "unit": "USD/배럴",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:02.581291+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:57.115129+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 340,
+      "id": 443,
       "indicator_code": "VIX",
       "indicator_name": "VIX 공포지수",
       "category": "시장위험",
@@ -1466,13 +1646,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:02.128136+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:56.934227+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 339,
+      "id": 442,
       "indicator_code": "US_YIELD_CURVE",
       "indicator_name": "미국 장단기 금리차(10Y-2Y)",
       "category": "금리",
@@ -1481,13 +1661,13 @@
       "unit": "%",
       "signal": "yellow",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:01.809812+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:56.747687+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 338,
+      "id": 441,
       "indicator_code": "USD_INDEX",
       "indicator_name": "달러 인덱스(DXY)",
       "category": "환율",
@@ -1496,13 +1676,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:59:01.380026+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:56.563246+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 337,
+      "id": 440,
       "indicator_code": "US_CPI",
       "indicator_name": "미국 소비자물가지수(CPI)",
       "category": "물가",
@@ -1511,13 +1691,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:58:59.876175+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:56.381144+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 336,
+      "id": 439,
       "indicator_code": "FED_RATE",
       "indicator_name": "미국 기준금리",
       "category": "금리",
@@ -1526,205 +1706,25 @@
       "unit": "%",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:58:59.629969+00:00",
-      "created_at": "2026-07-02T22:59:02.702104+00:00"
+      "fetched_at": "2026-07-03T22:56:56.188272+00:00",
+      "created_at": "2026-07-03T22:56:57.668104+00:00"
     },
     {
-      "id": 335,
+      "id": 438,
       "indicator_code": "USD_KRW",
       "indicator_name": "원달러 환율",
       "category": "환율",
-      "value": 1554.4,
-      "prev_value": 1548.4,
+      "value": 1554.1,
+      "prev_value": 1554.4,
       "unit": "원",
       "signal": "red",
       "source": "한국은행 ECOS",
-      "reference_date": "2026-07-03",
+      "reference_date": "2026-07-04",
       "summary_text": null,
-      "fetched_at": "2026-07-02T22:58:58.716931+00:00",
-      "created_at": "2026-07-02T22:58:59.135145+00:00"
-    },
-    {
-      "id": 199,
-      "indicator_code": "KOFIA_INVESTOR_DEPOSIT",
-      "indicator_name": "투자자예탁금",
-      "category": "금융투자",
-      "value": 126604893983671.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": null,
-      "fetched_at": "2026-07-01T06:39:28.346695+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 198,
-      "indicator_code": "KOFIA_CREDIT_BALANCE",
-      "indicator_name": "신용공여잔고 (신용거래융자 전체)",
-      "category": "금융투자",
-      "value": 37761575967001.0,
-      "prev_value": null,
-      "unit": "백만원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": null,
-      "fetched_at": "2026-07-01T06:39:26.644565+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 197,
-      "indicator_code": "KOFIA_CMA_종금형_기관",
-      "indicator_name": "CMA 종금형 (기관)",
-      "category": "CMA",
-      "value": 8144524884.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 197건, 증권사 1개",
-      "fetched_at": "2026-07-01T06:39:18.709638+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 196,
-      "indicator_code": "KOFIA_CMA_종금형_개인",
-      "indicator_name": "CMA 종금형 (개인)",
-      "category": "CMA",
-      "value": 81164191777.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 42837건, 증권사 1개",
-      "fetched_at": "2026-07-01T06:39:18.709627+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 195,
-      "indicator_code": "KOFIA_CMA_발행어음형_기관",
-      "indicator_name": "CMA 발행어음형 (기관)",
-      "category": "CMA",
-      "value": 870570986007.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 9252건, 증권사 5개",
-      "fetched_at": "2026-07-01T06:39:18.709616+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 194,
-      "indicator_code": "KOFIA_CMA_발행어음형_개인",
-      "indicator_name": "CMA 발행어음형 (개인)",
-      "category": "CMA",
-      "value": 23064430171045.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 6832605건, 증권사 5개",
-      "fetched_at": "2026-07-01T06:39:18.709595+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 193,
-      "indicator_code": "KOFIA_CMA_기타형_기관",
-      "indicator_name": "CMA 기타형 (기관)",
-      "category": "CMA",
-      "value": 8252915298187.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 57030건, 증권사 14개",
-      "fetched_at": "2026-07-01T06:39:18.709584+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 192,
-      "indicator_code": "KOFIA_CMA_기타형_개인",
-      "indicator_name": "CMA 기타형 (개인)",
-      "category": "CMA",
-      "value": 25407624248302.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 3046952건, 증권사 14개",
-      "fetched_at": "2026-07-01T06:39:18.709573+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 191,
-      "indicator_code": "KOFIA_CMA_RP형_기관",
-      "indicator_name": "CMA RP형 (기관)",
-      "category": "CMA",
-      "value": 3544315693553.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 77955건, 증권사 23개",
-      "fetched_at": "2026-07-01T06:39:18.709562+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 190,
-      "indicator_code": "KOFIA_CMA_RP형_개인",
-      "indicator_name": "CMA RP형 (개인)",
-      "category": "CMA",
-      "value": 42817827006874.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 26737219건, 증권사 23개",
-      "fetched_at": "2026-07-01T06:39:18.70955+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 189,
-      "indicator_code": "KOFIA_CMA_MMF형_기관",
-      "indicator_name": "CMA MMF형 (기관)",
-      "category": "CMA",
-      "value": 72398950350.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 534건, 증권사 12개",
-      "fetched_at": "2026-07-01T06:39:18.709537+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
-    },
-    {
-      "id": 188,
-      "indicator_code": "KOFIA_CMA_MMF형_개인",
-      "indicator_name": "CMA MMF형 (개인)",
-      "category": "CMA",
-      "value": 4236134452098.0,
-      "prev_value": null,
-      "unit": "원",
-      "signal": "green",
-      "source": "금융투자협회 (공공데이터포털)",
-      "reference_date": "2026-07-01",
-      "summary_text": "계좌수 2868808건, 증권사 12개",
-      "fetched_at": "2026-07-01T06:39:18.709511+00:00",
-      "created_at": "2026-07-01T06:39:34.460711+00:00"
+      "fetched_at": "2026-07-03T22:56:55.501711+00:00",
+      "created_at": "2026-07-03T22:56:55.657096+00:00"
     },
     {
       "id": 108,
@@ -2270,7 +2270,7 @@
   "by_category": {
     "주식지수": [
       {
-        "id": 437,
+        "id": 552,
         "indicator_code": "KOSPI200",
         "indicator_name": "코스피 200",
         "category": "주식지수",
@@ -2279,13 +2279,13 @@
         "unit": "pt",
         "signal": "green",
         "source": "금융위원회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "코스피 200 1454.15pt (+6.17%)",
-        "fetched_at": "2026-07-02T22:59:19.236447+00:00",
-        "created_at": "2026-07-02T22:59:19.358013+00:00"
+        "fetched_at": "2026-07-03T22:57:15.203676+00:00",
+        "created_at": "2026-07-03T22:57:15.642226+00:00"
       },
       {
-        "id": 436,
+        "id": 551,
         "indicator_code": "KOSDAQ",
         "indicator_name": "코스닥 지수",
         "category": "주식지수",
@@ -2294,13 +2294,13 @@
         "unit": "pt",
         "signal": "yellow",
         "source": "금융위원회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "코스닥 887.81pt (-2.36%)",
-        "fetched_at": "2026-07-02T22:59:18.119494+00:00",
-        "created_at": "2026-07-02T22:59:19.358013+00:00"
+        "fetched_at": "2026-07-03T22:57:14.683724+00:00",
+        "created_at": "2026-07-03T22:57:15.642226+00:00"
       },
       {
-        "id": 435,
+        "id": 550,
         "indicator_code": "KOSPI",
         "indicator_name": "코스피 지수",
         "category": "주식지수",
@@ -2309,15 +2309,15 @@
         "unit": "pt",
         "signal": "green",
         "source": "금융위원회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "코스피 8930.30pt (+5.42%)",
-        "fetched_at": "2026-07-02T22:59:17.3147+00:00",
-        "created_at": "2026-07-02T22:59:19.358013+00:00"
+        "fetched_at": "2026-07-03T22:57:14.06087+00:00",
+        "created_at": "2026-07-03T22:57:15.642226+00:00"
       }
     ],
     "해외파생거래": [
       {
-        "id": 434,
+        "id": 549,
         "indicator_code": "KOFIA_FRNDRV_JOBY AVIATION INC CO",
         "indicator_name": "해외파생 JOBY AVIATION INC COMMON STOCK (미국)",
         "category": "해외파생거래",
@@ -2326,13 +2326,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075985+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670217+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 433,
+        "id": 548,
         "indicator_code": "KOFIA_FRNDRV_DATADOG INC CL A COM",
         "indicator_name": "해외파생 DATADOG INC CL A COM (미국)",
         "category": "해외파생거래",
@@ -2341,13 +2341,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075975+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670207+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 432,
+        "id": 547,
         "indicator_code": "KOFIA_FRNDRV_ERShares Private-Pub",
         "indicator_name": "해외파생 ERShares Private-Public Crossover ETF (미국)",
         "category": "해외파생거래",
@@ -2356,13 +2356,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075965+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670197+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 431,
+        "id": 546,
         "indicator_code": "KOFIA_FRNDRV_Aurora Innovation In",
         "indicator_name": "해외파생 Aurora Innovation Inc Clas (미국)",
         "category": "해외파생거래",
@@ -2371,13 +2371,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075955+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670188+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 430,
+        "id": 545,
         "indicator_code": "KOFIA_FRNDRV_PLUG POWER INC",
         "indicator_name": "해외파생 PLUG POWER INC (미국)",
         "category": "해외파생거래",
@@ -2386,13 +2386,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075944+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670178+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 429,
+        "id": 544,
         "indicator_code": "KOFIA_FRNDRV_JD.COM INC SPON ADR ",
         "indicator_name": "해외파생 JD.COM INC SPON ADR CL A (미국)",
         "category": "해외파생거래",
@@ -2401,13 +2401,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075934+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670168+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 428,
+        "id": 543,
         "indicator_code": "KOFIA_FRNDRV_Kosmos Energy Ltd. C",
         "indicator_name": "해외파생 Kosmos Energy Ltd. Common Shares (DE) (미국)",
         "category": "해외파생거래",
@@ -2416,13 +2416,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075924+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670158+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 427,
+        "id": 542,
         "indicator_code": "KOFIA_FRNDRV_Wheat",
         "indicator_name": "해외파생 Wheat (미국)",
         "category": "해외파생거래",
@@ -2431,13 +2431,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075911+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670148+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 426,
+        "id": 541,
         "indicator_code": "KOFIA_FRNDRV_Primary Aluminum",
         "indicator_name": "해외파생 Primary Aluminum (영국)",
         "category": "해외파생거래",
@@ -2446,13 +2446,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075897+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670138+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 425,
+        "id": 540,
         "indicator_code": "KOFIA_FRNDRV_Cocoa",
         "indicator_name": "해외파생 Cocoa (미국)",
         "category": "해외파생거래",
@@ -2461,13 +2461,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075881+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670128+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 424,
+        "id": 539,
         "indicator_code": "KOFIA_FRNDRV_GLOBAL X FDS GLOBAL ",
         "indicator_name": "해외파생 GLOBAL X FDS GLOBAL X URANIUM (미국)",
         "category": "해외파생거래",
@@ -2476,13 +2476,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075816+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670117+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 423,
+        "id": 538,
         "indicator_code": "KOFIA_FRNDRV_GE VERNOVA INC COM",
         "indicator_name": "해외파생 GE VERNOVA INC COM (미국)",
         "category": "해외파생거래",
@@ -2491,13 +2491,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075805+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670106+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 422,
+        "id": 537,
         "indicator_code": "KOFIA_FRNDRV_Archer Aviation Inc ",
         "indicator_name": "해외파생 Archer Aviation Inc Class A C (미국)",
         "category": "해외파생거래",
@@ -2506,13 +2506,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075793+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670095+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 421,
+        "id": 536,
         "indicator_code": "KOFIA_FRNDRV_Arbe Robotics Ltd  O",
         "indicator_name": "해외파생 Arbe Robotics Ltd  Ordinary (미국)",
         "category": "해외파생거래",
@@ -2521,13 +2521,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.07578+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670082+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 420,
+        "id": 535,
         "indicator_code": "KOFIA_FRNDRV_E-Micro AUD/USD",
         "indicator_name": "해외파생 E-Micro AUD/USD (미국)",
         "category": "해외파생거래",
@@ -2536,13 +2536,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075769+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670072+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 419,
+        "id": 534,
         "indicator_code": "KOFIA_FRNDRV_Shake Shack Inc Clas",
         "indicator_name": "해외파생 Shake Shack Inc Class A Comm (미국)",
         "category": "해외파생거래",
@@ -2551,13 +2551,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075758+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670061+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 418,
+        "id": 533,
         "indicator_code": "KOFIA_FRNDRV_Nebius Group NV Clas",
         "indicator_name": "해외파생 Nebius Group NV Class A Or (미국)",
         "category": "해외파생거래",
@@ -2566,13 +2566,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075748+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.67005+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 417,
+        "id": 532,
         "indicator_code": "KOFIA_FRNDRV_NASDAQ 100 E-mini",
         "indicator_name": "해외파생 NASDAQ 100 E-mini (미국)",
         "category": "해외파생거래",
@@ -2581,13 +2581,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.075736+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670039+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 416,
+        "id": 531,
         "indicator_code": "KOFIA_FRNDRV_Otis Worldwide Corpo",
         "indicator_name": "해외파생 Otis Worldwide Corporation Com (미국)",
         "category": "해외파생거래",
@@ -2596,13 +2596,13 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.07572+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.670026+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 415,
+        "id": 530,
         "indicator_code": "KOFIA_FRNDRV_B2Gold Corp Common s",
         "indicator_name": "해외파생 B2Gold Corp Common shares (미국)",
         "category": "해외파생거래",
@@ -2611,15 +2611,15 @@
         "unit": "USD",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:16.07569+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:12.669998+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       }
     ],
     "파생결합증권": [
       {
-        "id": 414,
+        "id": 529,
         "indicator_code": "KOFIA_ELS_원금보장형_공모",
         "indicator_name": "ELS/ELB 원금보장형 (공모) 발행실적",
         "category": "파생결합증권",
@@ -2628,13 +2628,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 366건",
-        "fetched_at": "2026-07-02T22:59:15.466592+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:10.487858+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 413,
+        "id": 528,
         "indicator_code": "KOFIA_ELS_원금보장형_사모",
         "indicator_name": "ELS/ELB 원금보장형 (사모) 발행실적",
         "category": "파생결합증권",
@@ -2643,13 +2643,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 21건",
-        "fetched_at": "2026-07-02T22:59:15.466581+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:10.487847+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 412,
+        "id": 527,
         "indicator_code": "KOFIA_ELS_원금비보장형_공모",
         "indicator_name": "ELS/ELB 원금비보장형 (공모) 발행실적",
         "category": "파생결합증권",
@@ -2658,13 +2658,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 541건",
-        "fetched_at": "2026-07-02T22:59:15.46657+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:10.487835+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 411,
+        "id": 526,
         "indicator_code": "KOFIA_ELS_원금비보장형_사모",
         "indicator_name": "ELS/ELB 원금비보장형 (사모) 발행실적",
         "category": "파생결합증권",
@@ -2673,13 +2673,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 201건",
-        "fetched_at": "2026-07-02T22:59:15.466558+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:10.487821+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 410,
+        "id": 525,
         "indicator_code": "KOFIA_ELS_총계_합계",
         "indicator_name": "ELS/ELB 총계 (합계) 발행실적",
         "category": "파생결합증권",
@@ -2688,13 +2688,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 1129건",
-        "fetched_at": "2026-07-02T22:59:15.466534+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:10.487794+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 409,
+        "id": 524,
         "indicator_code": "KOFIA_DLS_원금보장형_공모",
         "indicator_name": "DLS/DLB 원금보장형 (공모) 발행실적",
         "category": "파생결합증권",
@@ -2703,13 +2703,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 63건",
-        "fetched_at": "2026-07-02T22:59:14.641199+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:09.363875+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 408,
+        "id": 523,
         "indicator_code": "KOFIA_DLS_원금보장형_사모",
         "indicator_name": "DLS/DLB 원금보장형 (사모) 발행실적",
         "category": "파생결합증권",
@@ -2718,13 +2718,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 77건",
-        "fetched_at": "2026-07-02T22:59:14.641188+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:09.363864+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 407,
+        "id": 522,
         "indicator_code": "KOFIA_DLS_원금비보장형_공모",
         "indicator_name": "DLS/DLB 원금비보장형 (공모) 발행실적",
         "category": "파생결합증권",
@@ -2733,13 +2733,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 2건",
-        "fetched_at": "2026-07-02T22:59:14.641176+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:09.363851+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 406,
+        "id": 521,
         "indicator_code": "KOFIA_DLS_원금비보장형_사모",
         "indicator_name": "DLS/DLB 원금비보장형 (사모) 발행실적",
         "category": "파생결합증권",
@@ -2748,15 +2748,45 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "건수 48건",
-        "fetched_at": "2026-07-02T22:59:14.641151+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:09.363823+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       }
     ],
     "금융투자": [
       {
-        "id": 405,
+        "id": 520,
+        "indicator_code": "KOFIA_INVESTOR_DEPOSIT",
+        "indicator_name": "투자자예탁금",
+        "category": "금융투자",
+        "value": 132469655161392.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": null,
+        "fetched_at": "2026-07-03T22:57:08.487413+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 519,
+        "indicator_code": "KOFIA_CREDIT_BALANCE",
+        "indicator_name": "신용공여잔고 (신용거래융자 전체)",
+        "category": "금융투자",
+        "value": 37807006189272.0,
+        "prev_value": null,
+        "unit": "백만원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": null,
+        "fetched_at": "2026-07-03T22:57:07.112635+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 508,
         "indicator_code": "KOFIA_FUND_-_공모",
         "indicator_name": "펀드 - (공모)",
         "category": "금융투자",
@@ -2765,13 +2795,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935808+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668571+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 404,
+        "id": 507,
         "indicator_code": "KOFIA_FUND_혼합채권형_공모",
         "indicator_name": "펀드 혼합채권형 (공모)",
         "category": "금융투자",
@@ -2780,13 +2810,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935798+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668561+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 403,
+        "id": 506,
         "indicator_code": "KOFIA_FUND_혼합주식형_사모",
         "indicator_name": "펀드 혼합주식형 (사모)",
         "category": "금융투자",
@@ -2795,13 +2825,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935788+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668551+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 402,
+        "id": 505,
         "indicator_code": "KOFIA_FUND_혼합주식형_공모",
         "indicator_name": "펀드 혼합주식형 (공모)",
         "category": "금융투자",
@@ -2810,13 +2840,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935778+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668541+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 401,
+        "id": 504,
         "indicator_code": "KOFIA_FUND_혼합자산_사모",
         "indicator_name": "펀드 혼합자산 (사모)",
         "category": "금융투자",
@@ -2825,13 +2855,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935768+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668531+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 400,
+        "id": 503,
         "indicator_code": "KOFIA_FUND_혼합자산_공모",
         "indicator_name": "펀드 혼합자산 (공모)",
         "category": "금융투자",
@@ -2840,13 +2870,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935759+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668521+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 399,
+        "id": 502,
         "indicator_code": "KOFIA_FUND_합계_사모",
         "indicator_name": "펀드 합계 (사모)",
         "category": "금융투자",
@@ -2855,13 +2885,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935749+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668511+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 398,
+        "id": 501,
         "indicator_code": "KOFIA_FUND_합계_공모",
         "indicator_name": "펀드 합계 (공모)",
         "category": "금융투자",
@@ -2870,13 +2900,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935739+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.6685+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 397,
+        "id": 500,
         "indicator_code": "KOFIA_FUND_파생상품_사모",
         "indicator_name": "펀드 파생상품 (사모)",
         "category": "금융투자",
@@ -2885,13 +2915,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935729+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668469+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 396,
+        "id": 499,
         "indicator_code": "KOFIA_FUND_파생상품_공모",
         "indicator_name": "펀드 파생상품 (공모)",
         "category": "금융투자",
@@ -2900,13 +2930,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935719+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66846+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 395,
+        "id": 498,
         "indicator_code": "KOFIA_FUND_특별자산_사모",
         "indicator_name": "펀드 특별자산 (사모)",
         "category": "금융투자",
@@ -2915,13 +2945,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935709+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66845+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 394,
+        "id": 497,
         "indicator_code": "KOFIA_FUND_특별자산_공모",
         "indicator_name": "펀드 특별자산 (공모)",
         "category": "금융투자",
@@ -2930,13 +2960,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935699+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66844+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 393,
+        "id": 496,
         "indicator_code": "KOFIA_FUND_투자계약_사모",
         "indicator_name": "펀드 투자계약 (사모)",
         "category": "금융투자",
@@ -2945,13 +2975,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935689+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66843+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 392,
+        "id": 495,
         "indicator_code": "KOFIA_FUND_채권형_사모",
         "indicator_name": "펀드 채권형 (사모)",
         "category": "금융투자",
@@ -2960,13 +2990,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935679+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66842+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 391,
+        "id": 494,
         "indicator_code": "KOFIA_FUND_채권형_공모",
         "indicator_name": "펀드 채권형 (공모)",
         "category": "금융투자",
@@ -2975,13 +3005,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935669+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668409+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 390,
+        "id": 493,
         "indicator_code": "KOFIA_FUND_주식형_사모",
         "indicator_name": "펀드 주식형 (사모)",
         "category": "금융투자",
@@ -2990,13 +3020,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935659+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668399+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 389,
+        "id": 492,
         "indicator_code": "KOFIA_FUND_주식형_공모",
         "indicator_name": "펀드 주식형 (공모)",
         "category": "금융투자",
@@ -3005,13 +3035,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935648+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668388+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 388,
+        "id": 491,
         "indicator_code": "KOFIA_FUND_재간접_사모",
         "indicator_name": "펀드 재간접 (사모)",
         "category": "금융투자",
@@ -3020,13 +3050,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935636+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668377+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 387,
+        "id": 490,
         "indicator_code": "KOFIA_FUND_재간접_공모",
         "indicator_name": "펀드 재간접 (공모)",
         "category": "금융투자",
@@ -3035,13 +3065,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935624+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668364+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 386,
+        "id": 489,
         "indicator_code": "KOFIA_FUND_부동산_사모",
         "indicator_name": "펀드 부동산 (사모)",
         "category": "금융투자",
@@ -3050,13 +3080,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935613+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668353+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 385,
+        "id": 488,
         "indicator_code": "KOFIA_FUND_부동산_공모",
         "indicator_name": "펀드 부동산 (공모)",
         "category": "금융투자",
@@ -3065,13 +3095,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935602+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668342+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 384,
+        "id": 487,
         "indicator_code": "KOFIA_FUND_단기금융_사모",
         "indicator_name": "펀드 단기금융 (사모)",
         "category": "금융투자",
@@ -3080,13 +3110,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.93559+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66833+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 383,
+        "id": 486,
         "indicator_code": "KOFIA_FUND_단기금융_공모",
         "indicator_name": "펀드 단기금융 (공모)",
         "category": "금융투자",
@@ -3095,13 +3125,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935579+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668318+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 382,
+        "id": 485,
         "indicator_code": "KOFIA_FUND_PEF_사모",
         "indicator_name": "펀드 PEF (사모)",
         "category": "금융투자",
@@ -3110,13 +3140,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935565+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.668305+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 381,
+        "id": 484,
         "indicator_code": "KOFIA_FUND_혼합채권형_사모",
         "indicator_name": "펀드 혼합채권형 (사모)",
         "category": "금융투자",
@@ -3125,13 +3155,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.935539+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:05.66828+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 380,
+        "id": 483,
         "indicator_code": "KOFIA_TRUST_증권_금전신탁 특정금전신탁",
         "indicator_name": "증권 금전신탁 특정금전신탁 수탁총액",
         "category": "금융투자",
@@ -3140,13 +3170,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359963+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723803+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 379,
+        "id": 482,
         "indicator_code": "KOFIA_TRUST_증권_금전신탁 불특정금전신탁",
         "indicator_name": "증권 금전신탁 불특정금전신탁 수탁총액",
         "category": "금융투자",
@@ -3155,13 +3185,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359951+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723787+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 378,
+        "id": 481,
         "indicator_code": "KOFIA_TRUST_증권_재산신탁 부동산신탁",
         "indicator_name": "증권 재산신탁 부동산신탁 수탁총액",
         "category": "금융투자",
@@ -3170,13 +3200,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359931+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723767+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 377,
+        "id": 480,
         "indicator_code": "KOFIA_TRUST_증권_재산신탁 증권신탁",
         "indicator_name": "증권 재산신탁 증권신탁 수탁총액",
         "category": "금융투자",
@@ -3185,13 +3215,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359921+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723756+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 376,
+        "id": 479,
         "indicator_code": "KOFIA_TRUST_증권_재산신탁 금전채권신탁",
         "indicator_name": "증권 재산신탁 금전채권신탁 수탁총액",
         "category": "금융투자",
@@ -3200,13 +3230,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359911+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723746+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 375,
+        "id": 478,
         "indicator_code": "KOFIA_TRUST_증권_재산신탁 무체재산권",
         "indicator_name": "증권 재산신탁 무체재산권 수탁총액",
         "category": "금융투자",
@@ -3215,13 +3245,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359901+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723735+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 374,
+        "id": 477,
         "indicator_code": "KOFIA_TRUST_증권_종합재산신탁",
         "indicator_name": "증권 종합재산신탁 수탁총액",
         "category": "금융투자",
@@ -3230,13 +3260,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359891+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723725+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 373,
+        "id": 476,
         "indicator_code": "KOFIA_TRUST_증권_기타",
         "indicator_name": "증권 기타 수탁총액",
         "category": "금융투자",
@@ -3245,13 +3275,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359879+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723713+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 372,
+        "id": 475,
         "indicator_code": "KOFIA_TRUST_합계_금전신탁 특정금전신탁",
         "indicator_name": "합계 금전신탁 특정금전신탁 수탁총액",
         "category": "금융투자",
@@ -3260,13 +3290,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359566+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723377+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 371,
+        "id": 474,
         "indicator_code": "KOFIA_TRUST_합계_금전신탁 불특정금전신탁",
         "indicator_name": "합계 금전신탁 불특정금전신탁 수탁총액",
         "category": "금융투자",
@@ -3275,13 +3305,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359556+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723367+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 370,
+        "id": 473,
         "indicator_code": "KOFIA_TRUST_합계_재산신탁 부동산신탁",
         "indicator_name": "합계 재산신탁 부동산신탁 수탁총액",
         "category": "금융투자",
@@ -3290,13 +3320,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359497+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723306+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 369,
+        "id": 472,
         "indicator_code": "KOFIA_TRUST_합계_재산신탁 증권신탁",
         "indicator_name": "합계 재산신탁 증권신탁 수탁총액",
         "category": "금융투자",
@@ -3305,13 +3335,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359483+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723291+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 368,
+        "id": 471,
         "indicator_code": "KOFIA_TRUST_합계_재산신탁 금전채권신탁",
         "indicator_name": "합계 재산신탁 금전채권신탁 수탁총액",
         "category": "금융투자",
@@ -3320,13 +3350,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359472+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.72328+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 367,
+        "id": 470,
         "indicator_code": "KOFIA_TRUST_합계_재산신탁 동산신탁",
         "indicator_name": "합계 재산신탁 동산신탁 수탁총액",
         "category": "금융투자",
@@ -3335,13 +3365,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359459+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723268+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 366,
+        "id": 469,
         "indicator_code": "KOFIA_TRUST_합계_재산신탁 무체재산권",
         "indicator_name": "합계 재산신탁 무체재산권 수탁총액",
         "category": "금융투자",
@@ -3350,13 +3380,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359444+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723252+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 365,
+        "id": 468,
         "indicator_code": "KOFIA_TRUST_합계_종합재산신탁",
         "indicator_name": "합계 종합재산신탁 수탁총액",
         "category": "금융투자",
@@ -3365,13 +3395,13 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359431+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
+        "fetched_at": "2026-07-03T22:57:04.723238+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 364,
+        "id": 467,
         "indicator_code": "KOFIA_TRUST_합계_기타",
         "indicator_name": "합계 기타 수탁총액",
         "category": "금융투자",
@@ -3380,45 +3410,167 @@
         "unit": "백만원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:10.359403+00:00",
-        "created_at": "2026-07-02T22:59:16.528899+00:00"
-      },
+        "fetched_at": "2026-07-03T22:57:04.72321+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      }
+    ],
+    "CMA": [
       {
-        "id": 199,
-        "indicator_code": "KOFIA_INVESTOR_DEPOSIT",
-        "indicator_name": "투자자예탁금",
-        "category": "금융투자",
-        "value": 126604893983671.0,
+        "id": 518,
+        "indicator_code": "KOFIA_CMA_종금형_기관",
+        "indicator_name": "CMA 종금형 (기관)",
+        "category": "CMA",
+        "value": 8473587255.0,
         "prev_value": null,
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": null,
-        "fetched_at": "2026-07-01T06:39:28.346695+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 197건, 증권사 1개",
+        "fetched_at": "2026-07-03T22:57:06.194748+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       },
       {
-        "id": 198,
-        "indicator_code": "KOFIA_CREDIT_BALANCE",
-        "indicator_name": "신용공여잔고 (신용거래융자 전체)",
-        "category": "금융투자",
-        "value": 37761575967001.0,
+        "id": 517,
+        "indicator_code": "KOFIA_CMA_종금형_개인",
+        "indicator_name": "CMA 종금형 (개인)",
+        "category": "CMA",
+        "value": 81132662499.0,
         "prev_value": null,
-        "unit": "백만원",
+        "unit": "원",
         "signal": "green",
         "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": null,
-        "fetched_at": "2026-07-01T06:39:26.644565+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 42827건, 증권사 1개",
+        "fetched_at": "2026-07-03T22:57:06.194737+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 516,
+        "indicator_code": "KOFIA_CMA_발행어음형_기관",
+        "indicator_name": "CMA 발행어음형 (기관)",
+        "category": "CMA",
+        "value": 873840492058.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 9252건, 증권사 5개",
+        "fetched_at": "2026-07-03T22:57:06.194725+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 515,
+        "indicator_code": "KOFIA_CMA_발행어음형_개인",
+        "indicator_name": "CMA 발행어음형 (개인)",
+        "category": "CMA",
+        "value": 23994937669524.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 6835884건, 증권사 5개",
+        "fetched_at": "2026-07-03T22:57:06.194711+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 514,
+        "indicator_code": "KOFIA_CMA_기타형_기관",
+        "indicator_name": "CMA 기타형 (기관)",
+        "category": "CMA",
+        "value": 8002561616313.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 57046건, 증권사 14개",
+        "fetched_at": "2026-07-03T22:57:06.194701+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 513,
+        "indicator_code": "KOFIA_CMA_기타형_개인",
+        "indicator_name": "CMA 기타형 (개인)",
+        "category": "CMA",
+        "value": 25908127782342.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 3047187건, 증권사 14개",
+        "fetched_at": "2026-07-03T22:57:06.19469+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 512,
+        "indicator_code": "KOFIA_CMA_RP형_기관",
+        "indicator_name": "CMA RP형 (기관)",
+        "category": "CMA",
+        "value": 3520811787069.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 77987건, 증권사 23개",
+        "fetched_at": "2026-07-03T22:57:06.194678+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 511,
+        "indicator_code": "KOFIA_CMA_RP형_개인",
+        "indicator_name": "CMA RP형 (개인)",
+        "category": "CMA",
+        "value": 43128995800876.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 26750074건, 증권사 23개",
+        "fetched_at": "2026-07-03T22:57:06.194666+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 510,
+        "indicator_code": "KOFIA_CMA_MMF형_기관",
+        "indicator_name": "CMA MMF형 (기관)",
+        "category": "CMA",
+        "value": 71416564144.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 534건, 증권사 12개",
+        "fetched_at": "2026-07-03T22:57:06.194651+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
+      },
+      {
+        "id": 509,
+        "indicator_code": "KOFIA_CMA_MMF형_개인",
+        "indicator_name": "CMA MMF형 (개인)",
+        "category": "CMA",
+        "value": 4262056827281.0,
+        "prev_value": null,
+        "unit": "원",
+        "signal": "green",
+        "source": "금융투자협회 (공공데이터포털)",
+        "reference_date": "2026-07-04",
+        "summary_text": "계좌수 2871212건, 증권사 12개",
+        "fetched_at": "2026-07-03T22:57:06.194618+00:00",
+        "created_at": "2026-07-03T22:57:12.831766+00:00"
       }
     ],
     "ISA": [
       {
-        "id": 363,
+        "id": 466,
         "indicator_code": "ISA_JOIN_신탁형 ISA_보험",
         "indicator_name": "ISA 가입현황 신탁형 ISA (보험)",
         "category": "ISA",
@@ -3427,13 +3579,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 192명, 회사수 1개",
-        "fetched_at": "2026-07-02T22:59:08.866672+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366511+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 362,
+        "id": 465,
         "indicator_code": "ISA_JOIN_신탁형 ISA_은행",
         "indicator_name": "ISA 가입현황 신탁형 ISA (은행)",
         "category": "ISA",
@@ -3442,13 +3594,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 889221명, 회사수 14개",
-        "fetched_at": "2026-07-02T22:59:08.866662+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366497+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 361,
+        "id": 464,
         "indicator_code": "ISA_JOIN_신탁형 ISA_증권",
         "indicator_name": "ISA 가입현황 신탁형 ISA (증권)",
         "category": "ISA",
@@ -3457,13 +3609,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 26527명, 회사수 15개",
-        "fetched_at": "2026-07-02T22:59:08.86665+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366464+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 360,
+        "id": 463,
         "indicator_code": "ISA_JOIN_신탁형 ISA_총합",
         "indicator_name": "ISA 가입현황 신탁형 ISA (총합)",
         "category": "ISA",
@@ -3472,13 +3624,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 915940명, 회사수 30개",
-        "fetched_at": "2026-07-02T22:59:08.866627+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366427+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 359,
+        "id": 462,
         "indicator_code": "ISA_JOIN_일임형 ISA_은행",
         "indicator_name": "ISA 가입현황 일임형 ISA (은행)",
         "category": "ISA",
@@ -3487,13 +3639,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 145675명, 회사수 10개",
-        "fetched_at": "2026-07-02T22:59:08.866611+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366411+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 358,
+        "id": 461,
         "indicator_code": "ISA_JOIN_일임형 ISA_증권",
         "indicator_name": "ISA 가입현황 일임형 ISA (증권)",
         "category": "ISA",
@@ -3502,13 +3654,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 4611명, 회사수 11개",
-        "fetched_at": "2026-07-02T22:59:08.8666+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366399+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 357,
+        "id": 460,
         "indicator_code": "ISA_JOIN_일임형 ISA_총합",
         "indicator_name": "ISA 가입현황 일임형 ISA (총합)",
         "category": "ISA",
@@ -3517,13 +3669,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 150286명, 회사수 21개",
-        "fetched_at": "2026-07-02T22:59:08.866587+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366385+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 356,
+        "id": 459,
         "indicator_code": "ISA_JOIN_투자중개형 ISA_증권",
         "indicator_name": "ISA 가입현황 투자중개형 ISA (증권)",
         "category": "ISA",
@@ -3532,13 +3684,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 8368528명, 회사수 26개",
-        "fetched_at": "2026-07-02T22:59:08.866572+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.36637+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 355,
+        "id": 458,
         "indicator_code": "ISA_JOIN_투자중개형 ISA_총합",
         "indicator_name": "ISA 가입현황 투자중개형 ISA (총합)",
         "category": "ISA",
@@ -3547,13 +3699,13 @@
         "unit": "원",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "가입자수 8368528명, 회사수 26개",
-        "fetched_at": "2026-07-02T22:59:08.866548+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:03.366345+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 354,
+        "id": 457,
         "indicator_code": "ISA_부산은행_고위험",
         "indicator_name": "부산은행 BNK부산 적극투자형 글로벌 (고위험)",
         "category": "ISA",
@@ -3562,13 +3714,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746727+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.486005+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 353,
+        "id": 456,
         "indicator_code": "ISA_삼성증권_중위험",
         "indicator_name": "삼성증권 삼성증권ISA 중위험 적립펀드형 (중위험)",
         "category": "ISA",
@@ -3577,13 +3729,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746716+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485994+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 352,
+        "id": 455,
         "indicator_code": "ISA_하나은행(구.외환은행)_초고위험",
         "indicator_name": "하나은행(구.외환은행) 하나 일임형ISA 최고위험 밸런스 (초고위험)",
         "category": "ISA",
@@ -3592,13 +3744,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746704+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485983+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 351,
+        "id": 454,
         "indicator_code": "ISA_국민은행_저위험",
         "indicator_name": "국민은행 KB국민 만능 ISA 안정수익추구 A형(적극배분형) (저위험)",
         "category": "ISA",
@@ -3607,13 +3759,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746693+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485971+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 350,
+        "id": 453,
         "indicator_code": "ISA_현대차증권_중위험",
         "indicator_name": "현대차증권 현대차증권 안정성장형 B3(신흥국 대안투자형) (중위험)",
         "category": "ISA",
@@ -3622,13 +3774,13 @@
         "unit": "%",
         "signal": "red",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746679+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485956+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 349,
+        "id": 452,
         "indicator_code": "ISA_하나은행(구.외환은행)_고위험",
         "indicator_name": "하나은행(구.외환은행) 하나 일임형ISA AI 고위험 (고위험)",
         "category": "ISA",
@@ -3637,13 +3789,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746667+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485944+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 348,
+        "id": 451,
         "indicator_code": "ISA_삼성증권_고위험",
         "indicator_name": "삼성증권 삼성증권ISA 고위험 펀드형 (고위험)",
         "category": "ISA",
@@ -3652,13 +3804,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746656+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485929+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 347,
+        "id": 450,
         "indicator_code": "ISA_우리은행_고위험",
         "indicator_name": "우리은행 우리 일임형 글로벌50 ISA (적극투자형) (고위험)",
         "category": "ISA",
@@ -3667,13 +3819,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746644+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485916+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 346,
+        "id": 449,
         "indicator_code": "ISA_광주은행_저위험",
         "indicator_name": "광주은행 쏠쏠한_ISA_저위험형(보수) (저위험)",
         "category": "ISA",
@@ -3682,13 +3834,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746632+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485903+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 345,
+        "id": 448,
         "indicator_code": "ISA_키움증권_초고위험",
         "indicator_name": "키움증권 키움배당형(초고위험) (초고위험)",
         "category": "ISA",
@@ -3697,13 +3849,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746616+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485886+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 344,
+        "id": 447,
         "indicator_code": "ISA_미래에셋증권_고위험",
         "indicator_name": "미래에셋증권 미래에셋증권 일임형ISA 글로벌자산배분 ETF 포커스 70 (고위험)",
         "category": "ISA",
@@ -3712,13 +3864,13 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.7466+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.48587+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 343,
+        "id": 446,
         "indicator_code": "ISA_현대차증권_초고위험",
         "indicator_name": "현대차증권 현대차증권 고수익추구형 A1(선진국형) (초고위험)",
         "category": "ISA",
@@ -3727,13 +3879,13 @@
         "unit": "%",
         "signal": "red",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746586+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485855+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       },
       {
-        "id": 342,
+        "id": 445,
         "indicator_code": "ISA_하나은행(구.외환은행)_저위험",
         "indicator_name": "하나은행(구.외환은행) KEB하나 1Q 일임형ISA 저위험(밸런스) (저위험)",
         "category": "ISA",
@@ -3742,15 +3894,15 @@
         "unit": "%",
         "signal": "green",
         "source": "금융투자협회 ISA다모아 (공공데이터포털)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": "6개월 수익률",
-        "fetched_at": "2026-07-02T22:59:07.746557+00:00",
-        "created_at": "2026-07-02T22:59:09.321397+00:00"
+        "fetched_at": "2026-07-03T22:57:02.485823+00:00",
+        "created_at": "2026-07-03T22:57:03.824536+00:00"
       }
     ],
     "원자재": [
       {
-        "id": 341,
+        "id": 444,
         "indicator_code": "WTI",
         "indicator_name": "WTI 원유가격",
         "category": "원자재",
@@ -3759,10 +3911,10 @@
         "unit": "USD/배럴",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:02.581291+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
+        "fetched_at": "2026-07-03T22:56:57.115129+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       },
       {
         "id": 108,
@@ -3842,7 +3994,7 @@
     ],
     "시장위험": [
       {
-        "id": 340,
+        "id": 443,
         "indicator_code": "VIX",
         "indicator_name": "VIX 공포지수",
         "category": "시장위험",
@@ -3851,15 +4003,15 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:02.128136+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
+        "fetched_at": "2026-07-03T22:56:56.934227+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       }
     ],
     "금리": [
       {
-        "id": 339,
+        "id": 442,
         "indicator_code": "US_YIELD_CURVE",
         "indicator_name": "미국 장단기 금리차(10Y-2Y)",
         "category": "금리",
@@ -3868,13 +4020,13 @@
         "unit": "%",
         "signal": "yellow",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:01.809812+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
+        "fetched_at": "2026-07-03T22:56:56.747687+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       },
       {
-        "id": 336,
+        "id": 439,
         "indicator_code": "FED_RATE",
         "indicator_name": "미국 기준금리",
         "category": "금리",
@@ -3883,10 +4035,10 @@
         "unit": "%",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:58:59.629969+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
+        "fetched_at": "2026-07-03T22:56:56.188272+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       },
       {
         "id": 68,
@@ -3906,7 +4058,7 @@
     ],
     "환율": [
       {
-        "id": 338,
+        "id": 441,
         "indicator_code": "USD_INDEX",
         "indicator_name": "달러 인덱스(DXY)",
         "category": "환율",
@@ -3915,30 +4067,30 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:59:01.380026+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
+        "fetched_at": "2026-07-03T22:56:56.563246+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       },
       {
-        "id": 335,
+        "id": 438,
         "indicator_code": "USD_KRW",
         "indicator_name": "원달러 환율",
         "category": "환율",
-        "value": 1554.4,
-        "prev_value": 1548.4,
+        "value": 1554.1,
+        "prev_value": 1554.4,
         "unit": "원",
         "signal": "red",
         "source": "한국은행 ECOS",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:58:58.716931+00:00",
-        "created_at": "2026-07-02T22:58:59.135145+00:00"
+        "fetched_at": "2026-07-03T22:56:55.501711+00:00",
+        "created_at": "2026-07-03T22:56:55.657096+00:00"
       }
     ],
     "물가": [
       {
-        "id": 337,
+        "id": 440,
         "indicator_code": "US_CPI",
         "indicator_name": "미국 소비자물가지수(CPI)",
         "category": "물가",
@@ -3947,162 +4099,10 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-03",
+        "reference_date": "2026-07-04",
         "summary_text": null,
-        "fetched_at": "2026-07-02T22:58:59.876175+00:00",
-        "created_at": "2026-07-02T22:59:02.702104+00:00"
-      }
-    ],
-    "CMA": [
-      {
-        "id": 197,
-        "indicator_code": "KOFIA_CMA_종금형_기관",
-        "indicator_name": "CMA 종금형 (기관)",
-        "category": "CMA",
-        "value": 8144524884.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 197건, 증권사 1개",
-        "fetched_at": "2026-07-01T06:39:18.709638+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 196,
-        "indicator_code": "KOFIA_CMA_종금형_개인",
-        "indicator_name": "CMA 종금형 (개인)",
-        "category": "CMA",
-        "value": 81164191777.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 42837건, 증권사 1개",
-        "fetched_at": "2026-07-01T06:39:18.709627+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 195,
-        "indicator_code": "KOFIA_CMA_발행어음형_기관",
-        "indicator_name": "CMA 발행어음형 (기관)",
-        "category": "CMA",
-        "value": 870570986007.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 9252건, 증권사 5개",
-        "fetched_at": "2026-07-01T06:39:18.709616+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 194,
-        "indicator_code": "KOFIA_CMA_발행어음형_개인",
-        "indicator_name": "CMA 발행어음형 (개인)",
-        "category": "CMA",
-        "value": 23064430171045.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 6832605건, 증권사 5개",
-        "fetched_at": "2026-07-01T06:39:18.709595+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 193,
-        "indicator_code": "KOFIA_CMA_기타형_기관",
-        "indicator_name": "CMA 기타형 (기관)",
-        "category": "CMA",
-        "value": 8252915298187.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 57030건, 증권사 14개",
-        "fetched_at": "2026-07-01T06:39:18.709584+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 192,
-        "indicator_code": "KOFIA_CMA_기타형_개인",
-        "indicator_name": "CMA 기타형 (개인)",
-        "category": "CMA",
-        "value": 25407624248302.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 3046952건, 증권사 14개",
-        "fetched_at": "2026-07-01T06:39:18.709573+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 191,
-        "indicator_code": "KOFIA_CMA_RP형_기관",
-        "indicator_name": "CMA RP형 (기관)",
-        "category": "CMA",
-        "value": 3544315693553.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 77955건, 증권사 23개",
-        "fetched_at": "2026-07-01T06:39:18.709562+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 190,
-        "indicator_code": "KOFIA_CMA_RP형_개인",
-        "indicator_name": "CMA RP형 (개인)",
-        "category": "CMA",
-        "value": 42817827006874.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 26737219건, 증권사 23개",
-        "fetched_at": "2026-07-01T06:39:18.70955+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 189,
-        "indicator_code": "KOFIA_CMA_MMF형_기관",
-        "indicator_name": "CMA MMF형 (기관)",
-        "category": "CMA",
-        "value": 72398950350.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 534건, 증권사 12개",
-        "fetched_at": "2026-07-01T06:39:18.709537+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
-      },
-      {
-        "id": 188,
-        "indicator_code": "KOFIA_CMA_MMF형_개인",
-        "indicator_name": "CMA MMF형 (개인)",
-        "category": "CMA",
-        "value": 4236134452098.0,
-        "prev_value": null,
-        "unit": "원",
-        "signal": "green",
-        "source": "금융투자협회 (공공데이터포털)",
-        "reference_date": "2026-07-01",
-        "summary_text": "계좌수 2868808건, 증권사 12개",
-        "fetched_at": "2026-07-01T06:39:18.709511+00:00",
-        "created_at": "2026-07-01T06:39:34.460711+00:00"
+        "fetched_at": "2026-07-03T22:56:56.381144+00:00",
+        "created_at": "2026-07-03T22:56:57.668104+00:00"
       }
     ],
     "외국인직접투자": [
