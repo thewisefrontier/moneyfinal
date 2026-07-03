@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>예금·적금 | 머니파이널</title>
+<title>예금·적금 금리 비교 - 은행·저축은행 최고금리 순위 | 머니파이널</title>
+<meta name="description" content="은행·저축은행 예금 적금 금리를 한눈에 비교하세요. 최고금리 순위, 특판 상품, 우대조건 없는 상품까지 매일 업데이트됩니다.">
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -20,9 +21,13 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
 @media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
 .kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+.kpi.clickable{cursor:pointer;transition:border-color .15s}
+.kpi.clickable:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
 .kpi-sub{font-size:12px;color:var(--text2)}
+.kpi-hint{font-size:10px;color:var(--accent);margin-top:4px;opacity:0;transition:opacity .15s}
+.kpi.clickable:hover .kpi-hint{opacity:1}
 .up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
 .loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
 .empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
@@ -81,8 +86,8 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 <main>
 <div class="grid4">
   <div class="kpi"><div class="kpi-label">한은 기준금리</div><div class="kpi-value" id="rk-base">-</div></div>
-  <div class="kpi"><div class="kpi-label">적금 최고금리</div><div class="kpi-value up" id="rk-sav">-</div><div class="kpi-sub" id="rk-sav-name"></div></div>
-  <div class="kpi"><div class="kpi-label">예금 최고금리</div><div class="kpi-value up" id="rk-dep">-</div><div class="kpi-sub" id="rk-dep-name"></div></div>
+  <div class="kpi clickable" id="kpi-sav" onclick="goTop('적금')"><div class="kpi-label">적금 최고금리</div><div class="kpi-value up" id="rk-sav">-</div><div class="kpi-sub" id="rk-sav-name"></div><div class="kpi-hint">클릭 시 상품 보기 →</div></div>
+  <div class="kpi clickable" id="kpi-dep" onclick="goTop('예금')"><div class="kpi-label">예금 최고금리</div><div class="kpi-value up" id="rk-dep">-</div><div class="kpi-sub" id="rk-dep-name"></div><div class="kpi-hint">클릭 시 상품 보기 →</div></div>
   <div class="kpi"><div class="kpi-label">미국 기준금리</div><div class="kpi-value" id="rk-fed">-</div></div>
 </div>
 <div class="card">
@@ -151,6 +156,29 @@ const F={cat:'적금',deny:'all',cond:'all',sale:'all',limit:'all',sec:'all'};
 let shown=50;
 let sortBy='rate';
 let sortDir='desc';
+let topProducts={};
+
+function goTop(cat){
+  const p=topProducts[cat];
+  if(!p)return;
+  // 카테고리 탭 전환
+  F.cat=cat;
+  document.querySelectorAll('[data-f="cat"]').forEach(b=>b.classList.toggle('active',b.dataset.v===cat));
+  // 다른 필터 초기화
+  F.deny='all';F.cond='all';F.sale='all';F.limit='all';F.sec='all';
+  ['deny','cond','sale','limit','sec'].forEach(f=>{document.querySelectorAll(`[data-f="${f}"]`).forEach(b=>b.classList.toggle('active',b.dataset.v==='all'));});
+  document.getElementById('trm').value='all';
+  // 검색어로 상품 지정
+  document.getElementById('q').value=p.product_name;
+  shown=50;render();
+  // 리스트로 스크롤 + 첫 행 자동 펼침
+  setTimeout(()=>{
+    const list=document.getElementById('list');
+    list.scrollIntoView({behavior:'smooth',block:'start'});
+    const first=list.querySelector('.row');
+    if(first)first.classList.add('open');
+  },100);
+}
 
 function setSortBy(field){
   if(sortBy===field){sortDir=sortDir==='desc'?'asc':'desc';}else{sortBy=field;sortDir='desc';}
@@ -232,8 +260,8 @@ async function loadRates(){
     all=[...(bc['적금']||[]),...(bc['예금']||[])];
     render();
     const s=(bc['적금']||[])[0],dep=(bc['예금']||[])[0];
-    if(s){document.getElementById('rk-sav').textContent=fmt(s.max_rate,'%');document.getElementById('rk-sav-name').textContent=s.institution;}
-    if(dep){document.getElementById('rk-dep').textContent=fmt(dep.max_rate,'%');document.getElementById('rk-dep-name').textContent=dep.institution;}
+    if(s){topProducts['적금']=s;document.getElementById('rk-sav').textContent=fmt(s.max_rate,'%');document.getElementById('rk-sav-name').textContent=s.institution;}
+    if(dep){topProducts['예금']=dep;document.getElementById('rk-dep').textContent=fmt(dep.max_rate,'%');document.getElementById('rk-dep-name').textContent=dep.institution;}
   }catch(e){document.getElementById('list').innerHTML='<div class="empty">데이터 없음</div>';}
   try{const r=await fetch('data/market.json');const d=await r.json();(d.indicators||[]).forEach(i=>{if(i.indicator_code==='BASE_RATE')document.getElementById('rk-base').textContent=fmt(i.value,'%');if(i.indicator_code==='FED_RATE')document.getElementById('rk-fed').textContent=fmt(i.value,'%');});}catch(e){}
 }
