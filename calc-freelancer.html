@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>프리랜서 3.3% vs 8.8% 계산기 | 머니파이널</title>
-<meta name="description" content="프리랜서 원천징수 3.3%(사업소득)와 8.8%(기타소득)의 세금·실수령액을 비교 계산합니다.">
+<title>프리랜서 세금 계산기 - 사업소득 vs 기타소득 원천징수 비교 | 머니파이널</title>
+<meta name="description" content="프리랜서 사업소득(3.3%)과 기타소득(8.8%) 원천징수를 비교하고, 어느 쪽이 유리한지 계산합니다.">
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -43,7 +43,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="invest.html">투자</a><a href="savings.html">절세·연금</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
   <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
 <main>
-<h1>프리랜서 3.3% vs 8.8% 계산기</h1>
+<h1>프리랜서 세금 계산기</h1>
 <div class="sub">사업소득 vs 기타소득 원천징수 비교</div>
 
 <div class="card">
@@ -82,7 +82,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
 <script>
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
-function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';;}
 function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
 function calc(){
   const amt=parseInt((document.getElementById('amt').value||'0').replace(/[^0-9]/g,''),10)||0;
