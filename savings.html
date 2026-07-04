@@ -49,6 +49,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .isa-name{font-size:13px;font-weight:600}
 .isa-sub{font-size:11px;color:var(--text2);margin-top:2px}
 .isa-val{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.isa-val.amt{color:var(--blue)}
 </style>
 </head>
 <body>
@@ -85,6 +86,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <script>
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
+function fmtWon(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return(n/1e12).toLocaleString('ko-KR',{maximumFractionDigits:1})+'조원';if(n>=1e8)return(n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:0})+'억원';return n.toLocaleString('ko-KR')+'원';}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 let cmaAll=[];
 function cmaHtml(list){if(!list.length)return '<div class="empty">CMA/파킹 데이터 수집 예정</div>';return list.slice(0,20).map((r,i)=>`<div class="row rate-row"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div class="period">${r.period||'수시'}</div><div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div></div>`).join('');}
@@ -93,7 +95,16 @@ async function loadSavings(){
   try{const r=await fetch('data/rates.json');const d=await r.json();const bc=d.by_category||{};cmaAll=[...(bc['CMA']||[]),...(bc['파킹통장']||[])];document.getElementById('cma-list').innerHTML=cmaHtml(cmaAll);
     const fund=bc['펀드']||[];document.getElementById('fund-list').innerHTML=fund.length?fund.slice(0,10).map((r,i)=>`<div class="row rate-row"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div class="period">${r.period||'3개월'}</div><div><div class="rmax">${fmt(r.max_rate,'%')}</div></div></div>`).join(''):'<div class="empty">펀드 데이터 수집 예정</div>';
   }catch(e){document.getElementById('cma-list').innerHTML='<div class="empty">데이터 없음</div>';document.getElementById('fund-list').innerHTML='<div class="empty">데이터 없음</div>';}
-  try{const r=await fetch('data/market.json');const d=await r.json();const bc=d.by_category||{};const isa=bc['ISA']||[];document.getElementById('isa-list').innerHTML=isa.length?isa.slice(0,10).map(i=>`<div class="row isa-row"><div><div class="isa-name">${i.summary_text||i.indicator_name}</div><div class="isa-sub">${i.reference_date||''}</div></div><div class="isa-val">${fmt(i.value,'%')}</div></div>`).join(''):'<div class="empty">ISA 데이터 수집 예정</div>';}catch(e){document.getElementById('isa-list').innerHTML='<div class="empty">데이터 없음</div>';}
+  try{const r=await fetch('data/market.json');const d=await r.json();const bc=d.by_category||{};
+    const isa=(bc['ISA']||[]).slice().sort((a,b)=>((a.unit==='원')?1:0)-((b.unit==='원')?1:0));
+    document.getElementById('isa-list').innerHTML=isa.length?isa.slice(0,15).map(i=>{
+      const isAmt=i.unit==='원';
+      const val=isAmt?fmtWon(i.value):fmt(i.value,'%');
+      const name=isAmt?(i.indicator_name||i.summary_text):(i.indicator_name||i.summary_text);
+      const sub=[i.summary_text&&i.summary_text!==name?i.summary_text:'',i.reference_date||''].filter(Boolean).join(' · ');
+      return `<div class="row isa-row"><div><div class="isa-name">${name}</div><div class="isa-sub">${sub}</div></div><div class="isa-val${isAmt?' amt':''}">${val}</div></div>`;
+    }).join(''):'<div class="empty">ISA 데이터 수집 예정</div>';
+  }catch(e){document.getElementById('isa-list').innerHTML='<div class="empty">데이터 없음</div>';}
 }
 loadSavings();
 async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};let html='';inds.forEach(i=>{if(!labels[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=html+html;}catch(e){}}
