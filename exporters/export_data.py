@@ -114,20 +114,20 @@ def export_ipo():
 
 def export_stocks():
     """주식 시세 export - 시가총액 상위 (KOSPI/KOSDAQ/US)"""
+    # base_date.desc 우선: 히스토리가 쌓여도 최신일 행이 항상 limit 안에 포함됨
+    # (종목별 최신일 dedupe + 상위 N개 slice는 프론트에서 처리)
     kospi = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.KOSPI',
-        'order': 'market_cap.desc',
-        'limit': '25'
+        'order': 'base_date.desc,market_cap.desc',
+        'limit': '100'
     })
     kosdaq = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.KOSDAQ',
-        'order': 'market_cap.desc',
-        'limit': '25'
+        'order': 'base_date.desc,market_cap.desc',
+        'limit': '100'
     })
-    # base_date.desc 우선: 히스토리가 쌓여도 최신일 행이 항상 limit 안에 포함됨
-    # (종목별 최신일 dedupe는 프론트에서 처리)
     us = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.US',
