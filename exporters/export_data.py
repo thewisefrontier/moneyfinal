@@ -126,11 +126,13 @@ def export_stocks():
         'order': 'market_cap.desc',
         'limit': '25'
     })
+    # limit 50: 일자별 히스토리 행이 섞여 있어 10이면 실제 종목 수가 2~3개로 축소됨
+    # (종목별 최신일 dedupe는 프론트에서 처리)
     us = supabase_select('stock_prices', {
         'select': '*',
         'market_type': 'eq.US',
         'order': 'market_cap.desc',
-        'limit': '10'
+        'limit': '50'
     })
     save_json('stocks.json', {
         'updated_at': today_kst(),
