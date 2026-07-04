@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>투자 브리핑 | 머니파이널</title>
-<meta name="description" content="공공데이터 기반 AI 일일 투자 브리핑. 금리 현황과 시장 현황을 매일 정리해드립니다.">
+<meta name="description" content="공공데이터 기반 AI 일일 투자 브리핑. 시장 현황과 금리 현황을 매일 정리해드립니다.">
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -79,8 +79,8 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function brBody(b){let h='';
-  if(b.rate_summary)h+=`<div class="br-sec-label">💰 금리 현황</div><div class="br-text">${esc(b.rate_summary)}</div>`;
   if(b.market_summary)h+=`<div class="br-sec-label">📈 시장 현황</div><div class="br-text">${esc(b.market_summary)}</div>`;
+  if(b.rate_summary)h+=`<div class="br-sec-label">💰 금리 현황</div><div class="br-text">${esc(b.rate_summary)}</div>`;
   return h||'<div class="br-text">내용 없음</div>';}
 async function loadBriefings(){
   try{
