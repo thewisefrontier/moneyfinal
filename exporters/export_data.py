@@ -45,14 +45,14 @@ def export_rates():
 
 def export_market():
     """거시지표 export (채권/ISA/KOFIA/ECOS/FRED/KRX 포함)"""
-    # limit 500: 카테고리 다양화로 인해 지표 수가 200 초과 가능
-    indicators = supabase_select('market_indicators', {
+    # 전체 히스토리 조회 후 코드별 최신값 dedupe
+    # (limit 500 방식은 저빈도 지표(BASE_RATE 등)가 최근 N행 밖으로 밀려 누락되는 문제 있음)
+    indicators = supabase_select_all('market_indicators', {
         'select': '*',
-        'order': 'fetched_at.desc',
-        'limit': '500'
+        'order': 'fetched_at.desc'
     })
 
-    # 지표 코드별 최신값만 유지
+    # 지표 코드별 최신값만 유지 (fetched_at.desc 정렬이므로 첫 등장이 최신)
     latest = {}
     for i in indicators:
         code = i.get('indicator_code')
