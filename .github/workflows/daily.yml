@@ -20,6 +20,12 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python fetchers/us_stocks.py
+      - name: 미국주식 RSI
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: python fetchers/us_technical.py
       - name: DART 공시
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
