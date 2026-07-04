@@ -53,7 +53,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .ind-name{font-size:13px;font-weight:500}
 .ind-val{font-size:14px;font-weight:700;text-align:right}
 .ind-unit{font-size:11px;color:var(--text2)}
-.stock-row{grid-template-columns:auto 1fr auto auto auto;gap:12px}
+.stock-row{grid-template-columns:auto 1fr auto auto auto auto;gap:12px}
 .us-row{grid-template-columns:auto 1fr auto auto auto auto;gap:12px}
 .s-rank{font-size:12px;color:var(--text2);width:20px}
 .s-name{font-size:13px;font-weight:600}
@@ -80,22 +80,21 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div class="kpi"><div class="kpi-label">달러 인덱스</div><div class="kpi-value" id="i-dxy">-</div><div class="kpi-sub"></div></div>
 </div>
 
-<div class="grid2">
-  <div>
-    <div class="sec-hd"><div class="sec-title">시가총액 상위 종목</div></div>
-    <div class="card">
-      <div class="card-hd"><span class="card-title">전일 기준</span></div>
-      <div class="filter-tabs">
-        <button class="ft active" onclick="filterS('ALL',this)">전체</button>
-        <button class="ft" onclick="filterS('KOSPI',this)">코스피</button>
-        <button class="ft" onclick="filterS('KOSDAQ',this)">코스닥</button>
-      </div>
-      <div style="display:grid;grid-template-columns:auto 1fr auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
-        <span>#</span><span>종목</span><span style="text-align:right">종가</span><span style="text-align:right">등락률</span><span style="text-align:right">시가총액</span>
-      </div>
-      <div id="stock-list"><div class="loading">로딩 중...</div></div>
-    </div>
+<div class="sec-hd"><div class="sec-title">한국 주식</div></div>
+<div class="card">
+  <div class="card-hd"><span class="card-title">시가총액 상위 · RSI(14) 기술지표</span></div>
+  <div class="filter-tabs">
+    <button class="ft active" onclick="filterS('ALL',this)">전체</button>
+    <button class="ft" onclick="filterS('KOSPI',this)">코스피</button>
+    <button class="ft" onclick="filterS('KOSDAQ',this)">코스닥</button>
   </div>
+  <div style="display:grid;grid-template-columns:auto 1fr auto auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+    <span>#</span><span>종목</span><span style="text-align:right">종가</span><span style="text-align:right">등락률</span><span style="text-align:right">RSI(14)</span><span style="text-align:right">시가총액</span>
+  </div>
+  <div id="stock-list"><div class="loading">로딩 중...</div></div>
+</div>
+
+<div class="grid2">
   <div>
     <div class="sec-hd"><div class="sec-title">기업 재무지표</div></div>
     <div class="card">
@@ -105,6 +104,10 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
       </div>
       <div id="finance-list"><div class="loading">로딩 중...</div></div>
     </div>
+  </div>
+  <div>
+    <div class="sec-hd"><div class="sec-title">시장 위험 지표</div></div>
+    <div class="grid4" id="risk-grid"><div class="loading" style="grid-column:1/-1">로딩 중...</div></div>
   </div>
 </div>
 
@@ -116,9 +119,6 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
   <div id="us-stock-list"><div class="loading">로딩 중...</div></div>
 </div>
-
-<div class="sec-hd"><div class="sec-title">시장 위험 지표</div></div>
-<div class="grid4" id="risk-grid"><div class="loading" style="grid-column:1/-1">로딩 중...</div></div>
 
 <div class="sec-hd" style="margin-top:8px"><div class="sec-title">파생상품 지수</div></div>
 <div class="card">
@@ -135,14 +135,15 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 function latestByCode(list){const m={};(list||[]).forEach(s=>{const k=s.stock_code;if(!k)return;if(!m[k]||(s.base_date||'')>(m[k].base_date||''))m[k]=s;});return Object.values(m);}
 let stockAll=[];let rsiMap={};
-function stockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.slice(0,20).map((s,i)=>{const cap=s.market_cap?((s.market_cap/1e12).toFixed(1)+'조'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row stock-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.market_type||''} ${s.stock_code||''}</div></div><div class="s-price">${fmt(s.close_price,'',0)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
+function stockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.slice(0,25).map((s,i)=>{const cap=s.market_cap?((s.market_cap/1e12).toFixed(1)+'조'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row stock-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.market_type||''} ${s.stock_code||''}</div></div><div class="s-price">${fmt(s.close_price,'',0)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-rsi">${rsiCell(s.stock_code)}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
 function rsiCell(code){const r=rsiMap[code];if(!r)return '<span class="neutral">-</span>';const v=parseFloat(r.value);if(isNaN(v))return '<span class="neutral">-</span>';if(v>=70)return `<span style="color:var(--red)">${v.toFixed(1)} 과매수</span>`;if(v<=30)return `<span style="color:var(--yellow)">${v.toFixed(1)} 과매도</span>`;return `<span class="neutral">${v.toFixed(1)}</span>`;}
-function usStockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.map((s,i)=>{const cap=s.market_cap?('$'+(s.market_cap/1e9).toFixed(1)+'B'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row us-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.stock_code||''} · ${s.base_date||''}</div></div><div class="s-price">$${fmt(s.close_price,'',2)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-rsi">${rsiCell(s.stock_code)}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
+function usStockHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';return list.slice(0,25).map((s,i)=>{const cap=s.market_cap?('$'+(s.market_cap/1e9).toFixed(1)+'B'):'';const chg=parseFloat(s.flt_rt||0);return `<div class="row us-row"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.stock_code||''} · ${s.base_date||''}</div></div><div class="s-price">$${fmt(s.close_price,'',2)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-rsi">${rsiCell(s.stock_code)}</div><div class="s-cap">${cap}</div></div>`;}).join('');}
 function filterS(mkt,btn){btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('stock-list').innerHTML=stockHtml(mkt==='ALL'?stockAll:stockAll.filter(s=>s.market_type===mkt));}
 async function loadInvest(){
   try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];
     inds.forEach(i=>{
       if(i.indicator_code&&i.indicator_code.indexOf('US_RSI_')===0)rsiMap[i.indicator_code.replace('US_RSI_','')]=i;
+      if(i.indicator_code&&i.indicator_code.indexOf('KR_RSI_')===0)rsiMap[i.indicator_code.replace('KR_RSI_','')]=i;
       if(i.indicator_code==='KOSPI'){document.getElementById('i-kospi').textContent=fmt(i.value,'',2);document.getElementById('i-kospi-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
       if(i.indicator_code==='KOSDAQ'){document.getElementById('i-kosdaq').textContent=fmt(i.value,'',2);document.getElementById('i-kosdaq-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
       if(i.indicator_code==='KOSPI200'){document.getElementById('i-kospi200').textContent=fmt(i.value,'',2);document.getElementById('i-kospi200-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
