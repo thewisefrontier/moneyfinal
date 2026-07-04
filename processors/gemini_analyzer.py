@@ -24,8 +24,11 @@ DISCLAIMER = "본 정보는 투자 참고용이며, 투자 판단 및 손실에 
 # 무관한 지표(예: 해외파생 종목)만 들어가는 문제가 있어 코드 지정 방식으로 변경)
 KEY_INDICATOR_CODES = [
     'BASE_RATE', 'FED_RATE', 'USD_KRW', 'USD_INDEX', 'M2_TOTAL',
-    'KOSPI', 'KOSDAQ', 'KOSPI200', 'VIX', 'WTI', 'GOLD', 'US_YIELD_CURVE'
+    'KOSPI', 'KOSDAQ', 'KOSPI200', 'VIX', 'WTI', 'GOLD', 'US_YIELD_CURVE', 'US_CPI'
 ]
+
+# 시장 브리핑에 포함할 시가총액 상위 종목 수
+TOP_STOCKS = [('KOSPI', 5), ('KOSDAQ', 3), ('US', 5)]
 
 SYSTEM_PROMPT = """당신은 금융 데이터 분석 AI입니다.
 
@@ -38,7 +41,7 @@ SYSTEM_PROMPT = """당신은 금융 데이터 분석 AI입니다.
 6. 한국어로 간결하게 작성하세요."""
 
 
-def call_gemini(prompt: str, max_tokens: int = 400) -> str:
+def call_gemini(prompt: str, max_tokens: int = 500) -> str:
     try:
         response = client.models.generate_content(
             model=MODEL,
@@ -75,21 +78,33 @@ def analyze_rates(rates: list) -> str:
     )
 
 
-def analyze_market(indicators: list) -> str:
-    if not indicators:
+def analyze_market(indicators: list, stocks_by_market: list) -> str:
+    if not indicators and not stocks_by_market:
         return "시장 지표 수집 중"
-    data_text = "\n".join([
+    ind_text = "\n".join([
         f"- {i['indicator_name']}: {i['value']} {i.get('unit', '')} (출처: {i.get('source', '')})"
         for i in indicators
     ])
+    stock_lines = []
+    for market, stocks in stocks_by_market:
+        unit = 'USD' if market == 'US' else '원'
+        for s in stocks:
+            chg = s.get('flt_rt')
+            chg_txt = f", 등락률 {chg}%" if chg is not None else ""
+            stock_lines.append(f"- [{market}] {s.get('stock_name')}: 종가 {s.get('close_price')}{unit}{chg_txt}")
+    stock_text = "\n".join(stock_lines)
     return call_gemini(
-        f"""아래는 오늘 수집된 실제 거시경제 지표 데이터입니다.
-이 수치들만을 바탕으로 현황을 2-3문장으로 객관적으로 설명하세요.
+        f"""아래는 오늘 수집된 실제 시장 데이터입니다.
+이 수치들만을 바탕으로 현황을 4-5문장으로 객관적으로 설명하세요.
+지수와 거시지표를 먼저 언급하고, 이어서 시가총액 상위 종목의 종가와 등락률을 언급하세요.
 데이터에 없는 내용, 전망, 예측은 절대 추가하지 마세요.
 
 [수집된 거시지표 데이터]
-{data_text}""",
-        400
+{ind_text}
+
+[시가총액 상위 종목]
+{stock_text}""",
+        500
     )
 
 
@@ -121,6 +136,26 @@ def get_key_indicators() -> list:
     return list(latest.values())
 
 
+def get_top_stocks() -> list:
+    """시장별 시가총액 상위 종목 조회 (종목별 최신일 dedupe)"""
+    out = []
+    for market, n in TOP_STOCKS:
+        rows = supabase_select('stock_prices', {
+            'select': 'stock_code,stock_name,close_price,flt_rt,market_cap,base_date',
+            'market_type': f'eq.{market}',
+            'order': 'base_date.desc,market_cap.desc',
+            'limit': '60'
+        })
+        latest = {}
+        for r in rows:
+            code = r.get('stock_code')
+            if code and code not in latest:
+                latest[code] = r
+        top = sorted(latest.values(), key=lambda x: x.get('market_cap') or 0, reverse=True)[:n]
+        out.append((market, top))
+    return out
+
+
 def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
@@ -131,8 +166,10 @@ def main():
         'limit': '10'
     })
     indicators = get_key_indicators()
+    top_stocks = get_top_stocks()
 
-    logger.info(f"금리 {len(rates)}건, 지표 {len(indicators)}건 조회")
+    stock_count = sum(len(s) for _, s in top_stocks)
+    logger.info(f"금리 {len(rates)}건, 지표 {len(indicators)}건, 종목 {stock_count}건 조회")
 
     if not rates and not indicators:
         logger.warning("분석할 데이터 없음. 종료.")
@@ -141,7 +178,7 @@ def main():
     rate_analysis = analyze_rates(rates)
     logger.info("금리 분석 완료")
 
-    market_analysis = analyze_market(indicators)
+    market_analysis = analyze_market(indicators, top_stocks)
     logger.info("시장 분석 완료")
 
     overall_signal = generate_signal(indicators)
@@ -151,7 +188,7 @@ def main():
         'headline': f"{today} 금융 데이터 현황",
         'rate_summary': rate_analysis,
         'market_summary': market_analysis,
-        'full_text': f"{rate_analysis}\n\n{market_analysis}\n\n{DISCLAIMER}",
+        'full_text': f"{market_analysis}\n\n{rate_analysis}\n\n{DISCLAIMER}",
         'is_published': True
     }
     supabase_upsert('daily_briefing', [briefing])
