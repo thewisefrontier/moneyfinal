@@ -20,6 +20,13 @@ MODEL = 'gemini-3.1-flash-lite'
 
 DISCLAIMER = "본 정보는 투자 참고용이며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: 공공기관 공시 데이터"
 
+# 브리핑에 사용할 핵심 거시지표 (fetched_at.desc limit 방식은 최근 수집 파이프라인에 따라
+# 무관한 지표(예: 해외파생 종목)만 들어가는 문제가 있어 코드 지정 방식으로 변경)
+KEY_INDICATOR_CODES = [
+    'BASE_RATE', 'FED_RATE', 'USD_KRW', 'USD_INDEX', 'M2_TOTAL',
+    'KOSPI', 'KOSDAQ', 'KOSPI200', 'VIX', 'WTI', 'GOLD', 'US_YIELD_CURVE'
+]
+
 SYSTEM_PROMPT = """당신은 금융 데이터 분석 AI입니다.
 
 엄격한 규칙:
@@ -31,7 +38,7 @@ SYSTEM_PROMPT = """당신은 금융 데이터 분석 AI입니다.
 6. 한국어로 간결하게 작성하세요."""
 
 
-def call_gemini(prompt: str, max_tokens: int = 300) -> str:
+def call_gemini(prompt: str, max_tokens: int = 400) -> str:
     try:
         response = client.models.generate_content(
             model=MODEL,
@@ -64,7 +71,7 @@ def analyze_rates(rates: list) -> str:
 
 [수집된 금리 데이터 TOP5]
 {data_text}""",
-        150
+        400
     )
 
 
@@ -82,7 +89,7 @@ def analyze_market(indicators: list) -> str:
 
 [수집된 거시지표 데이터]
 {data_text}""",
-        150
+        400
     )
 
 
@@ -98,6 +105,22 @@ def generate_signal(indicators: list) -> str:
     return 'green'
 
 
+def get_key_indicators() -> list:
+    """핵심 지표 코드별 최신값 조회"""
+    rows = supabase_select('market_indicators', {
+        'select': '*',
+        'indicator_code': f"in.({','.join(KEY_INDICATOR_CODES)})",
+        'order': 'fetched_at.desc',
+        'limit': '200'
+    })
+    latest = {}
+    for r in rows:
+        code = r.get('indicator_code')
+        if code and code not in latest:
+            latest[code] = r
+    return list(latest.values())
+
+
 def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
@@ -107,11 +130,7 @@ def main():
         'order': 'max_rate.desc',
         'limit': '10'
     })
-    indicators = supabase_select('market_indicators', {
-        'select': '*',
-        'order': 'fetched_at.desc',
-        'limit': '10'
-    })
+    indicators = get_key_indicators()
 
     logger.info(f"금리 {len(rates)}건, 지표 {len(indicators)}건 조회")
 
