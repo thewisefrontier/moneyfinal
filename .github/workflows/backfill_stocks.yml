@@ -1,0 +1,29 @@
+name: 국내주식 히스토리 백필 (수동)
+# RSI 계산용 과거 시세 1회성 백필. 안정화 후에도 스케줄 편입 없이 수동 전용 유지.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '백필 기간 (달력일 기준)'
+        required: false
+        default: '35'
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 국내주식 시세 백필
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+        run: python fetchers/stock_prices.py backfill ${{ github.event.inputs.days }}
+      - name: 국내주식 RSI 계산
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python processors/kr_technical.py
