@@ -2,6 +2,7 @@
 FRED 글로벌 지표 수집기 (확장)
 - 미국 기준금리, CPI, 달러인덱스, 장단기금리차
 - VIX 공포지수, WTI 원유
+- 미국 주가지수: S&P500, 다우존스, 나스닥종합 (일별)
 출처: fred.stlouisfed.org
 - 금 가격(GOLDAMGBD228NLBM)은 LBMA 데이터 중단으로 FRED에서 2021년경 대체 없이 폐지되어 제외함
 """
@@ -60,6 +61,27 @@ SERIES = [
         'indicator_name': 'WTI 원유가격',
         'unit': 'USD/배럴',
         'category': '원자재'
+    },
+    {
+        'series_id': 'SP500',
+        'indicator_code': 'US_SP500',
+        'indicator_name': 'S&P 500',
+        'unit': 'Index',
+        'category': '주식지수'
+    },
+    {
+        'series_id': 'DJIA',
+        'indicator_code': 'US_DJIA',
+        'indicator_name': '다우존스 산업평균',
+        'unit': 'Index',
+        'category': '주식지수'
+    },
+    {
+        'series_id': 'NASDAQCOM',
+        'indicator_code': 'US_NASDAQ',
+        'indicator_name': '나스닥 종합지수',
+        'unit': 'Index',
+        'category': '주식지수'
     },
 ]
 
