@@ -6,6 +6,7 @@ import json
 import logging
 import os
 import sys
+from datetime import datetime, timedelta, timezone
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_select, supabase_select_all, today_kst
 
@@ -24,9 +25,16 @@ def save_json(filename: str, data):
 
 
 def export_rates():
-    """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)"""
+    """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)
+
+    단종 상품 잔존 방지: fetcher는 upsert만 하므로 API에서 사라진(공시 중단된)
+    상품이 rates 테이블에 영구 잔존함. 최근 3일 내 재수집된 row만 export하여
+    현재 공시 중인 상품만 노출 (3일 = daily 파이프라인 실패 1~2회 버퍼).
+    """
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=3)).isoformat()
     rates = supabase_select_all('rates', {
         'select': '*',
+        'fetched_at': f'gte.{cutoff}',
         'order': 'max_rate.desc'
     })
 
