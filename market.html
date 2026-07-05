@@ -125,7 +125,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 
 <div class="sec-hd" style="margin-top:8px"><div class="sec-title">파생상품 지수</div></div>
 <div class="card">
-  <div class="card-hd"><span class="card-title">주요 파생상품 시세</span></div>
+  <div class="card-hd"><span class="card-title">해외파생거래 · 파생결합증권</span></div>
   <div id="deriv-list"><div class="loading">로딩 중...</div></div>
 </div>
 
@@ -159,7 +159,7 @@ async function loadInvest(){
     });
     const rg=document.getElementById('risk-grid');const riskInds=inds.filter(i=>['VIX','WTI','GOLD','US_YIELD_CURVE'].includes(i.indicator_code));
     rg.innerHTML=riskInds.length?riskInds.map(i=>`<div class="kpi"><div class="kpi-label">${i.indicator_name}</div><div class="kpi-value ${sc(i.signal)}">${fmt(i.value,'',2)}</div><div class="kpi-sub">${i.unit}</div></div>`).join(''):'<div class="empty" style="grid-column:1/-1">데이터 없음</div>';
-    const derivs=inds.filter(i=>i.category==='파생상품').slice(0,10);
+    const derivs=inds.filter(i=>['해외파생거래','파생결합증권'].includes(i.category)).slice(0,10);
     document.getElementById('deriv-list').innerHTML=derivs.length?derivs.map(i=>`<div class="row ind-row"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',2)}</span> <span class="ind-unit">${i.unit}</span></div></div>`).join(''):'<div class="empty">데이터 수집 예정</div>';
   }catch(e){}
   try{const r=await fetch('data/stocks.json');const d=await r.json();stockAll=latestByCode([...(d.kospi||[]),...(d.kosdaq||[])]).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('stock-list').innerHTML=stockHtml(stockAll);const us=latestByCode(d.us||[]).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('us-stock-list').innerHTML=usStockHtml(us);}catch(e){document.getElementById('stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';document.getElementById('us-stock-list').innerHTML='<div class="empty">주식 데이터 수집 예정</div>';}
