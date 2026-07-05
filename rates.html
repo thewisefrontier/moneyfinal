@@ -240,8 +240,7 @@ function rowHtml(r,i){
   const sp=isSpecial(r)?`<span class="badge sp">특판 ~${fmtDay(r.dcls_end_day)}</span>`:'';
   let calcHtml='';
   if(r.category==='적금'){
-    const minAmt=Math.max(parseInt(r.max_limit)||100,1000000);
-    calcHtml=`<div class="interest-calc"><div class="calc-row"><span class="calc-label">투자액</span><input type="number" class="calc-input" id="amt-${i}" value="${minAmt}" min="1000"> 원</div><div class="calc-row"><span class="calc-label">기간</span><select class="calc-input" id="mth-${i}"><option value="3">3개월</option><option value="6">6개월</option><option value="12" selected>12개월</option><option value="24">24개월</option></select></div><div class="calc-row"><span class="calc-label">세금</span><label style="color:var(--text)"><input type="checkbox" id="tax-${i}"> 세후(이자소득세 15.4%)</label></div><div class="calc-result" id="res-${i}"><div class="result-item"><span class="result-label">예상 이자:</span><span class="result-value">-</span></div></div></div><script>function calcInterest${i}(){const amt=parseFloat(document.getElementById('amt-${i}').value)||0;const mth=parseInt(document.getElementById('mth-${i}').value)||12;const rate=${r.max_rate}||0;const tax=document.getElementById('tax-${i}').checked;const interest=(amt*(rate/100)*(mth/12))||0;const aftertax=interest*(1-0.154);document.getElementById('res-${i}').innerHTML=\`<div class="result-item"><span class="result-label">예상 이자:</span><span class="result-value">\${(tax?aftertax:interest).toLocaleString('ko-KR',{maximumFractionDigits:0})}원</span></div>\`;} document.getElementById('amt-${i}').oninput=calcInterest${i};document.getElementById('mth-${i}').onchange=calcInterest${i};document.getElementById('tax-${i}').onchange=calcInterest${i};calcInterest${i}();</script>`;
+    calcHtml=`<div class="interest-calc" data-rate="${r.max_rate||0}" onclick="event.stopPropagation()"><div class="calc-row"><span class="calc-label">월 납입액</span><input type="number" class="calc-input ic-amt" value="100000" min="1000" step="10000"> 원</div><div class="calc-row"><span class="calc-label">기간</span><select class="calc-input ic-mth"><option value="3">3개월</option><option value="6">6개월</option><option value="12" selected>12개월</option><option value="24">24개월</option></select><label style="color:var(--text);font-size:11px"><input type="checkbox" class="ic-tax"> 세후(이자소득세 15.4%)</label></div><div class="calc-result"><div class="result-item"><span class="result-label">총 납입액</span><span class="ic-total">-</span></div><div class="result-item"><span class="result-label">예상 이자 (최고금리·단리)</span><span class="result-value ic-res">-</span></div></div></div>`;
   }
   const detail=[
     ['가입대상',r.join_member],['가입방법',r.join_method],['우대조건',r.spcl_cnd],
@@ -266,6 +265,7 @@ function render(){
   let html=list.slice(0,shown).map(rowHtml).join('');
   if(list.length>shown)html+=`<button class="more-btn" onclick="shown+=50;render()">더 보기 (${list.length-shown}건 남음)</button>`;
   el.innerHTML=html;
+  el.querySelectorAll('.interest-calc').forEach(calcInterest);
 }
 async function loadRates(){
   try{
@@ -282,6 +282,18 @@ loadRates();
 updateSortUI();
 async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const labels={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥'};let html='';inds.forEach(i=>{if(!labels[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':fmt(i.value,'',i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:'')+(i.unit==='%'?' %':'');html+=`<div class="ti"><span class="name">${labels[i.indicator_code]}</span><span class="${sc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=html+html;}catch(e){}}
 loadTicker();
+function calcInterest(box){
+  const amt=parseFloat(box.querySelector('.ic-amt').value)||0;
+  const m=parseInt(box.querySelector('.ic-mth').value)||12;
+  const rate=parseFloat(box.dataset.rate)||0;
+  let interest=amt*(rate/100)*(m*(m+1)/2)/12;
+  if(box.querySelector('.ic-tax').checked)interest*=(1-0.154);
+  box.querySelector('.ic-total').textContent=(amt*m).toLocaleString('ko-KR')+'원';
+  box.querySelector('.ic-res').textContent=Math.round(interest).toLocaleString('ko-KR')+'원';
+}
+const listEl=document.getElementById('list');
+listEl.addEventListener('input',e=>{const b=e.target.closest('.interest-calc');if(b)calcInterest(b);});
+listEl.addEventListener('change',e=>{const b=e.target.closest('.interest-calc');if(b)calcInterest(b);});
 </script>
 </body>
 </html>
