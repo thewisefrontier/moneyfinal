@@ -24,7 +24,8 @@ DISCLAIMER = "본 정보는 투자 참고용이며, 투자 판단 및 손실에 
 # 무관한 지표(예: 해외파생 종목)만 들어가는 문제가 있어 코드 지정 방식으로 변경)
 KEY_INDICATOR_CODES = [
     'BASE_RATE', 'FED_RATE', 'USD_KRW', 'USD_INDEX', 'M2_TOTAL',
-    'KOSPI', 'KOSDAQ', 'KOSPI200', 'VIX', 'WTI', 'GOLD', 'US_YIELD_CURVE', 'US_CPI'
+    'KOSPI', 'KOSDAQ', 'KOSPI200', 'VIX', 'WTI', 'GOLD', 'US_YIELD_CURVE', 'US_CPI',
+    'US_SP500', 'US_DJIA', 'US_NASDAQ'
 ]
 
 # 시장 브리핑에 포함할 시가총액 상위 종목 수
