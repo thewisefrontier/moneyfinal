@@ -192,6 +192,46 @@ def export_short_selling():
     })
 
 
+
+def export_loans():
+    """대출상품 export (주담대/전세/신용/사업자)
+
+    월 1회(매월 21일) 수집이므로 40일 cutoff (월간 주기 + 실패 버퍼).
+    단종 상품 잔존 방지 목적은 export_rates()와 동일.
+    """
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=40)).isoformat()
+    common = {'select': '*', 'fetched_at': f'gte.{cutoff}'}
+
+    mortgage = supabase_select_all('mortgage_loans', {**common, 'order': 'lend_rate_min.asc'})
+    rent = supabase_select_all('rent_loans', {**common, 'order': 'lend_rate_min.asc'})
+    credit = supabase_select_all('credit_loans', {**common, 'order': 'crdt_grad_avg.asc'})
+    business = supabase_select_all('business_loans', {**common, 'order': 'lend_rate_min.asc'})
+
+    save_json('loans.json', {
+        'updated_at': today_kst(),
+        'total': len(mortgage) + len(rent) + len(credit) + len(business),
+        'mortgage': mortgage,
+        'rent': rent,
+        'credit': credit,
+        'business': business
+    })
+
+
+def export_annuity():
+    """연금저축 export"""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=40)).isoformat()
+    annuity = supabase_select_all('annuity_savings', {
+        'select': '*',
+        'fetched_at': f'gte.{cutoff}',
+        'order': 'avg_prft_rate.desc'
+    })
+    save_json('annuity.json', {
+        'updated_at': today_kst(),
+        'total': len(annuity),
+        'annuity': annuity
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -203,6 +243,8 @@ def main():
     export_corp_finance()
     export_dividends()
     export_short_selling()
+    export_loans()
+    export_annuity()
     logger.info("=== JSON Export 완료 ===")
 
 
