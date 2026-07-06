@@ -1,0 +1,26 @@
+name: 대출·연금저축상품
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 23 20 * *'   # 매월 21일 08:00 KST
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 대출상품 4종
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FINLIFE_API_KEY: ${{ secrets.FINLIFE_API_KEY }}
+        run: python fetchers/loan_rates.py
+      - name: 연금저축
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FINLIFE_API_KEY: ${{ secrets.FINLIFE_API_KEY }}
+        run: python fetchers/annuity_savings.py
