@@ -79,6 +79,8 @@ def fetch_fss_products(product_type: str, top_fin_grp_no: str = '020000') -> lis
                 rate = float(opt.get('intr_rate', 0) or 0)
                 max_rate = float(opt.get('intr_rate2', 0) or 0)
                 results.append({
+                    'fin_prdt_cd': fin_prdt_cd,
+                    'dcls_month': product.get('dcls_month', ''),
                     'institution': product.get('kor_co_nm', ''),
                     'product_name': product.get('fin_prdt_nm', ''),
                     'category': category,
