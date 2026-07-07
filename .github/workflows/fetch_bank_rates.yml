@@ -1,17 +1,34 @@
 name: 예금적금금리
 on:
   workflow_dispatch:
+  schedule:
+    # 매월 21일 08:00 KST (20일 23:00 UTC) — finlife 월간 공시 갱신 주기, loan과 동일
+    - cron: '0 23 20 * *'
 jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with: {python-version: '3.11', cache: pip}
       - run: pip install -r requirements.txt
-      - env:
+      - name: 예금적금 수집
+        env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FINLIFE_API_KEY: ${{ secrets.FINLIFE_API_KEY }}
         run: python fetchers/bank_rates.py
+      - name: Export
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || (git commit -m "data: bank rates update" && git pull --rebase origin main && git push)
