@@ -1,0 +1,32 @@
+name: fix-ticker-pos
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: move ticker above header
+        run: |
+          python3 - <<'EOF'
+          import glob
+          TD='<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>'
+          n=0
+          for f in sorted(glob.glob('*.html')):
+              src=open(f,encoding='utf-8').read()
+              if TD not in src: continue
+              if src.find(TD)>src.find('<header'):
+                  src=src.replace('\n'+TD,'',1).replace('<header',TD+'\n<header',1)
+                  assert src.find(TD)<src.find('<header') and src.count(TD)==1,f
+                  open(f,'w',encoding='utf-8').write(src); n+=1
+          print('moved:',n)
+          assert n==14,n
+          EOF
+      - name: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: 티커바를 헤더 위로 이동 (기존 페이지와 배치 통일)"
+          git push
