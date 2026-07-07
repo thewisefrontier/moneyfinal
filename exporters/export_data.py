@@ -28,10 +28,10 @@ def export_rates():
     """금리 데이터 export (예금/적금/저축은행/CMA/파킹/펀드/실손보험 포함)
 
     단종 상품 잔존 방지: fetcher는 upsert만 하므로 API에서 사라진(공시 중단된)
-    상품이 rates 테이블에 영구 잔존함. 최근 3일 내 재수집된 row만 export하여
-    현재 공시 중인 상품만 노출 (3일 = daily 파이프라인 실패 1~2회 버퍼).
+    상품이 rates 테이블에 영구 잔존함. 최근 40일 내 재수집된 row만 export하여
+    현재 공시 중인 상품만 노출 (월 1회 수집 주기 + 실패 버퍼, loans와 동일).
     """
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=3)).isoformat()
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=40)).isoformat()
     rates = supabase_select_all('rates', {
         'select': '*',
         'fetched_at': f'gte.{cutoff}',
