@@ -1,0 +1,18 @@
+name: fix-ticker
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: patch ticker
+        run: python3 scripts/patch_ticker.py
+      - name: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "feat: 전 페이지 티커바 추가 및 티커 라벨 통일"
+          git push
