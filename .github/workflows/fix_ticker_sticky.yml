@@ -1,0 +1,22 @@
+name: fix-ticker-sticky
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: make ticker sticky
+        run: |
+          files=$(grep -l 'ticker-inner' *.html)
+          sed -i 's|overflow:hidden;height:30px;display:flex;align-items:center}|overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}|' $files
+          sed -i 's|position:sticky;top:0;z-index:100}|position:sticky;top:30px;z-index:100}|' $files
+          echo "sticky 적용: $(grep -l 'z-index:101' *.html | wc -l) / header 조정: $(grep -l 'top:30px;z-index:100' *.html | wc -l)"
+      - name: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "fix: 티커바 스크롤 고정 (sticky)"
+          git push
