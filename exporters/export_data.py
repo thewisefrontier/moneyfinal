@@ -107,19 +107,6 @@ def export_corporate_alerts():
     })
 
 
-def export_ipo():
-    """IPO 현황 export"""
-    ipo = supabase_select('ipo_status', {
-        'select': '*',
-        'order': 'fetched_at.desc',
-        'limit': '50'
-    })
-    save_json('ipo.json', {
-        'updated_at': today_kst(),
-        'ipo_list': ipo
-    })
-
-
 def export_stocks():
     """주식 시세 export - 시가총액 상위 (KOSPI/KOSDAQ/US)"""
     # base_date.desc 우선: 히스토리가 쌓여도 최신일 행이 항상 limit 안에 포함됨
@@ -162,35 +149,6 @@ def export_corp_finance():
         'updated_at': today_kst(),
         'companies': finance
     })
-
-
-def export_dividends():
-    """주식 배당 정보 export"""
-    dividends = supabase_select('stock_dividends', {
-        'select': '*',
-        'order': 'dps.desc',
-        'limit': '100'
-    })
-    save_json('dividends.json', {
-        'updated_at': today_kst(),
-        'total': len(dividends),
-        'dividends': dividends
-    })
-
-
-def export_short_selling():
-    """공매도(대차) 정보 export - 잔고 상위"""
-    short_data = supabase_select('stock_short', {
-        'select': '*',
-        'order': 'short_amount.desc',
-        'limit': '100'
-    })
-    save_json('short_selling.json', {
-        'updated_at': today_kst(),
-        'total': len(short_data),
-        'short_list': short_data
-    })
-
 
 
 def export_loans():
@@ -238,11 +196,8 @@ def main():
     export_market()
     export_briefing()
     export_corporate_alerts()
-    export_ipo()
     export_stocks()
     export_corp_finance()
-    export_dividends()
-    export_short_selling()
     export_loans()
     export_annuity()
     logger.info("=== JSON Export 완료 ===")
