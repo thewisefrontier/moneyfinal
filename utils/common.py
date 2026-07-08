@@ -1,9 +1,11 @@
 """
 공통 유틸리티 - Supabase REST API 헬퍼
 """
+import atexit
 import os
 import logging
 import requests
+import sys
 from urllib.parse import urlencode, quote
 from datetime import datetime, timedelta
 import pytz
@@ -47,6 +49,27 @@ CONFLICT_COLUMNS = {
     'business_loans': 'fin_co_no,fin_prdt_cd',
     'annuity_savings': 'fin_co_no,fin_prdt_cd',
 }
+
+
+# upsert 실패 시 워크플로우가 성공(exit 0)으로 표시되지 않도록 프로세스 종료 코드 관리.
+# 여러 upsert 중 일부만 실패해도 모두 처리한 뒤 non-zero exit.
+_UPSERT_FAILURES = 0
+
+
+def _mark_upsert_failure(table: str, reason: str) -> None:
+    global _UPSERT_FAILURES
+    _UPSERT_FAILURES += 1
+    logging.error(f"[{table}] upsert 실패 누적 {_UPSERT_FAILURES}건 (사유: {reason})")
+
+
+def _exit_if_upsert_failures() -> None:
+    if _UPSERT_FAILURES > 0:
+        logging.error(f"⚠️ upsert 실패 총 {_UPSERT_FAILURES}건 → 프로세스 종료 코드 1")
+        # atexit hook 내부에서는 sys.exit이 무시되므로 os._exit 사용
+        os._exit(1)
+
+
+atexit.register(_exit_if_upsert_failures)
 
 
 def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) -> requests.Response:
@@ -111,10 +134,11 @@ def supabase_upsert(table: str, data: list) -> bool:
             res.raise_for_status()
         logging.info(f"[{table}] {len(data)}건 upsert 완료")
         return True
-    except requests.exceptions.HTTPError:
+    except requests.exceptions.HTTPError as e:
+        _mark_upsert_failure(table, f"HTTP {e.response.status_code if e.response is not None else '?'}")
         return False
     except Exception as e:
-        logging.error(f"[{table}] upsert 오류: {type(e).__name__}")
+        _mark_upsert_failure(table, type(e).__name__)
         return False
 
 
