@@ -72,6 +72,25 @@ def _exit_if_upsert_failures() -> None:
 atexit.register(_exit_if_upsert_failures)
 
 
+def _dedupe_by_conflict(table: str, data: list, conflict: str) -> list:
+    """배치 내 conflict key 조합 중복 제거.
+
+    PostgreSQL은 ON CONFLICT DO UPDATE 시 같은 배치 안에 conflict 키 조합이
+    중복되면 오류(21000)를 반환한다. 여기서 미리 제거하여 fetcher 개별 대응 부담을 없앰.
+    같은 키 조합이면 마지막 행이 최종 반영 (개별 fetcher의 기존 dedupe 관례와 일치).
+    """
+    if not conflict or len(data) <= 1:
+        return data
+    keys = [k.strip() for k in conflict.split(',')]
+    seen = {}
+    for row in data:
+        seen[tuple(row.get(k) for k in keys)] = row
+    removed = len(data) - len(seen)
+    if removed > 0:
+        logging.warning(f"[{table}] 배치 내 conflict key 중복 {removed}건 자동 제거 (원본 {len(data)} → {len(seen)})")
+    return list(seen.values())
+
+
 def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) -> requests.Response:
     """
     공공데이터포털 API 전용 GET 요청.
@@ -118,6 +137,9 @@ def supabase_upsert(table: str, data: list) -> bool:
         return True
 
     conflict = CONFLICT_COLUMNS.get(table, '')
+    # 배치 내 conflict key 중복 제거 (모든 fetcher에 공통 적용, ON CONFLICT 오류 방지)
+    data = _dedupe_by_conflict(table, data, conflict)
+
     url = f"{SUPABASE_URL}/rest/v1/{table}"
     if conflict:
         url += f"?on_conflict={conflict}"
