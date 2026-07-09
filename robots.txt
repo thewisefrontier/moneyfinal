@@ -1,5 +1,14 @@
+# robots.txt - 머니파이널
+# 사이트: https://moneyfinal.pages.dev
+
 User-agent: *
 Allow: /
+
+# 원시 데이터 파일은 크롤링 대상 아님 (콘텐츠는 각 HTML 페이지에 렌더링됨)
 Disallow: /data/
+
+# 애드센스 크롤러 명시적 허용 (승인 심사 시 요구)
+User-agent: Mediapartners-Google
+Allow: /
 
 Sitemap: https://moneyfinal.pages.dev/sitemap.xml
