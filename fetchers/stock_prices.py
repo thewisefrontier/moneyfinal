@@ -111,7 +111,12 @@ def fetch_krx_stocks() -> list:
             logger.info(f"{market} 상장종목 {len(items)}건")
         except Exception as e:
             logger.error(f"{market} 종목 수집 오류: {type(e).__name__}")
-    return results
+    # stocks 테이블 conflict 컬럼(stock_code) 기준 중복 제거
+    # (KOSPI/KOSDAQ 응답 사이 이전상장 종목 등 겹칠 때 ON CONFLICT 배치 오류 예방)
+    seen = {}
+    for r in results:
+        seen[r['stock_code']] = r
+    return list(seen.values())
 
 
 def run_daily():
