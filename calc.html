@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>계산기 모음 | 머니파이널</title>
 <meta name="description" content="연봉 실수령액, 환율, 예적금 이자, 대출 상환, 부동산 복비·취득세, 평수, 로또 세금 등 재테크 계산기 모음.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/calc">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="계산기 모음 | 머니파이널">
+<meta property="og:description" content="연봉 실수령액, 환율, 예적금 이자, 대출 상환, 부동산 복비·취득세, 평수, 로또 세금 등 재테크 계산기 모음.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/calc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="계산기 모음 | 머니파이널">
+<meta name="twitter:description" content="연봉 실수령액, 환율, 예적금 이자, 대출 상환, 부동산 복비·취득세, 평수, 로또 세금 등 재테크 계산기 모음.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"계산기 모음","description":"연봉 실수령액, 환율, 예적금 이자, 대출 상환, 부동산 복비·취득세, 평수, 로또 세금 등 재테크 계산기 모음.","url":"https://moneyfinal.pages.dev/calc","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -76,7 +88,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <a class="cc" href="calc-date.html"><div class="cc-icon">📅</div><div class="cc-title">기간·날짜 계산기</div><div class="cc-desc">두 날짜 사이 기간과 특정일로부터 N일 후 날짜를 계산합니다.</div></a>
 </div>
 </main>
-<footer>© 2026 머니파이널 · 세상의 모든 재테크</footer>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
 loadTicker();
 </script>
