@@ -183,8 +183,13 @@ def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
 
+    # 실손보험(category='실손보험')은 rate/max_rate 컬럼에 금리(%)가 아닌
+    # 공공데이터포털 "기준 보험료"(원 단위 수치)가 들어있어 예금/적금과 단위가 다르다.
+    # 함께 정렬하면 보험료 수치가 금리로 오인되어 "15193.5%" 같은 오류 문구가 생성되므로
+    # 실제 금리(%) 상품인 예금/적금만 대상으로 한다.
     rates = supabase_select('rates', {
         'select': '*',
+        'category': 'in.(예금,적금)',
         'order': 'max_rate.desc',
         'limit': '10'
     })

@@ -43,11 +43,15 @@ def export_rates():
         cat = r.get('category', '기타')
         by_category.setdefault(cat, []).append(r)
 
+    # top20: 실손보험은 rate/max_rate 단위가 금리(%)가 아닌 공공데이터포털
+    # "기준 보험료"(원 단위)라서 예금/적금 금리와 섞어서 순위를 매기면 안 됨.
+    rate_only = [r for r in rates if r.get('category') != '실손보험']
+
     save_json('rates.json', {
         'updated_at': today_kst(),
         'total': len(rates),
         'by_category': by_category,
-        'top20': rates[:20]
+        'top20': rate_only[:20]
     })
 
 
