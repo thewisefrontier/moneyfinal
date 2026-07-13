@@ -1,4 +1,17 @@
 {
   "updated_at": "2026-07-13",
-  "companies": []
+  "companies": [
+    {
+      "stock_code": "005930",
+      "corp_name": "삼성전자",
+      "fiscal_year": 2025,
+      "revenue": 333605938000000,
+      "operating_profit": 43601051000000,
+      "net_profit": 45206805000000,
+      "per": 35.89,
+      "pbr": 3.72,
+      "roe": 10.36,
+      "eps": 7732.58
+    }
+  ]
 }
