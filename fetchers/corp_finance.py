@@ -7,7 +7,8 @@
 주의: 공공데이터포털 API는 PER/PBR/ROE/EPS를 직접 제공하지 않는다.
 대신 같은 종목의 stock_prices(종가, 시가총액, 상장주식수)와
 재무제표(순이익, 자본총계)를 결합해 표준 재무공식으로 직접 계산한다.
-계산값이므로 'is_calculated': True 로 명시해 API 원시값과 구분한다.
+(corp_finance 테이블에 계산값 여부를 표시하는 별도 컬럼은 없음 - API 원시값과
+구분이 필요하면 이 주석을 참고)
 
 EPS = 순이익 / 상장주식수
 PER = 종가 / EPS
@@ -207,7 +208,6 @@ def main():
             'pbr':              indicators['pbr'],
             'roe':              indicators['roe'],
             'eps':              indicators['eps'],
-            'is_calculated':    True,
             'fetched_at':       now_kst()
         })
         logger.info(f"✅ {stock['name']} 재무+지표 계산 완료 (EPS {indicators['eps']}, PER {indicators['per']})")
