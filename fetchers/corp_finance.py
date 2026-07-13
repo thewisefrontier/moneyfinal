@@ -14,7 +14,7 @@ PER = 종가 / EPS
 PBR = 시가총액 / 자본총계
 ROE = 순이익 / 자본총계 * 100
 """
-import logging, os, sys, time
+import logging, os, re, sys, time
 from datetime import datetime
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -44,7 +44,11 @@ def fetch_corp_finance_raw(stock: dict) -> dict | None:
     """요약재무제표조회 - 순이익, 자본총계 등 원시 재무항목 조회"""
     url = f"{BASE_URL}/GetFinaStatInfoService_V2/getSummFinaStat_V2"
     now = datetime.now(KST)
-    fiscal_year = now.year - 1 if now.month < 4 else now.year
+    # 상장기업 사업보고서는 회계연도 종료 후 익년 3월경(90일 이내) 공시된다.
+    # 따라서 4월 이후에는 "작년" 자료가, 4월 이전에는 아직 작년 자료가 공시되지 않았을 수 있어
+    # "재작년" 자료가 최신 공시분이다. (직전 로직은 반대로 아직 존재하지 않는 연도를 요청해
+    # 전 종목 조회가 실패하는 원인이었음)
+    fiscal_year = now.year - 2 if now.month < 4 else now.year - 1
     params = {'resultType':'json','numOfRows':1,'pageNo':1,'crno':stock['crno'],'bizYear':str(fiscal_year)}
     try:
         res = data_go_kr_get(url, API_KEY, params)
@@ -70,6 +74,40 @@ def fetch_corp_finance_raw(stock: dict) -> dict | None:
         return None
 
 
+def _normalize_listing_date(raw) -> str | None:
+    """상장일 필드 정규화.
+
+    data.go.kr 응답이 간헐적으로 2자리 연도(YY/MM/DD, 예: "75/06/11")로 내려와
+    Postgres date 컬럼에 그대로 넣으면 "date/time field value out of range" 오류로
+    upsert 배치 전체가 실패한다. YYYY-MM-DD, YYYYMMDD 형식은 그대로 통과시키고,
+    YY/MM/DD는 현재 연도 기준 pivot으로 세기를 판별해 ISO 형식으로 변환한다.
+    그 외 인식 불가 형식은 크래시 대신 경고 로그 후 None으로 저장한다.
+    """
+    if not raw:
+        return None
+    raw = str(raw).strip()
+    if not raw:
+        return None
+
+    m = re.match(r'^(\d{4})-(\d{2})-(\d{2})$', raw)
+    if m:
+        return raw
+
+    m = re.match(r'^(\d{4})(\d{2})(\d{2})$', raw)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+
+    m = re.match(r'^(\d{2})/(\d{2})/(\d{2})$', raw)
+    if m:
+        yy, mm, dd = int(m.group(1)), m.group(2), m.group(3)
+        current_yy = datetime.now(KST).year % 100
+        year = 2000 + yy if yy <= current_yy else 1900 + yy
+        return f"{year:04d}-{mm}-{dd}"
+
+    logger.warning(f"listing_date 형식 인식 불가, null 처리: {raw!r}")
+    return None
+
+
 def fetch_corp_info(stock: dict) -> dict | None:
     url = f"{BASE_URL}/GetCorpBasicInfoService_V2/getCorpOutline_V2"
     params = {'resultType':'json','numOfRows':1,'pageNo':1,'crno':stock['crno']}
@@ -77,7 +115,9 @@ def fetch_corp_info(stock: dict) -> dict | None:
         res = data_go_kr_get(url, API_KEY, params)
         res.raise_for_status()
         body = res.json().get('response',{}).get('body',{})
-        if not body.get('totalCount',0): return None
+        if not body.get('totalCount',0):
+            logger.warning(f"{stock['name']}: 기본정보 없음")
+            return None
         items = body.get('items',{}).get('item',[])
         item = items[0] if isinstance(items, list) and items else items
         if not item: return None
@@ -89,7 +129,7 @@ def fetch_corp_info(stock: dict) -> dict | None:
             'homepage':      item.get('enpHmpgUrl',''),
             'phone':         item.get('enpTlno',''),
             'industry_name': item.get('sicNm',''),
-            'listing_date':  item.get('enpXchgLstgDt', None),
+            'listing_date':  _normalize_listing_date(item.get('enpXchgLstgDt', None)),
             'market_type':   item.get('corpRegMrktDcdNm',''),
             'fetched_at':    now_kst()
         }
