@@ -2,6 +2,21 @@
   "updated_at": "2026-07-17",
   "indicators": [
     {
+      "id": 3048,
+      "indicator_code": "BASE_RATE",
+      "indicator_name": "한국은행 기준금리",
+      "category": "금리",
+      "value": 2.5,
+      "prev_value": 2.5,
+      "unit": "%",
+      "signal": "yellow",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-07-17",
+      "summary_text": null,
+      "fetched_at": "2026-07-16T23:56:28.990873+00:00",
+      "created_at": "2026-07-16T23:56:30.143689+00:00"
+    },
+    {
       "id": 3047,
       "indicator_code": "KOSPI200",
       "indicator_name": "코스피 200",
@@ -3270,24 +3285,56 @@
       "summary_text": null,
       "fetched_at": "2026-07-01T05:11:47.652547+00:00",
       "created_at": "2026-07-01T05:11:49.198341+00:00"
-    },
-    {
-      "id": 68,
-      "indicator_code": "BASE_RATE",
-      "indicator_name": "한국은행 기준금리",
-      "category": "금리",
-      "value": 2.5,
-      "prev_value": 2.5,
-      "unit": "%",
-      "signal": "yellow",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-07-01",
-      "summary_text": null,
-      "fetched_at": "2026-07-01T05:11:47.064368+00:00",
-      "created_at": "2026-07-01T05:11:49.198341+00:00"
     }
   ],
   "by_category": {
+    "금리": [
+      {
+        "id": 3048,
+        "indicator_code": "BASE_RATE",
+        "indicator_name": "한국은행 기준금리",
+        "category": "금리",
+        "value": 2.5,
+        "prev_value": 2.5,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-07-17",
+        "summary_text": null,
+        "fetched_at": "2026-07-16T23:56:28.990873+00:00",
+        "created_at": "2026-07-16T23:56:30.143689+00:00"
+      },
+      {
+        "id": 2946,
+        "indicator_code": "US_YIELD_CURVE",
+        "indicator_name": "미국 장단기 금리차(10Y-2Y)",
+        "category": "금리",
+        "value": 0.41,
+        "prev_value": 0.42,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-07-17",
+        "summary_text": null,
+        "fetched_at": "2026-07-16T22:53:07.410638+00:00",
+        "created_at": "2026-07-16T22:53:09.149921+00:00"
+      },
+      {
+        "id": 2943,
+        "indicator_code": "FED_RATE",
+        "indicator_name": "미국 기준금리",
+        "category": "금리",
+        "value": 3.63,
+        "prev_value": 3.63,
+        "unit": "%",
+        "signal": "green",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-07-17",
+        "summary_text": null,
+        "fetched_at": "2026-07-16T22:53:06.376626+00:00",
+        "created_at": "2026-07-16T22:53:09.149921+00:00"
+      }
+    ],
     "주식지수": [
       {
         "id": 3047,
@@ -4995,53 +5042,6 @@
         "summary_text": null,
         "fetched_at": "2026-07-16T22:53:07.639871+00:00",
         "created_at": "2026-07-16T22:53:09.149921+00:00"
-      }
-    ],
-    "금리": [
-      {
-        "id": 2946,
-        "indicator_code": "US_YIELD_CURVE",
-        "indicator_name": "미국 장단기 금리차(10Y-2Y)",
-        "category": "금리",
-        "value": 0.41,
-        "prev_value": 0.42,
-        "unit": "%",
-        "signal": "yellow",
-        "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-17",
-        "summary_text": null,
-        "fetched_at": "2026-07-16T22:53:07.410638+00:00",
-        "created_at": "2026-07-16T22:53:09.149921+00:00"
-      },
-      {
-        "id": 2943,
-        "indicator_code": "FED_RATE",
-        "indicator_name": "미국 기준금리",
-        "category": "금리",
-        "value": 3.63,
-        "prev_value": 3.63,
-        "unit": "%",
-        "signal": "green",
-        "source": "FRED (미국 연준)",
-        "reference_date": "2026-07-17",
-        "summary_text": null,
-        "fetched_at": "2026-07-16T22:53:06.376626+00:00",
-        "created_at": "2026-07-16T22:53:09.149921+00:00"
-      },
-      {
-        "id": 68,
-        "indicator_code": "BASE_RATE",
-        "indicator_name": "한국은행 기준금리",
-        "category": "금리",
-        "value": 2.5,
-        "prev_value": 2.5,
-        "unit": "%",
-        "signal": "yellow",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-07-01",
-        "summary_text": null,
-        "fetched_at": "2026-07-01T05:11:47.064368+00:00",
-        "created_at": "2026-07-01T05:11:49.198341+00:00"
       }
     ],
     "환율": [
