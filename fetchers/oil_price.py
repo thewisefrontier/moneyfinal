@@ -1,7 +1,11 @@
 """
 국내 석유 전자상거래시장 시세 수집기
 출처: 공공데이터포털 금융위원회_일반상품시세정보 (getOilPriceInfo)
-- 휘발유/등유/경유 유종별 가중평균가격(경쟁매매 기준) 제공
+- 휘발유/등유/경유 유종별 가중평균가격 제공
+- wtAvgPrcCptn(경쟁매매)은 거래 자체가 없는 날이 많아 0으로 내려옴 -> 그 경우
+  wtAvgPrcDisc(협의매매) 값으로 대체 (실측 확인: 경쟁매매 0, 협의매매 실거래가)
+- basDt는 정확일치 파라미터라 그날 데이터가 아직 게시 안 됐으면 0건이 됨
+  -> beginBasDt 범위 조회 후 유종별 최신 basDt 값만 채택 (krx_index.py와 동일 패턴)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -21,17 +25,13 @@ OIL_TYPES = {
 }
 
 
-def get_base_date() -> str:
+def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
-    if now.weekday() == 0:   base = now - timedelta(days=3)
-    elif now.weekday() == 6: base = now - timedelta(days=2)
-    elif now.weekday() == 5: base = now - timedelta(days=1)
-    else:                    base = now - timedelta(days=1)
-    return base.strftime('%Y%m%d')
+    return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
 
-def fetch_oil(base_date: str) -> list:
-    params = {'resultType': 'json', 'numOfRows': 10, 'pageNo': 1, 'basDt': base_date}
+def fetch_oil(begin_date: str) -> list:
+    params = {'resultType': 'json', 'numOfRows': 30, 'pageNo': 1, 'beginBasDt': begin_date}
     results = []
     try:
         res = data_go_kr_get(BASE_URL, API_KEY, params)
@@ -43,12 +43,20 @@ def fetch_oil(base_date: str) -> list:
         items = body.get('items', {}).get('item', [])
         if isinstance(items, dict):
             items = [items]
+        # 유종별로 basDt가 가장 최신인 항목만 채택
+        latest_by_type = {}
         for item in items:
             oil_ctg = item.get('oilCtg', '')
-            meta = OIL_TYPES.get(oil_ctg)
-            if not meta:
+            if oil_ctg not in OIL_TYPES:
                 continue
-            value = float(item.get('wtAvgPrcCptn', 0) or 0)
+            cur = latest_by_type.get(oil_ctg)
+            if cur is None or item.get('basDt', '') > cur.get('basDt', ''):
+                latest_by_type[oil_ctg] = item
+        for oil_ctg, item in latest_by_type.items():
+            meta = OIL_TYPES[oil_ctg]
+            cptn = float(item.get('wtAvgPrcCptn', 0) or 0)
+            disc = float(item.get('wtAvgPrcDisc', 0) or 0)
+            value = cptn if cptn > 0 else disc
             results.append({
                 'indicator_code': meta['indicator_code'],
                 'indicator_name': meta['indicator_name'],
@@ -59,7 +67,7 @@ def fetch_oil(base_date: str) -> list:
                 'signal': 'green',
                 'source': '금융위원회 (공공데이터포털, 석유전자상거래시장)',
                 'reference_date': today_kst(),
-                'summary_text': f"{oil_ctg} {value:,.2f}원/L (경쟁매매 가중평균)",
+                'summary_text': f"{oil_ctg} {value:,.2f}원/L (가중평균, {'경쟁매매' if cptn > 0 else '협의매매'})",
                 'fetched_at': now_kst()
             })
         return results
@@ -70,9 +78,9 @@ def fetch_oil(base_date: str) -> list:
 
 def main():
     logger.info("=== 석유시세 수집 시작 ===")
-    base_date = get_base_date()
-    logger.info(f"기준일: {base_date}")
-    results = fetch_oil(base_date)
+    begin_date = get_recent_date(10)
+    logger.info(f"조회 시작일: {begin_date}")
+    results = fetch_oil(begin_date)
     if results:
         supabase_upsert('market_indicators', results)
     logger.info(f"=== 석유시세 수집 완료: {len(results)}건 ===")

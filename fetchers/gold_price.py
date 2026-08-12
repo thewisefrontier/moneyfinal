@@ -4,6 +4,8 @@ KRX 금시장 금시세 수집기
 - FRED의 GOLDAMGBD228NLBM(LBMA 금가격)이 대체 없이 폐지되어 대체 소스로 도입
 - KRX 금시장 "금 99.99_1kg" 종목 기준 (원/g 단위)
   ※ 실제 API 응답은 소문자 kg (docx 가이드의 "1Kg" 표기와 다름, 실측 확인됨)
+- basDt는 정확일치 파라미터라 그날 데이터가 아직 게시 안 됐으면 0건이 됨
+  -> beginBasDt 범위 조회 후 최신 basDt 값만 채택 (krx_index.py와 동일 패턴, 실측 확인된 이슈)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -18,17 +20,13 @@ BASE_URL = "https://apis.data.go.kr/1160100/service/GetGeneralProductInfoService
 ITMS_NM = "금 99.99_1kg"
 
 
-def get_base_date() -> str:
+def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
-    if now.weekday() == 0:   base = now - timedelta(days=3)
-    elif now.weekday() == 6: base = now - timedelta(days=2)
-    elif now.weekday() == 5: base = now - timedelta(days=1)
-    else:                    base = now - timedelta(days=1)
-    return base.strftime('%Y%m%d')
+    return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
 
-def fetch_gold(base_date: str) -> dict | None:
-    params = {'resultType': 'json', 'numOfRows': 1, 'pageNo': 1, 'basDt': base_date, 'itmsNm': ITMS_NM}
+def fetch_gold(begin_date: str) -> dict | None:
+    params = {'resultType': 'json', 'numOfRows': 10, 'pageNo': 1, 'beginBasDt': begin_date, 'itmsNm': ITMS_NM}
     try:
         res = data_go_kr_get(BASE_URL, API_KEY, params)
         res.raise_for_status()
@@ -37,7 +35,8 @@ def fetch_gold(base_date: str) -> dict | None:
             logger.warning("금시세: 데이터 없음")
             return None
         items = body.get('items', {}).get('item', [])
-        item = items[0] if isinstance(items, list) and items else items
+        if isinstance(items, dict): items = [items]
+        item = max(items, key=lambda x: x.get('basDt', ''))
         value = float(item.get('clpr', 0) or 0)
         vs = float(item.get('vs', 0) or 0)
         flt_rt = float(item.get('fltRt', 0) or 0)
@@ -61,9 +60,9 @@ def fetch_gold(base_date: str) -> dict | None:
 
 def main():
     logger.info("=== KRX 금시세 수집 시작 ===")
-    base_date = get_base_date()
-    logger.info(f"기준일: {base_date}")
-    result = fetch_gold(base_date)
+    begin_date = get_recent_date(10)
+    logger.info(f"조회 시작일: {begin_date}")
+    result = fetch_gold(begin_date)
     if result:
         logger.info(f"✅ 금 {result['value']}원/g")
         supabase_upsert('market_indicators', [result])
