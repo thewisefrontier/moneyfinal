@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 import pytz
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, now_kst, today_kst, has_recent_data
 
 logger = logging.getLogger(__name__)
 ECOS_API_KEY = os.environ.get('ECOS_API_KEY', '')
@@ -88,6 +88,9 @@ def fetch_ecos_stat(indicator: dict):
 
 def main():
     logger.info("=== ECOS 기준금리 수집 시작 ===")
+    if has_recent_data('market_indicators', {'indicator_code': 'eq.BASE_RATE'}, 'reference_date', 4):
+        logger.info("이미 이번 금통위 발표 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+        return
     result = fetch_ecos_stat(INDICATOR)
     if result:
         logger.info(f"✅ {INDICATOR['indicator_name']}: {result['value']} {INDICATOR['unit']}")

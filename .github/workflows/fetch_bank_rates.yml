@@ -2,8 +2,9 @@ name: 예금적금금리
 on:
   workflow_dispatch:
   schedule:
-    # 매월 21일 08:00 KST (20일 23:00 UTC) — finlife 월간 공시 갱신 주기, loan과 동일
-    - cron: '0 23 20 * *'
+    # 매월 21~25일 08:00 KST (20~24일 23:00 UTC) — finlife 월간 공시 갱신 주기, loan과 동일
+    # 재시도 윈도우 (fetcher가 이미 성공했으면 자체 스킵)
+    - cron: '0 23 20-24 * *'
 jobs:
   run:
     runs-on: ubuntu-latest

@@ -6,7 +6,7 @@ FDI 외국인직접투자 수집기
 """
 import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get, has_recent_data
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
@@ -14,6 +14,9 @@ BASE_URL = "https://apis.data.go.kr/B410001/DS00000127/getDS00000127"
 
 def main():
     logger.info("=== FDI 외국인직접투자 수집 시작 ===")
+    if has_recent_data('market_indicators', {'category': 'eq.외국인직접투자'}, 'reference_date', 6):
+        logger.info("이미 이번 분기 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+        return
     params = {'pageNo':1,'numOfRows':30}
     try:
         res = data_go_kr_get(BASE_URL, API_KEY, params)

@@ -200,6 +200,18 @@ def supabase_select_all(table: str, params: dict = None, page_size: int = 1000, 
     return all_rows
 
 
+def has_recent_data(table: str, filters: dict, date_field: str, days: int) -> bool:
+    """
+    월간/분기 등 저빈도 수집기의 재시도 크론용 가드.
+    filters 조건에 date_field가 최근 days일 이내인 행이 이미 있으면 True
+    (이번 재시도 구간에 이미 성공했다는 뜻이므로 API 호출 없이 스킵).
+    """
+    cutoff = (datetime.now(KST) - timedelta(days=days)).strftime('%Y-%m-%d')
+    params = {**filters, date_field: f'gte.{cutoff}', 'select': 'id', 'limit': '1'}
+    rows = supabase_select(table, params)
+    return bool(rows)
+
+
 def now_kst() -> str:
     return datetime.now(KST).isoformat()
 

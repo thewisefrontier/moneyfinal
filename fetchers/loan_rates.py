@@ -12,7 +12,7 @@ import os
 import sys
 import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst
+from utils.common import supabase_upsert, now_kst, has_recent_data
 
 logger = logging.getLogger(__name__)
 FINLIFE_API_KEY = os.environ.get('FINLIFE_API_KEY', '')
@@ -229,6 +229,9 @@ TARGETS = [
 def main():
     logger.info("=== 대출상품 수집 시작 ===")
     for table, collector, key_fields in TARGETS:
+        if has_recent_data(table, {}, 'fetched_at', 6):
+            logger.info(f"[{table}] 이미 이번 달 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+            continue
         all_rows = []
         for grp in SECTOR_MAP:
             rows = collector(grp)

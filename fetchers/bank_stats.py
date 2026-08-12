@@ -8,7 +8,7 @@ import logging, os, sys
 from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get, has_recent_data
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
@@ -55,6 +55,9 @@ def collect_key_indicators() -> list:
 
 def main():
     logger.info("=== 국내은행 통계 수집 시작 ===")
+    if has_recent_data('market_indicators', {'category': 'eq.은행통계'}, 'reference_date', 6):
+        logger.info("이미 이번 분기 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+        return
     results = collect_key_indicators()
     if results:
         supabase_upsert('market_indicators', results)

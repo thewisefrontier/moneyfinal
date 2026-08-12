@@ -9,7 +9,7 @@ import os
 import sys
 import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst
+from utils.common import supabase_upsert, now_kst, has_recent_data
 
 logger = logging.getLogger(__name__)
 FINLIFE_API_KEY = os.environ.get('FINLIFE_API_KEY', '')
@@ -103,6 +103,9 @@ def collect(grp: str) -> list:
 
 def main():
     logger.info("=== 연금저축 수집 시작 ===")
+    if has_recent_data('annuity_savings', {}, 'fetched_at', 6):
+        logger.info("이미 이번 달 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+        return
     all_rows = []
     for grp in SECTOR_MAP:
         rows = collect(grp)

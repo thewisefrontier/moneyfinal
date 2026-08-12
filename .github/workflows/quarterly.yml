@@ -2,7 +2,7 @@ name: 쿼터리 통합 수집
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 1,4,7,10 *'   # 1/4/7/10월 1일 09:00 KST
+    - cron: '0 0 1-5 1,4,7,10 *'   # 1/4/7/10월 1~5일 09:00 KST (재시도 윈도우 - fetcher가 이미 성공했으면 자체 스킵)
 jobs:
   run:
     runs-on: ubuntu-latest

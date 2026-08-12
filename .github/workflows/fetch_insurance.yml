@@ -2,8 +2,9 @@ name: 실손보험
 on:
   workflow_dispatch:
   schedule:
-    # 매월 21일 09:00 KST (20일 24:00 UTC) — bank_rates보다 1시간 뒤, 동시 push 회피
-    - cron: '0 0 21 * *'
+    # 매월 21~25일 09:00 KST (20~24일 24:00 UTC) — bank_rates보다 1시간 뒤, 동시 push 회피
+    # 재시도 윈도우 (fetcher가 이미 성공했으면 자체 스킵)
+    - cron: '0 0 21-25 * *'
 jobs:
   run:
     runs-on: ubuntu-latest

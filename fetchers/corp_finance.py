@@ -19,7 +19,7 @@ import logging, os, re, sys, time
 from datetime import datetime
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, supabase_select, now_kst, today_kst, data_go_kr_get
+from utils.common import supabase_upsert, supabase_select, now_kst, today_kst, data_go_kr_get, has_recent_data
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
@@ -27,29 +27,37 @@ KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service"
 
 # crno: 법인등록번호 (API 조회용), stock_code: 실제 종목코드 (stock_prices 테이블과 매칭용)
+# 기존 crno 9개가 전부 잘못된 값이라 API가 항상 totalCount=0을 반환했음
+# (삼성전자만 우연히 맞았던 것) - 실제 법인등록번호로 전부 교체, API 응답으로 검증 완료.
+# KB금융만 법인등록번호(110111-3975517, 복수 출처 확인)가 맞는데도 계속 0건 -
+# 이 API(금융위원회 기업재무정보) 자체가 금융지주사를 커버하지 않는 것으로 보임
+# (은행/지주사는 fss_bank_stats_fisis.py, financial_corp_info.py로 별도 수집 중).
 MAJOR_STOCKS = [
     {'crno':'1301110006246','stock_code':'005930','name':'삼성전자'},
-    {'crno':'1648110006794','stock_code':'000660','name':'SK하이닉스'},
-    {'crno':'1301110003708','stock_code':'005380','name':'현대차'},
-    {'crno':'1101110015014','stock_code':'035420','name':'NAVER'},
-    {'crno':'1301110005643','stock_code':'005490','name':'POSCO홀딩스'},
-    {'crno':'1101111623419','stock_code':'051910','name':'LG화학'},
-    {'crno':'1301110013455','stock_code':'006400','name':'삼성SDI'},
-    {'crno':'1101110608146','stock_code':'035720','name':'카카오'},
-    {'crno':'1301110014488','stock_code':'000270','name':'기아'},
-    {'crno':'1101110028131','stock_code':'105560','name':'KB금융'},
+    {'crno':'1344110001387','stock_code':'000660','name':'SK하이닉스'},
+    {'crno':'1101110085450','stock_code':'005380','name':'현대차'},
+    {'crno':'1101111707178','stock_code':'035420','name':'NAVER'},
+    {'crno':'1746110000741','stock_code':'005490','name':'POSCO홀딩스'},
+    {'crno':'1101112207995','stock_code':'051910','name':'LG화학'},
+    {'crno':'1101110394174','stock_code':'006400','name':'삼성SDI'},
+    {'crno':'1101111129497','stock_code':'035720','name':'카카오'},
+    {'crno':'1101110037998','stock_code':'000270','name':'기아'},
+    {'crno':'1101113975517','stock_code':'105560','name':'KB금융'},  # 이 API가 커버 안 하는 것으로 보임, 위 주석 참고
 ]
+
+
+def target_fiscal_year() -> int:
+    """상장기업 사업보고서는 회계연도 종료 후 익년 3월경(90일 이내) 공시된다.
+    따라서 4월 이후에는 "작년" 자료가, 4월 이전에는 아직 작년 자료가 공시되지 않았을 수 있어
+    "재작년" 자료가 최신 공시분이다."""
+    now = datetime.now(KST)
+    return now.year - 2 if now.month < 4 else now.year - 1
 
 
 def fetch_corp_finance_raw(stock: dict) -> dict | None:
     """요약재무제표조회 - 순이익, 자본총계 등 원시 재무항목 조회"""
     url = f"{BASE_URL}/GetFinaStatInfoService_V2/getSummFinaStat_V2"
-    now = datetime.now(KST)
-    # 상장기업 사업보고서는 회계연도 종료 후 익년 3월경(90일 이내) 공시된다.
-    # 따라서 4월 이후에는 "작년" 자료가, 4월 이전에는 아직 작년 자료가 공시되지 않았을 수 있어
-    # "재작년" 자료가 최신 공시분이다. (직전 로직은 반대로 아직 존재하지 않는 연도를 요청해
-    # 전 종목 조회가 실패하는 원인이었음)
-    fiscal_year = now.year - 2 if now.month < 4 else now.year - 1
+    fiscal_year = target_fiscal_year()
     params = {'resultType':'json','numOfRows':1,'pageNo':1,'crno':stock['crno'],'bizYear':str(fiscal_year)}
     try:
         res = data_go_kr_get(url, API_KEY, params)
@@ -173,9 +181,13 @@ def calculate_indicators(price: dict, finance: dict) -> dict:
 
 def main():
     logger.info("=== 기업 재무/기본정보 + 투자지표 계산 시작 ===")
+    fiscal_year = target_fiscal_year()
     finance_results, corp_results = [], []
 
     for stock in MAJOR_STOCKS:
+        if has_recent_data('corp_finance', {'stock_code': f"eq.{stock['stock_code']}", 'fiscal_year': f'eq.{fiscal_year}'}, 'fetched_at', 400):
+            logger.info(f"{stock['name']}: 이미 {fiscal_year}년 재무 수집 완료 - 스킵")
+            continue
         raw = fetch_corp_finance_raw(stock)
         time.sleep(0.5)
         c = fetch_corp_info(stock)

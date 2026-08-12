@@ -8,7 +8,7 @@ bisRto(BIS비율) 필드는 존재하지 않으며, fncoDebtRto(부채비율)가
 """
 import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get
+from utils.common import supabase_upsert, now_kst, today_kst, data_go_kr_get, has_recent_data
 
 logger = logging.getLogger(__name__)
 API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
@@ -72,14 +72,20 @@ def fetch_financial_credit() -> list:
 
 def main():
     logger.info("=== 금융회사 정보 수집 시작 ===")
-    corps = fetch_financial_corps()
-    if corps:
-        supabase_upsert('corp_info', corps)
-        logger.info(f"✅ 금융회사기본정보 {len(corps)}건 저장")
-    credit = fetch_financial_credit()
-    if credit:
-        supabase_upsert('market_indicators', credit)
-        logger.info(f"✅ 금융회사재무신용 {len(credit)}건 저장")
+    if has_recent_data('corp_info', {'market_type': 'eq.금융회사'}, 'fetched_at', 6):
+        logger.info("금융회사기본정보 - 이미 이번 분기 수집 완료, 스킵")
+    else:
+        corps = fetch_financial_corps()
+        if corps:
+            supabase_upsert('corp_info', corps)
+            logger.info(f"✅ 금융회사기본정보 {len(corps)}건 저장")
+    if has_recent_data('market_indicators', {'category': 'eq.금융회사건전성'}, 'reference_date', 6):
+        logger.info("금융회사재무신용 - 이미 이번 분기 수집 완료, 스킵")
+    else:
+        credit = fetch_financial_credit()
+        if credit:
+            supabase_upsert('market_indicators', credit)
+            logger.info(f"✅ 금융회사재무신용 {len(credit)}건 저장")
     logger.info("=== 금융회사 정보 수집 완료 ===")
 
 if __name__ == '__main__': main()
