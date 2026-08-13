@@ -15,8 +15,8 @@ KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service/GetFnCoGoveInfoService"
 
 MAJOR_CRNOS = [
-    {'crno':'1101110028131','name':'KB금융'},
-    {'crno':'1101110608146','name':'카카오'},
+    {'crno':'1101113975517','name':'KB금융'},
+    {'crno':'1101111129497','name':'카카오'},
 ]
 
 

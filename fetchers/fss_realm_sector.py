@@ -15,18 +15,19 @@ def main():
         res = fss_open_api_get('fealmMng', AUTH_KEY, days_back=30)
         res.raise_for_status()
         data = res.json()
-        items = data.get('result', {}).get('list', []) if isinstance(data, dict) else []
+        # 주의: FSS 응답 키는 "response"가 아니라 오타난 "reponse"
+        items = data.get('reponse', {}).get('result', []) if isinstance(data, dict) else []
         if not items:
-            logger.warning("분야버감독제도: 데이터 없음")
+            logger.warning("분야별감독제도: 데이터 없음")
             return
         results = []
         for item in items:
             results.append({
-                'category': '분야버감독제도',
-                'title': item.get('title', item.get('TITLE', '')),
-                'content_summary': item.get('cn', item.get('CN', ''))[:500],
-                'post_date': item.get('regDate', item.get('REG_DATE', now_kst()[:10])),
-                'source_url': item.get('url', item.get('URL', '')),
+                'category': '분야별감독제도',
+                'title': item.get('subject', ''),
+                'content_summary': item.get('contentKor', '')[:500],
+                'post_date': item.get('regDate', now_kst()[:10])[:10],
+                'source_url': item.get('originUrl', ''),
                 'fetched_at': now_kst()
             })
         if results:

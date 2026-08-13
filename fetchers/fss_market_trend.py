@@ -12,7 +12,7 @@ AUTH_KEY = os.environ.get('FSS_API_KEY', '')
 def main():
     logger.info("=== 금융시장동향 수집 시작 ===")
     try:
-        res = fss_open_api_get('fmtInfo', AUTH_KEY, days_back=14)
+        res = fss_open_api_get('fnncMrkt', AUTH_KEY, days_back=14)
         res.raise_for_status()
         data = res.json()
         items = data.get('result', {}).get('list', []) if isinstance(data, dict) else []

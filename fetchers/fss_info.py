@@ -25,7 +25,7 @@ def main():
             results.append({
                 'category': '금융감독정보',
                 'title': item.get('subject', ''),
-                'content_summary': item.get('contentsKor', '')[:500],
+                'content_summary': item.get('contentKor', '')[:500],
                 'post_date': item.get('regDate', now_kst()[:10])[:10],
                 'source_url': item.get('originUrl', ''),
                 'fetched_at': now_kst()
