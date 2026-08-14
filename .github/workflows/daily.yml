@@ -55,6 +55,11 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python fetchers/fred_global.py
+      - name: 암호화폐시세
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/crypto_price.py
       - name: 금시세
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}

@@ -83,6 +83,27 @@ SERIES = [
         'unit': 'Index',
         'category': '주식지수'
     },
+    {
+        'series_id': 'DGS10',
+        'indicator_code': 'US_10Y_TREASURY',
+        'indicator_name': '미국 10년물 국채금리',
+        'unit': '%',
+        'category': '금리'
+    },
+    {
+        'series_id': 'UNRATE',
+        'indicator_code': 'US_UNEMPLOYMENT',
+        'indicator_name': '미국 실업률',
+        'unit': '%',
+        'category': '고용'
+    },
+    {
+        'series_id': 'DHHNGSP',
+        'indicator_code': 'NATGAS',
+        'indicator_name': '천연가스 가격',
+        'unit': 'USD/MMBtu',
+        'category': '원자재'
+    },
 ]
 
 
