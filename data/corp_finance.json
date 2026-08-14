@@ -8,10 +8,106 @@
       "revenue": 333605938000000,
       "operating_profit": 43601051000000,
       "net_profit": 45206805000000,
-      "per": 35.89,
-      "pbr": 3.72,
+      "per": 34.66,
+      "pbr": 3.59,
       "roe": 10.36,
       "eps": 7732.58
+    },
+    {
+      "stock_code": "000660",
+      "corp_name": "SK하이닉스",
+      "fiscal_year": 2025,
+      "revenue": 97146675000000,
+      "operating_profit": 47206319000000,
+      "net_profit": 42947902000000,
+      "per": 27.1,
+      "pbr": 9.64,
+      "roe": 35.59,
+      "eps": 58793.09
+    },
+    {
+      "stock_code": "005380",
+      "corp_name": "현대차",
+      "fiscal_year": 2025,
+      "revenue": 186254472000000,
+      "operating_profit": 11467851000000,
+      "net_profit": 10364775000000,
+      "per": 8.27,
+      "pbr": 0.67,
+      "roe": 8.12,
+      "eps": 50619.69
+    },
+    {
+      "stock_code": "035420",
+      "corp_name": "NAVER",
+      "fiscal_year": 2025,
+      "revenue": 12035007218975,
+      "operating_profit": 2208138388720,
+      "net_profit": 1818746310015,
+      "per": 19.55,
+      "pbr": 1.23,
+      "roe": 6.28,
+      "eps": 11586.03
+    },
+    {
+      "stock_code": "005490",
+      "corp_name": "POSCO홀딩스",
+      "fiscal_year": 2025,
+      "revenue": 69094886192787,
+      "operating_profit": 1827063210829,
+      "net_profit": 504403472266,
+      "per": 51.14,
+      "pbr": 0.41,
+      "roe": 0.81,
+      "eps": 6365.39
+    },
+    {
+      "stock_code": "051910",
+      "corp_name": "LG화학",
+      "fiscal_year": 2025,
+      "revenue": 45932167000000,
+      "operating_profit": 1180900000000,
+      "net_profit": -977063000000,
+      "per": 0.0,
+      "pbr": 0.41,
+      "roe": -2.07,
+      "eps": -13840.92
+    },
+    {
+      "stock_code": "006400",
+      "corp_name": "삼성SDI",
+      "fiscal_year": 2025,
+      "revenue": 13266730679499,
+      "operating_profit": -1722360788760,
+      "net_profit": -584875358534,
+      "per": 0.0,
+      "pbr": 1.67,
+      "roe": -2.48,
+      "eps": -7257.82
+    },
+    {
+      "stock_code": "035720",
+      "corp_name": "카카오",
+      "fiscal_year": 2025,
+      "revenue": 8099147815086,
+      "operating_profit": 732036535379,
+      "net_profit": 517959587282,
+      "per": 34.3,
+      "pbr": 1.17,
+      "roe": 3.4,
+      "eps": 1169.26
+    },
+    {
+      "stock_code": "000270",
+      "corp_name": "기아",
+      "fiscal_year": 2025,
+      "revenue": 114140919000000,
+      "operating_profit": 9078148000000,
+      "net_profit": 7554174000000,
+      "per": 7.1,
+      "pbr": 0.88,
+      "roe": 12.35,
+      "eps": 19349.19
     }
   ]
 }
