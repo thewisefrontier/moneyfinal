@@ -32,7 +32,7 @@ def fetch_price_pages(market: str, date_params: dict) -> list:
         params = {'resultType': 'json', 'numOfRows': PAGE_SIZE, 'pageNo': page,
                   'mrktCls': market, **date_params}
         try:
-            res = data_go_kr_get(url, API_KEY, params, timeout=30)
+            res = data_go_kr_get(url, API_KEY, params, timeout=90)
             res.raise_for_status()
             body = res.json().get('response', {}).get('body', {})
             total = int(body.get('totalCount', 0) or 0)
