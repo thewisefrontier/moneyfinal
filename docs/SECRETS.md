@@ -44,27 +44,10 @@
 | `backfill_stocks.yml` | `fetchers/stock_prices.py`, `processors/kr_technical.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `daily.yml` | `fetchers/us_stocks.py`, `fetchers/us_technical.py`, `fetchers/stock_prices.py`, `processors/kr_technical.py`, `fetchers/dart_disclosure.py`, `fetchers/ecos_daily.py`, `fetchers/fred_global.py`, `fetchers/crypto_price.py`, `fetchers/gold_price.py`, `fetchers/oil_price.py`, `fetchers/emission_price.py`, `fetchers/isa_info.py`, `fetchers/kofia_stats.py`, `fetchers/krx_index.py`, `fetchers/fss_jobs.py`, `fetchers/bond_info.py`, `fetchers/derivatives_info.py`, `fetchers/disclosure_alerts.py`, `fetchers/fund_info.py`, `fetchers/governance_info.py`, `fetchers/fss_info.py`, `fetchers/fss_fintip.py`, `fetchers/fss_press.py`, `fetchers/fss_consumer_news.py`, `fetchers/fss_realm_sector.py`, `fetchers/fss_realm_general.py`, `fetchers/fss_foreign_invest.py`, `fetchers/fss_market_trend.py`, `processors/gemini_analyzer.py`, `exporters/export_data.py` | `ALPHA_VANTAGE_API_KEY`, `DART_API_KEY`, `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `FINNHUB_API_KEY`, `FRED_API_KEY`, `FSS_API_KEY`, `GEMINI_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_bank_rates.yml` | `fetchers/bank_rates.py`, `exporters/export_data.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_bank_stats.yml` | `fetchers/bank_stats.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_bond_info.yml` | `fetchers/bond_info.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_corp_finance.yml` | `fetchers/corp_finance.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_derivatives.yml` | `fetchers/derivatives_info.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_disclosure_alerts.yml` | `fetchers/disclosure_alerts.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_financial_corp.yml` | `fetchers/financial_corp_info.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_fss_bank_stats.yml` | `fetchers/fss_bank_stats_fisis.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_consumer_news.yml` | `fetchers/fss_consumer_news.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_foreign_invest.yml` | `fetchers/fss_foreign_invest.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_market_trend.yml` | `fetchers/fss_market_trend.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_press.yml` | `fetchers/fss_press.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_realm_general.yml` | `fetchers/fss_realm_general.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_realm_sector.yml` | `fetchers/fss_realm_sector.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fund.yml` | `fetchers/fund_info.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_governance.yml` | `fetchers/governance_info.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_insurance.yml` | `fetchers/insurance_info.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_loan_rates.yml` | `fetchers/loan_rates.py`, `fetchers/annuity_savings.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_stock_prices.yml` | `fetchers/stock_prices.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_us_technical.yml` | `fetchers/us_technical.py` | `ALPHA_VANTAGE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fix_ticker_sticky.yml` | — | — |
-| `fss_news.yml` | `fetchers/fss_info.py`, `fetchers/fss_fintip.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `monthly.yml` | `fetchers/ecos_m2.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `quarterly.yml` | `fetchers/ecos_household_credit.py`, `fetchers/fdi_stats.py`, `fetchers/corp_finance.py`, `fetchers/bank_stats.py`, `fetchers/financial_corp_info.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `rate.yml` | `fetchers/ecos_base_rate.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
