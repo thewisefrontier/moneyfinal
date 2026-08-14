@@ -1,7 +1,8 @@
 """
 주식 시세 및 상장종목 수집기
 출처: 공공데이터포털 금융위원회 (오픈API_활용자가이드_금융위원회_주식시세정보 검증 완료)
-- 일반 실행: 직전 거래일 1일치 전 종목 수집 (basDt)
+- 일반 실행: beginBasDt 범위조회(최근 10일)로 전 종목 수집
+  (basDt 정확일치는 발행 시차로 대부분 0건 - 실측 확인: 5주 이상 전체 무갱신 상태였음)
 - 백필 실행: python fetchers/stock_prices.py backfill [일수]
   → beginBasDt/endBasDt 범위 조회 (가이드 공식 지원 파라미터), 기본 35일
 """
@@ -18,13 +19,9 @@ BASE_URL = "https://apis.data.go.kr/1160100/service"
 PAGE_SIZE = 5000  # numOfRows 항목크기 4자리(최대 9999)
 
 
-def get_base_date() -> str:
+def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
-    if now.weekday() == 0:   base = now - timedelta(days=3)
-    elif now.weekday() == 6: base = now - timedelta(days=2)
-    elif now.weekday() == 5: base = now - timedelta(days=1)
-    else:                    base = now - timedelta(days=1)
-    return base.strftime('%Y%m%d')
+    return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
 
 def fetch_price_pages(market: str, date_params: dict) -> list:
@@ -120,11 +117,13 @@ def fetch_krx_stocks() -> list:
 
 
 def run_daily():
-    base_date = get_base_date()
-    logger.info(f"기준일: {base_date}")
+    """최근 10일 범위조회 - 정확일치(basDt)는 발행 시차로 대부분 0건이 되므로
+    범위조회로 그날그날 게시된 만큼 가져오고 upsert로 자연 dedupe (기존일 재작성은 무해)."""
+    begin_date = get_recent_date(10)
+    logger.info(f"조회 시작일: {begin_date}")
     all_prices = []
     for market in ['KOSPI', 'KOSDAQ']:
-        items = fetch_price_pages(market, {'basDt': base_date})
+        items = fetch_price_pages(market, {'beginBasDt': begin_date})
         if items:
             all_prices.extend(process_stock_prices(items, market))
             logger.info(f"✅ {market}: {len(items)}건")
