@@ -1,6 +1,9 @@
 """
 채권 시세 수집기
 출처: 공공데이터포털 금융위원회_채권시세정보 (GetBondSecuritiesInfoService/getBondPriceInfo)
+- basDt는 정확일치 파라미터라 그날 데이터가 아직 게시 안 됐으면 0건이 됨
+  -> beginBasDt 범위 조회 후 종목별 최신 basDt 값만 채택 (krx_index.py와 동일 패턴,
+  실측 확인: category='채권금리' 데이터가 한 번도 DB에 저장된 적 없었음)
 """
 import logging, os, sys
 from datetime import datetime, timedelta
@@ -13,29 +16,32 @@ API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service/GetBondSecuritiesInfoService/getBondPriceInfo"
 
-def get_base_date() -> str:
+def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
-    if now.weekday() == 0:   base = now - timedelta(days=3)
-    elif now.weekday() == 6: base = now - timedelta(days=2)
-    elif now.weekday() == 5: base = now - timedelta(days=1)
-    else:                    base = now - timedelta(days=1)
-    return base.strftime('%Y%m%d')
+    return (now - timedelta(days=days_back)).strftime('%Y%m%d')
 
 def main():
     logger.info("=== 채권 시세 수집 시작 ===")
-    base_date = get_base_date()
-    params = {'resultType':'json','numOfRows':50,'pageNo':1,'basDt':base_date}
+    begin_date = get_recent_date(10)
+    params = {'resultType':'json','numOfRows':500,'pageNo':1,'beginBasDt':begin_date}
     try:
         res = data_go_kr_get(BASE_URL, API_KEY, params)
         res.raise_for_status()
         body = res.json().get('response',{}).get('body',{})
         if not body.get('totalCount',0):
-            logger.warning(f"채권시세 {base_date}: 데이터 없음")
+            logger.warning(f"채권시세 {begin_date}~: 데이터 없음")
             return
         items = body.get('items',{}).get('item',[])
         if isinstance(items,dict): items=[items]
-        results = []
+        # 종목(isinCd)별로 basDt가 가장 최신인 항목만 채택
+        latest_by_code = {}
         for item in items:
+            code = item.get('isinCd','')
+            cur = latest_by_code.get(code)
+            if cur is None or item.get('basDt','') > cur.get('basDt',''):
+                latest_by_code[code] = item
+        results = []
+        for item in latest_by_code.values():
             # 수정: clprBnfRt(종가_수익률)가 정확한 필드명. mktYtm은 존재하지 않음
             ytm = float(item.get('clprBnfRt',0) or 0)
             results.append({
