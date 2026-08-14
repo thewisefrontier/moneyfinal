@@ -5,8 +5,11 @@
   (basDt 정확일치는 발행 시차로 대부분 0건 - 실측 확인: 5주 이상 전체 무갱신 상태였음)
 - 백필 실행: python fetchers/stock_prices.py backfill [일수]
   → beginBasDt/endBasDt 범위 조회 (가이드 공식 지원 파라미터), 기본 35일
+- 실측: GitHub Actions 러너 -> data.go.kr 구간에서 ConnectTimeout이 간헐적으로
+  발생(로컬에서는 같은 요청이 1초 내 응답 - 페이로드 크기가 아니라 네트워크
+  경로 문제). 타임아웃을 늘리는 대신 페이지당 짧은 타임아웃 + 재시도로 대응.
 """
-import logging, os, sys
+import logging, os, sys, time
 from datetime import datetime, timedelta
 import pytz
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -17,11 +20,31 @@ API_KEY = os.environ.get('DATA_GO_KR_API_KEY', '')
 KST = pytz.timezone('Asia/Seoul')
 BASE_URL = "https://apis.data.go.kr/1160100/service"
 PAGE_SIZE = 5000  # numOfRows 항목크기 4자리(최대 9999)
+MAX_RETRIES = 3
+RETRY_TIMEOUT = 20
 
 
 def get_recent_date(days_back: int = 10) -> str:
     now = datetime.now(KST)
     return (now - timedelta(days=days_back)).strftime('%Y%m%d')
+
+
+def fetch_page_with_retry(url: str, params: dict, market: str, page: int):
+    """ConnectTimeout은 페이로드 크기가 아니라 네트워크 경로 문제라 매 시도마다
+    새 커넥션을 짧은 타임아웃으로 재시도하는 편이 긴 타임아웃 1회보다 안정적."""
+    last_err = None
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            res = data_go_kr_get(url, API_KEY, params, timeout=RETRY_TIMEOUT)
+            res.raise_for_status()
+            return res
+        except Exception as e:
+            last_err = e
+            logger.warning(f"{market} page {page} 시도 {attempt}/{MAX_RETRIES} 실패: {type(e).__name__}")
+            if attempt < MAX_RETRIES:
+                time.sleep(3)
+    logger.error(f"{market} 시세 수집 오류 (page {page}): {type(last_err).__name__} - {MAX_RETRIES}회 재시도 모두 실패")
+    return None
 
 
 def fetch_price_pages(market: str, date_params: dict) -> list:
@@ -31,20 +54,17 @@ def fetch_price_pages(market: str, date_params: dict) -> list:
     while True:
         params = {'resultType': 'json', 'numOfRows': PAGE_SIZE, 'pageNo': page,
                   'mrktCls': market, **date_params}
-        try:
-            res = data_go_kr_get(url, API_KEY, params, timeout=90)
-            res.raise_for_status()
-            body = res.json().get('response', {}).get('body', {})
-            total = int(body.get('totalCount', 0) or 0)
-            items = body.get('items', {}).get('item', [])
-            if isinstance(items, dict): items = [items]
-            all_items.extend(items)
-            if not items or page * PAGE_SIZE >= total:
-                break
-            page += 1
-        except Exception as e:
-            logger.error(f"{market} 시세 수집 오류 (page {page}): {type(e).__name__}")
+        res = fetch_page_with_retry(url, params, market, page)
+        if res is None:
             break
+        body = res.json().get('response', {}).get('body', {})
+        total = int(body.get('totalCount', 0) or 0)
+        items = body.get('items', {}).get('item', [])
+        if isinstance(items, dict): items = [items]
+        all_items.extend(items)
+        if not items or page * PAGE_SIZE >= total:
+            break
+        page += 1
     return all_items
 
 
