@@ -96,7 +96,7 @@ function indHtml(list,empty='데이터 수집 예정'){if(!list.length)return `<
 async function loadMacro(){
   try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const bc=d.by_category||{};
     document.getElementById('dom-list').innerHTML=indHtml(inds.filter(i=>['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'].includes(i.indicator_code)));
-    document.getElementById('glob-list').innerHTML=indHtml(inds.filter(i=>['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE','VIX','WTI','GOLD'].includes(i.indicator_code)));
+    document.getElementById('glob-list').innerHTML=indHtml(inds.filter(i=>['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE','VIX','WTI','GOLD','US_10Y_TREASURY','US_UNEMPLOYMENT','NATGAS'].includes(i.indicator_code)));
     document.getElementById('bond-list').innerHTML=indHtml((bc['채권금리']||[]).slice(0,10));
     document.getElementById('bond-iss-list').innerHTML=indHtml((bc['채권발행']||[]).slice(0,10));
     document.getElementById('bis-list').innerHTML=indHtml((bc['금융회사건전성']||[]).slice(0,10));
