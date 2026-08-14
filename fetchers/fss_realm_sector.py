@@ -1,5 +1,5 @@
 """
-분야버 감독제도 수집기
+분야별 감독제도 수집기
 출처: 금융감독원 오픈API (fealmMng.jsp)
 """
 import logging, os, sys
@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 AUTH_KEY = os.environ.get('FSS_API_KEY', '')
 
 def main():
-    logger.info("=== 분야버 감독제도 수집 시작 ===")
+    logger.info("=== 분야별 감독제도 수집 시작 ===")
     try:
         res = fss_open_api_get('fealmMng', AUTH_KEY, days_back=30)
         res.raise_for_status()
@@ -32,9 +32,9 @@ def main():
             })
         if results:
             supabase_upsert('fss_news', results)
-            logger.info(f"✅ 분야버감독제도 {len(results)}건 저장")
+            logger.info(f"✅ 분야별감독제도 {len(results)}건 저장")
     except Exception as e:
-        logger.error(f"분야버감독제도 수집 오류: {type(e).__name__} - {e}")
-    logger.info("=== 분야버 감독제도 수집 완료 ===")
+        logger.error(f"분야별감독제도 수집 오류: {type(e).__name__} - {e}")
+    logger.info("=== 분야별 감독제도 수집 완료 ===")
 
 if __name__ == '__main__': main()
