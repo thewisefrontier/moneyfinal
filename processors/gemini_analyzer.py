@@ -182,6 +182,7 @@ def get_top_stocks(markets: list = None) -> list:
 def main():
     logger.info("=== Gemini 데이터 분석 시작 ===")
     today = today_kst()
+    time_str = now_kst()[11:16]  # ISO 포맷(YYYY-MM-DDTHH:MM:SS+09:00)에서 HH:MM만 추출
 
     # 실손보험(category='실손보험')은 rate/max_rate 컬럼에 금리(%)가 아닌
     # 공공데이터포털 "기준 보험료"(원 단위 수치)가 들어있어 예금/적금과 단위가 다르다.
@@ -217,7 +218,7 @@ def main():
 
     briefing = {
         'briefing_date': today,
-        'headline': f"{today} 금융 데이터 현황",
+        'headline': f"{today} {time_str} 기준 금융 데이터 현황",
         'rate_summary': rate_analysis,
         'market_summary': market_analysis,
         'full_text': f"{market_analysis}\n\n{rate_analysis}\n\n{DISCLAIMER}",
