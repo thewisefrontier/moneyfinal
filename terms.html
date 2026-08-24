@@ -115,5 +115,6 @@ footer a{color:var(--text2);margin:0 8px}
 (function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);document.querySelector('.theme-btn').textContent=document.documentElement.getAttribute('data-theme')==='dark'?'🌙':'🌑'})();
 function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-btn').textContent=n==='dark'?'🌙':'🌑'}
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
