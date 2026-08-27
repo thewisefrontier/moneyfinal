@@ -37,9 +37,14 @@ def fetch_ecos_stat(indicator: dict):
     start = (now - timedelta(days=days)).strftime('%Y%m%d')
     end = now.strftime('%Y%m%d')
 
+    # ECOS는 조회기간 내 데이터를 오래된 순으로 반환하므로, 행 구간(1/N)이
+    # 실제 건수보다 작으면 rows[-1]이 "최신값"이 아니라 그 구간 안에서 가장
+    # 오래된 쪽의 값이 된다. start_days=30 + 일별(D) 주기 조합에서 구간을
+    # 1/10으로 뒀다가 기준금리가 항상 ~20영업일 전 값으로 고정되는 버그가 있었음
+    # (2026-07-28 인상분을 8/27까지 못 잡음). 여유 있게 크게 잡아 항상 전체를 받는다.
     url = (
         f"https://ecos.bok.or.kr/api/StatisticSearch"
-        f"/{ECOS_API_KEY}/json/kr/1/10"
+        f"/{ECOS_API_KEY}/json/kr/1/1000"
         f"/{indicator['stat_code']}/{cycle}"
         f"/{start}/{end}/{indicator['item_code']}"
     )

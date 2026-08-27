@@ -36,7 +36,7 @@ def fetch_ecos_stat(indicator: dict):
 
     url = (
         f"https://ecos.bok.or.kr/api/StatisticSearch"
-        f"/{ECOS_API_KEY}/json/kr/1/10"
+        f"/{ECOS_API_KEY}/json/kr/1/1000"
         f"/{indicator['stat_code']}/{indicator['cycle']}"
         f"/{start}/{end}/{indicator['item_code']}"
     )
