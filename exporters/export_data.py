@@ -45,7 +45,13 @@ def export_rates():
 
     # top20: 실손보험은 rate/max_rate 단위가 금리(%)가 아닌 공공데이터포털
     # "기준 보험료"(원 단위)라서 예금/적금 금리와 섞어서 순위를 매기면 안 됨.
-    rate_only = [r for r in rates if r.get('category') != '실손보험']
+    # 한도 100만원 미만 소액상품(카드실적 연계 이벤트성 상품 등)은 최고금리만
+    # 높고 실제 비교 의미가 없어 TOP 랭킹에서 제외 (전체보기 목록에는 그대로 노출).
+    rate_only = [
+        r for r in rates
+        if r.get('category') != '실손보험'
+        and not (r.get('max_limit') and r['max_limit'] < 1_000_000)
+    ]
 
     save_json('rates.json', {
         'updated_at': today_kst(),

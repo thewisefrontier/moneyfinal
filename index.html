@@ -141,7 +141,10 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 async function loadHome(){
   try{const r=await fetch('data/rates.json');const d=await r.json();const bc=d.by_category||{};
-    const sav=(bc['적금']||[]).slice(0,5);const dep=(bc['예금']||[]).slice(0,5);
+    // 한도 100만원 미만 소액상품(카드실적 연계 이벤트성 상품 등)은 최고금리만 높고
+    // 실제 비교 의미가 없어 TOP5에서 제외 (전체보기 페이지에는 그대로 노출)
+    const noSmallLimit=r=>!(r.max_limit&&r.max_limit<1000000);
+    const sav=(bc['적금']||[]).filter(noSmallLimit).slice(0,5);const dep=(bc['예금']||[]).filter(noSmallLimit).slice(0,5);
     function rateHtml(list){if(!list.length)return '<div class="empty">데이터 없음</div>';
       return list.map((r,i)=>`<div class="row rate-row"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div class="period">${r.period}</div><div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div></div>`).join('');}
     document.getElementById('savings-top').innerHTML=rateHtml(sav);
