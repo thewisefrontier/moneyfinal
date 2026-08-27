@@ -1,6 +1,5035 @@
 {
   "updated_at": "2026-08-27",
-  "by_ticker": {},
-  "prices": {},
-  "profiles": {}
+  "by_ticker": {
+    "BKLN": [
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-08-24",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-08-24",
+        "payment_date": "2026-08-28",
+        "amount": 0.11349,
+        "fetched_at": "2026-08-27T02:33:31.409478+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-07-20",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-07-20",
+        "payment_date": "2026-07-24",
+        "amount": 0.1089,
+        "fetched_at": "2026-08-27T02:33:31.409509+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-06-22",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-06-22",
+        "payment_date": "2026-06-26",
+        "amount": 0.1013,
+        "fetched_at": "2026-08-27T02:33:31.409517+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-05-18",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-05-18",
+        "payment_date": "2026-05-22",
+        "amount": 0.10111,
+        "fetched_at": "2026-08-27T02:33:31.409522+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-04-20",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-04-20",
+        "payment_date": "2026-04-24",
+        "amount": 0.10497,
+        "fetched_at": "2026-08-27T02:33:31.409527+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-03-23",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-03-23",
+        "payment_date": "2026-03-27",
+        "amount": 0.1155,
+        "fetched_at": "2026-08-27T02:33:31.409531+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-02-23",
+        "declaration_date": "2026-01-03",
+        "record_date": "2026-02-23",
+        "payment_date": "2026-02-27",
+        "amount": 0.10055,
+        "fetched_at": "2026-08-27T02:33:31.409536+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2026-01-20",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.1078,
+        "fetched_at": "2026-08-27T02:33:31.409541+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-12-22",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-12-22",
+        "payment_date": "2025-12-26",
+        "amount": 0.10282,
+        "fetched_at": "2026-08-27T02:33:31.409545+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-11-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-11-24",
+        "payment_date": "2025-11-28",
+        "amount": 0.11955,
+        "fetched_at": "2026-08-27T02:33:31.40955+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-10-20",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-10-20",
+        "payment_date": "2025-10-24",
+        "amount": 0.12011,
+        "fetched_at": "2026-08-27T02:33:31.409554+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-09-22",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-09-22",
+        "payment_date": "2025-09-26",
+        "amount": 0.12484,
+        "fetched_at": "2026-08-27T02:33:31.409559+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-08-18",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-08-18",
+        "payment_date": "2025-08-22",
+        "amount": 0.12347,
+        "fetched_at": "2026-08-27T02:33:31.409563+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-07-21",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-07-21",
+        "payment_date": "2025-07-25",
+        "amount": 0.11933,
+        "fetched_at": "2026-08-27T02:33:31.409567+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-06-23",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-06-23",
+        "payment_date": "2025-06-27",
+        "amount": 0.11617,
+        "fetched_at": "2026-08-27T02:33:31.409572+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-05-19",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-05-19",
+        "payment_date": "2025-05-23",
+        "amount": 0.1648,
+        "fetched_at": "2026-08-27T02:33:31.409576+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-04-21",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-04-21",
+        "payment_date": "2025-04-25",
+        "amount": 0.12493,
+        "fetched_at": "2026-08-27T02:33:31.409581+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-03-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-03-24",
+        "payment_date": "2025-03-28",
+        "amount": 0.10781,
+        "fetched_at": "2026-08-27T02:33:31.409586+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-02-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-02-24",
+        "payment_date": "2025-02-28",
+        "amount": 0.11158,
+        "fetched_at": "2026-08-27T02:33:31.40959+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2025-01-21",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.124,
+        "fetched_at": "2026-08-27T02:33:31.409596+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-12-23",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-12-23",
+        "payment_date": "2024-12-27",
+        "amount": 0.11976,
+        "fetched_at": "2026-08-27T02:33:31.4096+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-11-18",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-11-18",
+        "payment_date": "2024-11-22",
+        "amount": 0.13212,
+        "fetched_at": "2026-08-27T02:33:31.409605+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-10-21",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-10-21",
+        "payment_date": "2024-10-25",
+        "amount": 0.16452,
+        "fetched_at": "2026-08-27T02:33:31.409609+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-09-23",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-09-23",
+        "payment_date": "2024-09-27",
+        "amount": 0.17025,
+        "fetched_at": "2026-08-27T02:33:31.409787+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-08-19",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-08-19",
+        "payment_date": "2024-08-23",
+        "amount": 0.16326,
+        "fetched_at": "2026-08-27T02:33:31.409796+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-07-22",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-07-22",
+        "payment_date": "2024-07-26",
+        "amount": 0.15253,
+        "fetched_at": "2026-08-27T02:33:31.4098+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-06-24",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-06-24",
+        "payment_date": "2024-06-28",
+        "amount": 0.14392,
+        "fetched_at": "2026-08-27T02:33:31.409805+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-05-20",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-05-21",
+        "payment_date": "2024-05-24",
+        "amount": 0.15679,
+        "fetched_at": "2026-08-27T02:33:31.409809+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-04-22",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-04-23",
+        "payment_date": "2024-04-26",
+        "amount": 0.14747,
+        "fetched_at": "2026-08-27T02:33:31.409814+00:00"
+      },
+      {
+        "ticker": "BKLN",
+        "ex_dividend_date": "2024-03-18",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-03-19",
+        "payment_date": "2024-03-22",
+        "amount": 0.14649,
+        "fetched_at": "2026-08-27T02:33:31.409831+00:00"
+      }
+    ],
+    "SPHD": [
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-08-24",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-08-24",
+        "payment_date": "2026-08-28",
+        "amount": 0.21963,
+        "fetched_at": "2026-08-27T02:34:43.952468+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-07-20",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-07-20",
+        "payment_date": "2026-07-24",
+        "amount": 0.2147,
+        "fetched_at": "2026-08-27T02:34:43.952498+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-06-22",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-06-22",
+        "payment_date": "2026-06-26",
+        "amount": 0.2106,
+        "fetched_at": "2026-08-27T02:34:43.952506+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-05-18",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-05-18",
+        "payment_date": "2026-05-22",
+        "amount": 0.20935,
+        "fetched_at": "2026-08-27T02:34:43.952512+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-04-20",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-04-20",
+        "payment_date": "2026-04-24",
+        "amount": 0.20836,
+        "fetched_at": "2026-08-27T02:34:43.952517+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-03-23",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-03-23",
+        "payment_date": "2026-03-27",
+        "amount": 0.2069,
+        "fetched_at": "2026-08-27T02:34:43.952522+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-02-23",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-02-23",
+        "payment_date": "2026-02-27",
+        "amount": 0.20937,
+        "fetched_at": "2026-08-27T02:34:43.952527+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2026-01-20",
+        "declaration_date": "2026-01-02",
+        "record_date": "2026-01-20",
+        "payment_date": "2026-01-23",
+        "amount": 0.20271,
+        "fetched_at": "2026-08-27T02:34:43.952532+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-12-22",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-12-22",
+        "payment_date": "2025-12-26",
+        "amount": 0.20594,
+        "fetched_at": "2026-08-27T02:34:43.952536+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-11-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-11-24",
+        "payment_date": "2025-11-28",
+        "amount": 0.19476,
+        "fetched_at": "2026-08-27T02:34:43.95254+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-10-20",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-10-20",
+        "payment_date": "2025-10-24",
+        "amount": 0.18271,
+        "fetched_at": "2026-08-27T02:34:43.952545+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-09-22",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-09-22",
+        "payment_date": "2025-09-26",
+        "amount": 0.17847,
+        "fetched_at": "2026-08-27T02:34:43.95255+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-08-18",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-08-18",
+        "payment_date": "2025-08-22",
+        "amount": 0.16181,
+        "fetched_at": "2026-08-27T02:34:43.952554+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-07-21",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-07-21",
+        "payment_date": "2025-07-25",
+        "amount": 0.15681,
+        "fetched_at": "2026-08-27T02:34:43.952558+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-06-23",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-06-23",
+        "payment_date": "2025-06-27",
+        "amount": 0.15051,
+        "fetched_at": "2026-08-27T02:34:43.952563+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-05-19",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-05-19",
+        "payment_date": "2025-05-23",
+        "amount": 0.14559,
+        "fetched_at": "2026-08-27T02:34:43.952567+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-04-21",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-04-21",
+        "payment_date": "2025-04-25",
+        "amount": 0.14015,
+        "fetched_at": "2026-08-27T02:34:43.952571+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-03-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-03-24",
+        "payment_date": "2025-03-28",
+        "amount": 0.13909,
+        "fetched_at": "2026-08-27T02:34:43.952575+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-02-24",
+        "declaration_date": "2025-01-14",
+        "record_date": "2025-02-24",
+        "payment_date": "2025-02-28",
+        "amount": 0.13751,
+        "fetched_at": "2026-08-27T02:34:43.95258+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2025-01-21",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.138,
+        "fetched_at": "2026-08-27T02:34:43.952584+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-12-23",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-12-23",
+        "payment_date": "2024-12-27",
+        "amount": 0.13752,
+        "fetched_at": "2026-08-27T02:34:43.952589+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-11-18",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-11-18",
+        "payment_date": "2024-11-22",
+        "amount": 0.13781,
+        "fetched_at": "2026-08-27T02:34:43.952593+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-10-21",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-10-21",
+        "payment_date": "2024-10-25",
+        "amount": 0.13279,
+        "fetched_at": "2026-08-27T02:34:43.952598+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-09-23",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-09-23",
+        "payment_date": "2024-09-27",
+        "amount": 0.13201,
+        "fetched_at": "2026-08-27T02:34:43.952602+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-08-19",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-08-19",
+        "payment_date": "2024-08-23",
+        "amount": 0.13123,
+        "fetched_at": "2026-08-27T02:34:43.952612+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-07-22",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-07-22",
+        "payment_date": "2024-07-26",
+        "amount": 0.13513,
+        "fetched_at": "2026-08-27T02:34:43.952616+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-06-24",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-06-24",
+        "payment_date": "2024-06-28",
+        "amount": 0.13011,
+        "fetched_at": "2026-08-27T02:34:43.95262+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-05-20",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-05-21",
+        "payment_date": "2024-05-24",
+        "amount": 0.13625,
+        "fetched_at": "2026-08-27T02:34:43.952624+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-04-22",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-04-23",
+        "payment_date": "2024-04-26",
+        "amount": 0.14107,
+        "fetched_at": "2026-08-27T02:34:43.952629+00:00"
+      },
+      {
+        "ticker": "SPHD",
+        "ex_dividend_date": "2024-03-18",
+        "declaration_date": "2024-01-05",
+        "record_date": "2024-03-19",
+        "payment_date": "2024-03-22",
+        "amount": 0.13405,
+        "fetched_at": "2026-08-27T02:34:43.952633+00:00"
+      }
+    ],
+    "HDV": [
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2026-08-19",
+        "declaration_date": "2026-07-15",
+        "record_date": "2026-08-19",
+        "payment_date": "2026-08-24",
+        "amount": 0.104616,
+        "fetched_at": "2026-08-27T02:34:31.890293+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2026-07-15",
+        "declaration_date": "2026-07-14",
+        "record_date": "2026-07-15",
+        "payment_date": "2026-07-20",
+        "amount": 0.0874,
+        "fetched_at": "2026-08-27T02:34:31.890325+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2026-06-15",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-06-15",
+        "payment_date": "2026-06-18",
+        "amount": 0.185049,
+        "fetched_at": "2026-08-27T02:34:31.890333+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2026-03-17",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-03-17",
+        "payment_date": "2026-03-20",
+        "amount": 0.842962,
+        "fetched_at": "2026-08-27T02:34:31.890339+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2025-12-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-12-16",
+        "payment_date": "2025-12-19",
+        "amount": 1.25288,
+        "fetched_at": "2026-08-27T02:34:31.890344+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2025-09-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-09-16",
+        "payment_date": "2025-09-19",
+        "amount": 0.949579,
+        "fetched_at": "2026-08-27T02:34:31.890349+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2025-06-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-06-16",
+        "payment_date": "2025-06-20",
+        "amount": 0.91309,
+        "fetched_at": "2026-08-27T02:34:31.890355+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2025-03-18",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-03-18",
+        "payment_date": "2025-03-21",
+        "amount": 0.795075,
+        "fetched_at": "2026-08-27T02:34:31.890359+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2024-12-17",
+        "declaration_date": "2023-12-06",
+        "record_date": "2024-12-17",
+        "payment_date": "2024-12-20",
+        "amount": 1.121716,
+        "fetched_at": "2026-08-27T02:34:31.890364+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2024-09-25",
+        "declaration_date": "2023-12-06",
+        "record_date": "2024-09-25",
+        "payment_date": "2024-09-30",
+        "amount": 1.229495,
+        "fetched_at": "2026-08-27T02:34:31.890369+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2024-06-11",
+        "declaration_date": "2023-12-06",
+        "record_date": "2024-06-11",
+        "payment_date": "2024-06-17",
+        "amount": 0.928354,
+        "fetched_at": "2026-08-27T02:34:31.890373+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2024-03-21",
+        "declaration_date": "2023-12-06",
+        "record_date": "2024-03-22",
+        "payment_date": "2024-03-27",
+        "amount": 0.835487,
+        "fetched_at": "2026-08-27T02:34:31.890378+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2023-12-20",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-12-21",
+        "payment_date": "2023-12-27",
+        "amount": 0.9768,
+        "fetched_at": "2026-08-27T02:34:31.890383+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2023-09-26",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-09-27",
+        "payment_date": "2023-10-02",
+        "amount": 1.078057,
+        "fetched_at": "2026-08-27T02:34:31.890387+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2023-06-07",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-06-08",
+        "payment_date": "2023-06-13",
+        "amount": 0.79645,
+        "fetched_at": "2026-08-27T02:34:31.890392+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2023-03-23",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-03-24",
+        "payment_date": "2023-03-29",
+        "amount": 1.042139,
+        "fetched_at": "2026-08-27T02:34:31.890396+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2022-12-13",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-12-14",
+        "payment_date": "2022-12-19",
+        "amount": 1.144988,
+        "fetched_at": "2026-08-27T02:34:31.8904+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2022-09-26",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-09-27",
+        "payment_date": "2022-09-30",
+        "amount": 1.231175,
+        "fetched_at": "2026-08-27T02:34:31.890405+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2022-06-09",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-06-10",
+        "payment_date": "2022-06-15",
+        "amount": 0.569695,
+        "fetched_at": "2026-08-27T02:34:31.890409+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2022-03-24",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-03-25",
+        "payment_date": "2022-03-30",
+        "amount": 0.76976,
+        "fetched_at": "2026-08-27T02:34:31.890414+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2021-12-13",
+        "declaration_date": "2020-12-29",
+        "record_date": "2021-12-14",
+        "payment_date": "2021-12-17",
+        "amount": 1.051454,
+        "fetched_at": "2026-08-27T02:34:31.890418+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2021-09-24",
+        "declaration_date": "2020-12-29",
+        "record_date": "2021-09-27",
+        "payment_date": "2021-09-30",
+        "amount": 0.764133,
+        "fetched_at": "2026-08-27T02:34:31.890428+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2021-06-10",
+        "declaration_date": "2020-12-29",
+        "record_date": "2021-06-11",
+        "payment_date": "2021-06-16",
+        "amount": 0.810317,
+        "fetched_at": "2026-08-27T02:34:31.890432+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2021-03-25",
+        "declaration_date": "2020-12-29",
+        "record_date": "2021-03-26",
+        "payment_date": "2021-03-31",
+        "amount": 0.882118,
+        "fetched_at": "2026-08-27T02:34:31.890436+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2020-12-14",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-12-15",
+        "payment_date": "2020-12-18",
+        "amount": 0.923235,
+        "fetched_at": "2026-08-27T02:34:31.890441+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2020-09-23",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-09-24",
+        "payment_date": "2020-09-29",
+        "amount": 0.850765,
+        "fetched_at": "2026-08-27T02:34:31.890445+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2020-06-15",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-06-16",
+        "payment_date": "2020-06-19",
+        "amount": 0.879497,
+        "fetched_at": "2026-08-27T02:34:31.890449+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2020-03-25",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-03-26",
+        "payment_date": "2020-03-31",
+        "amount": 0.914362,
+        "fetched_at": "2026-08-27T02:34:31.890454+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2019-12-16",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.778998,
+        "fetched_at": "2026-08-27T02:34:31.890458+00:00"
+      },
+      {
+        "ticker": "HDV",
+        "ex_dividend_date": "2019-09-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.857381,
+        "fetched_at": "2026-08-27T02:34:31.890462+00:00"
+      }
+    ],
+    "SDIV": [
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-08-05",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-08-05",
+        "payment_date": "2026-08-12",
+        "amount": 0.18,
+        "fetched_at": "2026-08-27T02:34:56.02799+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-07-06",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-07-06",
+        "payment_date": "2026-07-13",
+        "amount": 0.18,
+        "fetched_at": "2026-08-27T02:34:56.028021+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-06-03",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-06-03",
+        "payment_date": "2026-06-10",
+        "amount": 0.18,
+        "fetched_at": "2026-08-27T02:34:56.028028+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-05-05",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-05-05",
+        "payment_date": "2026-05-12",
+        "amount": 0.18,
+        "fetched_at": "2026-08-27T02:34:56.028033+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-04-06",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-04-06",
+        "payment_date": "2026-04-13",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028038+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-03-04",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-03-04",
+        "payment_date": "2026-03-11",
+        "amount": 0.197,
+        "fetched_at": "2026-08-27T02:34:56.028043+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2026-02-04",
+        "declaration_date": "2026-01-19",
+        "record_date": "2026-02-04",
+        "payment_date": "2026-02-11",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028048+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-12-30",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-12-30",
+        "payment_date": "2026-01-07",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028053+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-12-03",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-12-03",
+        "payment_date": "2025-12-10",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028058+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-11-05",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-11-05",
+        "payment_date": "2025-11-13",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028063+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-10-03",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-10-03",
+        "payment_date": "2025-10-10",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028067+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-09-04",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-09-04",
+        "payment_date": "2025-09-11",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028072+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-08-05",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-08-05",
+        "payment_date": "2025-08-12",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028076+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-07-03",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-07-03",
+        "payment_date": "2025-07-11",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028085+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-06-04",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-06-04",
+        "payment_date": "2025-06-11",
+        "amount": 0.192,
+        "fetched_at": "2026-08-27T02:34:56.028089+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-05-05",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-05-05",
+        "payment_date": "2025-05-12",
+        "amount": 0.195,
+        "fetched_at": "2026-08-27T02:34:56.028094+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-04-03",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-04-03",
+        "payment_date": "2025-04-10",
+        "amount": 0.195,
+        "fetched_at": "2026-08-27T02:34:56.028099+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-03-05",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-03-05",
+        "payment_date": "2025-03-12",
+        "amount": 0.2,
+        "fetched_at": "2026-08-27T02:34:56.028103+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2025-02-05",
+        "declaration_date": "2025-01-06",
+        "record_date": "2025-02-05",
+        "payment_date": "2025-02-12",
+        "amount": 0.193,
+        "fetched_at": "2026-08-27T02:34:56.028108+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-12-30",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-12-30",
+        "payment_date": "2025-01-07",
+        "amount": 0.196,
+        "fetched_at": "2026-08-27T02:34:56.028112+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-12-04",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-12-04",
+        "payment_date": "2024-12-11",
+        "amount": 0.196,
+        "fetched_at": "2026-08-27T02:34:56.028117+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-11-05",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-11-05",
+        "payment_date": "2024-11-13",
+        "amount": 0.192,
+        "fetched_at": "2026-08-27T02:34:56.028121+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-10-03",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-10-03",
+        "payment_date": "2024-10-10",
+        "amount": 0.192,
+        "fetched_at": "2026-08-27T02:34:56.028125+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-09-05",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-09-05",
+        "payment_date": "2024-09-12",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.02813+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-08-05",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-08-05",
+        "payment_date": "2024-08-12",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028134+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-07-03",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-07-03",
+        "payment_date": "2024-07-11",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028139+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-06-05",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-06-05",
+        "payment_date": "2024-06-12",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028143+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-05-03",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-05-06",
+        "payment_date": "2024-05-13",
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028148+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-04-03",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.19,
+        "fetched_at": "2026-08-27T02:34:56.028153+00:00"
+      },
+      {
+        "ticker": "SDIV",
+        "ex_dividend_date": "2024-03-05",
+        "declaration_date": "2023-12-28",
+        "record_date": "2024-03-06",
+        "payment_date": "2024-03-13",
+        "amount": 0.21,
+        "fetched_at": "2026-08-27T02:34:56.028158+00:00"
+      }
+    ],
+    "TLTW": [
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-08-04",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-08-04",
+        "payment_date": "2026-08-07",
+        "amount": 0.152297,
+        "fetched_at": "2026-08-27T02:32:18.989421+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-07-02",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-07-02",
+        "payment_date": "2026-07-08",
+        "amount": 0.134655,
+        "fetched_at": "2026-08-27T02:32:18.989449+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-06-02",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-06-02",
+        "payment_date": "2026-06-05",
+        "amount": 0.217153,
+        "fetched_at": "2026-08-27T02:32:18.989457+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-05-04",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-05-04",
+        "payment_date": "2026-05-07",
+        "amount": 0.121426,
+        "fetched_at": "2026-08-27T02:32:18.989465+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-04-02",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-04-02",
+        "payment_date": "2026-04-08",
+        "amount": 0.211459,
+        "fetched_at": "2026-08-27T02:32:18.989471+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-03-03",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-03-03",
+        "payment_date": "2026-03-06",
+        "amount": 0.20402,
+        "fetched_at": "2026-08-27T02:32:18.989476+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2026-02-03",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-02-03",
+        "payment_date": "2026-02-06",
+        "amount": 0.174192,
+        "fetched_at": "2026-08-27T02:32:18.989481+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-12-23",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-12-23",
+        "payment_date": "2025-12-29",
+        "amount": 0.186913,
+        "fetched_at": "2026-08-27T02:32:18.989486+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-12-02",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-12-02",
+        "payment_date": "2025-12-05",
+        "amount": 0.187561,
+        "fetched_at": "2026-08-27T02:32:18.98949+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-11-04",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-11-04",
+        "payment_date": "2025-11-07",
+        "amount": 0.378277,
+        "fetched_at": "2026-08-27T02:32:18.989495+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-10-02",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-10-02",
+        "payment_date": "2025-10-07",
+        "amount": 0.144522,
+        "fetched_at": "2026-08-27T02:32:18.9895+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-09-03",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-09-03",
+        "payment_date": "2025-09-08",
+        "amount": 0.218319,
+        "fetched_at": "2026-08-27T02:32:18.989504+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-08-04",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-08-04",
+        "payment_date": "2025-08-07",
+        "amount": 0.231091,
+        "fetched_at": "2026-08-27T02:32:18.989509+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-07-02",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-07-02",
+        "payment_date": "2025-07-08",
+        "amount": 0.313681,
+        "fetched_at": "2026-08-27T02:32:18.989518+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-06-03",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-06-03",
+        "payment_date": "2025-06-06",
+        "amount": 0.418603,
+        "fetched_at": "2026-08-27T02:32:18.989523+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-05-02",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-05-02",
+        "payment_date": "2025-05-07",
+        "amount": 0.374978,
+        "fetched_at": "2026-08-27T02:32:18.98953+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-04-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.257933,
+        "fetched_at": "2026-08-27T02:32:18.989535+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-03-04",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-03-04",
+        "payment_date": "2025-03-07",
+        "amount": 0.258825,
+        "fetched_at": "2026-08-27T02:32:18.989539+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2025-02-04",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-02-04",
+        "payment_date": "2025-02-07",
+        "amount": 0.388274,
+        "fetched_at": "2026-08-27T02:32:18.989544+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-12-20",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-12-20",
+        "payment_date": "2024-12-26",
+        "amount": 0.593032,
+        "fetched_at": "2026-08-27T02:32:18.989548+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-12-03",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-12-03",
+        "payment_date": "2024-12-06",
+        "amount": 0.331396,
+        "fetched_at": "2026-08-27T02:32:18.989553+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-11-04",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-11-04",
+        "payment_date": "2024-11-07",
+        "amount": 0.252382,
+        "fetched_at": "2026-08-27T02:32:18.989558+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-10-02",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-10-02",
+        "payment_date": "2024-10-07",
+        "amount": 0.207608,
+        "fetched_at": "2026-08-27T02:32:18.989562+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-09-04",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-09-04",
+        "payment_date": "2024-09-09",
+        "amount": 0.280226,
+        "fetched_at": "2026-08-27T02:32:18.989567+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-08-02",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-08-02",
+        "payment_date": "2024-08-07",
+        "amount": 0.220124,
+        "fetched_at": "2026-08-27T02:32:18.989572+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-07-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.276948,
+        "fetched_at": "2026-08-27T02:32:18.989576+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-06-04",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-06-04",
+        "payment_date": "2024-06-10",
+        "amount": 0.24689,
+        "fetched_at": "2026-08-27T02:32:18.989581+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-05-02",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-05-03",
+        "payment_date": "2024-05-08",
+        "amount": 0.246648,
+        "fetched_at": "2026-08-27T02:32:18.989585+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-04-02",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-04-03",
+        "payment_date": "2024-04-08",
+        "amount": 0.235015,
+        "fetched_at": "2026-08-27T02:32:18.989589+00:00"
+      },
+      {
+        "ticker": "TLTW",
+        "ex_dividend_date": "2024-03-04",
+        "declaration_date": "2023-11-23",
+        "record_date": "2024-03-05",
+        "payment_date": "2024-03-08",
+        "amount": 0.301934,
+        "fetched_at": "2026-08-27T02:32:18.989594+00:00"
+      }
+    ],
+    "JNK": [
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-08-03",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-08-03",
+        "payment_date": "2026-08-06",
+        "amount": 0.527178,
+        "fetched_at": "2026-08-27T02:32:43.126201+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-07-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-07-01",
+        "payment_date": "2026-07-07",
+        "amount": 0.530783,
+        "fetched_at": "2026-08-27T02:32:43.126233+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-06-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-06-01",
+        "payment_date": "2026-06-04",
+        "amount": 0.523099,
+        "fetched_at": "2026-08-27T02:32:43.12624+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-05-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-05-01",
+        "payment_date": "2026-05-06",
+        "amount": 0.526935,
+        "fetched_at": "2026-08-27T02:32:43.126251+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-04-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-04-01",
+        "payment_date": "2026-04-06",
+        "amount": 0.524775,
+        "fetched_at": "2026-08-27T02:32:43.126256+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-03-02",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-03-02",
+        "payment_date": "2026-03-05",
+        "amount": 0.524572,
+        "fetched_at": "2026-08-27T02:32:43.12626+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2026-02-02",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-02-02",
+        "payment_date": "2026-02-05",
+        "amount": 0.560093,
+        "fetched_at": "2026-08-27T02:32:43.126265+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-12-18",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-12-18",
+        "payment_date": "2025-12-23",
+        "amount": 0.490548,
+        "fetched_at": "2026-08-27T02:32:43.12627+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-12-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-12-01",
+        "payment_date": "2025-12-04",
+        "amount": 0.527894,
+        "fetched_at": "2026-08-27T02:32:43.126274+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-11-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-11-03",
+        "payment_date": "2025-11-06",
+        "amount": 0.533377,
+        "fetched_at": "2026-08-27T02:32:43.126279+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-10-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-10-01",
+        "payment_date": "2025-10-06",
+        "amount": 0.537695,
+        "fetched_at": "2026-08-27T02:32:43.126283+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-09-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.529384,
+        "fetched_at": "2026-08-27T02:32:43.126288+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-08-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-08-01",
+        "payment_date": "2025-08-06",
+        "amount": 0.539129,
+        "fetched_at": "2026-08-27T02:32:43.126292+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-07-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-07-01",
+        "payment_date": "2025-07-07",
+        "amount": 0.539546,
+        "fetched_at": "2026-08-27T02:32:43.126297+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-06-02",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-06-02",
+        "payment_date": "2025-06-05",
+        "amount": 0.535758,
+        "fetched_at": "2026-08-27T02:32:43.126301+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-05-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-05-01",
+        "payment_date": "2025-05-06",
+        "amount": 0.529054,
+        "fetched_at": "2026-08-27T02:32:43.126305+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-04-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-04-01",
+        "payment_date": "2025-04-04",
+        "amount": 0.532464,
+        "fetched_at": "2026-08-27T02:32:43.12631+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-03-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-03-03",
+        "payment_date": "2025-03-06",
+        "amount": 0.527957,
+        "fetched_at": "2026-08-27T02:32:43.126314+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2025-02-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-02-03",
+        "payment_date": "2025-02-06",
+        "amount": 0.535687,
+        "fetched_at": "2026-08-27T02:32:43.126318+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-12-19",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-12-19",
+        "payment_date": "2024-12-24",
+        "amount": 0.520153,
+        "fetched_at": "2026-08-27T02:32:43.126484+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-12-02",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-12-02",
+        "payment_date": "2024-12-05",
+        "amount": 0.524406,
+        "fetched_at": "2026-08-27T02:32:43.126491+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-11-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-11-01",
+        "payment_date": "2024-11-06",
+        "amount": 0.531467,
+        "fetched_at": "2026-08-27T02:32:43.126495+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-10-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-10-01",
+        "payment_date": "2024-10-04",
+        "amount": 0.527874,
+        "fetched_at": "2026-08-27T02:32:43.126499+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-09-03",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-09-03",
+        "payment_date": "2024-09-06",
+        "amount": 0.527279,
+        "fetched_at": "2026-08-27T02:32:43.126504+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-08-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-08-01",
+        "payment_date": "2024-08-06",
+        "amount": 0.524526,
+        "fetched_at": "2026-08-27T02:32:43.126508+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-07-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-07-01",
+        "payment_date": "2024-07-05",
+        "amount": 0.533629,
+        "fetched_at": "2026-08-27T02:32:43.126513+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-06-03",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-06-03",
+        "payment_date": "2024-06-06",
+        "amount": 0.530757,
+        "fetched_at": "2026-08-27T02:32:43.126517+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-05-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-05-02",
+        "payment_date": "2024-05-07",
+        "amount": 0.539162,
+        "fetched_at": "2026-08-27T02:32:43.126522+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-04-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-04-02",
+        "payment_date": "2024-04-05",
+        "amount": 0.50856,
+        "fetched_at": "2026-08-27T02:32:43.126526+00:00"
+      },
+      {
+        "ticker": "JNK",
+        "ex_dividend_date": "2024-03-01",
+        "declaration_date": "2024-01-03",
+        "record_date": "2024-03-04",
+        "payment_date": "2024-03-07",
+        "amount": 0.528695,
+        "fetched_at": "2026-08-27T02:32:43.126531+00:00"
+      }
+    ],
+    "PFF": [
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-08-03",
+        "declaration_date": "2026-07-31",
+        "record_date": "2026-08-03",
+        "payment_date": "2026-08-06",
+        "amount": 0.142313,
+        "fetched_at": "2026-08-27T02:32:55.200917+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-07-01",
+        "declaration_date": "2026-06-30",
+        "record_date": "2026-07-01",
+        "payment_date": "2026-07-07",
+        "amount": 0.14174,
+        "fetched_at": "2026-08-27T02:32:55.200947+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-06-01",
+        "declaration_date": "2026-05-29",
+        "record_date": "2026-06-01",
+        "payment_date": "2026-06-04",
+        "amount": 0.138397,
+        "fetched_at": "2026-08-27T02:32:55.200955+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-05-01",
+        "declaration_date": "2026-04-30",
+        "record_date": "2026-05-01",
+        "payment_date": "2026-05-06",
+        "amount": 0.140325,
+        "fetched_at": "2026-08-27T02:32:55.20096+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-04-01",
+        "declaration_date": "2026-03-31",
+        "record_date": "2026-04-01",
+        "payment_date": "2026-04-07",
+        "amount": 0.141967,
+        "fetched_at": "2026-08-27T02:32:55.200965+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-03-02",
+        "declaration_date": "2026-02-27",
+        "record_date": "2026-03-02",
+        "payment_date": "2026-03-05",
+        "amount": 0.031167,
+        "fetched_at": "2026-08-27T02:32:55.20097+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2026-02-02",
+        "declaration_date": "2026-01-30",
+        "record_date": "2026-02-02",
+        "payment_date": "2026-02-05",
+        "amount": 0.177226,
+        "fetched_at": "2026-08-27T02:32:55.200974+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-12-19",
+        "declaration_date": "2025-12-18",
+        "record_date": "2025-12-19",
+        "payment_date": "2025-12-24",
+        "amount": 0.065884,
+        "fetched_at": "2026-08-27T02:32:55.200981+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-12-01",
+        "declaration_date": "2025-11-28",
+        "record_date": "2025-12-01",
+        "payment_date": "2025-12-04",
+        "amount": 0.175548,
+        "fetched_at": "2026-08-27T02:32:55.200986+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-11-03",
+        "declaration_date": "2025-10-31",
+        "record_date": "2025-11-03",
+        "payment_date": "2025-11-06",
+        "amount": 0.170708,
+        "fetched_at": "2026-08-27T02:32:55.200997+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-10-01",
+        "declaration_date": "2025-09-30",
+        "record_date": "2025-10-01",
+        "payment_date": "2025-10-06",
+        "amount": 0.170733,
+        "fetched_at": "2026-08-27T02:32:55.201002+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-09-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.160736,
+        "fetched_at": "2026-08-27T02:32:55.201007+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-08-01",
+        "declaration_date": "2025-07-31",
+        "record_date": "2025-08-01",
+        "payment_date": "2025-08-06",
+        "amount": 0.162132,
+        "fetched_at": "2026-08-27T02:32:55.201012+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-07-01",
+        "declaration_date": "2025-06-30",
+        "record_date": "2025-07-01",
+        "payment_date": "2025-07-07",
+        "amount": 0.173694,
+        "fetched_at": "2026-08-27T02:32:55.201016+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-06-02",
+        "declaration_date": "2025-05-30",
+        "record_date": "2025-06-02",
+        "payment_date": "2025-06-05",
+        "amount": 0.174575,
+        "fetched_at": "2026-08-27T02:32:55.201021+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-05-01",
+        "declaration_date": "2025-04-30",
+        "record_date": "2025-05-01",
+        "payment_date": "2025-05-06",
+        "amount": 0.174129,
+        "fetched_at": "2026-08-27T02:32:55.201026+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-04-01",
+        "declaration_date": "2025-03-31",
+        "record_date": "2025-04-01",
+        "payment_date": "2025-04-04",
+        "amount": 0.172497,
+        "fetched_at": "2026-08-27T02:32:55.20103+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-03-03",
+        "declaration_date": "2025-02-28",
+        "record_date": "2025-03-03",
+        "payment_date": "2025-03-06",
+        "amount": 0.173071,
+        "fetched_at": "2026-08-27T02:32:55.201035+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2025-02-03",
+        "declaration_date": "2025-01-31",
+        "record_date": "2025-02-03",
+        "payment_date": "2025-02-06",
+        "amount": 0.175461,
+        "fetched_at": "2026-08-27T02:32:55.201039+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-12-18",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-12-18",
+        "payment_date": "2024-12-23",
+        "amount": 0.176683,
+        "fetched_at": "2026-08-27T02:32:55.201044+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-12-02",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-12-02",
+        "payment_date": "2024-12-05",
+        "amount": 0.164857,
+        "fetched_at": "2026-08-27T02:32:55.201048+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-11-01",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-11-01",
+        "payment_date": "2024-11-06",
+        "amount": 0.165327,
+        "fetched_at": "2026-08-27T02:32:55.201052+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-10-01",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-10-01",
+        "payment_date": "2024-10-04",
+        "amount": 0.165454,
+        "fetched_at": "2026-08-27T02:32:55.201057+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-09-03",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-09-03",
+        "payment_date": "2024-09-06",
+        "amount": 0.163213,
+        "fetched_at": "2026-08-27T02:32:55.201061+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-08-01",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-08-01",
+        "payment_date": "2024-08-06",
+        "amount": 0.160613,
+        "fetched_at": "2026-08-27T02:32:55.201066+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-07-01",
+        "declaration_date": "2024-06-25",
+        "record_date": "2024-07-01",
+        "payment_date": "2024-07-05",
+        "amount": 0.163994,
+        "fetched_at": "2026-08-27T02:32:55.201071+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-06-03",
+        "declaration_date": "2024-05-31",
+        "record_date": "2024-06-03",
+        "payment_date": "2024-06-07",
+        "amount": 0.163415,
+        "fetched_at": "2026-08-27T02:32:55.201075+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-05-01",
+        "declaration_date": "2024-04-30",
+        "record_date": "2024-05-02",
+        "payment_date": "2024-05-07",
+        "amount": 0.159647,
+        "fetched_at": "2026-08-27T02:32:55.201079+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-04-01",
+        "declaration_date": "2024-03-28",
+        "record_date": "2024-04-02",
+        "payment_date": "2024-04-05",
+        "amount": 0.156147,
+        "fetched_at": "2026-08-27T02:32:55.201084+00:00"
+      },
+      {
+        "ticker": "PFF",
+        "ex_dividend_date": "2024-03-01",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-03-04",
+        "payment_date": "2024-03-07",
+        "amount": 0.170312,
+        "fetched_at": "2026-08-27T02:32:55.201089+00:00"
+      }
+    ],
+    "SPHY": [
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-08-03",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-08-03",
+        "payment_date": "2026-08-06",
+        "amount": 0.135652,
+        "fetched_at": "2026-08-27T02:33:07.274178+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-07-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-07-01",
+        "payment_date": "2026-07-07",
+        "amount": 0.138179,
+        "fetched_at": "2026-08-27T02:33:07.274208+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-06-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-06-01",
+        "payment_date": "2026-06-04",
+        "amount": 0.13751,
+        "fetched_at": "2026-08-27T02:33:07.274217+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-05-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-05-01",
+        "payment_date": "2026-05-06",
+        "amount": 0.136569,
+        "fetched_at": "2026-08-27T02:33:07.274223+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-04-01",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-04-01",
+        "payment_date": "2026-04-06",
+        "amount": 0.138357,
+        "fetched_at": "2026-08-27T02:33:07.274228+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-03-02",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-03-02",
+        "payment_date": "2026-03-05",
+        "amount": 0.139643,
+        "fetched_at": "2026-08-27T02:33:07.274233+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2026-02-02",
+        "declaration_date": "2025-12-31",
+        "record_date": "2026-02-02",
+        "payment_date": "2026-02-05",
+        "amount": 0.137911,
+        "fetched_at": "2026-08-27T02:33:07.274237+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-12-18",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-12-18",
+        "payment_date": "2025-12-23",
+        "amount": 0.140677,
+        "fetched_at": "2026-08-27T02:33:07.274242+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-12-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-12-01",
+        "payment_date": "2025-12-04",
+        "amount": 0.139704,
+        "fetched_at": "2026-08-27T02:33:07.274246+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-11-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-11-03",
+        "payment_date": "2025-11-06",
+        "amount": 0.142579,
+        "fetched_at": "2026-08-27T02:33:07.27425+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-10-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-10-01",
+        "payment_date": "2025-10-06",
+        "amount": 0.144075,
+        "fetched_at": "2026-08-27T02:33:07.27426+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-09-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.145487,
+        "fetched_at": "2026-08-27T02:33:07.274268+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-08-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-08-01",
+        "payment_date": "2025-08-06",
+        "amount": 0.146775,
+        "fetched_at": "2026-08-27T02:33:07.274273+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-07-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-07-01",
+        "payment_date": "2025-07-07",
+        "amount": 0.146414,
+        "fetched_at": "2026-08-27T02:33:07.274277+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-06-02",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-06-02",
+        "payment_date": "2025-06-05",
+        "amount": 0.145817,
+        "fetched_at": "2026-08-27T02:33:07.274281+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-05-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-05-01",
+        "payment_date": "2025-05-06",
+        "amount": 0.146492,
+        "fetched_at": "2026-08-27T02:33:07.274286+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-04-01",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-04-01",
+        "payment_date": "2025-04-04",
+        "amount": 0.147657,
+        "fetched_at": "2026-08-27T02:33:07.27429+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-03-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-03-03",
+        "payment_date": "2025-03-06",
+        "amount": 0.147639,
+        "fetched_at": "2026-08-27T02:33:07.274294+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2025-02-03",
+        "declaration_date": "2025-01-09",
+        "record_date": "2025-02-03",
+        "payment_date": "2025-02-06",
+        "amount": 0.152694,
+        "fetched_at": "2026-08-27T02:33:07.274299+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-12-19",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-12-19",
+        "payment_date": "2024-12-24",
+        "amount": 0.144671,
+        "fetched_at": "2026-08-27T02:33:07.274303+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-12-02",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-12-02",
+        "payment_date": "2024-12-05",
+        "amount": 0.14793,
+        "fetched_at": "2026-08-27T02:33:07.274308+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-11-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-11-01",
+        "payment_date": "2024-11-06",
+        "amount": 0.154012,
+        "fetched_at": "2026-08-27T02:33:07.274312+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-10-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-10-01",
+        "payment_date": "2024-10-04",
+        "amount": 0.150403,
+        "fetched_at": "2026-08-27T02:33:07.274317+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-09-03",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-09-03",
+        "payment_date": "2024-09-06",
+        "amount": 0.155175,
+        "fetched_at": "2026-08-27T02:33:07.274493+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-08-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-08-01",
+        "payment_date": "2024-08-06",
+        "amount": 0.15214,
+        "fetched_at": "2026-08-27T02:33:07.274499+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-07-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-07-01",
+        "payment_date": "2024-07-05",
+        "amount": 0.152562,
+        "fetched_at": "2026-08-27T02:33:07.274504+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-06-03",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-06-03",
+        "payment_date": "2024-06-06",
+        "amount": 0.14979,
+        "fetched_at": "2026-08-27T02:33:07.274509+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-05-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-05-02",
+        "payment_date": "2024-05-07",
+        "amount": 0.153526,
+        "fetched_at": "2026-08-27T02:33:07.274514+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-04-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-04-02",
+        "payment_date": "2024-04-05",
+        "amount": 0.153729,
+        "fetched_at": "2026-08-27T02:33:07.274518+00:00"
+      },
+      {
+        "ticker": "SPHY",
+        "ex_dividend_date": "2024-03-01",
+        "declaration_date": "2024-01-02",
+        "record_date": "2024-03-04",
+        "payment_date": "2024-03-07",
+        "amount": 0.155974,
+        "fetched_at": "2026-08-27T02:33:07.274523+00:00"
+      }
+    ],
+    "HYG": [
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-08-03",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-08-03",
+        "payment_date": "2026-08-06",
+        "amount": 0.384289,
+        "fetched_at": "2026-08-27T02:32:31.051968+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-07-01",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-07-01",
+        "payment_date": "2026-07-07",
+        "amount": 0.3688,
+        "fetched_at": "2026-08-27T02:32:31.051997+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-06-01",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.409,
+        "fetched_at": "2026-08-27T02:32:31.052005+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-05-01",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-05-01",
+        "payment_date": "2026-05-06",
+        "amount": 0.418714,
+        "fetched_at": "2026-08-27T02:32:31.052011+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-04-01",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-04-01",
+        "payment_date": "2026-04-07",
+        "amount": 0.383731,
+        "fetched_at": "2026-08-27T02:32:31.052017+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-03-02",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-03-02",
+        "payment_date": "2026-03-05",
+        "amount": 0.393736,
+        "fetched_at": "2026-08-27T02:32:31.052023+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2026-02-02",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-02-02",
+        "payment_date": "2026-02-05",
+        "amount": 0.398688,
+        "fetched_at": "2026-08-27T02:32:31.052028+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-12-19",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-12-19",
+        "payment_date": "2025-12-24",
+        "amount": 0.380624,
+        "fetched_at": "2026-08-27T02:32:31.052033+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-12-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-12-01",
+        "payment_date": "2025-12-04",
+        "amount": 0.374767,
+        "fetched_at": "2026-08-27T02:32:31.052038+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-11-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-11-03",
+        "payment_date": "2025-11-06",
+        "amount": 0.409763,
+        "fetched_at": "2026-08-27T02:32:31.052043+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-10-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-10-01",
+        "payment_date": "2025-10-06",
+        "amount": 0.381299,
+        "fetched_at": "2026-08-27T02:32:31.052048+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-09-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.383321,
+        "fetched_at": "2026-08-27T02:32:31.052052+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-08-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-08-01",
+        "payment_date": "2025-08-06",
+        "amount": 0.404487,
+        "fetched_at": "2026-08-27T02:32:31.052057+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-07-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-07-01",
+        "payment_date": "2025-07-07",
+        "amount": 0.379436,
+        "fetched_at": "2026-08-27T02:32:31.052062+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-06-02",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-06-02",
+        "payment_date": "2025-06-05",
+        "amount": 0.375571,
+        "fetched_at": "2026-08-27T02:32:31.052066+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-05-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-05-01",
+        "payment_date": "2025-05-06",
+        "amount": 0.401345,
+        "fetched_at": "2026-08-27T02:32:31.05207+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-04-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-04-01",
+        "payment_date": "2025-04-04",
+        "amount": 0.382397,
+        "fetched_at": "2026-08-27T02:32:31.052075+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-03-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-03-03",
+        "payment_date": "2025-03-06",
+        "amount": 0.374339,
+        "fetched_at": "2026-08-27T02:32:31.05208+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2025-02-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-02-03",
+        "payment_date": "2025-02-06",
+        "amount": 0.360138,
+        "fetched_at": "2026-08-27T02:32:31.052084+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-12-18",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-12-18",
+        "payment_date": "2024-12-23",
+        "amount": 0.409324,
+        "fetched_at": "2026-08-27T02:32:31.052088+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-12-02",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-12-02",
+        "payment_date": "2024-12-05",
+        "amount": 0.361358,
+        "fetched_at": "2026-08-27T02:32:31.052093+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-11-01",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-11-01",
+        "payment_date": "2024-11-06",
+        "amount": 0.394556,
+        "fetched_at": "2026-08-27T02:32:31.052097+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-10-01",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-10-01",
+        "payment_date": "2024-10-04",
+        "amount": 0.39029,
+        "fetched_at": "2026-08-27T02:32:31.052101+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-09-03",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-09-03",
+        "payment_date": "2024-09-06",
+        "amount": 0.379535,
+        "fetched_at": "2026-08-27T02:32:31.052106+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-08-01",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-08-01",
+        "payment_date": "2024-08-06",
+        "amount": 0.409004,
+        "fetched_at": "2026-08-27T02:32:31.05211+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-07-01",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-07-01",
+        "payment_date": "2024-07-05",
+        "amount": 0.404923,
+        "fetched_at": "2026-08-27T02:32:31.052119+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-06-03",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-06-03",
+        "payment_date": "2024-06-07",
+        "amount": 0.358103,
+        "fetched_at": "2026-08-27T02:32:31.052123+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-05-01",
+        "declaration_date": "2024-04-30",
+        "record_date": "2024-05-02",
+        "payment_date": "2024-05-07",
+        "amount": 0.399799,
+        "fetched_at": "2026-08-27T02:32:31.052128+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-04-01",
+        "declaration_date": "2023-11-22",
+        "record_date": "2024-04-02",
+        "payment_date": "2024-04-05",
+        "amount": 0.395109,
+        "fetched_at": "2026-08-27T02:32:31.052132+00:00"
+      },
+      {
+        "ticker": "HYG",
+        "ex_dividend_date": "2024-03-01",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-03-04",
+        "payment_date": "2024-03-07",
+        "amount": 0.438231,
+        "fetched_at": "2026-08-27T02:32:31.052136+00:00"
+      }
+    ],
+    "USHY": [
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-08-03",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-08-03",
+        "payment_date": "2026-08-06",
+        "amount": 0.2129,
+        "fetched_at": "2026-08-27T02:33:19.340517+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-07-01",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-07-01",
+        "payment_date": "2026-07-07",
+        "amount": 0.206289,
+        "fetched_at": "2026-08-27T02:33:19.340546+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-06-01",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-06-01",
+        "payment_date": "2026-06-04",
+        "amount": 0.209316,
+        "fetched_at": "2026-08-27T02:33:19.340553+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-05-01",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-05-01",
+        "payment_date": "2026-05-06",
+        "amount": 0.202453,
+        "fetched_at": "2026-08-27T02:33:19.340559+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-04-01",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-04-01",
+        "payment_date": "2026-04-07",
+        "amount": 0.230285,
+        "fetched_at": "2026-08-27T02:33:19.340564+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-03-02",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-03-02",
+        "payment_date": "2026-03-05",
+        "amount": 0.202357,
+        "fetched_at": "2026-08-27T02:33:19.340568+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2026-02-02",
+        "declaration_date": "2025-09-04",
+        "record_date": "2026-02-02",
+        "payment_date": "2026-02-05",
+        "amount": 0.215391,
+        "fetched_at": "2026-08-27T02:33:19.340573+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-12-19",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-12-19",
+        "payment_date": "2025-12-24",
+        "amount": 0.212103,
+        "fetched_at": "2026-08-27T02:33:19.340577+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-12-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-12-01",
+        "payment_date": "2025-12-04",
+        "amount": 0.215476,
+        "fetched_at": "2026-08-27T02:33:19.340582+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-11-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-11-03",
+        "payment_date": "2025-11-06",
+        "amount": 0.211856,
+        "fetched_at": "2026-08-27T02:33:19.340586+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-10-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-10-01",
+        "payment_date": "2025-10-06",
+        "amount": 0.214756,
+        "fetched_at": "2026-08-27T02:33:19.34059+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-09-02",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.215463,
+        "fetched_at": "2026-08-27T02:33:19.340595+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-08-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-08-01",
+        "payment_date": "2025-08-06",
+        "amount": 0.2105,
+        "fetched_at": "2026-08-27T02:33:19.3406+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-07-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-07-01",
+        "payment_date": "2025-07-07",
+        "amount": 0.211323,
+        "fetched_at": "2026-08-27T02:33:19.340604+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-06-02",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-06-02",
+        "payment_date": "2025-06-05",
+        "amount": 0.210771,
+        "fetched_at": "2026-08-27T02:33:19.340609+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-05-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-05-01",
+        "payment_date": "2025-05-06",
+        "amount": 0.201656,
+        "fetched_at": "2026-08-27T02:33:19.340613+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-04-01",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-04-01",
+        "payment_date": "2025-04-04",
+        "amount": 0.210266,
+        "fetched_at": "2026-08-27T02:33:19.340617+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-03-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-03-03",
+        "payment_date": "2025-03-06",
+        "amount": 0.210268,
+        "fetched_at": "2026-08-27T02:33:19.340621+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2025-02-03",
+        "declaration_date": "2024-07-04",
+        "record_date": "2025-02-03",
+        "payment_date": "2025-02-06",
+        "amount": 0.214291,
+        "fetched_at": "2026-08-27T02:33:19.340626+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-12-18",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.224418,
+        "fetched_at": "2026-08-27T02:33:19.340645+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-12-02",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-12-02",
+        "payment_date": "2024-12-05",
+        "amount": 0.217921,
+        "fetched_at": "2026-08-27T02:33:19.340652+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-11-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-11-01",
+        "payment_date": "2024-11-06",
+        "amount": 0.21096,
+        "fetched_at": "2026-08-27T02:33:19.340657+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-10-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-10-01",
+        "payment_date": "2024-10-04",
+        "amount": 0.203086,
+        "fetched_at": "2026-08-27T02:33:19.340661+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-09-03",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-09-03",
+        "payment_date": "2024-09-06",
+        "amount": 0.206861,
+        "fetched_at": "2026-08-27T02:33:19.340665+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-08-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-08-01",
+        "payment_date": "2024-08-06",
+        "amount": 0.188879,
+        "fetched_at": "2026-08-27T02:33:19.34067+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-07-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-07-01",
+        "payment_date": "2024-07-05",
+        "amount": 0.207836,
+        "fetched_at": "2026-08-27T02:33:19.340674+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-06-03",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-06-03",
+        "payment_date": "2024-06-07",
+        "amount": 0.202075,
+        "fetched_at": "2026-08-27T02:33:19.340678+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-05-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-05-02",
+        "payment_date": "2024-05-07",
+        "amount": 0.210319,
+        "fetched_at": "2026-08-27T02:33:19.340683+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-04-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-04-02",
+        "payment_date": "2024-04-05",
+        "amount": 0.22677,
+        "fetched_at": "2026-08-27T02:33:19.340687+00:00"
+      },
+      {
+        "ticker": "USHY",
+        "ex_dividend_date": "2024-03-01",
+        "declaration_date": "2023-11-24",
+        "record_date": "2024-03-04",
+        "payment_date": "2024-03-07",
+        "amount": 0.218281,
+        "fetched_at": "2026-08-27T02:33:19.340691+00:00"
+      }
+    ],
+    "DGRW": [
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-07-28",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-07-28",
+        "payment_date": "2026-07-30",
+        "amount": 0.065,
+        "fetched_at": "2026-08-27T02:35:08.086366+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-06-25",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-06-25",
+        "payment_date": "2026-06-29",
+        "amount": 0.16,
+        "fetched_at": "2026-08-27T02:35:08.086395+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-05-26",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-05-26",
+        "payment_date": "2026-05-28",
+        "amount": 0.055,
+        "fetched_at": "2026-08-27T02:35:08.086403+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-04-27",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-04-27",
+        "payment_date": "2026-04-29",
+        "amount": 0.075,
+        "fetched_at": "2026-08-27T02:35:08.086409+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-03-26",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-03-26",
+        "payment_date": "2026-03-30",
+        "amount": 0.17,
+        "fetched_at": "2026-08-27T02:35:08.086414+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-02-24",
+        "declaration_date": "2025-12-08",
+        "record_date": "2026-02-24",
+        "payment_date": "2026-02-26",
+        "amount": 0.055,
+        "fetched_at": "2026-08-27T02:35:08.086419+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2026-01-27",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.025,
+        "fetched_at": "2026-08-27T02:35:08.086425+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-12-26",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-12-26",
+        "payment_date": "2025-12-30",
+        "amount": 0.2327,
+        "fetched_at": "2026-08-27T02:35:08.086431+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-11-24",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-11-24",
+        "payment_date": "2025-11-26",
+        "amount": 0.09,
+        "fetched_at": "2026-08-27T02:35:08.086435+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-10-28",
+        "declaration_date": "2025-10-27",
+        "record_date": "2025-10-28",
+        "payment_date": "2025-10-30",
+        "amount": 0.035,
+        "fetched_at": "2026-08-27T02:35:08.08644+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-09-25",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-09-25",
+        "payment_date": "2025-09-29",
+        "amount": 0.185,
+        "fetched_at": "2026-08-27T02:35:08.086445+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-08-26",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-08-26",
+        "payment_date": "2025-08-28",
+        "amount": 0.085,
+        "fetched_at": "2026-08-27T02:35:08.08645+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-07-28",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-07-28",
+        "payment_date": "2025-07-30",
+        "amount": 0.05,
+        "fetched_at": "2026-08-27T02:35:08.086455+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-06-25",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-06-25",
+        "payment_date": "2025-06-27",
+        "amount": 0.175,
+        "fetched_at": "2026-08-27T02:35:08.086459+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-05-27",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.065,
+        "fetched_at": "2026-08-27T02:35:08.086464+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-04-25",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-04-25",
+        "payment_date": "2025-04-29",
+        "amount": 0.09,
+        "fetched_at": "2026-08-27T02:35:08.086469+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-03-26",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-03-26",
+        "payment_date": "2025-03-28",
+        "amount": 0.155,
+        "fetched_at": "2026-08-27T02:35:08.086473+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-02-25",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-02-25",
+        "payment_date": "2025-02-27",
+        "amount": 0.11,
+        "fetched_at": "2026-08-27T02:35:08.086478+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2025-01-28",
+        "declaration_date": "2024-11-16",
+        "record_date": "2025-01-28",
+        "payment_date": "2025-01-30",
+        "amount": 0.00304,
+        "fetched_at": "2026-08-27T02:35:08.086482+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-12-31",
+        "declaration_date": "2024-12-30",
+        "record_date": "2024-12-31",
+        "payment_date": "2025-01-03",
+        "amount": 0.04072,
+        "fetched_at": "2026-08-27T02:35:08.086487+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-12-26",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-12-26",
+        "payment_date": "2024-12-30",
+        "amount": 0.15525,
+        "fetched_at": "2026-08-27T02:35:08.086491+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-11-25",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-11-25",
+        "payment_date": "2024-11-27",
+        "amount": 0.1,
+        "fetched_at": "2026-08-27T02:35:08.0865+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-10-28",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-10-28",
+        "payment_date": "2024-10-30",
+        "amount": 0.075,
+        "fetched_at": "2026-08-27T02:35:08.086505+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-09-25",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-09-25",
+        "payment_date": "2024-09-27",
+        "amount": 0.145,
+        "fetched_at": "2026-08-27T02:35:08.086509+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-08-27",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-08-27",
+        "payment_date": "2024-08-29",
+        "amount": 0.105,
+        "fetched_at": "2026-08-27T02:35:08.086514+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-07-26",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-07-26",
+        "payment_date": "2024-07-30",
+        "amount": 0.06,
+        "fetched_at": "2026-08-27T02:35:08.086518+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-06-25",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-06-25",
+        "payment_date": "2024-06-27",
+        "amount": 0.18,
+        "fetched_at": "2026-08-27T02:35:08.086523+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-05-24",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-05-28",
+        "payment_date": "2024-05-30",
+        "amount": 0.07,
+        "fetched_at": "2026-08-27T02:35:08.086527+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-04-24",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-04-25",
+        "payment_date": "2024-04-29",
+        "amount": 0.065,
+        "fetched_at": "2026-08-27T02:35:08.086532+00:00"
+      },
+      {
+        "ticker": "DGRW",
+        "ex_dividend_date": "2024-03-22",
+        "declaration_date": "2023-12-26",
+        "record_date": "2024-03-25",
+        "payment_date": "2024-03-27",
+        "amount": 0.17,
+        "fetched_at": "2026-08-27T02:35:08.086536+00:00"
+      }
+    ],
+    "NLY": [
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2026-06-30",
+        "declaration_date": "2026-06-10",
+        "record_date": "2026-06-30",
+        "payment_date": "2026-07-31",
+        "amount": 0.75,
+        "fetched_at": "2026-08-27T02:32:06.932415+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2026-03-31",
+        "declaration_date": "2026-03-12",
+        "record_date": "2026-03-31",
+        "payment_date": "2026-04-30",
+        "amount": 0.7,
+        "fetched_at": "2026-08-27T02:32:06.932446+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2025-12-31",
+        "declaration_date": "2025-12-10",
+        "record_date": "2025-12-31",
+        "payment_date": "2026-01-30",
+        "amount": 0.7,
+        "fetched_at": "2026-08-27T02:32:06.932453+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2025-09-30",
+        "declaration_date": "2025-09-10",
+        "record_date": "2025-09-30",
+        "payment_date": "2025-10-31",
+        "amount": 0.7,
+        "fetched_at": "2026-08-27T02:32:06.932459+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2025-06-30",
+        "declaration_date": "2025-06-04",
+        "record_date": "2025-06-30",
+        "payment_date": "2025-07-31",
+        "amount": 0.7,
+        "fetched_at": "2026-08-27T02:32:06.932464+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2025-03-31",
+        "declaration_date": "2025-03-13",
+        "record_date": "2025-03-31",
+        "payment_date": "2025-04-30",
+        "amount": 0.7,
+        "fetched_at": "2026-08-27T02:32:06.93247+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2024-12-31",
+        "declaration_date": "2024-12-05",
+        "record_date": "2024-12-31",
+        "payment_date": "2025-01-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932475+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2024-09-30",
+        "declaration_date": "2024-09-10",
+        "record_date": "2024-09-30",
+        "payment_date": "2024-10-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932488+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2024-06-28",
+        "declaration_date": "2024-06-05",
+        "record_date": "2024-06-28",
+        "payment_date": "2024-07-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932496+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2024-03-27",
+        "declaration_date": "2024-03-14",
+        "record_date": "2024-03-28",
+        "payment_date": "2024-04-30",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932501+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2023-12-28",
+        "declaration_date": "2023-12-07",
+        "record_date": "2023-12-29",
+        "payment_date": "2024-01-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932507+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2023-09-28",
+        "declaration_date": "2023-09-07",
+        "record_date": "2023-09-29",
+        "payment_date": "2023-10-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932512+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2023-06-29",
+        "declaration_date": "2023-06-07",
+        "record_date": "2023-06-30",
+        "payment_date": "2023-07-31",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932517+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2023-03-30",
+        "declaration_date": "2023-03-14",
+        "record_date": "2023-03-31",
+        "payment_date": "2023-04-28",
+        "amount": 0.65,
+        "fetched_at": "2026-08-27T02:32:06.932521+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2022-12-29",
+        "declaration_date": "2022-12-08",
+        "record_date": "2022-12-30",
+        "payment_date": "2023-01-31",
+        "amount": 0.88,
+        "fetched_at": "2026-08-27T02:32:06.932525+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2022-09-29",
+        "declaration_date": "2022-09-08",
+        "record_date": "2022-09-30",
+        "payment_date": "2022-10-31",
+        "amount": 0.88,
+        "fetched_at": "2026-08-27T02:32:06.93253+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2022-06-29",
+        "declaration_date": "2022-06-08",
+        "record_date": "2022-06-30",
+        "payment_date": "2022-07-29",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932534+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2022-03-30",
+        "declaration_date": "2022-03-17",
+        "record_date": "2022-03-31",
+        "payment_date": "2022-04-29",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932539+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2021-12-30",
+        "declaration_date": "2021-12-09",
+        "record_date": "2021-12-31",
+        "payment_date": "2022-01-31",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932544+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2021-09-29",
+        "declaration_date": "2021-09-09",
+        "record_date": "2021-09-30",
+        "payment_date": "2021-10-29",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932549+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2021-06-29",
+        "declaration_date": "2021-06-09",
+        "record_date": "2021-06-30",
+        "payment_date": "2021-07-30",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932553+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2021-03-30",
+        "declaration_date": "2021-03-17",
+        "record_date": "2021-03-31",
+        "payment_date": "2021-04-30",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932558+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2020-12-30",
+        "declaration_date": "2020-12-10",
+        "record_date": "2020-12-31",
+        "payment_date": "2021-01-29",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932562+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2020-09-29",
+        "declaration_date": "2020-09-10",
+        "record_date": "2020-09-30",
+        "payment_date": "2020-10-30",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932567+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2020-06-29",
+        "declaration_date": "2020-06-10",
+        "record_date": "2020-06-30",
+        "payment_date": "2020-07-31",
+        "amount": 0.22,
+        "fetched_at": "2026-08-27T02:32:06.932577+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2020-03-30",
+        "declaration_date": "2020-03-16",
+        "record_date": "2020-03-31",
+        "payment_date": "2020-04-30",
+        "amount": 0.25,
+        "fetched_at": "2026-08-27T02:32:06.932582+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2019-12-30",
+        "declaration_date": "2019-12-12",
+        "record_date": "2019-12-31",
+        "payment_date": "2020-01-31",
+        "amount": 0.25,
+        "fetched_at": "2026-08-27T02:32:06.932586+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2019-09-27",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.25,
+        "fetched_at": "2026-08-27T02:32:06.932591+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2019-06-27",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.25,
+        "fetched_at": "2026-08-27T02:32:06.932595+00:00"
+      },
+      {
+        "ticker": "NLY",
+        "ex_dividend_date": "2019-03-28",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.3,
+        "fetched_at": "2026-08-27T02:32:06.9326+00:00"
+      }
+    ],
+    "VIG": [
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2026-06-26",
+        "declaration_date": "2026-01-27",
+        "record_date": "2026-06-26",
+        "payment_date": "2026-06-30",
+        "amount": 0.9988,
+        "fetched_at": "2026-08-27T02:34:19.82905+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2026-03-27",
+        "declaration_date": "2026-01-09",
+        "record_date": "2026-03-27",
+        "payment_date": "2026-03-31",
+        "amount": 0.8334,
+        "fetched_at": "2026-08-27T02:34:19.82908+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2025-12-22",
+        "declaration_date": "2025-04-03",
+        "record_date": "2025-12-22",
+        "payment_date": "2025-12-24",
+        "amount": 0.8844,
+        "fetched_at": "2026-08-27T02:34:19.829087+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2025-09-29",
+        "declaration_date": "2025-01-16",
+        "record_date": "2025-09-29",
+        "payment_date": "2025-10-01",
+        "amount": 0.8647,
+        "fetched_at": "2026-08-27T02:34:19.829092+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2025-06-30",
+        "declaration_date": "2025-01-16",
+        "record_date": "2025-06-30",
+        "payment_date": "2025-07-02",
+        "amount": 0.8712,
+        "fetched_at": "2026-08-27T02:34:19.829097+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2025-03-27",
+        "declaration_date": "2025-01-16",
+        "record_date": "2025-03-27",
+        "payment_date": "2025-03-31",
+        "amount": 0.9377,
+        "fetched_at": "2026-08-27T02:34:19.829101+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2024-12-23",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-12-23",
+        "payment_date": "2024-12-26",
+        "amount": 0.8756,
+        "fetched_at": "2026-08-27T02:34:19.829105+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2024-09-27",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-09-27",
+        "payment_date": "2024-10-01",
+        "amount": 0.8351,
+        "fetched_at": "2026-08-27T02:34:19.82911+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2024-06-28",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-06-28",
+        "payment_date": "2024-07-02",
+        "amount": 0.8992,
+        "fetched_at": "2026-08-27T02:34:19.829114+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2024-03-22",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-03-25",
+        "payment_date": "2024-03-27",
+        "amount": 0.7692,
+        "fetched_at": "2026-08-27T02:34:19.829118+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2023-12-21",
+        "declaration_date": "2023-03-15",
+        "record_date": "2023-12-22",
+        "payment_date": "2023-12-27",
+        "amount": 0.9156,
+        "fetched_at": "2026-08-27T02:34:19.829123+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2023-09-28",
+        "declaration_date": "2023-03-15",
+        "record_date": "2023-09-29",
+        "payment_date": "2023-10-03",
+        "amount": 0.7705,
+        "fetched_at": "2026-08-27T02:34:19.829127+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2023-06-29",
+        "declaration_date": "2023-03-15",
+        "record_date": "2023-06-30",
+        "payment_date": "2023-07-05",
+        "amount": 0.7731,
+        "fetched_at": "2026-08-27T02:34:19.829131+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2023-03-24",
+        "declaration_date": "2023-03-15",
+        "record_date": "2023-03-27",
+        "payment_date": "2023-03-29",
+        "amount": 0.7489,
+        "fetched_at": "2026-08-27T02:34:19.829136+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2022-12-20",
+        "declaration_date": "2022-12-16",
+        "record_date": "2022-12-21",
+        "payment_date": "2022-12-23",
+        "amount": 0.8687,
+        "fetched_at": "2026-08-27T02:34:19.82914+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2022-09-19",
+        "declaration_date": "2022-09-16",
+        "record_date": "2022-09-20",
+        "payment_date": "2022-09-22",
+        "amount": 0.715,
+        "fetched_at": "2026-08-27T02:34:19.829145+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2022-06-21",
+        "declaration_date": "2022-06-16",
+        "record_date": "2022-06-22",
+        "payment_date": "2022-06-24",
+        "amount": 0.6949,
+        "fetched_at": "2026-08-27T02:34:19.829149+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2022-03-21",
+        "declaration_date": "2022-03-17",
+        "record_date": "2022-03-22",
+        "payment_date": "2022-03-24",
+        "amount": 0.6939,
+        "fetched_at": "2026-08-27T02:34:19.829154+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2021-12-20",
+        "declaration_date": "2021-12-16",
+        "record_date": "2021-12-21",
+        "payment_date": "2021-12-23",
+        "amount": 0.7725,
+        "fetched_at": "2026-08-27T02:34:19.829158+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2021-09-20",
+        "declaration_date": "2021-09-16",
+        "record_date": "2021-09-21",
+        "payment_date": "2021-09-23",
+        "amount": 0.6995,
+        "fetched_at": "2026-08-27T02:34:19.829162+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2021-06-21",
+        "declaration_date": "2021-06-17",
+        "record_date": "2021-06-22",
+        "payment_date": "2021-06-24",
+        "amount": 0.675,
+        "fetched_at": "2026-08-27T02:34:19.829167+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2021-03-22",
+        "declaration_date": "2021-03-18",
+        "record_date": "2021-03-23",
+        "payment_date": "2021-03-25",
+        "amount": 0.5131,
+        "fetched_at": "2026-08-27T02:34:19.829171+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2020-12-21",
+        "declaration_date": "2020-12-17",
+        "record_date": "2020-12-22",
+        "payment_date": "2020-12-24",
+        "amount": 0.6644,
+        "fetched_at": "2026-08-27T02:34:19.829175+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2020-09-29",
+        "declaration_date": "2020-09-25",
+        "record_date": "2020-09-30",
+        "payment_date": "2020-10-02",
+        "amount": 0.5575,
+        "fetched_at": "2026-08-27T02:34:19.829351+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2020-06-29",
+        "declaration_date": "2020-06-25",
+        "record_date": "2020-06-30",
+        "payment_date": "2020-07-02",
+        "amount": 0.6006,
+        "fetched_at": "2026-08-27T02:34:19.829357+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2020-03-26",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.474,
+        "fetched_at": "2026-08-27T02:34:19.829369+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2019-12-18",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.5985,
+        "fetched_at": "2026-08-27T02:34:19.829374+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2019-09-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.5523,
+        "fetched_at": "2026-08-27T02:34:19.829378+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2019-06-17",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.4734,
+        "fetched_at": "2026-08-27T02:34:19.829382+00:00"
+      },
+      {
+        "ticker": "VIG",
+        "ex_dividend_date": "2019-03-28",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.5097,
+        "fetched_at": "2026-08-27T02:34:19.829386+00:00"
+      }
+    ],
+    "NOBL": [
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2026-06-24",
+        "declaration_date": "2026-01-16",
+        "record_date": "2026-06-24",
+        "payment_date": "2026-06-30",
+        "amount": 0.303711,
+        "fetched_at": "2026-08-27T02:35:20.154522+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2026-03-25",
+        "declaration_date": "2026-01-16",
+        "record_date": "2026-03-25",
+        "payment_date": "2026-03-31",
+        "amount": 0.512242,
+        "fetched_at": "2026-08-27T02:35:20.154549+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2025-12-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.661188,
+        "fetched_at": "2026-08-27T02:35:20.154556+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2025-09-24",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-09-24",
+        "payment_date": "2025-09-30",
+        "amount": 0.548744,
+        "fetched_at": "2026-08-27T02:35:20.154562+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2025-06-25",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-06-25",
+        "payment_date": "2025-07-01",
+        "amount": 0.550012,
+        "fetched_at": "2026-08-27T02:35:20.154566+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2025-03-26",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-03-26",
+        "payment_date": "2025-04-01",
+        "amount": 0.465379,
+        "fetched_at": "2026-08-27T02:35:20.154571+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2024-12-23",
+        "declaration_date": "2023-12-22",
+        "record_date": "2024-12-23",
+        "payment_date": "2024-12-31",
+        "amount": 0.586338,
+        "fetched_at": "2026-08-27T02:35:20.154575+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2024-09-25",
+        "declaration_date": "2023-12-22",
+        "record_date": "2024-09-25",
+        "payment_date": "2024-10-02",
+        "amount": 0.522315,
+        "fetched_at": "2026-08-27T02:35:20.15458+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2024-06-26",
+        "declaration_date": "2023-12-22",
+        "record_date": "2024-06-26",
+        "payment_date": "2024-07-03",
+        "amount": 0.550235,
+        "fetched_at": "2026-08-27T02:35:20.154584+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2024-03-20",
+        "declaration_date": "2023-12-22",
+        "record_date": "2024-03-21",
+        "payment_date": "2024-03-27",
+        "amount": 0.386266,
+        "fetched_at": "2026-08-27T02:35:20.154588+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2023-12-20",
+        "declaration_date": "2023-01-23",
+        "record_date": "2023-12-21",
+        "payment_date": "2023-12-28",
+        "amount": 0.655835,
+        "fetched_at": "2026-08-27T02:35:20.154593+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2023-09-20",
+        "declaration_date": "2023-01-23",
+        "record_date": "2023-09-21",
+        "payment_date": "2023-09-27",
+        "amount": 0.521068,
+        "fetched_at": "2026-08-27T02:35:20.154597+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2023-06-21",
+        "declaration_date": "2023-01-23",
+        "record_date": "2023-06-22",
+        "payment_date": "2023-06-28",
+        "amount": 0.462991,
+        "fetched_at": "2026-08-27T02:35:20.154615+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2023-03-22",
+        "declaration_date": "2023-01-23",
+        "record_date": "2023-03-23",
+        "payment_date": "2023-03-29",
+        "amount": 0.353893,
+        "fetched_at": "2026-08-27T02:35:20.154619+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2022-12-22",
+        "declaration_date": "2022-02-07",
+        "record_date": "2022-12-23",
+        "payment_date": "2022-12-30",
+        "amount": 0.60037,
+        "fetched_at": "2026-08-27T02:35:20.154624+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2022-09-21",
+        "declaration_date": "2022-02-07",
+        "record_date": "2022-09-22",
+        "payment_date": "2022-09-28",
+        "amount": 0.403209,
+        "fetched_at": "2026-08-27T02:35:20.154628+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2022-06-22",
+        "declaration_date": "2022-02-07",
+        "record_date": "2022-06-23",
+        "payment_date": "2022-06-29",
+        "amount": 0.388262,
+        "fetched_at": "2026-08-27T02:35:20.154632+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2022-03-23",
+        "declaration_date": "2022-02-07",
+        "record_date": "2022-03-24",
+        "payment_date": "2022-03-30",
+        "amount": 0.352262,
+        "fetched_at": "2026-08-27T02:35:20.154637+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2021-12-23",
+        "declaration_date": "2021-01-20",
+        "record_date": "2021-12-27",
+        "payment_date": "2021-12-31",
+        "amount": 0.633571,
+        "fetched_at": "2026-08-27T02:35:20.154641+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2021-09-22",
+        "declaration_date": "2021-09-21",
+        "record_date": "2021-09-23",
+        "payment_date": "2021-09-29",
+        "amount": 0.413424,
+        "fetched_at": "2026-08-27T02:35:20.154645+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2021-06-22",
+        "declaration_date": "2021-01-20",
+        "record_date": "2021-06-23",
+        "payment_date": "2021-06-29",
+        "amount": 0.437185,
+        "fetched_at": "2026-08-27T02:35:20.15465+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2021-03-23",
+        "declaration_date": "2021-01-20",
+        "record_date": "2021-03-24",
+        "payment_date": "2021-03-30",
+        "amount": 0.376026,
+        "fetched_at": "2026-08-27T02:35:20.154654+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2020-12-23",
+        "declaration_date": "2020-01-30",
+        "record_date": "2020-12-24",
+        "payment_date": "2020-12-31",
+        "amount": 0.534768,
+        "fetched_at": "2026-08-27T02:35:20.154658+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2020-09-23",
+        "declaration_date": "2020-01-30",
+        "record_date": "2020-09-24",
+        "payment_date": "2020-09-30",
+        "amount": 0.415076,
+        "fetched_at": "2026-08-27T02:35:20.154663+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2020-06-24",
+        "declaration_date": "2020-01-30",
+        "record_date": "2020-06-25",
+        "payment_date": "2020-07-01",
+        "amount": 0.413303,
+        "fetched_at": "2026-08-27T02:35:20.154667+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2020-03-25",
+        "declaration_date": "2020-01-30",
+        "record_date": "2020-03-26",
+        "payment_date": "2020-04-01",
+        "amount": 0.343763,
+        "fetched_at": "2026-08-27T02:35:20.154671+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2019-12-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.440285,
+        "fetched_at": "2026-08-27T02:35:20.154676+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2019-09-25",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.363678,
+        "fetched_at": "2026-08-27T02:35:20.15468+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2019-06-25",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.385819,
+        "fetched_at": "2026-08-27T02:35:20.154684+00:00"
+      },
+      {
+        "ticker": "NOBL",
+        "ex_dividend_date": "2019-03-20",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.240249,
+        "fetched_at": "2026-08-27T02:35:20.15469+00:00"
+      }
+    ],
+    "SCHD": [
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2026-06-24",
+        "declaration_date": "2026-02-18",
+        "record_date": "2026-06-24",
+        "payment_date": "2026-06-29",
+        "amount": 0.2525,
+        "fetched_at": "2026-08-27T02:33:43.498248+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2026-03-25",
+        "declaration_date": "2026-02-18",
+        "record_date": "2026-03-25",
+        "payment_date": "2026-03-30",
+        "amount": 0.2569,
+        "fetched_at": "2026-08-27T02:33:43.498277+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2025-12-10",
+        "declaration_date": "2025-02-18",
+        "record_date": "2025-12-10",
+        "payment_date": "2025-12-15",
+        "amount": 0.2782,
+        "fetched_at": "2026-08-27T02:33:43.498285+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2025-09-24",
+        "declaration_date": "2025-02-18",
+        "record_date": "2025-09-24",
+        "payment_date": "2025-09-29",
+        "amount": 0.2604,
+        "fetched_at": "2026-08-27T02:33:43.49829+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2025-06-25",
+        "declaration_date": "2025-02-18",
+        "record_date": "2025-06-25",
+        "payment_date": "2025-06-30",
+        "amount": 0.2602,
+        "fetched_at": "2026-08-27T02:33:43.498295+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2025-03-26",
+        "declaration_date": "2025-02-18",
+        "record_date": "2025-03-26",
+        "payment_date": "2025-03-31",
+        "amount": 0.2488,
+        "fetched_at": "2026-08-27T02:33:43.4983+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2024-12-11",
+        "declaration_date": "2024-02-19",
+        "record_date": "2024-12-11",
+        "payment_date": "2024-12-16",
+        "amount": 0.2645,
+        "fetched_at": "2026-08-27T02:33:43.498304+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2024-09-25",
+        "declaration_date": "2024-02-19",
+        "record_date": "2024-09-25",
+        "payment_date": "2024-09-30",
+        "amount": 0.7545,
+        "fetched_at": "2026-08-27T02:33:43.498309+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2024-06-26",
+        "declaration_date": "2024-02-19",
+        "record_date": "2024-06-26",
+        "payment_date": "2024-07-01",
+        "amount": 0.8241,
+        "fetched_at": "2026-08-27T02:33:43.498313+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2024-03-20",
+        "declaration_date": "2024-02-19",
+        "record_date": "2024-03-21",
+        "payment_date": "2024-03-25",
+        "amount": 0.611,
+        "fetched_at": "2026-08-27T02:33:43.498318+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2023-12-06",
+        "declaration_date": "2023-03-10",
+        "record_date": "2023-12-07",
+        "payment_date": "2023-12-11",
+        "amount": 0.7423,
+        "fetched_at": "2026-08-27T02:33:43.498322+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2023-09-20",
+        "declaration_date": "2023-03-10",
+        "record_date": "2023-09-21",
+        "payment_date": "2023-09-25",
+        "amount": 0.6545,
+        "fetched_at": "2026-08-27T02:33:43.498327+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2023-06-21",
+        "declaration_date": "2023-03-10",
+        "record_date": "2023-06-22",
+        "payment_date": "2023-06-26",
+        "amount": 0.6647,
+        "fetched_at": "2026-08-27T02:33:43.498331+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2023-03-22",
+        "declaration_date": "2023-03-10",
+        "record_date": "2023-03-23",
+        "payment_date": "2023-03-27",
+        "amount": 0.5965,
+        "fetched_at": "2026-08-27T02:33:43.498336+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2022-12-07",
+        "declaration_date": "2022-02-18",
+        "record_date": "2022-12-08",
+        "payment_date": "2022-12-12",
+        "amount": 0.7034,
+        "fetched_at": "2026-08-27T02:33:43.498342+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2022-09-21",
+        "declaration_date": "2022-02-18",
+        "record_date": "2022-09-22",
+        "payment_date": "2022-09-26",
+        "amount": 0.6367,
+        "fetched_at": "2026-08-27T02:33:43.498347+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2022-06-22",
+        "declaration_date": "2022-02-18",
+        "record_date": "2022-06-23",
+        "payment_date": "2022-06-27",
+        "amount": 0.7038,
+        "fetched_at": "2026-08-27T02:33:43.498352+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2022-03-23",
+        "declaration_date": "2022-02-18",
+        "record_date": "2022-03-24",
+        "payment_date": "2022-03-28",
+        "amount": 0.5176,
+        "fetched_at": "2026-08-27T02:33:43.498356+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2021-12-08",
+        "declaration_date": "2021-02-02",
+        "record_date": "2021-12-09",
+        "payment_date": "2021-12-13",
+        "amount": 0.6198,
+        "fetched_at": "2026-08-27T02:33:43.498361+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2021-09-22",
+        "declaration_date": "2021-02-02",
+        "record_date": "2021-09-23",
+        "payment_date": "2021-09-27",
+        "amount": 0.587,
+        "fetched_at": "2026-08-27T02:33:43.498365+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2021-06-23",
+        "declaration_date": "2021-02-02",
+        "record_date": "2021-06-24",
+        "payment_date": "2021-06-28",
+        "amount": 0.5396,
+        "fetched_at": "2026-08-27T02:33:43.49837+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2021-03-24",
+        "declaration_date": "2021-02-02",
+        "record_date": "2021-03-25",
+        "payment_date": "2021-03-29",
+        "amount": 0.5026,
+        "fetched_at": "2026-08-27T02:33:43.498374+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2020-12-10",
+        "declaration_date": "2020-01-23",
+        "record_date": "2020-12-11",
+        "payment_date": "2020-12-15",
+        "amount": 0.6015,
+        "fetched_at": "2026-08-27T02:33:43.498379+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2020-09-23",
+        "declaration_date": "2020-01-23",
+        "record_date": "2020-09-24",
+        "payment_date": "2020-09-28",
+        "amount": 0.543,
+        "fetched_at": "2026-08-27T02:33:43.498383+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2020-06-24",
+        "declaration_date": "2020-01-23",
+        "record_date": "2020-06-25",
+        "payment_date": "2020-06-29",
+        "amount": 0.442,
+        "fetched_at": "2026-08-27T02:33:43.498388+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2020-03-25",
+        "declaration_date": "2020-01-23",
+        "record_date": "2020-03-26",
+        "payment_date": "2020-03-30",
+        "amount": 0.4419,
+        "fetched_at": "2026-08-27T02:33:43.498392+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2019-12-12",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.4658,
+        "fetched_at": "2026-08-27T02:33:43.498397+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2019-09-25",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.4855,
+        "fetched_at": "2026-08-27T02:33:43.498401+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2019-06-26",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.4209,
+        "fetched_at": "2026-08-27T02:33:43.498405+00:00"
+      },
+      {
+        "ticker": "SCHD",
+        "ex_dividend_date": "2019-03-20",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.352,
+        "fetched_at": "2026-08-27T02:33:43.498586+00:00"
+      }
+    ],
+    "VYM": [
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2026-06-18",
+        "declaration_date": "2026-02-04",
+        "record_date": "2026-06-18",
+        "payment_date": "2026-06-23",
+        "amount": 0.9795,
+        "fetched_at": "2026-08-27T02:33:55.582503+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2026-03-20",
+        "declaration_date": "2026-01-08",
+        "record_date": "2026-03-20",
+        "payment_date": "2026-03-24",
+        "amount": 0.8617,
+        "fetched_at": "2026-08-27T02:33:55.582532+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2025-12-19",
+        "declaration_date": "2025-04-03",
+        "record_date": "2025-12-19",
+        "payment_date": "2025-12-23",
+        "amount": 0.9474,
+        "fetched_at": "2026-08-27T02:33:55.582539+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2025-09-19",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-09-19",
+        "payment_date": "2025-09-23",
+        "amount": 0.8417,
+        "fetched_at": "2026-08-27T02:33:55.582545+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2025-06-20",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-06-20",
+        "payment_date": "2025-06-24",
+        "amount": 0.8617,
+        "fetched_at": "2026-08-27T02:33:55.58255+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2025-03-21",
+        "declaration_date": "2025-01-20",
+        "record_date": "2025-03-21",
+        "payment_date": "2025-03-25",
+        "amount": 0.85,
+        "fetched_at": "2026-08-27T02:33:55.582555+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2024-12-20",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-12-20",
+        "payment_date": "2024-12-24",
+        "amount": 0.9642,
+        "fetched_at": "2026-08-27T02:33:55.582559+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2024-09-20",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-09-20",
+        "payment_date": "2024-09-24",
+        "amount": 0.8511,
+        "fetched_at": "2026-08-27T02:33:55.582564+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2024-06-21",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-06-21",
+        "payment_date": "2024-06-25",
+        "amount": 1.0237,
+        "fetched_at": "2026-08-27T02:33:55.582568+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2024-03-15",
+        "declaration_date": "2024-02-29",
+        "record_date": "2024-03-18",
+        "payment_date": "2024-03-20",
+        "amount": 0.6555,
+        "fetched_at": "2026-08-27T02:33:55.582573+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2023-12-18",
+        "declaration_date": "2023-03-17",
+        "record_date": "2023-12-19",
+        "payment_date": "2023-12-21",
+        "amount": 1.0995,
+        "fetched_at": "2026-08-27T02:33:55.582578+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2023-09-18",
+        "declaration_date": "2023-03-17",
+        "record_date": "2023-09-19",
+        "payment_date": "2023-09-21",
+        "amount": 0.7846,
+        "fetched_at": "2026-08-27T02:33:55.582582+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2023-06-20",
+        "declaration_date": "2023-03-17",
+        "record_date": "2023-06-21",
+        "payment_date": "2023-06-23",
+        "amount": 0.8767,
+        "fetched_at": "2026-08-27T02:33:55.582587+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2023-03-20",
+        "declaration_date": "2023-03-16",
+        "record_date": "2023-03-21",
+        "payment_date": "2023-03-23",
+        "amount": 0.7172,
+        "fetched_at": "2026-08-27T02:33:55.582591+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2022-12-19",
+        "declaration_date": "2022-12-15",
+        "record_date": "2022-12-20",
+        "payment_date": "2022-12-22",
+        "amount": 0.9745,
+        "fetched_at": "2026-08-27T02:33:55.582596+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2022-09-19",
+        "declaration_date": "2022-09-16",
+        "record_date": "2022-09-20",
+        "payment_date": "2022-09-22",
+        "amount": 0.7672,
+        "fetched_at": "2026-08-27T02:33:55.5826+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2022-06-21",
+        "declaration_date": "2022-06-16",
+        "record_date": "2022-06-22",
+        "payment_date": "2022-06-24",
+        "amount": 0.8479,
+        "fetched_at": "2026-08-27T02:33:55.582604+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2022-03-21",
+        "declaration_date": "2022-03-17",
+        "record_date": "2022-03-22",
+        "payment_date": "2022-03-24",
+        "amount": 0.6622,
+        "fetched_at": "2026-08-27T02:33:55.582609+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2021-12-20",
+        "declaration_date": "2021-12-16",
+        "record_date": "2021-12-21",
+        "payment_date": "2021-12-23",
+        "amount": 0.9386,
+        "fetched_at": "2026-08-27T02:33:55.582613+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2021-09-20",
+        "declaration_date": "2021-09-16",
+        "record_date": "2021-09-21",
+        "payment_date": "2021-09-23",
+        "amount": 0.7488,
+        "fetched_at": "2026-08-27T02:33:55.582618+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2021-06-21",
+        "declaration_date": "2021-06-17",
+        "record_date": "2021-06-22",
+        "payment_date": "2021-06-24",
+        "amount": 0.7523,
+        "fetched_at": "2026-08-27T02:33:55.582622+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2021-03-22",
+        "declaration_date": "2021-03-18",
+        "record_date": "2021-03-23",
+        "payment_date": "2021-03-25",
+        "amount": 0.6564,
+        "fetched_at": "2026-08-27T02:33:55.582626+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2020-12-21",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.8096,
+        "fetched_at": "2026-08-27T02:33:55.582631+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2020-09-21",
+        "declaration_date": "2020-09-17",
+        "record_date": "2020-09-22",
+        "payment_date": "2020-09-24",
+        "amount": 0.7053,
+        "fetched_at": "2026-08-27T02:33:55.582636+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2020-06-22",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.8368,
+        "fetched_at": "2026-08-27T02:33:55.58264+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2020-03-10",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.5544,
+        "fetched_at": "2026-08-27T02:33:55.582645+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2019-12-23",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.779,
+        "fetched_at": "2026-08-27T02:33:55.582649+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2019-09-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.7864,
+        "fetched_at": "2026-08-27T02:33:55.582653+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2019-06-17",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.6247,
+        "fetched_at": "2026-08-27T02:33:55.582658+00:00"
+      },
+      {
+        "ticker": "VYM",
+        "ex_dividend_date": "2019-03-25",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.6516,
+        "fetched_at": "2026-08-27T02:33:55.582662+00:00"
+      }
+    ],
+    "DGRO": [
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2026-06-15",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-06-15",
+        "payment_date": "2026-06-18",
+        "amount": 0.330603,
+        "fetched_at": "2026-08-27T02:34:07.682159+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2026-03-17",
+        "declaration_date": "2025-09-05",
+        "record_date": "2026-03-17",
+        "payment_date": "2026-03-20",
+        "amount": 0.331063,
+        "fetched_at": "2026-08-27T02:34:07.682188+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2025-12-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-12-16",
+        "payment_date": "2025-12-19",
+        "amount": 0.447036,
+        "fetched_at": "2026-08-27T02:34:07.682196+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2025-09-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-09-16",
+        "payment_date": "2025-09-19",
+        "amount": 0.368971,
+        "fetched_at": "2026-08-27T02:34:07.682202+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2025-06-16",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-06-16",
+        "payment_date": "2025-06-20",
+        "amount": 0.323707,
+        "fetched_at": "2026-08-27T02:34:07.682207+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2025-03-18",
+        "declaration_date": "2024-07-05",
+        "record_date": "2025-03-18",
+        "payment_date": "2025-03-21",
+        "amount": 0.310928,
+        "fetched_at": "2026-08-27T02:34:07.682212+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2024-12-17",
+        "declaration_date": "2023-12-07",
+        "record_date": "2024-12-17",
+        "payment_date": "2024-12-20",
+        "amount": 0.378041,
+        "fetched_at": "2026-08-27T02:34:07.682217+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2024-09-25",
+        "declaration_date": "2023-12-07",
+        "record_date": "2024-09-25",
+        "payment_date": "2024-09-30",
+        "amount": 0.403081,
+        "fetched_at": "2026-08-27T02:34:07.682221+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2024-06-11",
+        "declaration_date": "2023-12-07",
+        "record_date": "2024-06-11",
+        "payment_date": "2024-06-17",
+        "amount": 0.293226,
+        "fetched_at": "2026-08-27T02:34:07.682226+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2024-03-21",
+        "declaration_date": "2023-12-07",
+        "record_date": "2024-03-22",
+        "payment_date": "2024-03-27",
+        "amount": 0.310737,
+        "fetched_at": "2026-08-27T02:34:07.682404+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2023-12-20",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-12-21",
+        "payment_date": "2023-12-27",
+        "amount": 0.3701,
+        "fetched_at": "2026-08-27T02:34:07.68241+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2023-09-26",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-09-27",
+        "payment_date": "2023-10-02",
+        "amount": 0.388206,
+        "fetched_at": "2026-08-27T02:34:07.682415+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2023-06-07",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-06-08",
+        "payment_date": "2023-06-13",
+        "amount": 0.259704,
+        "fetched_at": "2026-08-27T02:34:07.68242+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2023-03-23",
+        "declaration_date": "2022-11-25",
+        "record_date": "2023-03-24",
+        "payment_date": "2023-03-29",
+        "amount": 0.29805,
+        "fetched_at": "2026-08-27T02:34:07.682425+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2022-12-13",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-12-14",
+        "payment_date": "2022-12-19",
+        "amount": 0.328989,
+        "fetched_at": "2026-08-27T02:34:07.68243+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2022-09-26",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-09-27",
+        "payment_date": "2022-09-30",
+        "amount": 0.342276,
+        "fetched_at": "2026-08-27T02:34:07.682434+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2022-06-09",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-06-10",
+        "payment_date": "2022-06-15",
+        "amount": 0.234683,
+        "fetched_at": "2026-08-27T02:34:07.682455+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2022-03-24",
+        "declaration_date": "2021-12-13",
+        "record_date": "2022-03-25",
+        "payment_date": "2022-03-30",
+        "amount": 0.261991,
+        "fetched_at": "2026-08-27T02:34:07.682459+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2021-12-13",
+        "declaration_date": "2020-12-30",
+        "record_date": "2021-12-14",
+        "payment_date": "2021-12-17",
+        "amount": 0.298984,
+        "fetched_at": "2026-08-27T02:34:07.682463+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2021-09-24",
+        "declaration_date": "2020-12-30",
+        "record_date": "2021-09-27",
+        "payment_date": "2021-09-30",
+        "amount": 0.250034,
+        "fetched_at": "2026-08-27T02:34:07.682468+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2021-06-10",
+        "declaration_date": "2020-12-30",
+        "record_date": "2021-06-11",
+        "payment_date": "2021-06-16",
+        "amount": 0.260567,
+        "fetched_at": "2026-08-27T02:34:07.682472+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2021-03-25",
+        "declaration_date": "2020-12-30",
+        "record_date": "2021-03-26",
+        "payment_date": "2021-03-31",
+        "amount": 0.262177,
+        "fetched_at": "2026-08-27T02:34:07.682476+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2020-12-14",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-12-15",
+        "payment_date": "2020-12-18",
+        "amount": 0.272722,
+        "fetched_at": "2026-08-27T02:34:07.682481+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2020-09-23",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-09-24",
+        "payment_date": "2020-09-29",
+        "amount": 0.260527,
+        "fetched_at": "2026-08-27T02:34:07.682485+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2020-06-15",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-06-16",
+        "payment_date": "2020-06-19",
+        "amount": 0.248771,
+        "fetched_at": "2026-08-27T02:34:07.682489+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2020-03-25",
+        "declaration_date": "2019-12-12",
+        "record_date": "2020-03-26",
+        "payment_date": "2020-03-31",
+        "amount": 0.246777,
+        "fetched_at": "2026-08-27T02:34:07.682494+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2019-12-16",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.23496,
+        "fetched_at": "2026-08-27T02:34:07.682499+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2019-09-24",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.250079,
+        "fetched_at": "2026-08-27T02:34:07.682503+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2019-06-17",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.227691,
+        "fetched_at": "2026-08-27T02:34:07.682508+00:00"
+      },
+      {
+        "ticker": "DGRO",
+        "ex_dividend_date": "2019-03-20",
+        "declaration_date": null,
+        "record_date": null,
+        "payment_date": null,
+        "amount": 0.217888,
+        "fetched_at": "2026-08-27T02:34:07.682512+00:00"
+      }
+    ]
+  },
+  "prices": {
+    "NOBL": {
+      "price": 58.81,
+      "change": 0.16,
+      "change_pct": 0.2728,
+      "base_date": "2026-08-27"
+    },
+    "DGRW": {
+      "price": 99.22,
+      "change": -0.2,
+      "change_pct": -0.2012,
+      "base_date": "2026-08-27"
+    },
+    "SDIV": {
+      "price": 24.87,
+      "change": -0.23,
+      "change_pct": -0.9163,
+      "base_date": "2026-08-27"
+    },
+    "SPHD": {
+      "price": 53.31,
+      "change": 0.02,
+      "change_pct": 0.0375,
+      "base_date": "2026-08-27"
+    },
+    "HDV": {
+      "price": 29.74,
+      "change": -0.07,
+      "change_pct": -0.2348,
+      "base_date": "2026-08-27"
+    },
+    "VIG": {
+      "price": 244.12,
+      "change": -0.17,
+      "change_pct": -0.0696,
+      "base_date": "2026-08-27"
+    },
+    "DGRO": {
+      "price": 79.76,
+      "change": -0.08,
+      "change_pct": -0.1002,
+      "base_date": "2026-08-27"
+    },
+    "VYM": {
+      "price": 164.99,
+      "change": 0.15,
+      "change_pct": 0.091,
+      "base_date": "2026-08-27"
+    },
+    "SCHD": {
+      "price": 35.05,
+      "change": -0.06,
+      "change_pct": -0.1709,
+      "base_date": "2026-08-27"
+    },
+    "BKLN": {
+      "price": 20.53,
+      "change": 0.02,
+      "change_pct": 0.0975,
+      "base_date": "2026-08-27"
+    },
+    "USHY": {
+      "price": 36.96,
+      "change": 0.01,
+      "change_pct": 0.0271,
+      "base_date": "2026-08-27"
+    },
+    "SPHY": {
+      "price": 23.37,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "base_date": "2026-08-27"
+    },
+    "PFF": {
+      "price": 30.69,
+      "change": 0.01,
+      "change_pct": 0.0326,
+      "base_date": "2026-08-27"
+    },
+    "JNK": {
+      "price": 96.18,
+      "change": -0.02,
+      "change_pct": -0.0208,
+      "base_date": "2026-08-27"
+    },
+    "HYG": {
+      "price": 79.9,
+      "change": -0.02,
+      "change_pct": -0.025,
+      "base_date": "2026-08-27"
+    },
+    "TLTW": {
+      "price": 21.47,
+      "change": -0.02,
+      "change_pct": -0.0931,
+      "base_date": "2026-08-27"
+    },
+    "NLY": {
+      "price": 22.86,
+      "change": -0.24,
+      "change_pct": -1.039,
+      "base_date": "2026-08-27"
+    },
+    "ORC": {
+      "price": 6.67,
+      "change": -0.05,
+      "change_pct": -0.744,
+      "base_date": "2026-08-27"
+    },
+    "EPR": {
+      "price": 60.0,
+      "change": -0.33,
+      "change_pct": -0.547,
+      "base_date": "2026-08-27"
+    },
+    "PSEC": {
+      "price": 2.31,
+      "change": -0.04,
+      "change_pct": -1.7021,
+      "base_date": "2026-08-27"
+    },
+    "LAND": {
+      "price": 8.87,
+      "change": 0.09,
+      "change_pct": 1.0251,
+      "base_date": "2026-08-27"
+    },
+    "GOOD": {
+      "price": 13.01,
+      "change": -0.11,
+      "change_pct": -0.8384,
+      "base_date": "2026-08-27"
+    },
+    "GAIN": {
+      "price": 16.39,
+      "change": -0.1,
+      "change_pct": -0.6064,
+      "base_date": "2026-08-27"
+    },
+    "ARR": {
+      "price": 16.22,
+      "change": -0.18,
+      "change_pct": -1.0976,
+      "base_date": "2026-08-27"
+    },
+    "AGNC": {
+      "price": 10.81,
+      "change": -0.1,
+      "change_pct": -0.9166,
+      "base_date": "2026-08-27"
+    },
+    "STAG": {
+      "price": 37.18,
+      "change": 0.08,
+      "change_pct": 0.2156,
+      "base_date": "2026-08-27"
+    },
+    "MAIN": {
+      "price": 58.43,
+      "change": -0.11,
+      "change_pct": -0.1879,
+      "base_date": "2026-08-27"
+    },
+    "O": {
+      "price": 62.26,
+      "change": -0.57,
+      "change_pct": -0.9072,
+      "base_date": "2026-08-27"
+    },
+    "PLTY": {
+      "price": 37.78,
+      "change": 0.86,
+      "change_pct": 2.3294,
+      "base_date": "2026-08-27"
+    },
+    "SMCY": {
+      "price": 5.36,
+      "change": -0.07,
+      "change_pct": -1.2891,
+      "base_date": "2026-08-27"
+    },
+    "AIYY": {
+      "price": 7.33,
+      "change": -0.12,
+      "change_pct": -1.6107,
+      "base_date": "2026-08-27"
+    },
+    "OARK": {
+      "price": 30.18,
+      "change": -0.13,
+      "change_pct": -0.4239,
+      "base_date": "2026-08-27"
+    },
+    "ULTY": {
+      "price": 26.5,
+      "change": -0.31,
+      "change_pct": -1.1563,
+      "base_date": "2026-08-27"
+    },
+    "PYPY": {
+      "price": 30.55,
+      "change": -0.12,
+      "change_pct": -0.3864,
+      "base_date": "2026-08-27"
+    },
+    "XOMO": {
+      "price": 10.88,
+      "change": -0.22,
+      "change_pct": -1.982,
+      "base_date": "2026-08-27"
+    },
+    "NFLY": {
+      "price": 7.98,
+      "change": -0.02,
+      "change_pct": -0.25,
+      "base_date": "2026-08-27"
+    },
+    "APLY": {
+      "price": 11.58,
+      "change": 0.08,
+      "change_pct": 0.6957,
+      "base_date": "2026-08-27"
+    },
+    "GOOY": {
+      "price": 12.21,
+      "change": -0.12,
+      "change_pct": -0.9732,
+      "base_date": "2026-08-27"
+    },
+    "FBY": {
+      "price": 8.34,
+      "change": 0.05,
+      "change_pct": 0.6031,
+      "base_date": "2026-08-27"
+    },
+    "AMZY": {
+      "price": 10.83,
+      "change": -0.02,
+      "change_pct": -0.1843,
+      "base_date": "2026-08-27"
+    },
+    "MSTY": {
+      "price": 14.79,
+      "change": -0.33,
+      "change_pct": -2.1825,
+      "base_date": "2026-08-27"
+    },
+    "CONY": {
+      "price": 20.96,
+      "change": -0.48,
+      "change_pct": -2.2388,
+      "base_date": "2026-08-27"
+    },
+    "NVDY": {
+      "price": 12.24,
+      "change": -0.15,
+      "change_pct": -1.2107,
+      "base_date": "2026-08-27"
+    },
+    "TSLY": {
+      "price": 21.85,
+      "change": -0.22,
+      "change_pct": -0.9968,
+      "base_date": "2026-08-27"
+    },
+    "GDXY": {
+      "price": 11.97,
+      "change": -0.25,
+      "change_pct": -2.0458,
+      "base_date": "2026-08-27"
+    },
+    "LFGY": {
+      "price": 20.15,
+      "change": -0.5,
+      "change_pct": -2.4213,
+      "base_date": "2026-08-27"
+    },
+    "YMAX": {
+      "price": 7.62,
+      "change": -0.05,
+      "change_pct": -0.6519,
+      "base_date": "2026-08-27"
+    },
+    "YMAG": {
+      "price": 11.09,
+      "change": -0.13,
+      "change_pct": -1.1586,
+      "base_date": "2026-08-27"
+    },
+    "XDTE": {
+      "price": 38.89,
+      "change": -0.01,
+      "change_pct": -0.0129,
+      "base_date": "2026-08-27"
+    },
+    "QDTE": {
+      "price": 28.92,
+      "change": 0.05,
+      "change_pct": 0.1732,
+      "base_date": "2026-08-27"
+    },
+    "GPIQ": {
+      "price": 56.56,
+      "change": 0.06,
+      "change_pct": 0.1062,
+      "base_date": "2026-08-27"
+    },
+    "GPIX": {
+      "price": 56.09,
+      "change": -0.01,
+      "change_pct": -0.0178,
+      "base_date": "2026-08-27"
+    },
+    "FEPI": {
+      "price": 41.54,
+      "change": -0.08,
+      "change_pct": -0.1922,
+      "base_date": "2026-08-27"
+    },
+    "SVOL": {
+      "price": 16.23,
+      "change": -0.25,
+      "change_pct": -1.517,
+      "base_date": "2026-08-27"
+    },
+    "QQQI": {
+      "price": 54.18,
+      "change": 0.06,
+      "change_pct": 0.1109,
+      "base_date": "2026-08-27"
+    },
+    "SPYI": {
+      "price": 53.53,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "base_date": "2026-08-27"
+    },
+    "DIVO": {
+      "price": 48.71,
+      "change": -0.1,
+      "change_pct": -0.2049,
+      "base_date": "2026-08-27"
+    },
+    "XYLD": {
+      "price": 41.38,
+      "change": 0.02,
+      "change_pct": 0.0484,
+      "base_date": "2026-08-27"
+    },
+    "RYLD": {
+      "price": 16.26,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "base_date": "2026-08-27"
+    },
+    "QYLD": {
+      "price": 18.15,
+      "change": 0.02,
+      "change_pct": 0.1103,
+      "base_date": "2026-08-27"
+    },
+    "JEPQ": {
+      "price": 59.79,
+      "change": 0.04,
+      "change_pct": 0.0669,
+      "base_date": "2026-08-27"
+    },
+    "JEPI": {
+      "price": 58.16,
+      "change": 0.02,
+      "change_pct": 0.0344,
+      "base_date": "2026-08-27"
+    }
+  },
+  "profiles": {
+    "PFF": {
+      "ticker": "PFF",
+      "net_assets": 13200000000.0,
+      "expense_ratio": 0.0045,
+      "dividend_yield": 0.0551,
+      "inception_date": "2007-03-26",
+      "sectors": [],
+      "top_holdings": [],
+      "fetched_at": "2026-08-27T02:36:46.085761+00:00"
+    },
+    "SPHY": {
+      "ticker": "SPHY",
+      "net_assets": 11600000000.0,
+      "expense_ratio": 0.0005,
+      "dividend_yield": 0.0705,
+      "inception_date": "2012-06-18",
+      "sectors": [],
+      "top_holdings": [],
+      "fetched_at": "2026-08-27T02:36:58.153175+00:00"
+    },
+    "USHY": {
+      "ticker": "USHY",
+      "net_assets": 28600000000.0,
+      "expense_ratio": 0.0008,
+      "dividend_yield": 0.07,
+      "inception_date": "2017-10-25",
+      "sectors": [],
+      "top_holdings": [],
+      "fetched_at": "2026-08-27T02:37:10.228104+00:00"
+    }
+  }
 }
