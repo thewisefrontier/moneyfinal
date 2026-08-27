@@ -194,6 +194,25 @@ def export_annuity():
     })
 
 
+def export_dividends():
+    """ETF/종목 배당금 이력 export (배당금 계산기 페이지용)
+
+    로테이션 수집(며칠 주기로 전체 순회)이라 fetched_at cutoff를 두지 않고
+    티커별 보유 이력 전체를 그대로 내보낸다 (오래된 티커도 다음 순번에 갱신됨).
+    """
+    rows = supabase_select_all('etf_dividends', {
+        'select': 'ticker,ex_dividend_date,declaration_date,record_date,payment_date,amount,fetched_at',
+        'order': 'ex_dividend_date.desc'
+    })
+    by_ticker = {}
+    for r in rows:
+        by_ticker.setdefault(r['ticker'], []).append(r)
+    save_json('dividends.json', {
+        'updated_at': today_kst(),
+        'by_ticker': by_ticker
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -204,6 +223,7 @@ def main():
     export_corp_finance()
     export_loans()
     export_annuity()
+    export_dividends()
     logger.info("=== JSON Export 완료 ===")
 
 

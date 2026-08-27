@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>월배당 ETF 배당금 계산기 모음 | 머니파이널</title>
+<meta name="description" content="JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실제 배당 이력을 기반으로 배당금을 계산합니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/dividend-etf">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="월배당 ETF 배당금 계산기 모음 | 머니파이널">
+<meta property="og:description" content="JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실제 배당 이력을 기반으로 배당금을 계산합니다.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/dividend-etf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="월배당 ETF 배당금 계산기 모음 | 머니파이널">
+<meta name="twitter:description" content="JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실제 배당 이력을 기반으로 배당금을 계산합니다.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"월배당 ETF 배당금 계산기 모음","description":"JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실제 배당 이력을 기반으로 배당금을 계산합니다.","url":"https://moneyfinal.pages.dev/dividend-etf","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:20px 0 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:32px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.sec-title{font-size:14px;font-weight:700;margin-bottom:10px}
+table.hist{width:100%;border-collapse:collapse;font-size:12px}
+table.hist th{text-align:left;color:var(--text2);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist td{padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist tr:last-child td{border-bottom:none}
+.empty{color:var(--text2);text-align:center;padding:20px 0;font-size:13px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+.grid2 a.cc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;transition:border-color .15s}
+.grid2 a.cc:hover{border-color:var(--accent)}
+.cc-title{font-size:14px;font-weight:700;margin-bottom:4px}
+.cc-desc{font-size:11px;color:var(--text2);line-height:1.4}
+@media(max-width:600px){.grid2{grid-template-columns:repeat(2,1fr) !important}}
+</style>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html" class="active">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main style="max-width:900px">
+<h1>월배당 ETF 배당금 계산기</h1>
+<div class="sub">실제 배당 이력을 기반으로 한 티커별 배당금 계산기 (67종목)</div>
+<div class="sec-title" style="margin-top:20px">커버드콜</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-jepi.html"><div class="cc-title">JEPI</div><div class="cc-desc">JPMorgan Equity Premium Income ETF</div></a>
+  <a class="cc" href="dividend-jepq.html"><div class="cc-title">JEPQ</div><div class="cc-desc">JPMorgan Nasdaq Equity Premium Income ETF</div></a>
+  <a class="cc" href="dividend-qyld.html"><div class="cc-title">QYLD</div><div class="cc-desc">Global X Nasdaq 100 Covered Call ETF</div></a>
+  <a class="cc" href="dividend-ryld.html"><div class="cc-title">RYLD</div><div class="cc-desc">Global X Russell 2000 Covered Call ETF</div></a>
+  <a class="cc" href="dividend-xyld.html"><div class="cc-title">XYLD</div><div class="cc-desc">Global X S&P 500 Covered Call ETF</div></a>
+  <a class="cc" href="dividend-divo.html"><div class="cc-title">DIVO</div><div class="cc-desc">Amplify CWP Enhanced Dividend Income ETF</div></a>
+  <a class="cc" href="dividend-spyi.html"><div class="cc-title">SPYI</div><div class="cc-desc">NEOS S&P 500 High Income ETF</div></a>
+  <a class="cc" href="dividend-qqqi.html"><div class="cc-title">QQQI</div><div class="cc-desc">NEOS Nasdaq 100 High Income ETF</div></a>
+  <a class="cc" href="dividend-svol.html"><div class="cc-title">SVOL</div><div class="cc-desc">Simplify Volatility Premium ETF</div></a>
+  <a class="cc" href="dividend-nusi.html"><div class="cc-title">NUSI</div><div class="cc-desc">Nationwide Risk-Managed Income ETF</div></a>
+  <a class="cc" href="dividend-fepi.html"><div class="cc-title">FEPI</div><div class="cc-desc">REX FANG & Innovation Equity Premium Income ETF</div></a>
+  <a class="cc" href="dividend-gpix.html"><div class="cc-title">GPIX</div><div class="cc-desc">Goldman Sachs S&P 500 Core Premium Income ETF</div></a>
+  <a class="cc" href="dividend-gpiq.html"><div class="cc-title">GPIQ</div><div class="cc-desc">Goldman Sachs Nasdaq-100 Core Premium Income ETF</div></a>
+  <a class="cc" href="dividend-qdte.html"><div class="cc-title">QDTE</div><div class="cc-desc">Roundhill Innovation-100 0DTE Covered Call ETF</div></a>
+  <a class="cc" href="dividend-xdte.html"><div class="cc-title">XDTE</div><div class="cc-desc">Roundhill S&P 500 0DTE Covered Call ETF</div></a>
+  <a class="cc" href="dividend-ymag.html"><div class="cc-title">YMAG</div><div class="cc-desc">YieldMax Magnificent 7 Fund of Option Income ETFs</div></a>
+  <a class="cc" href="dividend-ymax.html"><div class="cc-title">YMAX</div><div class="cc-desc">YieldMax Universe Fund of Option Income ETFs</div></a>
+  <a class="cc" href="dividend-lfgy.html"><div class="cc-title">LFGY</div><div class="cc-desc">YieldMax Crypto Industry & Tech Portfolio Option Income ETF</div></a>
+  <a class="cc" href="dividend-gdxy.html"><div class="cc-title">GDXY</div><div class="cc-desc">YieldMax Gold Miners Option Income Strategy ETF</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">개별종목 옵션인컴</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-tsly.html"><div class="cc-title">TSLY</div><div class="cc-desc">YieldMax TSLA Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-nvdy.html"><div class="cc-title">NVDY</div><div class="cc-desc">YieldMax NVDA Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-cony.html"><div class="cc-title">CONY</div><div class="cc-desc">YieldMax COIN Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-msty.html"><div class="cc-title">MSTY</div><div class="cc-desc">YieldMax MSTR Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-amzy.html"><div class="cc-title">AMZY</div><div class="cc-desc">YieldMax AMZN Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-fby.html"><div class="cc-title">FBY</div><div class="cc-desc">YieldMax META Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-gooy.html"><div class="cc-title">GOOY</div><div class="cc-desc">YieldMax GOOGL Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-aply.html"><div class="cc-title">APLY</div><div class="cc-desc">YieldMax AAPL Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-nfly.html"><div class="cc-title">NFLY</div><div class="cc-desc">YieldMax NFLX Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-xomo.html"><div class="cc-title">XOMO</div><div class="cc-desc">YieldMax XOM Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-jpmo.html"><div class="cc-title">JPMO</div><div class="cc-desc">YieldMax JPM Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-diso.html"><div class="cc-title">DISO</div><div class="cc-desc">YieldMax DIS Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-pypy.html"><div class="cc-title">PYPY</div><div class="cc-desc">YieldMax PYPL Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-sqy.html"><div class="cc-title">SQY</div><div class="cc-desc">YieldMax SQ Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-ulty.html"><div class="cc-title">ULTY</div><div class="cc-desc">YieldMax Ultra Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-oark.html"><div class="cc-title">OARK</div><div class="cc-desc">YieldMax Innovation Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-aiyy.html"><div class="cc-title">AIYY</div><div class="cc-desc">YieldMax AI Option Income ETF</div></a>
+  <a class="cc" href="dividend-smcy.html"><div class="cc-title">SMCY</div><div class="cc-desc">YieldMax SMCI Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-plty.html"><div class="cc-title">PLTY</div><div class="cc-desc">YieldMax PLTR Option Income Strategy ETF</div></a>
+  <a class="cc" href="dividend-abny.html"><div class="cc-title">ABNY</div><div class="cc-desc">YieldMax ABNB Option Income Strategy ETF</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">월배당 리츠</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-o.html"><div class="cc-title">O</div><div class="cc-desc">Realty Income Corp</div></a>
+  <a class="cc" href="dividend-stag.html"><div class="cc-title">STAG</div><div class="cc-desc">Stag Industrial</div></a>
+  <a class="cc" href="dividend-good.html"><div class="cc-title">GOOD</div><div class="cc-desc">Gladstone Commercial Corp</div></a>
+  <a class="cc" href="dividend-land.html"><div class="cc-title">LAND</div><div class="cc-desc">Gladstone Land Corp</div></a>
+  <a class="cc" href="dividend-epr.html"><div class="cc-title">EPR</div><div class="cc-desc">EPR Properties</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">월배당 BDC</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-main.html"><div class="cc-title">MAIN</div><div class="cc-desc">Main Street Capital Corp</div></a>
+  <a class="cc" href="dividend-gain.html"><div class="cc-title">GAIN</div><div class="cc-desc">Gladstone Investment Corp</div></a>
+  <a class="cc" href="dividend-psec.html"><div class="cc-title">PSEC</div><div class="cc-desc">Prospect Capital Corp</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">월배당 모기지리츠</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-agnc.html"><div class="cc-title">AGNC</div><div class="cc-desc">AGNC Investment Corp</div></a>
+  <a class="cc" href="dividend-arr.html"><div class="cc-title">ARR</div><div class="cc-desc">ARMOUR Residential REIT</div></a>
+  <a class="cc" href="dividend-orc.html"><div class="cc-title">ORC</div><div class="cc-desc">Orchid Island Capital</div></a>
+  <a class="cc" href="dividend-nly.html"><div class="cc-title">NLY</div><div class="cc-desc">Annaly Capital Management</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">채권인컴</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-tltw.html"><div class="cc-title">TLTW</div><div class="cc-desc">iShares 20+ Year Treasury Bond BuyWrite Strategy ETF</div></a>
+  <a class="cc" href="dividend-hyg.html"><div class="cc-title">HYG</div><div class="cc-desc">iShares iBoxx High Yield Corp Bond ETF</div></a>
+  <a class="cc" href="dividend-jnk.html"><div class="cc-title">JNK</div><div class="cc-desc">SPDR Bloomberg High Yield Bond ETF</div></a>
+  <a class="cc" href="dividend-pff.html"><div class="cc-title">PFF</div><div class="cc-desc">iShares Preferred and Income Securities ETF</div></a>
+  <a class="cc" href="dividend-sphy.html"><div class="cc-title">SPHY</div><div class="cc-desc">SPDR Portfolio High Yield Bond ETF</div></a>
+  <a class="cc" href="dividend-ushy.html"><div class="cc-title">USHY</div><div class="cc-desc">iShares Broad USD High Yield Corp Bond ETF</div></a>
+  <a class="cc" href="dividend-bkln.html"><div class="cc-title">BKLN</div><div class="cc-desc">Invesco Senior Loan ETF</div></a>
+</div>
+<div class="sec-title" style="margin-top:20px">분기배당 대표</div>
+<div class="grid2" style="grid-template-columns:repeat(3,1fr)">
+  <a class="cc" href="dividend-schd.html"><div class="cc-title">SCHD</div><div class="cc-desc">Schwab US Dividend Equity ETF</div></a>
+  <a class="cc" href="dividend-vym.html"><div class="cc-title">VYM</div><div class="cc-desc">Vanguard High Dividend Yield ETF</div></a>
+  <a class="cc" href="dividend-dgro.html"><div class="cc-title">DGRO</div><div class="cc-desc">iShares Core Dividend Growth ETF</div></a>
+  <a class="cc" href="dividend-vig.html"><div class="cc-title">VIG</div><div class="cc-desc">Vanguard Dividend Appreciation ETF</div></a>
+  <a class="cc" href="dividend-hdv.html"><div class="cc-title">HDV</div><div class="cc-desc">iShares Core High Dividend ETF</div></a>
+  <a class="cc" href="dividend-sphd.html"><div class="cc-title">SPHD</div><div class="cc-desc">Invesco S&P 500 High Dividend Low Volatility ETF</div></a>
+  <a class="cc" href="dividend-sdiv.html"><div class="cc-title">SDIV</div><div class="cc-desc">Global X SuperDividend ETF</div></a>
+  <a class="cc" href="dividend-dgrw.html"><div class="cc-title">DGRW</div><div class="cc-desc">WisdomTree US Quality Dividend Growth Fund</div></a>
+  <a class="cc" href="dividend-nobl.html"><div class="cc-title">NOBL</div><div class="cc-desc">ProShares S&P 500 Dividend Aristocrats ETF</div></a>
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script>
+function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
+loadTicker();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

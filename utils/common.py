@@ -48,6 +48,7 @@ CONFLICT_COLUMNS = {
     'credit_loans': 'fin_co_no,fin_prdt_cd,crdt_prdt_type,crdt_lend_rate_type',
     'business_loans': 'fin_co_no,fin_prdt_cd',
     'annuity_savings': 'fin_co_no,fin_prdt_cd',
+    'etf_dividends': 'ticker,ex_dividend_date',
 }
 
 

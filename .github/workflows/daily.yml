@@ -180,6 +180,12 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FSS_API_KEY: ${{ secrets.FSS_API_KEY }}
         run: python fetchers/fss_market_trend.py
+      - name: ETF 배당금 이력
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ALPHA_VANTAGE_API_KEY_2: ${{ secrets.ALPHA_VANTAGE_API_KEY_2 }}
+        run: python fetchers/etf_dividends.py
       - name: Gemini 분석
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}

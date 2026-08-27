@@ -36,6 +36,12 @@ def fetch_for_month(bas_ym: str) -> list:
     if isinstance(items, dict): items = [items]
     return items
 
+# 자본적정성 타이틀 응답에는 비율(%) 항목(A/A1/A2)과 절대금액(원) 항목(B*, C*)이
+# cpaqItemClsfVal 하나에 섞여 온다. 절대금액 항목까지 그대로 넣으면 "자기자본합계
+# 33,284,861,000,000%" 같은 값이 나오므로, 실제 비율 항목만 골라서 사용한다.
+RATIO_CODES = {'A', 'A1', 'A2'}  # BIS기준 자기자본비율 / 기본자본비율 / 보통주자본비율
+
+
 def collect_key_indicators() -> list:
     """국내은행주요경영지표조회 (getDomeBankKeyManaIndi) - 자본적정성 타이틀 지정
     분기 발표 + 지연이 길어 최신 기준월부터 최대 15개월 역순 탐색"""
@@ -53,6 +59,8 @@ def collect_key_indicators() -> list:
         logger.info(f"은행경영지표: {used_ym} 기준 {len(items)}건 발견")
         results = []
         for item in items:
+            if item.get('cpaqItemDcd') not in RATIO_CODES:
+                continue
             val = float(item.get('cpaqItemClsfVal',0) or 0)
             if val <= 0: continue
             results.append({

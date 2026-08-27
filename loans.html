@@ -23,11 +23,13 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
 a{color:inherit;text-decoration:none}
 header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
-.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
-nav{display:flex;gap:2px}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
 nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
 nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
 .theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
 main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
@@ -93,8 +95,8 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
-  <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="loans.html" class="active">대출</a><a href="invest.html">투자</a><a href="market.html">시장</a><a href="savings.html">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
-  <div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html" class="active">대출</a><a href="market.html">시장</a><a href="savings.html">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
 <div class="grid4">
   <div class="kpi"><div class="kpi-label">한은 기준금리</div><div class="kpi-value" id="lk-base">-</div></div>
@@ -154,6 +156,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 <div class="disclaimer">⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 대출 실행 여부 및 실제 적용 금리는 금융회사 심사에 따라 달라질 수 있습니다. 금리·거래조건은 수시로 변경되므로 대출 전 반드시 해당 금융회사에 확인하세요. 신용점수 구간별 금리는 공시일 직전월 신규 취급 대출의 가중평균이자율입니다.<br>데이터 출처: 금융감독원 금융상품한눈에 · 한국은행 ECOS</div>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>
+function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}

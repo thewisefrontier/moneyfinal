@@ -23,11 +23,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:18px;font-weight:700;color:var(--accent)}
-nav{display:flex;gap:2px}
+.logo{font-size:18px;font-weight:700;color:var(--accent);white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
 nav a{color:var(--text2);padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap}
 nav a:hover{color:var(--text);background:var(--bg3)}
 .theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
 main{max-width:800px;margin:0 auto;padding:32px 20px}
 h1{font-size:24px;font-weight:700;margin-bottom:8px;letter-spacing:-.5px}
 .meta{color:var(--text2);font-size:12px;margin-bottom:32px}
@@ -43,7 +45,7 @@ footer a{color:var(--text2);margin:0 8px}
 <body>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
 <nav><a href="index.html">홈</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="calc.html">계산기</a><a href="about.html">소개</a></nav>
-<div><button class="theme-btn" onclick="toggleTheme()">🌙</button></div></header>
+<div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 
 <main>
 <h1>개인정보처리방침</h1>
@@ -92,6 +94,7 @@ footer a{color:var(--text2);margin:0 8px}
 </footer>
 <script>
 (function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);document.querySelector('.theme-btn').textContent=document.documentElement.getAttribute('data-theme')==='dark'?'🌙':'🌑'})();
+function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-btn').textContent=n==='dark'?'🌙':'🌑'}
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
