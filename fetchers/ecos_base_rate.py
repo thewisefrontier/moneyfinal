@@ -1,6 +1,8 @@
 """
-한국은행 ECOS API - 기준금리 (금통위 통화정책방향 결정회의 일정에 맞춰 실행)
+한국은행 ECOS API - 기준금리
 출처: https://ecos.bok.or.kr
+매주 실행 (금통위 회의일을 하드코딩해서 그 앞뒤로만 돌리면 임시회의·일정변경
+시 다음 발표까지 갱신이 끊기는 문제가 있어, 일정을 추정하지 않는 방식으로 변경)
 """
 import logging
 import requests
@@ -88,8 +90,8 @@ def fetch_ecos_stat(indicator: dict):
 
 def main():
     logger.info("=== ECOS 기준금리 수집 시작 ===")
-    if has_recent_data('market_indicators', {'indicator_code': 'eq.BASE_RATE'}, 'reference_date', 4):
-        logger.info("이미 이번 금통위 발표 수집 완료 - 스킵 (재시도 크론 중복 방지)")
+    if has_recent_data('market_indicators', {'indicator_code': 'eq.BASE_RATE'}, 'reference_date', 5):
+        logger.info("최근 5일 내 수집 완료 - 스킵 (매주 크론이라 중복 방지)")
         return
     result = fetch_ecos_stat(INDICATOR)
     if result:
