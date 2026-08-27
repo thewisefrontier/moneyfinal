@@ -195,10 +195,10 @@ def export_annuity():
 
 
 def export_dividends():
-    """ETF/종목 배당금 이력 export (배당금 계산기 페이지용)
+    """ETF/종목 배당금 이력 + 실시간 시세 + 프로필 export (배당금 계산기 페이지용)
 
-    로테이션 수집(며칠 주기로 전체 순회)이라 fetched_at cutoff를 두지 않고
-    티커별 보유 이력 전체를 그대로 내보낸다 (오래된 티커도 다음 순번에 갱신됨).
+    셋 다 로테이션/일일 수집이라 fetched_at cutoff를 두지 않고 보유분을
+    그대로 내보낸다 (오래된 티커도 다음 순번에 갱신됨).
     """
     rows = supabase_select_all('etf_dividends', {
         'select': 'ticker,ex_dividend_date,declaration_date,record_date,payment_date,amount,fetched_at',
@@ -207,9 +207,31 @@ def export_dividends():
     by_ticker = {}
     for r in rows:
         by_ticker.setdefault(r['ticker'], []).append(r)
+
+    price_rows = supabase_select_all('stock_prices', {
+        'select': 'stock_code,close_price,vs,flt_rt,base_date,fetched_at',
+        'market_type': 'eq.ETF',
+        'order': 'fetched_at.desc'
+    })
+    prices = {}
+    for r in price_rows:
+        code = r['stock_code']
+        if code not in prices:
+            prices[code] = {
+                'price': r['close_price'], 'change': r['vs'], 'change_pct': r['flt_rt'],
+                'base_date': r['base_date']
+            }
+
+    profile_rows = supabase_select_all('etf_profiles', {
+        'select': 'ticker,net_assets,expense_ratio,dividend_yield,inception_date,sectors,top_holdings,fetched_at'
+    })
+    profiles = {r['ticker']: r for r in profile_rows}
+
     save_json('dividends.json', {
         'updated_at': today_kst(),
-        'by_ticker': by_ticker
+        'by_ticker': by_ticker,
+        'prices': prices,
+        'profiles': profiles
     })
 
 

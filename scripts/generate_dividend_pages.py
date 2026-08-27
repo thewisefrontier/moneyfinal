@@ -106,6 +106,11 @@ def page_html(ticker: str, name: str, category: str) -> str:
 <div class="sub">{name} · {category} · 실제 배당 이력 기반</div>
 
 <div class="card">
+  <div class="sec-title">ℹ️ ETF 정보</div>
+  <div id="profile-wrap"><div class="empty">데이터 불러오는 중...</div></div>
+</div>
+
+<div class="card">
   <div class="sec-title">📅 최근 배당 이력</div>
   <div id="hist-wrap"><div class="empty">데이터 불러오는 중...</div></div>
 </div>
@@ -114,7 +119,7 @@ def page_html(ticker: str, name: str, category: str) -> str:
   <div class="field"><label>보유 주수 (주)</label><input type="text" id="shares" inputmode="numeric" value="100" oninput="calc()"></div>
   <div class="grid2">
     <div class="field"><label>주당 배당금 (USD, 최근 배당 기준)</label><input type="text" id="dps" inputmode="decimal" value="" oninput="calc()"></div>
-    <div class="field"><label>매수 단가 (USD, 선택)</label><input type="text" id="price" inputmode="decimal" value="" oninput="calc()"></div>
+    <div class="field"><label>매수 단가 (USD, 현재가 자동입력·수정 가능)</label><input type="text" id="price" inputmode="decimal" value="" oninput="calc()"></div>
   </div>
   <div class="field"><label>과세 방식</label><select id="tax" onchange="calc()"><option value="15">미국 원천징수 (15%, 조세조약)</option><option value="0">비과세 가정</option><option value="custom">직접 입력</option></select></div>
   <div class="field" id="custom-tax-field" style="display:none"><label>세율 직접 입력 (%)</label><input type="number" id="custom-tax" value="15" step="0.1" min="0" max="50" oninput="calc()"></div>
@@ -169,27 +174,58 @@ function calc(){{
   document.getElementById('r-yield').textContent=yieldPct!==null?yieldPct.toFixed(2)+'%':'-';
   document.getElementById('r-net').textContent=usd(net);
 }}
-async function loadDividends(){{
+let userEditedPrice=false;
+document.getElementById('price').addEventListener('input',()=>{{userEditedPrice=true;}});
+async function loadDividendData(){{
   try{{
     const r=await fetch('data/dividends.json');
     const d=await r.json();
     const rows=(d.by_ticker&&d.by_ticker['{ticker}'])||[];
     const wrap=document.getElementById('hist-wrap');
-    if(!rows.length){{wrap.innerHTML='<div class="empty">배당 이력 수집 예정입니다</div>';return;}}
-    if(rows.length>=2){{
-      const d0=new Date(rows[0].ex_dividend_date), d1=new Date(rows[1].ex_dividend_date);
-      const gapDays=(d0-d1)/86400000;
-      payFreq=gapDays<=45?12:gapDays<=100?4:gapDays<=200?2:1;
+    if(rows.length){{
+      if(rows.length>=2){{
+        const d0=new Date(rows[0].ex_dividend_date), d1=new Date(rows[1].ex_dividend_date);
+        const gapDays=(d0-d1)/86400000;
+        payFreq=gapDays<=45?12:gapDays<=100?4:gapDays<=200?2:1;
+      }}
+      document.getElementById('dps').value=parseFloat(rows[0].amount).toFixed(4);
+      let h='<table class="hist"><tr><th>배당락일</th><th>지급일</th><th style="text-align:right">주당 배당금</th></tr>';
+      rows.slice(0,12).forEach(row=>{{h+=`<tr><td>${{row.ex_dividend_date}}</td><td>${{row.payment_date||'-'}}</td><td style="text-align:right">$${{parseFloat(row.amount).toFixed(4)}}</td></tr>`;}});
+      h+='</table>';
+      wrap.innerHTML=h;
+    }}else{{
+      wrap.innerHTML='<div class="empty">배당 이력 수집 예정입니다</div>';
     }}
-    document.getElementById('dps').value=parseFloat(rows[0].amount).toFixed(4);
-    let h='<table class="hist"><tr><th>배당락일</th><th>지급일</th><th style="text-align:right">주당 배당금</th></tr>';
-    rows.slice(0,12).forEach(row=>{{h+=`<tr><td>${{row.ex_dividend_date}}</td><td>${{row.payment_date||'-'}}</td><td style="text-align:right">$${{parseFloat(row.amount).toFixed(4)}}</td></tr>`;}});
-    h+='</table>';
-    wrap.innerHTML=h;
+
+    const priceInfo=(d.prices||{{}})['{ticker}'];
+    if(priceInfo&&!userEditedPrice){{
+      document.getElementById('price').value=parseFloat(priceInfo.price).toFixed(2);
+    }}
+
+    const pf=(d.profiles||{{}})['{ticker}'];
+    const pwrap=document.getElementById('profile-wrap');
+    if(pf){{
+      const chgTxt=priceInfo?` <span class="${{priceInfo.change_pct>=0?'up':'down'}}" style="font-size:11px">(${{priceInfo.change_pct>=0?'+':''}}${{parseFloat(priceInfo.change_pct).toFixed(2)}}%)</span>`:'';
+      let ph=`<div class="brow"><span class="k">현재가</span><span class="v">${{priceInfo?'$'+parseFloat(priceInfo.price).toFixed(2):'-'}}${{chgTxt}}</span></div>`;
+      ph+=`<div class="brow"><span class="k">운용규모 (AUM)</span><span class="v">${{(pf.net_assets/1e8).toFixed(1)}}억 달러</span></div>`;
+      ph+=`<div class="brow"><span class="k">총보수율</span><span class="v">${{(pf.expense_ratio*100).toFixed(2)}}%</span></div>`;
+      ph+=`<div class="brow"><span class="k">공식 배당수익률</span><span class="v">${{(pf.dividend_yield*100).toFixed(2)}}%</span></div>`;
+      ph+=`<div class="brow"><span class="k">설정일</span><span class="v">${{pf.inception_date||'-'}}</span></div>`;
+      if(pf.top_holdings&&pf.top_holdings.length){{
+        const list=pf.top_holdings.slice(0,5).map(h=>`${{h.symbol}} ${{(parseFloat(h.weight)*100).toFixed(1)}}%`).join(' · ');
+        ph+=`<div class="brow"><span class="k">상위 구성종목</span><span class="v" style="font-weight:400;font-size:12px;text-align:right">${{list}}</span></div>`;
+      }}
+      pwrap.innerHTML=ph;
+    }}else{{
+      pwrap.innerHTML='<div class="empty">프로필 정보 수집 예정입니다</div>';
+    }}
     calc();
-  }}catch(e){{document.getElementById('hist-wrap').innerHTML='<div class="empty">배당 이력을 불러오지 못했습니다</div>';}}
+  }}catch(e){{
+    document.getElementById('hist-wrap').innerHTML='<div class="empty">배당 이력을 불러오지 못했습니다</div>';
+    document.getElementById('profile-wrap').innerHTML='<div class="empty">정보를 불러오지 못했습니다</div>';
+  }}
 }}
-loadDividends();
+loadDividendData();
 {TICKER_SCRIPT}
 fetch('data/market.json').then(r=>r.json()).then(d=>{{const u=(d.indicators||[]).find(i=>i.indicator_code==='USD_KRW');if(u){{latestKrw=parseFloat(u.value);calc();}}}}).catch(()=>{{}});
 </script>
