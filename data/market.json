@@ -2,6 +2,21 @@
   "updated_at": "2026-09-01",
   "indicators": [
     {
+      "id": 14911,
+      "indicator_code": "M2_TOTAL",
+      "indicator_name": "시중 유동성(M2, 평잔)",
+      "category": "유동성",
+      "value": 4209874.0,
+      "prev_value": 4183219.5,
+      "unit": "십억원",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-09-01",
+      "summary_text": null,
+      "fetched_at": "2026-09-01T04:52:05.644279+00:00",
+      "created_at": "2026-09-01T04:52:06.206578+00:00"
+    },
+    {
       "id": 14910,
       "indicator_code": "ETH",
       "indicator_name": "이더리움",
@@ -23432,21 +23447,6 @@
       "created_at": "2026-08-14T05:12:30.139201+00:00"
     },
     {
-      "id": 7177,
-      "indicator_code": "M2_TOTAL",
-      "indicator_name": "시중 유동성(M2, 평잔)",
-      "category": "유동성",
-      "value": 4184079.8,
-      "prev_value": 4159166.3,
-      "unit": "십억원",
-      "signal": "green",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-08-13",
-      "summary_text": null,
-      "fetched_at": "2026-08-12T23:49:11.157969+00:00",
-      "created_at": "2026-08-12T23:49:11.157969+00:00"
-    },
-    {
       "id": 5406,
       "indicator_code": "KOFIA_FRNDRV_JOBY AVIATION INC CO",
       "indicator_name": "해외파생 JOBY AVIATION INC COMMON STOCK (미국)",
@@ -24378,6 +24378,23 @@
     }
   ],
   "by_category": {
+    "유동성": [
+      {
+        "id": 14911,
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "category": "유동성",
+        "value": 4209874.0,
+        "prev_value": 4183219.5,
+        "unit": "십억원",
+        "signal": "green",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-09-01",
+        "summary_text": null,
+        "fetched_at": "2026-09-01T04:52:05.644279+00:00",
+        "created_at": "2026-09-01T04:52:06.206578+00:00"
+      }
+    ],
     "암호화폐": [
       {
         "id": 14910,
@@ -48343,23 +48360,6 @@
         "summary_text": "202603 기준",
         "fetched_at": "2026-08-14T05:12:30.139201+00:00",
         "created_at": "2026-08-14T05:12:30.139201+00:00"
-      }
-    ],
-    "유동성": [
-      {
-        "id": 7177,
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "category": "유동성",
-        "value": 4184079.8,
-        "prev_value": 4159166.3,
-        "unit": "십억원",
-        "signal": "green",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-08-13",
-        "summary_text": null,
-        "fetched_at": "2026-08-12T23:49:11.157969+00:00",
-        "created_at": "2026-08-12T23:49:11.157969+00:00"
       }
     ],
     "외국인직접투자": [
