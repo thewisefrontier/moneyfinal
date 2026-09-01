@@ -57,6 +57,8 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .ind-sub{font-size:11px;color:var(--text2);margin-top:2px}
 .ind-val{font-size:14px;font-weight:700;text-align:right}
 .ind-unit{font-size:11px;color:var(--text2)}
+.scroll-list{max-height:360px;overflow-y:auto}
+.scroll-count{font-size:11px;color:var(--text2);padding:8px 16px;text-align:center;border-top:1px solid var(--border)}
 </style>
 </head>
 <body>
@@ -70,21 +72,21 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
     <div class="sec-hd"><div class="sec-title">국내 거시지표</div></div>
     <div class="card"><div class="card-hd"><span class="card-title">한국은행 ECOS</span></div><div id="dom-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">은행 건전성 (BIS)</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">BIS 총자본비율 · 기본자본비율 · 보통주자본비율</span></div><div id="bank-stats-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">은행별 BIS 총자본비율</span></div><div id="bank-stats-list" class="scroll-list"><div class="loading">로딩 중...</div></div><div id="bank-stats-count" class="scroll-count" style="display:none"></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">금융회사 부채비율</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">비은행 금융회사 재무건전성 참고지표</span></div><div id="bis-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">비은행 금융회사 재무건전성 참고지표</span></div><div id="bis-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">외국인 직접투자 (FDI)</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">산업별 FDI</span></div><div id="fdi-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">산업별 FDI</span></div><div id="fdi-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
   </div>
   <div>
     <div class="sec-hd"><div class="sec-title">글로벌 지표</div></div>
     <div class="card"><div class="card-hd"><span class="card-title">FRED</span></div><div id="glob-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">채권 시장</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">채권 시세 (YTM)</span></div><div id="bond-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">채권 시세 (YTM)</span></div><div id="bond-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">채권 발행</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">최근 30일 채권발행</span></div><div id="bond-iss-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">최근 30일 채권발행</span></div><div id="bond-iss-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">금융투자협회 통계</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">ETF · 펀드 통계</span></div><div id="kofia-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">ETF · 펀드 통계</span></div><div id="kofia-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
   </div>
 </div>
 </main>
@@ -95,21 +97,44 @@ function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.togg
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
-function indHtml(list,empty='데이터 수집 예정'){if(!list.length)return `<div class="empty">${empty}</div>`;return list.map(i=>`<div class="row ind-row"><div><div class="ind-name">${i.indicator_name}</div>${i.summary_text?`<div class="ind-sub">${i.summary_text}</div>`:''}</div><div style="text-align:right"><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',i.unit==='%'?2:0)}</span><span class="ind-unit"> ${i.unit}</span></div></div>`).join('');}
+// 원 단위 큰 금액은 "OOOO조 OOOO억원"으로, 달러는 "OOOO억 달러"로 - 원본 숫자 그대로
+// 보여주면 자릿수를 세야 해서 안 읽힘
+function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const sign=n<0?'-':'';const won=Math.abs(unit==='십억원'?n*1e9:n);
+  const jo=Math.floor(won/1e12),eok=Math.round((won%1e12)/1e8);
+  if(jo&&eok)return `${sign}${jo.toLocaleString('ko-KR')}조 ${eok.toLocaleString('ko-KR')}억원`;
+  if(jo)return `${sign}${jo.toLocaleString('ko-KR')}조원`;
+  if(eok)return `${sign}${eok.toLocaleString('ko-KR')}억원`;
+  return `${sign}${Math.round(won).toLocaleString('ko-KR')}원`;}
+function usdEok(v){const n=parseFloat(v);if(isNaN(n))return'-';return (n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:1})+'억 달러';}
+function valText(i){
+  if(i.unit==='십억원')return krWon(i.value,'십억원');
+  if(i.unit==='원'&&Math.abs(i.value)>=1e8)return krWon(i.value,'원');
+  if(i.unit==='달러'&&Math.abs(i.value)>=1e8)return usdEok(i.value);
+  return fmt(i.value,i.unit,i.unit==='%'?2:0);
+}
+// summary_text(기준월 등)가 없으면 최소한 reference_date라도 "기준일"로 표시해서
+// 각 항목이 언제 시점 데이터인지 항상 보이게 함
+function dateSub(i){if(i.summary_text)return i.summary_text;if(i.reference_date)return `${i.reference_date} 기준`;return '';}
+function indHtml(list,empty='데이터 수집 예정'){if(!list.length)return `<div class="empty">${empty}</div>`;return list.map(i=>{const sub=dateSub(i);return `<div class="row ind-row"><div><div class="ind-name">${i.indicator_name}</div>${sub?`<div class="ind-sub">${sub}</div>`:''}</div><div style="text-align:right"><span class="ind-val ${sc(i.signal)}">${valText(i)}</span></div></div>`;}).join('');}
 async function loadMacro(){
   try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const bc=d.by_category||{};
     document.getElementById('dom-list').innerHTML=indHtml(inds.filter(i=>['BASE_RATE','M2_TOTAL','USD_KRW','HOUSEHOLD_CREDIT'].includes(i.indicator_code)));
     document.getElementById('glob-list').innerHTML=indHtml(inds.filter(i=>['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE','VIX','WTI','GOLD','US_10Y_TREASURY','US_UNEMPLOYMENT','NATGAS'].includes(i.indicator_code)));
-    document.getElementById('bond-list').innerHTML=indHtml((bc['채권금리']||[]).slice(0,10));
-    document.getElementById('bond-iss-list').innerHTML=indHtml((bc['채권발행']||[]).slice(0,10));
-    document.getElementById('bis-list').innerHTML=indHtml((bc['금융회사건전성']||[]).slice(0,10));
-    document.getElementById('bank-stats-list').innerHTML=indHtml((bc['은행통계']||[]).slice(0,10));
-    document.getElementById('kofia-list').innerHTML=indHtml((bc['금융투자']||[]).slice(0,10));
-    document.getElementById('fdi-list').innerHTML=indHtml((bc['외국인직접투자']||[]).slice(0,10));
+    document.getElementById('bond-list').innerHTML=indHtml(bc['채권금리']||[]);
+    document.getElementById('bond-iss-list').innerHTML=indHtml(bc['채권발행']||[]);
+    document.getElementById('bis-list').innerHTML=indHtml(bc['금융회사건전성']||[]);
+    // 은행마다 BIS총자본비율/기본자본비율/보통주자본비율 3개씩 잡히는데, 카드에는
+    // 대표 지표(BIS 총자본비율)만 은행별 1줄로 보여주고 나머지 비율은 생략
+    const bisTotal=(bc['은행통계']||[]).filter(i=>i.indicator_name.endsWith('BIS기준 자기자본비율')).sort((a,b)=>b.value-a.value);
+    document.getElementById('bank-stats-list').innerHTML=indHtml(bisTotal);
+    const countEl=document.getElementById('bank-stats-count');
+    if(bisTotal.length){countEl.style.display='block';countEl.textContent=`총 ${bisTotal.length}개 은행`;}
+    document.getElementById('kofia-list').innerHTML=indHtml(bc['금융투자']||[]);
+    document.getElementById('fdi-list').innerHTML=indHtml(bc['외국인직접투자']||[]);
   }catch(e){['dom','glob','bond','bond-iss','bis','bank-stats','kofia','fdi'].forEach(id=>{const el=document.getElementById(id+'-list');if(el)el.innerHTML='<div class="empty">데이터 로드 실패</div>';});}
 }
 loadMacro();
-async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?Math.round(i.value/1000).toLocaleString('ko-KR')+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
 loadTicker();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->

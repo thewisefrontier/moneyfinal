@@ -49,8 +49,8 @@
 | `fetch_insurance.yml` | `fetchers/insurance_info.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_loan_rates.yml` | `fetchers/loan_rates.py`, `fetchers/annuity_savings.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fix_ticker_sticky.yml` | — | — |
-| `monthly.yml` | `fetchers/ecos_m2.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `quarterly.yml` | `fetchers/ecos_household_credit.py`, `fetchers/fdi_stats.py`, `fetchers/corp_finance.py`, `fetchers/bank_stats.py`, `fetchers/financial_corp_info.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
+| `monthly.yml` | `fetchers/ecos_m2.py`, `fetchers/bank_stats.py`, `fetchers/financial_corp_info.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
+| `quarterly.yml` | `fetchers/ecos_household_credit.py`, `fetchers/fdi_stats.py`, `fetchers/corp_finance.py`, `exporters/export_data.py` | `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `rate.yml` | `fetchers/ecos_base_rate.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `run_export.yml` | `exporters/export_data.py` | `SUPABASE_KEY`, `SUPABASE_URL` |
 

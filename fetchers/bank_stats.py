@@ -23,18 +23,28 @@ def yyyymm_back(months_back: int) -> str:
     return target.strftime('%Y%m')
 
 def fetch_for_month(bas_ym: str) -> list:
+    """전 은행 커버를 위한 페이징 조회.
+    한 달치 응답이 은행 수 × 14개 항목(cpaqItemDcd)으로 totalCount가 수백 건에
+    달해 numOfRows=50 한 페이지만 받으면 은행 4곳 정도만 잡히는 문제가 있었음."""
     url = f"{BASE_URL}/getDomeBankKeyManaIndi"
-    params = {'resultType':'json','numOfRows':50,'pageNo':1,'title':'은행_주요경영지표_자본적정성','basYm':bas_ym}
-    res = data_go_kr_get(url, API_KEY, params)
-    res.raise_for_status()
-    body = res.json().get('response',{}).get('body',{})
-    tables = body.get('tableList', [])
-    total = tables[0].get('totalCount', 0) if tables else 0
-    if not total:
-        return []
-    items = tables[0].get('items', {}).get('item', [])
-    if isinstance(items, dict): items = [items]
-    return items
+    page_size = 100
+    all_items, page = [], 1
+    while True:
+        params = {'resultType':'json','numOfRows':page_size,'pageNo':page,'title':'은행_주요경영지표_자본적정성','basYm':bas_ym}
+        res = data_go_kr_get(url, API_KEY, params)
+        res.raise_for_status()
+        body = res.json().get('response',{}).get('body',{})
+        tables = body.get('tableList', [])
+        total = tables[0].get('totalCount', 0) if tables else 0
+        if not total:
+            break
+        items = tables[0].get('items', {}).get('item', [])
+        if isinstance(items, dict): items = [items]
+        all_items.extend(items)
+        if not items or page * page_size >= total:
+            break
+        page += 1
+    return all_items
 
 # 자본적정성 타이틀 응답에는 비율(%) 항목(A/A1/A2)과 절대금액(원) 항목(B*, C*)이
 # cpaqItemClsfVal 하나에 섞여 온다. 절대금액 항목까지 그대로 넣으면 "자기자본합계
