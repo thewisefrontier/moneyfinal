@@ -20,12 +20,6 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
         run: python fetchers/ecos_household_credit.py
-      - name: FDI 외국인직접투자
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/fdi_stats.py
       - name: 기업재무 (market.html 기업재무지표 소스)
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
