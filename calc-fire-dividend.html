@@ -84,10 +84,14 @@ h1{font-size:20px;font-weight:700;margin-bottom:4px}
 .warn{background:rgba(210,153,34,.1);border:1px solid var(--yellow);border-radius:6px;padding:10px 12px;font-size:12px;color:var(--yellow);margin-top:10px}
 .note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
 table{width:100%;border-collapse:collapse;font-size:12px}
-table th,table td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+table th,table td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;font-variant-numeric:tabular-nums}
 table th:first-child,table td:first-child{text-align:left}
 table th{color:var(--text2);font-weight:600;background:var(--bg3)}
 table tr:last-child td{border-bottom:none;font-weight:700}
+#backtestTable tbody tr:nth-child(even){background:var(--bg3)}
+#backtestTable tbody tr.row-proj{background:transparent;border-left:2px solid var(--accent)}
+#backtestTable tbody tr.row-proj td{color:var(--text2);font-style:italic}
+#backtestTable tbody tr.row-proj td:first-child{color:var(--accent);font-style:normal}
 .empty{color:var(--text2);text-align:center;padding:24px;font-size:13px}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
@@ -159,15 +163,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="dash-right">
 
   <div class="card">
-    <div class="sec-title">📊 실제 배당 이력 기반 연도별 세금 (백테스트)</div>
-    <div class="rh-sub" style="text-align:left;margin-bottom:10px">현재 포트폴리오의 비중만큼을 그 시점부터 계속 보유했다고 가정하고, 실제 지급된 배당 이력으로 계산합니다. 해외 82종·국내 15종(목록에서 선택한 경우만)은 실이력이 반영되고, 그 외 직접입력 종목은 제외됩니다.</div>
-    <div style="overflow-x:auto">
-    <table id="backtestTable"><thead><tr><th>연도</th><th>총 배당금</th><th>원천징수(15%/15.4%)</th><th>종합과세 추가분</th><th>세후 순액</th></tr></thead><tbody id="backtestBody"><tr><td colspan="5" class="empty">데이터 로딩 중...</td></tr></tbody></table>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="sec-title">② 적립 시뮬레이션 결과</div>
+    <div class="sec-title">적립 시뮬레이션 결과</div>
     <div class="result-hero">
       <div class="rh-label">투자기간 후 예상 평가금액</div>
       <div class="rh-value" id="r-fv">-</div>
@@ -182,7 +178,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
 
   <div class="card">
-    <div class="sec-title">③ 은퇴 후 월 캐시플로우</div>
+    <div class="sec-title">은퇴 후 월 캐시플로우</div>
     <div id="hi-warn"></div>
     <div class="result-hero">
       <div class="rh-label">세후·건보료 차감 월 실수령액</div>
@@ -198,7 +194,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
 
   <div class="card">
-    <div class="sec-title">④ 은퇴 후 자산 생존 시뮬레이션 (몬테카를로)</div>
+    <div class="sec-title">은퇴 후 자산 생존 시뮬레이션 (몬테카를로)</div>
     <div class="result-hero">
       <div class="rh-label" id="mc-label">은퇴 기간 동안 자산이 바닥나지 않을 확률 (1,000회 시뮬레이션)</div>
       <div class="rh-value" id="mc-rate">-</div>
@@ -212,7 +208,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
 
   <div class="card" id="seqRiskCard" style="display:none">
-    <div class="sec-title">⑤ 시퀀스 리스크 확인 (수익률 순서의 영향)</div>
+    <div class="sec-title">시퀀스 리스크 확인 (수익률 순서의 영향)</div>
     <div class="rh-sub" style="text-align:left;margin-bottom:10px">같은 크기의 충격(연 수익률 -2×표준편차)이 은퇴 초반에 오는지 후반에 오는지에 따라 최종 잔액이 얼마나 달라지는지 보여줍니다. 충격이 없는 해는 모두 가정 평균 수익률로 동일합니다.</div>
     <div id="seqChartHolder"></div>
     <div style="overflow-x:auto;margin-top:10px">
@@ -222,6 +218,14 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
       <span><span style="display:inline-block;width:16px;height:2px;background:var(--text2);margin-right:4px;vertical-align:middle"></span>평년(충격 없음)</span>
       <span><span style="display:inline-block;width:16px;height:2px;background:var(--red);margin-right:4px;vertical-align:middle"></span>초반 충격</span>
       <span><span style="display:inline-block;width:16px;height:2px;background:var(--accent);margin-right:4px;vertical-align:middle"></span>후반 충격</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">📊 실제 배당 이력 기반 연도별 세금 (백테스트)</div>
+    <div class="rh-sub" style="text-align:left;margin-bottom:10px">현재 포트폴리오의 비중만큼을 그 시점부터 계속 보유했다고 가정하고, 실제 지급된 배당 이력으로 계산합니다. 해외 82종·국내 15종(목록에서 선택한 경우만)은 실이력이 반영되고, 그 외 직접입력 종목은 제외됩니다.</div>
+    <div style="overflow-x:auto">
+    <table id="backtestTable"><thead><tr><th>연도</th><th>세전 배당금</th><th>세금</th><th>세후 순액</th></tr></thead><tbody id="backtestBody"><tr><td colspan="4" class="empty">데이터 로딩 중...</td></tr></tbody></table>
     </div>
   </div>
 
@@ -245,7 +249,20 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
 function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
-function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function won(v){
+  const n=Math.round(v);
+  const sign=n<0?'-':'';
+  const abs=Math.abs(n);
+  const eok=Math.floor(abs/1e8);
+  const man=Math.floor((abs%1e8)/1e4);
+  const rest=abs%1e4;
+  if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';
+  let s=sign;
+  if(eok)s+=eok+'억';
+  if(man)s+=man+'만';
+  if(rest)s+=rest;
+  return s+'원';
+}
 function fmtEok(v){if(Math.abs(v)>=100000000){const eok=v/100000000;return (Math.abs(eok)>=100?eok.toFixed(0):eok.toFixed(1).replace(/\.0$/,''))+'억원';}return won(v);}
 function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
 
@@ -381,14 +398,15 @@ function setCapitalPreset(v){
 }
 function capitalManual(){document.getElementById('capital').dataset.userEdited='1';}
 
+function wonMan(v){return won(Math.round(v/10000)*10000);}
 function renderBacktest(){
   const tbody=document.getElementById('backtestBody');
   const s=portfolioStats();
   const capital=num('capital');
-  if(!s||!capital){tbody.innerHTML='<tr><td colspan="5" class="empty">포트폴리오와 은퇴 시점 평가금액을 입력하면 실제 배당 이력으로 계산됩니다</td></tr>';return;}
+  if(!s||!capital){tbody.innerHTML='<tr><td colspan="4" class="empty">포트폴리오와 은퇴 시점 평가금액을 입력하면 실제 배당 이력으로 계산됩니다</td></tr>';return;}
   const usRows=portfolio.filter(r=>r.market==='us'&&DIV_RAW[r.ticker]&&DIV_RAW[r.ticker].length&&PRICE_RAW[r.ticker]);
   const krRows=portfolio.filter(r=>r.market==='domestic'&&r.ticker!=='__custom__'&&KR_DIV_RAW[r.ticker]&&KR_DIV_RAW[r.ticker].length&&KR_PRICE_RAW[r.ticker]);
-  if(!usRows.length&&!krRows.length){tbody.innerHTML='<tr><td colspan="5" class="empty">실제 배당 이력이 있는 ETF(해외 82종 또는 국내 15종)를 포트폴리오에 추가하면 백테스트를 볼 수 있습니다</td></tr>';return;}
+  if(!usRows.length&&!krRows.length){tbody.innerHTML='<tr><td colspan="4" class="empty">실제 배당 이력이 있는 ETF(해외 82종 또는 국내 15종)를 포트폴리오에 추가하면 백테스트를 볼 수 있습니다</td></tr>';return;}
   const byYearUs={},byYearKr={};
   usRows.forEach(row=>{
     const price=parseFloat(PRICE_RAW[row.ticker].price);
@@ -411,9 +429,27 @@ function renderBacktest(){
     });
   });
   const years=Array.from(new Set([...Object.keys(byYearUs),...Object.keys(byYearKr)])).sort();
-  if(!years.length){tbody.innerHTML='<tr><td colspan="5" class="empty">배당 이력 데이터 수집 중입니다</td></tr>';return;}
+  if(!years.length){tbody.innerHTML='<tr><td colspan="4" class="empty">배당 이력 데이터 수집 중입니다</td></tr>';return;}
+  const taxCell=(withheld,comp)=>{
+    const total=withheld+comp;
+    const title=`원천징수 ${wonMan(withheld)}${comp>0?' + 종합과세 추가 '+wonMan(comp):''}`;
+    return `<td title="${title}">-${wonMan(total)}</td>`;
+  };
+  const projGrossUs=capital*s.weightedYield/100*s.usRatio;
+  const projGrossKr=capital*s.weightedYield/100*s.domRatio;
+  const projGross=projGrossUs+projGrossKr;
+  const projWithheld=projGrossUs*0.15+projGrossKr*0.154;
+  let projComp=0;
+  if(projGross>20000000){
+    const over=projGross-20000000;
+    const overUsRatio=projGross>0?projGrossUs/projGross:0;
+    const alreadyWithheldOnOver=over*(overUsRatio*0.15+(1-overUsRatio)*0.154);
+    projComp=Math.max(0,progressiveTax(over)-alreadyWithheldOnOver);
+  }
+  const projNet=projGross-projWithheld-projComp;
+  let rowsHtml=`<tr class="row-proj" title="현재 포트폴리오의 가중평균 배당수익률(${s.weightedYield.toFixed(2)}%)을 은퇴 시점 평가금액에 그대로 적용한 추정치입니다"><td>추정(현재 가정)</td><td>${wonMan(projGross)}</td>${taxCell(projWithheld,projComp)}<td>${wonMan(projNet)}</td></tr>`;
   let sumGross=0,sumWithheld=0,sumComp=0,sumNet=0;
-  let rowsHtml=years.map(y=>{
+  rowsHtml+=years.map(y=>{
     const grossUs=byYearUs[y]||0,grossKr=byYearKr[y]||0;
     const gross=grossUs+grossKr;
     const withheld=grossUs*0.15+grossKr*0.154;
@@ -426,9 +462,9 @@ function renderBacktest(){
     }
     const net=gross-withheld-comp;
     sumGross+=gross;sumWithheld+=withheld;sumComp+=comp;sumNet+=net;
-    return `<tr><td>${y}년</td><td>${won(gross)}</td><td>-${won(withheld)}</td><td>${comp>0?'-'+won(comp):'0원'}</td><td>${won(net)}</td></tr>`;
+    return `<tr><td>${y}년</td><td>${wonMan(gross)}</td>${taxCell(withheld,comp)}<td>${wonMan(net)}</td></tr>`;
   }).join('');
-  rowsHtml+=`<tr><td>합계</td><td>${won(sumGross)}</td><td>-${won(sumWithheld)}</td><td>${sumComp>0?'-'+won(sumComp):'0원'}</td><td>${won(sumNet)}</td></tr>`;
+  rowsHtml+=`<tr><td>합계(실이력)</td><td>${wonMan(sumGross)}</td>${taxCell(sumWithheld,sumComp)}<td>${wonMan(sumNet)}</td></tr>`;
   tbody.innerHTML=rowsHtml;
 }
 function renderStats(){
