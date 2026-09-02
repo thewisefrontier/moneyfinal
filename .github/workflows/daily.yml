@@ -82,13 +82,6 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/oil_price.py
-      - name: 배출권시세
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/emission_price.py
       - name: ISA 다모아
         continue-on-error: true
         env:
@@ -123,6 +116,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
         run: python fetchers/bond_info.py
       - name: 파생상품시세
         continue-on-error: true

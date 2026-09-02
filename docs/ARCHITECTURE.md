@@ -114,7 +114,7 @@ moneyfinal/
 ```
 us_stocks → us_technical → stock_prices → kr_technical
 → dart_disclosure → ecos_daily → fred_global
-→ gold_price → oil_price → emission_price
+→ gold_price → oil_price
 → isa_info → kofia_stats → krx_index
 → fss_jobs → bond_info
 → gemini_analyzer → export_data
