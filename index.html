@@ -45,7 +45,7 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
 @media(max-width:900px){.grid2{grid-template-columns:1fr}}
 @media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
-.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
@@ -97,10 +97,10 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 
 <div class="sec-hd"><div class="sec-title">시장 한눈에</div></div>
 <div class="grid4">
-  <div class="kpi"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="k-usdkrw">-</div><div class="kpi-sub" id="k-usdkrw-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">한은 기준금리</div><div class="kpi-value" id="k-baserate">-</div><div class="kpi-sub">한국은행</div></div>
-  <div class="kpi"><div class="kpi-label">미국 기준금리</div><div class="kpi-value" id="k-fedrate">-</div><div class="kpi-sub">Fed Funds Rate</div></div>
-  <div class="kpi"><div class="kpi-label">시중 유동성 M2</div><div class="kpi-value" id="k-m2">-</div><div class="kpi-sub">광의통화</div></div>
+  <a class="kpi" href="indicator-detail.html?code=USD_KRW"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="k-usdkrw">-</div><div class="kpi-sub" id="k-usdkrw-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=BASE_RATE"><div class="kpi-label">한은 기준금리</div><div class="kpi-value" id="k-baserate">-</div><div class="kpi-sub">한국은행</div></a>
+  <a class="kpi" href="indicator-detail.html?code=FED_RATE"><div class="kpi-label">미국 기준금리</div><div class="kpi-value" id="k-fedrate">-</div><div class="kpi-sub">Fed Funds Rate</div></a>
+  <a class="kpi" href="indicator-detail.html?code=M2_TOTAL"><div class="kpi-label">시중 유동성 M2</div><div class="kpi-value" id="k-m2">-</div><div class="kpi-sub">광의통화</div></a>
 </div>
 
 <div class="grid2">
@@ -167,7 +167,7 @@ async function loadHome(){
     const glob=['FED_RATE','US_CPI','USD_INDEX','US_YIELD_CURVE'];
     function indHtml(list,codes){const f=list.filter(i=>codes.includes(i.indicator_code));if(!f.length)return '<div class="empty">데이터 없음</div>';
       return f.map(i=>{const v=i.unit==='십억원'?krWon(i.value,'십억원'):fmt(i.value,i.unit,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0);
-        return `<div class="row ind-row"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}">${v}</span></div></div>`;}).join('');}
+        return `<a class="row ind-row" href="indicator-detail.html?code=${i.indicator_code}" style="display:grid;cursor:pointer"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}">${v}</span></div></a>`;}).join('');}
     document.getElementById('domestic-ind').innerHTML=indHtml(inds,dom);
     document.getElementById('global-ind').innerHTML=indHtml(inds,glob);
   }catch(e){}

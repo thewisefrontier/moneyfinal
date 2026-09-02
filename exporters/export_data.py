@@ -183,6 +183,33 @@ def export_stock_history():
     })
 
 
+INDICATOR_HISTORY_CODES = [
+    'USD_KRW', 'BASE_RATE', 'FED_RATE', 'M2_TOTAL', 'HOUSEHOLD_CREDIT',
+    'KOSPI', 'KOSDAQ', 'KOSPI200', 'USD_INDEX', 'US_SP500', 'US_DJIA', 'US_NASDAQ',
+    'US_CPI', 'US_YIELD_CURVE', 'VIX', 'WTI', 'GOLD',
+]
+
+
+def export_indicator_history():
+    """index.html/market.html KPI 클릭 시 일/월/연도별 드릴다운을 위한 지표별 히스토리.
+    market_indicators 테이블은 macro.html 은행통계 등까지 포함해 1700여개 코드를
+    담고 있어 전체를 내보내면 너무 크므로, 실제 홈/시장 화면에 노출되는
+    코드만 화이트리스트로 골라 전체 기간 히스토리를 담는다."""
+    history = {}
+    for code in INDICATOR_HISTORY_CODES:
+        rows = supabase_select_all('market_indicators', {
+            'select': 'indicator_code,indicator_name,reference_date,value,unit',
+            'indicator_code': f'eq.{code}',
+            'order': 'reference_date.asc'
+        })
+        if rows:
+            history[code] = rows
+    save_json('indicator_history.json', {
+        'updated_at': today_kst(),
+        'history': history
+    })
+
+
 def export_corp_finance():
     """기업 재무정보 export"""
     finance = supabase_select('corp_finance', {
@@ -284,6 +311,7 @@ def main():
     export_corporate_alerts()
     export_stocks()
     export_stock_history()
+    export_indicator_history()
     export_corp_finance()
     export_loans()
     export_annuity()

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>지표 상세 - 일/월/연도별 추이 | 머니파이널</title>
+<meta name="description" content="원달러 환율·기준금리·M2 등 주요 거시지표의 일별·월별·연도별 추이를 확인합니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/indicator-detail">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta name="robots" content="noindex">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:900px;margin:0 auto;padding:24px 16px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px}
+.result-hero{text-align:center;padding:6px 12px 14px}
+.rh-value{font-size:30px;font-weight:700;letter-spacing:-1px}
+.rh-sub{font-size:13px;margin-top:6px}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tab{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:7px 6px;text-align:right;border-bottom:1px solid var(--border)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--text2);font-weight:600}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.empty{color:var(--text2);text-align:center;padding:30px;font-size:13px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+</style>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="crumb"><a href="index.html" id="crumb-back">홈</a> &gt; <span id="crumb-name">지표</span></div>
+<h1 id="ind-title">-</h1>
+<div class="sub" id="ind-sub"></div>
+
+<div class="card" id="valCard">
+  <div class="result-hero">
+    <div class="rh-value" id="p-last">-</div>
+    <div class="rh-sub" id="p-change"></div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-v="daily" onclick="setView(this)">일별</button>
+    <button class="tab" data-v="monthly" onclick="setView(this)">월별</button>
+    <button class="tab" data-v="yearly" onclick="setView(this)">연별</button>
+  </div>
+  <div id="chartHolder"></div>
+  <div style="overflow-x:auto;margin-top:10px">
+    <table id="histTable"><thead><tr><th>날짜</th><th>값</th><th>전기대비</th></tr></thead><tbody id="histBody"></tbody></table>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 한국은행 ECOS·미국 연준 FRED·공공데이터포털 등 공공 데이터 기반 참고용 수치입니다.<br>
+  · 일별/월별/연별 데이터는 이 사이트가 수집을 시작한 시점부터 누적된 것으로, 서비스 초기라 과거 데이터가 제한적일 수 있습니다.
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script>
+function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';if(window.__hist)render();}
+function fmt(v,d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const sign=n<0?'-':'';const won=Math.abs(unit==='십억원'?n*1e9:n);
+  const jo=Math.floor(won/1e12),eok=Math.round((won%1e12)/1e8);
+  if(jo&&eok)return `${sign}${jo.toLocaleString('ko-KR')}조 ${eok.toLocaleString('ko-KR')}억원`;
+  if(jo)return `${sign}${jo.toLocaleString('ko-KR')}조원`;
+  if(eok)return `${sign}${eok.toLocaleString('ko-KR')}억원`;
+  return `${sign}${Math.round(won).toLocaleString('ko-KR')}원`;}
+
+const params=new URLSearchParams(location.search);
+const CODE=params.get('code')||'';
+const FROM=params.get('from')||'';
+const NAMES={
+  'USD_KRW':'원달러 환율','BASE_RATE':'한은 기준금리','FED_RATE':'미국 기준금리','M2_TOTAL':'시중 유동성 M2',
+  'HOUSEHOLD_CREDIT':'가계신용','KOSPI':'코스피','KOSDAQ':'코스닥','KOSPI200':'코스피200','USD_INDEX':'달러인덱스',
+  'US_SP500':'S&P 500','US_DJIA':'다우존스','US_NASDAQ':'나스닥','US_CPI':'미국 CPI','US_YIELD_CURVE':'미국 장단기금리차',
+  'VIX':'VIX 변동성지수','WTI':'WTI 유가','GOLD':'국제 금값'
+};
+document.getElementById('ind-title').textContent=NAMES[CODE]||CODE;
+document.getElementById('crumb-name').textContent=NAMES[CODE]||CODE;
+if(FROM==='market'){document.getElementById('crumb-back').href='market.html';document.getElementById('crumb-back').textContent='시장';}
+
+function fmtVal(v,unit){
+  if(unit==='십억원')return krWon(v,'십억원');
+  const d=['%','Index','pt','USD/배럴'].includes(unit)?2:0;
+  return fmt(v,d)+(unit?' '+unit:'');
+}
+
+function isDateKey(v){return typeof v==='string'&&/^\d{4}-\d{2}/.test(v);}
+function aggregate(rows,mode){
+  if(mode==='daily')return rows;
+  const keyFn=mode==='monthly'?d=>d.slice(0,7):d=>d.slice(0,4);
+  const byKey={};
+  rows.forEach(r=>{const k=keyFn(r.reference_date);byKey[k]=r;});
+  return Object.keys(byKey).sort().map(k=>byKey[k]);
+}
+
+function svgEl(tag){return document.createElementNS('http://www.w3.org/2000/svg',tag);}
+function drawChart(rows){
+  const holder=document.getElementById('chartHolder');
+  if(rows.length<2){holder.innerHTML='';return;}
+  const W=820,H=200,padL=60,padR=16,padT=14,padB=24;
+  const vals=rows.map(r=>parseFloat(r.value)||0);
+  const minV=Math.min.apply(null,vals),maxV=Math.max.apply(null,vals);
+  const range=(maxV-minV)||Math.abs(minV)||1;
+  const x=i=>padL+i/(rows.length-1)*(W-padL-padR);
+  const y=v=>H-padB-(v-minV)/range*(H-padT-padB);
+  const css=getComputedStyle(document.documentElement);
+  const green=css.getPropertyValue('--green').trim(),text2=css.getPropertyValue('--text2').trim(),border=css.getPropertyValue('--border').trim();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=3;i++){
+    const gv=minV+range*i/3,gy=y(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-6);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',text2);lbl.textContent=fmt(gv,2);svg.appendChild(lbl);
+  }
+  const step=Math.max(1,Math.floor(rows.length/6));
+  rows.forEach((r,i)=>{if(i%step!==0&&i!==rows.length-1)return;const xl=svgEl('text');xl.setAttribute('x',x(i));xl.setAttribute('y',H-padB+16);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','9');xl.setAttribute('fill',text2);xl.textContent=r.reference_date;svg.appendChild(xl);});
+  const points=rows.map((r,i)=>x(i)+','+y(parseFloat(r.value)||0)).join(' ');
+  const pl=svgEl('polyline');pl.setAttribute('points',points);pl.setAttribute('fill','none');pl.setAttribute('stroke',green);pl.setAttribute('stroke-width','2.5');pl.setAttribute('stroke-linejoin','round');svg.appendChild(pl);
+  holder.innerHTML='';holder.appendChild(svg);
+}
+
+function render(){
+  if(!window.__hist)return;
+  const rows=aggregate(window.__hist,view);
+  drawChart(rows);
+  const unit=window.__unit;
+  const tbody=document.getElementById('histBody');
+  tbody.innerHTML=rows.slice().reverse().map((r,idx)=>{
+    const arr=rows.slice().reverse();
+    const prev=arr[idx+1];
+    const chg=prev?(parseFloat(r.value)-parseFloat(prev.value)):null;
+    const chgTxt=chg===null?'-':(chg>0?'+':'')+fmtVal(chg,unit==='십억원'?'십억원':(unit==='%'?'%p':unit));
+    return `<tr><td>${r.reference_date}</td><td>${fmtVal(r.value,unit)}</td><td class="${chg>0?'up':chg<0?'down':'neutral'}">${chgTxt}</td></tr>`;
+  }).join('');
+  const last=rows[rows.length-1];
+  const prevLast=rows[rows.length-2];
+  if(last){
+    document.getElementById('p-last').textContent=fmtVal(last.value,unit);
+    const chg=prevLast?(parseFloat(last.value)-parseFloat(prevLast.value)):null;
+    const chgTxt=chg===null?'':`<span class="${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmtVal(chg,unit==='십억원'?'십억원':(unit==='%'?'%p':unit))}</span> · `;
+    document.getElementById('p-change').innerHTML=`${chgTxt}${last.reference_date} 기준`;
+  }
+}
+
+let view='daily';
+function setView(btn){view=btn.dataset.v;btn.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');render();}
+
+async function load(){
+  try{
+    const r=await fetch('data/indicator_history.json');const d=await r.json();
+    const rows=(d.history||{})[CODE]||[];
+    if(!rows.length){document.getElementById('valCard').innerHTML='<div class="empty">이 지표의 히스토리를 아직 수집 중입니다</div>';return;}
+    window.__hist=rows;
+    window.__unit=rows[rows.length-1].unit;
+    document.getElementById('ind-sub').textContent=(rows[0].indicator_name||NAMES[CODE]||CODE)+' · '+rows.length+'개 데이터포인트';
+    render();
+  }catch(e){document.getElementById('valCard').innerHTML='<div class="empty">데이터를 불러오지 못했습니다</div>';}
+}
+load();
+
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?Math.round(i.value/1000).toLocaleString('ko-KR')+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
+loadTicker();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

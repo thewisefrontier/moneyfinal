@@ -46,7 +46,7 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 @media(max-width:1000px){.grid5{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.grid2{grid-template-columns:1fr}}
 @media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}.grid5{grid-template-columns:repeat(2,1fr)}}
-.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
 .kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
@@ -88,14 +88,14 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 
 <div class="sec-hd"><div class="sec-title">시장 지수</div></div>
 <div class="grid5">
-  <div class="kpi"><div class="kpi-label">코스피</div><div class="kpi-value" id="i-kospi">-</div><div class="kpi-sub" id="i-kospi-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">코스닥</div><div class="kpi-value" id="i-kosdaq">-</div><div class="kpi-sub" id="i-kosdaq-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">코스피200</div><div class="kpi-value" id="i-kospi200">-</div><div class="kpi-sub" id="i-kospi200-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="i-usd">-</div><div class="kpi-sub" id="i-usd-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">달러 인덱스</div><div class="kpi-value" id="i-dxy">-</div><div class="kpi-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">S&amp;P 500</div><div class="kpi-value" id="i-sp500">-</div><div class="kpi-sub" id="i-sp500-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">다우존스</div><div class="kpi-value" id="i-djia">-</div><div class="kpi-sub" id="i-djia-sub"></div></div>
-  <div class="kpi"><div class="kpi-label">나스닥</div><div class="kpi-value" id="i-nasdaq">-</div><div class="kpi-sub" id="i-nasdaq-sub"></div></div>
+  <a class="kpi" href="indicator-detail.html?code=KOSPI&from=market"><div class="kpi-label">코스피</div><div class="kpi-value" id="i-kospi">-</div><div class="kpi-sub" id="i-kospi-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=KOSDAQ&from=market"><div class="kpi-label">코스닥</div><div class="kpi-value" id="i-kosdaq">-</div><div class="kpi-sub" id="i-kosdaq-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=KOSPI200&from=market"><div class="kpi-label">코스피200</div><div class="kpi-value" id="i-kospi200">-</div><div class="kpi-sub" id="i-kospi200-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=USD_KRW&from=market"><div class="kpi-label">원달러 환율</div><div class="kpi-value" id="i-usd">-</div><div class="kpi-sub" id="i-usd-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=USD_INDEX&from=market"><div class="kpi-label">달러 인덱스</div><div class="kpi-value" id="i-dxy">-</div><div class="kpi-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=US_SP500&from=market"><div class="kpi-label">S&amp;P 500</div><div class="kpi-value" id="i-sp500">-</div><div class="kpi-sub" id="i-sp500-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=US_DJIA&from=market"><div class="kpi-label">다우존스</div><div class="kpi-value" id="i-djia">-</div><div class="kpi-sub" id="i-djia-sub"></div></a>
+  <a class="kpi" href="indicator-detail.html?code=US_NASDAQ&from=market"><div class="kpi-label">나스닥</div><div class="kpi-value" id="i-nasdaq">-</div><div class="kpi-sub" id="i-nasdaq-sub"></div></a>
 </div>
 
 <div class="sec-hd"><div class="sec-title">한국 주식</div></div>
@@ -178,7 +178,7 @@ async function loadInvest(){
       if(i.indicator_code==='US_NASDAQ')idxKpi(i,'i-nasdaq');
     });
     const rg=document.getElementById('risk-grid');const riskInds=inds.filter(i=>['VIX','WTI','GOLD','US_YIELD_CURVE'].includes(i.indicator_code));
-    rg.innerHTML=riskInds.length?riskInds.map(i=>`<div class="kpi"><div class="kpi-label">${i.indicator_name}</div><div class="kpi-value ${sc(i.signal)}">${fmt(i.value,'',2)}</div><div class="kpi-sub">${i.unit}</div></div>`).join(''):'<div class="empty" style="grid-column:1/-1">데이터 없음</div>';
+    rg.innerHTML=riskInds.length?riskInds.map(i=>`<a class="kpi" href="indicator-detail.html?code=${i.indicator_code}&from=market"><div class="kpi-label">${i.indicator_name}</div><div class="kpi-value ${sc(i.signal)}">${fmt(i.value,'',2)}</div><div class="kpi-sub">${i.unit}</div></a>`).join(''):'<div class="empty" style="grid-column:1/-1">데이터 없음</div>';
     const derivs=inds.filter(i=>['해외파생거래','파생결합증권'].includes(i.category)).slice(0,10);
     document.getElementById('deriv-list').innerHTML=derivs.length?derivs.map(i=>`<div class="row ind-row"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}">${fmt(i.value,'',2)}</span> <span class="ind-unit">${i.unit}</span></div></div>`).join(''):'<div class="empty">데이터 수집 예정</div>';
     const cg=document.getElementById('crypto-grid');const cryptoInds=inds.filter(i=>i.category==='암호화폐');
