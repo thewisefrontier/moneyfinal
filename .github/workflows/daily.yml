@@ -34,6 +34,13 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python fetchers/us_technical.py
+      - name: 미국 기업정보
+        continue-on-error: true
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: python fetchers/us_company_info.py
       - name: 국내주식시세
         continue-on-error: true
         env:

@@ -54,6 +54,11 @@ CONFLICT_COLUMNS = {
     'kr_etf_dividends': 'ticker,ex_dividend_date',
     'kr_etf_prices': 'ticker',
     'market_news': 'url',
+    'us_company_profile': 'ticker',
+    'us_company_financials': 'ticker,fiscal_year,period',
+    'us_company_earnings': 'ticker,report_date',
+    'us_company_dividends': 'ticker,ex_date',
+    'us_company_splits': 'ticker,split_date',
 }
 
 
