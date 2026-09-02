@@ -17,8 +17,8 @@
 <meta name="twitter:title" content="배당 파이어 시뮬레이터 - ETF 월배당 은퇴 계산 | 머니파이널">
 <meta name="twitter:description" content="ETF 포트폴리오(국내·해외 혼합)로 얼마를 얼마나 투자해야 은퇴 가능한지, 은퇴 후 배당소득세·건강보험료를 뺀 월 실수령액까지 계산합니다.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"배당 파이어 시뮬레이터","description":"ETF 포트폴리오로 은퇴 자금 도달 시점과 은퇴 후 세후 월 실수령액을 계산합니다.","url":"https://moneyfinal.pages.dev/calc-fire-dividend","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
-<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
-:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd;color-scheme:dark}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da;color-scheme:light}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
 a{color:inherit;text-decoration:none}
@@ -33,7 +33,10 @@ nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
 main{max-width:1240px;margin:0 auto;padding:24px 16px}
 .dash{display:grid;grid-template-columns:380px 1fr;gap:16px;align-items:start}
 .dash-left,.dash-right{min-width:0}
-.dash-left{position:sticky;top:90px;max-height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin}
+.dash-left{position:sticky;top:90px;max-height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.dash-left::-webkit-scrollbar{width:6px}
+.dash-left::-webkit-scrollbar-track{background:transparent}
+.dash-left::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 .dash-right .card{margin-bottom:16px}
 @media(max-width:960px){.dash{grid-template-columns:1fr}.dash-left{position:static;max-height:none}}
 h1{font-size:20px;font-weight:700;margin-bottom:4px}
