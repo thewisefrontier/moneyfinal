@@ -323,6 +323,41 @@ def export_kr_dividends():
     })
 
 
+def export_us_company_info():
+    """미국 기업정보(프로필/재무제표/실적/배당/액면분할) export
+
+    대형주 10종은 FMP로 5종 데이터 전부, 리츠·BDC 16종은 프로필만 FMP,
+    나머지는 yfinance로 보완 수집됨(fetchers/us_company_info.py 참고).
+    공개 데이터라 별도 인증 없이 다른 프로젝트에서도 그대로 fetch 가능.
+    """
+    profiles = {r['ticker']: r for r in supabase_select_all('us_company_profile', {'select': '*'})}
+
+    financials_by_ticker = {}
+    for r in supabase_select_all('us_company_financials', {'select': '*', 'order': 'fiscal_year.desc'}):
+        financials_by_ticker.setdefault(r['ticker'], []).append(r)
+
+    earnings_by_ticker = {}
+    for r in supabase_select_all('us_company_earnings', {'select': '*', 'order': 'report_date.desc'}):
+        earnings_by_ticker.setdefault(r['ticker'], []).append(r)
+
+    dividends_by_ticker = {}
+    for r in supabase_select_all('us_company_dividends', {'select': '*', 'order': 'ex_date.desc'}):
+        dividends_by_ticker.setdefault(r['ticker'], []).append(r)
+
+    splits_by_ticker = {}
+    for r in supabase_select_all('us_company_splits', {'select': '*', 'order': 'split_date.desc'}):
+        splits_by_ticker.setdefault(r['ticker'], []).append(r)
+
+    save_json('us_company_info.json', {
+        'updated_at': today_kst(),
+        'profiles': profiles,
+        'financials': financials_by_ticker,
+        'earnings': earnings_by_ticker,
+        'dividends': dividends_by_ticker,
+        'splits': splits_by_ticker
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -337,6 +372,7 @@ def main():
     export_annuity()
     export_dividends()
     export_kr_dividends()
+    export_us_company_info()
     logger.info("=== JSON Export 완료 ===")
 
 
