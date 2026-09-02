@@ -53,9 +53,11 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
 .ti .name{color:var(--text);font-weight:500}
 /* 필터 영역 */
-.toolbar{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
+.toolbar{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
 .tb-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.tb-label{font-size:11px;color:var(--text2);min-width:52px}
+.tb-groups{display:flex;flex-wrap:wrap;gap:8px 10px}
+.tb-group{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 10px 6px 4px}
+.tb-label{font-size:11px;color:var(--accent);font-weight:700;white-space:nowrap;background:rgba(56,139,253,.12);padding:3px 8px;border-radius:5px}
 .ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
 .ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
 .search-box{flex:1;min-width:180px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:13px;outline:none}
@@ -123,40 +125,48 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
         <option value="base">기본금리순</option>
       </select>
     </div>
-    <div class="tb-row"><span class="tb-label">가입조건</span>
-      <button class="ft active" data-f="deny" data-v="all" onclick="setF(this)">전체</button>
-      <button class="ft" data-f="deny" data-v="1" onclick="setF(this)">누구나</button>
-      <button class="ft" data-f="deny" data-v="2" onclick="setF(this)">서민전용</button>
-      <button class="ft" data-f="deny" data-v="3" onclick="setF(this)">일부제한</button>
-      <span class="tb-label" style="margin-left:12px">우대조건</span>
-      <button class="ft active" data-f="cond" data-v="all" onclick="setF(this)">전체</button>
-      <button class="ft" data-f="cond" data-v="none" onclick="setF(this)">없음</button>
-      <button class="ft" data-f="cond" data-v="yes" onclick="setF(this)">있음</button>
+    <div class="tb-groups">
+      <div class="tb-group"><span class="tb-label">가입조건</span>
+        <button class="ft active" data-f="deny" data-v="all" onclick="setF(this)">전체</button>
+        <button class="ft" data-f="deny" data-v="1" onclick="setF(this)">누구나</button>
+        <button class="ft" data-f="deny" data-v="2" onclick="setF(this)">서민전용</button>
+        <button class="ft" data-f="deny" data-v="3" onclick="setF(this)">일부제한</button>
+      </div>
+      <div class="tb-group"><span class="tb-label">우대조건</span>
+        <button class="ft active" data-f="cond" data-v="all" onclick="setF(this)">전체</button>
+        <button class="ft" data-f="cond" data-v="none" onclick="setF(this)">없음</button>
+        <button class="ft" data-f="cond" data-v="yes" onclick="setF(this)">있음</button>
+      </div>
     </div>
-    <div class="tb-row"><span class="tb-label">판매유형</span>
-      <button class="ft active" data-f="sale" data-v="all" onclick="setF(this)">전체</button>
-      <button class="ft" data-f="sale" data-v="normal" onclick="setF(this)">일반</button>
-      <button class="ft" data-f="sale" data-v="special" onclick="setF(this)">특판</button>
-      <span class="tb-label" style="margin-left:12px">한도</span>
-      <button class="ft active" data-f="limit" data-v="all" onclick="setF(this)">전체</button>
-      <button class="ft" data-f="limit" data-v="small" onclick="setF(this)">소액 (100만원 미만)</button>
-      <button class="ft" data-f="limit" data-v="large" onclick="setF(this)">100만원 이상</button>
-      <span class="tb-label" style="margin-left:12px">기관</span>
-      <button class="ft active" data-f="sec" data-v="all" onclick="setF(this)">전체</button>
-      <button class="ft" data-f="sec" data-v="은행" onclick="setF(this)">은행</button>
-      <button class="ft" data-f="sec" data-v="저축은행" onclick="setF(this)">저축은행</button>
-      <span class="tb-label" style="margin-left:12px">기간</span>
-      <select class="sel" id="trm" onchange="render()">
-        <option value="all">전체</option>
-        <option value="1개월">1개월</option>
-        <option value="3개월">3개월</option>
-        <option value="6개월">6개월</option>
-        <option value="12개월">12개월</option>
-        <option value="24개월">24개월</option>
-        <option value="36개월">36개월</option>
-      </select>
-      <span class="result-cnt" id="cnt"></span>
+    <div class="tb-groups">
+      <div class="tb-group"><span class="tb-label">판매유형</span>
+        <button class="ft active" data-f="sale" data-v="all" onclick="setF(this)">전체</button>
+        <button class="ft" data-f="sale" data-v="normal" onclick="setF(this)">일반</button>
+        <button class="ft" data-f="sale" data-v="special" onclick="setF(this)">특판</button>
+      </div>
+      <div class="tb-group"><span class="tb-label">한도</span>
+        <button class="ft active" data-f="limit" data-v="all" onclick="setF(this)">전체</button>
+        <button class="ft" data-f="limit" data-v="small" onclick="setF(this)">소액 (100만원 미만)</button>
+        <button class="ft" data-f="limit" data-v="large" onclick="setF(this)">100만원 이상</button>
+      </div>
+      <div class="tb-group"><span class="tb-label">기관</span>
+        <button class="ft active" data-f="sec" data-v="all" onclick="setF(this)">전체</button>
+        <button class="ft" data-f="sec" data-v="은행" onclick="setF(this)">은행</button>
+        <button class="ft" data-f="sec" data-v="저축은행" onclick="setF(this)">저축은행</button>
+      </div>
+      <div class="tb-group"><span class="tb-label">기간</span>
+        <select class="sel" id="trm" onchange="render()">
+          <option value="all">전체</option>
+          <option value="1개월">1개월</option>
+          <option value="3개월">3개월</option>
+          <option value="6개월">6개월</option>
+          <option value="12개월">12개월</option>
+          <option value="24개월">24개월</option>
+          <option value="36개월">36개월</option>
+        </select>
+      </div>
     </div>
+    <div class="tb-row" style="justify-content:flex-end"><span class="result-cnt" id="cnt"></span></div>
   </div>
   <div class="hd-grid">
     <button class="hd-btn" id="hd-org" onclick="setSortBy('org')">기관/상품 (클릭 시 상세)<span class="sort-arrow"></span></button>
