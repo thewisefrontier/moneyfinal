@@ -303,6 +303,26 @@ def export_dividends():
     })
 
 
+def export_kr_dividends():
+    """국내 상장 배당 ETF 분배금 이력 + 시세 export (국내 배당ETF 계산기 페이지용)"""
+    rows = supabase_select_all('kr_etf_dividends', {
+        'select': 'ticker,ex_dividend_date,amount,fetched_at',
+        'order': 'ex_dividend_date.desc'
+    })
+    by_ticker = {}
+    for r in rows:
+        by_ticker.setdefault(r['ticker'], []).append(r)
+
+    price_rows = supabase_select_all('kr_etf_prices', {'select': '*'})
+    prices = {r['ticker']: r for r in price_rows}
+
+    save_json('kr_dividends.json', {
+        'updated_at': today_kst(),
+        'by_ticker': by_ticker,
+        'prices': prices
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -316,6 +336,7 @@ def main():
     export_loans()
     export_annuity()
     export_dividends()
+    export_kr_dividends()
     logger.info("=== JSON Export 완료 ===")
 
 

@@ -56,6 +56,9 @@ table.hist tr:last-child td{border-bottom:none}
 .empty{color:var(--text2);text-align:center;padding:20px 0;font-size:13px}
 .crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
 .crumb a{color:var(--accent)}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:6px}
+.badge.tax-free{background:rgba(63,185,80,.15);color:var(--green)}
+.badge.tax-other{background:rgba(210,153,34,.15);color:var(--yellow)}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
 .ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
@@ -87,7 +90,7 @@ table.etf-tbl tr:last-child td{border-bottom:none}
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main style="max-width:1100px">
 <h1>월배당 ETF 배당금 계산기</h1>
-<div class="sub">실제 시세·배당 이력을 기반으로 한 티커별 배당금 계산기 (82종목) · 티커를 클릭하면 상세 계산기로 이동합니다</div>
+<div class="sub">실제 시세·배당 이력을 기반으로 한 티커별 배당금 계산기 (82종목) · 티커를 클릭하면 상세 계산기로 이동합니다 · <a href="dividend-kr-etf.html" style="color:var(--accent)">국내 상장 ETF는 여기 →</a></div>
 <div class="card">
   <div class="toolbar">
     <button class="ft active" data-cat="all" onclick="setCat(this)">전체</button><button class="ft" data-cat="개별종목 옵션인컴" onclick="setCat(this)">개별종목 옵션인컴</button><button class="ft" data-cat="분기배당 대표" onclick="setCat(this)">분기배당 대표</button><button class="ft" data-cat="월배당 BDC" onclick="setCat(this)">월배당 BDC</button><button class="ft" data-cat="월배당 리츠" onclick="setCat(this)">월배당 리츠</button><button class="ft" data-cat="월배당 모기지리츠" onclick="setCat(this)">월배당 모기지리츠</button><button class="ft" data-cat="채권인컴" onclick="setCat(this)">채권인컴</button><button class="ft" data-cat="커버드콜" onclick="setCat(this)">커버드콜</button>

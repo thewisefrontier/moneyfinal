@@ -51,6 +51,8 @@ CONFLICT_COLUMNS = {
     'annuity_savings': 'fin_co_no,fin_prdt_cd',
     'etf_dividends': 'ticker,ex_dividend_date',
     'etf_profiles': 'ticker',
+    'kr_etf_dividends': 'ticker,ex_dividend_date',
+    'kr_etf_prices': 'ticker',
 }
 
 

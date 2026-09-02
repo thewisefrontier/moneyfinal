@@ -202,6 +202,12 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python fetchers/etf_dividends.py
+      - name: 국내 배당ETF 분배금+시세
+        continue-on-error: true
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/kr_etf_dividends.py
       - name: 배당ETF 실시간 시세
         continue-on-error: true
         env:
