@@ -148,6 +148,41 @@ def export_stocks():
     })
 
 
+def export_stock_history():
+    """market.html 종목 클릭 시 일/월/연도별 드릴다운을 위한 종목별 시세 히스토리.
+    전체 상장종목(수천개)을 다 내보내면 용량이 너무 커지므로, 현재 화면에
+    실제 표시되는 시가총액 상위 종목만 대상으로 전체 기간 히스토리를 담는다."""
+    history = {}
+    for market, top_n in [('KOSPI', 30), ('KOSDAQ', 30), ('US', 15)]:
+        latest = supabase_select('stock_prices', {
+            'select': 'stock_code',
+            'market_type': f'eq.{market}',
+            'order': 'base_date.desc,market_cap.desc',
+            'limit': '200'
+        })
+        codes = []
+        for r in latest:
+            code = r.get('stock_code')
+            if code and code not in codes:
+                codes.append(code)
+            if len(codes) >= top_n:
+                break
+        if not codes:
+            continue
+        rows = supabase_select_all('stock_prices', {
+            'select': 'stock_code,base_date,close_price,flt_rt,volume,market_cap',
+            'market_type': f'eq.{market}',
+            'stock_code': f'in.({",".join(codes)})',
+            'order': 'base_date.asc'
+        })
+        for r in rows:
+            history.setdefault(r['stock_code'], []).append(r)
+    save_json('stock_history.json', {
+        'updated_at': today_kst(),
+        'history': history
+    })
+
+
 def export_corp_finance():
     """기업 재무정보 export"""
     finance = supabase_select('corp_finance', {
@@ -248,6 +283,7 @@ def main():
     export_briefing()
     export_corporate_alerts()
     export_stocks()
+    export_stock_history()
     export_corp_finance()
     export_loans()
     export_annuity()

@@ -30,13 +30,22 @@ nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
 .theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
 .menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
 @media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
-main{max-width:820px;margin:0 auto;padding:24px 16px}
+main{max-width:1240px;margin:0 auto;padding:24px 16px}
+.dash{display:grid;grid-template-columns:380px 1fr;gap:16px;align-items:start}
+.dash-left,.dash-right{min-width:0}
+.dash-left{position:sticky;top:90px;max-height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin}
+.dash-right .card{margin-bottom:16px}
+@media(max-width:960px){.dash{grid-template-columns:1fr}.dash-left{position:static;max-height:none}}
 h1{font-size:20px;font-weight:700;margin-bottom:4px}
 .sub{font-size:13px;color:var(--text2);margin-bottom:20px}
 .sec-title{font-size:14px;font-weight:700;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:"";display:block;width:3px;height:15px;background:var(--accent);border-radius:2px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px}
 .field{margin-bottom:14px}
+.field-title{font-size:13px;font-weight:700;margin-bottom:12px;color:var(--accent);display:flex;align-items:center;gap:6px}
+.preset-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.preset-btn{flex:1;min-width:44px;background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:7px 4px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer}
+.preset-btn:hover{border-color:var(--accent);color:var(--accent)}
 .field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
 .field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:10px 11px;font-size:14px;outline:none}
 .field input:focus,.field select:focus{border-color:var(--accent)}
@@ -69,6 +78,12 @@ h1{font-size:20px;font-weight:700;margin-bottom:4px}
 .radio-opt.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
 .warn{background:rgba(210,153,34,.1);border:1px solid var(--yellow);border-radius:6px;padding:10px 12px;font-size:12px;color:var(--yellow);margin-top:10px}
 .note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:12px}
+table th,table td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+table th:first-child,table td:first-child{text-align:left}
+table th{color:var(--text2);font-weight:600;background:var(--bg3)}
+table tr:last-child td{border-bottom:none;font-weight:700}
+.empty{color:var(--text2);text-align:center;padding:24px;font-size:13px}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
 .ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
@@ -81,78 +96,107 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
-  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html" class="active">계산기</a></nav>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="calc-fire-dividend.html" class="active">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
 <h1>배당 파이어 시뮬레이터</h1>
-<div class="sub">ETF 포트폴리오로 얼마를 얼마나 투자해야 은퇴 가능한지, 은퇴 후 세후 월 실수령액까지 계산합니다</div>
+<div class="sub">본인 상황으로 조건을 바꿔가며, 실제 배당 이력 기반 세금부터 은퇴 후 자산 생존 확률까지 한 화면에서 확인합니다</div>
 
-<div class="sec-title">① ETF 포트폴리오 구성</div>
-<div class="card">
-  <div id="portRows"></div>
-  <button class="btn-ghost" onclick="addRow()">+ ETF 추가</button>
-</div>
-
-<div class="sec-title">② 적립 시뮬레이션</div>
-<div class="card">
-  <div class="grid3">
+<div class="dash">
+<div class="dash-left">
+  <div class="card">
+    <div class="field-title">① ETF 포트폴리오</div>
+    <div id="portRows"></div>
+    <button class="btn-ghost" onclick="addRow()">+ ETF 추가</button>
+  </div>
+  <div class="card">
+    <div class="field-title">② 적립 설정</div>
     <div class="field"><label>투자 기간 (년)</label><input type="number" id="years" value="15" min="1" max="50" oninput="calcAll()"></div>
     <div class="field"><label>가정 연 가격상승률 (%)</label><input type="number" id="growth" value="5" step="0.1" oninput="calcAll()"></div>
     <div class="field"><label>배당 재투자</label><select id="reinvest" onchange="calcAll()"><option value="yes">재투자함</option><option value="no">재투자 안함(현금 보유)</option></select></div>
   </div>
-  <div class="result-hero">
-    <div class="rh-label">투자기간 후 예상 평가금액</div>
-    <div class="rh-value" id="r-fv">-</div>
-    <div class="rh-sub" id="r-fv-sub"></div>
-  </div>
-  <div class="brow"><span class="k">월 총 투자금액 (포트폴리오 합계)</span><span class="v" id="r-monthly"></span></div>
-  <div class="brow"><span class="k">총 납입원금</span><span class="v" id="r-principal"></span></div>
-  <div class="brow"><span class="k">가중평균 배당수익률 (현재 기준)</span><span class="v" id="r-yield"></span></div>
-  <div class="brow"><span class="k">국내 / 해외 비중</span><span class="v" id="r-mix"></span></div>
-  <div id="accChartHolder" style="margin-top:14px"></div>
-</div>
-
-<div class="sec-title">③ 은퇴 후 월 캐시플로우</div>
-<div class="card">
-  <div class="field"><label>은퇴 시점 평가금액 (원, 위 시뮬레이션 결과 자동입력·수정 가능)</label><input type="text" id="capital" inputmode="numeric" value="" oninput="fmtInput(this);calcRetire()"></div>
-  <div class="field"><label>건강보험료 유형</label>
-    <div class="radio-row">
-      <div class="radio-opt active" id="hi-region" onclick="setHealthType('region')">지역가입자</div>
-      <div class="radio-opt" id="hi-dependent" onclick="setHealthType('dependent')">직장가입자 (피부양자 유지 중)</div>
+  <div class="card">
+    <div class="field-title">③ 은퇴 시점 자산</div>
+    <div class="field"><label>빠른 선택</label>
+      <div class="preset-row">
+        <button class="preset-btn" onclick="setCapitalPreset(1e8)">1억</button>
+        <button class="preset-btn" onclick="setCapitalPreset(3e8)">3억</button>
+        <button class="preset-btn" onclick="setCapitalPreset(5e8)">5억</button>
+        <button class="preset-btn" onclick="setCapitalPreset(10e8)">10억</button>
+        <button class="preset-btn" onclick="setCapitalPreset(20e8)">20억</button>
+      </div>
+    </div>
+    <div class="field"><label>은퇴 시점 평가금액 (원, 위 적립 시뮬레이션 결과 자동입력·수정 가능)</label><input type="text" id="capital" inputmode="numeric" value="" oninput="fmtInput(this);capitalManual();calcRetire()"></div>
+    <div class="field"><label>건강보험료 유형</label>
+      <div class="radio-row">
+        <div class="radio-opt active" id="hi-region" onclick="setHealthType('region')">지역가입자</div>
+        <div class="radio-opt" id="hi-dependent" onclick="setHealthType('dependent')">직장가입자 (피부양자 유지 중)</div>
+      </div>
     </div>
   </div>
-  <div id="hi-warn"></div>
-
-  <div class="result-hero">
-    <div class="rh-label">세후·건보료 차감 월 실수령액</div>
-    <div class="rh-value" id="rt-net">-</div>
-    <div class="rh-sub">배당은 매월 균등 지급된다고 가정한 월평균입니다</div>
-  </div>
-  <div class="brow"><span class="k">연간 세전 배당금 (국내+해외)</span><span class="v" id="rt-gross" style="color:var(--green)"></span></div>
-  <div class="brow"><span class="k">국내 배당 원천징수 (15.4%)</span><span class="v" id="rt-tax-kr" style="color:var(--red)"></span></div>
-  <div class="brow"><span class="k">해외 배당 미국 원천징수 (15%)</span><span class="v" id="rt-tax-us" style="color:var(--red)"></span></div>
-  <div class="brow"><span class="k" id="rt-comp-label">금융소득종합과세 추가분</span><span class="v" id="rt-comp" style="color:var(--red)"></span></div>
-  <div class="brow"><span class="k" id="rt-hi-label">건강보험료 (연간)</span><span class="v" id="rt-hi" style="color:var(--red)"></span></div>
-  <div class="brow"><span class="k">연간 실수령액</span><span class="v" id="rt-net-yr"></span></div>
-</div>
-
-<div class="sec-title">④ 은퇴 후 자산 생존 시뮬레이션 (몬테카를로)</div>
-<div class="card">
-  <div class="grid3">
+  <div class="card">
+    <div class="field-title">④ 생존 시뮬레이션 설정</div>
     <div class="field"><label>은퇴 기간 (년)</label><input type="number" id="mc-years" value="30" min="5" max="60" oninput="runMC()"></div>
     <div class="field"><label>연 수익률 변동성 가정 (%, 표준편차)</label><input type="number" id="mc-std" value="15" step="1" oninput="runMC()"></div>
-    <div class="field"><label>&nbsp;</label><button class="btn" style="margin-top:0" onclick="runMC()">🎲 다시 시뮬레이션</button></div>
+    <button class="btn" onclick="runMC()">🎲 다시 시뮬레이션</button>
   </div>
-  <div class="result-hero">
-    <div class="rh-label" id="mc-label">은퇴 기간 동안 자산이 바닥나지 않을 확률 (1,000회 시뮬레이션)</div>
-    <div class="rh-value" id="mc-rate">-</div>
-    <div class="rh-sub" id="mc-sub"></div>
+</div>
+
+<div class="dash-right">
+
+  <div class="card">
+    <div class="sec-title">📊 실제 배당 이력 기반 연도별 세금 (백테스트)</div>
+    <div class="rh-sub" style="text-align:left;margin-bottom:10px">현재 포트폴리오의 해외 ETF 비중만큼을 그 시점부터 계속 보유했다고 가정하고, 실제 지급된 배당 이력으로 계산합니다. 국내 ETF는 실이력 데이터가 없어 제외됩니다.</div>
+    <div style="overflow-x:auto">
+    <table id="backtestTable"><thead><tr><th>연도</th><th>총 배당금</th><th>원천징수(15%)</th><th>종합과세 추가분</th><th>세후 순액</th></tr></thead><tbody id="backtestBody"><tr><td colspan="5" class="empty">데이터 로딩 중...</td></tr></tbody></table>
+    </div>
   </div>
-  <div id="mcChartHolder"></div>
-  <div class="legend" style="display:flex;gap:16px;font-size:11px;color:var(--text2);margin-top:8px;justify-content:center">
-    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>중앙값(50%)</span>
-    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>상위 10% / 하위 10% 구간</span>
+
+  <div class="card">
+    <div class="sec-title">② 적립 시뮬레이션 결과</div>
+    <div class="result-hero">
+      <div class="rh-label">투자기간 후 예상 평가금액</div>
+      <div class="rh-value" id="r-fv">-</div>
+      <div class="rh-sub" id="r-fv-sub"></div>
+    </div>
+    <div class="brow"><span class="k">월 총 투자금액 (포트폴리오 합계)</span><span class="v" id="r-monthly"></span></div>
+    <div class="brow"><span class="k">총 납입원금</span><span class="v" id="r-principal"></span></div>
+    <div class="brow"><span class="k">가중평균 배당수익률 (현재 기준)</span><span class="v" id="r-yield"></span></div>
+    <div class="brow"><span class="k">국내 / 해외 비중</span><span class="v" id="r-mix"></span></div>
+    <div id="accChartHolder" style="margin-top:14px"></div>
   </div>
+
+  <div class="card">
+    <div class="sec-title">③ 은퇴 후 월 캐시플로우</div>
+    <div id="hi-warn"></div>
+    <div class="result-hero">
+      <div class="rh-label">세후·건보료 차감 월 실수령액</div>
+      <div class="rh-value" id="rt-net">-</div>
+      <div class="rh-sub">배당은 매월 균등 지급된다고 가정한 월평균입니다</div>
+    </div>
+    <div class="brow"><span class="k">연간 세전 배당금 (국내+해외)</span><span class="v" id="rt-gross" style="color:var(--green)"></span></div>
+    <div class="brow"><span class="k">국내 배당 원천징수 (15.4%)</span><span class="v" id="rt-tax-kr" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k">해외 배당 미국 원천징수 (15%)</span><span class="v" id="rt-tax-us" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k" id="rt-comp-label">금융소득종합과세 추가분</span><span class="v" id="rt-comp" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k" id="rt-hi-label">건강보험료 (연간)</span><span class="v" id="rt-hi" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k">연간 실수령액</span><span class="v" id="rt-net-yr"></span></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">④ 은퇴 후 자산 생존 시뮬레이션 (몬테카를로)</div>
+    <div class="result-hero">
+      <div class="rh-label" id="mc-label">은퇴 기간 동안 자산이 바닥나지 않을 확률 (1,000회 시뮬레이션)</div>
+      <div class="rh-value" id="mc-rate">-</div>
+      <div class="rh-sub" id="mc-sub"></div>
+    </div>
+    <div id="mcChartHolder"></div>
+    <div class="legend" style="display:flex;gap:16px;font-size:11px;color:var(--text2);margin-top:8px;justify-content:center">
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>중앙값(50%)</span>
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>상위 10% / 하위 10% 구간</span>
+    </div>
+  </div>
+
+</div>
 </div>
 
 <div class="note">
@@ -176,8 +220,10 @@ function num(id){return parseInt((document.getElementById(id).value||'0').replac
 
 const US_TICKERS=[{"t": "JEPI", "n": "JPMorgan Equity Premium Income ETF"}, {"t": "JEPQ", "n": "JPMorgan Nasdaq Equity Premium Income ETF"}, {"t": "QYLD", "n": "Global X Nasdaq 100 Covered Call ETF"}, {"t": "RYLD", "n": "Global X Russell 2000 Covered Call ETF"}, {"t": "XYLD", "n": "Global X S&P 500 Covered Call ETF"}, {"t": "DIVO", "n": "Amplify CWP Enhanced Dividend Income ETF"}, {"t": "SPYI", "n": "NEOS S&P 500 High Income ETF"}, {"t": "QQQI", "n": "NEOS Nasdaq 100 High Income ETF"}, {"t": "SVOL", "n": "Simplify Volatility Premium ETF"}, {"t": "NUSI", "n": "Nationwide Risk-Managed Income ETF"}, {"t": "FEPI", "n": "REX FANG & Innovation Equity Premium Income ETF"}, {"t": "GPIX", "n": "Goldman Sachs S&P 500 Core Premium Income ETF"}, {"t": "GPIQ", "n": "Goldman Sachs Nasdaq-100 Core Premium Income ETF"}, {"t": "QDTE", "n": "Roundhill Innovation-100 0DTE Covered Call ETF"}, {"t": "XDTE", "n": "Roundhill S&P 500 0DTE Covered Call ETF"}, {"t": "YMAG", "n": "YieldMax Magnificent 7 Fund of Option Income ETFs"}, {"t": "YMAX", "n": "YieldMax Universe Fund of Option Income ETFs"}, {"t": "LFGY", "n": "YieldMax Crypto Industry & Tech Portfolio Option Income ETF"}, {"t": "GDXY", "n": "YieldMax Gold Miners Option Income Strategy ETF"}, {"t": "KLIP", "n": "Global X China Internet Covered Call ETF"}, {"t": "IWMY", "n": "YieldMax Russell 2000 Option Income Strategy ETF"}, {"t": "QYLG", "n": "Global X Nasdaq 100 Covered Call & Growth ETF"}, {"t": "XYLG", "n": "Global X S&P 500 Covered Call & Growth ETF"}, {"t": "TSLY", "n": "YieldMax TSLA Option Income Strategy ETF"}, {"t": "NVDY", "n": "YieldMax NVDA Option Income Strategy ETF"}, {"t": "CONY", "n": "YieldMax COIN Option Income Strategy ETF"}, {"t": "MSTY", "n": "YieldMax MSTR Option Income Strategy ETF"}, {"t": "AMZY", "n": "YieldMax AMZN Option Income Strategy ETF"}, {"t": "FBY", "n": "YieldMax META Option Income Strategy ETF"}, {"t": "GOOY", "n": "YieldMax GOOGL Option Income Strategy ETF"}, {"t": "APLY", "n": "YieldMax AAPL Option Income Strategy ETF"}, {"t": "NFLY", "n": "YieldMax NFLX Option Income Strategy ETF"}, {"t": "XOMO", "n": "YieldMax XOM Option Income Strategy ETF"}, {"t": "JPMO", "n": "YieldMax JPM Option Income Strategy ETF"}, {"t": "DISO", "n": "YieldMax DIS Option Income Strategy ETF"}, {"t": "PYPY", "n": "YieldMax PYPL Option Income Strategy ETF"}, {"t": "SQY", "n": "YieldMax SQ Option Income Strategy ETF"}, {"t": "ULTY", "n": "YieldMax Ultra Option Income Strategy ETF"}, {"t": "OARK", "n": "YieldMax Innovation Option Income Strategy ETF"}, {"t": "AIYY", "n": "YieldMax AI Option Income ETF"}, {"t": "SMCY", "n": "YieldMax SMCI Option Income Strategy ETF"}, {"t": "PLTY", "n": "YieldMax PLTR Option Income Strategy ETF"}, {"t": "ABNY", "n": "YieldMax ABNB Option Income Strategy ETF"}, {"t": "AMDY", "n": "YieldMax AMD Option Income Strategy ETF"}, {"t": "CVNY", "n": "YieldMax CVNA Option Income Strategy ETF"}, {"t": "MRNY", "n": "YieldMax MRNA Option Income Strategy ETF"}, {"t": "O", "n": "Realty Income Corp"}, {"t": "MAIN", "n": "Main Street Capital Corp"}, {"t": "STAG", "n": "Stag Industrial"}, {"t": "AGNC", "n": "AGNC Investment Corp"}, {"t": "ARR", "n": "ARMOUR Residential REIT"}, {"t": "GAIN", "n": "Gladstone Investment Corp"}, {"t": "GOOD", "n": "Gladstone Commercial Corp"}, {"t": "LAND", "n": "Gladstone Land Corp"}, {"t": "PSEC", "n": "Prospect Capital Corp"}, {"t": "EPR", "n": "EPR Properties"}, {"t": "ORC", "n": "Orchid Island Capital"}, {"t": "NLY", "n": "Annaly Capital Management"}, {"t": "ADC", "n": "Agree Realty Corp"}, {"t": "LTC", "n": "LTC Properties"}, {"t": "ABR", "n": "Arbor Realty Trust"}, {"t": "EFC", "n": "Ellington Financial"}, {"t": "TLTW", "n": "iShares 20+ Year Treasury Bond BuyWrite Strategy ETF"}, {"t": "HYG", "n": "iShares iBoxx High Yield Corp Bond ETF"}, {"t": "PFFA", "n": "Virtus InfraCap US Preferred Stock ETF"}, {"t": "PFFD", "n": "Global X US Preferred ETF"}, {"t": "JNK", "n": "SPDR Bloomberg High Yield Bond ETF"}, {"t": "PFF", "n": "iShares Preferred and Income Securities ETF"}, {"t": "SPHY", "n": "SPDR Portfolio High Yield Bond ETF"}, {"t": "USHY", "n": "iShares Broad USD High Yield Corp Bond ETF"}, {"t": "BKLN", "n": "Invesco Senior Loan ETF"}, {"t": "SCHD", "n": "Schwab US Dividend Equity ETF"}, {"t": "VYM", "n": "Vanguard High Dividend Yield ETF"}, {"t": "DGRO", "n": "iShares Core Dividend Growth ETF"}, {"t": "VIG", "n": "Vanguard Dividend Appreciation ETF"}, {"t": "HDV", "n": "iShares Core High Dividend ETF"}, {"t": "SPHD", "n": "Invesco S&P 500 High Dividend Low Volatility ETF"}, {"t": "SDIV", "n": "Global X SuperDividend ETF"}, {"t": "DGRW", "n": "WisdomTree US Quality Dividend Growth Fund"}, {"t": "NOBL", "n": "ProShares S&P 500 Dividend Aristocrats ETF"}, {"t": "SPYD", "n": "SPDR Portfolio S&P 500 High Dividend ETF"}, {"t": "RDVY", "n": "First Trust Rising Dividend Achievers ETF"}];
 let ETF_YIELDS={}; // ticker -> yieldPct (real data, loaded async)
+let DIV_RAW={},PRICE_RAW={};
 fetch('data/dividends.json').then(r=>r.json()).then(d=>{
   const profiles=d.profiles||{},prices=d.prices||{},byTicker=d.by_ticker||{};
+  DIV_RAW=byTicker;PRICE_RAW=prices;
   US_TICKERS.forEach(o=>{
     const pf=profiles[o.t],rows=byTicker[o.t]||[],p=prices[o.t];
     if(pf&&pf.dividend_yield){ETF_YIELDS[o.t]=pf.dividend_yield*100;return;}
@@ -189,7 +235,7 @@ fetch('data/dividends.json').then(r=>r.json()).then(d=>{
   });
   portfolio.forEach((row,i)=>{if(row.market==='us'&&ETF_YIELDS[row.ticker])applyYield(i);});
   calcAll();
-}).catch(()=>{});
+}).catch(()=>{document.getElementById('backtestBody').innerHTML='<tr><td colspan="5" class="empty">데이터를 불러오지 못했습니다</td></tr>';});
 
 let portfolio=[
   {market:'us',ticker:'SCHD',name:'',yieldPct:3.5,monthly:500000},
@@ -248,6 +294,48 @@ function calcAll(){
   renderStats();
   calcAccumulation();
   calcRetire();
+  renderBacktest();
+}
+function setCapitalPreset(v){
+  const el=document.getElementById('capital');
+  el.dataset.userEdited='1';
+  el.value=Math.round(v).toLocaleString('ko-KR');
+  calcRetire();renderBacktest();
+}
+function capitalManual(){document.getElementById('capital').dataset.userEdited='1';}
+
+function renderBacktest(){
+  const tbody=document.getElementById('backtestBody');
+  const s=portfolioStats();
+  const capital=num('capital');
+  if(!s||!capital){tbody.innerHTML='<tr><td colspan="5" class="empty">포트폴리오와 은퇴 시점 평가금액을 입력하면 실제 배당 이력으로 계산됩니다</td></tr>';return;}
+  const usRows=portfolio.filter(r=>r.market==='us'&&DIV_RAW[r.ticker]&&DIV_RAW[r.ticker].length&&PRICE_RAW[r.ticker]);
+  if(!usRows.length){tbody.innerHTML='<tr><td colspan="5" class="empty">해외 ETF를 포트폴리오에 추가하면 실제 배당 이력 기반 계산을 볼 수 있습니다</td></tr>';return;}
+  const byYear={};
+  usRows.forEach(row=>{
+    const price=parseFloat(PRICE_RAW[row.ticker].price);
+    const tickerCapital=capital*(row.monthly/s.totalMonthly);
+    const shares=price>0?tickerCapital/price:0;
+    (DIV_RAW[row.ticker]||[]).forEach(d=>{
+      const year=(d.ex_dividend_date||'').slice(0,4);
+      if(!year)return;
+      byYear[year]=(byYear[year]||0)+parseFloat(d.amount)*shares;
+    });
+  });
+  const years=Object.keys(byYear).sort();
+  if(!years.length){tbody.innerHTML='<tr><td colspan="5" class="empty">배당 이력 데이터 수집 중입니다</td></tr>';return;}
+  let sumGross=0,sumWithheld=0,sumComp=0,sumNet=0;
+  let rowsHtml=years.map(y=>{
+    const gross=byYear[y];
+    const withheld=gross*0.15;
+    let comp=0;
+    if(gross>20000000){const over=gross-20000000;comp=Math.max(0,progressiveTax(over)-over*0.15);}
+    const net=gross-withheld-comp;
+    sumGross+=gross;sumWithheld+=withheld;sumComp+=comp;sumNet+=net;
+    return `<tr><td>${y}년</td><td>${won(gross)}</td><td>-${won(withheld)}</td><td>${comp>0?'-'+won(comp):'0원'}</td><td>${won(net)}</td></tr>`;
+  }).join('');
+  rowsHtml+=`<tr><td>합계</td><td>${won(sumGross)}</td><td>-${won(sumWithheld)}</td><td>${sumComp>0?'-'+won(sumComp):'0원'}</td><td>${won(sumNet)}</td></tr>`;
+  tbody.innerHTML=rowsHtml;
 }
 function renderStats(){
   const s=portfolioStats();

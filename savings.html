@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="ISA 계좌 은행별 금리·수익률·가입액 비교. 절세·연금 관련 금융상품 정보를 한 곳에서.">
+<meta name="description" content="ISA(개인종합자산관리계좌) 은행별 가입액·수익률 비교와 비과세 한도·절세 효과를 한 곳에서 확인하세요.">
 <link rel="canonical" href="https://moneyfinal.pages.dev/savings">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="머니파이널">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="절세·연금 | 머니파이널">
-<meta property="og:description" content="ISA 계좌 은행별 금리·수익률·가입액 비교. 절세·연금 관련 금융상품 정보를 한 곳에서.">
+<meta property="og:title" content="ISA | 머니파이널">
+<meta property="og:description" content="ISA(개인종합자산관리계좌) 은행별 가입액·수익률 비교와 비과세 한도·절세 효과를 한 곳에서 확인하세요.">
 <meta property="og:url" content="https://moneyfinal.pages.dev/savings">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="절세·연금 | 머니파이널">
-<meta name="twitter:description" content="ISA 계좌 은행별 금리·수익률·가입액 비교. 절세·연금 관련 금융상품 정보를 한 곳에서.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"절세·연금","description":"ISA 계좌 은행별 금리·수익률·가입액 비교. 절세·연금 관련 금융상품 정보를 한 곳에서.","url":"https://moneyfinal.pages.dev/savings","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
-<title>절세·연금 | 머니파이널</title>
+<meta name="twitter:title" content="ISA | 머니파이널">
+<meta name="twitter:description" content="ISA(개인종합자산관리계좌) 은행별 가입액·수익률 비교와 비과세 한도·절세 효과를 한 곳에서 확인하세요.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ISA","description":"ISA(개인종합자산관리계좌) 은행별 가입액·수익률 비교와 비과세 한도·절세 효과를 한 곳에서 확인하세요.","url":"https://moneyfinal.pages.dev/savings","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<title>ISA | 머니파이널</title>
 <style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -66,17 +66,87 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .isa-val{font-size:15px;font-weight:700;color:var(--green);text-align:right}
 .isa-val.amt{color:var(--blue)}
 .ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:700px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px}
+.kpi-value{font-size:18px;font-weight:700;letter-spacing:-.3px;margin-bottom:4px}
+.kpi-sub{font-size:11px;color:var(--text2);line-height:1.5}
+.type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px}
+@media(max-width:700px){.type-grid{grid-template-columns:1fr}}
+.type-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px}
+.type-name{font-size:13px;font-weight:700;margin-bottom:6px}
+.type-desc{font-size:11px;color:var(--text2);line-height:1.6}
+.field{padding:0 16px;margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:10px 11px;font-size:14px;outline:none}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px 16px}
+@media(max-width:600px){.calc-grid{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:16px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:26px;font-weight:700;color:var(--green);letter-spacing:-.5px}
+.brow{display:flex;justify-content:space-between;padding:9px 16px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
 </style>
 </head>
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
-  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html" class="active">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html" class="active">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
-<div class="sec-hd"><div class="sec-title">ISA (개인종합자산관리)</div></div>
+<div class="sec-hd"><div class="sec-title">ISA 제도 한눈에</div></div>
+<div class="grid4">
+  <div class="kpi"><div class="kpi-label">연간 납입한도</div><div class="kpi-value">2,000만원</div><div class="kpi-sub">5년간 최대 1억원까지 이월 납입 가능</div></div>
+  <div class="kpi"><div class="kpi-label">의무 가입기간</div><div class="kpi-value">3년</div><div class="kpi-sub">만 19세 이상 (또는 15~19세 근로소득자)</div></div>
+  <div class="kpi"><div class="kpi-label">비과세 한도</div><div class="kpi-value">200만원 <span style="font-size:12px;color:var(--text2)">(서민형 400만원)</span></div><div class="kpi-sub">순이익 기준, 초과분은 9.9% 분리과세</div></div>
+  <div class="kpi"><div class="kpi-label">일반 과세와 비교</div><div class="kpi-value" style="color:var(--green)">9.9% <span style="font-size:12px;color:var(--text2)">vs 15.4%</span></div><div class="kpi-sub">일반 이자·배당소득세 대비 낮은 분리과세율</div></div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">ISA 유형 비교</div></div>
+<div class="card">
+  <div class="type-grid">
+    <div class="type-card"><div class="type-name">중개형 ISA</div><div class="type-desc">국내 상장주식·ETF·펀드 등을 투자자가 직접 매매. 예적금은 편입 불가. 최근 신규 가입의 대부분을 차지.</div></div>
+    <div class="type-card"><div class="type-name">신탁형 ISA</div><div class="type-desc">예적금·펀드·ETF 등에 투자자가 직접 운용지시. 원금보장형 상품(예금 등) 편입 가능.</div></div>
+    <div class="type-card"><div class="type-name">일임형 ISA</div><div class="type-desc">금융사가 모델포트폴리오로 자산을 대신 운용. 투자 지식이 적은 가입자에게 적합.</div></div>
+  </div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">가입 유형별 비과세 한도</div></div>
+<div class="card">
+  <div class="type-grid">
+    <div class="type-card"><div class="type-name">일반형</div><div class="type-desc">비과세 200만원 + 초과분 9.9% 분리과세<br>소득 제한 없음</div></div>
+    <div class="type-card"><div class="type-name">서민형</div><div class="type-desc">비과세 400만원 + 초과분 9.9% 분리과세<br>총급여 5,000만원(종합소득 3,800만원) 이하</div></div>
+    <div class="type-card"><div class="type-name">농어민형</div><div class="type-desc">비과세 400만원 + 초과분 9.9% 분리과세<br>종합소득 3,800만원 이하 농어민</div></div>
+  </div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">절세 효과 계산기</div></div>
+<div class="card">
+  <div class="calc-grid" style="padding-top:16px">
+    <div class="field"><label>ISA 만기 순이익 (원)</label><input type="text" id="profit" inputmode="numeric" value="5,000,000" oninput="fmtInput(this);calcIsa()"></div>
+    <div class="field"><label>가입 유형</label><select id="isaType" onchange="calcIsa()"><option value="200">일반형 (비과세 200만원)</option><option value="400">서민형·농어민형 (비과세 400만원)</option></select></div>
+  </div>
+  <div class="result-hero">
+    <div class="rh-label">ISA 계좌 세금 (9.9% 분리과세 적용분만)</div>
+    <div class="rh-value" id="isa-tax">-</div>
+  </div>
+  <div class="brow"><span class="k">비과세 적용 금액</span><span class="v" id="isa-free"></span></div>
+  <div class="brow"><span class="k">분리과세 대상 금액 (9.9%)</span><span class="v" id="isa-taxed"></span></div>
+  <div class="brow"><span class="k">일반계좌였다면 세금 (15.4%)</span><span class="v" id="isa-normal-tax"></span></div>
+  <div class="brow"><span class="k">ISA로 아낀 세금</span><span class="v" id="isa-saved" style="color:var(--green)"></span></div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">은행별 ISA 비교</div></div>
 <div class="card"><div class="card-hd"><span class="card-title">ISA 다모아</span></div>
   <div id="isa-list"><div class="loading">로딩 중...</div></div></div>
+
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:24px">
+  ⚠️ 위 제도 정보는 2026년 기준 일반적인 안내이며 세부 요건·한도는 세법 개정에 따라 달라질 수 있습니다. 실제 가입·절세 판단 전 금융회사 또는 국세청에 확인하세요.<br>
+  · 만기 후 연금계좌(IRP·연금저축)로 전환하면 전환금액의 10%(최대 300만원)를 세액공제로 추가로 받을 수 있습니다.
+</div>
 </main>
 <div class="disclaimer">⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털</div>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
@@ -86,6 +156,24 @@ function toggleTheme(){const h=document.documentElement;h.setAttribute('data-the
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function fmtWon(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return(n/1e12).toLocaleString('ko-KR',{maximumFractionDigits:1})+'조원';if(n>=1e8)return(n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:0})+'억원';return n.toLocaleString('ko-KR')+'원';}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
+function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+function calcIsa(){
+  const profit=num('profit');
+  const freeLimit=parseInt(document.getElementById('isaType').value,10)*10000;
+  const freeAmt=Math.min(profit,freeLimit);
+  const taxedAmt=Math.max(0,profit-freeLimit);
+  const isaTax=taxedAmt*0.099;
+  const normalTax=profit*0.154;
+  const saved=normalTax-isaTax;
+  document.getElementById('isa-tax').textContent=won(isaTax);
+  document.getElementById('isa-free').textContent=won(freeAmt);
+  document.getElementById('isa-taxed').textContent=won(taxedAmt);
+  document.getElementById('isa-normal-tax').textContent=won(normalTax);
+  document.getElementById('isa-saved').textContent='+'+won(saved);
+}
+calcIsa();
 async function loadSavings(){
   try{const r=await fetch('data/market.json');const d=await r.json();const bc=d.by_category||{};
     const isa=(bc['ISA']||[]).slice().sort((a,b)=>((a.unit==='원')?1:0)-((b.unit==='원')?1:0));
