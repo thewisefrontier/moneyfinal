@@ -81,6 +81,7 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+          OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: python fetchers/oil_price.py
       - name: ISA 다모아
         continue-on-error: true
