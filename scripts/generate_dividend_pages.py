@@ -6,6 +6,7 @@ config/etf_dividend_tickers.py의 티커 목록을 기반으로 dividend-{ticker
 페이지 골격(메타태그/구조/JS)만 생성한다. 실행은 fetcher/exporter와 무관하게
 티커 목록이 바뀔 때만 다시 돌리면 됨.
 """
+import json
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -235,22 +236,22 @@ fetch('data/market.json').then(r=>r.json()).then(d=>{{const u=(d.indicators||[])
 """
 
 
-def hub_html() -> str:
-    by_cat = {}
-    for ticker, name, category in TICKERS:
-        by_cat.setdefault(category, []).append((ticker, name))
+def json_str(s: str) -> str:
+    return json.dumps(s, ensure_ascii=False)
 
-    sections = []
-    for cat, items in by_cat.items():
-        cards = "\n".join(
-            f'  <a class="cc" href="dividend-{t.lower()}.html"><div class="cc-title">{t}</div><div class="cc-desc">{n}</div></a>'
-            for t, n in items
-        )
-        sections.append(f'<div class="sec-title" style="margin-top:20px">{cat}</div>\n<div class="grid2" style="grid-template-columns:repeat(3,1fr)">\n{cards}\n</div>')
-    sections_html = "\n".join(sections)
+
+def hub_html() -> str:
+    categories = sorted(set(c for _, _, c in TICKERS))
+    cat_buttons = '<button class="ft active" data-cat="all" onclick="setCat(this)">전체</button>' + \
+        "".join(f'<button class="ft" data-cat="{c}" onclick="setCat(this)">{c}</button>' for c in categories)
+
+    # 정적 폴백(데이터 로드 실패/최초 렌더)용 - 티커 메타는 서버에서 미리 박아둔다
+    ticker_meta_js = ",".join(
+        f'{{ticker:"{t}",name:{json_str(n)},category:{json_str(c)}}}' for t, n, c in TICKERS
+    )
 
     title = "월배당 ETF 배당금 계산기 모음 | 머니파이널"
-    desc = "JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실제 배당 이력을 기반으로 배당금을 계산합니다."
+    desc = "JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실시간 시세·배당수익률·운용정보를 한 표에서 비교합니다."
     url = "https://moneyfinal.pages.dev/dividend-etf"
 
     return f"""<!DOCTYPE html>
@@ -273,11 +274,21 @@ def hub_html() -> str:
 <meta name="twitter:description" content="{desc}">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"월배당 ETF 배당금 계산기 모음","description":"{desc}","url":"{url}","inLanguage":"ko-KR","isPartOf":{{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}}}</script>
 <style>{STYLE}
-.grid2 a.cc{{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;transition:border-color .15s}}
-.grid2 a.cc:hover{{border-color:var(--accent)}}
-.cc-title{{font-size:14px;font-weight:700;margin-bottom:4px}}
-.cc-desc{{font-size:11px;color:var(--text2);line-height:1.4}}
-@media(max-width:600px){{.grid2{{grid-template-columns:repeat(2,1fr) !important}}}}
+.toolbar{{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px;align-items:center}}
+.ft{{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}}
+.ft.active,.ft:hover{{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}}
+.search-box{{flex:1;min-width:160px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:13px;outline:none}}
+table.etf-tbl{{width:100%;border-collapse:collapse;font-size:12px}}
+table.etf-tbl th{{text-align:right;color:var(--text2);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;position:sticky;top:0;background:var(--bg2)}}
+table.etf-tbl th:hover{{color:var(--accent)}}
+table.etf-tbl th:first-child,table.etf-tbl td:first-child{{text-align:left}}
+table.etf-tbl td{{padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;text-align:right}}
+table.etf-tbl td:first-child{{white-space:normal}}
+table.etf-tbl tr:hover{{background:var(--bg3);cursor:pointer}}
+table.etf-tbl tr:last-child td{{border-bottom:none}}
+.tk-code{{font-weight:700}}
+.tk-name{{font-size:11px;color:var(--text2);display:block;margin-top:1px}}
+.tbl-wrap{{overflow-x:auto}}
 </style>
 </head>
 <body>
@@ -285,14 +296,88 @@ def hub_html() -> str:
 <header><a href="index.html" class="logo">💰 머니파이널</a>
   {NAV}
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
-<main style="max-width:900px">
+<main style="max-width:1100px">
 <h1>월배당 ETF 배당금 계산기</h1>
-<div class="sub">실제 배당 이력을 기반으로 한 티커별 배당금 계산기 ({len(TICKERS)}종목)</div>
-{sections_html}
+<div class="sub">실제 시세·배당 이력을 기반으로 한 티커별 배당금 계산기 ({len(TICKERS)}종목) · 티커를 클릭하면 상세 계산기로 이동합니다</div>
+<div class="card">
+  <div class="toolbar">
+    {cat_buttons}
+    <input type="text" class="search-box" id="q" placeholder="티커·이름 검색" oninput="renderTbl()">
+  </div>
+  <div class="tbl-wrap">
+  <table class="etf-tbl">
+    <thead><tr>
+      <th data-k="ticker" onclick="setSort(this)">티커</th>
+      <th data-k="price" onclick="setSort(this)">현재가</th>
+      <th data-k="yield" onclick="setSort(this)">배당수익률</th>
+      <th data-k="freq" onclick="setSort(this)">주기</th>
+      <th data-k="aum" onclick="setSort(this)">운용규모</th>
+      <th data-k="expense" onclick="setSort(this)">보수율</th>
+    </tr></thead>
+    <tbody id="tbody"><tr><td colspan="6" class="empty">로딩 중...</td></tr></tbody>
+  </table>
+  </div>
+</div>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>
 {THEME_SCRIPT}
+const TICKER_META=[{ticker_meta_js}];
+let CAT='all',SORT_KEY='yield',SORT_DIR='desc';
+let ROWS=[];
+function setCat(btn){{CAT=btn.dataset.cat;btn.parentElement.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTbl();}}
+function setSort(th){{const k=th.dataset.k;if(SORT_KEY===k){{SORT_DIR=SORT_DIR==='desc'?'asc':'desc';}}else{{SORT_KEY=k;SORT_DIR='desc';}}renderTbl();}}
+function usd(v){{return v===null||v===undefined?'-':'$'+v.toLocaleString('en-US',{{minimumFractionDigits:2,maximumFractionDigits:2}});}}
+function pct(v){{return v===null||v===undefined?'-':v.toFixed(2)+'%';}}
+function eokDollar(v){{return v===null||v===undefined?'-':(v/1e8).toLocaleString('ko-KR',{{maximumFractionDigits:1}})+'억 달러';}}
+async function loadData(){{
+  try{{
+    const r=await fetch('data/dividends.json');const d=await r.json();
+    const prices=d.prices||{{}},profiles=d.profiles||{{}},byTicker=d.by_ticker||{{}};
+    ROWS=TICKER_META.map(m=>{{
+      const p=prices[m.ticker],pf=profiles[m.ticker],rows=byTicker[m.ticker]||[];
+      let freq=null,annualDps=null;
+      if(rows.length>=2){{
+        const d0=new Date(rows[0].ex_dividend_date),d1=new Date(rows[1].ex_dividend_date);
+        const gapDays=(d0-d1)/86400000;
+        freq=gapDays<=45?'월배당':gapDays<=100?'분기배당':gapDays<=200?'반기배당':'연배당';
+      }}
+      if(rows.length){{
+        const n=freq==='월배당'?12:freq==='분기배당'?4:freq==='반기배당'?2:1;
+        annualDps=parseFloat(rows[0].amount)*n;
+      }}
+      const price=p?parseFloat(p.price):null;
+      const yieldPct=pf&&pf.dividend_yield?pf.dividend_yield*100:(price&&annualDps?annualDps/price*100:null);
+      return{{...m,price,yieldPct,freq,aum:pf?pf.net_assets:null,expense:pf?pf.expense_ratio*100:null}};
+    }});
+  }}catch(e){{ROWS=TICKER_META.map(m=>({{...m,price:null,yieldPct:null,freq:null,aum:null,expense:null}}));}}
+  renderTbl();
+}}
+function renderTbl(){{
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=ROWS.filter(r=>CAT==='all'||r.category===CAT);
+  if(q)list=list.filter(r=>(r.ticker+' '+r.name).toLowerCase().includes(q));
+  list=list.slice().sort((a,b)=>{{
+    const map={{ticker:'ticker',price:'price',yield:'yieldPct',freq:'freq',aum:'aum',expense:'expense'}};
+    const k=map[SORT_KEY];
+    let av=a[k],bv=b[k];
+    if(av===null||av===undefined)av=SORT_DIR==='desc'?-Infinity:Infinity;
+    if(bv===null||bv===undefined)bv=SORT_DIR==='desc'?-Infinity:Infinity;
+    if(typeof av==='string')return SORT_DIR==='asc'?av.localeCompare(bv):bv.localeCompare(av);
+    return SORT_DIR==='asc'?av-bv:bv-av;
+  }});
+  const tbody=document.getElementById('tbody');
+  if(!list.length){{tbody.innerHTML='<tr><td colspan="6" class="empty">조건에 맞는 ETF가 없습니다</td></tr>';return;}}
+  tbody.innerHTML=list.map(r=>`<tr onclick="location.href='dividend-${{r.ticker.toLowerCase()}}.html'">
+    <td><span class="tk-code">${{r.ticker}}</span><span class="tk-name">${{r.name}}</span></td>
+    <td>${{usd(r.price)}}</td>
+    <td class="${{r.yieldPct?'up':''}}">${{pct(r.yieldPct)}}</td>
+    <td>${{r.freq||'-'}}</td>
+    <td>${{eokDollar(r.aum)}}</td>
+    <td>${{pct(r.expense)}}</td>
+  </tr>`).join('');
+}}
+loadData();
 {TICKER_SCRIPT}
 </script>
 {CF_ANALYTICS}

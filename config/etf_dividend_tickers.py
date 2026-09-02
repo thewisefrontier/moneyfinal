@@ -27,6 +27,10 @@ TICKERS = [
     ("YMAX", "YieldMax Universe Fund of Option Income ETFs", "커버드콜"),
     ("LFGY", "YieldMax Crypto Industry & Tech Portfolio Option Income ETF", "커버드콜"),
     ("GDXY", "YieldMax Gold Miners Option Income Strategy ETF", "커버드콜"),
+    ("KLIP", "Global X China Internet Covered Call ETF", "커버드콜"),
+    ("IWMY", "YieldMax Russell 2000 Option Income Strategy ETF", "커버드콜"),
+    ("QYLG", "Global X Nasdaq 100 Covered Call & Growth ETF", "커버드콜"),
+    ("XYLG", "Global X S&P 500 Covered Call & Growth ETF", "커버드콜"),
 
     # YieldMax 개별종목 옵션 인컴 ETF (월배당)
     ("TSLY", "YieldMax TSLA Option Income Strategy ETF", "개별종목 옵션인컴"),
@@ -49,6 +53,9 @@ TICKERS = [
     ("SMCY", "YieldMax SMCI Option Income Strategy ETF", "개별종목 옵션인컴"),
     ("PLTY", "YieldMax PLTR Option Income Strategy ETF", "개별종목 옵션인컴"),
     ("ABNY", "YieldMax ABNB Option Income Strategy ETF", "개별종목 옵션인컴"),
+    ("AMDY", "YieldMax AMD Option Income Strategy ETF", "개별종목 옵션인컴"),
+    ("CVNY", "YieldMax CVNA Option Income Strategy ETF", "개별종목 옵션인컴"),
+    ("MRNY", "YieldMax MRNA Option Income Strategy ETF", "개별종목 옵션인컴"),
 
     # 월배당 리츠/BDC/개별주
     ("O", "Realty Income Corp", "월배당 리츠"),
@@ -63,10 +70,16 @@ TICKERS = [
     ("EPR", "EPR Properties", "월배당 리츠"),
     ("ORC", "Orchid Island Capital", "월배당 모기지리츠"),
     ("NLY", "Annaly Capital Management", "월배당 모기지리츠"),
+    ("ADC", "Agree Realty Corp", "월배당 리츠"),
+    ("LTC", "LTC Properties", "월배당 리츠"),
+    ("ABR", "Arbor Realty Trust", "월배당 모기지리츠"),
+    ("EFC", "Ellington Financial", "월배당 모기지리츠"),
 
     # 채권/우선주 인컴 (월배당)
     ("TLTW", "iShares 20+ Year Treasury Bond BuyWrite Strategy ETF", "채권인컴"),
     ("HYG", "iShares iBoxx High Yield Corp Bond ETF", "채권인컴"),
+    ("PFFA", "Virtus InfraCap US Preferred Stock ETF", "채권인컴"),
+    ("PFFD", "Global X US Preferred ETF", "채권인컴"),
     ("JNK", "SPDR Bloomberg High Yield Bond ETF", "채권인컴"),
     ("PFF", "iShares Preferred and Income Securities ETF", "채권인컴"),
     ("SPHY", "SPDR Portfolio High Yield Bond ETF", "채권인컴"),
@@ -83,6 +96,8 @@ TICKERS = [
     ("SDIV", "Global X SuperDividend ETF", "분기배당 대표"),
     ("DGRW", "WisdomTree US Quality Dividend Growth Fund", "분기배당 대표"),
     ("NOBL", "ProShares S&P 500 Dividend Aristocrats ETF", "분기배당 대표"),
+    ("SPYD", "SPDR Portfolio S&P 500 High Dividend ETF", "분기배당 대표"),
+    ("RDVY", "First Trust Rising Dividend Achievers ETF", "분기배당 대표"),
 ]
 
 # fetcher용 티커 심볼만 추출
