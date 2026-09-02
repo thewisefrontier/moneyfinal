@@ -15,7 +15,7 @@ from config.etf_dividend_tickers import TICKERS
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CF_ANALYTICS = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "5ec3e89757844a3582c90d3524a2cead"}\'></script><!-- End Cloudflare Web Analytics -->'
 
-NAV = '<nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html" class="active">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>'
+NAV = '<nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html" class="active">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>'
 
 STYLE = """:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
@@ -139,7 +139,7 @@ def page_html(ticker: str, name: str, category: str) -> str:
 </div>
 
 <div class="note">
-  ⚠️ 본 페이지는 Alpha Vantage에서 수집한 {ticker}의 실제 배당 이력을 기반으로 하되, 향후 배당금은 참고용 추정치입니다. 실제 배당금은 기초자산 실적과 운용사 정책에 따라 매월 달라질 수 있습니다.<br>
+  ⚠️ 본 페이지는 Yahoo Finance에서 수집한 {ticker}의 실제 배당 이력을 기반으로 하되, 향후 배당금은 참고용 추정치입니다. 실제 배당금은 기초자산 실적과 운용사 정책에 따라 매월 달라질 수 있습니다.<br>
   · "연간 환산"은 가장 최근 배당금 × 배당 횟수(월배당=12, 분기배당=4)로 단순 추정한 값입니다<br>
   · 미국 상장 ETF/종목 배당은 한미 조세조약에 따라 보통 15%가 현지에서 원천징수된 후 지급됩니다<br>
   · 국내 이자·배당소득 합계가 연 2천만원을 초과하면 금융소득종합과세 대상이 될 수 있습니다<br>
