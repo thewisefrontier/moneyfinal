@@ -53,6 +53,7 @@ CONFLICT_COLUMNS = {
     'etf_profiles': 'ticker',
     'kr_etf_dividends': 'ticker,ex_dividend_date',
     'kr_etf_prices': 'ticker',
+    'market_news': 'url',
 }
 
 
