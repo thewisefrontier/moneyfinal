@@ -6,6 +6,7 @@ import os
 import logging
 import requests
 import sys
+import time
 from urllib.parse import urlencode, quote
 from datetime import datetime, timedelta
 import pytz
@@ -93,21 +94,38 @@ def _dedupe_by_conflict(table: str, data: list, conflict: str) -> list:
     return list(seen.values())
 
 
-def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15) -> requests.Response:
+def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15,
+                    max_retries: int = 3) -> requests.Response:
     """
     공공데이터포털 API 전용 GET 요청.
     serviceKey를 params에 포함해 requests가 한 번만 인코딩하도록 한다.
+
+    GitHub Actions 러너 -> apis.data.go.kr 구간에서 ConnectTimeout이 간헐적으로
+    발생함(로컬에서는 같은 요청이 1초 내 응답 - 페이로드 크기가 아니라 네트워크
+    경로 문제, stock_prices.py에서 실측 확인됨). 긴 타임아웃 1회보다 짧은
+    타임아웃으로 여러 번 재시도하는 편이 안정적이라 모든 data.go.kr 호출에
+    공통 적용한다 (개별 fetcher마다 따로 구현하지 않도록 여기서 일괄 처리).
     """
     all_params = {'serviceKey': service_key, **params}
-    res = requests.get(url, params=all_params, timeout=timeout)
-    if res.status_code >= 400:
-        logging.error(
-            f"[API 오류] HTTP {res.status_code} "
-            f"| URL: {url} "
-            f"| params: {list(params.items())} "
-            f"| 응답: {res.text[:300]}"
-        )
-    return res
+    last_err = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            res = requests.get(url, params=all_params, timeout=timeout)
+            if res.status_code >= 400:
+                logging.error(
+                    f"[API 오류] HTTP {res.status_code} "
+                    f"| URL: {url} "
+                    f"| params: {list(params.items())} "
+                    f"| 응답: {res.text[:300]}"
+                )
+            return res
+        except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+            last_err = e
+            logging.warning(f"[data.go.kr] {url} 시도 {attempt}/{max_retries} 실패: {type(e).__name__}")
+            if attempt < max_retries:
+                time.sleep(3)
+    logging.error(f"[data.go.kr] {url} {max_retries}회 재시도 모두 실패: {type(last_err).__name__}")
+    raise last_err
 
 
 def fss_open_api_get(jsp_name: str, auth_key: str, days_back: int = 7, timeout: int = 15) -> requests.Response:
