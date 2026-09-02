@@ -35,7 +35,8 @@ main{max-width:1200px;margin:0 auto;padding:24px 16px}
 .sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
-.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.more-link{font-size:12px;color:var(--accent)}
 .card-title{font-size:13px;font-weight:600}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:900px){.grid2{grid-template-columns:1fr}}
@@ -76,17 +77,17 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
     <div class="sec-hd"><div class="sec-title">국내 거시지표</div></div>
     <div class="card"><div class="card-hd"><span class="card-title">한국은행 ECOS</span></div><div id="dom-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">은행 건전성 (BIS)</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">은행별 BIS 총자본비율</span></div><div id="bank-stats-list" class="scroll-list"><div class="loading">로딩 중...</div></div><div id="bank-stats-count" class="scroll-count" style="display:none"></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">은행별 BIS 총자본비율</span><a class="more-link" href="macro-detail.html?cat=은행통계">전체보기 →</a></div><div id="bank-stats-list" class="scroll-list"><div class="loading">로딩 중...</div></div><div id="bank-stats-count" class="scroll-count" style="display:none"></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">금융회사 부채비율</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">비은행 금융회사 재무건전성 참고지표</span></div><div id="bis-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">비은행 금융회사 재무건전성 참고지표</span><a class="more-link" href="macro-detail.html?cat=금융회사건전성">전체보기 →</a></div><div id="bis-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
   </div>
   <div>
     <div class="sec-hd"><div class="sec-title">글로벌 지표</div></div>
     <div class="card"><div class="card-hd"><span class="card-title">FRED</span></div><div id="glob-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">채권 시장</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">채권 시세 (YTM)</span></div><div id="bond-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">채권 시세 (YTM)</span><a class="more-link" href="macro-detail.html?cat=채권금리">전체보기 →</a></div><div id="bond-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
     <div class="sec-hd" style="margin-top:8px"><div class="sec-title">금융투자협회 통계</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">ETF · 펀드 통계</span></div><div id="kofia-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
+    <div class="card"><div class="card-hd"><span class="card-title">ETF · 펀드 통계</span><a class="more-link" href="macro-detail.html?cat=금융투자">전체보기 →</a></div><div id="kofia-list" class="scroll-list"><div class="loading">로딩 중...</div></div></div>
   </div>
 </div>
 </main>

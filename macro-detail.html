@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>경제지표 전체보기 | 머니파이널</title>
+<meta name="description" content="은행 건전성, 금융회사 부채비율, 채권 시세, 금융투자협회 통계 전체 목록을 검색·정렬하여 확인합니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/macro-detail">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta name="robots" content="noindex">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:900px;margin:0 auto;padding:24px 16px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:20px}
+.toolbar{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:center}
+.search-box{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:7px 12px;color:var(--text);font-size:13px;outline:none}
+.result-cnt{font-size:12px;color:var(--text2);white-space:nowrap}
+.row{display:grid;grid-template-columns:1fr auto;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.ind-name{font-size:13px;font-weight:500}
+.ind-sub{font-size:11px;color:var(--text2);margin-top:2px}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.empty{color:var(--text2);text-align:center;padding:40px;font-size:13px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+</style>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html" class="active">경제지표</a><a href="calc.html">계산기</a></nav>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="crumb"><a href="macro.html">경제지표</a> &gt; <span id="crumb-name">전체보기</span></div>
+<h1 id="page-title">-</h1>
+<div class="sub" id="page-sub"></div>
+<div class="card">
+  <div class="toolbar">
+    <input type="text" class="search-box" id="q" placeholder="검색" oninput="render()">
+    <span class="result-cnt" id="cnt"></span>
+  </div>
+  <div id="list"><div class="empty">로딩 중...</div></div>
+</div>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script>
+function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function fmt(v,d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const mult={'백만원':1e6,'십억원':1e9,'원':1}[unit]||1;const won=Math.abs(n*mult);const jo=Math.floor(won/1e12),eok=Math.round((won%1e12)/1e8);const sign=n<0?'-':'';
+  if(jo&&eok)return `${sign}${jo.toLocaleString('ko-KR')}조 ${eok.toLocaleString('ko-KR')}억원`;
+  if(jo)return `${sign}${jo.toLocaleString('ko-KR')}조원`;
+  if(eok)return `${sign}${eok.toLocaleString('ko-KR')}억원`;
+  return `${sign}${Math.round(won).toLocaleString('ko-KR')}원`;}
+function valText(i){
+  if(['백만원','십억원','원'].includes(i.unit)&&Math.abs(i.value*({'백만원':1e6,'십억원':1e9,'원':1}[i.unit]))>=1e8)return krWon(i.value,i.unit);
+  if(i.unit==='달러'&&Math.abs(i.value)>=1e8)return (i.value/1e8).toLocaleString('ko-KR',{maximumFractionDigits:1})+'억 달러';
+  return fmt(i.value,i.unit==='%'?2:0)+(i.unit&&i.unit!=='%'?' '+i.unit:i.unit==='%'?'%':'');
+}
+
+const CAT=new URLSearchParams(location.search).get('cat')||'';
+const TITLES={
+  '은행통계':['은행 건전성 (BIS)','은행별 BIS 총자본비율·기본자본비율·보통주자본비율 전체'],
+  '금융회사건전성':['금융회사 부채비율','비은행 금융회사 재무건전성 참고지표 전체'],
+  '채권금리':['채권 시세 (YTM)','국내 채권 종목별 시세 전체'],
+  '금융투자':['금융투자협회 통계','신탁·펀드·신용공여 등 통계 전체']
+};
+const[title,sub]=TITLES[CAT]||['전체보기',''];
+document.getElementById('page-title').textContent=title;
+document.getElementById('page-sub').textContent=sub;
+document.getElementById('crumb-name').textContent=title;
+document.title=title+' | 머니파이널';
+
+let ALL=[];
+function render(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=ALL;
+  if(q)list=list.filter(i=>(i.indicator_name||'').toLowerCase().includes(q));
+  document.getElementById('cnt').textContent=list.length+'건';
+  const el=document.getElementById('list');
+  if(!list.length){el.innerHTML='<div class="empty">데이터가 없습니다</div>';return;}
+  el.innerHTML=list.map(i=>{
+    const sub=i.summary_text||(i.reference_date?`${i.reference_date} 기준`:'');
+    return `<div class="row"><div><div class="ind-name">${i.indicator_name}</div>${sub?`<div class="ind-sub">${sub}</div>`:''}</div><div class="ind-val ${sc(i.signal)}">${valText(i)}</div></div>`;
+  }).join('');
+}
+
+async function load(){
+  try{
+    const r=await fetch('data/market.json');const d=await r.json();
+    ALL=((d.by_category||{})[CAT]||[]).slice();
+    if(CAT==='은행통계')ALL=ALL.filter(i=>i.indicator_name.endsWith('BIS기준 자기자본비율')||true); // 전체보기는 3종 비율 다 노출
+    ALL.sort((a,b)=>(b.value||0)-(a.value||0));
+    render();
+  }catch(e){document.getElementById('list').innerHTML='<div class="empty">데이터를 불러오지 못했습니다</div>';}
+}
+load();
+
+async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?Math.round(i.value/1000).toLocaleString('ko-KR')+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class="ti"><span class="name">${L[i.indicator_code]}</span><span class="${tc(i.signal)}">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}
+loadTicker();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
