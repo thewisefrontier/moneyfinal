@@ -109,6 +109,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div class="brow"><span class="k">총 납입원금</span><span class="v" id="r-principal"></span></div>
   <div class="brow"><span class="k">가중평균 배당수익률 (현재 기준)</span><span class="v" id="r-yield"></span></div>
   <div class="brow"><span class="k">국내 / 해외 비중</span><span class="v" id="r-mix"></span></div>
+  <div id="accChartHolder" style="margin-top:14px"></div>
 </div>
 
 <div class="sec-title">③ 은퇴 후 월 캐시플로우</div>
@@ -135,12 +136,32 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div class="brow"><span class="k">연간 실수령액</span><span class="v" id="rt-net-yr"></span></div>
 </div>
 
+<div class="sec-title">④ 은퇴 후 자산 생존 시뮬레이션 (몬테카를로)</div>
+<div class="card">
+  <div class="grid3">
+    <div class="field"><label>은퇴 기간 (년)</label><input type="number" id="mc-years" value="30" min="5" max="60" oninput="runMC()"></div>
+    <div class="field"><label>연 수익률 변동성 가정 (%, 표준편차)</label><input type="number" id="mc-std" value="15" step="1" oninput="runMC()"></div>
+    <div class="field"><label>&nbsp;</label><button class="btn" style="margin-top:0" onclick="runMC()">🎲 다시 시뮬레이션</button></div>
+  </div>
+  <div class="result-hero">
+    <div class="rh-label" id="mc-label">은퇴 기간 동안 자산이 바닥나지 않을 확률 (1,000회 시뮬레이션)</div>
+    <div class="rh-value" id="mc-rate">-</div>
+    <div class="rh-sub" id="mc-sub"></div>
+  </div>
+  <div id="mcChartHolder"></div>
+  <div class="legend" style="display:flex;gap:16px;font-size:11px;color:var(--text2);margin-top:8px;justify-content:center">
+    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>중앙값(50%)</span>
+    <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>상위 10% / 하위 10% 구간</span>
+  </div>
+</div>
+
 <div class="note">
   ⚠️ 본 계산기는 참고용 추정치이며 세무·건강보험 상담을 대체하지 않습니다.<br>
   · 해외(미국 등) ETF는 실제 배당 이력·프로필(<a href="dividend-etf.html" style="color:var(--accent)">배당ETF</a> 데이터)에서 배당수익률을 자동 반영하고, 국내 ETF는 실시간 데이터 소스가 아직 없어 직접 입력한 수익률을 사용합니다.<br>
   · 적립 시뮬레이션은 "가격상승률 + 배당수익률"을 총수익률로 보고 매월 복리 성장한다고 가정합니다 (배당 재투자 시). 실제로는 시장 변동성에 따라 큰 편차가 있을 수 있습니다.<br>
   · 금융소득(이자+배당) 합계가 연 2,000만원을 초과하면 초과분에 대해 종합소득세 누진세율이 적용됩니다. 해외 배당은 이미 낸 미국 원천징수세를 외국납부세액공제로 근사 반영했습니다. 다른 종합소득(근로소득 등)이 있으면 세율 구간이 달라질 수 있습니다.<br>
-  · 건강보험료(지역가입자)는 <b>소득 기준만 반영한 간이 추정치</b>입니다. 실제 지역가입자 보험료는 재산·자동차 점수가 추가로 반영되어 이 추정치보다 높을 수 있습니다. 피부양자는 금융소득이 연 2,000만원을 넘으면 자격을 잃고 지역가입자로 전환됩니다.
+  · 건강보험료(지역가입자)는 <b>소득 기준만 반영한 간이 추정치</b>입니다. 실제 지역가입자 보험료는 재산·자동차 점수가 추가로 반영되어 이 추정치보다 높을 수 있습니다. 피부양자는 금융소득이 연 2,000만원을 넘으면 자격을 잃고 지역가입자로 전환됩니다.<br>
+  · 몬테카를로 시뮬레이션은 매년 수익률이 "가중평균 총수익률(평균) ± 변동성(표준편차)"의 정규분포를 따른다고 가정하고 위에서 계산한 세후 연간 실수령액만큼 매년 인출하는 것을 1,000회 반복합니다. 물가상승률에 따른 인출액 증가는 반영하지 않은 단순화된 모델입니다.
 </div>
 
 </main>
@@ -252,8 +273,37 @@ function calcAccumulation(){
   document.getElementById('r-principal').textContent=won(principal);
   const capitalInput=document.getElementById('capital');
   if(!capitalInput.dataset.userEdited){capitalInput.value=Math.round(fv).toLocaleString('ko-KR');}
+  drawAccChart(s.totalMonthly,rm,years);
 }
 document.getElementById('capital').addEventListener('input',function(){this.dataset.userEdited='1';});
+
+function svgEl(tag){return document.createElementNS('http://www.w3.org/2000/svg',tag);}
+function themeColors(){const css=getComputedStyle(document.documentElement);return{green:css.getPropertyValue('--green').trim(),accent:css.getPropertyValue('--accent').trim(),text2:css.getPropertyValue('--text2').trim(),border:css.getPropertyValue('--border').trim(),red:css.getPropertyValue('--red').trim()};}
+
+function drawAccChart(monthly,rm,years){
+  const holder=document.getElementById('accChartHolder');
+  const data=[];
+  for(let y=0;y<=years;y++)data.push({y,val:futureValue(0,monthly,rm,y*12)});
+  const W=760,H=220,padL=64,padR=16,padT=14,padB=28;
+  const maxVal=Math.max.apply(null,data.map(d=>d.val))*1.08||1;
+  const x=yv=>padL+yv/years*(W-padL-padR);
+  const yy=val=>H-padB-(val/maxVal)*(H-padT-padB);
+  const c=themeColors();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=4;i++){
+    const gv=maxVal*i/4,gy=yy(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',c.border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-8);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',c.text2);lbl.textContent=fmtEok(gv);svg.appendChild(lbl);
+  }
+  const xTicks=Math.min(6,years)||1;
+  for(let t=0;t<=xTicks;t++){
+    const yv=Math.round(years*t/xTicks);
+    const xl=svgEl('text');xl.setAttribute('x',x(yv));xl.setAttribute('y',H-padB+18);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','10');xl.setAttribute('fill',c.text2);xl.textContent=yv+'년';svg.appendChild(xl);
+  }
+  const points=data.map(d=>x(d.y)+','+yy(d.val)).join(' ');
+  const pl=svgEl('polyline');pl.setAttribute('points',points);pl.setAttribute('fill','none');pl.setAttribute('stroke',c.green);pl.setAttribute('stroke-width','3');pl.setAttribute('stroke-linejoin','round');svg.appendChild(pl);
+  holder.innerHTML='';holder.appendChild(svg);
+}
 
 let healthType='region';
 function setHealthType(t){healthType=t;document.getElementById('hi-region').classList.toggle('active',t==='region');document.getElementById('hi-dependent').classList.toggle('active',t==='dependent');calcRetire();}
@@ -315,6 +365,75 @@ function calcRetire(){
   document.getElementById('rt-hi').textContent=hiAnnual>0?'-'+won(hiAnnual):'0원';
   document.getElementById('rt-net-yr').textContent=won(netAnnual);
   document.getElementById('rt-net').textContent=won(netAnnual/12);
+
+  window.__mcState={capital,netAnnual,weightedYield:s.weightedYield};
+  runMC();
+}
+
+function randNormal(mean,std){
+  let u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();
+  const z=Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+  return mean+z*std;
+}
+function runMC(){
+  const st=window.__mcState;
+  if(!st||!st.capital)return;
+  const years=parseInt(document.getElementById('mc-years').value,10)||30;
+  const stdPct=parseFloat(document.getElementById('mc-std').value)||15;
+  const growthPct=parseFloat(document.getElementById('growth').value)||0;
+  const meanReturn=(growthPct+st.weightedYield)/100;
+  const std=stdPct/100;
+  const trials=1000;
+  let successes=0;
+  const yearlyBalances=Array.from({length:years+1},()=>[]);
+  for(let t=0;t<trials;t++){
+    let bal=st.capital;
+    yearlyBalances[0].push(bal);
+    let failed=false;
+    for(let y=1;y<=years;y++){
+      const r=randNormal(meanReturn,std);
+      bal=bal*(1+r)-st.netAnnual;
+      if(bal<0){bal=0;failed=true;}
+      yearlyBalances[y].push(bal);
+    }
+    if(!failed)successes++;
+  }
+  const successRate=successes/trials*100;
+  const el=document.getElementById('mc-rate');
+  el.textContent=successRate.toFixed(1)+'%';
+  el.style.color=successRate>=80?'var(--green)':successRate>=50?'var(--yellow)':'var(--red)';
+  document.getElementById('mc-sub').textContent=years+'년 동안, 매년 세후 '+won(st.netAnnual)+'을 인출한다고 가정';
+  drawFanChart(yearlyBalances,years);
+}
+function percentileOf(arr,p){const s=arr.slice().sort((a,b)=>a-b);const idx=Math.min(s.length-1,Math.floor(s.length*p));return s[idx];}
+function drawFanChart(yearlyBalances,years){
+  const holder=document.getElementById('mcChartHolder');
+  const p10=yearlyBalances.map(a=>percentileOf(a,0.10));
+  const p50=yearlyBalances.map(a=>percentileOf(a,0.50));
+  const p90=yearlyBalances.map(a=>percentileOf(a,0.90));
+  const W=760,H=240,padL=64,padR=16,padT=14,padB=28;
+  const maxVal=Math.max.apply(null,p90)*1.08||1;
+  const x=yv=>padL+yv/years*(W-padL-padR);
+  const yy=val=>H-padB-(val/maxVal)*(H-padT-padB);
+  const c=themeColors();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=4;i++){
+    const gv=maxVal*i/4,gy=yy(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',c.border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-8);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',c.text2);lbl.textContent=fmtEok(gv);svg.appendChild(lbl);
+  }
+  const xTicks=Math.min(6,years)||1;
+  for(let t=0;t<=xTicks;t++){
+    const yv=Math.round(years*t/xTicks);
+    const xl=svgEl('text');xl.setAttribute('x',x(yv));xl.setAttribute('y',H-padB+18);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','10');xl.setAttribute('fill',c.text2);xl.textContent=yv+'년';svg.appendChild(xl);
+  }
+  // p10~p90 band
+  const bandPts=p90.map((v,i)=>x(i)+','+yy(v)).concat(p10.slice().reverse().map((v,i)=>x(years-i)+','+yy(v))).join(' ');
+  const band=svgEl('polygon');band.setAttribute('points',bandPts);band.setAttribute('fill',c.accent);band.setAttribute('fill-opacity','0.15');band.setAttribute('stroke','none');svg.appendChild(band);
+  const p10Line=svgEl('polyline');p10Line.setAttribute('points',p10.map((v,i)=>x(i)+','+yy(v)).join(' '));p10Line.setAttribute('fill','none');p10Line.setAttribute('stroke',c.accent);p10Line.setAttribute('stroke-width','1');p10Line.setAttribute('stroke-dasharray','4,3');p10Line.setAttribute('opacity','.6');svg.appendChild(p10Line);
+  const p90Line=svgEl('polyline');p90Line.setAttribute('points',p90.map((v,i)=>x(i)+','+yy(v)).join(' '));p90Line.setAttribute('fill','none');p90Line.setAttribute('stroke',c.accent);p90Line.setAttribute('stroke-width','1');p90Line.setAttribute('stroke-dasharray','4,3');p90Line.setAttribute('opacity','.6');svg.appendChild(p90Line);
+  const p50Line=svgEl('polyline');p50Line.setAttribute('points',p50.map((v,i)=>x(i)+','+yy(v)).join(' '));p50Line.setAttribute('fill','none');p50Line.setAttribute('stroke',c.green);p50Line.setAttribute('stroke-width','3');p50Line.setAttribute('stroke-linejoin','round');svg.appendChild(p50Line);
+  holder.innerHTML='';holder.appendChild(svg);
 }
 
 renderPortfolio();
