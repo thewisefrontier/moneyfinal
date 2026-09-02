@@ -66,6 +66,10 @@ TICKER_SCRIPT = "async function loadTicker(){try{const r=await fetch('data/marke
 
 THEME_SCRIPT = "function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}\nfunction toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}"
 
+# 원화 표시는 3자리 콤마가 아니라 억/만 단위로 끊어서 보여준다 (예: 1,508,069원 -> 150만8069원).
+# calc-fire-dividend.html의 won()이 기준 구현. 새 원화 표시 페이지는 무조건 이 함수를 씀.
+WON_SCRIPT = "function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}"
+
 
 def json_str(s: str) -> str:
     import json

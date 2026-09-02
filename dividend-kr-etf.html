@@ -99,6 +99,7 @@ main{max-width:1100px}</style>
 <script>
 function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}
 const TICKER_META=[{code:"458730",name:"TIGER 미국배당다우존스",category:"미국배당",domestic:false},{code:"446720",name:"SOL 미국배당다우존스",category:"미국배당",domestic:false},{code:"402970",name:"ACE 미국배당다우존스",category:"미국배당",domestic:false},{code:"489250",name:"KODEX 미국배당다우존스",category:"미국배당",domestic:false},{code:"441640",name:"KODEX 미국배당커버드콜액티브",category:"미국배당 커버드콜",domestic:false},{code:"329200",name:"TIGER 리츠부동산인프라",category:"국내 리츠",domestic:false},{code:"465580",name:"ACE 미국빅테크TOP7 Plus",category:"미국 빅테크",domestic:false},{code:"429000",name:"TIGER 미국S&P500배당귀족",category:"미국배당",domestic:false},{code:"466940",name:"TIGER 은행고배당플러스TOP10",category:"국내 은행 고배당",domestic:true},{code:"161510",name:"PLUS 고배당주",category:"국내 고배당",domestic:true},{code:"279530",name:"KODEX 고배당주",category:"국내 고배당",domestic:true},{code:"325020",name:"KODEX 배당가치",category:"국내 배당가치",domestic:true},{code:"210780",name:"TIGER 코스피고배당",category:"국내 고배당",domestic:true},{code:"266160",name:"RISE 고배당",category:"국내 고배당",domestic:true},{code:"484880",name:"SOL 금융지주플러스고배당",category:"국내 금융지주 고배당",domestic:true}];
 let CAT='all', ROWS=[];
 function setCat(btn){CAT=btn.dataset.cat;btn.parentElement.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTbl();}
@@ -133,8 +134,8 @@ function renderTbl(){
     return `<tr onclick="location.href='dividend-kr-${r.code}.html'" style="cursor:pointer">
     <td><div class="tk-name">${r.name}</div><div class="tk-code">${r.code} · ${r.category}</div></td>
     <td>${badge}</td>
-    <td>${r.price?Math.round(r.price).toLocaleString('ko-KR')+'원':'-'}</td>
-    <td>${r.lastAmt?Math.round(r.lastAmt).toLocaleString('ko-KR')+'원':'-'}</td>
+    <td>${r.price?won(r.price):'-'}</td>
+    <td>${r.lastAmt?won(r.lastAmt):'-'}</td>
     <td>${freqTxt}</td>
     <td class="${r.yieldPct?'up':''}">${pct(r.yieldPct)}</td>
   </tr>`;}).join(''):'<tr><td colspan="6" class="empty">데이터 없음</td></tr>';

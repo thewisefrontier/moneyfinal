@@ -18,7 +18,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.kr_dividend_etf_tickers import TICKERS
-from scripts.page_common import CF_ANALYTICS, NAV, STYLE, TICKER_SCRIPT, THEME_SCRIPT, json_str
+from scripts.page_common import CF_ANALYTICS, NAV, STYLE, TICKER_SCRIPT, THEME_SCRIPT, WON_SCRIPT, json_str
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -108,7 +108,8 @@ def page_html(code: str, name: str, category: str, is_domestic_equity: bool) -> 
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>
 {THEME_SCRIPT}
-function krw(v){{return Math.round(v).toLocaleString('ko-KR')+'원';}}
+{WON_SCRIPT}
+function krw(v){{return won(v);}}
 function num(id){{return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}}
 const TAX_RATE=0.154;
 let payFreq=12;
@@ -145,7 +146,7 @@ async function loadDividendData(){{
       }}
       document.getElementById('dps').value=parseFloat(rows[0].amount).toFixed(0);
       let h='<table class="hist"><tr><th>분배락일</th><th style="text-align:right">좌당 분배금</th></tr>';
-      rows.slice(0,12).forEach(row=>{{h+=`<tr><td>${{row.ex_dividend_date}}</td><td style="text-align:right">${{Math.round(row.amount).toLocaleString('ko-KR')}}원</td></tr>`;}});
+      rows.slice(0,12).forEach(row=>{{h+=`<tr><td>${{row.ex_dividend_date}}</td><td style="text-align:right">${{krw(row.amount)}}</td></tr>`;}});
       h+='</table>';
       wrap.innerHTML=h;
     }}else{{
@@ -157,7 +158,7 @@ async function loadDividendData(){{
     if(priceInfo){{
       if(!userEditedPrice)document.getElementById('price').value=Math.round(priceInfo.price);
       const chgTxt=` <span class="${{priceInfo.change_pct>=0?'up':'down'}}" style="font-size:11px">(${{priceInfo.change_pct>=0?'+':''}}${{parseFloat(priceInfo.change_pct).toFixed(2)}}%)</span>`;
-      let ph=`<div class="brow"><span class="k">현재가</span><span class="v">${{Math.round(priceInfo.price).toLocaleString('ko-KR')}}원${{chgTxt}}</span></div>`;
+      let ph=`<div class="brow"><span class="k">현재가</span><span class="v">${{krw(priceInfo.price)}}${{chgTxt}}</span></div>`;
       ph+=`<div class="brow"><span class="k">기준일</span><span class="v">${{priceInfo.base_date||'-'}}</span></div>`;
       pwrap.innerHTML=ph;
     }}else{{
@@ -244,6 +245,7 @@ main{{max-width:1100px}}</style>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>
 {THEME_SCRIPT}
+{WON_SCRIPT}
 const TICKER_META=[{ticker_meta_js}];
 let CAT='all', ROWS=[];
 function setCat(btn){{CAT=btn.dataset.cat;btn.parentElement.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTbl();}}
@@ -278,8 +280,8 @@ function renderTbl(){{
     return `<tr onclick="location.href='dividend-kr-${{r.code}}.html'" style="cursor:pointer">
     <td><div class="tk-name">${{r.name}}</div><div class="tk-code">${{r.code}} · ${{r.category}}</div></td>
     <td>${{badge}}</td>
-    <td>${{r.price?Math.round(r.price).toLocaleString('ko-KR')+'원':'-'}}</td>
-    <td>${{r.lastAmt?Math.round(r.lastAmt).toLocaleString('ko-KR')+'원':'-'}}</td>
+    <td>${{r.price?won(r.price):'-'}}</td>
+    <td>${{r.lastAmt?won(r.lastAmt):'-'}}</td>
     <td>${{freqTxt}}</td>
     <td class="${{r.yieldPct?'up':''}}">${{pct(r.yieldPct)}}</td>
   </tr>`;}}).join(''):'<tr><td colspan="6" class="empty">데이터 없음</td></tr>';

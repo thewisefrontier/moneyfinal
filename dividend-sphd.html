@@ -121,6 +121,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <script>
 function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
+function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}
 function usd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4});}
 function num(id){return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}
 let payFreq=12;
@@ -142,7 +143,7 @@ function calc(){
   document.getElementById('r-gross').textContent='+'+usd(gross);
   document.getElementById('r-tax-label').textContent='원천징수세 ('+(taxRate*100).toFixed(1).replace(/\.0$/,'')+'%)';
   document.getElementById('r-tax').textContent='-'+usd(tax);
-  document.getElementById('r-krw').textContent=latestKrw?Math.round(net*latestKrw).toLocaleString('ko-KR')+'원':'-';
+  document.getElementById('r-krw').textContent=latestKrw?won(net*latestKrw):'-';
   document.getElementById('r-prin').textContent=price>0?usd(principal):'-';
   document.getElementById('r-yield').textContent=yieldPct!==null?yieldPct.toFixed(2)+'%':'-';
   document.getElementById('r-net').textContent=usd(net);

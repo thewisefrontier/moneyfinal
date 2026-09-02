@@ -11,7 +11,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config.etf_dividend_tickers import TICKERS
-from scripts.page_common import CF_ANALYTICS, NAV, STYLE, TICKER_SCRIPT, THEME_SCRIPT
+from scripts.page_common import CF_ANALYTICS, NAV, STYLE, TICKER_SCRIPT, THEME_SCRIPT, WON_SCRIPT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -96,6 +96,7 @@ def page_html(ticker: str, name: str, category: str) -> str:
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script>
 {THEME_SCRIPT}
+{WON_SCRIPT}
 function usd(v){{return '$'+v.toLocaleString('en-US',{{minimumFractionDigits:2,maximumFractionDigits:4}});}}
 function num(id){{return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}}
 let payFreq=12;
@@ -117,7 +118,7 @@ function calc(){{
   document.getElementById('r-gross').textContent='+'+usd(gross);
   document.getElementById('r-tax-label').textContent='원천징수세 ('+(taxRate*100).toFixed(1).replace(/\\.0$/,'')+'%)';
   document.getElementById('r-tax').textContent='-'+usd(tax);
-  document.getElementById('r-krw').textContent=latestKrw?Math.round(net*latestKrw).toLocaleString('ko-KR')+'원':'-';
+  document.getElementById('r-krw').textContent=latestKrw?won(net*latestKrw):'-';
   document.getElementById('r-prin').textContent=price>0?usd(principal):'-';
   document.getElementById('r-yield').textContent=yieldPct!==null?yieldPct.toFixed(2)+'%':'-';
   document.getElementById('r-net').textContent=usd(net);
