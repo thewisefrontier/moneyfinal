@@ -157,7 +157,7 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function fmtWon(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return(n/1e12).toLocaleString('ko-KR',{maximumFractionDigits:1})+'조원';if(n>=1e8)return(n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:0})+'억원';return n.toLocaleString('ko-KR')+'원';}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';}
-function won(v){return Math.round(v).toLocaleString('ko-KR')+'원';}
+function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}
 function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
 function calcIsa(){
   const profit=num('profit');

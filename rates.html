@@ -182,6 +182,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
 function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
+function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 let all=[];
@@ -270,7 +271,7 @@ function rowHtml(r,i){
   const detail=[
     ['가입대상',r.join_member],['가입방법',r.join_method],['우대조건',r.spcl_cnd],
     ['금리유형',[r.intr_rate_type_nm,r.rsrv_type_nm].filter(Boolean).join(' · ')],
-    ['최고한도',r.max_limit?parseInt(r.max_limit).toLocaleString('ko-KR')+'원':''],
+    ['최고한도',r.max_limit?won(parseInt(r.max_limit)):''],
     ['만기후이자',r.mtrt_int],['유의사항',r.etc_note]
   ].filter(([k,v])=>v&&String(v).trim()).map(([k,v])=>`<div class="dt-item"><span class="dt-k">${k}</span><span class="dt-v">${esc(v)}</span></div>`).join('')+calcHtml;
   return `<div class="row" onclick="this.classList.toggle('open')">
@@ -313,8 +314,8 @@ function calcInterest(box){
   const rate=parseFloat(box.dataset.rate)||0;
   let interest=amt*(rate/100)*(m*(m+1)/2)/12;
   if(box.querySelector('.ic-tax').checked)interest*=(1-0.154);
-  box.querySelector('.ic-total').textContent=(amt*m).toLocaleString('ko-KR')+'원';
-  box.querySelector('.ic-res').textContent=Math.round(interest).toLocaleString('ko-KR')+'원';
+  box.querySelector('.ic-total').textContent=won(amt*m);
+  box.querySelector('.ic-res').textContent=won(interest);
 }
 const listEl=document.getElementById('list');
 listEl.addEventListener('input',e=>{const b=e.target.closest('.interest-calc');if(b)calcInterest(b);});
