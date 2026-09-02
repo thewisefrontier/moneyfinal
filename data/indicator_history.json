@@ -1,6 +1,442 @@
 {
   "updated_at": "2026-09-02",
   "history": {
+    "USD_KRW": [
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-06-28",
+        "value": 1545.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-06-29",
+        "value": 1544.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-06-30",
+        "value": 1541.5,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-02",
+        "value": 1548.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-03",
+        "value": 1554.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-04",
+        "value": 1554.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-05",
+        "value": 1554.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-07",
+        "value": 1539.7,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-08",
+        "value": 1531.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-09",
+        "value": 1509.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-10",
+        "value": 1509.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-11",
+        "value": 1504.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-12",
+        "value": 1504.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-14",
+        "value": 1507.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-15",
+        "value": 1504.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-16",
+        "value": 1492.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-17",
+        "value": 1488.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-18",
+        "value": 1488.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-19",
+        "value": 1488.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-20",
+        "value": 1488.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-21",
+        "value": 1484.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-22",
+        "value": 1482.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-23",
+        "value": 1475.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-24",
+        "value": 1480.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-25",
+        "value": 1469.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-26",
+        "value": 1469.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-27",
+        "value": 1469.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-28",
+        "value": 1466.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-29",
+        "value": 1465.4,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-07-30",
+        "value": 1466.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-01",
+        "value": 1441.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-02",
+        "value": 1441.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-04",
+        "value": 1433.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-05",
+        "value": 1429.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-06",
+        "value": 1428.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-07",
+        "value": 1418.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-08",
+        "value": 1418.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-09",
+        "value": 1418.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-10",
+        "value": 1418.8,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-11",
+        "value": 1420.1,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-12",
+        "value": 1415.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-13",
+        "value": 1415.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-14",
+        "value": 1414.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-15",
+        "value": 1414.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-16",
+        "value": 1414.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-17",
+        "value": 1414.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-18",
+        "value": 1414.9,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-19",
+        "value": 1415.2,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-20",
+        "value": 1411.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-21",
+        "value": 1402.5,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-22",
+        "value": 1393.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-23",
+        "value": 1393.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-24",
+        "value": 1393.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-25",
+        "value": 1383.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-26",
+        "value": 1380.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-27",
+        "value": 1384.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-28",
+        "value": 1380.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-29",
+        "value": 1380.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-30",
+        "value": 1380.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-08-31",
+        "value": 1380.3,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-09-01",
+        "value": 1373.6,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-09-02",
+        "value": 1370.3,
+        "unit": "원"
+      }
+    ],
     "BASE_RATE": [
       {
         "indicator_code": "BASE_RATE",
@@ -34,7 +470,7 @@
         "indicator_code": "BASE_RATE",
         "indicator_name": "한국은행 기준금리",
         "reference_date": "2026-08-27",
-        "value": 3,
+        "value": 3.0,
         "unit": "%"
       }
     ],
@@ -488,104 +924,41 @@
         "unit": "%"
       }
     ],
-    "GOLD": [
+    "M2_TOTAL": [
       {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "reference_date": "2026-06-28",
+        "value": 4160887.5,
+        "unit": "십억원"
+      },
+      {
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "reference_date": "2026-06-30",
+        "value": 4160887.5,
+        "unit": "십억원"
+      },
+      {
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
         "reference_date": "2026-07-01",
-        "value": 198450,
-        "unit": "원/g"
+        "value": 4160887.5,
+        "unit": "십억원"
       },
       {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-07-09",
-        "value": 198910,
-        "unit": "원/g"
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "reference_date": "2026-08-13",
+        "value": 4184079.8,
+        "unit": "십억원"
       },
       {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-14",
-        "value": 200470,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-15",
-        "value": 200570,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-18",
-        "value": 200570,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-19",
-        "value": 198350,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-21",
-        "value": 195580,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-22",
-        "value": 201620,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-24",
-        "value": 201620,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-27",
-        "value": 207500,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-28",
-        "value": 205650,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-29",
-        "value": 205650,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-30",
-        "value": 205650,
-        "unit": "원/g"
-      },
-      {
-        "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
-        "reference_date": "2026-08-31",
-        "value": 205650,
-        "unit": "원/g"
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "reference_date": "2026-09-01",
+        "value": 4209874.0,
+        "unit": "십억원"
       }
     ],
     "HOUSEHOLD_CREDIT": [
@@ -609,365 +982,6 @@
         "reference_date": "2026-07-13",
         "value": 1993110.8,
         "unit": "십억원"
-      }
-    ],
-    "KOSDAQ": [
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-01",
-        "value": 887.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-02",
-        "value": 887.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-03",
-        "value": 887.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-04",
-        "value": 887.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-05",
-        "value": 887.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-07",
-        "value": 868.41,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-08",
-        "value": 847.07,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-09",
-        "value": 785,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-10",
-        "value": 785,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-11",
-        "value": 794,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-12",
-        "value": 794,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-13",
-        "value": 794,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-14",
-        "value": 837.43,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-15",
-        "value": 799.36,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-16",
-        "value": 783.98,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-17",
-        "value": 829.43,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-18",
-        "value": 829.43,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-19",
-        "value": 829.43,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-20",
-        "value": 829.43,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-21",
-        "value": 791.84,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-22",
-        "value": 749.64,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-23",
-        "value": 753.34,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-24",
-        "value": 751.09,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-25",
-        "value": 790.28,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-26",
-        "value": 790.28,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-27",
-        "value": 790.28,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-28",
-        "value": 748.22,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-29",
-        "value": 764.86,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-30",
-        "value": 705.85,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-07-31",
-        "value": 662.68,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-01",
-        "value": 644.78,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-02",
-        "value": 644.78,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-05",
-        "value": 737.35,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-07",
-        "value": 799.59,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-08",
-        "value": 801.67,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-09",
-        "value": 801.67,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-11",
-        "value": 798.81,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-12",
-        "value": 854.47,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-13",
-        "value": 857.84,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-14",
-        "value": 858.91,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-15",
-        "value": 861.37,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-18",
-        "value": 861.37,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-19",
-        "value": 864.65,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-21",
-        "value": 824.46,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-22",
-        "value": 840.89,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-24",
-        "value": 840.89,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-27",
-        "value": 826.87,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-28",
-        "value": 837.65,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-29",
-        "value": 837.65,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-30",
-        "value": 837.65,
-        "unit": "pt"
-      },
-      {
-        "indicator_code": "KOSDAQ",
-        "indicator_name": "코스닥 지수",
-        "reference_date": "2026-08-31",
-        "value": 837.65,
-        "unit": "pt"
       }
     ],
     "KOSPI": [
@@ -1327,6 +1341,379 @@
         "reference_date": "2026-08-31",
         "value": 6912.37,
         "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSPI",
+        "indicator_name": "코스피 지수",
+        "reference_date": "2026-09-02",
+        "value": 6835.8,
+        "unit": "pt"
+      }
+    ],
+    "KOSDAQ": [
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-01",
+        "value": 887.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-02",
+        "value": 887.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-03",
+        "value": 887.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-04",
+        "value": 887.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-05",
+        "value": 887.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-07",
+        "value": 868.41,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-08",
+        "value": 847.07,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-09",
+        "value": 785.0,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-10",
+        "value": 785.0,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-11",
+        "value": 794.0,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-12",
+        "value": 794.0,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-13",
+        "value": 794.0,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-14",
+        "value": 837.43,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-15",
+        "value": 799.36,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-16",
+        "value": 783.98,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-17",
+        "value": 829.43,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-18",
+        "value": 829.43,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-19",
+        "value": 829.43,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-20",
+        "value": 829.43,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-21",
+        "value": 791.84,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-22",
+        "value": 749.64,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-23",
+        "value": 753.34,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-24",
+        "value": 751.09,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-25",
+        "value": 790.28,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-26",
+        "value": 790.28,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-27",
+        "value": 790.28,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-28",
+        "value": 748.22,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-29",
+        "value": 764.86,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-30",
+        "value": 705.85,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-07-31",
+        "value": 662.68,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-01",
+        "value": 644.78,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-02",
+        "value": 644.78,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-05",
+        "value": 737.35,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-07",
+        "value": 799.59,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-08",
+        "value": 801.67,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-09",
+        "value": 801.67,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-11",
+        "value": 798.81,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-12",
+        "value": 854.47,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-13",
+        "value": 857.84,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-14",
+        "value": 858.91,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-15",
+        "value": 861.37,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-18",
+        "value": 861.37,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-19",
+        "value": 864.65,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-21",
+        "value": 824.46,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-22",
+        "value": 840.89,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-24",
+        "value": 840.89,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-27",
+        "value": 826.87,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-28",
+        "value": 837.65,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-29",
+        "value": 837.65,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-30",
+        "value": 837.65,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-08-31",
+        "value": 837.65,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-09-02",
+        "value": 821.25,
+        "unit": "pt"
       }
     ],
     "KOSPI200": [
@@ -1672,492 +2059,877 @@
         "reference_date": "2026-08-31",
         "value": 1088.61,
         "unit": "pt"
-      }
-    ],
-    "M2_TOTAL": [
-      {
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "reference_date": "2026-06-28",
-        "value": 4160887.5,
-        "unit": "십억원"
-      },
-      {
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "reference_date": "2026-06-30",
-        "value": 4160887.5,
-        "unit": "십억원"
-      },
-      {
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "reference_date": "2026-07-01",
-        "value": 4160887.5,
-        "unit": "십억원"
-      },
-      {
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "reference_date": "2026-08-13",
-        "value": 4184079.8,
-        "unit": "십억원"
-      },
-      {
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "reference_date": "2026-09-01",
-        "value": 4209874,
-        "unit": "십억원"
-      }
-    ],
-    "US_CPI": [
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수 (CPI)",
-        "reference_date": "2026-05-01",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-01",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-02",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-03",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-04",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-05",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-07",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-08",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-09",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-10",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-11",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-12",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-13",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-14",
-        "value": 333.979,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-15",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-16",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-17",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-18",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-19",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-20",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-21",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-22",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-23",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-24",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-25",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-26",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-27",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-28",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-29",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-30",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-07-31",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-01",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-02",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-03",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-04",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-05",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-06",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-07",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-08",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-09",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-10",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-11",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-12",
-        "value": 332.568,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-13",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-14",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-15",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-16",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-17",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-18",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-19",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-20",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-21",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-22",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-23",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-24",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-25",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-26",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-27",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-28",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-29",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-30",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-08-31",
-        "value": 332.813,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
-        "reference_date": "2026-09-01",
-        "value": 332.813,
-        "unit": "Index"
       },
       {
-        "indicator_code": "US_CPI",
-        "indicator_name": "미국 소비자물가지수(CPI)",
+        "indicator_code": "KOSPI200",
+        "indicator_name": "코스피 200",
         "reference_date": "2026-09-02",
-        "value": 332.813,
+        "value": 1075.3,
+        "unit": "pt"
+      }
+    ],
+    "USD_INDEX": [
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스",
+        "reference_date": "2026-06-18",
+        "value": 120.3958,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-01",
+        "value": 120.8866,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-02",
+        "value": 120.8866,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-03",
+        "value": 120.8866,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-04",
+        "value": 120.8866,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-05",
+        "value": 120.8866,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-07",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-08",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-09",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-10",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-11",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-12",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-13",
+        "value": 120.6902,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-14",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-15",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-16",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-17",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-18",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-19",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-20",
+        "value": 120.5046,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-21",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-22",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-23",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-24",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-25",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-26",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-27",
+        "value": 120.5315,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-28",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-29",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-30",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-07-31",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-01",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-02",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-03",
+        "value": 120.7105,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-04",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-05",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-06",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-07",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-08",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-09",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-10",
+        "value": 119.7034,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-11",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-12",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-13",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-14",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-15",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-16",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-17",
+        "value": 119.0649,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-18",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-19",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-20",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-21",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-22",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-23",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-24",
+        "value": 118.9028,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-25",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-26",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-27",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-28",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-29",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-30",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-08-31",
+        "value": 118.0628,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-09-01",
+        "value": 118.7479,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-09-02",
+        "value": 118.7479,
+        "unit": "Index"
+      }
+    ],
+    "US_SP500": [
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-05",
+        "value": 7483.24,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-07",
+        "value": 7483.24,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-08",
+        "value": 7537.43,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-09",
+        "value": 7482.71,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-10",
+        "value": 7482.71,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-11",
+        "value": 7543.64,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-12",
+        "value": 7575.39,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-13",
+        "value": 7575.39,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-14",
+        "value": 7575.39,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-15",
+        "value": 7515.34,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-16",
+        "value": 7543.59,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-17",
+        "value": 7572.4,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-18",
+        "value": 7533.77,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-19",
+        "value": 7457.69,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-20",
+        "value": 7457.69,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-21",
+        "value": 7457.69,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-22",
+        "value": 7443.28,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-23",
+        "value": 7509.2,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-24",
+        "value": 7498.96,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-25",
+        "value": 7408.3,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-26",
+        "value": 7411.98,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-27",
+        "value": 7411.98,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-28",
+        "value": 7411.98,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-29",
+        "value": 7413.18,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-30",
+        "value": 7428.78,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-07-31",
+        "value": 7316.15,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-01",
+        "value": 7437.63,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-02",
+        "value": 7489.72,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-03",
+        "value": 7489.72,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-04",
+        "value": 7489.72,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-05",
+        "value": 7600.5,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-06",
+        "value": 7736.52,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-07",
+        "value": 7709.96,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-08",
+        "value": 7709.96,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-09",
+        "value": 7757.64,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-10",
+        "value": 7757.64,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-11",
+        "value": 7757.64,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-12",
+        "value": 7753.11,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-13",
+        "value": 7728.2,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-14",
+        "value": 7798.99,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-15",
+        "value": 7798.99,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-16",
+        "value": 7785.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-17",
+        "value": 7785.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-18",
+        "value": 7785.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-19",
+        "value": 7745.06,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-20",
+        "value": 7691.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-21",
+        "value": 7707.98,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-22",
+        "value": 7641.16,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-23",
+        "value": 7674.37,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-24",
+        "value": 7674.37,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-25",
+        "value": 7674.37,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-26",
+        "value": 7652.86,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-27",
+        "value": 7675.7,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-28",
+        "value": 7730.99,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-29",
+        "value": 7711.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-30",
+        "value": 7711.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-08-31",
+        "value": 7711.76,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-09-01",
+        "value": 7686.14,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-09-02",
+        "value": 7631.47,
         "unit": "Index"
       }
     ],
@@ -2991,418 +3763,453 @@
         "unit": "Index"
       }
     ],
-    "US_SP500": [
+    "US_CPI": [
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수 (CPI)",
+        "reference_date": "2026-05-01",
+        "value": 333.979,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
+        "reference_date": "2026-07-01",
+        "value": 333.979,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
+        "reference_date": "2026-07-02",
+        "value": 333.979,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
+        "reference_date": "2026-07-03",
+        "value": 333.979,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
+        "reference_date": "2026-07-04",
+        "value": 333.979,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-05",
-        "value": 7483.24,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-07",
-        "value": 7483.24,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-08",
-        "value": 7537.43,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-09",
-        "value": 7482.71,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-10",
-        "value": 7482.71,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-11",
-        "value": 7543.64,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-12",
-        "value": 7575.39,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-13",
-        "value": 7575.39,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-14",
-        "value": 7575.39,
+        "value": 333.979,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-15",
-        "value": 7515.34,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-16",
-        "value": 7543.59,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-17",
-        "value": 7572.4,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-18",
-        "value": 7533.77,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-19",
-        "value": 7457.69,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-20",
-        "value": 7457.69,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-21",
-        "value": 7457.69,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-22",
-        "value": 7443.28,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-23",
-        "value": 7509.2,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-24",
-        "value": 7498.96,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-25",
-        "value": 7408.3,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-26",
-        "value": 7411.98,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-27",
-        "value": 7411.98,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-28",
-        "value": 7411.98,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-29",
-        "value": 7413.18,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-30",
-        "value": 7428.78,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-07-31",
-        "value": 7316.15,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-01",
-        "value": 7437.63,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-02",
-        "value": 7489.72,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-03",
-        "value": 7489.72,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-04",
-        "value": 7489.72,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-05",
-        "value": 7600.5,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-06",
-        "value": 7736.52,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-07",
-        "value": 7709.96,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-08",
-        "value": 7709.96,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-09",
-        "value": 7757.64,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-10",
-        "value": 7757.64,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-11",
-        "value": 7757.64,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-12",
-        "value": 7753.11,
+        "value": 332.568,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-13",
-        "value": 7728.2,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-14",
-        "value": 7798.99,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-15",
-        "value": 7798.99,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-16",
-        "value": 7785.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-17",
-        "value": 7785.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-18",
-        "value": 7785.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-19",
-        "value": 7745.06,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-20",
-        "value": 7691.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-21",
-        "value": 7707.98,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-22",
-        "value": 7641.16,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-23",
-        "value": 7674.37,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-24",
-        "value": 7674.37,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-25",
-        "value": 7674.37,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-26",
-        "value": 7652.86,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-27",
-        "value": 7675.7,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-28",
-        "value": 7730.99,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-29",
-        "value": 7711.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-30",
-        "value": 7711.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-08-31",
-        "value": 7711.76,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-09-01",
-        "value": 7686.14,
+        "value": 332.813,
         "unit": "Index"
       },
       {
-        "indicator_code": "US_SP500",
-        "indicator_name": "S&P 500",
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-09-02",
-        "value": 7631.47,
+        "value": 332.813,
         "unit": "Index"
       }
     ],
@@ -3854,892 +4661,6 @@
         "reference_date": "2026-09-02",
         "value": 0.4,
         "unit": "%"
-      }
-    ],
-    "USD_INDEX": [
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스",
-        "reference_date": "2026-06-18",
-        "value": 120.3958,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-01",
-        "value": 120.8866,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-02",
-        "value": 120.8866,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-03",
-        "value": 120.8866,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-04",
-        "value": 120.8866,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-05",
-        "value": 120.8866,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-07",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-08",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-09",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-10",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-11",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-12",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-13",
-        "value": 120.6902,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-14",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-15",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-16",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-17",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-18",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-19",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-20",
-        "value": 120.5046,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-21",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-22",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-23",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-24",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-25",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-26",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-27",
-        "value": 120.5315,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-28",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-29",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-30",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-07-31",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-01",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-02",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-03",
-        "value": 120.7105,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-04",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-05",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-06",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-07",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-08",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-09",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-10",
-        "value": 119.7034,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-11",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-12",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-13",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-14",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-15",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-16",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-17",
-        "value": 119.0649,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-18",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-19",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-20",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-21",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-22",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-23",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-24",
-        "value": 118.9028,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-25",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-26",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-27",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-28",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-29",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-30",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-08-31",
-        "value": 118.0628,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-09-01",
-        "value": 118.7479,
-        "unit": "Index"
-      },
-      {
-        "indicator_code": "USD_INDEX",
-        "indicator_name": "달러 인덱스(DXY)",
-        "reference_date": "2026-09-02",
-        "value": 118.7479,
-        "unit": "Index"
-      }
-    ],
-    "USD_KRW": [
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-06-28",
-        "value": 1545.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-06-29",
-        "value": 1544.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-06-30",
-        "value": 1541.5,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-02",
-        "value": 1548.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-03",
-        "value": 1554.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-04",
-        "value": 1554.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-05",
-        "value": 1554.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-07",
-        "value": 1539.7,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-08",
-        "value": 1531.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-09",
-        "value": 1509.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-10",
-        "value": 1509.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-11",
-        "value": 1504.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-12",
-        "value": 1504.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-14",
-        "value": 1507.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-15",
-        "value": 1504.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-16",
-        "value": 1492.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-17",
-        "value": 1488.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-18",
-        "value": 1488.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-19",
-        "value": 1488.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-20",
-        "value": 1488.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-21",
-        "value": 1484.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-22",
-        "value": 1482,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-23",
-        "value": 1475.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-24",
-        "value": 1480.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-25",
-        "value": 1469.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-26",
-        "value": 1469.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-27",
-        "value": 1469.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-28",
-        "value": 1466.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-29",
-        "value": 1465.4,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-07-30",
-        "value": 1466.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-01",
-        "value": 1441.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-02",
-        "value": 1441.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-04",
-        "value": 1433.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-05",
-        "value": 1429.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-06",
-        "value": 1428.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-07",
-        "value": 1418.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-08",
-        "value": 1418.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-09",
-        "value": 1418.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-10",
-        "value": 1418.8,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-11",
-        "value": 1420.1,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-12",
-        "value": 1415.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-13",
-        "value": 1415,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-14",
-        "value": 1414.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-15",
-        "value": 1414.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-16",
-        "value": 1414.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-17",
-        "value": 1414.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-18",
-        "value": 1414.9,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-19",
-        "value": 1415.2,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-20",
-        "value": 1411,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-21",
-        "value": 1402.5,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-22",
-        "value": 1393,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-23",
-        "value": 1393,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-24",
-        "value": 1393,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-25",
-        "value": 1383.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-26",
-        "value": 1380.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-27",
-        "value": 1384.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-28",
-        "value": 1380.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-29",
-        "value": 1380.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-30",
-        "value": 1380.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-08-31",
-        "value": 1380.3,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-09-01",
-        "value": 1373.6,
-        "unit": "원"
-      },
-      {
-        "indicator_code": "USD_KRW",
-        "indicator_name": "원달러 환율",
-        "reference_date": "2026-09-02",
-        "value": 1370.3,
-        "unit": "원"
       }
     ],
     "VIX": [
@@ -5626,6 +5547,113 @@
         "reference_date": "2026-09-02",
         "value": 83.9,
         "unit": "USD/배럴"
+      }
+    ],
+    "GOLD": [
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-07-01",
+        "value": 198450.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-07-09",
+        "value": 198910.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-14",
+        "value": 200470.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-15",
+        "value": 200570.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-18",
+        "value": 200570.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-19",
+        "value": 198350.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-21",
+        "value": 195580.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-22",
+        "value": 201620.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-24",
+        "value": 201620.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-27",
+        "value": 207500.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-28",
+        "value": 205650.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-29",
+        "value": 205650.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-30",
+        "value": 205650.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-08-31",
+        "value": 205650.0,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "reference_date": "2026-09-02",
+        "value": 196280.0,
+        "unit": "원/g"
       }
     ]
   }
