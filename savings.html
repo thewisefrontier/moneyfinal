@@ -74,28 +74,9 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="savings.html" class="active">절세·연금</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
-<div class="sec-hd"><div class="sec-title">CMA / 파킹통장</div></div>
-<div class="card" style="margin-bottom:24px">
-  <div class="card-hd"><span class="card-title">수시 입출금 고금리 상품</span></div>
-  <div class="filter-tabs">
-    <button class="ft active" onclick="filterCMA('all',this)">전체</button>
-    <button class="ft" onclick="filterCMA('CMA',this)">CMA</button>
-    <button class="ft" onclick="filterCMA('파킹통장',this)">파킹통장</button>
-  </div>
-  <div id="cma-list"><div class="loading">로딩 중...</div></div>
-</div>
-<div class="grid2">
-  <div>
-    <div class="sec-hd"><div class="sec-title">ISA (개인종합자산관리)</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">ISA 다모아</span></div>
-      <div id="isa-list"><div class="loading">로딩 중...</div></div></div>
-  </div>
-  <div>
-    <div class="sec-hd"><div class="sec-title">펀드 상품</div></div>
-    <div class="card"><div class="card-hd"><span class="card-title">수익률 기준</span></div>
-      <div id="fund-list"><div class="loading">로딩 중...</div></div></div>
-  </div>
-</div>
+<div class="sec-hd"><div class="sec-title">ISA (개인종합자산관리)</div></div>
+<div class="card"><div class="card-hd"><span class="card-title">ISA 다모아</span></div>
+  <div id="isa-list"><div class="loading">로딩 중...</div></div></div>
 </main>
 <div class="disclaimer">⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털</div>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
@@ -105,13 +86,7 @@ function toggleTheme(){const h=document.documentElement;h.setAttribute('data-the
 function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
 function fmtWon(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return(n/1e12).toLocaleString('ko-KR',{maximumFractionDigits:1})+'조원';if(n>=1e8)return(n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:0})+'억원';return n.toLocaleString('ko-KR')+'원';}
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
-let cmaAll=[];
-function cmaHtml(list){if(!list.length)return '<div class="empty">CMA/파킹 데이터 수집 예정</div>';return list.slice(0,20).map((r,i)=>`<div class="row rate-row"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div class="period">${r.period||'수시'}</div><div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div></div>`).join('');}
-function filterCMA(kw,btn){btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('cma-list').innerHTML=cmaHtml(kw==='all'?cmaAll:cmaAll.filter(r=>r.category===kw));}
 async function loadSavings(){
-  try{const r=await fetch('data/rates.json');const d=await r.json();const bc=d.by_category||{};cmaAll=[...(bc['CMA']||[]),...(bc['파킹통장']||[])];document.getElementById('cma-list').innerHTML=cmaHtml(cmaAll);
-    const fund=bc['펀드']||[];document.getElementById('fund-list').innerHTML=fund.length?fund.slice(0,10).map((r,i)=>`<div class="row rate-row"><div><div class="rb">${i+1}. ${r.institution}</div><div class="rp">${r.product_name}</div></div><div class="period">${r.period||'3개월'}</div><div><div class="rmax">${fmt(r.max_rate,'%')}</div></div></div>`).join(''):'<div class="empty">펀드 데이터 수집 예정</div>';
-  }catch(e){document.getElementById('cma-list').innerHTML='<div class="empty">데이터 없음</div>';document.getElementById('fund-list').innerHTML='<div class="empty">데이터 없음</div>';}
   try{const r=await fetch('data/market.json');const d=await r.json();const bc=d.by_category||{};
     const isa=(bc['ISA']||[]).slice().sort((a,b)=>((a.unit==='원')?1:0)-((b.unit==='원')?1:0));
     document.getElementById('isa-list').innerHTML=isa.length?isa.slice(0,15).map(i=>{

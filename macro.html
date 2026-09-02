@@ -99,7 +99,12 @@ function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat
 function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
 // 원 단위 큰 금액은 "OOOO조 OOOO억원"으로, 달러는 "OOOO억 달러"로 - 원본 숫자 그대로
 // 보여주면 자릿수를 세야 해서 안 읽힘
-function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const sign=n<0?'-':'';const won=Math.abs(unit==='십억원'?n*1e9:n);
+// 원 단위 큰 금액은 "OOOO조 OOOO억원"으로, 달러는 "OOOO억 달러"로 - 원본 숫자 그대로
+// 보여주면 자릿수를 세야 해서 안 읽힘. WON_MULT: DB에 저장된 unit별로 실제 원화
+// 환산 배수가 다름(백만원=1e6, 십억원=1e9, 원=1) - 하나라도 빠지면 그 unit만
+// 포맷 안 먹고 원시 숫자로 새어나가므로 새 unit이 생기면 여기에 추가할 것.
+const WON_MULT={'백만원':1e6,'십억원':1e9,'원':1};
+function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const sign=n<0?'-':'';const won=Math.abs(n*(WON_MULT[unit]||1));
   const jo=Math.floor(won/1e12),eok=Math.round((won%1e12)/1e8);
   if(jo&&eok)return `${sign}${jo.toLocaleString('ko-KR')}조 ${eok.toLocaleString('ko-KR')}억원`;
   if(jo)return `${sign}${jo.toLocaleString('ko-KR')}조원`;
@@ -107,8 +112,7 @@ function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const sign=n<
   return `${sign}${Math.round(won).toLocaleString('ko-KR')}원`;}
 function usdEok(v){const n=parseFloat(v);if(isNaN(n))return'-';return (n/1e8).toLocaleString('ko-KR',{maximumFractionDigits:1})+'억 달러';}
 function valText(i){
-  if(i.unit==='십억원')return krWon(i.value,'십억원');
-  if(i.unit==='원'&&Math.abs(i.value)>=1e8)return krWon(i.value,'원');
+  if(i.unit in WON_MULT && Math.abs(i.value*WON_MULT[i.unit])>=1e8)return krWon(i.value,i.unit);
   if(i.unit==='달러'&&Math.abs(i.value)>=1e8)return usdEok(i.value);
   return fmt(i.value,i.unit,i.unit==='%'?2:0);
 }

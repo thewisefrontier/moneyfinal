@@ -102,7 +102,7 @@ def collect_trust_scale() -> list:
             'indicator_name': f"{item.get('bzds','')} {item.get('tstCtg','')} 수탁총액",
             'category': '금융투자',
             'value': val,
-            'unit': '백만원',
+            'unit': '원',  # 실측: val 필드가 이미 원 단위 (2026-09-02, 이전에 백만원으로 잘못 라벨링됨)
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),
@@ -176,7 +176,7 @@ def collect_credit_balance() -> list:
             'indicator_name': '신용공여잔고 (신용거래융자 전체)',
             'category': '금융투자',
             'value': whl,
-            'unit': '백만원',
+            'unit': '원',  # 실측: crdTrFingWhl 필드가 이미 원 단위 (2026-09-02, 이전에 백만원으로 잘못 라벨링됨)
             'signal': 'green',
             'source': '금융투자협회 (공공데이터포털)',
             'reference_date': today_kst(),

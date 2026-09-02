@@ -120,12 +120,6 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
         run: python fetchers/disclosure_alerts.py
-      - name: 펀드정보
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/fund_info.py
       - name: 지배구조정보
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
