@@ -1,58 +1,51 @@
 """
-미국 주식 기술지표 수집기 (Alpha Vantage)
-출처: alphavantage.co - RSI (공식 필드, 다수 공식예제 교차확인됨)
-주의: 무료티어 일일 한도가 문서마다 25회/500회로 상이하게 확인됨 → 가장 보수적인 25회 기준으로 설계.
-분당 5회 제한도 문서화되어 있어 호출 간 12초 대기.
-하루에 종목 5개만 처리 (RSI만 수집, 매일 돌려도 한도 안에 들도록).
+미국 주식 기술지표 수집기 (yfinance 기반 자체 계산)
+출처: Yahoo Finance 가격 이력으로 Wilder RSI(14)를 직접 계산.
+2026-09-02 Alpha Vantage에서 전환: 무료키를 etf_profile.py와 나눠 쓰던 시절엔
+한도가 빡빡했으나, etf_profile.py가 yfinance로 이전하며 더 이상 급하진 않음.
+다만 소스를 하나(Yahoo Finance)로 통일하는 게 유지보수에 낫다고 판단해 같이 전환.
+RSI는 표준 Wilder 스무딩(EWM alpha=1/14, adjust=False) 공식이며, 초기화 방식에
+따른 오차가 수렴하도록 6개월치 데이터를 받아 마지막 값만 사용한다.
 """
-import logging, os, sys, time
+import logging, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_upsert, now_kst, today_kst
-import requests
+import yfinance as yf
 
 logger = logging.getLogger(__name__)
-API_KEY = os.environ.get('ALPHA_VANTAGE_API_KEY', '')
-BASE_URL = "https://www.alphavantage.co/query"
 
 US_TICKERS = ['AAPL','MSFT','GOOGL','NVDA','TSLA']
+RSI_PERIOD = 14
 
 
 def fetch_rsi(symbol: str) -> float | None:
-    params = {
-        'function': 'RSI',
-        'symbol': symbol,
-        'interval': 'daily',
-        'time_period': 14,
-        'series_type': 'close',
-        'apikey': API_KEY
-    }
     try:
-        res = requests.get(BASE_URL, params=params, timeout=15)
-        if res.status_code >= 400:
-            logger.error(f"{symbol} RSI 오류 HTTP {res.status_code}")
+        df = yf.Ticker(symbol).history(period='6mo', interval='1d')
+        close = df['Close']
+        if len(close) < RSI_PERIOD + 1:
             return None
-        data = res.json()
-        if 'Note' in data or 'Information' in data:
-            logger.warning(f"{symbol}: 호출한도 도달 또는 상태메시지 - {data.get('Note') or data.get('Information')}")
-            return None
-        series = data.get('Technical Analysis: RSI', {})
-        if not series:
-            return None
-        latest_date = sorted(series.keys(), reverse=True)[0]
-        return float(series[latest_date].get('RSI', 0) or 0)
+        delta = close.diff()
+        gain = delta.clip(lower=0)
+        loss = -delta.clip(upper=0)
+        avg_gain = gain.ewm(alpha=1 / RSI_PERIOD, adjust=False, min_periods=RSI_PERIOD).mean()
+        avg_loss = loss.ewm(alpha=1 / RSI_PERIOD, adjust=False, min_periods=RSI_PERIOD).mean()
+        last_gain, last_loss = avg_gain.iloc[-1], avg_loss.iloc[-1]
+        if last_loss == 0:
+            return 100.0
+        rs = last_gain / last_loss
+        return float(100 - (100 / (1 + rs)))
     except Exception as e:
-        logger.error(f"{symbol} RSI 예외: {type(e).__name__}")
+        logger.error(f"{symbol} RSI 예외: {type(e).__name__} - {e}")
         return None
 
 
 def main():
-    logger.info("=== 미국 주식 RSI 수집 시작 (Alpha Vantage) ===")
+    logger.info("=== 미국 주식 RSI 수집 시작 (Yahoo Finance) ===")
     results = []
     for symbol in US_TICKERS:
         rsi = fetch_rsi(symbol)
         if rsi is None:
             logger.warning(f"❌ {symbol}: RSI 없음")
-            time.sleep(12)
             continue
         results.append({
             'indicator_code': f"US_RSI_{symbol}",
@@ -61,13 +54,12 @@ def main():
             'value': rsi,
             'unit': '',
             'signal': 'red' if rsi>=70 else 'yellow' if rsi<=30 else 'green',
-            'source': 'Alpha Vantage',
+            'source': 'Yahoo Finance',
             'reference_date': today_kst(),
             'summary_text': f"{'과매수' if rsi>=70 else '과매도' if rsi<=30 else '중립'} 구간",
             'fetched_at': now_kst()
         })
         logger.info(f"✅ {symbol} RSI {rsi:.1f}")
-        time.sleep(12)
 
     if results:
         supabase_upsert('market_indicators', results)
