@@ -170,6 +170,10 @@ def fetch_market_fallback(market: str, top_n: int = 100) -> list:
         code = r['stock_code']
         try:
             hist = yf.Ticker(f"{code}{suffix}").history(period='5d')
+            # 당일 장중이면 마지막 행의 종가가 아직 NaN인 채로 올 수 있어(거래량만
+            # 부분 채워짐) - 종가가 확정된 가장 최근 행만 쓴다 (실측으로 발견,
+            # 2026-09-03: NaN * volume을 int()하다 ValueError로 전종목 폴백 실패했음).
+            hist = hist.dropna(subset=['Close'])
             if hist.empty:
                 continue
             close = float(hist['Close'].iloc[-1])
