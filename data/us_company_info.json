@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03",
+  "updated_at": "2026-09-04",
   "profiles": {
     "AAPL": {
       "ticker": "AAPL",
@@ -393,145 +393,6 @@
     }
   },
   "financials": {
-    "GAIN": [
-      {
-        "id": 24,
-        "ticker": "GAIN",
-        "fiscal_year": 2026,
-        "period": "FY",
-        "revenue": 177517000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 184753000.0,
-        "eps": 4.77,
-        "total_assets": 1322845000.0,
-        "total_liabilities": 654620000.0,
-        "total_equity": 668225000.0,
-        "fetched_at": "2026-09-02T23:45:02.754633+00:00"
-      },
-      {
-        "id": 25,
-        "ticker": "GAIN",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 61634000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 65319000.0,
-        "eps": 1.78,
-        "total_assets": 1006404000.0,
-        "total_liabilities": 507320000.0,
-        "total_equity": 499084000.0,
-        "fetched_at": "2026-09-02T23:45:02.754791+00:00"
-      },
-      {
-        "id": 26,
-        "ticker": "GAIN",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 79048000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 85305000.0,
-        "eps": 2.47,
-        "total_assets": 938083000.0,
-        "total_liabilities": 445372000.0,
-        "total_equity": 492711000.0,
-        "fetched_at": "2026-09-02T23:45:02.754927+00:00"
-      },
-      {
-        "id": 27,
-        "ticker": "GAIN",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 32655000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 35547000.0,
-        "eps": 1.07,
-        "total_assets": 765644000.0,
-        "total_liabilities": 325902000.0,
-        "total_equity": 439742000.0,
-        "fetched_at": "2026-09-02T23:45:02.755055+00:00"
-      }
-    ],
-    "NVDA": [
-      {
-        "id": 96,
-        "ticker": "NVDA",
-        "fiscal_year": 2026,
-        "period": "FY",
-        "revenue": 215938000000,
-        "gross_profit": 153463000000,
-        "operating_income": 130387000000,
-        "net_income": 120067000000,
-        "eps": 4.93,
-        "total_assets": 206803000000,
-        "total_liabilities": 49510000000,
-        "total_equity": 157293000000,
-        "fetched_at": "2026-09-02T23:44:40.019327+00:00"
-      },
-      {
-        "id": 97,
-        "ticker": "NVDA",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 130497000000,
-        "gross_profit": 97858000000,
-        "operating_income": 81453000000,
-        "net_income": 72880000000,
-        "eps": 2.97,
-        "total_assets": 111601000000,
-        "total_liabilities": 32274000000,
-        "total_equity": 79327000000,
-        "fetched_at": "2026-09-02T23:44:40.01935+00:00"
-      },
-      {
-        "id": 98,
-        "ticker": "NVDA",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 60922000000,
-        "gross_profit": 44301000000,
-        "operating_income": 32972000000,
-        "net_income": 29760000000,
-        "eps": 1.21,
-        "total_assets": 65728000000,
-        "total_liabilities": 22750000000,
-        "total_equity": 42978000000,
-        "fetched_at": "2026-09-02T23:44:40.019357+00:00"
-      },
-      {
-        "id": 99,
-        "ticker": "NVDA",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 26974000000,
-        "gross_profit": 15356000000,
-        "operating_income": 4224000000,
-        "net_income": 4368000000,
-        "eps": 0.18,
-        "total_assets": 41182000000,
-        "total_liabilities": 19081000000,
-        "total_equity": 22101000000,
-        "fetched_at": "2026-09-02T23:44:40.019362+00:00"
-      },
-      {
-        "id": 100,
-        "ticker": "NVDA",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 26914000000,
-        "gross_profit": 17475000000,
-        "operating_income": 10041000000,
-        "net_income": 9752000000,
-        "eps": 0.39,
-        "total_assets": 44187000000,
-        "total_liabilities": 17575000000,
-        "total_equity": 26612000000,
-        "fetched_at": "2026-09-02T23:44:40.019366+00:00"
-      }
-    ],
     "MSFT": [
       {
         "id": 81,
@@ -623,7 +484,7 @@
         "total_assets": 6448627000.0,
         "total_liabilities": 3519781000.0,
         "total_equity": 2928846000.0,
-        "fetched_at": "2026-09-02T23:45:08.259338+00:00"
+        "fetched_at": "2026-09-03T16:23:49.038412+00:00"
       },
       {
         "id": 39,
@@ -638,7 +499,7 @@
         "total_assets": 6804938000.0,
         "total_liabilities": 3816166000.0,
         "total_equity": 2988772000.0,
-        "fetched_at": "2026-09-02T23:45:08.259499+00:00"
+        "fetched_at": "2026-09-03T16:23:49.038645+00:00"
       },
       {
         "id": 40,
@@ -653,7 +514,7 @@
         "total_assets": 7857092000.0,
         "total_liabilities": 4145359000.0,
         "total_equity": 3711733000.0,
-        "fetched_at": "2026-09-02T23:45:08.259629+00:00"
+        "fetched_at": "2026-09-03T16:23:49.038822+00:00"
       },
       {
         "id": 41,
@@ -668,443 +529,212 @@
         "total_assets": 7861666000.0,
         "total_liabilities": 4129001000.0,
         "total_equity": 3732665000.0,
-        "fetched_at": "2026-09-02T23:45:08.259756+00:00"
+        "fetched_at": "2026-09-03T16:23:49.038994+00:00"
       }
     ],
-    "MAIN": [
+    "NVDA": [
       {
-        "id": 6,
-        "ticker": "MAIN",
+        "id": 96,
+        "ticker": "NVDA",
+        "fiscal_year": 2026,
+        "period": "FY",
+        "revenue": 215938000000,
+        "gross_profit": 153463000000,
+        "operating_income": 130387000000,
+        "net_income": 120067000000,
+        "eps": 4.93,
+        "total_assets": 206803000000,
+        "total_liabilities": 49510000000,
+        "total_equity": 157293000000,
+        "fetched_at": "2026-09-02T23:44:40.019327+00:00"
+      },
+      {
+        "id": 97,
+        "ticker": "NVDA",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 591851000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 493398000.0,
-        "eps": 5.52,
-        "total_assets": 5681701000.0,
-        "total_liabilities": 2687808000.0,
-        "total_equity": 2993893000.0,
-        "fetched_at": "2026-09-02T23:44:55.583925+00:00"
+        "revenue": 130497000000,
+        "gross_profit": 97858000000,
+        "operating_income": 81453000000,
+        "net_income": 72880000000,
+        "eps": 2.97,
+        "total_assets": 111601000000,
+        "total_liabilities": 32274000000,
+        "total_equity": 79327000000,
+        "fetched_at": "2026-09-02T23:44:40.01935+00:00"
       },
       {
-        "id": 7,
-        "ticker": "MAIN",
+        "id": 98,
+        "ticker": "NVDA",
         "fiscal_year": 2024,
         "period": "FY",
-        "revenue": 601251000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 508080000.0,
-        "eps": 5.85,
-        "total_assets": 5121341000.0,
-        "total_liabilities": 2323503000.0,
-        "total_equity": 2797838000.0,
-        "fetched_at": "2026-09-02T23:44:55.584084+00:00"
+        "revenue": 60922000000,
+        "gross_profit": 44301000000,
+        "operating_income": 32972000000,
+        "net_income": 29760000000,
+        "eps": 1.21,
+        "total_assets": 65728000000,
+        "total_liabilities": 22750000000,
+        "total_equity": 42978000000,
+        "fetched_at": "2026-09-02T23:44:40.019357+00:00"
       },
       {
-        "id": 8,
-        "ticker": "MAIN",
+        "id": 99,
+        "ticker": "NVDA",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": 509880000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 428447000.0,
-        "eps": 5.23,
-        "total_assets": 4443570000.0,
-        "total_liabilities": 1966171000.0,
-        "total_equity": 2477399000.0,
-        "fetched_at": "2026-09-02T23:44:55.584243+00:00"
+        "revenue": 26974000000,
+        "gross_profit": 15356000000,
+        "operating_income": 4224000000,
+        "net_income": 4368000000,
+        "eps": 0.18,
+        "total_assets": 41182000000,
+        "total_liabilities": 19081000000,
+        "total_equity": 22101000000,
+        "fetched_at": "2026-09-02T23:44:40.019362+00:00"
       },
       {
-        "id": 9,
-        "ticker": "MAIN",
+        "id": 100,
+        "ticker": "NVDA",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": 318188000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 241606000.0,
-        "eps": 3.24,
-        "total_assets": 4241885000.0,
-        "total_liabilities": 2133299000.0,
-        "total_equity": 2108586000.0,
-        "fetched_at": "2026-09-02T23:44:55.584379+00:00"
+        "revenue": 26914000000,
+        "gross_profit": 17475000000,
+        "operating_income": 10041000000,
+        "net_income": 9752000000,
+        "eps": 0.39,
+        "total_assets": 44187000000,
+        "total_liabilities": 17575000000,
+        "total_equity": 26612000000,
+        "fetched_at": "2026-09-02T23:44:40.019366+00:00"
       }
     ],
-    "V": [
+    "GAIN": [
       {
-        "id": 116,
-        "ticker": "V",
+        "id": 24,
+        "ticker": "GAIN",
+        "fiscal_year": 2026,
+        "period": "FY",
+        "revenue": 177517000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 184753000.0,
+        "eps": 4.77,
+        "total_assets": 1322845000.0,
+        "total_liabilities": 654620000.0,
+        "total_equity": 668225000.0,
+        "fetched_at": "2026-09-03T16:23:44.333649+00:00"
+      },
+      {
+        "id": 25,
+        "ticker": "GAIN",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 40000000000,
-        "gross_profit": 32145000000,
-        "operating_income": 23994000000,
-        "net_income": 20058000000,
-        "eps": 10.22,
-        "total_assets": 99627000000,
-        "total_liabilities": 61718000000,
-        "total_equity": 37909000000,
-        "fetched_at": "2026-09-02T22:45:33.199612+00:00"
-      },
-      {
-        "id": 117,
-        "ticker": "V",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 35926000000,
-        "gross_profit": 28884000000,
-        "operating_income": 23595000000,
-        "net_income": 19743000000,
-        "eps": 9.74,
-        "total_assets": 94511000000,
-        "total_liabilities": 55374000000,
-        "total_equity": 39137000000,
-        "fetched_at": "2026-09-02T22:45:33.199646+00:00"
-      },
-      {
-        "id": 118,
-        "ticker": "V",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 32653000000,
-        "gross_profit": 26086000000,
-        "operating_income": 21000000000,
-        "net_income": 17273000000,
-        "eps": 8.29,
-        "total_assets": 90499000000,
-        "total_liabilities": 51766000000,
-        "total_equity": 38733000000,
-        "fetched_at": "2026-09-02T22:45:33.19966+00:00"
-      },
-      {
-        "id": 119,
-        "ticker": "V",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 29310000000,
-        "gross_profit": 23577000000,
-        "operating_income": 18813000000,
-        "net_income": 14957000000,
-        "eps": 7.01,
-        "total_assets": 85501000000,
-        "total_liabilities": 49920000000,
-        "total_equity": 35581000000,
-        "fetched_at": "2026-09-02T22:45:33.199667+00:00"
-      },
-      {
-        "id": 120,
-        "ticker": "V",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": 24105000000,
-        "gross_profit": 19135000000,
-        "operating_income": 15804000000,
-        "net_income": 12311000000,
-        "eps": 5.63,
-        "total_assets": 82896000000,
-        "total_liabilities": 45307000000,
-        "total_equity": 37589000000,
-        "fetched_at": "2026-09-02T22:45:33.199673+00:00"
-      }
-    ],
-    "ABR": [
-      {
-        "id": 67,
-        "ticker": "ABR",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 501246000.0,
+        "revenue": 61634000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": 148796000.0,
-        "eps": 0.56,
-        "total_assets": 14494903000.0,
-        "total_liabilities": 11427750000.0,
-        "total_equity": 2953353000.0,
-        "fetched_at": "2026-09-02T23:45:19.71898+00:00"
-      },
-      {
-        "id": 68,
-        "ticker": "ABR",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 625936000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 264641000.0,
-        "eps": 1.18,
-        "total_assets": 13490981000.0,
-        "total_liabilities": 10339011000.0,
-        "total_equity": 3024085000.0,
-        "fetched_at": "2026-09-02T23:45:19.719143+00:00"
-      },
-      {
-        "id": 69,
-        "ticker": "ABR",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 721012000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 371434000.0,
-        "eps": 1.75,
-        "total_assets": 15738636000.0,
-        "total_liabilities": 12484031000.0,
-        "total_equity": 3117973000.0,
-        "fetched_at": "2026-09-02T23:45:19.719309+00:00"
-      },
-      {
-        "id": 70,
-        "ticker": "ABR",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 619061000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 325783000.0,
-        "eps": 1.67,
-        "total_assets": 17038985000.0,
-        "total_liabilities": 13967106000.0,
-        "total_equity": 2936996000.0,
-        "fetched_at": "2026-09-02T23:45:19.719449+00:00"
-      },
-      {
-        "id": 71,
-        "ticker": "ABR",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": null,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": null,
-        "eps": null,
-        "total_assets": null,
-        "total_liabilities": null,
-        "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:19.719582+00:00"
-      }
-    ],
-    "O": [
-      {
-        "id": 1,
-        "ticker": "O",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 5749377000.0,
-        "gross_profit": 5320577000.0,
-        "operating_income": 2593823000.0,
-        "net_income": 1058590000.0,
-        "eps": 1.17,
-        "total_assets": 72795612000.0,
-        "total_liabilities": 32671644000.0,
-        "total_equity": 39438695000.0,
-        "fetched_at": "2026-09-02T23:44:53.37406+00:00"
-      },
-      {
-        "id": 2,
-        "ticker": "O",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 5271142000.0,
-        "gross_profit": 4893467000.0,
-        "operating_income": 2320928000.0,
-        "net_income": 860772000.0,
-        "eps": 0.98,
-        "total_assets": 68835039000.0,
-        "total_liabilities": 29783353000.0,
-        "total_equity": 38840738000.0,
-        "fetched_at": "2026-09-02T23:44:53.374257+00:00"
-      },
-      {
-        "id": 3,
-        "ticker": "O",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 4078993000.0,
-        "gross_profit": 3762029000.0,
-        "operating_income": 1722316000.0,
-        "net_income": 872309000.0,
-        "eps": 1.26,
-        "total_assets": 57779357000.0,
-        "total_liabilities": 24672388000.0,
-        "total_equity": 32941467000.0,
-        "fetched_at": "2026-09-02T23:44:53.374401+00:00"
-      },
-      {
-        "id": 4,
-        "ticker": "O",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 3343681000.0,
-        "gross_profit": 3117351000.0,
-        "operating_income": 1308503000.0,
-        "net_income": 869408000.0,
-        "eps": 1.42,
-        "total_assets": 49673092000.0,
-        "total_liabilities": 20829803000.0,
-        "total_equity": 28713149000.0,
-        "fetched_at": "2026-09-02T23:44:53.37454+00:00"
-      },
-      {
-        "id": 5,
-        "ticker": "O",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": null,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": null,
-        "eps": null,
-        "total_assets": null,
-        "total_liabilities": null,
-        "total_equity": null,
-        "fetched_at": "2026-09-02T23:44:53.374666+00:00"
-      }
-    ],
-    "META": [
-      {
-        "id": 101,
-        "ticker": "META",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 200966000000,
-        "gross_profit": 164791000000,
-        "operating_income": 83276000000,
-        "net_income": 60458000000,
-        "eps": 23.98,
-        "total_assets": 366021000000,
-        "total_liabilities": 148778000000,
-        "total_equity": 217243000000,
-        "fetched_at": "2026-09-02T23:44:42.156757+00:00"
-      },
-      {
-        "id": 102,
-        "ticker": "META",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 164501000000,
-        "gross_profit": 134340000000,
-        "operating_income": 69380000000,
-        "net_income": 62360000000,
-        "eps": 24.61,
-        "total_assets": 276054000000,
-        "total_liabilities": 93417000000,
-        "total_equity": 182637000000,
-        "fetched_at": "2026-09-02T23:44:42.156781+00:00"
-      },
-      {
-        "id": 103,
-        "ticker": "META",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 134902000000,
-        "gross_profit": 108943000000,
-        "operating_income": 46751000000,
-        "net_income": 39098000000,
-        "eps": 15.19,
-        "total_assets": 229623000000,
-        "total_liabilities": 76455000000,
-        "total_equity": 153168000000,
-        "fetched_at": "2026-09-02T23:44:42.156788+00:00"
-      },
-      {
-        "id": 104,
-        "ticker": "META",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 116609000000,
-        "gross_profit": 91360000000,
-        "operating_income": 28944000000,
-        "net_income": 23200000000,
-        "eps": 8.63,
-        "total_assets": 185727000000,
-        "total_liabilities": 60014000000,
-        "total_equity": 125713000000,
-        "fetched_at": "2026-09-02T23:44:42.156792+00:00"
-      },
-      {
-        "id": 105,
-        "ticker": "META",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": 117929000000,
-        "gross_profit": 95280000000,
-        "operating_income": 46753000000,
-        "net_income": 39370000000,
-        "eps": 13.99,
-        "total_assets": 165987000000,
-        "total_liabilities": 41108000000,
-        "total_equity": 124879000000,
-        "fetched_at": "2026-09-02T23:44:42.156798+00:00"
-      }
-    ],
-    "ADC": [
-      {
-        "id": 57,
-        "ticker": "ADC",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 718398000.0,
-        "gross_profit": 630251000.0,
-        "operating_income": 346881000.0,
-        "net_income": 204349000.0,
-        "eps": 1.77,
-        "total_assets": 9797612000.0,
-        "total_liabilities": 3526459000.0,
-        "total_equity": 6270985000.0,
-        "fetched_at": "2026-09-02T23:45:15.5497+00:00"
-      },
-      {
-        "id": 58,
-        "ticker": "ADC",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 617095000.0,
-        "gross_profit": 542246000.0,
-        "operating_income": 298026000.0,
-        "net_income": 189197000.0,
+        "net_income": 65319000.0,
         "eps": 1.78,
-        "total_assets": 8486446000.0,
-        "total_liabilities": 2975785000.0,
-        "total_equity": 5510046000.0,
-        "fetched_at": "2026-09-02T23:45:15.549868+00:00"
+        "total_assets": 1006404000.0,
+        "total_liabilities": 507320000.0,
+        "total_equity": 499084000.0,
+        "fetched_at": "2026-09-03T16:23:44.333857+00:00"
       },
       {
-        "id": 59,
-        "ticker": "ADC",
+        "id": 26,
+        "ticker": "GAIN",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 79048000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 85305000.0,
+        "eps": 2.47,
+        "total_assets": 938083000.0,
+        "total_liabilities": 445372000.0,
+        "total_equity": 492711000.0,
+        "fetched_at": "2026-09-03T16:23:44.334036+00:00"
+      },
+      {
+        "id": 27,
+        "ticker": "GAIN",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": 537495000.0,
-        "gross_profit": 470778000.0,
-        "operating_income": 259713000.0,
-        "net_income": 169959000.0,
-        "eps": 1.7,
-        "total_assets": 7774836000.0,
-        "total_liabilities": 2574683000.0,
-        "total_equity": 5199211000.0,
-        "fetched_at": "2026-09-02T23:45:15.550004+00:00"
+        "revenue": 32655000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 35547000.0,
+        "eps": 1.07,
+        "total_assets": 765644000.0,
+        "total_liabilities": 325902000.0,
+        "total_equity": 439742000.0,
+        "fetched_at": "2026-09-03T16:23:44.334207+00:00"
+      }
+    ],
+    "LAND": [
+      {
+        "id": 33,
+        "ticker": "LAND",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 88339000.0,
+        "gross_profit": 72055000.0,
+        "operating_income": 24539000.0,
+        "net_income": 13529000.0,
+        "eps": -0.29,
+        "total_assets": 1239172000.0,
+        "total_liabilities": 568886000.0,
+        "total_equity": 670286000.0,
+        "fetched_at": "2026-09-03T16:23:47.441216+00:00"
       },
       {
-        "id": 60,
-        "ticker": "ADC",
+        "id": 34,
+        "ticker": "LAND",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 85216000.0,
+        "gross_profit": 79882000.0,
+        "operating_income": 31380000.0,
+        "net_income": 13290000.0,
+        "eps": -0.29,
+        "total_assets": 1312195000.0,
+        "total_liabilities": 625013000.0,
+        "total_equity": 687182000.0,
+        "fetched_at": "2026-09-03T16:23:47.441429+00:00"
+      },
+      {
+        "id": 35,
+        "ticker": "LAND",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 90398000.0,
+        "gross_profit": 86197000.0,
+        "operating_income": 33483000.0,
+        "net_income": 14565000.0,
+        "eps": -0.28,
+        "total_assets": 1387324000.0,
+        "total_liabilities": 667711000.0,
+        "total_equity": 719613000.0,
+        "fetched_at": "2026-09-03T16:23:47.441633+00:00"
+      },
+      {
+        "id": 36,
+        "ticker": "LAND",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": 429814000.0,
-        "gross_profit": 377533000.0,
-        "operating_income": 213842000.0,
-        "net_income": 152437000.0,
-        "eps": 1.83,
-        "total_assets": 6713189000.0,
-        "total_liabilities": 2082799000.0,
-        "total_equity": 4628998000.0,
-        "fetched_at": "2026-09-02T23:45:15.550136+00:00"
+        "revenue": 89236000.0,
+        "gross_profit": 86417000.0,
+        "operating_income": 34774000.0,
+        "net_income": 4708000.0,
+        "eps": -0.43,
+        "total_assets": 1457251000.0,
+        "total_liabilities": 725889000.0,
+        "total_equity": 731362000.0,
+        "fetched_at": "2026-09-03T16:23:47.441812+00:00"
       },
       {
-        "id": 61,
-        "ticker": "ADC",
+        "id": 37,
+        "ticker": "LAND",
         "fiscal_year": 2021,
         "period": "FY",
         "revenue": null,
@@ -1115,7 +745,84 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:15.550284+00:00"
+        "fetched_at": "2026-09-03T16:23:47.441976+00:00"
+      }
+    ],
+    "AMZN": [
+      {
+        "id": 91,
+        "ticker": "AMZN",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 716924000000,
+        "gross_profit": 360510000000,
+        "operating_income": 79975000000,
+        "net_income": 77670000000,
+        "eps": 7.29,
+        "total_assets": 818042000000,
+        "total_liabilities": 406977000000,
+        "total_equity": 411065000000,
+        "fetched_at": "2026-09-02T23:44:37.922942+00:00"
+      },
+      {
+        "id": 92,
+        "ticker": "AMZN",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 637959000000,
+        "gross_profit": 311671000000,
+        "operating_income": 68593000000,
+        "net_income": 59248000000,
+        "eps": 5.66,
+        "total_assets": 624894000000,
+        "total_liabilities": 338924000000,
+        "total_equity": 285970000000,
+        "fetched_at": "2026-09-02T23:44:37.922966+00:00"
+      },
+      {
+        "id": 93,
+        "ticker": "AMZN",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 574785000000,
+        "gross_profit": 270046000000,
+        "operating_income": 36852000000,
+        "net_income": 30425000000,
+        "eps": 2.95,
+        "total_assets": 527854000000,
+        "total_liabilities": 325979000000,
+        "total_equity": 201875000000,
+        "fetched_at": "2026-09-02T23:44:37.922972+00:00"
+      },
+      {
+        "id": 94,
+        "ticker": "AMZN",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 513983000000,
+        "gross_profit": 225152000000,
+        "operating_income": 12248000000,
+        "net_income": -2722000000,
+        "eps": -0.27,
+        "total_assets": 462675000000,
+        "total_liabilities": 316632000000,
+        "total_equity": 146043000000,
+        "fetched_at": "2026-09-02T23:44:37.922977+00:00"
+      },
+      {
+        "id": 95,
+        "ticker": "AMZN",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": 469822000000,
+        "gross_profit": 197478000000,
+        "operating_income": 24879000000,
+        "net_income": 33364000000,
+        "eps": 3.3,
+        "total_assets": 420549000000,
+        "total_liabilities": 282304000000,
+        "total_equity": 138245000000,
+        "fetched_at": "2026-09-02T23:44:37.922981+00:00"
       }
     ],
     "LTC": [
@@ -1132,7 +839,7 @@
         "total_assets": 2062060000.0,
         "total_liabilities": 899676000.0,
         "total_equity": 1074984000.0,
-        "fetched_at": "2026-09-02T23:45:17.349823+00:00"
+        "fetched_at": "2026-09-03T16:23:57.892151+00:00"
       },
       {
         "id": 63,
@@ -1147,7 +854,7 @@
         "total_assets": 1786142000.0,
         "total_liabilities": 733137000.0,
         "total_equity": 960627000.0,
-        "fetched_at": "2026-09-02T23:45:17.349986+00:00"
+        "fetched_at": "2026-09-03T16:23:57.892366+00:00"
       },
       {
         "id": 64,
@@ -1162,7 +869,7 @@
         "total_assets": 1855098000.0,
         "total_liabilities": 938831000.0,
         "total_equity": 881279000.0,
-        "fetched_at": "2026-09-02T23:45:17.350147+00:00"
+        "fetched_at": "2026-09-03T16:23:57.892572+00:00"
       },
       {
         "id": 65,
@@ -1177,7 +884,7 @@
         "total_assets": 1656103000.0,
         "total_liabilities": 805796000.0,
         "total_equity": 828367000.0,
-        "fetched_at": "2026-09-02T23:45:17.350317+00:00"
+        "fetched_at": "2026-09-03T16:23:57.892755+00:00"
       },
       {
         "id": 66,
@@ -1192,73 +899,73 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:17.350455+00:00"
+        "fetched_at": "2026-09-03T16:23:57.892929+00:00"
       }
     ],
-    "ORC": [
+    "ADC": [
       {
-        "id": 47,
-        "ticker": "ORC",
+        "id": 57,
+        "ticker": "ADC",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 179510000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 159030000.0,
-        "eps": 1.24,
-        "total_assets": 11675993000.0,
-        "total_liabilities": 10304045000.0,
-        "total_equity": 1371948000.0,
-        "fetched_at": "2026-09-02T23:45:11.740811+00:00"
+        "revenue": 718398000.0,
+        "gross_profit": 630251000.0,
+        "operating_income": 346881000.0,
+        "net_income": 204349000.0,
+        "eps": 1.77,
+        "total_assets": 9797612000.0,
+        "total_liabilities": 3526459000.0,
+        "total_equity": 6270985000.0,
+        "fetched_at": "2026-09-03T16:23:56.12478+00:00"
       },
       {
-        "id": 48,
-        "ticker": "ORC",
+        "id": 58,
+        "ticker": "ADC",
         "fiscal_year": 2024,
         "period": "FY",
-        "revenue": 54406000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": 37662000.0,
-        "eps": 0.57,
-        "total_assets": 5721627000.0,
-        "total_liabilities": 5053127000.0,
-        "total_equity": 668500000.0,
-        "fetched_at": "2026-09-02T23:45:11.740969+00:00"
+        "revenue": 617095000.0,
+        "gross_profit": 542246000.0,
+        "operating_income": 298026000.0,
+        "net_income": 189197000.0,
+        "eps": 1.78,
+        "total_assets": 8486446000.0,
+        "total_liabilities": 2975785000.0,
+        "total_equity": 5510046000.0,
+        "fetched_at": "2026-09-03T16:23:56.124995+00:00"
       },
       {
-        "id": 49,
-        "ticker": "ORC",
+        "id": 59,
+        "ticker": "ADC",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": -20695000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": -39226000.0,
-        "eps": -0.89,
-        "total_assets": 4264947000.0,
-        "total_liabilities": 3795002000.0,
-        "total_equity": 469945000.0,
-        "fetched_at": "2026-09-02T23:45:11.74111+00:00"
+        "revenue": 537495000.0,
+        "gross_profit": 470778000.0,
+        "operating_income": 259713000.0,
+        "net_income": 169959000.0,
+        "eps": 1.7,
+        "total_assets": 7774836000.0,
+        "total_liabilities": 2574683000.0,
+        "total_equity": 5199211000.0,
+        "fetched_at": "2026-09-03T16:23:56.125177+00:00"
       },
       {
-        "id": 50,
-        "ticker": "ORC",
+        "id": 60,
+        "ticker": "ADC",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": -241004000.0,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": -258453000.0,
-        "eps": -6.9,
-        "total_assets": 3865736000.0,
-        "total_liabilities": 3426973000.0,
-        "total_equity": 438763000.0,
-        "fetched_at": "2026-09-02T23:45:11.741294+00:00"
+        "revenue": 429814000.0,
+        "gross_profit": 377533000.0,
+        "operating_income": 213842000.0,
+        "net_income": 152437000.0,
+        "eps": 1.83,
+        "total_assets": 6713189000.0,
+        "total_liabilities": 2082799000.0,
+        "total_equity": 4628998000.0,
+        "fetched_at": "2026-09-03T16:23:56.125364+00:00"
       },
       {
-        "id": 51,
-        "ticker": "ORC",
+        "id": 61,
+        "ticker": "ADC",
         "fiscal_year": 2021,
         "period": "FY",
         "revenue": null,
@@ -1269,7 +976,238 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:11.74143+00:00"
+        "fetched_at": "2026-09-03T16:23:56.125548+00:00"
+      }
+    ],
+    "GOOD": [
+      {
+        "id": 28,
+        "ticker": "GOOD",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 161336000.0,
+        "gross_profit": 126070000.0,
+        "operating_income": 58439000.0,
+        "net_income": 19286000.0,
+        "eps": 0.14,
+        "total_assets": 1246933000.0,
+        "total_liabilities": 1075041000.0,
+        "total_equity": 171770000.0,
+        "fetched_at": "2026-09-03T16:23:45.8873+00:00"
+      },
+      {
+        "id": 29,
+        "ticker": "GOOD",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 149388000.0,
+        "gross_profit": 117859000.0,
+        "operating_income": 51139000.0,
+        "net_income": 23998000.0,
+        "eps": 0.27,
+        "total_assets": 1094348000.0,
+        "total_liabilities": 923047000.0,
+        "total_equity": 171171000.0,
+        "fetched_at": "2026-09-03T16:23:45.887536+00:00"
+      },
+      {
+        "id": 30,
+        "ticker": "GOOD",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 147584000.0,
+        "gross_profit": 115346000.0,
+        "operating_income": 50777000.0,
+        "net_income": 4985000.0,
+        "eps": -0.19,
+        "total_assets": 1133471000.0,
+        "total_liabilities": 979205000.0,
+        "total_equity": 153280000.0,
+        "fetched_at": "2026-09-03T16:23:45.887724+00:00"
+      },
+      {
+        "id": 31,
+        "ticker": "GOOD",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 148981000.0,
+        "gross_profit": 115818000.0,
+        "operating_income": 44825000.0,
+        "net_income": 10805000.0,
+        "eps": -0.04,
+        "total_assets": 1202633000.0,
+        "total_liabilities": 996939000.0,
+        "total_equity": 203904000.0,
+        "fetched_at": "2026-09-03T16:23:45.887906+00:00"
+      },
+      {
+        "id": 32,
+        "ticker": "GOOD",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": null,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": null,
+        "eps": null,
+        "total_assets": null,
+        "total_liabilities": null,
+        "total_equity": null,
+        "fetched_at": "2026-09-03T16:23:45.888072+00:00"
+      }
+    ],
+    "ABR": [
+      {
+        "id": 67,
+        "ticker": "ABR",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 501246000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 148796000.0,
+        "eps": 0.56,
+        "total_assets": 14494903000.0,
+        "total_liabilities": 11427750000.0,
+        "total_equity": 2953353000.0,
+        "fetched_at": "2026-09-03T16:23:59.446188+00:00"
+      },
+      {
+        "id": 68,
+        "ticker": "ABR",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 625936000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 264641000.0,
+        "eps": 1.18,
+        "total_assets": 13490981000.0,
+        "total_liabilities": 10339011000.0,
+        "total_equity": 3024085000.0,
+        "fetched_at": "2026-09-03T16:23:59.446393+00:00"
+      },
+      {
+        "id": 69,
+        "ticker": "ABR",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 721012000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 371434000.0,
+        "eps": 1.75,
+        "total_assets": 15738636000.0,
+        "total_liabilities": 12484031000.0,
+        "total_equity": 3117973000.0,
+        "fetched_at": "2026-09-03T16:23:59.446592+00:00"
+      },
+      {
+        "id": 70,
+        "ticker": "ABR",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 619061000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 325783000.0,
+        "eps": 1.67,
+        "total_assets": 17038985000.0,
+        "total_liabilities": 13967106000.0,
+        "total_equity": 2936996000.0,
+        "fetched_at": "2026-09-03T16:23:59.446779+00:00"
+      },
+      {
+        "id": 71,
+        "ticker": "ABR",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": null,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": null,
+        "eps": null,
+        "total_assets": null,
+        "total_liabilities": null,
+        "total_equity": null,
+        "fetched_at": "2026-09-03T16:23:59.44694+00:00"
+      }
+    ],
+    "GOOGL": [
+      {
+        "id": 86,
+        "ticker": "GOOGL",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 402836000000,
+        "gross_profit": 240301000000,
+        "operating_income": 129039000000,
+        "net_income": 132170000000,
+        "eps": 10.91,
+        "total_assets": 595281000000,
+        "total_liabilities": 180016000000,
+        "total_equity": 415265000000,
+        "fetched_at": "2026-09-02T23:44:35.87342+00:00"
+      },
+      {
+        "id": 87,
+        "ticker": "GOOGL",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 350018000000,
+        "gross_profit": 203712000000,
+        "operating_income": 112390000000,
+        "net_income": 100118000000,
+        "eps": 8.13,
+        "total_assets": 450256000000,
+        "total_liabilities": 125172000000,
+        "total_equity": 325084000000,
+        "fetched_at": "2026-09-02T23:44:35.873446+00:00"
+      },
+      {
+        "id": 88,
+        "ticker": "GOOGL",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 307394000000,
+        "gross_profit": 174062000000,
+        "operating_income": 84293000000,
+        "net_income": 73795000000,
+        "eps": 5.84,
+        "total_assets": 402392000000,
+        "total_liabilities": 119013000000,
+        "total_equity": 283379000000,
+        "fetched_at": "2026-09-02T23:44:35.873452+00:00"
+      },
+      {
+        "id": 89,
+        "ticker": "GOOGL",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 282836000000,
+        "gross_profit": 156633000000,
+        "operating_income": 74842000000,
+        "net_income": 59972000000,
+        "eps": 4.59,
+        "total_assets": 365264000000,
+        "total_liabilities": 109120000000,
+        "total_equity": 256144000000,
+        "fetched_at": "2026-09-02T23:44:35.873457+00:00"
+      },
+      {
+        "id": 90,
+        "ticker": "GOOGL",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": 257637000000,
+        "gross_profit": 146698000000,
+        "operating_income": 78714000000,
+        "net_income": 76033000000,
+        "eps": 5.69,
+        "total_assets": 359268000000,
+        "total_liabilities": 107633000000,
+        "total_equity": 251635000000,
+        "fetched_at": "2026-09-02T23:44:35.873461+00:00"
       }
     ],
     "EFC": [
@@ -1286,7 +1224,7 @@
         "total_assets": 19352910000.0,
         "total_liabilities": 17481755000.0,
         "total_equity": 1834259000.0,
-        "fetched_at": "2026-09-02T23:45:21.572526+00:00"
+        "fetched_at": "2026-09-03T16:24:01.035398+00:00"
       },
       {
         "id": 73,
@@ -1301,7 +1239,7 @@
         "total_assets": 16317028000.0,
         "total_liabilities": 14726206000.0,
         "total_equity": 1570476000.0,
-        "fetched_at": "2026-09-02T23:45:21.572681+00:00"
+        "fetched_at": "2026-09-03T16:24:01.035623+00:00"
       },
       {
         "id": 74,
@@ -1316,7 +1254,7 @@
         "total_assets": 15315930000.0,
         "total_liabilities": 13780318000.0,
         "total_equity": 1517071000.0,
-        "fetched_at": "2026-09-02T23:45:21.572807+00:00"
+        "fetched_at": "2026-09-03T16:24:01.035802+00:00"
       },
       {
         "id": 75,
@@ -1331,7 +1269,84 @@
         "total_assets": 14085886000.0,
         "total_liabilities": 12865000000.0,
         "total_equity": 1195967000.0,
-        "fetched_at": "2026-09-02T23:45:21.572938+00:00"
+        "fetched_at": "2026-09-03T16:24:01.035976+00:00"
+      }
+    ],
+    "STAG": [
+      {
+        "id": 10,
+        "ticker": "STAG",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 845184000.0,
+        "gross_profit": 673359000.0,
+        "operating_income": 319629000.0,
+        "net_income": 273519000.0,
+        "eps": 1.46,
+        "total_assets": 7208069000.0,
+        "total_liabilities": 3537040000.0,
+        "total_equity": 3595697000.0,
+        "fetched_at": "2026-09-03T16:23:39.570782+00:00"
+      },
+      {
+        "id": 11,
+        "ticker": "STAG",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 767384000.0,
+        "gross_profit": 612556000.0,
+        "operating_income": 270277000.0,
+        "net_income": 189220000.0,
+        "eps": 1.04,
+        "total_assets": 6833335000.0,
+        "total_liabilities": 3304227000.0,
+        "total_equity": 3457651000.0,
+        "fetched_at": "2026-09-03T16:23:39.570997+00:00"
+      },
+      {
+        "id": 12,
+        "ticker": "STAG",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 707835000.0,
+        "gross_profit": 568239000.0,
+        "operating_income": 242301000.0,
+        "net_income": 192845000.0,
+        "eps": 1.07,
+        "total_assets": 6283458000.0,
+        "total_liabilities": 2837647000.0,
+        "total_equity": 3374680000.0,
+        "fetched_at": "2026-09-03T16:23:39.571181+00:00"
+      },
+      {
+        "id": 13,
+        "ticker": "STAG",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 657345000.0,
+        "gross_profit": 531644000.0,
+        "operating_income": 209646000.0,
+        "net_income": 178326000.0,
+        "eps": 1.0,
+        "total_assets": 6184988000.0,
+        "total_liabilities": 2726807000.0,
+        "total_equity": 3384824000.0,
+        "fetched_at": "2026-09-03T16:23:39.571369+00:00"
+      },
+      {
+        "id": 14,
+        "ticker": "STAG",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": null,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": null,
+        "eps": null,
+        "total_assets": null,
+        "total_liabilities": null,
+        "total_equity": null,
+        "fetched_at": "2026-09-03T16:23:39.571564+00:00"
       }
     ],
     "NLY": [
@@ -1348,7 +1363,7 @@
         "total_assets": 135609838000.0,
         "total_liabilities": 119449927000.0,
         "total_equity": 16090772000.0,
-        "fetched_at": "2026-09-02T23:45:13.648994+00:00"
+        "fetched_at": "2026-09-03T16:23:54.398333+00:00"
       },
       {
         "id": 53,
@@ -1363,7 +1378,7 @@
         "total_assets": 103556384000.0,
         "total_liabilities": 90859432000.0,
         "total_equity": 12609241000.0,
-        "fetched_at": "2026-09-02T23:45:13.649155+00:00"
+        "fetched_at": "2026-09-03T16:23:54.398552+00:00"
       },
       {
         "id": 54,
@@ -1378,7 +1393,7 @@
         "total_assets": 93227236000.0,
         "total_liabilities": 81882145000.0,
         "total_equity": 11255793000.0,
-        "fetched_at": "2026-09-02T23:45:13.64932+00:00"
+        "fetched_at": "2026-09-03T16:23:54.398732+00:00"
       },
       {
         "id": 55,
@@ -1393,7 +1408,7 @@
         "total_assets": 81850712000.0,
         "total_liabilities": 70481286000.0,
         "total_equity": 11270443000.0,
-        "fetched_at": "2026-09-02T23:45:13.64946+00:00"
+        "fetched_at": "2026-09-03T16:23:54.398908+00:00"
       },
       {
         "id": 56,
@@ -1408,84 +1423,131 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:13.649587+00:00"
+        "fetched_at": "2026-09-03T16:23:54.399073+00:00"
       }
     ],
-    "EPR": [
+    "AGNC": [
       {
-        "id": 42,
-        "ticker": "EPR",
+        "id": 15,
+        "ticker": "AGNC",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 672765000.0,
-        "gross_profit": 613593000.0,
-        "operating_income": 379962000.0,
-        "net_income": 274936000.0,
-        "eps": 3.28,
-        "total_assets": 5699762000.0,
-        "total_liabilities": 3370591000.0,
-        "total_equity": 2329171000.0,
-        "fetched_at": "2026-09-02T23:45:09.979467+00:00"
-      },
-      {
-        "id": 43,
-        "ticker": "EPR",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 640997000.0,
-        "gross_profit": 581851000.0,
-        "operating_income": 353969000.0,
-        "net_income": 146066000.0,
-        "eps": 1.6,
-        "total_assets": 5616507000.0,
-        "total_liabilities": 3293262000.0,
-        "total_equity": 2323245000.0,
-        "fetched_at": "2026-09-02T23:45:09.979633+00:00"
-      },
-      {
-        "id": 44,
-        "ticker": "EPR",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 659721000.0,
-        "gross_profit": 602243000.0,
-        "operating_income": 378063000.0,
-        "net_income": 173046000.0,
-        "eps": 1.97,
-        "total_assets": 5700885000.0,
-        "total_liabilities": 3246730000.0,
-        "total_equity": 2454155000.0,
-        "fetched_at": "2026-09-02T23:45:09.979778+00:00"
-      },
-      {
-        "id": 45,
-        "ticker": "EPR",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 610649000.0,
-        "gross_profit": 554664000.0,
-        "operating_income": 342190000.0,
-        "net_income": 176229000.0,
-        "eps": 2.03,
-        "total_assets": 5758701000.0,
-        "total_liabilities": 3222982000.0,
-        "total_equity": 2535719000.0,
-        "fetched_at": "2026-09-02T23:45:09.97992+00:00"
-      },
-      {
-        "id": 46,
-        "ticker": "EPR",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": null,
+        "revenue": 1797000000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": null,
-        "eps": null,
-        "total_assets": null,
-        "total_liabilities": null,
-        "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:09.980055+00:00"
+        "net_income": 1670000000.0,
+        "eps": 1.47,
+        "total_assets": 115077000000.0,
+        "total_liabilities": 102684000000.0,
+        "total_equity": 12393000000.0,
+        "fetched_at": "2026-09-03T16:23:41.123929+00:00"
+      },
+      {
+        "id": 16,
+        "ticker": "AGNC",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 973000000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 863000000.0,
+        "eps": 0.93,
+        "total_assets": 88015000000.0,
+        "total_liabilities": 78253000000.0,
+        "total_equity": 9762000000.0,
+        "fetched_at": "2026-09-03T16:23:41.124134+00:00"
+      },
+      {
+        "id": 17,
+        "ticker": "AGNC",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 251000000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 155000000.0,
+        "eps": 0.05,
+        "total_assets": 71596000000.0,
+        "total_liabilities": 63339000000.0,
+        "total_equity": 8257000000.0,
+        "fetched_at": "2026-09-03T16:23:41.124307+00:00"
+      },
+      {
+        "id": 18,
+        "ticker": "AGNC",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": -1116000000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": -1190000000.0,
+        "eps": -2.41,
+        "total_assets": 51748000000.0,
+        "total_liabilities": 43878000000.0,
+        "total_equity": 7870000000.0,
+        "fetched_at": "2026-09-03T16:23:41.124478+00:00"
+      }
+    ],
+    "MAIN": [
+      {
+        "id": 6,
+        "ticker": "MAIN",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 591851000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 493398000.0,
+        "eps": 5.52,
+        "total_assets": 5681701000.0,
+        "total_liabilities": 2687808000.0,
+        "total_equity": 2993893000.0,
+        "fetched_at": "2026-09-03T16:23:37.875251+00:00"
+      },
+      {
+        "id": 7,
+        "ticker": "MAIN",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 601251000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 508080000.0,
+        "eps": 5.85,
+        "total_assets": 5121341000.0,
+        "total_liabilities": 2323503000.0,
+        "total_equity": 2797838000.0,
+        "fetched_at": "2026-09-03T16:23:37.875453+00:00"
+      },
+      {
+        "id": 8,
+        "ticker": "MAIN",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 509880000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 428447000.0,
+        "eps": 5.23,
+        "total_assets": 4443570000.0,
+        "total_liabilities": 1966171000.0,
+        "total_equity": 2477399000.0,
+        "fetched_at": "2026-09-03T16:23:37.875646+00:00"
+      },
+      {
+        "id": 9,
+        "ticker": "MAIN",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 318188000.0,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": 241606000.0,
+        "eps": 3.24,
+        "total_assets": 4241885000.0,
+        "total_liabilities": 2133299000.0,
+        "total_equity": 2108586000.0,
+        "fetched_at": "2026-09-03T16:23:37.875815+00:00"
       }
     ],
     "TSLA": [
@@ -1579,7 +1641,7 @@
         "total_assets": 21005159000.0,
         "total_liabilities": 18744106000.0,
         "total_equity": 2261053000.0,
-        "fetched_at": "2026-09-02T23:45:01.022913+00:00"
+        "fetched_at": "2026-09-03T16:23:42.68021+00:00"
       },
       {
         "id": 20,
@@ -1594,7 +1656,7 @@
         "total_assets": 13547953000.0,
         "total_liabilities": 12186538000.0,
         "total_equity": 1361415000.0,
-        "fetched_at": "2026-09-02T23:45:01.023069+00:00"
+        "fetched_at": "2026-09-03T16:23:42.680415+00:00"
       },
       {
         "id": 21,
@@ -1609,7 +1671,7 @@
         "total_assets": 12344395000.0,
         "total_liabilities": 11073211000.0,
         "total_equity": 1271184000.0,
-        "fetched_at": "2026-09-02T23:45:01.023226+00:00"
+        "fetched_at": "2026-09-03T16:23:42.680611+00:00"
       },
       {
         "id": 22,
@@ -1624,7 +1686,7 @@
         "total_assets": 9437047000.0,
         "total_liabilities": 8324675000.0,
         "total_equity": 1112372000.0,
-        "fetched_at": "2026-09-02T23:45:01.023365+00:00"
+        "fetched_at": "2026-09-03T16:23:42.680787+00:00"
       },
       {
         "id": 23,
@@ -1639,73 +1701,227 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:01.023494+00:00"
+        "fetched_at": "2026-09-03T16:23:42.680949+00:00"
       }
     ],
-    "GOOD": [
+    "META": [
       {
-        "id": 28,
-        "ticker": "GOOD",
+        "id": 101,
+        "ticker": "META",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 161336000.0,
-        "gross_profit": 126070000.0,
-        "operating_income": 58439000.0,
-        "net_income": 19286000.0,
-        "eps": 0.14,
-        "total_assets": 1246933000.0,
-        "total_liabilities": 1075041000.0,
-        "total_equity": 171770000.0,
-        "fetched_at": "2026-09-02T23:45:04.52544+00:00"
+        "revenue": 200966000000,
+        "gross_profit": 164791000000,
+        "operating_income": 83276000000,
+        "net_income": 60458000000,
+        "eps": 23.98,
+        "total_assets": 366021000000,
+        "total_liabilities": 148778000000,
+        "total_equity": 217243000000,
+        "fetched_at": "2026-09-02T23:44:42.156757+00:00"
       },
       {
-        "id": 29,
-        "ticker": "GOOD",
+        "id": 102,
+        "ticker": "META",
         "fiscal_year": 2024,
         "period": "FY",
-        "revenue": 149388000.0,
-        "gross_profit": 117859000.0,
-        "operating_income": 51139000.0,
-        "net_income": 23998000.0,
-        "eps": 0.27,
-        "total_assets": 1094348000.0,
-        "total_liabilities": 923047000.0,
-        "total_equity": 171171000.0,
-        "fetched_at": "2026-09-02T23:45:04.525609+00:00"
+        "revenue": 164501000000,
+        "gross_profit": 134340000000,
+        "operating_income": 69380000000,
+        "net_income": 62360000000,
+        "eps": 24.61,
+        "total_assets": 276054000000,
+        "total_liabilities": 93417000000,
+        "total_equity": 182637000000,
+        "fetched_at": "2026-09-02T23:44:42.156781+00:00"
       },
       {
-        "id": 30,
-        "ticker": "GOOD",
+        "id": 103,
+        "ticker": "META",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": 147584000.0,
-        "gross_profit": 115346000.0,
-        "operating_income": 50777000.0,
-        "net_income": 4985000.0,
-        "eps": -0.19,
-        "total_assets": 1133471000.0,
-        "total_liabilities": 979205000.0,
-        "total_equity": 153280000.0,
-        "fetched_at": "2026-09-02T23:45:04.525755+00:00"
+        "revenue": 134902000000,
+        "gross_profit": 108943000000,
+        "operating_income": 46751000000,
+        "net_income": 39098000000,
+        "eps": 15.19,
+        "total_assets": 229623000000,
+        "total_liabilities": 76455000000,
+        "total_equity": 153168000000,
+        "fetched_at": "2026-09-02T23:44:42.156788+00:00"
       },
       {
-        "id": 31,
-        "ticker": "GOOD",
+        "id": 104,
+        "ticker": "META",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": 148981000.0,
-        "gross_profit": 115818000.0,
-        "operating_income": 44825000.0,
-        "net_income": 10805000.0,
-        "eps": -0.04,
-        "total_assets": 1202633000.0,
-        "total_liabilities": 996939000.0,
-        "total_equity": 203904000.0,
-        "fetched_at": "2026-09-02T23:45:04.525893+00:00"
+        "revenue": 116609000000,
+        "gross_profit": 91360000000,
+        "operating_income": 28944000000,
+        "net_income": 23200000000,
+        "eps": 8.63,
+        "total_assets": 185727000000,
+        "total_liabilities": 60014000000,
+        "total_equity": 125713000000,
+        "fetched_at": "2026-09-02T23:44:42.156792+00:00"
       },
       {
-        "id": 32,
-        "ticker": "GOOD",
+        "id": 105,
+        "ticker": "META",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": 117929000000,
+        "gross_profit": 95280000000,
+        "operating_income": 46753000000,
+        "net_income": 39370000000,
+        "eps": 13.99,
+        "total_assets": 165987000000,
+        "total_liabilities": 41108000000,
+        "total_equity": 124879000000,
+        "fetched_at": "2026-09-02T23:44:42.156798+00:00"
+      }
+    ],
+    "V": [
+      {
+        "id": 116,
+        "ticker": "V",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 40000000000,
+        "gross_profit": 32145000000,
+        "operating_income": 23994000000,
+        "net_income": 20058000000,
+        "eps": 10.22,
+        "total_assets": 99627000000,
+        "total_liabilities": 61718000000,
+        "total_equity": 37909000000,
+        "fetched_at": "2026-09-02T22:45:33.199612+00:00"
+      },
+      {
+        "id": 117,
+        "ticker": "V",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 35926000000,
+        "gross_profit": 28884000000,
+        "operating_income": 23595000000,
+        "net_income": 19743000000,
+        "eps": 9.74,
+        "total_assets": 94511000000,
+        "total_liabilities": 55374000000,
+        "total_equity": 39137000000,
+        "fetched_at": "2026-09-02T22:45:33.199646+00:00"
+      },
+      {
+        "id": 118,
+        "ticker": "V",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 32653000000,
+        "gross_profit": 26086000000,
+        "operating_income": 21000000000,
+        "net_income": 17273000000,
+        "eps": 8.29,
+        "total_assets": 90499000000,
+        "total_liabilities": 51766000000,
+        "total_equity": 38733000000,
+        "fetched_at": "2026-09-02T22:45:33.19966+00:00"
+      },
+      {
+        "id": 119,
+        "ticker": "V",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 29310000000,
+        "gross_profit": 23577000000,
+        "operating_income": 18813000000,
+        "net_income": 14957000000,
+        "eps": 7.01,
+        "total_assets": 85501000000,
+        "total_liabilities": 49920000000,
+        "total_equity": 35581000000,
+        "fetched_at": "2026-09-02T22:45:33.199667+00:00"
+      },
+      {
+        "id": 120,
+        "ticker": "V",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": 24105000000,
+        "gross_profit": 19135000000,
+        "operating_income": 15804000000,
+        "net_income": 12311000000,
+        "eps": 5.63,
+        "total_assets": 82896000000,
+        "total_liabilities": 45307000000,
+        "total_equity": 37589000000,
+        "fetched_at": "2026-09-02T22:45:33.199673+00:00"
+      }
+    ],
+    "EPR": [
+      {
+        "id": 42,
+        "ticker": "EPR",
+        "fiscal_year": 2025,
+        "period": "FY",
+        "revenue": 672765000.0,
+        "gross_profit": 613593000.0,
+        "operating_income": 379962000.0,
+        "net_income": 274936000.0,
+        "eps": 3.28,
+        "total_assets": 5699762000.0,
+        "total_liabilities": 3370591000.0,
+        "total_equity": 2329171000.0,
+        "fetched_at": "2026-09-03T16:23:50.649935+00:00"
+      },
+      {
+        "id": 43,
+        "ticker": "EPR",
+        "fiscal_year": 2024,
+        "period": "FY",
+        "revenue": 640997000.0,
+        "gross_profit": 581851000.0,
+        "operating_income": 353969000.0,
+        "net_income": 146066000.0,
+        "eps": 1.6,
+        "total_assets": 5616507000.0,
+        "total_liabilities": 3293262000.0,
+        "total_equity": 2323245000.0,
+        "fetched_at": "2026-09-03T16:23:50.650144+00:00"
+      },
+      {
+        "id": 44,
+        "ticker": "EPR",
+        "fiscal_year": 2023,
+        "period": "FY",
+        "revenue": 659721000.0,
+        "gross_profit": 602243000.0,
+        "operating_income": 378063000.0,
+        "net_income": 173046000.0,
+        "eps": 1.97,
+        "total_assets": 5700885000.0,
+        "total_liabilities": 3246730000.0,
+        "total_equity": 2454155000.0,
+        "fetched_at": "2026-09-03T16:23:50.650327+00:00"
+      },
+      {
+        "id": 45,
+        "ticker": "EPR",
+        "fiscal_year": 2022,
+        "period": "FY",
+        "revenue": 610649000.0,
+        "gross_profit": 554664000.0,
+        "operating_income": 342190000.0,
+        "net_income": 176229000.0,
+        "eps": 2.03,
+        "total_assets": 5758701000.0,
+        "total_liabilities": 3222982000.0,
+        "total_equity": 2535719000.0,
+        "fetched_at": "2026-09-03T16:23:50.650537+00:00"
+      },
+      {
+        "id": 46,
+        "ticker": "EPR",
         "fiscal_year": 2021,
         "period": "FY",
         "revenue": null,
@@ -1716,69 +1932,84 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:04.526019+00:00"
+        "fetched_at": "2026-09-03T16:23:50.650711+00:00"
       }
     ],
-    "AGNC": [
+    "ORC": [
       {
-        "id": 15,
-        "ticker": "AGNC",
+        "id": 47,
+        "ticker": "ORC",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 1797000000.0,
+        "revenue": 179510000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": 1670000000.0,
-        "eps": 1.47,
-        "total_assets": 115077000000.0,
-        "total_liabilities": 102684000000.0,
-        "total_equity": 12393000000.0,
-        "fetched_at": "2026-09-02T23:44:59.23896+00:00"
+        "net_income": 159030000.0,
+        "eps": 1.24,
+        "total_assets": 11675993000.0,
+        "total_liabilities": 10304045000.0,
+        "total_equity": 1371948000.0,
+        "fetched_at": "2026-09-03T16:23:52.365442+00:00"
       },
       {
-        "id": 16,
-        "ticker": "AGNC",
+        "id": 48,
+        "ticker": "ORC",
         "fiscal_year": 2024,
         "period": "FY",
-        "revenue": 973000000.0,
+        "revenue": 54406000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": 863000000.0,
-        "eps": 0.93,
-        "total_assets": 88015000000.0,
-        "total_liabilities": 78253000000.0,
-        "total_equity": 9762000000.0,
-        "fetched_at": "2026-09-02T23:44:59.239121+00:00"
+        "net_income": 37662000.0,
+        "eps": 0.57,
+        "total_assets": 5721627000.0,
+        "total_liabilities": 5053127000.0,
+        "total_equity": 668500000.0,
+        "fetched_at": "2026-09-03T16:23:52.365673+00:00"
       },
       {
-        "id": 17,
-        "ticker": "AGNC",
+        "id": 49,
+        "ticker": "ORC",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": 251000000.0,
+        "revenue": -20695000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": 155000000.0,
-        "eps": 0.05,
-        "total_assets": 71596000000.0,
-        "total_liabilities": 63339000000.0,
-        "total_equity": 8257000000.0,
-        "fetched_at": "2026-09-02T23:44:59.239287+00:00"
+        "net_income": -39226000.0,
+        "eps": -0.89,
+        "total_assets": 4264947000.0,
+        "total_liabilities": 3795002000.0,
+        "total_equity": 469945000.0,
+        "fetched_at": "2026-09-03T16:23:52.365854+00:00"
       },
       {
-        "id": 18,
-        "ticker": "AGNC",
+        "id": 50,
+        "ticker": "ORC",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": -1116000000.0,
+        "revenue": -241004000.0,
         "gross_profit": null,
         "operating_income": null,
-        "net_income": -1190000000.0,
-        "eps": -2.41,
-        "total_assets": 51748000000.0,
-        "total_liabilities": 43878000000.0,
-        "total_equity": 7870000000.0,
-        "fetched_at": "2026-09-02T23:44:59.239428+00:00"
+        "net_income": -258453000.0,
+        "eps": -6.9,
+        "total_assets": 3865736000.0,
+        "total_liabilities": 3426973000.0,
+        "total_equity": 438763000.0,
+        "fetched_at": "2026-09-03T16:23:52.366029+00:00"
+      },
+      {
+        "id": 51,
+        "ticker": "ORC",
+        "fiscal_year": 2021,
+        "period": "FY",
+        "revenue": null,
+        "gross_profit": null,
+        "operating_income": null,
+        "net_income": null,
+        "eps": null,
+        "total_assets": null,
+        "total_liabilities": null,
+        "total_equity": null,
+        "fetched_at": "2026-09-03T16:23:52.36619+00:00"
       }
     ],
     "JPM": [
@@ -1858,147 +2089,70 @@
         "fetched_at": "2026-09-02T22:45:31.253475+00:00"
       }
     ],
-    "GOOGL": [
+    "O": [
       {
-        "id": 86,
-        "ticker": "GOOGL",
+        "id": 1,
+        "ticker": "O",
         "fiscal_year": 2025,
         "period": "FY",
-        "revenue": 402836000000,
-        "gross_profit": 240301000000,
-        "operating_income": 129039000000,
-        "net_income": 132170000000,
-        "eps": 10.91,
-        "total_assets": 595281000000,
-        "total_liabilities": 180016000000,
-        "total_equity": 415265000000,
-        "fetched_at": "2026-09-02T23:44:35.87342+00:00"
+        "revenue": 5749377000.0,
+        "gross_profit": 5320577000.0,
+        "operating_income": 2593823000.0,
+        "net_income": 1058590000.0,
+        "eps": 1.17,
+        "total_assets": 72795612000.0,
+        "total_liabilities": 32671644000.0,
+        "total_equity": 39438695000.0,
+        "fetched_at": "2026-09-03T16:23:36.055428+00:00"
       },
       {
-        "id": 87,
-        "ticker": "GOOGL",
+        "id": 2,
+        "ticker": "O",
         "fiscal_year": 2024,
         "period": "FY",
-        "revenue": 350018000000,
-        "gross_profit": 203712000000,
-        "operating_income": 112390000000,
-        "net_income": 100118000000,
-        "eps": 8.13,
-        "total_assets": 450256000000,
-        "total_liabilities": 125172000000,
-        "total_equity": 325084000000,
-        "fetched_at": "2026-09-02T23:44:35.873446+00:00"
+        "revenue": 5271142000.0,
+        "gross_profit": 4893467000.0,
+        "operating_income": 2320928000.0,
+        "net_income": 860772000.0,
+        "eps": 0.98,
+        "total_assets": 68835039000.0,
+        "total_liabilities": 29783353000.0,
+        "total_equity": 38840738000.0,
+        "fetched_at": "2026-09-03T16:23:36.055679+00:00"
       },
       {
-        "id": 88,
-        "ticker": "GOOGL",
+        "id": 3,
+        "ticker": "O",
         "fiscal_year": 2023,
         "period": "FY",
-        "revenue": 307394000000,
-        "gross_profit": 174062000000,
-        "operating_income": 84293000000,
-        "net_income": 73795000000,
-        "eps": 5.84,
-        "total_assets": 402392000000,
-        "total_liabilities": 119013000000,
-        "total_equity": 283379000000,
-        "fetched_at": "2026-09-02T23:44:35.873452+00:00"
+        "revenue": 4078993000.0,
+        "gross_profit": 3762029000.0,
+        "operating_income": 1722316000.0,
+        "net_income": 872309000.0,
+        "eps": 1.26,
+        "total_assets": 57779357000.0,
+        "total_liabilities": 24672388000.0,
+        "total_equity": 32941467000.0,
+        "fetched_at": "2026-09-03T16:23:36.055875+00:00"
       },
       {
-        "id": 89,
-        "ticker": "GOOGL",
+        "id": 4,
+        "ticker": "O",
         "fiscal_year": 2022,
         "period": "FY",
-        "revenue": 282836000000,
-        "gross_profit": 156633000000,
-        "operating_income": 74842000000,
-        "net_income": 59972000000,
-        "eps": 4.59,
-        "total_assets": 365264000000,
-        "total_liabilities": 109120000000,
-        "total_equity": 256144000000,
-        "fetched_at": "2026-09-02T23:44:35.873457+00:00"
+        "revenue": 3343681000.0,
+        "gross_profit": 3117351000.0,
+        "operating_income": 1308503000.0,
+        "net_income": 869408000.0,
+        "eps": 1.42,
+        "total_assets": 49673092000.0,
+        "total_liabilities": 20829803000.0,
+        "total_equity": 28713149000.0,
+        "fetched_at": "2026-09-03T16:23:36.056057+00:00"
       },
       {
-        "id": 90,
-        "ticker": "GOOGL",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": 257637000000,
-        "gross_profit": 146698000000,
-        "operating_income": 78714000000,
-        "net_income": 76033000000,
-        "eps": 5.69,
-        "total_assets": 359268000000,
-        "total_liabilities": 107633000000,
-        "total_equity": 251635000000,
-        "fetched_at": "2026-09-02T23:44:35.873461+00:00"
-      }
-    ],
-    "LAND": [
-      {
-        "id": 33,
-        "ticker": "LAND",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 88339000.0,
-        "gross_profit": 72055000.0,
-        "operating_income": 24539000.0,
-        "net_income": 13529000.0,
-        "eps": -0.29,
-        "total_assets": 1239172000.0,
-        "total_liabilities": 568886000.0,
-        "total_equity": 670286000.0,
-        "fetched_at": "2026-09-02T23:45:06.404961+00:00"
-      },
-      {
-        "id": 34,
-        "ticker": "LAND",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 85216000.0,
-        "gross_profit": 79882000.0,
-        "operating_income": 31380000.0,
-        "net_income": 13290000.0,
-        "eps": -0.29,
-        "total_assets": 1312195000.0,
-        "total_liabilities": 625013000.0,
-        "total_equity": 687182000.0,
-        "fetched_at": "2026-09-02T23:45:06.405131+00:00"
-      },
-      {
-        "id": 35,
-        "ticker": "LAND",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 90398000.0,
-        "gross_profit": 86197000.0,
-        "operating_income": 33483000.0,
-        "net_income": 14565000.0,
-        "eps": -0.28,
-        "total_assets": 1387324000.0,
-        "total_liabilities": 667711000.0,
-        "total_equity": 719613000.0,
-        "fetched_at": "2026-09-02T23:45:06.405296+00:00"
-      },
-      {
-        "id": 36,
-        "ticker": "LAND",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 89236000.0,
-        "gross_profit": 86417000.0,
-        "operating_income": 34774000.0,
-        "net_income": 4708000.0,
-        "eps": -0.43,
-        "total_assets": 1457251000.0,
-        "total_liabilities": 725889000.0,
-        "total_equity": 731362000.0,
-        "fetched_at": "2026-09-02T23:45:06.405442+00:00"
-      },
-      {
-        "id": 37,
-        "ticker": "LAND",
+        "id": 5,
+        "ticker": "O",
         "fiscal_year": 2021,
         "period": "FY",
         "revenue": null,
@@ -2009,161 +2163,7 @@
         "total_assets": null,
         "total_liabilities": null,
         "total_equity": null,
-        "fetched_at": "2026-09-02T23:45:06.405572+00:00"
-      }
-    ],
-    "STAG": [
-      {
-        "id": 10,
-        "ticker": "STAG",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 845184000.0,
-        "gross_profit": 673359000.0,
-        "operating_income": 319629000.0,
-        "net_income": 273519000.0,
-        "eps": 1.46,
-        "total_assets": 7208069000.0,
-        "total_liabilities": 3537040000.0,
-        "total_equity": 3595697000.0,
-        "fetched_at": "2026-09-02T23:44:57.459272+00:00"
-      },
-      {
-        "id": 11,
-        "ticker": "STAG",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 767384000.0,
-        "gross_profit": 612556000.0,
-        "operating_income": 270277000.0,
-        "net_income": 189220000.0,
-        "eps": 1.04,
-        "total_assets": 6833335000.0,
-        "total_liabilities": 3304227000.0,
-        "total_equity": 3457651000.0,
-        "fetched_at": "2026-09-02T23:44:57.459448+00:00"
-      },
-      {
-        "id": 12,
-        "ticker": "STAG",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 707835000.0,
-        "gross_profit": 568239000.0,
-        "operating_income": 242301000.0,
-        "net_income": 192845000.0,
-        "eps": 1.07,
-        "total_assets": 6283458000.0,
-        "total_liabilities": 2837647000.0,
-        "total_equity": 3374680000.0,
-        "fetched_at": "2026-09-02T23:44:57.459594+00:00"
-      },
-      {
-        "id": 13,
-        "ticker": "STAG",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 657345000.0,
-        "gross_profit": 531644000.0,
-        "operating_income": 209646000.0,
-        "net_income": 178326000.0,
-        "eps": 1.0,
-        "total_assets": 6184988000.0,
-        "total_liabilities": 2726807000.0,
-        "total_equity": 3384824000.0,
-        "fetched_at": "2026-09-02T23:44:57.459735+00:00"
-      },
-      {
-        "id": 14,
-        "ticker": "STAG",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": null,
-        "gross_profit": null,
-        "operating_income": null,
-        "net_income": null,
-        "eps": null,
-        "total_assets": null,
-        "total_liabilities": null,
-        "total_equity": null,
-        "fetched_at": "2026-09-02T23:44:57.459866+00:00"
-      }
-    ],
-    "AMZN": [
-      {
-        "id": 91,
-        "ticker": "AMZN",
-        "fiscal_year": 2025,
-        "period": "FY",
-        "revenue": 716924000000,
-        "gross_profit": 360510000000,
-        "operating_income": 79975000000,
-        "net_income": 77670000000,
-        "eps": 7.29,
-        "total_assets": 818042000000,
-        "total_liabilities": 406977000000,
-        "total_equity": 411065000000,
-        "fetched_at": "2026-09-02T23:44:37.922942+00:00"
-      },
-      {
-        "id": 92,
-        "ticker": "AMZN",
-        "fiscal_year": 2024,
-        "period": "FY",
-        "revenue": 637959000000,
-        "gross_profit": 311671000000,
-        "operating_income": 68593000000,
-        "net_income": 59248000000,
-        "eps": 5.66,
-        "total_assets": 624894000000,
-        "total_liabilities": 338924000000,
-        "total_equity": 285970000000,
-        "fetched_at": "2026-09-02T23:44:37.922966+00:00"
-      },
-      {
-        "id": 93,
-        "ticker": "AMZN",
-        "fiscal_year": 2023,
-        "period": "FY",
-        "revenue": 574785000000,
-        "gross_profit": 270046000000,
-        "operating_income": 36852000000,
-        "net_income": 30425000000,
-        "eps": 2.95,
-        "total_assets": 527854000000,
-        "total_liabilities": 325979000000,
-        "total_equity": 201875000000,
-        "fetched_at": "2026-09-02T23:44:37.922972+00:00"
-      },
-      {
-        "id": 94,
-        "ticker": "AMZN",
-        "fiscal_year": 2022,
-        "period": "FY",
-        "revenue": 513983000000,
-        "gross_profit": 225152000000,
-        "operating_income": 12248000000,
-        "net_income": -2722000000,
-        "eps": -0.27,
-        "total_assets": 462675000000,
-        "total_liabilities": 316632000000,
-        "total_equity": 146043000000,
-        "fetched_at": "2026-09-02T23:44:37.922977+00:00"
-      },
-      {
-        "id": 95,
-        "ticker": "AMZN",
-        "fiscal_year": 2021,
-        "period": "FY",
-        "revenue": 469822000000,
-        "gross_profit": 197478000000,
-        "operating_income": 24879000000,
-        "net_income": 33364000000,
-        "eps": 3.3,
-        "total_assets": 420549000000,
-        "total_liabilities": 282304000000,
-        "total_equity": 138245000000,
-        "fetched_at": "2026-09-02T23:44:37.922981+00:00"
+        "fetched_at": "2026-09-03T16:23:36.056223+00:00"
       }
     ],
     "AAPL": [
@@ -2297,56 +2297,56 @@
         "fetched_at": "2026-09-02T23:44:40.256368+00:00"
       }
     ],
-    "MAIN": [
+    "LAND": [
       {
-        "id": 6,
-        "ticker": "MAIN",
+        "id": 36,
+        "ticker": "LAND",
         "report_date": "2026-11-05",
-        "eps_estimated": 0.95,
+        "eps_estimated": -0.1,
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:56.073508+00:00"
+        "fetched_at": "2026-09-03T16:23:47.881218+00:00"
       },
       {
-        "id": 7,
-        "ticker": "MAIN",
-        "report_date": "2026-08-06",
-        "eps_estimated": 0.96,
-        "eps_actual": 0.97,
+        "id": 37,
+        "ticker": "LAND",
+        "report_date": "2026-08-11",
+        "eps_estimated": -0.28,
+        "eps_actual": -0.21,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:56.073558+00:00"
+        "fetched_at": "2026-09-03T16:23:47.88128+00:00"
       },
       {
-        "id": 8,
-        "ticker": "MAIN",
-        "report_date": "2026-05-07",
-        "eps_estimated": 1.01,
-        "eps_actual": 0.93,
+        "id": 38,
+        "ticker": "LAND",
+        "report_date": "2026-05-11",
+        "eps_estimated": -0.22,
+        "eps_actual": -0.22,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:56.07359+00:00"
+        "fetched_at": "2026-09-03T16:23:47.881319+00:00"
       },
       {
-        "id": 9,
-        "ticker": "MAIN",
-        "report_date": "2026-02-26",
-        "eps_estimated": 1.01,
-        "eps_actual": 1.03,
+        "id": 39,
+        "ticker": "LAND",
+        "report_date": "2026-02-24",
+        "eps_estimated": 0.13,
+        "eps_actual": 0.07,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:56.07362+00:00"
+        "fetched_at": "2026-09-03T16:23:47.881355+00:00"
       },
       {
-        "id": 10,
-        "ticker": "MAIN",
-        "report_date": "2025-11-06",
-        "eps_estimated": 1.19,
-        "eps_actual": 1.38,
+        "id": 40,
+        "ticker": "LAND",
+        "report_date": "2025-11-05",
+        "eps_estimated": -0.2,
+        "eps_actual": -0.11,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:56.073647+00:00"
+        "fetched_at": "2026-09-03T16:23:47.881387+00:00"
       }
     ],
     "PSEC": [
@@ -2358,7 +2358,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:08.758838+00:00"
+        "fetched_at": "2026-09-03T16:23:49.621015+00:00"
       },
       {
         "id": 42,
@@ -2368,7 +2368,7 @@
         "eps_actual": 0.15,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:08.758886+00:00"
+        "fetched_at": "2026-09-03T16:23:49.62108+00:00"
       },
       {
         "id": 43,
@@ -2378,7 +2378,7 @@
         "eps_actual": 0.16,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:08.758918+00:00"
+        "fetched_at": "2026-09-03T16:23:49.621119+00:00"
       },
       {
         "id": 44,
@@ -2388,7 +2388,7 @@
         "eps_actual": 0.19,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:08.758947+00:00"
+        "fetched_at": "2026-09-03T16:23:49.621154+00:00"
       },
       {
         "id": 45,
@@ -2398,59 +2398,59 @@
         "eps_actual": 0.17,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:08.758975+00:00"
+        "fetched_at": "2026-09-03T16:23:49.621187+00:00"
       }
     ],
-    "LAND": [
+    "MAIN": [
       {
-        "id": 36,
-        "ticker": "LAND",
+        "id": 6,
+        "ticker": "MAIN",
         "report_date": "2026-11-05",
-        "eps_estimated": -0.1,
+        "eps_estimated": 0.95,
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:06.964859+00:00"
+        "fetched_at": "2026-09-03T16:23:38.335885+00:00"
       },
       {
-        "id": 37,
-        "ticker": "LAND",
-        "report_date": "2026-08-11",
-        "eps_estimated": -0.28,
-        "eps_actual": -0.21,
+        "id": 7,
+        "ticker": "MAIN",
+        "report_date": "2026-08-06",
+        "eps_estimated": 0.96,
+        "eps_actual": 0.97,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:06.964919+00:00"
+        "fetched_at": "2026-09-03T16:23:38.335951+00:00"
       },
       {
-        "id": 38,
-        "ticker": "LAND",
-        "report_date": "2026-05-11",
-        "eps_estimated": -0.22,
-        "eps_actual": -0.22,
+        "id": 8,
+        "ticker": "MAIN",
+        "report_date": "2026-05-07",
+        "eps_estimated": 1.01,
+        "eps_actual": 0.93,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:06.964953+00:00"
+        "fetched_at": "2026-09-03T16:23:38.335992+00:00"
       },
       {
-        "id": 39,
-        "ticker": "LAND",
-        "report_date": "2026-02-24",
-        "eps_estimated": 0.13,
-        "eps_actual": 0.07,
+        "id": 9,
+        "ticker": "MAIN",
+        "report_date": "2026-02-26",
+        "eps_estimated": 1.01,
+        "eps_actual": 1.03,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:06.964982+00:00"
+        "fetched_at": "2026-09-03T16:23:38.336029+00:00"
       },
       {
-        "id": 40,
-        "ticker": "LAND",
-        "report_date": "2025-11-05",
-        "eps_estimated": -0.2,
-        "eps_actual": -0.11,
+        "id": 10,
+        "ticker": "MAIN",
+        "report_date": "2025-11-06",
+        "eps_estimated": 0.98,
+        "eps_actual": 0.97,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:06.965009+00:00"
+        "fetched_at": "2026-09-03T16:23:38.336063+00:00"
       }
     ],
     "EFC": [
@@ -2462,7 +2462,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:22.156674+00:00"
+        "fetched_at": "2026-09-03T16:24:01.539733+00:00"
       },
       {
         "id": 77,
@@ -2472,17 +2472,17 @@
         "eps_actual": 0.6,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:22.156722+00:00"
+        "fetched_at": "2026-09-03T16:24:01.539795+00:00"
       },
       {
         "id": 78,
         "ticker": "EFC",
         "report_date": "2026-05-05",
-        "eps_estimated": 0.49,
-        "eps_actual": 0.55,
+        "eps_estimated": 0.45,
+        "eps_actual": 0.78,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:22.156754+00:00"
+        "fetched_at": "2026-09-03T16:24:01.539836+00:00"
       },
       {
         "id": 79,
@@ -2492,7 +2492,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:22.156783+00:00"
+        "fetched_at": "2026-09-03T16:24:01.539873+00:00"
       },
       {
         "id": 80,
@@ -2502,111 +2502,7 @@
         "eps_actual": 0.53,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:22.15681+00:00"
-      }
-    ],
-    "GAIN": [
-      {
-        "id": 26,
-        "ticker": "GAIN",
-        "report_date": "2026-11-03",
-        "eps_estimated": 0.21,
-        "eps_actual": null,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:03.352603+00:00"
-      },
-      {
-        "id": 27,
-        "ticker": "GAIN",
-        "report_date": "2026-08-06",
-        "eps_estimated": 0.22,
-        "eps_actual": 0.4,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:03.352654+00:00"
-      },
-      {
-        "id": 28,
-        "ticker": "GAIN",
-        "report_date": "2026-02-03",
-        "eps_estimated": 0.23,
-        "eps_actual": -0.16,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:03.352688+00:00"
-      },
-      {
-        "id": 29,
-        "ticker": "GAIN",
-        "report_date": "2025-11-04",
-        "eps_estimated": 0.23,
-        "eps_actual": 0.11,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:03.352716+00:00"
-      },
-      {
-        "id": 30,
-        "ticker": "GAIN",
-        "report_date": "2025-08-12",
-        "eps_estimated": 0.23,
-        "eps_actual": 0.25,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:03.352744+00:00"
-      }
-    ],
-    "GOOD": [
-      {
-        "id": 31,
-        "ticker": "GOOD",
-        "report_date": "2026-11-03",
-        "eps_estimated": 0.05,
-        "eps_actual": null,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:05.06711+00:00"
-      },
-      {
-        "id": 32,
-        "ticker": "GOOD",
-        "report_date": "2026-08-05",
-        "eps_estimated": 0.05,
-        "eps_actual": 0.08,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:05.067158+00:00"
-      },
-      {
-        "id": 33,
-        "ticker": "GOOD",
-        "report_date": "2026-05-05",
-        "eps_estimated": 0.07,
-        "eps_actual": 0.05,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:05.067211+00:00"
-      },
-      {
-        "id": 34,
-        "ticker": "GOOD",
-        "report_date": "2026-02-18",
-        "eps_estimated": 0.02,
-        "eps_actual": 0.05,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:05.067242+00:00"
-      },
-      {
-        "id": 35,
-        "ticker": "GOOD",
-        "report_date": "2025-11-03",
-        "eps_estimated": 0.04,
-        "eps_actual": 0.04,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:05.067269+00:00"
+        "fetched_at": "2026-09-03T16:24:01.539907+00:00"
       }
     ],
     "LTC": [
@@ -2618,7 +2514,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:17.789768+00:00"
+        "fetched_at": "2026-09-03T16:23:58.345836+00:00"
       },
       {
         "id": 67,
@@ -2628,7 +2524,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:17.78982+00:00"
+        "fetched_at": "2026-09-03T16:23:58.345897+00:00"
       },
       {
         "id": 68,
@@ -2638,7 +2534,7 @@
         "eps_actual": 0.46,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:17.789853+00:00"
+        "fetched_at": "2026-09-03T16:23:58.345938+00:00"
       },
       {
         "id": 69,
@@ -2648,7 +2544,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:17.789881+00:00"
+        "fetched_at": "2026-09-03T16:23:58.345979+00:00"
       },
       {
         "id": 70,
@@ -2658,7 +2554,111 @@
         "eps_actual": 0.48,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:17.789908+00:00"
+        "fetched_at": "2026-09-03T16:23:58.34602+00:00"
+      }
+    ],
+    "GAIN": [
+      {
+        "id": 26,
+        "ticker": "GAIN",
+        "report_date": "2026-11-03",
+        "eps_estimated": 0.21,
+        "eps_actual": null,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:44.773947+00:00"
+      },
+      {
+        "id": 27,
+        "ticker": "GAIN",
+        "report_date": "2026-08-06",
+        "eps_estimated": 0.22,
+        "eps_actual": 0.4,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:44.774011+00:00"
+      },
+      {
+        "id": 28,
+        "ticker": "GAIN",
+        "report_date": "2026-02-03",
+        "eps_estimated": 0.23,
+        "eps_actual": -0.16,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:44.774052+00:00"
+      },
+      {
+        "id": 29,
+        "ticker": "GAIN",
+        "report_date": "2025-11-04",
+        "eps_estimated": 0.23,
+        "eps_actual": 0.11,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:44.774087+00:00"
+      },
+      {
+        "id": 30,
+        "ticker": "GAIN",
+        "report_date": "2025-08-12",
+        "eps_estimated": 0.23,
+        "eps_actual": 0.25,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:44.774121+00:00"
+      }
+    ],
+    "GOOD": [
+      {
+        "id": 31,
+        "ticker": "GOOD",
+        "report_date": "2026-11-03",
+        "eps_estimated": 0.05,
+        "eps_actual": null,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:46.371381+00:00"
+      },
+      {
+        "id": 32,
+        "ticker": "GOOD",
+        "report_date": "2026-08-05",
+        "eps_estimated": 0.05,
+        "eps_actual": 0.08,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:46.371452+00:00"
+      },
+      {
+        "id": 33,
+        "ticker": "GOOD",
+        "report_date": "2026-05-05",
+        "eps_estimated": 0.07,
+        "eps_actual": 0.05,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:46.371492+00:00"
+      },
+      {
+        "id": 34,
+        "ticker": "GOOD",
+        "report_date": "2026-02-18",
+        "eps_estimated": 0.02,
+        "eps_actual": 0.05,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:46.37155+00:00"
+      },
+      {
+        "id": 35,
+        "ticker": "GOOD",
+        "report_date": "2025-11-03",
+        "eps_estimated": 0.04,
+        "eps_actual": 0.04,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:46.371586+00:00"
       }
     ],
     "O": [
@@ -2670,7 +2670,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:54.142723+00:00"
+        "fetched_at": "2026-09-03T16:23:36.630355+00:00"
       },
       {
         "id": 2,
@@ -2680,7 +2680,7 @@
         "eps_actual": 0.37,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:54.142772+00:00"
+        "fetched_at": "2026-09-03T16:23:36.630418+00:00"
       },
       {
         "id": 3,
@@ -2690,7 +2690,7 @@
         "eps_actual": 0.34,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:54.142806+00:00"
+        "fetched_at": "2026-09-03T16:23:36.630463+00:00"
       },
       {
         "id": 4,
@@ -2700,7 +2700,7 @@
         "eps_actual": 0.33,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:54.142838+00:00"
+        "fetched_at": "2026-09-03T16:23:36.630505+00:00"
       },
       {
         "id": 5,
@@ -2710,7 +2710,7 @@
         "eps_actual": 0.36,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:54.142869+00:00"
+        "fetched_at": "2026-09-03T16:23:36.630566+00:00"
       }
     ],
     "ABR": [
@@ -2718,11 +2718,11 @@
         "id": 71,
         "ticker": "ABR",
         "report_date": "2026-10-30",
-        "eps_estimated": 0.06,
+        "eps_estimated": 0.08,
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:20.316342+00:00"
+        "fetched_at": "2026-09-03T16:23:59.965304+00:00"
       },
       {
         "id": 72,
@@ -2732,7 +2732,7 @@
         "eps_actual": 0.1,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:20.316392+00:00"
+        "fetched_at": "2026-09-03T16:23:59.965366+00:00"
       },
       {
         "id": 73,
@@ -2742,7 +2742,7 @@
         "eps_actual": 0.07,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:20.316425+00:00"
+        "fetched_at": "2026-09-03T16:23:59.965405+00:00"
       },
       {
         "id": 74,
@@ -2752,7 +2752,7 @@
         "eps_actual": 0.19,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:20.316454+00:00"
+        "fetched_at": "2026-09-03T16:23:59.96544+00:00"
       },
       {
         "id": 75,
@@ -2762,7 +2762,7 @@
         "eps_actual": 0.35,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:20.316481+00:00"
+        "fetched_at": "2026-09-03T16:23:59.965473+00:00"
       }
     ],
     "AMZN": [
@@ -2869,6 +2869,110 @@
         "fetched_at": "2026-09-02T23:44:31.929678+00:00"
       }
     ],
+    "EPR": [
+      {
+        "id": 46,
+        "ticker": "EPR",
+        "report_date": "2026-10-28",
+        "eps_estimated": 0.85,
+        "eps_actual": null,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:51.202654+00:00"
+      },
+      {
+        "id": 47,
+        "ticker": "EPR",
+        "report_date": "2026-07-29",
+        "eps_estimated": 0.76,
+        "eps_actual": 0.8,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:51.202716+00:00"
+      },
+      {
+        "id": 48,
+        "ticker": "EPR",
+        "report_date": "2026-05-06",
+        "eps_estimated": 0.68,
+        "eps_actual": 0.69,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:51.202756+00:00"
+      },
+      {
+        "id": 49,
+        "ticker": "EPR",
+        "report_date": "2026-02-25",
+        "eps_estimated": 0.72,
+        "eps_actual": 0.81,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:51.202792+00:00"
+      },
+      {
+        "id": 50,
+        "ticker": "EPR",
+        "report_date": "2025-10-29",
+        "eps_estimated": 0.8,
+        "eps_actual": 0.93,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:51.202825+00:00"
+      }
+    ],
+    "META": [
+      {
+        "id": 106,
+        "ticker": "META",
+        "report_date": "2026-10-28",
+        "eps_estimated": 6.75,
+        "eps_actual": null,
+        "revenue_estimated": 63246260000,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-02T23:44:42.408987+00:00"
+      },
+      {
+        "id": 107,
+        "ticker": "META",
+        "report_date": "2026-07-29",
+        "eps_estimated": 7.19,
+        "eps_actual": 6.18,
+        "revenue_estimated": 60223640000,
+        "revenue_actual": 60801000000,
+        "fetched_at": "2026-09-02T23:44:42.409008+00:00"
+      },
+      {
+        "id": 108,
+        "ticker": "META",
+        "report_date": "2026-04-29",
+        "eps_estimated": 6.7,
+        "eps_actual": 10.44,
+        "revenue_estimated": 55556590000,
+        "revenue_actual": 56311000000,
+        "fetched_at": "2026-09-02T23:44:42.409013+00:00"
+      },
+      {
+        "id": 109,
+        "ticker": "META",
+        "report_date": "2026-01-28",
+        "eps_estimated": 8.19,
+        "eps_actual": 8.88,
+        "revenue_estimated": 58330100000,
+        "revenue_actual": 59893000000,
+        "fetched_at": "2026-09-02T23:44:42.409017+00:00"
+      },
+      {
+        "id": 110,
+        "ticker": "META",
+        "report_date": "2025-10-29",
+        "eps_estimated": 6.72,
+        "eps_actual": 1.05,
+        "revenue_estimated": 49508130000,
+        "revenue_actual": 51242000000,
+        "fetched_at": "2026-09-02T23:44:42.40902+00:00"
+      }
+    ],
     "MSFT": [
       {
         "id": 86,
@@ -2919,58 +3023,6 @@
         "revenue_estimated": 75494678452,
         "revenue_actual": 77673000000,
         "fetched_at": "2026-09-02T23:44:34.020568+00:00"
-      }
-    ],
-    "EPR": [
-      {
-        "id": 46,
-        "ticker": "EPR",
-        "report_date": "2026-10-28",
-        "eps_estimated": 0.83,
-        "eps_actual": null,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:10.460599+00:00"
-      },
-      {
-        "id": 47,
-        "ticker": "EPR",
-        "report_date": "2026-07-29",
-        "eps_estimated": 0.76,
-        "eps_actual": 0.8,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:10.460649+00:00"
-      },
-      {
-        "id": 48,
-        "ticker": "EPR",
-        "report_date": "2026-05-06",
-        "eps_estimated": 0.68,
-        "eps_actual": 0.69,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:10.460681+00:00"
-      },
-      {
-        "id": 49,
-        "ticker": "EPR",
-        "report_date": "2026-02-25",
-        "eps_estimated": 0.72,
-        "eps_actual": 0.81,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:10.460709+00:00"
-      },
-      {
-        "id": 50,
-        "ticker": "EPR",
-        "report_date": "2025-10-29",
-        "eps_estimated": 0.8,
-        "eps_actual": 0.93,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:10.460736+00:00"
       }
     ],
     "GOOGL": [
@@ -3025,6 +3077,58 @@
         "fetched_at": "2026-09-02T23:44:36.10709+00:00"
       }
     ],
+    "ARR": [
+      {
+        "id": 21,
+        "ticker": "ARR",
+        "report_date": "2026-10-28",
+        "eps_estimated": 0.72,
+        "eps_actual": null,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:43.222005+00:00"
+      },
+      {
+        "id": 22,
+        "ticker": "ARR",
+        "report_date": "2026-07-22",
+        "eps_estimated": 0.72,
+        "eps_actual": 0.72,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:43.222067+00:00"
+      },
+      {
+        "id": 23,
+        "ticker": "ARR",
+        "report_date": "2026-04-22",
+        "eps_estimated": 0.49,
+        "eps_actual": -0.49,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:43.222107+00:00"
+      },
+      {
+        "id": 24,
+        "ticker": "ARR",
+        "report_date": "2026-02-18",
+        "eps_estimated": 0.77,
+        "eps_actual": 0.71,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:43.222143+00:00"
+      },
+      {
+        "id": 25,
+        "ticker": "ARR",
+        "report_date": "2025-10-22",
+        "eps_estimated": 0.79,
+        "eps_actual": 0.72,
+        "revenue_estimated": null,
+        "revenue_actual": null,
+        "fetched_at": "2026-09-03T16:23:43.222176+00:00"
+      }
+    ],
     "TSLA": [
       {
         "id": 111,
@@ -3077,68 +3181,16 @@
         "fetched_at": "2026-09-02T22:45:27.555946+00:00"
       }
     ],
-    "ARR": [
-      {
-        "id": 21,
-        "ticker": "ARR",
-        "report_date": "2026-10-28",
-        "eps_estimated": 0.72,
-        "eps_actual": null,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:01.556853+00:00"
-      },
-      {
-        "id": 22,
-        "ticker": "ARR",
-        "report_date": "2026-07-22",
-        "eps_estimated": 0.72,
-        "eps_actual": 0.72,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:01.556902+00:00"
-      },
-      {
-        "id": 23,
-        "ticker": "ARR",
-        "report_date": "2026-04-22",
-        "eps_estimated": 0.49,
-        "eps_actual": -0.49,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:01.556934+00:00"
-      },
-      {
-        "id": 24,
-        "ticker": "ARR",
-        "report_date": "2026-02-18",
-        "eps_estimated": 0.77,
-        "eps_actual": 0.71,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:01.556961+00:00"
-      },
-      {
-        "id": 25,
-        "ticker": "ARR",
-        "report_date": "2025-10-22",
-        "eps_estimated": 0.79,
-        "eps_actual": 0.72,
-        "revenue_estimated": null,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:01.556987+00:00"
-      }
-    ],
     "STAG": [
       {
         "id": 11,
         "ticker": "STAG",
         "report_date": "2026-10-28",
-        "eps_estimated": 0.27,
+        "eps_estimated": 0.31,
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:57.977031+00:00"
+        "fetched_at": "2026-09-03T16:23:40.105116+00:00"
       },
       {
         "id": 12,
@@ -3148,7 +3200,7 @@
         "eps_actual": 0.28,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:57.977082+00:00"
+        "fetched_at": "2026-09-03T16:23:40.105179+00:00"
       },
       {
         "id": 13,
@@ -3158,7 +3210,7 @@
         "eps_actual": 0.25,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:57.977115+00:00"
+        "fetched_at": "2026-09-03T16:23:40.105219+00:00"
       },
       {
         "id": 14,
@@ -3168,7 +3220,7 @@
         "eps_actual": 0.25,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:57.977142+00:00"
+        "fetched_at": "2026-09-03T16:23:40.105255+00:00"
       },
       {
         "id": 15,
@@ -3178,59 +3230,7 @@
         "eps_actual": 0.26,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:57.977169+00:00"
-      }
-    ],
-    "META": [
-      {
-        "id": 106,
-        "ticker": "META",
-        "report_date": "2026-10-28",
-        "eps_estimated": 6.75,
-        "eps_actual": null,
-        "revenue_estimated": 63246260000,
-        "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:42.408987+00:00"
-      },
-      {
-        "id": 107,
-        "ticker": "META",
-        "report_date": "2026-07-29",
-        "eps_estimated": 7.19,
-        "eps_actual": 6.18,
-        "revenue_estimated": 60223640000,
-        "revenue_actual": 60801000000,
-        "fetched_at": "2026-09-02T23:44:42.409008+00:00"
-      },
-      {
-        "id": 108,
-        "ticker": "META",
-        "report_date": "2026-04-29",
-        "eps_estimated": 6.7,
-        "eps_actual": 10.44,
-        "revenue_estimated": 55556590000,
-        "revenue_actual": 56311000000,
-        "fetched_at": "2026-09-02T23:44:42.409013+00:00"
-      },
-      {
-        "id": 109,
-        "ticker": "META",
-        "report_date": "2026-01-28",
-        "eps_estimated": 8.19,
-        "eps_actual": 8.88,
-        "revenue_estimated": 58330100000,
-        "revenue_actual": 59893000000,
-        "fetched_at": "2026-09-02T23:44:42.409017+00:00"
-      },
-      {
-        "id": 110,
-        "ticker": "META",
-        "report_date": "2025-10-29",
-        "eps_estimated": 6.72,
-        "eps_actual": 1.05,
-        "revenue_estimated": 49508130000,
-        "revenue_actual": 51242000000,
-        "fetched_at": "2026-09-02T23:44:42.40902+00:00"
+        "fetched_at": "2026-09-03T16:23:40.105288+00:00"
       }
     ],
     "V": [
@@ -3294,7 +3294,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:12.365522+00:00"
+        "fetched_at": "2026-09-03T16:23:52.82745+00:00"
       },
       {
         "id": 52,
@@ -3304,7 +3304,7 @@
         "eps_actual": 0.62,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:12.365575+00:00"
+        "fetched_at": "2026-09-03T16:23:52.827532+00:00"
       },
       {
         "id": 53,
@@ -3314,7 +3314,7 @@
         "eps_actual": -0.11,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:12.365607+00:00"
+        "fetched_at": "2026-09-03T16:23:52.827576+00:00"
       },
       {
         "id": 54,
@@ -3324,7 +3324,7 @@
         "eps_actual": 0.2,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:12.365636+00:00"
+        "fetched_at": "2026-09-03T16:23:52.827614+00:00"
       },
       {
         "id": 55,
@@ -3334,7 +3334,7 @@
         "eps_actual": 0.16,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:12.365664+00:00"
+        "fetched_at": "2026-09-03T16:23:52.827647+00:00"
       }
     ],
     "NLY": [
@@ -3346,7 +3346,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:14.230363+00:00"
+        "fetched_at": "2026-09-03T16:23:54.817067+00:00"
       },
       {
         "id": 57,
@@ -3356,7 +3356,7 @@
         "eps_actual": 0.79,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:14.23041+00:00"
+        "fetched_at": "2026-09-03T16:23:54.817131+00:00"
       },
       {
         "id": 58,
@@ -3366,7 +3366,7 @@
         "eps_actual": 0.76,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:14.230444+00:00"
+        "fetched_at": "2026-09-03T16:23:54.817172+00:00"
       },
       {
         "id": 59,
@@ -3376,7 +3376,7 @@
         "eps_actual": 0.74,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:14.230472+00:00"
+        "fetched_at": "2026-09-03T16:23:54.817208+00:00"
       },
       {
         "id": 60,
@@ -3386,7 +3386,7 @@
         "eps_actual": 0.73,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:14.230499+00:00"
+        "fetched_at": "2026-09-03T16:23:54.817242+00:00"
       }
     ],
     "ADC": [
@@ -3398,7 +3398,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:16.069585+00:00"
+        "fetched_at": "2026-09-03T16:23:56.606407+00:00"
       },
       {
         "id": 62,
@@ -3408,7 +3408,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:16.069634+00:00"
+        "fetched_at": "2026-09-03T16:23:56.60647+00:00"
       },
       {
         "id": 63,
@@ -3418,7 +3418,7 @@
         "eps_actual": 0.49,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:16.069667+00:00"
+        "fetched_at": "2026-09-03T16:23:56.60653+00:00"
       },
       {
         "id": 64,
@@ -3428,7 +3428,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:16.069708+00:00"
+        "fetched_at": "2026-09-03T16:23:56.606571+00:00"
       },
       {
         "id": 65,
@@ -3438,7 +3438,7 @@
         "eps_actual": 0.47,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:45:16.069738+00:00"
+        "fetched_at": "2026-09-03T16:23:56.606605+00:00"
       }
     ],
     "AGNC": [
@@ -3450,7 +3450,7 @@
         "eps_actual": null,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:59.812074+00:00"
+        "fetched_at": "2026-09-03T16:23:41.633193+00:00"
       },
       {
         "id": 17,
@@ -3460,7 +3460,7 @@
         "eps_actual": 0.4,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:59.812121+00:00"
+        "fetched_at": "2026-09-03T16:23:41.633256+00:00"
       },
       {
         "id": 18,
@@ -3470,17 +3470,17 @@
         "eps_actual": -0.17,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:59.812152+00:00"
+        "fetched_at": "2026-09-03T16:23:41.633296+00:00"
       },
       {
         "id": 19,
         "ticker": "AGNC",
         "report_date": "2026-01-26",
-        "eps_estimated": 0.37,
-        "eps_actual": 0.35,
+        "eps_estimated": 0.45,
+        "eps_actual": 0.83,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:59.812197+00:00"
+        "fetched_at": "2026-09-03T16:23:41.633332+00:00"
       },
       {
         "id": 20,
@@ -3490,7 +3490,7 @@
         "eps_actual": 0.35,
         "revenue_estimated": null,
         "revenue_actual": null,
-        "fetched_at": "2026-09-02T23:44:59.812228+00:00"
+        "fetched_at": "2026-09-03T16:23:41.633365+00:00"
       }
     ],
     "JPM": [
@@ -3900,7 +3900,7 @@
         "split_date": "2023-10-02",
         "numerator": 0.2,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:45:01.857866+00:00"
+        "fetched_at": "2026-09-03T16:23:43.586648+00:00"
       },
       {
         "id": 3,
@@ -3908,7 +3908,7 @@
         "split_date": "2015-08-03",
         "numerator": 0.125,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:45:01.85785+00:00"
+        "fetched_at": "2026-09-03T16:23:43.586626+00:00"
       }
     ],
     "NLY": [
@@ -3918,7 +3918,7 @@
         "split_date": "2022-09-26",
         "numerator": 0.25,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:45:14.677501+00:00"
+        "fetched_at": "2026-09-03T16:23:55.376419+00:00"
       }
     ],
     "ORC": [
@@ -3928,7 +3928,7 @@
         "split_date": "2022-08-31",
         "numerator": 0.2,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:45:12.632277+00:00"
+        "fetched_at": "2026-09-03T16:23:53.492322+00:00"
       }
     ],
     "TSLA": [
@@ -4008,7 +4008,7 @@
         "split_date": "2021-11-15",
         "numerator": 1.032,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:44:54.627649+00:00"
+        "fetched_at": "2026-09-03T16:23:37.177597+00:00"
       },
       {
         "id": 1,
@@ -4016,7 +4016,7 @@
         "split_date": "2005-01-03",
         "numerator": 2.0,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:44:54.627632+00:00"
+        "fetched_at": "2026-09-03T16:23:37.177574+00:00"
       }
     ],
     "AAPL": [
@@ -4186,7 +4186,7 @@
         "split_date": "1998-10-01",
         "numerator": 1.1,
         "denominator": 1,
-        "fetched_at": "2026-09-02T23:45:18.230757+00:00"
+        "fetched_at": "2026-09-03T16:23:58.743329+00:00"
       }
     ]
   }
