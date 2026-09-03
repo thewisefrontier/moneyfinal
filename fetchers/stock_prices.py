@@ -1,19 +1,25 @@
 """
-주식 시세 및 상장종목 수집기
-1차 출처: 공공데이터포털 금융위원회 (오픈API_활용자가이드_금융위원회_주식시세정보 검증 완료)
-- 일반 실행: beginBasDt 범위조회(최근 10일)로 전 종목 수집
-  (basDt 정확일치는 발행 시차로 대부분 0건 - 실측 확인: 5주 이상 전체 무갱신 상태였음)
-- 백필 실행: python fetchers/stock_prices.py backfill [일수]
-  → beginBasDt/endBasDt 범위 조회 (가이드 공식 지원 파라미터), 기본 35일
-- 실측: GitHub Actions 러너 -> data.go.kr 구간에서 ConnectTimeout이 간헐적으로
-  발생(로컬에서는 같은 요청이 1초 내 응답 - 페이로드 크기가 아니라 네트워크
-  경로 문제). 타임아웃을 늘리는 대신 페이지당 짧은 타임아웃 + 재시도로 대응.
+주식 시세 및 상장종목 수집기 (일별 시세, run_daily)
+1차 출처: Yahoo Finance (.KS/.KQ 티커)
+- 2026-09-03: GitHub Actions 러너 -> data.go.kr 구간이 그날 사실상 전면 차단
+  상태였음(제3자 네트워크에서는 0.3초 만에 정상 응답하는데 러너에서만
+  ConnectTimeout 100%). 웹 검색으로 확인한 바로는 공공데이터포털 일부 API가
+  보안상 해외 클라우드 IP를 차단하고 국내 IP만 허용하는 정책이 있어, GitHub
+  Actions 공용 IP 대역이 여기 걸렸을 가능성이 높음(우리 쪽 키/코드 문제 아님,
+  data.go.kr 자체 장애도 아님 - 승인 상태도 정상 확인됨). 사용자 판단으로
+  data.go.kr을 후선으로 내리고 Yahoo Finance를 1차로 승격함.
+- Yahoo는 "전종목 스캔"이 안 되므로, 직전 성공 스냅샷(최초엔 data.go.kr이
+  쌓아둔 것, 이후엔 자기 자신이 갱신한 것)에서 시가총액 상위 종목 코드를
+  가져와 그 종목들만 개별 조회한다(시가총액 자체는 스냅샷 값을 그대로 이월,
+  종가/등락률/거래량만 최신화 - data.go.kr이 장기간 안 돌면 순위/시가총액
+  숫자가 서서히 낡아갈 수 있음, 알고 감수하기로 함).
+- 백필 실행: python fetchers/stock_prices.py backfill [일수] (RSI용 과거
+  시세)은 여전히 data.go.kr 전용(전종목 범위조회가 필요해 Yahoo로 대체 불가).
 
-2차(폴백) 출처: Yahoo Finance (.KS/.KQ 티커) - 1차 API가 장애/차단된 경우에만 사용.
-[[moneyfinal_krx_backup_pipeline_research]] 조사 결과에 따른 백업. Yahoo는 "전종목
-스캔"이 안 되므로, 직전 성공한 stock_prices 스냅샷에서 시가총액 상위 종목 코드를
-가져와 그 종목들만 개별 조회한다(시가총액 자체는 그 스냅샷 값을 그대로 이월 - 장애
-당일에는 갱신 안 됨, 종가/등락률/거래량만 최신화).
+2차(폴백) 출처: 공공데이터포털 금융위원회 (오픈API_활용자가이드_금융위원회_주식시세정보
+검증 완료). Yahoo가 실패했을 때만 시도. beginBasDt 범위조회(최근 10일)로 전 종목 수집
+(basDt 정확일치는 발행 시차로 대부분 0건이라 범위조회 사용). 페이지당 짧은
+타임아웃 + 재시도로 간헐적 ConnectTimeout에 대응.
 """
 import logging, os, sys, time
 from datetime import datetime, timedelta
@@ -143,8 +149,8 @@ def fetch_krx_stocks() -> list:
     return list(seen.values())
 
 
-def fetch_market_fallback(market: str, top_n: int = 100) -> list:
-    """1차 API 실패 시 직전 성공 스냅샷의 상위 top_n 종목만 Yahoo Finance로 갱신."""
+def fetch_market_yfinance(market: str, top_n: int = 100) -> list:
+    """직전 성공 스냅샷의 상위 top_n 종목만 Yahoo Finance로 갱신 (1차)."""
     ref_rows = supabase_select('stock_prices', {
         'select': 'stock_code,stock_name,market_cap,shares_out',
         'market_type': f'eq.{market}',
@@ -199,27 +205,27 @@ def fetch_market_fallback(market: str, top_n: int = 100) -> list:
                 'fetched_at': now_kst()
             })
         except Exception as e:
-            logger.warning(f"{market} 폴백 {code} 실패: {type(e).__name__}")
+            logger.warning(f"{market} Yahoo Finance {code} 실패: {type(e).__name__}")
     return results
 
 
 def run_daily():
-    """최근 10일 범위조회 - 정확일치(basDt)는 발행 시차로 대부분 0건이 되므로
-    범위조회로 그날그날 게시된 만큼 가져오고 upsert로 자연 dedupe (기존일 재작성은 무해)."""
-    begin_date = get_recent_date(10)
-    logger.info(f"조회 시작일: {begin_date}")
+    """1차 Yahoo Finance, 실패 시에만 2차로 data.go.kr 범위조회(최근 10일) 시도.
+    data.go.kr 정확일치(basDt)는 발행 시차로 대부분 0건이 되므로 범위조회 사용,
+    upsert로 자연 dedupe(기존일 재작성은 무해)."""
     all_prices = []
     for market in ['KOSPI', 'KOSDAQ']:
-        items = fetch_price_pages(market, {'beginBasDt': begin_date})
-        if items:
-            all_prices.extend(process_stock_prices(items, market))
-            logger.info(f"✅ {market}: {len(items)}건")
+        rows = fetch_market_yfinance(market)
+        if rows:
+            all_prices.extend(rows)
+            logger.info(f"✅ {market}: {len(rows)}건 (Yahoo Finance)")
         else:
-            logger.warning(f"❌ {market}: 1차 데이터 없음 -> Yahoo Finance 폴백 시도")
-            fallback_rows = fetch_market_fallback(market)
-            if fallback_rows:
-                all_prices.extend(fallback_rows)
-                logger.info(f"✅ {market} 폴백: {len(fallback_rows)}건 (Yahoo Finance)")
+            logger.warning(f"❌ {market}: Yahoo Finance 실패 -> data.go.kr 폴백 시도")
+            begin_date = get_recent_date(10)
+            items = fetch_price_pages(market, {'beginBasDt': begin_date})
+            if items:
+                all_prices.extend(process_stock_prices(items, market))
+                logger.info(f"✅ {market} 폴백: {len(items)}건 (data.go.kr)")
             else:
                 logger.error(f"❌ {market}: 1차/2차 모두 실패")
     if all_prices:
