@@ -7,6 +7,7 @@ on:
         description: '백필 기간 (달력일 기준)'
         required: false
         default: '35'
+        type: number
 jobs:
   backfill:
     runs-on: ubuntu-latest
@@ -21,7 +22,8 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/stock_prices.py backfill ${{ github.event.inputs.days }}
+          BACKFILL_DAYS: ${{ github.event.inputs.days }}
+        run: python fetchers/stock_prices.py backfill "$BACKFILL_DAYS"
       - name: 국내주식 RSI 계산
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
