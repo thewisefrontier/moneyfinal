@@ -350,7 +350,8 @@ function onTkInput(i,market){
 function onTkFocus(i,market){
   const input=document.getElementById('tkInput'+i);
   if(input)input.select();
-  onTkInput(i,market);
+  const list=document.getElementById('tkList'+i);
+  if(list){list.innerHTML=tkItemsHtml(i,market,'');list.classList.add('open');}
 }
 function hideTkList(i){
   const list=document.getElementById('tkList'+i);
