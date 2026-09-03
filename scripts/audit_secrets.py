@@ -17,6 +17,10 @@ import re
 import sys
 from collections import defaultdict
 
+# Windows 콘솔 기본 인코딩(cp949)이 이모지(⚠️)를 못 그려서 print()가 죽는 것 방지
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WF_DIR = os.path.join(ROOT, '.github', 'workflows')
 CODE_DIRS = ['fetchers', 'processors', 'exporters', 'utils', 'scripts']
@@ -48,7 +52,11 @@ def scan_workflows():
     for fn in sorted(os.listdir(WF_DIR)):
         if not fn.endswith(('.yml', '.yaml')):
             continue
-        text = open(os.path.join(WF_DIR, fn), encoding='utf-8').read()
+        raw = open(os.path.join(WF_DIR, fn), encoding='utf-8').read()
+        # 주석 처리(전체 줄이 '#'로 시작)된 스텝은 의도적으로 비활성화된 것이라
+        # 스캔 대상에서 제외한다 (안 그러면 run: 줄만 주석 밖에 남았을 때
+        # "env 주입 누락" 오탐이 남 - 2026-09-04 data.go.kr 스텝들 주석 처리하며 발견).
+        text = '\n'.join(line for line in raw.splitlines() if not line.strip().startswith('#'))
         for env_var, secret in RE_INJECT.findall(text):
             mapping[env_var].add(secret)
             wf_env[fn].add(env_var)

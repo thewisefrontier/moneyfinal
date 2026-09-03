@@ -142,11 +142,11 @@ def fetch_bonds_fallback() -> list:
 
 def main():
     logger.info("=== 채권 시세 수집 시작 ===")
-    begin_date = get_recent_date(10)
-    results = fetch_bonds_primary(begin_date)
+    results = fetch_bonds_fallback()
     if not results:
-        logger.warning("채권시세: 1차 실패 -> ECOS 벤치마크 금리 폴백 시도")
-        results = fetch_bonds_fallback()
+        logger.warning("채권시세: ECOS 1차 실패 -> data.go.kr 폴백 시도")
+        begin_date = get_recent_date(10)
+        results = fetch_bonds_primary(begin_date)
     if results:
         supabase_upsert('market_indicators', results)
         logger.info(f"✅ 채권시세 {len(results)}건 저장")

@@ -97,20 +97,23 @@ jobs:
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
           OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: python fetchers/oil_price.py
-      - name: ISA 다모아
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/isa_info.py
-      - name: 금투협 종합통계
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/kofia_stats.py
+      # 2026-09-04: apis.data.go.kr이 GitHub Actions 러너에서 전면 차단(대체 소스
+      # 없음)돼서 로컬(scripts/local_daily_update.py)로 옮김. data.go.kr이 러너에서
+      # 다시 뚫리는 게 확인되면 아래 주석만 풀어서 복구하면 됨.
+      # - name: ISA 다모아
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+      #   run: python fetchers/isa_info.py
+      # - name: 금투협 종합통계
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+      #   run: python fetchers/kofia_stats.py
       - name: KRX 지수
         continue-on-error: true
         env:
@@ -133,27 +136,28 @@ jobs:
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
           ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
         run: python fetchers/bond_info.py
-      - name: 파생상품시세
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/derivatives_info.py
-      - name: 기업중요공시
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/disclosure_alerts.py
-      - name: 지배구조정보
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
-        run: python fetchers/governance_info.py
+      # 2026-09-04: data.go.kr 차단으로 로컬 전용 전환 (위 ISA/금투협 주석과 동일 사유)
+      # - name: 파생상품시세
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+      #   run: python fetchers/derivatives_info.py
+      # - name: 기업중요공시
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+      #   run: python fetchers/disclosure_alerts.py
+      # - name: 지배구조정보
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
+      #   run: python fetchers/governance_info.py
       - name: 금융감독정보
         continue-on-error: true
         env:

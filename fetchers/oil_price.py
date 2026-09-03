@@ -132,12 +132,11 @@ def fetch_oil_fallback() -> list:
 
 def main():
     logger.info("=== 석유시세 수집 시작 ===")
-    begin_date = get_recent_date(10)
-    logger.info(f"조회 시작일: {begin_date}")
-    results = fetch_oil_primary(begin_date)
+    results = fetch_oil_fallback()
     if not results:
-        logger.warning("석유시세: 1차 실패 -> 오피넷 폴백 시도")
-        results = fetch_oil_fallback()
+        logger.warning("석유시세: 오피넷 1차 실패 -> data.go.kr 폴백 시도")
+        begin_date = get_recent_date(10)
+        results = fetch_oil_primary(begin_date)
     if results:
         supabase_upsert('market_indicators', results)
         logger.info(f"✅ 석유시세 {len(results)}건 저장")

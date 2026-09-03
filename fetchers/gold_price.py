@@ -80,6 +80,9 @@ def fetch_gold_fallback() -> dict | None:
             logger.error("금시세 2차(Yahoo) 실패: USD_KRW 환율 데이터 없음(ecos_daily.py 먼저 필요)")
             return None
         hist = yf.Ticker('GC=F').history(period='5d')
+        # krx_index.py/stock_prices.py에서 실측으로 발견한 것과 동일 패턴 예방:
+        # 당일 장중이면 마지막 행 종가가 NaN일 수 있어 확정된 최근 행만 쓴다.
+        hist = hist.dropna(subset=['Close'])
         if hist.empty:
             return None
         closes = hist['Close']
@@ -108,12 +111,11 @@ def fetch_gold_fallback() -> dict | None:
 
 def main():
     logger.info("=== KRX 금시세 수집 시작 ===")
-    begin_date = get_recent_date(10)
-    logger.info(f"조회 시작일: {begin_date}")
-    result = fetch_gold_primary(begin_date)
+    result = fetch_gold_fallback()
     if not result:
-        logger.warning("금시세: 1차 실패 -> Yahoo Finance 폴백 시도")
-        result = fetch_gold_fallback()
+        logger.warning("금시세: Yahoo Finance 1차 실패 -> data.go.kr 폴백 시도")
+        begin_date = get_recent_date(10)
+        result = fetch_gold_primary(begin_date)
     if result:
         logger.info(f"✅ 금 {result['value']}원/g ({result['source']})")
         supabase_upsert('market_indicators', [result])

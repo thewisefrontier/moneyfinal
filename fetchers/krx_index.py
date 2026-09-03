@@ -64,6 +64,9 @@ def fetch_index_primary(index: dict, begin_date: str) -> dict | None:
 def fetch_index_fallback(index: dict) -> dict | None:
     try:
         hist = yf.Ticker(index['yf_symbol']).history(period='5d')
+        # 당일 장중이면 마지막 행의 종가가 아직 NaN으로 올 수 있어(stock_prices.py에서
+        # 실측으로 발견한 것과 동일 패턴) 종가가 확정된 가장 최근 행만 쓴다.
+        hist = hist.dropna(subset=['Close'])
         if hist.empty or len(hist) < 1:
             return None
         closes = hist['Close']
@@ -76,11 +79,11 @@ def fetch_index_fallback(index: dict) -> dict | None:
         return None
 
 def fetch_index(index: dict, begin_date: str) -> dict | None:
-    result = fetch_index_primary(index, begin_date)
+    result = fetch_index_fallback(index)
     if result:
         return result
-    logger.warning(f"{index['idxNm']}: 1차 실패 -> Yahoo Finance 폴백 시도")
-    result = fetch_index_fallback(index)
+    logger.warning(f"{index['idxNm']}: Yahoo Finance 1차 실패 -> data.go.kr 폴백 시도")
+    result = fetch_index_primary(index, begin_date)
     if result:
         logger.info(f"✅ {index['idxNm']}: 폴백으로 수집 성공")
     else:
