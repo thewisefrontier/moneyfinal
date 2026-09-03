@@ -334,11 +334,11 @@ function tkItemsHtml(i,market,query){
   const q=(query||'').trim().toLowerCase();
   if(market==='us'){
     const list=(q?US_TICKERS.filter(o=>o.t.toLowerCase().includes(q)||o.n.toLowerCase().includes(q)):US_TICKERS).slice(0,40);
-    return list.length?list.map(o=>`<div class="tk-search-item" onmousedown="event.preventDefault();selectTicker(${i},'us','${o.t}')"><span class="code">${o.t}</span>${o.n}</div>`).join(''):'<div class="tk-search-empty">검색 결과 없음</div>';
+    return list.length?list.map(o=>`<div class="tk-search-item" data-val="${o.t}" data-market="us" onmousedown="event.preventDefault();selectTicker(${i},'us','${o.t}')"><span class="code">${o.t}</span>${o.n}</div>`).join(''):'<div class="tk-search-empty">검색 결과 없음</div>';
   }
   const list=(q?KR_TICKERS.filter(o=>o.t.includes(q)||o.n.toLowerCase().includes(q)):KR_TICKERS).slice(0,40);
-  const items=list.map(o=>`<div class="tk-search-item" onmousedown="event.preventDefault();selectTicker(${i},'domestic','${o.t}')">${o.n}${o.eq?' (국내주식형)':''}</div>`).join('');
-  const customItem=`<div class="tk-search-item tk-search-custom" onmousedown="event.preventDefault();selectTicker(${i},'domestic','__custom__')">+ 목록에 없는 종목 직접 입력</div>`;
+  const items=list.map(o=>`<div class="tk-search-item" data-val="${o.t}" data-market="domestic" onmousedown="event.preventDefault();selectTicker(${i},'domestic','${o.t}')">${o.n}${o.eq?' (국내주식형)':''}</div>`).join('');
+  const customItem=`<div class="tk-search-item tk-search-custom" data-val="__custom__" data-market="domestic" onmousedown="event.preventDefault();selectTicker(${i},'domestic','__custom__')">+ 목록에 없는 종목 직접 입력</div>`;
   return (items||'<div class="tk-search-empty">검색 결과 없음</div>')+customItem;
 }
 function onTkInput(i,market){
@@ -357,6 +357,34 @@ function hideTkList(i){
   const list=document.getElementById('tkList'+i);
   if(list)list.classList.remove('open');
   renderPortfolio();
+}
+function moveTkHighlight(i,delta){
+  const list=document.getElementById('tkList'+i);
+  if(!list)return;
+  const items=Array.from(list.querySelectorAll('.tk-search-item'));
+  if(!items.length)return;
+  let idx=items.findIndex(el=>el.classList.contains('hl'));
+  items.forEach(el=>el.classList.remove('hl'));
+  idx=idx<0?(delta>0?0:items.length-1):Math.max(0,Math.min(items.length-1,idx+delta));
+  items[idx].classList.add('hl');
+  items[idx].scrollIntoView({block:'nearest'});
+}
+function onTkKeydown(e,i,market){
+  const list=document.getElementById('tkList'+i);
+  if(!list||!list.classList.contains('open')){
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();onTkFocus(i,market);}
+    return;
+  }
+  if(e.key==='ArrowDown'){e.preventDefault();moveTkHighlight(i,1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();moveTkHighlight(i,-1);}
+  else if(e.key==='Enter'){
+    const hl=list.querySelector('.tk-search-item.hl');
+    if(hl){e.preventDefault();selectTicker(i,hl.dataset.market,hl.dataset.val);}
+  }else if(e.key==='Escape'){
+    list.classList.remove('open');
+    const input=document.getElementById('tkInput'+i);
+    if(input)input.blur();
+  }
 }
 function selectTicker(i,market,val){
   const row=portfolio[i];
@@ -396,7 +424,7 @@ function renderPortfolio(){
   const el=document.getElementById('portRows');
   el.innerHTML=portfolio.map((row,i)=>{
     const marketSel=`<select onchange="onMarketChange(${i},this.value)"><option value="us" ${row.market==='us'?'selected':''}>해외</option><option value="domestic" ${row.market==='domestic'?'selected':''}>국내</option></select>`;
-    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" autocomplete="off" placeholder="티커/종목명 검색"><div class="tk-search-list" id="tkList${i}"></div></div>`;
+    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" onkeydown="onTkKeydown(event,${i},'${row.market}')" autocomplete="off" placeholder="티커/종목명 검색"><div class="tk-search-list" id="tkList${i}"></div></div>`;
     let tickerField;
     if(row.market==='domestic'&&row.ticker==='__custom__'){
       tickerField=`<div style="margin-bottom:4px">${searchBox}</div><input type="text" placeholder="ETF명 직접 입력" value="${row.name}" oninput="onNameInput(${i},this.value)">`;
