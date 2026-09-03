@@ -118,7 +118,7 @@ let COINS=[],SORT_KEY='market_cap',SORT_DIR='desc';
 
 async function load(){
   try{
-    const r=await fetch('data/crypto.json');const d=await r.json();
+    const r=await fetch('/api/crypto');const d=await r.json();
     COINS=d.coins||[];
     document.getElementById('k-updated').textContent='업데이트: '+(d.updated_at||'-');
     const btc=COINS.find(c=>c.id==='bitcoin'),eth=COINS.find(c=>c.id==='ethereum');
