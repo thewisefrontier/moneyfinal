@@ -358,6 +358,15 @@ def export_us_company_info():
     })
 
 
+def export_crypto():
+    """암호화폐 시세(시가총액 상위 20개) export (코인 전용 페이지용)"""
+    rows = supabase_select_all('crypto_prices', {'select': '*', 'order': 'market_cap_rank.asc'})
+    save_json('crypto.json', {
+        'updated_at': today_kst(),
+        'coins': rows
+    })
+
+
 def main():
     logger.info("=== JSON Export 시작 ===")
     export_rates()
@@ -373,6 +382,7 @@ def main():
     export_dividends()
     export_kr_dividends()
     export_us_company_info()
+    export_crypto()
     logger.info("=== JSON Export 완료 ===")
 
 

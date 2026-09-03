@@ -59,6 +59,7 @@ CONFLICT_COLUMNS = {
     'us_company_earnings': 'ticker,report_date',
     'us_company_dividends': 'ticker,ex_date',
     'us_company_splits': 'ticker,split_date',
+    'crypto_prices': 'id',
 }
 
 
