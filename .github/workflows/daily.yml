@@ -80,6 +80,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: python fetchers/crypto_price.py
       - name: 금시세
         continue-on-error: true
