@@ -2099,7 +2099,7 @@
         "indicator_code": "KOSPI200",
         "indicator_name": "코스피 200",
         "reference_date": "2026-09-03",
-        "value": 1075.3,
+        "value": 1031.53,
         "unit": "pt"
       }
     ],
@@ -5748,9 +5748,9 @@
       },
       {
         "indicator_code": "GOLD",
-        "indicator_name": "금 가격 (KRX 99.99_1kg)",
+        "indicator_name": "금 가격 (국제 금선물 환산)",
         "reference_date": "2026-09-03",
-        "value": 196280.0,
+        "value": 195265.76,
         "unit": "원/g"
       }
     ]
