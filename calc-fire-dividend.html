@@ -67,6 +67,14 @@ h1{font-size:20px;font-weight:700;margin-bottom:4px}
 .port-row select,.port-row input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:5px;color:var(--text);padding:8px 7px;font-size:13px;outline:none}
 .rm-btn{background:none;border:none;color:var(--text2);cursor:pointer;font-size:16px;padding:6px 0}
 .rm-btn:hover{color:var(--red)}
+.tk-search{position:relative}
+.tk-search-list{position:absolute;top:calc(100% + 2px);left:0;right:0;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:240px;overflow-y:auto;z-index:80;display:none;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.tk-search-list.open{display:block}
+.tk-search-item{padding:8px 10px;cursor:pointer;font-size:12.5px;line-height:1.4}
+.tk-search-item:hover,.tk-search-item.hl{background:var(--bg3)}
+.tk-search-item .code{font-weight:600;margin-right:6px}
+.tk-search-empty{padding:10px;color:var(--text2);font-size:12px;text-align:center}
+.tk-search-custom{color:var(--accent)}
 .result-hero{text-align:center;padding:16px 12px 12px}
 .rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
 .rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
@@ -120,7 +128,13 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   </div>
   <div class="card">
     <div class="field-title">② 적립 설정</div>
-    <div class="field"><label>투자 기간 (년)</label><input type="number" id="years" value="15" min="1" max="50" oninput="calcAll()"></div>
+    <div class="field"><label>초기 투자금 (원, 이미 보유 중인 자산 · 없으면 0)</label><input type="text" id="initialLump" inputmode="numeric" value="0" oninput="fmtInput(this);calcAll()"></div>
+    <div class="field"><label>투자 기간</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="position:relative"><input type="number" id="years" value="15" min="0" max="50" oninput="calcAll()" style="padding-right:28px"><span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">년</span></div>
+        <div style="position:relative"><input type="number" id="yearsMonths" value="0" min="0" max="11" oninput="calcAll()" style="padding-right:32px"><span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">개월</span></div>
+      </div>
+    </div>
     <div class="field"><label>가정 연 가격상승률 (%)</label><input type="number" id="growth" value="5" step="0.1" oninput="calcAll()"></div>
     <div class="field"><label>배당 재투자</label><select id="reinvest" onchange="calcAll()"><option value="yes">재투자함</option><option value="no">재투자 안함(현금 보유)</option></select></div>
   </div>
@@ -311,12 +325,54 @@ let portfolio=[
   {market:'us',ticker:'JEPI',name:'',yieldPct:7.5,monthly:500000}
 ];
 
-function usOptionsHtml(selected){
-  return US_TICKERS.map(o=>`<option value="${o.t}" ${o.t===selected?'selected':''}>${o.t} - ${o.n}</option>`).join('');
+function tickerLabel(market,ticker){
+  if(market==='us'){const o=US_TICKERS.find(x=>x.t===ticker);return o?o.t+' - '+o.n:ticker;}
+  if(ticker==='__custom__')return'+ 직접 입력';
+  const o=KR_TICKERS.find(x=>x.t===ticker);return o?o.n+(o.eq?' (국내주식형)':''):ticker;
 }
-function krOptionsHtml(selected){
-  const opts=KR_TICKERS.map(o=>`<option value="${o.t}" ${o.t===selected?'selected':''}>${o.n}${o.eq?' (국내주식형)':''}</option>`).join('');
-  return opts+`<option value="__custom__" ${selected==='__custom__'?'selected':''}>+ 목록에 없는 종목 직접 입력</option>`;
+function tkItemsHtml(i,market,query){
+  const q=(query||'').trim().toLowerCase();
+  if(market==='us'){
+    const list=(q?US_TICKERS.filter(o=>o.t.toLowerCase().includes(q)||o.n.toLowerCase().includes(q)):US_TICKERS).slice(0,40);
+    return list.length?list.map(o=>`<div class="tk-search-item" onmousedown="event.preventDefault();selectTicker(${i},'us','${o.t}')"><span class="code">${o.t}</span>${o.n}</div>`).join(''):'<div class="tk-search-empty">검색 결과 없음</div>';
+  }
+  const list=(q?KR_TICKERS.filter(o=>o.t.includes(q)||o.n.toLowerCase().includes(q)):KR_TICKERS).slice(0,40);
+  const items=list.map(o=>`<div class="tk-search-item" onmousedown="event.preventDefault();selectTicker(${i},'domestic','${o.t}')">${o.n}${o.eq?' (국내주식형)':''}</div>`).join('');
+  const customItem=`<div class="tk-search-item tk-search-custom" onmousedown="event.preventDefault();selectTicker(${i},'domestic','__custom__')">+ 목록에 없는 종목 직접 입력</div>`;
+  return (items||'<div class="tk-search-empty">검색 결과 없음</div>')+customItem;
+}
+function onTkInput(i,market){
+  const list=document.getElementById('tkList'+i),input=document.getElementById('tkInput'+i);
+  if(!list||!input)return;
+  list.innerHTML=tkItemsHtml(i,market,input.value);
+  list.classList.add('open');
+}
+function onTkFocus(i,market){
+  const input=document.getElementById('tkInput'+i);
+  if(input)input.select();
+  onTkInput(i,market);
+}
+function hideTkList(i){
+  const list=document.getElementById('tkList'+i);
+  if(list)list.classList.remove('open');
+  renderPortfolio();
+}
+function selectTicker(i,market,val){
+  const row=portfolio[i];
+  row.market=market;
+  row.ticker=val;
+  if(market==='us'){
+    row.name='';
+    applyYield(i);
+  }else if(val==='__custom__'){
+    row.name='';
+  }else{
+    const meta=KR_TICKERS.find(o=>o.t===val);
+    row.name=meta?meta.n:'';
+    applyYield(i);
+  }
+  renderPortfolio();
+  calcAll();
 }
 function applyYield(i){
   const row=portfolio[i];
@@ -331,13 +387,6 @@ function onMarketChange(i,val){
   else{portfolio[i].ticker=KR_TICKERS[0].t;portfolio[i].name=KR_TICKERS[0].n;applyYield(i);}
   renderPortfolio();calcAll();
 }
-function onTickerSelect(i,val){portfolio[i].ticker=val;applyYield(i);renderPortfolio();calcAll();}
-function onKrTickerSelect(i,val){
-  portfolio[i].ticker=val;
-  if(val==='__custom__'){portfolio[i].name='';}
-  else{const meta=KR_TICKERS.find(o=>o.t===val);portfolio[i].name=meta?meta.n:'';applyYield(i);}
-  renderPortfolio();calcAll();
-}
 function onNameInput(i,val){portfolio[i].name=val;calcAll();}
 function onYieldInput(i,val){portfolio[i].yieldPct=parseFloat(val)||0;calcAll();}
 function onMonthlyInput(i,el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('ko-KR'):'';portfolio[i].monthly=parseInt(v,10)||0;calcAll();}
@@ -346,13 +395,12 @@ function renderPortfolio(){
   const el=document.getElementById('portRows');
   el.innerHTML=portfolio.map((row,i)=>{
     const marketSel=`<select onchange="onMarketChange(${i},this.value)"><option value="us" ${row.market==='us'?'selected':''}>해외</option><option value="domestic" ${row.market==='domestic'?'selected':''}>국내</option></select>`;
+    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" autocomplete="off" placeholder="티커/종목명 검색"><div class="tk-search-list" id="tkList${i}"></div></div>`;
     let tickerField;
-    if(row.market==='us'){
-      tickerField=`<select onchange="onTickerSelect(${i},this.value)">${usOptionsHtml(row.ticker)}</select>`;
-    }else if(row.ticker==='__custom__'){
-      tickerField=`<select onchange="onKrTickerSelect(${i},this.value)" style="margin-bottom:4px">${krOptionsHtml(row.ticker)}</select><input type="text" placeholder="ETF명 직접 입력" value="${row.name}" oninput="onNameInput(${i},this.value)">`;
+    if(row.market==='domestic'&&row.ticker==='__custom__'){
+      tickerField=`<div style="margin-bottom:4px">${searchBox}</div><input type="text" placeholder="ETF명 직접 입력" value="${row.name}" oninput="onNameInput(${i},this.value)">`;
     }else{
-      tickerField=`<select onchange="onKrTickerSelect(${i},this.value)">${krOptionsHtml(row.ticker)}</select>`;
+      tickerField=searchBox;
     }
     return `<div class="port-row">
       <div class="port-row-top">
@@ -375,13 +423,19 @@ function futureValue(pv,pmt,rMonthly,months){
   return fvPv+fvPmt;
 }
 
+function rowWeight(row,s){return s.totalMonthly>0?row.monthly/s.totalMonthly:(portfolio.length?1/portfolio.length:0);}
 function portfolioStats(){
+  if(!portfolio.length)return null;
   const totalMonthly=portfolio.reduce((s,r)=>s+r.monthly,0);
-  if(totalMonthly<=0)return null;
-  const weightedYield=portfolio.reduce((s,r)=>s+r.yieldPct*r.monthly,0)/totalMonthly;
+  // 월 적립액이 0이어도(초기 투자금만 있는 경우 등) 포트폴리오 구성 종목들의
+  // 배당수익률/비중은 계산할 수 있어야 하므로, 이 경우 종목 수 기준 균등가중으로 대체한다.
+  const weightedYield=totalMonthly>0
+    ?portfolio.reduce((s,r)=>s+r.yieldPct*r.monthly,0)/totalMonthly
+    :portfolio.reduce((s,r)=>s+r.yieldPct,0)/portfolio.length;
   const usMonthly=portfolio.filter(r=>r.market==='us').reduce((s,r)=>s+r.monthly,0);
   const domMonthly=totalMonthly-usMonthly;
-  return{totalMonthly,weightedYield,usRatio:usMonthly/totalMonthly,domRatio:domMonthly/totalMonthly};
+  const usRatio=totalMonthly>0?usMonthly/totalMonthly:portfolio.filter(r=>r.market==='us').length/portfolio.length;
+  return{totalMonthly,weightedYield,usRatio,domRatio:1-usRatio};
 }
 
 function calcAll(){
@@ -410,7 +464,7 @@ function renderBacktest(){
   const byYearUs={},byYearKr={};
   usRows.forEach(row=>{
     const price=parseFloat(PRICE_RAW[row.ticker].price);
-    const tickerCapital=capital*(row.monthly/s.totalMonthly);
+    const tickerCapital=capital*rowWeight(row,s);
     if(price<=0)return;
     (DIV_RAW[row.ticker]||[]).forEach(d=>{
       const year=(d.ex_dividend_date||'').slice(0,4);
@@ -420,7 +474,7 @@ function renderBacktest(){
   });
   krRows.forEach(row=>{
     const price=parseFloat(KR_PRICE_RAW[row.ticker].price);
-    const tickerCapital=capital*(row.monthly/s.totalMonthly);
+    const tickerCapital=capital*rowWeight(row,s);
     if(price<=0)return;
     (KR_DIV_RAW[row.ticker]||[]).forEach(d=>{
       const year=(d.ex_dividend_date||'').slice(0,4);
@@ -478,21 +532,25 @@ function renderStats(){
 function calcAccumulation(){
   const s=portfolioStats();
   const years=parseInt(document.getElementById('years').value,10)||0;
+  const extraMonths=Math.min(11,Math.max(0,parseInt(document.getElementById('yearsMonths').value,10)||0));
+  const months=years*12+extraMonths;
   const growthPct=parseFloat(document.getElementById('growth').value)||0;
   const reinvest=document.getElementById('reinvest').value;
-  if(!s||years<=0){document.getElementById('r-fv').textContent='-';return;}
-  const months=years*12;
+  if(!s||months<=0){document.getElementById('r-fv').textContent='-';return;}
+  const yearsFrac=months/12;
+  const periodLabel=years+'년'+(extraMonths?' '+extraMonths+'개월':'');
+  const initialLump=num('initialLump');
   const totalReturnPct=reinvest==='yes'?(growthPct+s.weightedYield):growthPct;
   const rm=monthlyRateFromAnnual(totalReturnPct/100);
-  const fv=futureValue(0,s.totalMonthly,rm,months);
-  const principal=s.totalMonthly*months;
+  const fv=futureValue(initialLump,s.totalMonthly,rm,months);
+  const principal=s.totalMonthly*months+initialLump;
   document.getElementById('r-fv').textContent=fmtEok(fv);
-  document.getElementById('r-fv-sub').textContent=years+'년 후, 연 총수익률 '+totalReturnPct.toFixed(1)+'% 가정 (가격상승 '+growthPct+'%'+(reinvest==='yes'?' + 배당재투자 '+s.weightedYield.toFixed(1)+'%':'')+')';
+  document.getElementById('r-fv-sub').textContent=periodLabel+' 후, 연 총수익률 '+totalReturnPct.toFixed(1)+'% 가정 (가격상승 '+growthPct+'%'+(reinvest==='yes'?' + 배당재투자 '+s.weightedYield.toFixed(1)+'%':'')+')';
   document.getElementById('r-principal').textContent=won(principal);
   const realEl=document.getElementById('r-fv-real');
   if(document.getElementById('inflationOn').checked){
     const inflationPct=parseFloat(document.getElementById('inflationPct').value)||0;
-    const realFv=fv/Math.pow(1+inflationPct/100,years);
+    const realFv=fv/Math.pow(1+inflationPct/100,yearsFrac);
     realEl.style.display='block';
     realEl.textContent='물가상승률 '+inflationPct+'% 반영 시, 오늘 화폐가치로는 약 '+fmtEok(realFv);
   }else{
@@ -500,17 +558,17 @@ function calcAccumulation(){
   }
   const capitalInput=document.getElementById('capital');
   if(!capitalInput.dataset.userEdited){capitalInput.value=Math.round(fv).toLocaleString('ko-KR');}
-  drawAccChart(s.totalMonthly,rm,years);
+  drawAccChart(initialLump,s.totalMonthly,rm,yearsFrac);
 }
 document.getElementById('capital').addEventListener('input',function(){this.dataset.userEdited='1';});
 
 function svgEl(tag){return document.createElementNS('http://www.w3.org/2000/svg',tag);}
 function themeColors(){const css=getComputedStyle(document.documentElement);return{green:css.getPropertyValue('--green').trim(),accent:css.getPropertyValue('--accent').trim(),text2:css.getPropertyValue('--text2').trim(),border:css.getPropertyValue('--border').trim(),red:css.getPropertyValue('--red').trim()};}
 
-function drawAccChart(monthly,rm,years){
+function drawAccChart(initialLump,monthly,rm,years){
   const holder=document.getElementById('accChartHolder');
   const data=[];
-  for(let y=0;y<=years;y++)data.push({y,val:futureValue(0,monthly,rm,y*12)});
+  for(let y=0;y<=years;y++)data.push({y,val:futureValue(initialLump,monthly,rm,y*12)});
   const W=760,H=220,padL=64,padR=16,padT=14,padB=28;
   const maxVal=Math.max.apply(null,data.map(d=>d.val))*1.08||1;
   const x=yv=>padL+yv/years*(W-padL-padR);
