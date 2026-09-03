@@ -1,17 +1,17 @@
 """
 암호화폐 시세 수집기
-1차: CoinGecko 공개 API (무료 Demo 플랜, 키 불필요)
-    https://api.coingecko.com/api/v3/coins/markets
-    ⚠️ CoinGecko Demo 플랜 약관은 "Personal Use only, not for any commercial
-    purpose"로 명시돼 있음(2026-09-04 공식 약관 페이지 확인). moneyfinal은
-    광고/제휴 없는 무료 정보 사이트라 상업적 이용으로 보기 어렵다고 판단해
-    1차로 유지하지만, 만일을 대비해 2차 폴백을 아래에 붙여둔다.
+1차: CoinMarketCap 무료 Basic 플랜 (CMC_API_KEY 필요, 상업적 이용 명시
+    허용, 월 15,000회/분당 50회 한도라 하루 1회 배치 수집엔 넉넉함)
 2차 폴백: yfinance (BTC-USD 등 Yahoo Finance 암호화폐 티커, 키 불필요,
     이번 세션에 이미 여러 fetcher에서 문제없이 검증된 소스)
     필드가 1차보다 적음(7일 변동률 등은 안 채움 - DB 컬럼 다 nullable이라 무해).
-3차 폴백: CoinMarketCap 무료 Basic 플랜 (무료 API 키 필요, 상업적 이용 명시
-    허용 - moneyfinal이 나중에 광고/제휴 등으로 상업화되면 이쪽을 1차로
-    승격하는 걸 권장. 월 15,000회/분당 50회 한도라 1차로 매일 쓰기에도 충분함)
+3차 폴백: CoinGecko 공개 API (무료 Demo 플랜, 키 불필요)
+    https://api.coingecko.com/api/v3/coins/markets
+    ⚠️ CoinGecko Demo 플랜 약관은 "Personal Use only, not for any commercial
+    purpose"로 명시돼 있음(2026-09-04 공식 약관 페이지 확인). 그래서 상업적
+    이용이 명시적으로 허용된 CoinMarketCap을 1차로 두고, 이건 최후 폴백으로만
+    둠 - moneyfinal은 광고 없는 무료 사이트라 지금도 문제는 없지만, 순서
+    자체를 이렇게 두면 라이선스 판단을 아예 신경 쓸 필요가 없어짐.
 1차/2차가 둘 다 실패했을 때만 호출됨.
 
 시가총액 상위 20개를 한 번에 받아서:
@@ -60,7 +60,7 @@ YF_FALLBACK_COINS = [
 ]
 
 
-def fetch_markets_primary() -> list:
+def fetch_markets_coingecko() -> list:
     params = {
         'vs_currency': 'usd', 'order': 'market_cap_desc', 'per_page': TOP_N, 'page': 1,
         'price_change_percentage': '24h,7d'
@@ -71,7 +71,7 @@ def fetch_markets_primary() -> list:
         data = res.json()
         return data if isinstance(data, list) else []
     except Exception as e:
-        logger.warning(f"CoinGecko 수집 실패, yfinance 폴백 시도: {type(e).__name__} - {e}")
+        logger.warning(f"CoinGecko 수집 실패: {type(e).__name__} - {e}")
         return []
 
 
@@ -106,8 +106,9 @@ def fetch_markets_fallback() -> list:
     return results
 
 
-def fetch_markets_cmc() -> list:
+def fetch_markets_primary() -> list:
     if not CMC_API_KEY:
+        logger.warning("CMC_API_KEY 없음, yfinance 폴백 시도")
         return []
     try:
         res = requests.get(
@@ -119,7 +120,7 @@ def fetch_markets_cmc() -> list:
         res.raise_for_status()
         data = res.json().get('data', [])
     except Exception as e:
-        logger.warning(f"CoinMarketCap 폴백 실패: {type(e).__name__} - {e}")
+        logger.warning(f"CoinMarketCap 수집 실패, yfinance 폴백 시도: {type(e).__name__} - {e}")
         return []
     results = []
     for c in data:
@@ -146,15 +147,15 @@ def fetch_markets_cmc() -> list:
 def fetch_markets() -> tuple[list, str]:
     coins = fetch_markets_primary()
     if coins:
-        return coins, 'CoinGecko'
+        return coins, 'CoinMarketCap'
     coins = fetch_markets_fallback()
     if coins:
         logger.info("yfinance 폴백으로 수집 완료")
         return coins, 'Yahoo Finance'
-    coins = fetch_markets_cmc()
+    coins = fetch_markets_coingecko()
     if coins:
-        logger.info("CoinMarketCap 폴백으로 수집 완료")
-    return coins, 'CoinMarketCap'
+        logger.info("CoinGecko 폴백으로 수집 완료")
+    return coins, 'CoinGecko'
 
 
 def to_crypto_row(c: dict, source: str) -> dict:
