@@ -192,8 +192,17 @@ def main():
         'select': '*',
         'category': 'in.(예금,적금)',
         'order': 'max_rate.desc',
-        'limit': '10'
+        'limit': '30'
     })
+    # 최고금리가 기본금리의 3배 이상인 상품은 특정 제휴카드 발급/실적 등 우대조건을
+    # 다 채워야만 나오는 금리라서, 그대로 AI에 넘기면 "적금 최고금리는 8~14%" 처럼
+    # 일반 이용자가 실제 받을 수 있는 금리로 오해할 문구가 생성됨 (2026-09-06 확인,
+    # rates.html의 고우대조건 배지 처리와 동일한 기준).
+    rates = [
+        r for r in rates
+        if not (r.get('rate') and r.get('max_rate') and float(r['rate']) > 0
+                and float(r['max_rate']) / float(r['rate']) >= 3)
+    ][:10]
     kr_closed = is_kr_market_closed()
     if kr_closed:
         logger.info("한국 증시 휴장일 - 해외 증시 중심 브리핑")
