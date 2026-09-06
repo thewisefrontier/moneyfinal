@@ -77,6 +77,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 .badge.deny3{background:rgba(139,148,158,.15);color:var(--text2)}
 .badge.cond{background:rgba(56,139,253,.15);color:var(--blue)}
 .badge.small{background:rgba(139,148,158,.15);color:var(--text2)}
+.badge.hc{background:rgba(210,153,34,.15);color:var(--yellow)}
 .period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;justify-self:center}
 .rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
 .rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
@@ -235,6 +236,7 @@ function isSpecial(r){return !!(r.dcls_end_day&&String(r.dcls_end_day).trim());}
 function fmtDay(s){s=String(s||'');return s.length===8?`${s.slice(4,6)}/${s.slice(6,8)}`:s;}
 function denyBadge(r){if(r.join_deny===2)return'<span class="badge deny2">서민전용</span>';if(r.join_deny===3)return'<span class="badge deny3">일부제한</span>';return'';}
 function condBadge(r){const cond=String(r.spcl_cnd||'').trim();if(cond&&cond!=='-'&&cond!=='없음')return'<span class="badge cond">우대조건</span>';return'';}
+function hcBadge(r){if(r.high_condition)return'<span class="badge hc" title="기본금리 대비 최고금리 비중이 매우 높아 제휴카드 발급·실적 등 조건을 다 채워야 나오는 금리예요">고우대조건</span>';return'';}
 function limitBadge(r){const limit=parseInt(r.max_limit);if(limit&&limit<1000000)return'<span class="badge small">소액</span>';return'';}
 function filtered(){
   const q=document.getElementById('q').value.trim().toLowerCase();
@@ -276,7 +278,7 @@ function rowHtml(r,i){
   ].filter(([k,v])=>v&&String(v).trim()).map(([k,v])=>`<div class="dt-item"><span class="dt-k">${k}</span><span class="dt-v">${esc(v)}</span></div>`).join('')+calcHtml;
   return `<div class="row" onclick="this.classList.toggle('open')">
     <div class="row-main">
-      <div><div class="rb">${i+1}. ${esc(r.institution)} ${sp}${denyBadge(r)}${condBadge(r)}${limitBadge(r)}</div><div class="rp">${esc(r.product_name)}</div></div>
+      <div><div class="rb">${i+1}. ${esc(r.institution)} ${sp}${hcBadge(r)}${denyBadge(r)}${condBadge(r)}${limitBadge(r)}</div><div class="rp">${esc(r.product_name)}</div></div>
       <div class="period">${esc(r.period)}</div>
       <div><div class="rmax">${fmt(r.max_rate,'%')}</div><div class="rbase">기본 ${fmt(r.rate,'%')}</div></div>
     </div>
@@ -298,7 +300,8 @@ async function loadRates(){
     const r=await fetch('data/rates.json');const d=await r.json();const bc=d.by_category||{};
     all=[...(bc['적금']||[]),...(bc['예금']||[])];
     render();
-    const s=(bc['적금']||[])[0],dep=(bc['예금']||[])[0];
+    const savArr=bc['적금']||[],depArr=bc['예금']||[];
+    const s=savArr.find(x=>!x.high_condition)||savArr[0],dep=depArr.find(x=>!x.high_condition)||depArr[0];
     if(s){topProducts['적금']=s;document.getElementById('rk-sav').textContent=fmt(s.max_rate,'%');document.getElementById('rk-sav-name').textContent=s.institution;}
     if(dep){topProducts['예금']=dep;document.getElementById('rk-dep').textContent=fmt(dep.max_rate,'%');document.getElementById('rk-dep-name').textContent=dep.institution;}
   }catch(e){document.getElementById('list').innerHTML='<div class="empty">데이터 없음</div>';}

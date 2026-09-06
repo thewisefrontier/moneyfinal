@@ -38,6 +38,13 @@ def export_rates():
         'order': 'max_rate.desc'
     })
 
+    # 최고금리가 기본금리의 3배 이상인 상품은 특정 제휴카드 발급/실적 등
+    # 우대조건을 다 채워야만 나오는 금리라서, 실제로 받기 어려운데도 정렬상
+    # 항상 상단을 차지함. 목록에서 지우진 않고 배지로 구분 표시만 함.
+    for r in rates:
+        rate, max_rate = r.get('rate'), r.get('max_rate')
+        r['high_condition'] = bool(rate and max_rate and float(rate) > 0 and float(max_rate) / float(rate) >= 3)
+
     by_category = {}
     for r in rates:
         cat = r.get('category', '기타')
