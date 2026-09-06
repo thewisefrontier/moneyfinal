@@ -26,7 +26,7 @@ import logging, os, sys
 import requests
 import yfinance as yf
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.common import supabase_upsert, now_kst, today_kst
+from utils.common import supabase_upsert, supabase_delete_not_in, now_kst, today_kst
 
 logger = logging.getLogger(__name__)
 BASE_URL = "https://api.coingecko.com/api/v3/coins/markets"
@@ -207,6 +207,8 @@ def main():
     crypto_rows = [to_crypto_row(c, source) for c in coins if c.get('id')]
     if crypto_rows:
         supabase_upsert('crypto_prices', crypto_rows)
+        # 순위 밖으로 밀려난 어제 이전 코인이 테이블에 계속 남아 중복 표시되는 걸 방지
+        supabase_delete_not_in('crypto_prices', 'id', [r['id'] for r in crypto_rows])
         logger.info(f"✅ 코인 시세 {len(crypto_rows)}건 저장 (출처: {source})")
 
     indicator_rows = []

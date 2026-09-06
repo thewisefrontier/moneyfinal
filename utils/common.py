@@ -193,6 +193,29 @@ def supabase_upsert(table: str, data: list) -> bool:
         return False
 
 
+def supabase_delete_not_in(table: str, column: str, keep_values: list) -> bool:
+    """keep_values에 없는 행을 삭제. 매일 top-N만 다시 upsert하는 스냅샷성 테이블에서
+    순위 밖으로 밀려난 옛 행이 영구히 남아 중복 순위로 보이는 걸 방지하기 위함."""
+    if not keep_values:
+        return True
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
+    values = ','.join(quote(str(v), safe='') for v in keep_values)
+    try:
+        res = requests.delete(
+            url,
+            headers=HEADERS,
+            params={column: f'not.in.({values})'},
+            timeout=30
+        )
+        if res.status_code >= 400:
+            logging.error(f"[{table}] 잔여 행 삭제 실패 ({res.status_code}): {res.text[:200]}")
+            return False
+        return True
+    except Exception as e:
+        logging.error(f"[{table}] 잔여 행 삭제 실패: {type(e).__name__}")
+        return False
+
+
 def supabase_select(table: str, params: dict = None) -> list:
     url = f"{SUPABASE_URL}/rest/v1/{table}"
     try:
