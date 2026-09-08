@@ -10,7 +10,7 @@
 
 CF_ANALYTICS = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "5ec3e89757844a3582c90d3524a2cead"}\'></script><!-- End Cloudflare Web Analytics -->'
 
-NAV = '<nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html" class="active">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="crypto.html">코인</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>'
+NAV = '<nav id="site-nav" data-active="dividend-etf.html"></nav>\n<script src="nav.js"></script>'
 
 STYLE = """:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
 :root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
@@ -62,13 +62,19 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .ti .name{color:var(--text);font-weight:500}
 .ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}"""
 
-TICKER_SCRIPT = "async function loadTicker(){try{const r=await fetch('data/market.json');const d=await r.json();const inds=d.indicators||[];const L={'USD_KRW':'원달러','BASE_RATE':'기준금리','FED_RATE':'미국금리','USD_INDEX':'달러인덱스','US_YIELD_CURVE':'장단기금리차','M2_TOTAL':'M2','KOSPI':'코스피','KOSDAQ':'코스닥','US_SP500':'S&P500','US_DJIA':'다우','US_NASDAQ':'나스닥'};const tf=(v,dg)=>parseFloat(v).toLocaleString('ko-KR',{minimumFractionDigits:dg,maximumFractionDigits:dg});const tc=s=>s==='red'?'down':s==='yellow'?'neutral':'up';let h='';inds.forEach(i=>{if(!L[i.indicator_code])return;const v=i.indicator_code==='M2_TOTAL'?(i.value/1000000).toFixed(1)+'조원':tf(i.value,['%','Index','pt','USD/배럴'].includes(i.unit)?2:0)+(i.unit?' '+i.unit:'');h+=`<div class=\"ti\"><span class=\"name\">${L[i.indicator_code]}</span><span class=\"${tc(i.signal)}\">${v}</span></div>`;});document.getElementById('ticker-inner').innerHTML=h+h;}catch(e){}}\nloadTicker();"
+# 2026-09-06: 아래 세 스크립트는 예전엔 페이지마다 원문 그대로 박아 넣었는데,
+# 그 결과 생성기별로 조금씩 다른 사본이 생기고(예: TICKER_SCRIPT의 M2 계산이
+# 실수로 1000배 축소된 채 방치), 페이지마다 테마 저장 여부가 갈리는(about 등
+# 손으로 쓴 페이지만 localStorage 저장) 등 드리프트 사고가 반복됐다. 이제는
+# 공용 정적 파일(theme.js/ticker.js/won.js)을 <script src>로 불러 쓰고, 이
+# 상수들은 그 태그 문자열만 담는다 - 실제 로직은 각 .js 파일 한 곳에서만 관리.
+TICKER_SCRIPT = '<script src="ticker.js"></script>'
 
-THEME_SCRIPT = "function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}\nfunction toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');document.querySelector('.theme-btn').textContent=h.getAttribute('data-theme')==='dark'?'🌙':'🌑';}"
+THEME_SCRIPT = '<script src="theme.js"></script>'
 
 # 원화 표시는 3자리 콤마가 아니라 억/만 단위로 끊어서 보여준다 (예: 1,508,069원 -> 150만8069원).
-# calc-fire-dividend.html의 won()이 기준 구현. 새 원화 표시 페이지는 무조건 이 함수를 씀.
-WON_SCRIPT = "function won(v){const n=Math.round(v);const sign=n<0?'-':'';const abs=Math.abs(n);const eok=Math.floor(abs/1e8);const man=Math.floor((abs%1e8)/1e4);const rest=abs%1e4;if(!eok&&!man)return sign+rest.toLocaleString('ko-KR')+'원';let s=sign;if(eok)s+=eok+'억';if(man)s+=man+'만';if(rest)s+=rest;return s+'원';}"
+# 실제 구현은 won.js. 새 원화 표시 페이지는 무조건 이 함수를 씀.
+WON_SCRIPT = '<script src="won.js"></script>'
 
 
 def json_str(s: str) -> str:

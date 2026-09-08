@@ -106,9 +106,9 @@ def page_html(code: str, name: str, category: str, is_domestic_equity: bool) -> 
 </div>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
-<script>
 {THEME_SCRIPT}
 {WON_SCRIPT}
+<script>
 function krw(v){{return won(v);}}
 function num(id){{return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}}
 const TAX_RATE=0.154;
@@ -171,8 +171,8 @@ async function loadDividendData(){{
   }}
 }}
 loadDividendData();
-{TICKER_SCRIPT}
 </script>
+{TICKER_SCRIPT}
 {CF_ANALYTICS}
 </body>
 </html>
@@ -243,9 +243,9 @@ main{{max-width:1100px}}</style>
 </div>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
-<script>
 {THEME_SCRIPT}
 {WON_SCRIPT}
+<script>
 const TICKER_META=[{ticker_meta_js}];
 let CAT='all', ROWS=[];
 function setCat(btn){{CAT=btn.dataset.cat;btn.parentElement.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTbl();}}
@@ -287,8 +287,8 @@ function renderTbl(){{
   </tr>`;}}).join(''):'<tr><td colspan="6" class="empty">데이터 없음</td></tr>';
 }}
 loadData();
-{TICKER_SCRIPT}
 </script>
+{TICKER_SCRIPT}
 {CF_ANALYTICS}
 </body>
 </html>

@@ -94,9 +94,9 @@ def page_html(ticker: str, name: str, category: str) -> str:
 </div>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
-<script>
 {THEME_SCRIPT}
 {WON_SCRIPT}
+<script>
 function usd(v){{return '$'+v.toLocaleString('en-US',{{minimumFractionDigits:2,maximumFractionDigits:4}});}}
 function num(id){{return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}}
 let payFreq=12;
@@ -175,7 +175,9 @@ async function loadDividendData(){{
   }}
 }}
 loadDividendData();
+</script>
 {TICKER_SCRIPT}
+<script>
 fetch('data/market.json').then(r=>r.json()).then(d=>{{const u=(d.indicators||[]).find(i=>i.indicator_code==='USD_KRW');if(u){{latestKrw=parseFloat(u.value);calc();}}}}).catch(()=>{{}});
 </script>
 {CF_ANALYTICS}
@@ -268,8 +270,8 @@ table.etf-tbl tr:last-child td{{border-bottom:none}}
 </div>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
-<script>
 {THEME_SCRIPT}
+<script>
 const TICKER_META=[{ticker_meta_js}];
 let CAT='all',SORT_KEY='yield',SORT_DIR='desc';
 let ROWS=[];
@@ -326,8 +328,8 @@ function renderTbl(){{
   </tr>`).join('');
 }}
 loadData();
-{TICKER_SCRIPT}
 </script>
+{TICKER_SCRIPT}
 {CF_ANALYTICS}
 </body>
 </html>

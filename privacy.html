@@ -44,7 +44,8 @@ footer a{color:var(--text2);margin:0 8px}
 </head>
 <body>
 <header><a href="index.html" class="logo">💰 머니파이널</a>
-<nav><a href="index.html">홈</a><a href="invest.html">투자</a><a href="dividend-etf.html">배당ETF</a><a href="calc-fire-dividend.html">파이어</a><a href="rates.html">예금·적금</a><a href="loans.html">대출</a><a href="market.html">시장</a><a href="crypto.html">코인</a><a href="savings.html">ISA</a><a href="annuity.html">연금저축</a><a href="insurance.html">보험</a><a href="company.html">기업정보</a><a href="macro.html">경제지표</a><a href="calc.html">계산기</a></nav>
+<nav id="site-nav"></nav>
+<script src="nav.js"></script>
 <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 
 <main>
@@ -92,11 +93,7 @@ footer a{color:var(--text2);margin:0 8px}
 © 2026 머니파이널 · 세상의 모든 재테크<br>
 <a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a>
 </footer>
-<script>
-(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);document.querySelector('.theme-btn').textContent=document.documentElement.getAttribute('data-theme')==='dark'?'🌙':'🌑'})();
-function toggleNav(){const n=document.querySelector('nav');if(n)n.classList.toggle('open');}
-function toggleTheme(){const h=document.documentElement;const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);document.querySelector('.theme-btn').textContent=n==='dark'?'🌙':'🌑'}
-</script>
+<script src="theme.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
