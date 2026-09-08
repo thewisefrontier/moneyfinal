@@ -514,6 +514,13 @@
         "reference_date": "2026-08-27",
         "value": 3.0,
         "unit": "%"
+      },
+      {
+        "indicator_code": "BASE_RATE",
+        "indicator_name": "한국은행 기준금리",
+        "reference_date": "2026-09-08",
+        "value": 3.0,
+        "unit": "%"
       }
     ],
     "FED_RATE": [
