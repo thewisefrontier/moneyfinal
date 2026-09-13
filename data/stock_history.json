@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13",
+  "updated_at": "2026-09-14",
   "history": {
     "012450": [
       {
@@ -34793,6 +34793,14 @@
         "flt_rt": 1.7454,
         "volume": 0,
         "market_cap": 4849208193522
+      },
+      {
+        "stock_code": "AAPL",
+        "base_date": "2026-09-14",
+        "close_price": 332.27,
+        "flt_rt": 1.7454,
+        "volume": 0,
+        "market_cap": 4849208193522
       }
     ],
     "JPM": [
@@ -35383,6 +35391,14 @@
       {
         "stock_code": "JPM",
         "base_date": "2026-09-13",
+        "close_price": 356.23,
+        "flt_rt": 0.7552,
+        "volume": 0,
+        "market_cap": 946925691734
+      },
+      {
+        "stock_code": "JPM",
+        "base_date": "2026-09-14",
         "close_price": 356.23,
         "flt_rt": 0.7552,
         "volume": 0,
@@ -35981,6 +35997,14 @@
         "flt_rt": 0.5664,
         "volume": 0,
         "market_cap": 1650860412505
+      },
+      {
+        "stock_code": "META",
+        "base_date": "2026-09-14",
+        "close_price": 648.03,
+        "flt_rt": 0.5664,
+        "volume": 0,
+        "market_cap": 1650860412505
       }
     ],
     "NVDA": [
@@ -36571,6 +36595,14 @@
       {
         "stock_code": "NVDA",
         "base_date": "2026-09-13",
+        "close_price": 218.29,
+        "flt_rt": -0.0321,
+        "volume": 0,
+        "market_cap": 5260789014704
+      },
+      {
+        "stock_code": "NVDA",
+        "base_date": "2026-09-14",
         "close_price": 218.29,
         "flt_rt": -0.0321,
         "volume": 0,
@@ -37169,6 +37201,14 @@
         "flt_rt": 1.7739,
         "volume": 0,
         "market_cap": 4139855000000
+      },
+      {
+        "stock_code": "GOOGL",
+        "base_date": "2026-09-14",
+        "close_price": 338.5,
+        "flt_rt": 1.7739,
+        "volume": 0,
+        "market_cap": 4139855000000
       }
     ],
     "TSLA": [
@@ -37763,600 +37803,14 @@
         "flt_rt": 0.5171,
         "volume": 0,
         "market_cap": 1443322667964
-      }
-    ],
-    "V": [
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-01",
-        "close_price": 343.09,
-        "flt_rt": 0.4215,
-        "volume": 0,
-        "market_cap": 645764944253
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-02",
-        "close_price": 351.08,
-        "flt_rt": 2.3288,
-        "volume": 0,
-        "market_cap": 645764944253
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-03",
-        "close_price": 362.13,
-        "flt_rt": 3.1474,
-        "volume": 0,
-        "market_cap": 662137993788
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-04",
-        "close_price": 362.13,
-        "flt_rt": 3.1474,
-        "volume": 0,
-        "market_cap": 682298146098
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-05",
-        "close_price": 362.13,
-        "flt_rt": 3.1474,
-        "volume": 0,
-        "market_cap": 682298146098
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-07",
-        "close_price": 357.25,
-        "flt_rt": -1.3476,
-        "volume": 0,
-        "market_cap": 682298146098
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-08",
-        "close_price": 352.2,
-        "flt_rt": -1.4136,
-        "volume": 0,
-        "market_cap": 672114451072
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-09",
-        "close_price": 347.53,
-        "flt_rt": -1.326,
-        "volume": 0,
-        "market_cap": 654789936582
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-10",
-        "close_price": 348.2,
-        "flt_rt": 0.1928,
-        "volume": 0,
-        "market_cap": 654789936582
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-11",
-        "close_price": 348.97,
-        "flt_rt": 0.2211,
-        "volume": 0,
-        "market_cap": 656052275242
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-12",
-        "close_price": 348.97,
-        "flt_rt": 0.2211,
-        "volume": 0,
-        "market_cap": 657503076741
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-13",
-        "close_price": 348.97,
-        "flt_rt": 0.2211,
-        "volume": 0,
-        "market_cap": 657503076741
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-14",
-        "close_price": 357.75,
-        "flt_rt": 2.516,
-        "volume": 0,
-        "market_cap": 657503076741
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-15",
-        "close_price": 356.02,
-        "flt_rt": -0.4836,
-        "volume": 0,
-        "market_cap": 674045672352
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-16",
-        "close_price": 355.14,
-        "flt_rt": -0.2472,
-        "volume": 0,
-        "market_cap": 670786113281
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-17",
-        "close_price": 365.14,
-        "flt_rt": 2.8158,
-        "volume": 0,
-        "market_cap": 669128083452
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-18",
-        "close_price": 358.56,
-        "flt_rt": -1.802,
-        "volume": 0,
-        "market_cap": 687969380337
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-19",
-        "close_price": 358.56,
-        "flt_rt": -1.802,
-        "volume": 0,
-        "market_cap": 675571838236
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-20",
-        "close_price": 358.56,
-        "flt_rt": -1.802,
-        "volume": 0,
-        "market_cap": 675571838236
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-21",
-        "close_price": 360.57,
-        "flt_rt": 0.5606,
-        "volume": 0,
-        "market_cap": 675571806535
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-22",
-        "close_price": 355.82,
-        "flt_rt": -1.3174,
-        "volume": 0,
-        "market_cap": 679358897485
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-23",
-        "close_price": 353.42,
-        "flt_rt": -0.6745,
-        "volume": 0,
-        "market_cap": 670409322808
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-24",
-        "close_price": 351.6,
-        "flt_rt": -0.515,
-        "volume": 0,
-        "market_cap": 665887434634
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-25",
-        "close_price": 355.74,
-        "flt_rt": 1.1775,
-        "volume": 0,
-        "market_cap": 665614222784
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-26",
-        "close_price": 355.74,
-        "flt_rt": 1.1775,
-        "volume": 0,
-        "market_cap": 670258590654
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-27",
-        "close_price": 355.74,
-        "flt_rt": 1.1775,
-        "volume": 0,
-        "market_cap": 670258590654
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-28",
-        "close_price": 362.53,
-        "flt_rt": 1.9087,
-        "volume": 0,
-        "market_cap": 670258560619
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-29",
-        "close_price": 366.59,
-        "flt_rt": 1.1199,
-        "volume": 0,
-        "market_cap": 683051784543
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-30",
-        "close_price": 368.73,
-        "flt_rt": 0.5838,
-        "volume": 0,
-        "market_cap": 690701326890
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-07-31",
-        "close_price": 366.27,
-        "flt_rt": -0.6672,
-        "volume": 0,
-        "market_cap": 663703117142
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-01",
-        "close_price": 366.13,
-        "flt_rt": -0.0382,
-        "volume": 0,
-        "market_cap": 683843400000
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-02",
-        "close_price": 366.13,
-        "flt_rt": -0.0382,
-        "volume": 0,
-        "market_cap": 651419132920
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-03",
-        "close_price": 366.13,
-        "flt_rt": -0.0382,
-        "volume": 0,
-        "market_cap": 651419132920
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-04",
-        "close_price": 365.67,
-        "flt_rt": -0.1256,
-        "volume": 0,
-        "market_cap": 651419161147
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-05",
-        "close_price": 369.59,
-        "flt_rt": 1.072,
-        "volume": 0,
-        "market_cap": 672906598608
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-06",
-        "close_price": 368.54,
-        "flt_rt": -0.2841,
-        "volume": 0,
-        "market_cap": 690042026390
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-07",
-        "close_price": 370.47,
-        "flt_rt": 0.5237,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-08",
-        "close_price": 362.5,
-        "flt_rt": -2.1513,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-09",
-        "close_price": 362.5,
-        "flt_rt": -2.1513,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-10",
-        "close_price": 362.5,
-        "flt_rt": -2.1513,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-11",
-        "close_price": 361.32,
-        "flt_rt": -0.3255,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-12",
-        "close_price": 362.82,
-        "flt_rt": 0.4151,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-13",
-        "close_price": 359.42,
-        "flt_rt": -0.9371,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-14",
-        "close_price": 365.45,
-        "flt_rt": 1.6777,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-15",
-        "close_price": 364.15,
-        "flt_rt": -0.3557,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-16",
-        "close_price": 364.15,
-        "flt_rt": -0.3557,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-17",
-        "close_price": 364.15,
-        "flt_rt": -0.3557,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-18",
-        "close_price": 358.84,
-        "flt_rt": -1.4582,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-19",
-        "close_price": 364.25,
-        "flt_rt": 1.5076,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-20",
-        "close_price": 365.54,
-        "flt_rt": 0.3542,
-        "volume": 0,
-        "market_cap": 691685050939
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-21",
-        "close_price": 365.73,
-        "flt_rt": 0.052,
-        "volume": 0,
-        "market_cap": 681743023655
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-22",
-        "close_price": 371.04,
-        "flt_rt": 1.4519,
-        "volume": 0,
-        "market_cap": 681743023655
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-23",
-        "close_price": 371.04,
-        "flt_rt": 1.4519,
-        "volume": 0,
-        "market_cap": 687904284665
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-24",
-        "close_price": 371.04,
-        "flt_rt": 1.4519,
-        "volume": 0,
-        "market_cap": 687904284665
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-25",
-        "close_price": 382.41,
-        "flt_rt": 3.0644,
-        "volume": 0,
-        "market_cap": 687904284665
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-26",
-        "close_price": 384.14,
-        "flt_rt": 0.4524,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-27",
-        "close_price": 383.9,
-        "flt_rt": -0.0625,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-28",
-        "close_price": 379.66,
-        "flt_rt": -1.1045,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-29",
-        "close_price": 381.6,
-        "flt_rt": 0.511,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-30",
-        "close_price": 381.6,
-        "flt_rt": 0.511,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-08-31",
-        "close_price": 381.6,
-        "flt_rt": 0.511,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-01",
-        "close_price": 379.37,
-        "flt_rt": -0.5844,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-02",
-        "close_price": 372.67,
-        "flt_rt": -1.7661,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-03",
-        "close_price": 378.4,
-        "flt_rt": 1.5376,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-04",
-        "close_price": 378.75,
-        "flt_rt": 0.0925,
-        "volume": 0,
-        "market_cap": 0
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-05",
-        "close_price": 375.07,
-        "flt_rt": -0.9716,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-06",
-        "close_price": 375.07,
-        "flt_rt": -0.9716,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-07",
-        "close_price": 375.07,
-        "flt_rt": -0.9716,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-08",
-        "close_price": 375.07,
-        "flt_rt": -0.9716,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-09",
-        "close_price": 368.64,
-        "flt_rt": -1.7143,
-        "volume": 0,
-        "market_cap": 692749267851
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-10",
-        "close_price": 367.39,
-        "flt_rt": -0.3391,
-        "volume": 0,
-        "market_cap": 687353498452
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-11",
-        "close_price": 367.21,
-        "flt_rt": -0.049,
-        "volume": 0,
-        "market_cap": 685355771591
-      },
-      {
-        "stock_code": "V",
-        "base_date": "2026-09-12",
-        "close_price": 370.45,
-        "flt_rt": 0.8823,
-        "volume": 0,
-        "market_cap": 690844847515
       },
       {
-        "stock_code": "V",
-        "base_date": "2026-09-13",
-        "close_price": 370.45,
-        "flt_rt": 0.8823,
+        "stock_code": "TSLA",
+        "base_date": "2026-09-14",
+        "close_price": 365.44,
+        "flt_rt": 0.5171,
         "volume": 0,
-        "market_cap": 691647677860
+        "market_cap": 1443322667964
       }
     ],
     "AVGO": [
@@ -38951,600 +38405,616 @@
         "flt_rt": 0.3215,
         "volume": 0,
         "market_cap": 1722196348391
+      },
+      {
+        "stock_code": "AVGO",
+        "base_date": "2026-09-14",
+        "close_price": 361.99,
+        "flt_rt": 0.3215,
+        "volume": 0,
+        "market_cap": 1722196348391
       }
     ],
-    "MSFT": [
+    "V": [
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-01",
-        "close_price": 373.02,
-        "flt_rt": 1.2074,
+        "close_price": 343.09,
+        "flt_rt": 0.4215,
         "volume": 0,
-        "market_cap": 2770954718482
+        "market_cap": 645764944253
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-02",
-        "close_price": 384.28,
-        "flt_rt": 3.0186,
+        "close_price": 351.08,
+        "flt_rt": 2.3288,
         "volume": 0,
-        "market_cap": 2770954718482
+        "market_cap": 645764944253
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-03",
-        "close_price": 390.49,
-        "flt_rt": 1.616,
+        "close_price": 362.13,
+        "flt_rt": 3.1474,
         "volume": 0,
-        "market_cap": 2854598752605
+        "market_cap": 662137993788
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-04",
-        "close_price": 390.49,
-        "flt_rt": 1.616,
+        "close_price": 362.13,
+        "flt_rt": 3.1474,
         "volume": 0,
-        "market_cap": 2900729342818
+        "market_cap": 682298146098
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-05",
-        "close_price": 390.49,
-        "flt_rt": 1.616,
+        "close_price": 362.13,
+        "flt_rt": 3.1474,
         "volume": 0,
-        "market_cap": 2900729342818
+        "market_cap": 682298146098
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-07",
-        "close_price": 386.74,
-        "flt_rt": -0.9603,
+        "close_price": 357.25,
+        "flt_rt": -1.3476,
         "volume": 0,
-        "market_cap": 2900729342818
+        "market_cap": 682298146098
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-08",
-        "close_price": 388.84,
-        "flt_rt": 0.543,
+        "close_price": 352.2,
+        "flt_rt": -1.4136,
         "volume": 0,
-        "market_cap": 2872872713875
+        "market_cap": 672114451072
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-09",
-        "close_price": 383.34,
-        "flt_rt": -1.4145,
+        "close_price": 347.53,
+        "flt_rt": -1.326,
         "volume": 0,
-        "market_cap": 2847616081365
+        "market_cap": 654789936582
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-10",
-        "close_price": 384.36,
-        "flt_rt": 0.2661,
+        "close_price": 348.2,
+        "flt_rt": 0.1928,
         "volume": 0,
-        "market_cap": 2847616081365
+        "market_cap": 654789936582
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-11",
-        "close_price": 385.1,
-        "flt_rt": 0.1925,
+        "close_price": 348.97,
+        "flt_rt": 0.2211,
         "volume": 0,
-        "market_cap": 2855193084169
+        "market_cap": 656052275242
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-12",
-        "close_price": 385.1,
-        "flt_rt": 0.1925,
+        "close_price": 348.97,
+        "flt_rt": 0.2211,
         "volume": 0,
-        "market_cap": 2860690044002
+        "market_cap": 657503076741
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-13",
-        "close_price": 385.1,
-        "flt_rt": 0.1925,
+        "close_price": 348.97,
+        "flt_rt": 0.2211,
         "volume": 0,
-        "market_cap": 2860690044002
+        "market_cap": 657503076741
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-14",
-        "close_price": 390.99,
-        "flt_rt": 1.5295,
+        "close_price": 357.75,
+        "flt_rt": 2.516,
         "volume": 0,
-        "market_cap": 2860690044002
+        "market_cap": 657503076741
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-15",
-        "close_price": 384.93,
-        "flt_rt": -1.5499,
+        "close_price": 356.02,
+        "flt_rt": -0.4836,
         "volume": 0,
-        "market_cap": 2904443678679
+        "market_cap": 674045672352
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-16",
-        "close_price": 395.63,
-        "flt_rt": 2.7797,
+        "close_price": 355.14,
+        "flt_rt": -0.2472,
         "volume": 0,
-        "market_cap": 2859427264742
+        "market_cap": 670786113281
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-17",
-        "close_price": 401.1,
-        "flt_rt": 1.3826,
+        "close_price": 365.14,
+        "flt_rt": 2.8158,
         "volume": 0,
-        "market_cap": 2938911513132
+        "market_cap": 669128083452
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-18",
-        "close_price": 393.82,
-        "flt_rt": -1.815,
+        "close_price": 358.56,
+        "flt_rt": -1.802,
         "volume": 0,
-        "market_cap": 2979545151492
+        "market_cap": 687969380337
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-19",
-        "close_price": 393.82,
-        "flt_rt": -1.815,
+        "close_price": 358.56,
+        "flt_rt": -1.802,
         "volume": 0,
-        "market_cap": 2925466146997
+        "market_cap": 675571838236
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-20",
-        "close_price": 393.82,
-        "flt_rt": -1.815,
+        "close_price": 358.56,
+        "flt_rt": -1.802,
         "volume": 0,
-        "market_cap": 2925466146997
+        "market_cap": 675571838236
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-21",
-        "close_price": 402.29,
-        "flt_rt": 2.1507,
+        "close_price": 360.57,
+        "flt_rt": 0.5606,
         "volume": 0,
-        "market_cap": 2925466156888
+        "market_cap": 675571806535
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-22",
-        "close_price": 397.75,
-        "flt_rt": -1.1285,
+        "close_price": 355.82,
+        "flt_rt": -1.3174,
         "volume": 0,
-        "market_cap": 2988384998868
+        "market_cap": 679358897485
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-23",
-        "close_price": 390.34,
-        "flt_rt": -1.863,
+        "close_price": 353.42,
+        "flt_rt": -0.6745,
         "volume": 0,
-        "market_cap": 2954659850342
+        "market_cap": 670409322808
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-24",
-        "close_price": 381.58,
-        "flt_rt": -2.2442,
+        "close_price": 351.6,
+        "flt_rt": -0.515,
         "volume": 0,
-        "market_cap": 2899615122972
+        "market_cap": 665887434634
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-25",
-        "close_price": 381.7,
-        "flt_rt": 0.0314,
+        "close_price": 355.74,
+        "flt_rt": 1.1775,
         "volume": 0,
-        "market_cap": 2853224475879
+        "market_cap": 665614222784
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-26",
-        "close_price": 381.7,
-        "flt_rt": 0.0314,
+        "close_price": 355.74,
+        "flt_rt": 1.1775,
         "volume": 0,
-        "market_cap": 2835433375710
+        "market_cap": 670258590654
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-27",
-        "close_price": 381.7,
-        "flt_rt": 0.0314,
+        "close_price": 355.74,
+        "flt_rt": 1.1775,
         "volume": 0,
-        "market_cap": 2835433375710
+        "market_cap": 670258590654
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-28",
-        "close_price": 389.1,
-        "flt_rt": 1.9387,
+        "close_price": 362.53,
+        "flt_rt": 1.9087,
         "volume": 0,
-        "market_cap": 2835433566167
+        "market_cap": 670258560619
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-29",
-        "close_price": 393.35,
-        "flt_rt": 1.0923,
+        "close_price": 366.59,
+        "flt_rt": 1.1199,
         "volume": 0,
-        "market_cap": 2890403936648
+        "market_cap": 683051784543
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-30",
-        "close_price": 390.54,
-        "flt_rt": -0.7144,
+        "close_price": 368.73,
+        "flt_rt": 0.5838,
         "volume": 0,
-        "market_cap": 2921974783572
+        "market_cap": 690701326890
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-07-31",
-        "close_price": 451.1,
-        "flt_rt": 15.5067,
+        "close_price": 366.27,
+        "flt_rt": -0.6672,
         "volume": 0,
-        "market_cap": 3337410014598
+        "market_cap": 663703117142
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-01",
-        "close_price": 464.72,
-        "flt_rt": 3.0193,
+        "close_price": 366.13,
+        "flt_rt": -0.0382,
         "volume": 0,
-        "market_cap": 3349663570000
+        "market_cap": 683843400000
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-02",
-        "close_price": 464.72,
-        "flt_rt": 3.0193,
+        "close_price": 366.13,
+        "flt_rt": -0.0382,
         "volume": 0,
-        "market_cap": 3450799509697
+        "market_cap": 651419132920
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-03",
-        "close_price": 464.72,
-        "flt_rt": 3.0193,
+        "close_price": 366.13,
+        "flt_rt": -0.0382,
         "volume": 0,
-        "market_cap": 3450799509697
+        "market_cap": 651419132920
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-04",
-        "close_price": 487.65,
-        "flt_rt": 4.9342,
+        "close_price": 365.67,
+        "flt_rt": -0.1256,
         "volume": 0,
-        "market_cap": 3450799472072
+        "market_cap": 651419161147
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-05",
-        "close_price": 492.81,
-        "flt_rt": 1.0581,
+        "close_price": 369.59,
+        "flt_rt": 1.072,
         "volume": 0,
-        "market_cap": 3621067228774
+        "market_cap": 672906598608
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-06",
-        "close_price": 487.46,
-        "flt_rt": -1.0856,
+        "close_price": 368.54,
+        "flt_rt": -0.2841,
         "volume": 0,
-        "market_cap": 3659383015449
+        "market_cap": 690042026390
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-07",
-        "close_price": 499.86,
-        "flt_rt": 2.5438,
+        "close_price": 370.47,
+        "flt_rt": 0.5237,
         "volume": 0,
-        "market_cap": 3711733063655
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-08",
-        "close_price": 499.99,
-        "flt_rt": 0.026,
+        "close_price": 362.5,
+        "flt_rt": -2.1513,
         "volume": 0,
-        "market_cap": 3711733063655
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-09",
-        "close_price": 499.99,
-        "flt_rt": 0.026,
+        "close_price": 362.5,
+        "flt_rt": -2.1513,
         "volume": 0,
-        "market_cap": 3712698340823
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-10",
-        "close_price": 499.99,
-        "flt_rt": 0.026,
+        "close_price": 362.5,
+        "flt_rt": -2.1513,
         "volume": 0,
-        "market_cap": 3712698340823
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-11",
-        "close_price": 506.06,
-        "flt_rt": 1.214,
+        "close_price": 361.32,
+        "flt_rt": -0.3255,
         "volume": 0,
-        "market_cap": 3712698340823
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-12",
-        "close_price": 503.81,
-        "flt_rt": -0.4446,
+        "close_price": 362.82,
+        "flt_rt": 0.4151,
         "volume": 0,
-        "market_cap": 3757771492135
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-13",
-        "close_price": 492.43,
-        "flt_rt": -2.2588,
+        "close_price": 359.42,
+        "flt_rt": -0.9371,
         "volume": 0,
-        "market_cap": 3661870573546
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-14",
-        "close_price": 496.88,
-        "flt_rt": 0.9037,
+        "close_price": 365.45,
+        "flt_rt": 1.6777,
         "volume": 0,
-        "market_cap": 3689604948520
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-15",
-        "close_price": 495.4,
-        "flt_rt": -0.2979,
+        "close_price": 364.15,
+        "flt_rt": -0.3557,
         "volume": 0,
-        "market_cap": 3689604948520
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-16",
-        "close_price": 495.4,
-        "flt_rt": -0.2979,
+        "close_price": 364.15,
+        "flt_rt": -0.3557,
         "volume": 0,
-        "market_cap": 3677204378699
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-17",
-        "close_price": 495.4,
-        "flt_rt": -0.2979,
+        "close_price": 364.15,
+        "flt_rt": -0.3557,
         "volume": 0,
-        "market_cap": 3677204378699
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-18",
-        "close_price": 480.35,
-        "flt_rt": -3.0379,
+        "close_price": 358.84,
+        "flt_rt": -1.4582,
         "volume": 0,
-        "market_cap": 3677204378699
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-19",
-        "close_price": 481.63,
-        "flt_rt": 0.2665,
+        "close_price": 364.25,
+        "flt_rt": 1.5076,
         "volume": 0,
-        "market_cap": 3566860693823
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-20",
-        "close_price": 484.31,
-        "flt_rt": 0.5564,
+        "close_price": 365.54,
+        "flt_rt": 0.3542,
         "volume": 0,
-        "market_cap": 3576365481335
+        "market_cap": 691685050939
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-21",
-        "close_price": 481.15,
-        "flt_rt": -0.6525,
+        "close_price": 365.73,
+        "flt_rt": 0.052,
         "volume": 0,
-        "market_cap": 3577887654666
+        "market_cap": 681743023655
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-22",
-        "close_price": 483.24,
-        "flt_rt": 0.4344,
+        "close_price": 371.04,
+        "flt_rt": 1.4519,
         "volume": 0,
-        "market_cap": 3572801156086
+        "market_cap": 681743023655
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-23",
-        "close_price": 483.24,
-        "flt_rt": 0.4344,
+        "close_price": 371.04,
+        "flt_rt": 1.4519,
         "volume": 0,
-        "market_cap": 3588320518485
+        "market_cap": 687904284665
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-24",
-        "close_price": 483.24,
-        "flt_rt": 0.4344,
+        "close_price": 371.04,
+        "flt_rt": 1.4519,
         "volume": 0,
-        "market_cap": 3588320518485
+        "market_cap": 687904284665
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-25",
-        "close_price": 487.31,
-        "flt_rt": 0.8422,
+        "close_price": 382.41,
+        "flt_rt": 3.0644,
         "volume": 0,
-        "market_cap": 3588320518485
+        "market_cap": 687904284665
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-26",
-        "close_price": 491.71,
-        "flt_rt": 0.9029,
+        "close_price": 384.14,
+        "flt_rt": 0.4524,
         "volume": 0,
-        "market_cap": 3635249992783
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-27",
-        "close_price": 496.37,
-        "flt_rt": 0.9477,
+        "close_price": 383.9,
+        "flt_rt": -0.0625,
         "volume": 0,
-        "market_cap": 3685817911186
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-28",
-        "close_price": 505.06,
-        "flt_rt": 1.7507,
+        "close_price": 379.66,
+        "flt_rt": -1.1045,
         "volume": 0,
-        "market_cap": 3750345927961
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-29",
-        "close_price": 513.53,
-        "flt_rt": 1.677,
+        "close_price": 381.6,
+        "flt_rt": 0.511,
         "volume": 0,
-        "market_cap": 3816730322370
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-30",
-        "close_price": 513.53,
-        "flt_rt": 1.677,
+        "close_price": 381.6,
+        "flt_rt": 0.511,
         "volume": 0,
-        "market_cap": 3816730322370
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-08-31",
-        "close_price": 513.53,
-        "flt_rt": 1.677,
+        "close_price": 381.6,
+        "flt_rt": 0.511,
         "volume": 0,
-        "market_cap": 3816730322370
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-01",
-        "close_price": 507.29,
-        "flt_rt": -1.2151,
+        "close_price": 379.37,
+        "flt_rt": -0.5844,
         "volume": 0,
-        "market_cap": 3766905146020
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-02",
-        "close_price": 501.02,
-        "flt_rt": -1.236,
+        "close_price": 372.67,
+        "flt_rt": -1.7661,
         "volume": 0,
-        "market_cap": 3720346824063
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-03",
-        "close_price": 496.82,
-        "flt_rt": -0.8383,
+        "close_price": 378.4,
+        "flt_rt": 1.5376,
         "volume": 0,
-        "market_cap": 3720346824063
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-04",
-        "close_price": 513.29,
-        "flt_rt": 3.3151,
+        "close_price": 378.75,
+        "flt_rt": 0.0925,
         "volume": 0,
-        "market_cap": 3791780564141
+        "market_cap": 0
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-05",
-        "close_price": 499.7,
-        "flt_rt": -2.0427,
+        "close_price": 375.07,
+        "flt_rt": -0.9716,
         "volume": 0,
-        "market_cap": 3718860874163
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-06",
-        "close_price": 499.7,
-        "flt_rt": -2.0427,
+        "close_price": 375.07,
+        "flt_rt": -0.9716,
         "volume": 0,
-        "market_cap": 3710545005937
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-07",
-        "close_price": 499.7,
-        "flt_rt": -2.0427,
+        "close_price": 375.07,
+        "flt_rt": -0.9716,
         "volume": 0,
-        "market_cap": 3710545005937
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-08",
-        "close_price": 499.7,
-        "flt_rt": -2.0427,
+        "close_price": 375.07,
+        "flt_rt": -0.9716,
         "volume": 0,
-        "market_cap": 3710545005937
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-09",
-        "close_price": 493.95,
-        "flt_rt": -1.1507,
+        "close_price": 368.64,
+        "flt_rt": -1.7143,
         "volume": 0,
-        "market_cap": 3710545132099
+        "market_cap": 692749267851
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-10",
-        "close_price": 491.65,
-        "flt_rt": -0.4656,
+        "close_price": 367.39,
+        "flt_rt": -0.3391,
         "volume": 0,
-        "market_cap": 3667848244947
+        "market_cap": 687353498452
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-11",
-        "close_price": 492.44,
-        "flt_rt": 0.1607,
+        "close_price": 367.21,
+        "flt_rt": -0.049,
         "volume": 0,
-        "market_cap": 3650769491125
+        "market_cap": 685355771591
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-12",
-        "close_price": 495.63,
-        "flt_rt": 0.6478,
+        "close_price": 370.45,
+        "flt_rt": 0.8823,
         "volume": 0,
-        "market_cap": 3688602573055
+        "market_cap": 690844847515
       },
       {
-        "stock_code": "MSFT",
+        "stock_code": "V",
         "base_date": "2026-09-13",
-        "close_price": 495.63,
-        "flt_rt": 0.6478,
+        "close_price": 370.45,
+        "flt_rt": 0.8823,
         "volume": 0,
-        "market_cap": 3680323089881
+        "market_cap": 691647677860
+      },
+      {
+        "stock_code": "V",
+        "base_date": "2026-09-14",
+        "close_price": 370.45,
+        "flt_rt": 0.8823,
+        "volume": 0,
+        "market_cap": 691647677860
       }
     ],
     "AMZN": [
@@ -40139,6 +39609,616 @@
         "flt_rt": 1.9413,
         "volume": 0,
         "market_cap": 2769709818561
+      },
+      {
+        "stock_code": "AMZN",
+        "base_date": "2026-09-14",
+        "close_price": 256.78,
+        "flt_rt": 1.9413,
+        "volume": 0,
+        "market_cap": 2769709818561
+      }
+    ],
+    "MSFT": [
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-01",
+        "close_price": 373.02,
+        "flt_rt": 1.2074,
+        "volume": 0,
+        "market_cap": 2770954718482
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-02",
+        "close_price": 384.28,
+        "flt_rt": 3.0186,
+        "volume": 0,
+        "market_cap": 2770954718482
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-03",
+        "close_price": 390.49,
+        "flt_rt": 1.616,
+        "volume": 0,
+        "market_cap": 2854598752605
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-04",
+        "close_price": 390.49,
+        "flt_rt": 1.616,
+        "volume": 0,
+        "market_cap": 2900729342818
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-05",
+        "close_price": 390.49,
+        "flt_rt": 1.616,
+        "volume": 0,
+        "market_cap": 2900729342818
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-07",
+        "close_price": 386.74,
+        "flt_rt": -0.9603,
+        "volume": 0,
+        "market_cap": 2900729342818
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-08",
+        "close_price": 388.84,
+        "flt_rt": 0.543,
+        "volume": 0,
+        "market_cap": 2872872713875
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-09",
+        "close_price": 383.34,
+        "flt_rt": -1.4145,
+        "volume": 0,
+        "market_cap": 2847616081365
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-10",
+        "close_price": 384.36,
+        "flt_rt": 0.2661,
+        "volume": 0,
+        "market_cap": 2847616081365
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-11",
+        "close_price": 385.1,
+        "flt_rt": 0.1925,
+        "volume": 0,
+        "market_cap": 2855193084169
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-12",
+        "close_price": 385.1,
+        "flt_rt": 0.1925,
+        "volume": 0,
+        "market_cap": 2860690044002
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-13",
+        "close_price": 385.1,
+        "flt_rt": 0.1925,
+        "volume": 0,
+        "market_cap": 2860690044002
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-14",
+        "close_price": 390.99,
+        "flt_rt": 1.5295,
+        "volume": 0,
+        "market_cap": 2860690044002
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-15",
+        "close_price": 384.93,
+        "flt_rt": -1.5499,
+        "volume": 0,
+        "market_cap": 2904443678679
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-16",
+        "close_price": 395.63,
+        "flt_rt": 2.7797,
+        "volume": 0,
+        "market_cap": 2859427264742
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-17",
+        "close_price": 401.1,
+        "flt_rt": 1.3826,
+        "volume": 0,
+        "market_cap": 2938911513132
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-18",
+        "close_price": 393.82,
+        "flt_rt": -1.815,
+        "volume": 0,
+        "market_cap": 2979545151492
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-19",
+        "close_price": 393.82,
+        "flt_rt": -1.815,
+        "volume": 0,
+        "market_cap": 2925466146997
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-20",
+        "close_price": 393.82,
+        "flt_rt": -1.815,
+        "volume": 0,
+        "market_cap": 2925466146997
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-21",
+        "close_price": 402.29,
+        "flt_rt": 2.1507,
+        "volume": 0,
+        "market_cap": 2925466156888
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-22",
+        "close_price": 397.75,
+        "flt_rt": -1.1285,
+        "volume": 0,
+        "market_cap": 2988384998868
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-23",
+        "close_price": 390.34,
+        "flt_rt": -1.863,
+        "volume": 0,
+        "market_cap": 2954659850342
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-24",
+        "close_price": 381.58,
+        "flt_rt": -2.2442,
+        "volume": 0,
+        "market_cap": 2899615122972
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-25",
+        "close_price": 381.7,
+        "flt_rt": 0.0314,
+        "volume": 0,
+        "market_cap": 2853224475879
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-26",
+        "close_price": 381.7,
+        "flt_rt": 0.0314,
+        "volume": 0,
+        "market_cap": 2835433375710
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-27",
+        "close_price": 381.7,
+        "flt_rt": 0.0314,
+        "volume": 0,
+        "market_cap": 2835433375710
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-28",
+        "close_price": 389.1,
+        "flt_rt": 1.9387,
+        "volume": 0,
+        "market_cap": 2835433566167
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-29",
+        "close_price": 393.35,
+        "flt_rt": 1.0923,
+        "volume": 0,
+        "market_cap": 2890403936648
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-30",
+        "close_price": 390.54,
+        "flt_rt": -0.7144,
+        "volume": 0,
+        "market_cap": 2921974783572
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-07-31",
+        "close_price": 451.1,
+        "flt_rt": 15.5067,
+        "volume": 0,
+        "market_cap": 3337410014598
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-01",
+        "close_price": 464.72,
+        "flt_rt": 3.0193,
+        "volume": 0,
+        "market_cap": 3349663570000
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-02",
+        "close_price": 464.72,
+        "flt_rt": 3.0193,
+        "volume": 0,
+        "market_cap": 3450799509697
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-03",
+        "close_price": 464.72,
+        "flt_rt": 3.0193,
+        "volume": 0,
+        "market_cap": 3450799509697
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-04",
+        "close_price": 487.65,
+        "flt_rt": 4.9342,
+        "volume": 0,
+        "market_cap": 3450799472072
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-05",
+        "close_price": 492.81,
+        "flt_rt": 1.0581,
+        "volume": 0,
+        "market_cap": 3621067228774
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-06",
+        "close_price": 487.46,
+        "flt_rt": -1.0856,
+        "volume": 0,
+        "market_cap": 3659383015449
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-07",
+        "close_price": 499.86,
+        "flt_rt": 2.5438,
+        "volume": 0,
+        "market_cap": 3711733063655
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-08",
+        "close_price": 499.99,
+        "flt_rt": 0.026,
+        "volume": 0,
+        "market_cap": 3711733063655
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-09",
+        "close_price": 499.99,
+        "flt_rt": 0.026,
+        "volume": 0,
+        "market_cap": 3712698340823
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-10",
+        "close_price": 499.99,
+        "flt_rt": 0.026,
+        "volume": 0,
+        "market_cap": 3712698340823
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-11",
+        "close_price": 506.06,
+        "flt_rt": 1.214,
+        "volume": 0,
+        "market_cap": 3712698340823
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-12",
+        "close_price": 503.81,
+        "flt_rt": -0.4446,
+        "volume": 0,
+        "market_cap": 3757771492135
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-13",
+        "close_price": 492.43,
+        "flt_rt": -2.2588,
+        "volume": 0,
+        "market_cap": 3661870573546
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-14",
+        "close_price": 496.88,
+        "flt_rt": 0.9037,
+        "volume": 0,
+        "market_cap": 3689604948520
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-15",
+        "close_price": 495.4,
+        "flt_rt": -0.2979,
+        "volume": 0,
+        "market_cap": 3689604948520
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-16",
+        "close_price": 495.4,
+        "flt_rt": -0.2979,
+        "volume": 0,
+        "market_cap": 3677204378699
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-17",
+        "close_price": 495.4,
+        "flt_rt": -0.2979,
+        "volume": 0,
+        "market_cap": 3677204378699
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-18",
+        "close_price": 480.35,
+        "flt_rt": -3.0379,
+        "volume": 0,
+        "market_cap": 3677204378699
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-19",
+        "close_price": 481.63,
+        "flt_rt": 0.2665,
+        "volume": 0,
+        "market_cap": 3566860693823
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-20",
+        "close_price": 484.31,
+        "flt_rt": 0.5564,
+        "volume": 0,
+        "market_cap": 3576365481335
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-21",
+        "close_price": 481.15,
+        "flt_rt": -0.6525,
+        "volume": 0,
+        "market_cap": 3577887654666
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-22",
+        "close_price": 483.24,
+        "flt_rt": 0.4344,
+        "volume": 0,
+        "market_cap": 3572801156086
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-23",
+        "close_price": 483.24,
+        "flt_rt": 0.4344,
+        "volume": 0,
+        "market_cap": 3588320518485
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-24",
+        "close_price": 483.24,
+        "flt_rt": 0.4344,
+        "volume": 0,
+        "market_cap": 3588320518485
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-25",
+        "close_price": 487.31,
+        "flt_rt": 0.8422,
+        "volume": 0,
+        "market_cap": 3588320518485
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-26",
+        "close_price": 491.71,
+        "flt_rt": 0.9029,
+        "volume": 0,
+        "market_cap": 3635249992783
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-27",
+        "close_price": 496.37,
+        "flt_rt": 0.9477,
+        "volume": 0,
+        "market_cap": 3685817911186
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-28",
+        "close_price": 505.06,
+        "flt_rt": 1.7507,
+        "volume": 0,
+        "market_cap": 3750345927961
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-29",
+        "close_price": 513.53,
+        "flt_rt": 1.677,
+        "volume": 0,
+        "market_cap": 3816730322370
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-30",
+        "close_price": 513.53,
+        "flt_rt": 1.677,
+        "volume": 0,
+        "market_cap": 3816730322370
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-08-31",
+        "close_price": 513.53,
+        "flt_rt": 1.677,
+        "volume": 0,
+        "market_cap": 3816730322370
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-01",
+        "close_price": 507.29,
+        "flt_rt": -1.2151,
+        "volume": 0,
+        "market_cap": 3766905146020
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-02",
+        "close_price": 501.02,
+        "flt_rt": -1.236,
+        "volume": 0,
+        "market_cap": 3720346824063
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-03",
+        "close_price": 496.82,
+        "flt_rt": -0.8383,
+        "volume": 0,
+        "market_cap": 3720346824063
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-04",
+        "close_price": 513.29,
+        "flt_rt": 3.3151,
+        "volume": 0,
+        "market_cap": 3791780564141
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-05",
+        "close_price": 499.7,
+        "flt_rt": -2.0427,
+        "volume": 0,
+        "market_cap": 3718860874163
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-06",
+        "close_price": 499.7,
+        "flt_rt": -2.0427,
+        "volume": 0,
+        "market_cap": 3710545005937
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-07",
+        "close_price": 499.7,
+        "flt_rt": -2.0427,
+        "volume": 0,
+        "market_cap": 3710545005937
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-08",
+        "close_price": 499.7,
+        "flt_rt": -2.0427,
+        "volume": 0,
+        "market_cap": 3710545005937
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-09",
+        "close_price": 493.95,
+        "flt_rt": -1.1507,
+        "volume": 0,
+        "market_cap": 3710545132099
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-10",
+        "close_price": 491.65,
+        "flt_rt": -0.4656,
+        "volume": 0,
+        "market_cap": 3667848244947
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-11",
+        "close_price": 492.44,
+        "flt_rt": 0.1607,
+        "volume": 0,
+        "market_cap": 3650769491125
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-12",
+        "close_price": 495.63,
+        "flt_rt": 0.6478,
+        "volume": 0,
+        "market_cap": 3688602573055
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-13",
+        "close_price": 495.63,
+        "flt_rt": 0.6478,
+        "volume": 0,
+        "market_cap": 3680323089881
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-09-14",
+        "close_price": 495.63,
+        "flt_rt": 0.6478,
+        "volume": 0,
+        "market_cap": 3680323089881
       }
     ]
   }
