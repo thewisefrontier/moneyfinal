@@ -21,7 +21,7 @@ FRED_BASE_URL = "https://api.stlouisfed.org/fred/series/observations"
 
 SERIES = [
     {
-        'series_id': 'FEDFUNDS',
+        'series_id': 'DFEDTARU',  # 월별 실효금리 평균(FEDFUNDS)은 FOMC 인상/인하 후 반영이 한 달 넘게 늦어서, 일별 갱신되는 목표금리 상단으로 교체
         'indicator_code': 'FED_RATE',
         'indicator_name': '미국 기준금리',
         'unit': '%',
