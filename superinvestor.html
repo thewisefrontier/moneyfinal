@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자들의 13F 공시를 모아 여러 명이 동시에 담고 있는 종목을 한눈에 비교.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/superinvestor">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="슈퍼인베스터 13F 컨센서스 | 머니파이널">
+<meta property="og:description" content="워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자들의 13F 공시를 모아 여러 명이 동시에 담고 있는 종목을 한눈에 비교.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/superinvestor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="슈퍼인베스터 13F 컨센서스 | 머니파이널">
+<meta name="twitter:description" content="워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자들의 13F 공시를 모아 여러 명이 동시에 담고 있는 종목을 한눈에 비교.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"슈퍼인베스터 13F 컨센서스","description":"유명 투자자 13F 공시 기반 컨센서스 종목","url":"https://moneyfinal.pages.dev/superinvestor","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<title>슈퍼인베스터 13F 컨센서스 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:20px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card-title{font-size:13px;font-weight:600;flex-shrink:0}
+.search-box{flex:1;min-width:140px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:7px 10px;font-size:13px;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px}
+th{text-align:right;color:var(--text2);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:right;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg3)}
+.rank{color:var(--text2);width:22px;display:inline-block}
+.stock-name{font-weight:600}
+.coin-sym{color:var(--text2);font-size:11px;margin-left:4px}
+.holder-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;justify-content:flex-end}
+.hb{font-size:10.5px;padding:2px 7px;border-radius:20px;background:var(--bg3);color:var(--text2);white-space:nowrap}
+.loading{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+</style>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav id="site-nav" data-active="superinvestor.html"></nav>
+<script src="nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>슈퍼인베스터 13F 컨센서스</h1>
+<div class="sub">워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자 9인의 미국 SEC 13F 공시를 모아, 여러 명이 동시에 담고 있는 종목 순으로 정리</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="kpi-label">추적 투자자</div><div class="kpi-value" id="k-investors">-</div><div class="kpi-sub">SEC EDGAR 13F 기준</div></div>
+  <div class="kpi"><div class="kpi-label">최다 겹침 종목</div><div class="kpi-value" id="k-top">-</div><div class="kpi-sub" id="k-top-sub">-</div></div>
+  <div class="kpi"><div class="kpi-label">업데이트</div><div class="kpi-value" id="k-updated">-</div><div class="kpi-sub">분기 공시, 최대 45일 지연</div></div>
+</div>
+
+<div class="card">
+  <div class="card-hd">
+    <span class="card-title">전체 목록</span>
+    <input type="text" class="search-box" id="q" placeholder="종목명 검색" oninput="renderTbl()">
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th style="text-align:left">종목</th>
+      <th>겹치는 투자자</th>
+      <th>합산 평가금액</th>
+    </tr></thead>
+    <tbody id="tbody"><tr><td colspan="3" class="loading">로딩 중...</td></tr></tbody>
+  </table>
+  </div>
+</div>
+</main>
+<div class="disclaimer">⚠️ 13F는 분기 공시로 분기 종료 후 최대 45일 지연되어 반영됩니다(실시간 보유 현황이 아닌 최대 4.5개월 전 스냅샷). 매수·매도 추천이 아니며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: SEC EDGAR</div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script src="theme.js"></script><script>
+function usdBig(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'조';if(n>=1e8)return'$'+(n/1e8).toFixed(1)+'억';return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0});}
+
+let CONSENSUS=[];
+
+async function load(){
+  try{
+    const r=await fetch('data/superinvestors.json');const d=await r.json();
+    CONSENSUS=d.consensus||[];
+    document.getElementById('k-investors').textContent=(d.investor_count||0)+'명';
+    document.getElementById('k-updated').textContent=d.updated_at||'-';
+    if(CONSENSUS.length){
+      const top=CONSENSUS[0];
+      document.getElementById('k-top').textContent=top.holder_count+'명';
+      document.getElementById('k-top-sub').textContent=top.name_of_issuer;
+    }
+    renderTbl();
+  }catch(e){
+    document.getElementById('tbody').innerHTML='<tr><td colspan="3" class="empty">데이터를 불러오지 못했습니다</td></tr>';
+  }
+}
+function renderTbl(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q));
+  const tbody=document.getElementById('tbody');
+  if(!list.length){tbody.innerHTML='<tr><td colspan="3" class="empty">검색 결과가 없습니다</td></tr>';return;}
+  tbody.innerHTML=list.map((c,i)=>`<tr>
+    <td><span class="rank">${i+1}.</span><span class="stock-name">${c.name_of_issuer}</span>${c.ticker?`<span class="coin-sym">${c.ticker}</span>`:''}</td>
+    <td>${c.holder_count}명<div class="holder-badges">${c.holders.map(h=>`<span class="hb">${h.investor_name}</span>`).join('')}</div></td>
+    <td>${usdBig(c.total_value_usd)}</td>
+  </tr>`).join('');
+}
+load();
+</script><script src="ticker.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

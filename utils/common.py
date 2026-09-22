@@ -60,6 +60,7 @@ CONFLICT_COLUMNS = {
     'us_company_dividends': 'ticker,ex_date',
     'us_company_splits': 'ticker,split_date',
     'crypto_prices': 'id',
+    'superinvestor_holdings': 'investor_name,cusip',
 }
 
 
@@ -193,18 +194,23 @@ def supabase_upsert(table: str, data: list) -> bool:
         return False
 
 
-def supabase_delete_not_in(table: str, column: str, keep_values: list) -> bool:
-    """keep_values에 없는 행을 삭제. 매일 top-N만 다시 upsert하는 스냅샷성 테이블에서
-    순위 밖으로 밀려난 옛 행이 영구히 남아 중복 순위로 보이는 걸 방지하기 위함."""
+def supabase_delete_not_in(table: str, column: str, keep_values: list, extra_eq: dict = None) -> bool:
+    """keep_values에 없는 행을 삭제. 매일/매분기 top-N만 다시 upsert하는 스냅샷성
+    테이블에서 순위·보유 밖으로 밀려난 옛 행이 영구히 남는 걸 방지하기 위함.
+    extra_eq: 같은 테이블을 여러 그룹(예: 투자자별)으로 나눠 쓸 때, 그 그룹의
+    행만 대상으로 삼기 위한 추가 등호 필터 (예: {'investor_name': 'Warren Buffett'})."""
     if not keep_values:
         return True
     url = f"{SUPABASE_URL}/rest/v1/{table}"
     values = ','.join(quote(str(v), safe='') for v in keep_values)
+    params = {column: f'not.in.({values})'}
+    if extra_eq:
+        params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
     try:
         res = requests.delete(
             url,
             headers=HEADERS,
-            params={column: f'not.in.({values})'},
+            params=params,
             timeout=30
         )
         if res.status_code >= 400:

@@ -1,0 +1,3731 @@
+{
+  "updated_at": "2026-09-22",
+  "investor_count": 9,
+  "consensus": [
+    {
+      "cusip": "02079K107",
+      "name_of_issuer": "ALPHABET INC",
+      "ticker": "GOOG",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 89421720.0,
+          "weight_pct": 0.652,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 484744000.0,
+          "weight_pct": 8.9505,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 653660500.0,
+          "weight_pct": 8.4612,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 9606489032.0,
+          "weight_pct": 3.2102,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 866117829.0,
+          "weight_pct": 23.3901,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 5,
+      "total_value_usd": 11700433081.0
+    },
+    {
+      "cusip": "02079K305",
+      "name_of_issuer": "ALPHABET INC",
+      "ticker": "GOOGL",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 9310043.0,
+          "weight_pct": 0.0679,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 120184000.0,
+          "weight_pct": 2.3064,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 28157599351.0,
+          "weight_pct": 9.4093,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 908899121.0,
+          "weight_pct": 24.5455,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 4,
+      "total_value_usd": 29195992515.0
+    },
+    {
+      "cusip": "023135106",
+      "name_of_issuer": "AMAZON COM INC",
+      "ticker": "AMZN",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 2385104083.0,
+          "weight_pct": 17.3914,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 892310000.0,
+          "weight_pct": 16.4759,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 238555000.0,
+          "weight_pct": 4.578,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 1191700000.0,
+          "weight_pct": 15.4258,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 4,
+      "total_value_usd": 4707669083.0
+    },
+    {
+      "cusip": "037833100",
+      "name_of_issuer": "APPLE INC",
+      "ticker": "AAPL",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 241615600.0,
+          "weight_pct": 3.1276,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 65950296923.0,
+          "weight_pct": 22.0383,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 32003216.0,
+          "weight_pct": 0.8643,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 3,
+      "total_value_usd": 66223915739.0
+    },
+    {
+      "cusip": "30303M102",
+      "name_of_issuer": "META PLATFORMS INC",
+      "ticker": "META",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 1522358404.0,
+          "weight_pct": 11.1005,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 380220750.0,
+          "weight_pct": 4.9217,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 28165000.0,
+          "weight_pct": 0.5405,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 3,
+      "total_value_usd": 1930744154.0
+    },
+    {
+      "cusip": "247361702",
+      "name_of_issuer": "DELTA AIR LINES INC",
+      "ticker": "DAL",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 5368591200.0,
+          "weight_pct": 1.794,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 56477000.0,
+          "weight_pct": 1.0838,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 5425068200.0
+    },
+    {
+      "cusip": "90353T100",
+      "name_of_issuer": "UBER TECHNOLOGIES INC",
+      "ticker": "UBER",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 2154934398.0,
+          "weight_pct": 15.713,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 555204163.0,
+          "weight_pct": 7.1868,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 2710138561.0
+    },
+    {
+      "cusip": "76131D103",
+      "name_of_issuer": "RESTAURANT BRANDS INTL INC",
+      "ticker": "QSR",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 1673501194.0,
+          "weight_pct": 12.2026,
+          "period_of_report": "2026-03-31"
+        },
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 489612000.0,
+          "weight_pct": 9.0403,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 2163113194.0
+    },
+    {
+      "cusip": "874039100",
+      "name_of_issuer": "Taiwan Semiconductor Manufac",
+      "ticker": "TSM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 281613000.0,
+          "weight_pct": 5.4044,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 787990500.0,
+          "weight_pct": 10.2,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 1069603500.0
+    },
+    {
+      "cusip": "084670702",
+      "name_of_issuer": "BERKSHIRE HATHAWAY INC DEL",
+      "ticker": "BRKB",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 12509750.0,
+          "weight_pct": 0.1619,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 554591244.0,
+          "weight_pct": 14.9771,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 567100994.0
+    },
+    {
+      "cusip": "67066G104",
+      "name_of_issuer": "NVIDIA CORPORATION",
+      "ticker": "NVDA",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 186580000.0,
+          "weight_pct": 13.5086,
+          "period_of_report": "2025-09-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 305137250.0,
+          "weight_pct": 3.9498,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 491717250.0
+    },
+    {
+      "cusip": "512807306",
+      "name_of_issuer": "LAM RESEARCH CORP",
+      "ticker": "LRCX",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 165748725.0,
+          "weight_pct": 2.1455,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 18893000.0,
+          "weight_pct": 0.3626,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 184641725.0
+    },
+    {
+      "cusip": "60855R100",
+      "name_of_issuer": "MOLINA HEALTHCARE INC",
+      "ticker": "MOH",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 23920000.0,
+          "weight_pct": 1.7318,
+          "period_of_report": "2025-09-30"
+        },
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 144906000.0,
+          "weight_pct": 2.6756,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 168826000.0
+    },
+    {
+      "cusip": "056752108",
+      "name_of_issuer": "Baidu Inc",
+      "ticker": "BIDU",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 10080000.0,
+          "weight_pct": 0.1934,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 148005550.0,
+          "weight_pct": 1.9158,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 158085550.0
+    },
+    {
+      "cusip": "007903107",
+      "name_of_issuer": "Advanced Micro Devices Inc",
+      "ticker": "AMD",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 42348000.0,
+          "weight_pct": 0.8127,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 114729725.0,
+          "weight_pct": 1.4851,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 157077725.0
+    },
+    {
+      "cusip": "23331A109",
+      "name_of_issuer": "D R HORTON INC",
+      "ticker": "DHI",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 580504.0,
+          "weight_pct": 0.0002,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 48701000.0,
+          "weight_pct": 0.9346,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 49281504.0
+    },
+    {
+      "cusip": "67080N101",
+      "name_of_issuer": "Nuvation Bio Inc",
+      "ticker": "NUVB",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 25786000.0,
+          "weight_pct": 0.4949,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 52842.0,
+          "weight_pct": 0.0026,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 25838842.0
+    },
+    {
+      "cusip": "881624209",
+      "name_of_issuer": "Teva Pharmaceutical Inds Ltd",
+      "ticker": "TEVA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21175000.0,
+          "weight_pct": 0.4064,
+          "period_of_report": "2026-06-30"
+        },
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 2802826.0,
+          "weight_pct": 0.1369,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 23977826.0
+    },
+    {
+      "cusip": "025816109",
+      "name_of_issuer": "AMERICAN EXPRESS CO",
+      "ticker": "AXP",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 51282319275.0,
+          "weight_pct": 17.1367,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 51282319275.0
+    },
+    {
+      "cusip": "191216100",
+      "name_of_issuer": "COCA COLA CO",
+      "ticker": "KO",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 32508000000.0,
+          "weight_pct": 10.863,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 32508000000.0
+    },
+    {
+      "cusip": "060505104",
+      "name_of_issuer": "BANK OF AMER CORP",
+      "ticker": "BAC",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 27543790975.0,
+          "weight_pct": 9.2042,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 27543790975.0
+    },
+    {
+      "cusip": "166764100",
+      "name_of_issuer": "CHEVRON CORPORATION",
+      "ticker": "CVX",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 13986141890.0,
+          "weight_pct": 4.6737,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 13986141890.0
+    },
+    {
+      "cusip": "674599105",
+      "name_of_issuer": "OCCIDENTAL PETE CORP",
+      "ticker": "OXY",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 12868205304.0,
+          "weight_pct": 4.3001,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 12868205304.0
+    },
+    {
+      "cusip": "H1467J104",
+      "name_of_issuer": "CHUBB LIMITED",
+      "ticker": "CB",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 11670066615.0,
+          "weight_pct": 3.8997,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 11670066615.0
+    },
+    {
+      "cusip": "615369105",
+      "name_of_issuer": "MOODYS CORP",
+      "ticker": "MCO",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 11173435852.0,
+          "weight_pct": 3.7338,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 11173435852.0
+    },
+    {
+      "cusip": "500754106",
+      "name_of_issuer": "KRAFT HEINZ CO",
+      "ticker": "KHC",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 7691494401.0,
+          "weight_pct": 2.5702,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 7691494401.0
+    },
+    {
+      "cusip": "23918K108",
+      "name_of_issuer": "DAVITA INC",
+      "ticker": "DVA",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 6425268898.0,
+          "weight_pct": 2.1471,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6425268898.0
+    },
+    {
+      "cusip": "451100101",
+      "name_of_issuer": "Icahn Enterprises LP",
+      "ticker": "IEP",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 4458616003.0,
+          "weight_pct": 53.9517,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 4458616003.0
+    },
+    {
+      "cusip": "829933100",
+      "name_of_issuer": "SIRIUSXM HOLDINGS INC",
+      "ticker": "SIRI",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 3686802237.0,
+          "weight_pct": 1.232,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 3686802237.0
+    },
+    {
+      "cusip": "11271J107",
+      "name_of_issuer": "BROOKFIELD CORP",
+      "ticker": "BN",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 2415946008.0,
+          "weight_pct": 17.6163,
+          "period_of_report": "2026-03-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2415946008.0
+    },
+    {
+      "cusip": "92343E102",
+      "name_of_issuer": "VERISIGN INC",
+      "ticker": "VRSN",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 2261494212.0,
+          "weight_pct": 0.7557,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2261494212.0
+    },
+    {
+      "cusip": "501044101",
+      "name_of_issuer": "KROGER CO",
+      "ticker": "KR",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 2165670000.0,
+          "weight_pct": 0.7237,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2165670000.0
+    },
+    {
+      "cusip": "594918104",
+      "name_of_issuer": "MICROSOFT CORP",
+      "ticker": "MSFT",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 2092970053.0,
+          "weight_pct": 15.2612,
+          "period_of_report": "2026-03-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2092970053.0
+    },
+    {
+      "cusip": "12662P108",
+      "name_of_issuer": "CVR Energy Inc",
+      "ticker": "CVI",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 1960899637.0,
+          "weight_pct": 23.728,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1960899637.0
+    },
+    {
+      "cusip": "02005N100",
+      "name_of_issuer": "ALLY FINL INC",
+      "ticker": "ALLY",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 1240650000.0,
+          "weight_pct": 0.4146,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1240650000.0
+    },
+    {
+      "cusip": "44267T102",
+      "name_of_issuer": "HOWARD HUGHES HOLDINGS INC",
+      "ticker": "HHH",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 1192581569.0,
+          "weight_pct": 8.6959,
+          "period_of_report": "2026-03-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1192581569.0
+    },
+    {
+      "cusip": "526057104",
+      "name_of_issuer": "LENNAR CORP",
+      "ticker": "LEN",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 1186481443.0,
+          "weight_pct": 0.3965,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1186481443.0
+    },
+    {
+      "cusip": "595112103",
+      "name_of_issuer": "MICRON TECHNOLOGY INC",
+      "ticker": "MU",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 1125432750.0,
+          "weight_pct": 14.568,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1125432750.0
+    },
+    {
+      "cusip": "530909308",
+      "name_of_issuer": "LIBERTY LIVE HOLDINGS INC",
+      "ticker": "LLYVK",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 1118425787.0,
+          "weight_pct": 0.3737,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1118425787.0
+    },
+    {
+      "cusip": "650111107",
+      "name_of_issuer": "NEW YORK TIMES CO MTN BE",
+      "ticker": "NYT",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 1098686000.0,
+          "weight_pct": 0.3671,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1098686000.0
+    },
+    {
+      "cusip": "69608A108",
+      "name_of_issuer": "PALANTIR TECHNOLOGIES INC",
+      "ticker": "PLTR",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 912100000.0,
+          "weight_pct": 66.0369,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 912100000.0
+    },
+    {
+      "cusip": "632307104",
+      "name_of_issuer": "Natera Inc",
+      "ticker": "NTRA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 864923000.0,
+          "weight_pct": 16.5985,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 864923000.0
+    },
+    {
+      "cusip": "722304102",
+      "name_of_issuer": "PDD HOLDINGS INC",
+      "ticker": "PDD",
+      "holders": [
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 820858157.0,
+          "weight_pct": 22.1679,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 820858157.0
+    },
+    {
+      "cusip": "14040H105",
+      "name_of_issuer": "CAPITAL ONE FINL CORP",
+      "ticker": "COF",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 601860000.0,
+          "weight_pct": 0.2011,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 601860000.0
+    },
+    {
+      "cusip": "392709101",
+      "name_of_issuer": "GREEN BRICK PARTNERS INC",
+      "ticker": "GRBK",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 592369623.0,
+          "weight_pct": 28.9243,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 592369623.0
+    },
+    {
+      "cusip": "530909100",
+      "name_of_issuer": "LIBERTY LIVE HOLDINGS INC",
+      "ticker": "LLYVA",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 504941901.0,
+          "weight_pct": 0.1687,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 504941901.0
+    },
+    {
+      "cusip": "036752103",
+      "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
+      "ticker": "ELV",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 493140000.0,
+          "weight_pct": 9.1055,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 493140000.0
+    },
+    {
+      "cusip": "464286772",
+      "name_of_issuer": "ISHARES INC",
+      "ticker": "EWY",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 489607500.0,
+          "weight_pct": 6.3376,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 489607500.0
+    },
+    {
+      "cusip": "126633205",
+      "name_of_issuer": "CVR Partners, LP",
+      "ticker": "UAN",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 464233266.0,
+          "weight_pct": 5.6175,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 464233266.0
+    },
+    {
+      "cusip": "546347105",
+      "name_of_issuer": "LOUISIANA PAC CORP",
+      "ticker": "LPX",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 445592617.0,
+          "weight_pct": 0.1489,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 445592617.0
+    },
+    {
+      "cusip": "155923105",
+      "name_of_issuer": "Centuri Holdings, Inc.",
+      "ticker": "CTRI",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 433521971.0,
+          "weight_pct": 5.2459,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 433521971.0
+    },
+    {
+      "cusip": "670346105",
+      "name_of_issuer": "NUCOR CORP",
+      "ticker": "NUE",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 413814258.0,
+          "weight_pct": 0.1383,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 413814258.0
+    },
+    {
+      "cusip": "27579R104",
+      "name_of_issuer": "EAST WEST BANCORP INC",
+      "ticker": "EWBC",
+      "holders": [
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 358399151.0,
+          "weight_pct": 9.6788,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 358399151.0
+    },
+    {
+      "cusip": "92840M102",
+      "name_of_issuer": "VISTRA CORP",
+      "ticker": "VST",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 351408597.0,
+          "weight_pct": 4.5488,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 351408597.0
+    },
+    {
+      "cusip": "31488V107",
+      "name_of_issuer": "FERGUSON ENTERPRISES INC",
+      "ticker": "FERG",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 344269000.0,
+          "weight_pct": 6.3567,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 344269000.0
+    },
+    {
+      "cusip": "459506101",
+      "name_of_issuer": "International Flavors and Fragrances Inc.",
+      "ticker": "IFF",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 338665500.0,
+          "weight_pct": 4.098,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 338665500.0
+    },
+    {
+      "cusip": "372460105",
+      "name_of_issuer": "GENUINE PARTS CO",
+      "ticker": "GPC",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 332253000.0,
+          "weight_pct": 6.1348,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 332253000.0
+    },
+    {
+      "cusip": "907818108",
+      "name_of_issuer": "UNION PAC CORP",
+      "ticker": "UNP",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 322427000.0,
+          "weight_pct": 5.9534,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 322427000.0
+    },
+    {
+      "cusip": "457669307",
+      "name_of_issuer": "Insmed Inc",
+      "ticker": "INSM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 295837000.0,
+          "weight_pct": 5.6773,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 295837000.0
+    },
+    {
+      "cusip": "464286400",
+      "name_of_issuer": "Ishares Inc",
+      "ticker": "EWZ",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 264414000.0,
+          "weight_pct": 5.0743,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 264414000.0
+    },
+    {
+      "cusip": "629377508",
+      "name_of_issuer": "NRG ENERGY INC",
+      "ticker": "NRG",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 257065600.0,
+          "weight_pct": 3.3275,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 257065600.0
+    },
+    {
+      "cusip": "92826C839",
+      "name_of_issuer": "VISA INC",
+      "ticker": "V",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 240628000.0,
+          "weight_pct": 4.443,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 240628000.0
+    },
+    {
+      "cusip": "861012102",
+      "name_of_issuer": "Stmicroelectronics N V",
+      "ticker": "STM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 232375000.0,
+          "weight_pct": 4.4594,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 232375000.0
+    },
+    {
+      "cusip": "95082P105",
+      "name_of_issuer": "WESCO INTL INC",
+      "ticker": "WCC",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 228979000.0,
+          "weight_pct": 4.2279,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 228979000.0
+    },
+    {
+      "cusip": "G0403H108",
+      "name_of_issuer": "AON PLC",
+      "ticker": "AON",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 227871000.0,
+          "weight_pct": 4.2075,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 227871000.0
+    },
+    {
+      "cusip": "20854L108",
+      "name_of_issuer": "CONSOL ENERGY INC NEW",
+      "ticker": "CEIX",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 211673655.0,
+          "weight_pct": 10.3356,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 211673655.0
+    },
+    {
+      "cusip": "01609W102",
+      "name_of_issuer": "ALIBABA GROUP HLDG LTD",
+      "ticker": "BABA",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 191960000.0,
+          "weight_pct": 2.4848,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 191960000.0
+    },
+    {
+      "cusip": "46137V357",
+      "name_of_issuer": "Invesco Exchange Traded Fd T",
+      "ticker": "RSP",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 190514000.0,
+          "weight_pct": 3.6561,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 190514000.0
+    },
+    {
+      "cusip": "879369106",
+      "name_of_issuer": "TELEFLEX INCORPORATED",
+      "ticker": "TFX",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 178605000.0,
+          "weight_pct": 3.2978,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 178605000.0
+    },
+    {
+      "cusip": "097023105",
+      "name_of_issuer": "BOEING CO",
+      "ticker": "BA",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 173176000.0,
+          "weight_pct": 2.2416,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 173176000.0
+    },
+    {
+      "cusip": "55616P104",
+      "name_of_issuer": "MACYS INC",
+      "ticker": "M",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 173031882.0,
+          "weight_pct": 0.0578,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 173031882.0
+    },
+    {
+      "cusip": "G66721104",
+      "name_of_issuer": "NORWEGIAN CRUISE LINE HLDGS",
+      "ticker": "NCLH",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 163180000.0,
+          "weight_pct": 3.013,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 163180000.0
+    },
+    {
+      "cusip": "10922N103",
+      "name_of_issuer": "BRIGHTHOUSE FINL INC",
+      "ticker": "BHF",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 161068530.0,
+          "weight_pct": 7.8647,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 161068530.0
+    },
+    {
+      "cusip": "717081103",
+      "name_of_issuer": "PFIZER INC",
+      "ticker": "PFE",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 152880000.0,
+          "weight_pct": 11.0687,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 152880000.0
+    },
+    {
+      "cusip": "984245100",
+      "name_of_issuer": "Ypf Sociedad Anonima",
+      "ticker": "YPF",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 142726000.0,
+          "weight_pct": 2.739,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 142726000.0
+    },
+    {
+      "cusip": "278768106",
+      "name_of_issuer": "EchoStar Corporation",
+      "ticker": "ECHO",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 142561013.0,
+          "weight_pct": 1.7251,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 142561013.0
+    },
+    {
+      "cusip": "12514G108",
+      "name_of_issuer": "Cdw Corp",
+      "ticker": "CDW",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 139789000.0,
+          "weight_pct": 2.6826,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 139789000.0
+    },
+    {
+      "cusip": "12572Q105",
+      "name_of_issuer": "CME GROUP INC",
+      "ticker": "CME",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 136694000.0,
+          "weight_pct": 2.524,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 136694000.0
+    },
+    {
+      "cusip": "02376R102",
+      "name_of_issuer": "AMERICAN AIRLINES GROUP INC",
+      "ticker": "AAL",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 135525000.0,
+          "weight_pct": 1.7543,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 135525000.0
+    },
+    {
+      "cusip": "50155Q100",
+      "name_of_issuer": "KYNDRYL HLDGS INC",
+      "ticker": "KD",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 132079115.0,
+          "weight_pct": 6.4492,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 132079115.0
+    },
+    {
+      "cusip": "G4412G101",
+      "name_of_issuer": "HERBALIFE LTD",
+      "ticker": "HLF",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 121767000.0,
+          "weight_pct": 2.2483,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 121767000.0
+    },
+    {
+      "cusip": "G0896C103",
+      "name_of_issuer": "Bbb Foods Inc",
+      "ticker": "TBBB",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 120915000.0,
+          "weight_pct": 2.3204,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 120915000.0
+    },
+    {
+      "cusip": "26969P108",
+      "name_of_issuer": "EAGLE MATLS INC",
+      "ticker": "EXP",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 119422000.0,
+          "weight_pct": 2.205,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 119422000.0
+    },
+    {
+      "cusip": "477143101",
+      "name_of_issuer": "JetBlue Airways Corp.",
+      "ticker": "JBLU",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 118371366.0,
+          "weight_pct": 1.4324,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 118371366.0
+    },
+    {
+      "cusip": "G7997R103",
+      "name_of_issuer": "Seagate Technology Hldngs Pl",
+      "ticker": "STX",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 117730000.0,
+          "weight_pct": 2.2593,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 117730000.0
+    },
+    {
+      "cusip": "35137L105",
+      "name_of_issuer": "Fox Corp",
+      "ticker": "FOXA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 114992000.0,
+          "weight_pct": 2.2068,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 114992000.0
+    },
+    {
+      "cusip": "36165L108",
+      "name_of_issuer": "GDS HLDGS LTD",
+      "ticker": "GDS",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 113208000.0,
+          "weight_pct": 2.0903,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 113208000.0
+    },
+    {
+      "cusip": "910047109",
+      "name_of_issuer": "United Airls Hldgs Inc",
+      "ticker": "UAL",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 108084000.0,
+          "weight_pct": 2.0742,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 108084000.0
+    },
+    {
+      "cusip": "812215200",
+      "name_of_issuer": "SEAPORT ENTMT GROUP INC",
+      "ticker": "SEG",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 107910794.0,
+          "weight_pct": 0.7868,
+          "period_of_report": "2026-03-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 107910794.0
+    },
+    {
+      "cusip": "03064D108",
+      "name_of_issuer": "AMERICOLD REALTY TRUST INC",
+      "ticker": "COLD",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 107371000.0,
+          "weight_pct": 1.9825,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 107371000.0
+    },
+    {
+      "cusip": "21873S108",
+      "name_of_issuer": "COREWEAVE INC",
+      "ticker": "CRWV",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 107328806.0,
+          "weight_pct": 1.3893,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 107328806.0
+    },
+    {
+      "cusip": "227046109",
+      "name_of_issuer": "CROCS INC",
+      "ticker": "CROX",
+      "holders": [
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 107018900.0,
+          "weight_pct": 2.8901,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 107018900.0
+    },
+    {
+      "cusip": "81141R100",
+      "name_of_issuer": "Sea Ltd",
+      "ticker": "SE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 105404000.0,
+          "weight_pct": 2.0228,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 105404000.0
+    },
+    {
+      "cusip": "N62509109",
+      "name_of_issuer": "Newamsterdam Pharma Company",
+      "ticker": "NAMS",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 104047000.0,
+          "weight_pct": 1.9967,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 104047000.0
+    },
+    {
+      "cusip": "N07059210",
+      "name_of_issuer": "ASML HLDG NV",
+      "ticker": "ASML",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 99472000.0,
+          "weight_pct": 1.2876,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 99472000.0
+    },
+    {
+      "cusip": "88033G407",
+      "name_of_issuer": "TENET HEALTHCARE CORP",
+      "ticker": "THC",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 99447853.0,
+          "weight_pct": 4.8559,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 99447853.0
+    },
+    {
+      "cusip": "464287655",
+      "name_of_issuer": "Ishares Tr",
+      "ticker": "IWM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 99149000.0,
+          "weight_pct": 1.9027,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 99149000.0
+    },
+    {
+      "cusip": "88337F105",
+      "name_of_issuer": "THE ODP CORP",
+      "ticker": "ODP",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 98418030.0,
+          "weight_pct": 4.8056,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 98418030.0
+    },
+    {
+      "cusip": "G61188127",
+      "name_of_issuer": "LIBERTY GLOBAL LTD",
+      "ticker": "LBTYK",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 93975000.0,
+          "weight_pct": 1.7352,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 93975000.0
+    },
+    {
+      "cusip": "40054J109",
+      "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
+      "ticker": "AERO",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 87843000.0,
+          "weight_pct": 1.622,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 87843000.0
+    },
+    {
+      "cusip": "610236101",
+      "name_of_issuer": "Monro, Inc.",
+      "ticker": "MNRO",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 86894384.0,
+          "weight_pct": 1.0515,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 86894384.0
+    },
+    {
+      "cusip": "80004C200",
+      "name_of_issuer": "Sandisk Corp",
+      "ticker": "SNDK",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 79353000.0,
+          "weight_pct": 1.5228,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 79353000.0
+    },
+    {
+      "cusip": "01626W101",
+      "name_of_issuer": "ALIGHT INC",
+      "ticker": "ALIT",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 78831446.0,
+          "weight_pct": 3.8492,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 78831446.0
+    },
+    {
+      "cusip": "62944T105",
+      "name_of_issuer": "NVR INC",
+      "ticker": "NVR",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 75710501.0,
+          "weight_pct": 0.0253,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 75710501.0
+    },
+    {
+      "cusip": "76155X100",
+      "name_of_issuer": "Revolution Medicines Inc",
+      "ticker": "RVMD",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 74835000.0,
+          "weight_pct": 1.4361,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 74835000.0
+    },
+    {
+      "cusip": "78463V107",
+      "name_of_issuer": "SPDR GOLD TR",
+      "ticker": "GLD",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 73972084.0,
+          "weight_pct": 3.6119,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 73972084.0
+    },
+    {
+      "cusip": "12769G100",
+      "name_of_issuer": "Caesars Entertainment, Inc.",
+      "ticker": "CZR",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 73642490.0,
+          "weight_pct": 0.8911,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 73642490.0
+    },
+    {
+      "cusip": "42806J700",
+      "name_of_issuer": "HERTZ GLOBAL HLDGS INC",
+      "ticker": "HTZ",
+      "holders": [
+        {
+          "investor_name": "Bill Ackman",
+          "fund_name": "Pershing Square Capital Management",
+          "value_usd": 70261595.0,
+          "weight_pct": 0.5123,
+          "period_of_report": "2026-03-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 70261595.0
+    },
+    {
+      "cusip": "80007P869",
+      "name_of_issuer": "SandRidge Energy, Inc.",
+      "ticker": "SD",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 69252220.0,
+          "weight_pct": 0.838,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 69252220.0
+    },
+    {
+      "cusip": "78462F103",
+      "name_of_issuer": "State Str Spdr S&P 500 Etf T",
+      "ticker": "SPY",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 67209000.0,
+          "weight_pct": 1.2898,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 67209000.0
+    },
+    {
+      "cusip": "878742204",
+      "name_of_issuer": "TECK RESOURCES LTD",
+      "ticker": "TECK",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 65605702.0,
+          "weight_pct": 3.2034,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 65605702.0
+    },
+    {
+      "cusip": "G11448100",
+      "name_of_issuer": "Bitdeer Technologies Group",
+      "ticker": "BTDR",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 64670000.0,
+          "weight_pct": 1.2411,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 64670000.0
+    },
+    {
+      "cusip": "G5509L101",
+      "name_of_issuer": "LIVANOVA PLC",
+      "ticker": "LIVN",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 63604811.0,
+          "weight_pct": 3.1057,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 63604811.0
+    },
+    {
+      "cusip": "388689101",
+      "name_of_issuer": "GRAPHIC PACKAGING HLDG CO",
+      "ticker": "GPK",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 62514865.0,
+          "weight_pct": 3.0525,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 62514865.0
+    },
+    {
+      "cusip": "406216101",
+      "name_of_issuer": "HALLIBURTON CO",
+      "ticker": "HAL",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 61500000.0,
+          "weight_pct": 4.4527,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 61500000.0
+    },
+    {
+      "cusip": "025537101",
+      "name_of_issuer": "American Electric Power Company",
+      "ticker": "AEP",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 59472675.0,
+          "weight_pct": 0.7197,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 59472675.0
+    },
+    {
+      "cusip": "G25508105",
+      "name_of_issuer": "Crh Plc",
+      "ticker": "CRH",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 59230000.0,
+          "weight_pct": 1.1367,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 59230000.0
+    },
+    {
+      "cusip": "071705107",
+      "name_of_issuer": "Bausch Plus Lomb Corp.",
+      "ticker": "BLCO",
+      "holders": [
+        {
+          "investor_name": "Carl Icahn",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 57960000.0,
+          "weight_pct": 0.7013,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 57960000.0
+    },
+    {
+      "cusip": "11135F101",
+      "name_of_issuer": "BROADCOM INC",
+      "ticker": "AVGO",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 56662500.0,
+          "weight_pct": 0.7335,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 56662500.0
+    },
+    {
+      "cusip": "88034P109",
+      "name_of_issuer": "TENCENT MUSIC ENTERTAINM",
+      "ticker": "TME",
+      "holders": [
+        {
+          "investor_name": "Li Lu",
+          "fund_name": "Himalaya Capital Management",
+          "value_usd": 55033481.0,
+          "weight_pct": 1.4862,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 55033481.0
+    },
+    {
+      "cusip": "88160R101",
+      "name_of_issuer": "Tesla Inc",
+      "ticker": "TSLA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 52996000.0,
+          "weight_pct": 1.017,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 52996000.0
+    },
+    {
+      "cusip": "343412102",
+      "name_of_issuer": "Fluor Corp",
+      "ticker": "FLR",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 51457000.0,
+          "weight_pct": 0.9875,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 51457000.0
+    },
+    {
+      "cusip": "22266T109",
+      "name_of_issuer": "Coupang Inc",
+      "ticker": "CPNG",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 46334000.0,
+          "weight_pct": 0.8892,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 46334000.0
+    },
+    {
+      "cusip": "747525103",
+      "name_of_issuer": "QUALCOMM INC",
+      "ticker": "QCOM",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 46197500.0,
+          "weight_pct": 0.598,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 46197500.0
+    },
+    {
+      "cusip": "G48833118",
+      "name_of_issuer": "WEATHERFORD INTL PLC",
+      "ticker": "WFRD",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 44669667.0,
+          "weight_pct": 2.1811,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 44669667.0
+    },
+    {
+      "cusip": "G0750C108",
+      "name_of_issuer": "AXALTA COATING SYS LTD",
+      "ticker": "AXTA",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 43608000.0,
+          "weight_pct": 0.8052,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 43608000.0
+    },
+    {
+      "cusip": "697435105",
+      "name_of_issuer": "Palo Alto Networks Inc",
+      "ticker": "PANW",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 39780000.0,
+          "weight_pct": 0.7634,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 39780000.0
+    },
+    {
+      "cusip": "185899101",
+      "name_of_issuer": "Cleveland-Cliffs Inc New",
+      "ticker": "CLF",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 39590000.0,
+          "weight_pct": 0.7598,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 39590000.0
+    },
+    {
+      "cusip": "84615Q103",
+      "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+      "ticker": "SPCX",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 38443500.0,
+          "weight_pct": 0.4976,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 38443500.0
+    },
+    {
+      "cusip": "Y2065G121",
+      "name_of_issuer": "DHT HOLDINGS INC",
+      "ticker": "DHT",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 37080623.0,
+          "weight_pct": 1.8106,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 37080623.0
+    },
+    {
+      "cusip": "92556V106",
+      "name_of_issuer": "VIATRIS INC",
+      "ticker": "VTRS",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 36342990.0,
+          "weight_pct": 1.7746,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 36342990.0
+    },
+    {
+      "cusip": "44812J104",
+      "name_of_issuer": "Hut 8 Corp",
+      "ticker": "HUT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 36267000.0,
+          "weight_pct": 0.696,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 36267000.0
+    },
+    {
+      "cusip": "67011P100",
+      "name_of_issuer": "DNOW INC",
+      "ticker": "DNOW",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 36160000.0,
+          "weight_pct": 0.6677,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 36160000.0
+    },
+    {
+      "cusip": "31946M103",
+      "name_of_issuer": "FIRST CTZNS BANCSHARES INC N",
+      "ticker": "FCNCA",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 35218836.0,
+          "weight_pct": 1.7197,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 35218836.0
+    },
+    {
+      "cusip": "142152107",
+      "name_of_issuer": "Caris Life Sciences Inc",
+      "ticker": "CAI",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 33759000.0,
+          "weight_pct": 0.6479,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 33759000.0
+    },
+    {
+      "cusip": "64107A105",
+      "name_of_issuer": "NET POWER INC",
+      "ticker": "NPWR",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 30220311.0,
+          "weight_pct": 1.4756,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 30220311.0
+    },
+    {
+      "cusip": "29273V100",
+      "name_of_issuer": "ENERGY TRANSFER L P",
+      "ticker": "ET",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 30135510.0,
+          "weight_pct": 0.3901,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 30135510.0
+    },
+    {
+      "cusip": "37950E259",
+      "name_of_issuer": "Global X Fds",
+      "ticker": "ARGT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 30019000.0,
+          "weight_pct": 0.5761,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 30019000.0
+    },
+    {
+      "cusip": "402635502",
+      "name_of_issuer": "GULFPORT ENERGY CORP",
+      "ticker": "GPOR",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 29699604.0,
+          "weight_pct": 1.4502,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 29699604.0
+    },
+    {
+      "cusip": "35137L204",
+      "name_of_issuer": "Fox Corp",
+      "ticker": "FOX",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 29631000.0,
+          "weight_pct": 0.5686,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 29631000.0
+    },
+    {
+      "cusip": "980745103",
+      "name_of_issuer": "Woodward Inc",
+      "ticker": "WWD",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 28587000.0,
+          "weight_pct": 0.5486,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 28587000.0
+    },
+    {
+      "cusip": "55336V100",
+      "name_of_issuer": "MPLX LP",
+      "ticker": "MPLX",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 28303572.0,
+          "weight_pct": 0.3664,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 28303572.0
+    },
+    {
+      "cusip": "963320106",
+      "name_of_issuer": "WHIRLPOOL CORP",
+      "ticker": "WHR",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 28185300.0,
+          "weight_pct": 0.3648,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 28185300.0
+    },
+    {
+      "cusip": "526057302",
+      "name_of_issuer": "LENNAR CORP",
+      "ticker": "LENB",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 26445959.0,
+          "weight_pct": 0.0088,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 26445959.0
+    },
+    {
+      "cusip": "G7997W102",
+      "name_of_issuer": "SEADRILL 2021 LTD",
+      "ticker": "SDRL",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 25717246.0,
+          "weight_pct": 1.2557,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 25717246.0
+    },
+    {
+      "cusip": "74366E102",
+      "name_of_issuer": "Protagonist Therapeutics Inc",
+      "ticker": "PTGX",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 25607000.0,
+          "weight_pct": 0.4914,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 25607000.0
+    },
+    {
+      "cusip": "77543R102",
+      "name_of_issuer": "Roku Inc",
+      "ticker": "ROKU",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 25425000.0,
+          "weight_pct": 0.4879,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 25425000.0
+    },
+    {
+      "cusip": "149568107",
+      "name_of_issuer": "Cavco Inds Inc Del",
+      "ticker": "CVCO",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 24268000.0,
+          "weight_pct": 0.4657,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 24268000.0
+    },
+    {
+      "cusip": "000899104",
+      "name_of_issuer": "Adma Biologics Inc",
+      "ticker": "ADMA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 23303000.0,
+          "weight_pct": 0.4472,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 23303000.0
+    },
+    {
+      "cusip": "44916Y106",
+      "name_of_issuer": "Hyperliquid Strategies Inc",
+      "ticker": "PURR",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 23150000.0,
+          "weight_pct": 0.4443,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 23150000.0
+    },
+    {
+      "cusip": "750917106",
+      "name_of_issuer": "Rambus Inc Del",
+      "ticker": "RMBS",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 22964000.0,
+          "weight_pct": 0.4407,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 22964000.0
+    },
+    {
+      "cusip": "76243J105",
+      "name_of_issuer": "Rhythm Pharmaceuticals Inc",
+      "ticker": "RYTM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 22608000.0,
+          "weight_pct": 0.4339,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 22608000.0
+    },
+    {
+      "cusip": "830830105",
+      "name_of_issuer": "Champion Homes Inc",
+      "ticker": "SKY",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 22418000.0,
+          "weight_pct": 0.4302,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 22418000.0
+    },
+    {
+      "cusip": "234264109",
+      "name_of_issuer": "Daktronics Inc",
+      "ticker": "DAKT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21968000.0,
+          "weight_pct": 0.4216,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21968000.0
+    },
+    {
+      "cusip": "74623V103",
+      "name_of_issuer": "Purecycle Technologies Inc",
+      "ticker": "PCT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21746000.0,
+          "weight_pct": 0.4173,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21746000.0
+    },
+    {
+      "cusip": "47233W109",
+      "name_of_issuer": "JEFFERIES FINANCIAL GROUP IN",
+      "ticker": "JEF",
+      "holders": [
+        {
+          "investor_name": "Warren Buffett",
+          "fund_name": "Berkshire Hathaway",
+          "value_usd": 21669229.0,
+          "weight_pct": 0.0072,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21669229.0
+    },
+    {
+      "cusip": "84265V105",
+      "name_of_issuer": "Southern Copper Corp",
+      "ticker": "SCCO",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21444000.0,
+          "weight_pct": 0.4115,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21444000.0
+    },
+    {
+      "cusip": "G54950103",
+      "name_of_issuer": "Linde Plc",
+      "ticker": "LIN",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21380000.0,
+          "weight_pct": 0.4103,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21380000.0
+    },
+    {
+      "cusip": "29362U104",
+      "name_of_issuer": "Entegris Inc",
+      "ticker": "ENTG",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21277000.0,
+          "weight_pct": 0.4083,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21277000.0
+    },
+    {
+      "cusip": "91332U101",
+      "name_of_issuer": "Unity Software Inc",
+      "ticker": "U",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 21114000.0,
+          "weight_pct": 0.4052,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21114000.0
+    },
+    {
+      "cusip": "00835Q202",
+      "name_of_issuer": "Aeva Technologies Inc",
+      "ticker": "AEVA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 20683000.0,
+          "weight_pct": 0.3969,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 20683000.0
+    },
+    {
+      "cusip": "767292105",
+      "name_of_issuer": "Riot Platforms Inc",
+      "ticker": "RIOT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 20666000.0,
+          "weight_pct": 0.3966,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 20666000.0
+    },
+    {
+      "cusip": "74743L100",
+      "name_of_issuer": "Qnity Electronics Inc",
+      "ticker": "Q",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 20521000.0,
+          "weight_pct": 0.3938,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 20521000.0
+    },
+    {
+      "cusip": "42704L104",
+      "name_of_issuer": "HERC HLDGS INC",
+      "ticker": "HRI",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 20190973.0,
+          "weight_pct": 0.9859,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 20190973.0
+    },
+    {
+      "cusip": "320517105",
+      "name_of_issuer": "FIRST HORIZON CORPORATION",
+      "ticker": "FHN",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 19499594.0,
+          "weight_pct": 0.9521,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 19499594.0
+    },
+    {
+      "cusip": "29444U700",
+      "name_of_issuer": "Equinix Inc",
+      "ticker": "EQIX",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 19232000.0,
+          "weight_pct": 0.3691,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 19232000.0
+    },
+    {
+      "cusip": "649445103",
+      "name_of_issuer": "NEW YORK CMNTY BANCORP INC",
+      "ticker": "NYCB",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 18707908.0,
+          "weight_pct": 0.9135,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 18707908.0
+    },
+    {
+      "cusip": "N00985106",
+      "name_of_issuer": "AERCAP HOLDINGS NV",
+      "ticker": "AER",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 18580000.0,
+          "weight_pct": 0.9072,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 18580000.0
+    },
+    {
+      "cusip": "550021109",
+      "name_of_issuer": "LULULEMON ATHLETICA INC",
+      "ticker": "LULU",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 17793000.0,
+          "weight_pct": 1.2882,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 17793000.0
+    },
+    {
+      "cusip": "78464A631",
+      "name_of_issuer": "SPDR SER TR",
+      "ticker": "XAR",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 17559506.0,
+          "weight_pct": 0.8574,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 17559506.0
+    },
+    {
+      "cusip": "46137V100",
+      "name_of_issuer": "INVESCO EXCHANGE TRADED FD T",
+      "ticker": "PPA",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 17097615.0,
+          "weight_pct": 0.8348,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 17097615.0
+    },
+    {
+      "cusip": "24477V105",
+      "name_of_issuer": "Definium Therapeutics Inc",
+      "ticker": "DFTX",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 16774000.0,
+          "weight_pct": 0.3219,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 16774000.0
+    },
+    {
+      "cusip": "07782B104",
+      "name_of_issuer": "Belite Bio Inc Sponsored",
+      "ticker": "BLTE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 16338000.0,
+          "weight_pct": 0.3135,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 16338000.0
+    },
+    {
+      "cusip": "88025U109",
+      "name_of_issuer": "10X Genomics Inc",
+      "ticker": "TXG",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 15455000.0,
+          "weight_pct": 0.2966,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 15455000.0
+    },
+    {
+      "cusip": "929740108",
+      "name_of_issuer": "Wabtec",
+      "ticker": "WAB",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 15258000.0,
+          "weight_pct": 0.2928,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 15258000.0
+    },
+    {
+      "cusip": "532457108",
+      "name_of_issuer": "Eli Lilly & Co",
+      "ticker": "LLY",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 14849000.0,
+          "weight_pct": 0.285,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 14849000.0
+    },
+    {
+      "cusip": "98420N105",
+      "name_of_issuer": "Xenon Pharmaceuticals Inc",
+      "ticker": "XENE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 14402000.0,
+          "weight_pct": 0.2764,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 14402000.0
+    },
+    {
+      "cusip": "78442P106",
+      "name_of_issuer": "SLM CORP",
+      "ticker": "SLM",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 13287895.0,
+          "weight_pct": 0.9621,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 13287895.0
+    },
+    {
+      "cusip": "116794207",
+      "name_of_issuer": "BRUKER CORP",
+      "ticker": "BRKRP",
+      "holders": [
+        {
+          "investor_name": "Michael Burry",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 13137181.0,
+          "weight_pct": 0.9511,
+          "period_of_report": "2025-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 13137181.0
+    },
+    {
+      "cusip": "71531U102",
+      "name_of_issuer": "PERSHING SQUARE INC",
+      "ticker": "PS",
+      "holders": [
+        {
+          "investor_name": "Seth Klarman",
+          "fund_name": "Baupost Group",
+          "value_usd": 12881000.0,
+          "weight_pct": 0.2378,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 12881000.0
+    },
+    {
+      "cusip": "68062P106",
+      "name_of_issuer": "Olema Pharmaceuticals Inc",
+      "ticker": "OLMA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 12345000.0,
+          "weight_pct": 0.2369,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 12345000.0
+    },
+    {
+      "cusip": "49177J102",
+      "name_of_issuer": "KENVUE INC",
+      "ticker": "KVUE",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 11938170.0,
+          "weight_pct": 0.5829,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 11938170.0
+    },
+    {
+      "cusip": "759916109",
+      "name_of_issuer": "Repligen Corp",
+      "ticker": "RGEN",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 10560000.0,
+          "weight_pct": 0.2027,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 10560000.0
+    },
+    {
+      "cusip": "77311W101",
+      "name_of_issuer": "Rocket Cos Inc",
+      "ticker": "RKT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 10272000.0,
+          "weight_pct": 0.1971,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 10272000.0
+    },
+    {
+      "cusip": "042068205",
+      "name_of_issuer": "Arm Holdings Plc",
+      "ticker": "ARM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9960000.0,
+          "weight_pct": 0.1911,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9960000.0
+    },
+    {
+      "cusip": "382550101",
+      "name_of_issuer": "GOODYEAR TIRE & RUBR CO",
+      "ticker": "GT",
+      "holders": [
+        {
+          "investor_name": "David Tepper",
+          "fund_name": "Appaloosa",
+          "value_usd": 9956701.0,
+          "weight_pct": 0.1289,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9956701.0
+    },
+    {
+      "cusip": "146869102",
+      "name_of_issuer": "Carvana Co",
+      "ticker": "CVNA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9939000.0,
+          "weight_pct": 0.1907,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9939000.0
+    },
+    {
+      "cusip": "75734B100",
+      "name_of_issuer": "Reddit Inc",
+      "ticker": "RDDT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9816000.0,
+          "weight_pct": 0.1884,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9816000.0
+    },
+    {
+      "cusip": "38268T103",
+      "name_of_issuer": "GOPRO INC",
+      "ticker": "GPRO",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 9796156.0,
+          "weight_pct": 0.4783,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9796156.0
+    },
+    {
+      "cusip": "013872106",
+      "name_of_issuer": "Alcoa Corp",
+      "ticker": "AA",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9679000.0,
+          "weight_pct": 0.1857,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9679000.0
+    },
+    {
+      "cusip": "883556102",
+      "name_of_issuer": "Thermo Fisher Scientific Inc",
+      "ticker": "TMO",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9626000.0,
+          "weight_pct": 0.1847,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9626000.0
+    },
+    {
+      "cusip": "235851102",
+      "name_of_issuer": "Danaher Corp Del",
+      "ticker": "DHR",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9581000.0,
+          "weight_pct": 0.1839,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9581000.0
+    },
+    {
+      "cusip": "22407B108",
+      "name_of_issuer": "COYA THERAPEUTICS INC",
+      "ticker": "COYA",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 9440533.0,
+          "weight_pct": 0.461,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9440533.0
+    },
+    {
+      "cusip": "315616102",
+      "name_of_issuer": "F5 Inc",
+      "ticker": "FFIV",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 9151000.0,
+          "weight_pct": 0.1756,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 9151000.0
+    },
+    {
+      "cusip": "92837L109",
+      "name_of_issuer": "Vista Energy S.A.B. De C.V.",
+      "ticker": "VIST",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 8594000.0,
+          "weight_pct": 0.1649,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 8594000.0
+    },
+    {
+      "cusip": "83056P715",
+      "name_of_issuer": "Skeena Res Ltd New",
+      "ticker": "SKE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 8003000.0,
+          "weight_pct": 0.1536,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 8003000.0
+    },
+    {
+      "cusip": "N4732M103",
+      "name_of_issuer": "Jbs N.V.",
+      "ticker": "JBS",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 7772000.0,
+          "weight_pct": 0.1492,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 7772000.0
+    },
+    {
+      "cusip": "61225M102",
+      "name_of_issuer": "Monte Rosa Therapeutics Inc",
+      "ticker": "GLUE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 7202000.0,
+          "weight_pct": 0.1382,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 7202000.0
+    },
+    {
+      "cusip": "36315X101",
+      "name_of_issuer": "GALAPAGOS NV",
+      "ticker": "LKFT",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 6608796.0,
+          "weight_pct": 0.3227,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6608796.0
+    },
+    {
+      "cusip": "75943R102",
+      "name_of_issuer": "Relay Therapeutics Inc",
+      "ticker": "RLAY",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 6530000.0,
+          "weight_pct": 0.1253,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6530000.0
+    },
+    {
+      "cusip": "23306J309",
+      "name_of_issuer": "Dbv Technologies S A Sponsored",
+      "ticker": "DBVT",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 6287000.0,
+          "weight_pct": 0.1207,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6287000.0
+    },
+    {
+      "cusip": "12510Q100",
+      "name_of_issuer": "Ccc Intelligent Solutions Hl",
+      "ticker": "CCC",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 6042000.0,
+          "weight_pct": 0.116,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6042000.0
+    },
+    {
+      "cusip": "91823B109",
+      "name_of_issuer": "Uwm Holdings Corporation",
+      "ticker": "UWMC",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 5915000.0,
+          "weight_pct": 0.1135,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5915000.0
+    },
+    {
+      "cusip": "83601L102",
+      "name_of_issuer": "SOTERA HEALTH CO",
+      "ticker": "SHC",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 5677944.0,
+          "weight_pct": 0.2772,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5677944.0
+    },
+    {
+      "cusip": "63942X106",
+      "name_of_issuer": "Navitas Semiconductor Corp",
+      "ticker": "NVTS",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 5575000.0,
+          "weight_pct": 0.107,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5575000.0
+    },
+    {
+      "cusip": "83443Q103",
+      "name_of_issuer": "Solstice Advanced Matls Inc",
+      "ticker": "SOLS",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 5540000.0,
+          "weight_pct": 0.1063,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5540000.0
+    },
+    {
+      "cusip": "G3730V105",
+      "name_of_issuer": "Ftai Aviation Ltd",
+      "ticker": "FTAI",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 5465000.0,
+          "weight_pct": 0.1049,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5465000.0
+    },
+    {
+      "cusip": "07373V105",
+      "name_of_issuer": "Beam Therapeutics Inc",
+      "ticker": "BEAM",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 5272000.0,
+          "weight_pct": 0.1012,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 5272000.0
+    },
+    {
+      "cusip": "051774107",
+      "name_of_issuer": "Aurora Innovation Inc",
+      "ticker": "AUR",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 4322000.0,
+          "weight_pct": 0.0829,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 4322000.0
+    },
+    {
+      "cusip": "Q4982L109",
+      "name_of_issuer": "Iren Limited",
+      "ticker": "IREN",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 3983000.0,
+          "weight_pct": 0.0764,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 3983000.0
+    },
+    {
+      "cusip": "399909100",
+      "name_of_issuer": "Grupo Financiero Galicia S.A",
+      "ticker": "GGAL",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 2977000.0,
+          "weight_pct": 0.0571,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2977000.0
+    },
+    {
+      "cusip": "92189H607",
+      "name_of_issuer": "VANECK ETF TRUST",
+      "ticker": "OIH",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 2869251.0,
+          "weight_pct": 0.1401,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2869251.0
+    },
+    {
+      "cusip": "236272100",
+      "name_of_issuer": "DANIMER SCIENTIFIC INC",
+      "ticker": "DNMR",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 2789272.0,
+          "weight_pct": 0.1362,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 2789272.0
+    },
+    {
+      "cusip": "36269B105",
+      "name_of_issuer": "GAIN THERAPEUTICS INC",
+      "ticker": "GANX",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 1921158.0,
+          "weight_pct": 0.0938,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1921158.0
+    },
+    {
+      "cusip": "33733E807",
+      "name_of_issuer": "FIRST TR EXCHANGE-TRADED FD",
+      "ticker": "FCG",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 1421936.0,
+          "weight_pct": 0.0694,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1421936.0
+    },
+    {
+      "cusip": "46090F100",
+      "name_of_issuer": "INVESCO ACTVELY MNGD ETC FD",
+      "ticker": "PDBC",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 1289967.0,
+          "weight_pct": 0.063,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1289967.0
+    },
+    {
+      "cusip": "87424L207",
+      "name_of_issuer": "TALIS BIOMEDICAL CORP",
+      "ticker": "TLIS",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 1110437.0,
+          "weight_pct": 0.0542,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1110437.0
+    },
+    {
+      "cusip": "Y95308105",
+      "name_of_issuer": "Wave Life Sciences Ltd",
+      "ticker": "WVE",
+      "holders": [
+        {
+          "investor_name": "Stanley Druckenmiller",
+          "fund_name": "Duquesne Family Office",
+          "value_usd": 1005000.0,
+          "weight_pct": 0.0193,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1005000.0
+    },
+    {
+      "cusip": "64132K201",
+      "name_of_issuer": "NEUBASE THERAPEUTICS INC",
+      "ticker": "NBSE",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 100912.0,
+          "weight_pct": 0.0049,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 100912.0
+    },
+    {
+      "cusip": "67080N119",
+      "name_of_issuer": "NUVATION BIO INC",
+      "ticker": "NUVBWS",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 6000.0,
+          "weight_pct": 0.0003,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 6000.0
+    },
+    {
+      "cusip": "485859110",
+      "name_of_issuer": "KATAPULT HOLDINGS INC",
+      "ticker": "KPLTW",
+      "holders": [
+        {
+          "investor_name": "David Einhorn",
+          "fund_name": "Greenlight Capital",
+          "value_usd": 1940.0,
+          "weight_pct": 0.0001,
+          "period_of_report": "2023-12-31"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 1940.0
+    }
+  ]
+}

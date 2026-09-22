@@ -310,6 +310,42 @@ def export_dividends():
     })
 
 
+def export_superinvestors():
+    """13F 슈퍼인베스터 컨센서스 export - 여러 명이 겹쳐서 들고 있는 종목일수록 상단"""
+    holdings = supabase_select_all('superinvestor_holdings', {
+        'select': 'investor_name,fund_name,cusip,name_of_issuer,ticker,value_usd,weight_pct,period_of_report'
+    })
+
+    by_cusip = {}
+    for h in holdings:
+        c = by_cusip.setdefault(h['cusip'], {
+            'cusip': h['cusip'],
+            'name_of_issuer': h['name_of_issuer'],
+            'ticker': h['ticker'],
+            'holders': []
+        })
+        c['holders'].append({
+            'investor_name': h['investor_name'],
+            'fund_name': h['fund_name'],
+            'value_usd': h['value_usd'],
+            'weight_pct': h['weight_pct'],
+            'period_of_report': h['period_of_report']
+        })
+
+    consensus = list(by_cusip.values())
+    for c in consensus:
+        c['holder_count'] = len(c['holders'])
+        c['total_value_usd'] = sum(h['value_usd'] for h in c['holders'])
+    # 겹치는 투자자 수가 많은 종목 우선, 동률이면 총 보유금액 큰 순
+    consensus.sort(key=lambda c: (c['holder_count'], c['total_value_usd']), reverse=True)
+
+    save_json('superinvestors.json', {
+        'updated_at': today_kst(),
+        'investor_count': len({h['investor_name'] for h in holdings}),
+        'consensus': consensus
+    })
+
+
 def export_kr_dividends():
     """국내 상장 배당 ETF 분배금 이력 + 시세 export (국내 배당ETF 계산기 페이지용)"""
     rows = supabase_select_all('kr_etf_dividends', {
@@ -349,6 +385,7 @@ def main():
     export_annuity()
     export_dividends()
     export_kr_dividends()
+    export_superinvestors()
     logger.info("=== JSON Export 완료 ===")
 
 

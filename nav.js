@@ -15,6 +15,7 @@
     ['annuity.html', '연금저축'],
     ['insurance.html', '보험'],
     ['company.html', '기업정보'],
+    ['superinvestor.html', '슈퍼인베스터'],
     ['macro.html', '경제지표'],
     ['calc.html', '계산기']
   ];

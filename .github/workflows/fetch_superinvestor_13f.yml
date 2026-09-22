@@ -1,0 +1,33 @@
+name: 슈퍼인베스터 13F
+on:
+  workflow_dispatch:
+  schedule:
+    # 13F 공시 마감일(분기 종료 후 45일: 2/14, 5/15, 8/14, 11/14) 전후 재시도 윈도우
+    - cron: '0 0 12-16 2,5,8,11 *'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 13F 컨센서스 수집
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetchers/superinvestor_13f.py
+      - name: Export
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python exporters/export_data.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/
+          git diff --staged --quiet || (git commit -m "data: 13F superinvestor export" && git pull --rebase origin main && git push)
