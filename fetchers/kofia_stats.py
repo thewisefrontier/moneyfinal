@@ -289,7 +289,7 @@ def collect_foreign_derivatives() -> list:
             continue
         results.append({
             'indicator_code': f"KOFIA_FRNDRV_{item.get('prdNm','')[:20]}",
-            'indicator_name': f"해외파생 {item.get('prdNm','')} ({item.get('byNtnl','')})",
+            'indicator_name': f"해외파생 {item.get('prdNm','')} 거래대금 ({item.get('byNtnl','')})",
             'category': '해외파생거래',
             'value': amt,
             'unit': 'USD',

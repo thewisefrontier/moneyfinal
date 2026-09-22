@@ -77,7 +77,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
 .br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
 .br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
-.br-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:12px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -172,7 +172,15 @@ async function loadHome(){
     document.getElementById('global-ind').innerHTML=indHtml(inds,glob);
   }catch(e){}
   try{const r=await fetch('data/briefing.json');const d=await r.json();const b=(d.briefings||[])[0];
-    if(b){document.getElementById('br-date').textContent=b.briefing_date+' AI 데이터 분석';document.getElementById('br-hl').textContent=b.headline||'';document.getElementById('br-rate').textContent=b.rate_summary||'';document.getElementById('br-market').textContent=b.market_summary||'';document.getElementById('briefing').style.display='block';}
+    if(b){
+      const escBr=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      const sentences=s=>escBr(s||'').split(/(?<=\.)\s+/).filter(Boolean).join('<br><br>');
+      document.getElementById('br-date').textContent=b.briefing_date+' AI 데이터 분석';
+      document.getElementById('br-hl').textContent=b.headline||'';
+      document.getElementById('br-rate').innerHTML=sentences(b.rate_summary);
+      document.getElementById('br-market').innerHTML=sentences(b.market_summary);
+      document.getElementById('briefing').style.display='block';
+    }
   }catch(e){}
 }
 loadHome();
