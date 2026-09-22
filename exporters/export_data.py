@@ -313,11 +313,32 @@ def export_dividends():
 def export_superinvestors():
     """13F 슈퍼인베스터 컨센서스 export - 여러 명이 겹쳐서 들고 있는 종목일수록 상단"""
     holdings = supabase_select_all('superinvestor_holdings', {
-        'select': 'investor_name,fund_name,cusip,name_of_issuer,ticker,value_usd,weight_pct,period_of_report'
+        'select': 'investor_name,fund_name,cusip,name_of_issuer,ticker,value_usd,shares,weight_pct,period_of_report,investor_type'
     })
 
+    by_investor = {}
+    for h in holdings:
+        by_investor.setdefault(h['investor_name'], {
+            'fund_name': h['fund_name'],
+            'investor_type': h['investor_type'],
+            'period_of_report': h['period_of_report'],
+            'holdings': []
+        })['holdings'].append({
+            'name_of_issuer': h['name_of_issuer'],
+            'ticker': h['ticker'],
+            'value_usd': h['value_usd'],
+            'shares': h['shares'],
+            'weight_pct': h['weight_pct']
+        })
+    for inv in by_investor.values():
+        inv['holdings'].sort(key=lambda h: h['weight_pct'], reverse=True)
+
+    # 컨센서스(겹치는 투자자 수)는 집중투자형만 집계 - 대형 기관은 보유종목이
+    # 수백~수천 개라 같이 섞으면 신호가 희석됨. 대형 기관은 개별 조회로만 노출.
     by_cusip = {}
     for h in holdings:
+        if h['investor_type'] != 'concentrated':
+            continue
         c = by_cusip.setdefault(h['cusip'], {
             'cusip': h['cusip'],
             'name_of_issuer': h['name_of_issuer'],
@@ -341,8 +362,9 @@ def export_superinvestors():
 
     save_json('superinvestors.json', {
         'updated_at': today_kst(),
-        'investor_count': len({h['investor_name'] for h in holdings}),
-        'consensus': consensus
+        'investor_count': len(by_investor),
+        'consensus': consensus,
+        'by_investor': by_investor
     })
 
 

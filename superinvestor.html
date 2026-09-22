@@ -75,7 +75,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
 <h1>슈퍼인베스터 13F 컨센서스</h1>
-<div class="sub">워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자 9인의 미국 SEC 13F 공시를 모아, 여러 명이 동시에 담고 있는 종목 순으로 정리</div>
+<div class="sub">워런 버핏, 빌 애크먼, 마이클 버리 등 집중투자형 유명 투자자들의 미국 SEC 13F 공시를 모아 여러 명이 동시에 담고 있는 종목 순으로 정리. 브릿지워터·시타델·국민연금 같은 대형 기관은 보유종목이 너무 많아 컨센서스 집계에선 빼고 개별 조회로만 확인 가능</div>
 
 <div class="grid3">
   <div class="kpi"><div class="kpi-label">추적 투자자</div><div class="kpi-value" id="k-investors">-</div><div class="kpi-sub">SEC EDGAR 13F 기준</div></div>
@@ -86,15 +86,26 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="card">
   <div class="card-hd">
     <span class="card-title">전체 목록</span>
+    <select class="search-box" id="inv-sel" style="flex:0 0 auto;min-width:160px" onchange="renderTbl()">
+      <option value="">전체 컨센서스</option>
+    </select>
     <input type="text" class="search-box" id="q" placeholder="종목명 검색" oninput="renderTbl()">
   </div>
   <div class="tbl-wrap">
   <table>
-    <thead><tr>
+    <thead>
+    <tr id="thead-consensus">
       <th style="text-align:left">종목</th>
       <th>겹치는 투자자</th>
       <th>합산 평가금액</th>
-    </tr></thead>
+    </tr>
+    <tr id="thead-investor" hidden>
+      <th style="text-align:left">종목</th>
+      <th>비중</th>
+      <th>보유금액</th>
+      <th>보유주식수</th>
+    </tr>
+    </thead>
     <tbody id="tbody"><tr><td colspan="3" class="loading">로딩 중...</td></tr></tbody>
   </table>
   </div>
@@ -105,12 +116,13 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <script src="theme.js"></script><script>
 function usdBig(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'조';if(n>=1e8)return'$'+(n/1e8).toFixed(1)+'억';return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0});}
 
-let CONSENSUS=[];
+let CONSENSUS=[],BY_INVESTOR={};
 
 async function load(){
   try{
     const r=await fetch('data/superinvestors.json');const d=await r.json();
     CONSENSUS=d.consensus||[];
+    BY_INVESTOR=d.by_investor||{};
     document.getElementById('k-investors').textContent=(d.investor_count||0)+'명';
     document.getElementById('k-updated').textContent=d.updated_at||'-';
     if(CONSENSUS.length){
@@ -118,20 +130,50 @@ async function load(){
       document.getElementById('k-top').textContent=top.holder_count+'명';
       document.getElementById('k-top-sub').textContent=top.name_of_issuer;
     }
+    const sel=document.getElementById('inv-sel');
+    const names=Object.keys(BY_INVESTOR).sort();
+    const grpConc=document.createElement('optgroup');grpConc.label='집중투자형';
+    const grpInst=document.createElement('optgroup');grpInst.label='대형 기관 (컨센서스 미포함)';
+    names.forEach(name=>{
+      const opt=document.createElement('option');
+      opt.value=name;opt.textContent=name;
+      (BY_INVESTOR[name].investor_type==='institutional'?grpInst:grpConc).appendChild(opt);
+    });
+    sel.appendChild(grpConc);
+    if(grpInst.children.length)sel.appendChild(grpInst);
     renderTbl();
   }catch(e){
-    document.getElementById('tbody').innerHTML='<tr><td colspan="3" class="empty">데이터를 불러오지 못했습니다</td></tr>';
+    document.getElementById('tbody').innerHTML='<tr><td colspan="4" class="empty">데이터를 불러오지 못했습니다</td></tr>';
   }
 }
 function renderTbl(){
   const q=document.getElementById('q').value.trim().toLowerCase();
-  const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q));
+  const invName=document.getElementById('inv-sel').value;
   const tbody=document.getElementById('tbody');
-  if(!list.length){tbody.innerHTML='<tr><td colspan="3" class="empty">검색 결과가 없습니다</td></tr>';return;}
-  tbody.innerHTML=list.map((c,i)=>`<tr>
-    <td><span class="rank">${i+1}.</span><span class="stock-name">${c.name_of_issuer}</span>${c.ticker?`<span class="coin-sym">${c.ticker}</span>`:''}</td>
-    <td>${c.holder_count}명<div class="holder-badges">${c.holders.map(h=>`<span class="hb">${h.investor_name}</span>`).join('')}</div></td>
-    <td>${usdBig(c.total_value_usd)}</td>
+
+  if(!invName){
+    document.getElementById('thead-consensus').hidden=false;
+    document.getElementById('thead-investor').hidden=true;
+    const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q));
+    if(!list.length){tbody.innerHTML='<tr><td colspan="3" class="empty">검색 결과가 없습니다</td></tr>';return;}
+    tbody.innerHTML=list.map((c,i)=>`<tr>
+      <td><span class="rank">${i+1}.</span><span class="stock-name">${c.name_of_issuer}</span>${c.ticker?`<span class="coin-sym">${c.ticker}</span>`:''}</td>
+      <td>${c.holder_count}명<div class="holder-badges">${c.holders.map(h=>`<span class="hb">${h.investor_name}</span>`).join('')}</div></td>
+      <td>${usdBig(c.total_value_usd)}</td>
+    </tr>`).join('');
+    return;
+  }
+
+  document.getElementById('thead-consensus').hidden=true;
+  document.getElementById('thead-investor').hidden=false;
+  const inv=BY_INVESTOR[invName];
+  const list=(inv?.holdings||[]).filter(h=>!q||h.name_of_issuer.toLowerCase().includes(q));
+  if(!list.length){tbody.innerHTML='<tr><td colspan="4" class="empty">검색 결과가 없습니다</td></tr>';return;}
+  tbody.innerHTML=list.map((h,i)=>`<tr>
+    <td><span class="rank">${i+1}.</span><span class="stock-name">${h.name_of_issuer}</span>${h.ticker?`<span class="coin-sym">${h.ticker}</span>`:''}</td>
+    <td>${(h.weight_pct||0).toFixed(2)}%</td>
+    <td>${usdBig(h.value_usd)}</td>
+    <td>${(h.shares||0).toLocaleString('en-US')}</td>
   </tr>`).join('');
 }
 load();

@@ -198,28 +198,39 @@ def supabase_delete_not_in(table: str, column: str, keep_values: list, extra_eq:
     """keep_values에 없는 행을 삭제. 매일/매분기 top-N만 다시 upsert하는 스냅샷성
     테이블에서 순위·보유 밖으로 밀려난 옛 행이 영구히 남는 걸 방지하기 위함.
     extra_eq: 같은 테이블을 여러 그룹(예: 투자자별)으로 나눠 쓸 때, 그 그룹의
-    행만 대상으로 삼기 위한 추가 등호 필터 (예: {'investor_name': 'Warren Buffett'})."""
+    행만 대상으로 삼기 위한 추가 등호 필터 (예: {'investor_name': 'Warren Buffett'}).
+
+    keep_values 전체를 not.in.(...)에 그대로 넣으면 보유 종목이 수천 개인
+    투자자(예: Citadel 7000여 개)에서 URL이 너무 길어져 414 에러로 삭제가
+    조용히 실패함(2026-09-22 실제로 겪음). 그래서 기존 키를 먼저 조회해
+    Python에서 diff를 계산하고, 실제로 지울 것만 in.(...)으로 청크 삭제함."""
     if not keep_values:
         return True
     url = f"{SUPABASE_URL}/rest/v1/{table}"
-    values = ','.join(quote(str(v), safe='') for v in keep_values)
-    params = {column: f'not.in.({values})'}
+    select_params = {'select': column}
     if extra_eq:
-        params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
-    try:
-        res = requests.delete(
-            url,
-            headers=HEADERS,
-            params=params,
-            timeout=30
-        )
-        if res.status_code >= 400:
-            logging.error(f"[{table}] 잔여 행 삭제 실패 ({res.status_code}): {res.text[:200]}")
-            return False
+        select_params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
+    existing = supabase_select(table, select_params)
+    stale = {str(row[column]) for row in existing} - {str(v) for v in keep_values}
+    if not stale:
         return True
-    except Exception as e:
-        logging.error(f"[{table}] 잔여 행 삭제 실패: {type(e).__name__}")
-        return False
+    stale_list = list(stale)
+    ok = True
+    for i in range(0, len(stale_list), 200):
+        chunk = stale_list[i:i + 200]
+        values = ','.join(quote(v, safe='') for v in chunk)
+        params = {column: f'in.({values})'}
+        if extra_eq:
+            params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
+        try:
+            res = requests.delete(url, headers=HEADERS, params=params, timeout=30)
+            if res.status_code >= 400:
+                logging.error(f"[{table}] 잔여 행 삭제 실패 ({res.status_code}): {res.text[:200]}")
+                ok = False
+        except Exception as e:
+            logging.error(f"[{table}] 잔여 행 삭제 실패: {type(e).__name__}")
+            ok = False
+    return ok
 
 
 def supabase_select(table: str, params: dict = None) -> list:

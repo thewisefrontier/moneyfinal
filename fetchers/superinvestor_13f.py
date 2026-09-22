@@ -37,6 +37,26 @@ SUPERINVESTORS = [
     {"cik": "0001079114", "investor_name": "David Einhorn", "fund_name": "Greenlight Capital"},
     {"cik": "0001656456", "investor_name": "David Tepper", "fund_name": "Appaloosa"},
     {"cik": "0001709323", "investor_name": "Li Lu", "fund_name": "Himalaya Capital Management"},
+    {"cik": "0000949509", "investor_name": "Howard Marks", "fund_name": "Oaktree Capital Management"},
+    {"cik": "0001167483", "investor_name": "Chase Coleman", "fund_name": "Tiger Global Management"},
+    {"cik": "0001345471", "investor_name": "Nelson Peltz", "fund_name": "Trian Fund Management"},
+    {"cik": "0000915191", "investor_name": "Prem Watsa", "fund_name": "Fairfax Financial Holdings"},
+    {"cik": "0001056831", "investor_name": "Bruce Berkowitz", "fund_name": "Fairholme Capital Management"},
+    {"cik": "0001553733", "investor_name": "Glenn Greenberg", "fund_name": "Brave Warrior Advisors"},
+    {"cik": "0001096343", "investor_name": "Tom Gayner", "fund_name": "Markel Group"},
+    {"cik": "0001135778", "investor_name": "Bill Miller", "fund_name": "Miller Value Partners"},
+    {"cik": "0001040273", "investor_name": "Daniel Loeb", "fund_name": "Third Point"},
+    {"cik": "0001103804", "investor_name": "Andreas Halvorsen", "fund_name": "Viking Global Investors"},
+    {"cik": "0001061165", "investor_name": "Stephen Mandel", "fund_name": "Lone Pine Capital"},
+
+    # 초분산 멀티전략/퀀트/기관 운용사 - 종목 수가 수백~수천 개라 위 집중투자형
+    # 목록과 같이 컨센서스(겹치는 투자자 수)에 넣으면 신호가 희석되고, Citadel은
+    # 실제로 보유종목이 너무 많아 삭제 쿼리가 URL 길이 초과로 실패하기도 했음
+    # (supabase_delete_not_in을 청크 삭제 방식으로 고쳐서 지금은 문제없음).
+    # 컨센서스 집계에선 빼고, 개별 투자자 조회에서만 보여줌 (investor_type 구분).
+    {"cik": "0001350694", "investor_name": "Bridgewater Associates", "fund_name": "Bridgewater Associates", "investor_type": "institutional"},
+    {"cik": "0001423053", "investor_name": "Citadel Advisors", "fund_name": "Citadel Advisors", "investor_type": "institutional"},
+    {"cik": "0001608046", "investor_name": "국민연금공단", "fund_name": "National Pension Service", "investor_type": "institutional"},
 ]
 
 
@@ -96,6 +116,7 @@ def main():
                 "weight_pct": round(a["value"] / total_value * 100, 4) if total_value else 0,
                 "period_of_report": period,
                 "source": "SEC EDGAR 13F",
+                "investor_type": inv.get("investor_type", "concentrated"),
                 "fetched_at": now_kst(),
             }
             for cusip, a in agg.items()
