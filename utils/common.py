@@ -1,5 +1,8 @@
 """
-공통 유틸리티 - Supabase REST API 헬퍼
+공통 유틸리티 - Cloudflare D1 HTTP API 헬퍼
+(2026-09: Supabase REST API에서 D1로 이전. 함수 시그니처는 기존과 동일하게 유지해서
+ fetchers/processors/exporters 쪽 호출부는 손대지 않음 - 이름은 supabase_* 그대로지만
+ 내부 구현만 D1로 교체됨. 이름 정리는 별도 후속 작업으로 남겨둠.)
 """
 import atexit
 import os
@@ -7,7 +10,6 @@ import logging
 import requests
 import sys
 import time
-from urllib.parse import urlencode, quote
 from datetime import datetime, timedelta
 import pytz
 
@@ -18,16 +20,23 @@ logging.basicConfig(
 
 KST = pytz.timezone('Asia/Seoul')
 
-SUPABASE_URL = os.environ['SUPABASE_URL'].rstrip('/')
-SUPABASE_KEY = os.environ['SUPABASE_KEY']
+CF_ACCOUNT_ID = os.environ['CF_ACCOUNT_ID']
+CF_API_TOKEN = os.environ['CF_API_TOKEN']
+CF_D1_DATABASE_ID = os.environ['CF_D1_DATABASE_ID']
 
-HEADERS = {
-    'apikey': SUPABASE_KEY,
-    'Authorization': f'Bearer {SUPABASE_KEY}',
+D1_QUERY_URL = f"https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}/d1/database/{CF_D1_DATABASE_ID}/query"
+D1_HEADERS = {
+    'Authorization': f'Bearer {CF_API_TOKEN}',
     'Content-Type': 'application/json',
 }
 
-# 테이블별 upsert conflict 컬럼
+# SQLite/D1 바인드 파라미터 상한(SQLITE_MAX_VARIABLE_NUMBER 기본값 999).
+# 배치 upsert 시 컬럼 수 대비 안전하게 청크 크기를 계산하는 데 사용.
+D1_MAX_BOUND_PARAMS = 900
+
+# 테이블별 upsert conflict 컬럼 (Supabase 시절과 동일 - D1 UNIQUE 인덱스와 1:1 대응,
+# migrations/0001_init.sql 참고. stock_dividends/stock_issuance는 원본 Postgres 제약과
+# 실제로 달랐던 케이스이니 그 파일 상단 주석 참고)
 CONFLICT_COLUMNS = {
     'rates': 'institution,product_name,category,period',
     'market_indicators': 'indicator_code,reference_date',
@@ -37,7 +46,7 @@ CONFLICT_COLUMNS = {
     'daily_briefing': 'briefing_date',
     'stock_prices': 'stock_code,base_date,market_type',
     'stock_short': 'stock_code,base_date',
-    'stock_dividends': 'stock_code,base_date,dividend_type',
+    'stock_dividends': 'stock_code,base_date',
     'stock_issuance': 'stock_code,issuance_date,issuance_type',
     'stocks': 'stock_code',
     'corp_info': 'stock_code',
@@ -65,8 +74,6 @@ CONFLICT_COLUMNS = {
 }
 
 
-# upsert 실패 시 워크플로우가 성공(exit 0)으로 표시되지 않도록 프로세스 종료 코드 관리.
-# 여러 upsert 중 일부만 실패해도 모두 처리한 뒤 non-zero exit.
 _UPSERT_FAILURES = 0
 
 
@@ -79,7 +86,6 @@ def _mark_upsert_failure(table: str, reason: str) -> None:
 def _exit_if_upsert_failures() -> None:
     if _UPSERT_FAILURES > 0:
         logging.error(f"⚠️ upsert 실패 총 {_UPSERT_FAILURES}건 → 프로세스 종료 코드 1")
-        # atexit hook 내부에서는 sys.exit이 무시되므로 os._exit 사용
         os._exit(1)
 
 
@@ -88,11 +94,8 @@ atexit.register(_exit_if_upsert_failures)
 
 def _dedupe_by_conflict(table: str, data: list, conflict: str) -> list:
     """배치 내 conflict key 조합 중복 제거.
-
-    PostgreSQL은 ON CONFLICT DO UPDATE 시 같은 배치 안에 conflict 키 조합이
-    중복되면 오류(21000)를 반환한다. 여기서 미리 제거하여 fetcher 개별 대응 부담을 없앰.
-    같은 키 조합이면 마지막 행이 최종 반영 (개별 fetcher의 기존 dedupe 관례와 일치).
-    """
+    SQLite도 ON CONFLICT DO UPDATE 시 같은 statement 안에 conflict 키 조합이
+    중복되면 오류를 반환한다(Postgres와 동일). 같은 키 조합이면 마지막 행이 최종 반영."""
     if not conflict or len(data) <= 1:
         return data
     keys = [k.strip() for k in conflict.split(',')]
@@ -103,6 +106,25 @@ def _dedupe_by_conflict(table: str, data: list, conflict: str) -> list:
     if removed > 0:
         logging.warning(f"[{table}] 배치 내 conflict key 중복 {removed}건 자동 제거 (원본 {len(data)} → {len(seen)})")
     return list(seen.values())
+
+
+def _d1_query(sql: str, params: list = None, timeout: int = 30) -> list:
+    """D1 HTTP API로 SQL 1개 실행. 성공 시 결과 행(list of dict) 반환."""
+    res = requests.post(
+        D1_QUERY_URL,
+        headers=D1_HEADERS,
+        json={'sql': sql, 'params': params or []},
+        timeout=timeout
+    )
+    if res.status_code >= 400:
+        raise requests.exceptions.HTTPError(f"D1 HTTP {res.status_code}: {res.text[:300]}", response=res)
+    body = res.json()
+    if not body.get('success'):
+        raise RuntimeError(f"D1 query 실패: {str(body.get('errors'))[:300]}")
+    results = body.get('result') or []
+    if not results or not results[0].get('success', True):
+        raise RuntimeError(f"D1 query 실패(result): {str(results)[:300]}")
+    return results[0].get('results') or []
 
 
 def data_go_kr_get(url: str, service_key: str, params: dict, timeout: int = 15,
@@ -164,97 +186,130 @@ def fss_open_api_get(jsp_name: str, auth_key: str, days_back: int = 7, timeout: 
 
 
 def supabase_upsert(table: str, data: list) -> bool:
+    """D1 upsert. INSERT ... ON CONFLICT(conflict_cols) DO UPDATE SET ... 를
+    여러 행을 한 statement에 묶어(VALUES (...),(...),...) 보낸다.
+    SQLite 바인드 파라미터 상한(999)을 넘지 않도록 컬럼 수 기준으로 청크 분할."""
     if not data:
         return True
 
     conflict = CONFLICT_COLUMNS.get(table, '')
-    # 배치 내 conflict key 중복 제거 (모든 fetcher에 공통 적용, ON CONFLICT 오류 방지)
     data = _dedupe_by_conflict(table, data, conflict)
 
-    url = f"{SUPABASE_URL}/rest/v1/{table}"
-    if conflict:
-        url += f"?on_conflict={conflict}"
+    # 배치 내 행마다 존재하는 컬럼 집합이 다를 수 있으므로 합집합을 취하고 없는 값은 NULL로 채움
+    all_cols = []
+    seen_cols = set()
+    for row in data:
+        for k in row.keys():
+            if k not in seen_cols:
+                seen_cols.add(k)
+                all_cols.append(k)
 
-    try:
-        res = requests.post(
-            url,
-            headers={**HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal'},
-            json=data,
-            timeout=30
-        )
-        if res.status_code >= 400:
-            logging.error(f"[{table}] upsert 실패 ({res.status_code}): {res.text[:200]}")
-            res.raise_for_status()
-        logging.info(f"[{table}] {len(data)}건 upsert 완료")
-        return True
-    except requests.exceptions.HTTPError as e:
-        _mark_upsert_failure(table, f"HTTP {e.response.status_code if e.response is not None else '?'}")
-        return False
-    except Exception as e:
-        _mark_upsert_failure(table, type(e).__name__)
-        return False
+    conflict_cols = [c.strip() for c in conflict.split(',')] if conflict else []
+    update_cols = [c for c in all_cols if c not in conflict_cols]
 
+    chunk_size = max(1, D1_MAX_BOUND_PARAMS // max(1, len(all_cols)))
 
-def supabase_delete_not_in(table: str, column: str, keep_values: list, extra_eq: dict = None) -> bool:
-    """keep_values에 없는 행을 삭제. 매일/매분기 top-N만 다시 upsert하는 스냅샷성
-    테이블에서 순위·보유 밖으로 밀려난 옛 행이 영구히 남는 걸 방지하기 위함.
-    extra_eq: 같은 테이블을 여러 그룹(예: 투자자별)으로 나눠 쓸 때, 그 그룹의
-    행만 대상으로 삼기 위한 추가 등호 필터 (예: {'investor_name': 'Warren Buffett'}).
+    col_list_sql = ', '.join(f'"{c}"' for c in all_cols)
+    conflict_sql = ', '.join(f'"{c}"' for c in conflict_cols)
+    if update_cols:
+        update_sql = ', '.join(f'"{c}"=excluded."{c}"' for c in update_cols)
+        upsert_clause = f'ON CONFLICT({conflict_sql}) DO UPDATE SET {update_sql}' if conflict_cols else ''
+    else:
+        upsert_clause = f'ON CONFLICT({conflict_sql}) DO NOTHING' if conflict_cols else ''
 
-    keep_values 전체를 not.in.(...)에 그대로 넣으면 보유 종목이 수천 개인
-    투자자(예: Citadel 7000여 개)에서 URL이 너무 길어져 414 에러로 삭제가
-    조용히 실패함(2026-09-22 실제로 겪음). 그래서 기존 키를 먼저 조회해
-    Python에서 diff를 계산하고, 실제로 지울 것만 in.(...)으로 청크 삭제함."""
-    if not keep_values:
-        return True
-    url = f"{SUPABASE_URL}/rest/v1/{table}"
-    select_params = {'select': column}
-    if extra_eq:
-        select_params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
-    existing = supabase_select(table, select_params)
-    stale = {str(row[column]) for row in existing} - {str(v) for v in keep_values}
-    if not stale:
-        return True
-    stale_list = list(stale)
     ok = True
-    for i in range(0, len(stale_list), 200):
-        chunk = stale_list[i:i + 200]
-        values = ','.join(quote(v, safe='') for v in chunk)
-        params = {column: f'in.({values})'}
-        if extra_eq:
-            params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
+    for i in range(0, len(data), chunk_size):
+        chunk = data[i:i + chunk_size]
+        values_sql = ', '.join('(' + ', '.join(['?'] * len(all_cols)) + ')' for _ in chunk)
+        params = []
+        for row in chunk:
+            for c in all_cols:
+                params.append(row.get(c))
+        sql = f'INSERT INTO "{table}" ({col_list_sql}) VALUES {values_sql} {upsert_clause}'
         try:
-            res = requests.delete(url, headers=HEADERS, params=params, timeout=30)
-            if res.status_code >= 400:
-                logging.error(f"[{table}] 잔여 행 삭제 실패 ({res.status_code}): {res.text[:200]}")
-                ok = False
+            _d1_query(sql, params)
         except Exception as e:
-            logging.error(f"[{table}] 잔여 행 삭제 실패: {type(e).__name__}")
+            logging.error(f"[{table}] upsert 실패 ({len(chunk)}건): {type(e).__name__}: {str(e)[:200]}")
+            _mark_upsert_failure(table, type(e).__name__)
             ok = False
+            continue
+    if ok:
+        logging.info(f"[{table}] {len(data)}건 upsert 완료")
     return ok
 
 
+def _params_to_sql(table: str, params: dict) -> tuple:
+    """기존 PostgREST 스타일 params(dict)를 D1용 SELECT SQL로 변환.
+    지원 형식: select=col1,col2|*, order=col.asc/desc(,col2...), limit, offset,
+              eq.X / gte.X / lte.X / in.(a,b,c) 필터.
+    코드베이스에서 실제로 쓰인 필터 형태만 지원(그 외 형태가 들어오면 예외 발생)."""
+    params = dict(params or {'select': '*'})
+    select = params.pop('select', '*')
+    order = params.pop('order', None)
+    limit = params.pop('limit', None)
+    offset = params.pop('offset', None)
+
+    select_sql = '*' if select == '*' else ', '.join(f'"{c.strip()}"' for c in select.split(','))
+
+    where_clauses = []
+    bind_params = []
+    for key, value in params.items():
+        if value.startswith('eq.'):
+            where_clauses.append(f'"{key}" = ?')
+            bind_params.append(value[3:])
+        elif value.startswith('gte.'):
+            where_clauses.append(f'"{key}" >= ?')
+            bind_params.append(value[4:])
+        elif value.startswith('lte.'):
+            where_clauses.append(f'"{key}" <= ?')
+            bind_params.append(value[4:])
+        elif value.startswith('gt.'):
+            where_clauses.append(f'"{key}" > ?')
+            bind_params.append(value[3:])
+        elif value.startswith('lt.'):
+            where_clauses.append(f'"{key}" < ?')
+            bind_params.append(value[3:])
+        elif value.startswith('in.('):
+            items = value[4:-1].split(',') if value[4:-1] else []
+            placeholders = ','.join(['?'] * len(items))
+            where_clauses.append(f'"{key}" IN ({placeholders})')
+            bind_params.extend(items)
+        else:
+            raise ValueError(f"지원하지 않는 필터 형식: {key}={value}")
+
+    sql = f'SELECT {select_sql} FROM "{table}"'
+    if where_clauses:
+        sql += ' WHERE ' + ' AND '.join(where_clauses)
+    if order:
+        order_parts = []
+        for part in order.split(','):
+            part = part.strip()
+            if '.' in part:
+                col, direction = part.rsplit('.', 1)
+                direction = 'ASC' if direction.startswith('asc') else 'DESC'
+            else:
+                col, direction = part, 'ASC'
+            order_parts.append(f'"{col}" {direction}')
+        sql += ' ORDER BY ' + ', '.join(order_parts)
+    if limit is not None:
+        sql += f' LIMIT {int(limit)}'
+    if offset is not None:
+        sql += f' OFFSET {int(offset)}'
+    return sql, bind_params
+
+
 def supabase_select(table: str, params: dict = None) -> list:
-    url = f"{SUPABASE_URL}/rest/v1/{table}"
     try:
-        res = requests.get(
-            url,
-            headers=HEADERS,
-            params=params or {'select': '*'},
-            timeout=30
-        )
-        res.raise_for_status()
-        return res.json()
+        sql, bind_params = _params_to_sql(table, params)
+        return _d1_query(sql, bind_params)
     except Exception as e:
-        logging.error(f"[{table}] 조회 실패: {type(e).__name__}")
+        logging.error(f"[{table}] 조회 실패: {type(e).__name__}: {str(e)[:200]}")
         return []
 
 
 def supabase_select_all(table: str, params: dict = None, page_size: int = 1000, max_pages: int = 20) -> list:
-    """
-    PostgREST 기본 응답 상한(1000행)을 넘는 전체 조회.
-    offset/limit 페이징으로 반복 조회 후 병합.
-    """
+    """D1은 PostgREST식 1000행 응답 상한이 없어 사실상 한 번에 다 가져올 수 있지만,
+    호출부 호환을 위해 기존과 동일한 페이징 시그니처를 유지한다."""
     base_params = dict(params or {'select': '*'})
     base_params.pop('limit', None)
     base_params.pop('offset', None)
@@ -268,6 +323,42 @@ def supabase_select_all(table: str, params: dict = None, page_size: int = 1000, 
     else:
         logging.warning(f"[{table}] select_all 최대 페이지({max_pages}) 도달 - 결과가 잘렸을 수 있음")
     return all_rows
+
+
+def supabase_delete_not_in(table: str, column: str, keep_values: list, extra_eq: dict = None) -> bool:
+    """keep_values에 없는 행을 삭제. 매일/매분기 top-N만 다시 upsert하는 스냅샷성
+    테이블에서 순위·보유 밖으로 밀려난 옛 행이 영구히 남는 걸 방지하기 위함.
+    extra_eq: 같은 테이블을 여러 그룹(예: 투자자별)으로 나눠 쓸 때, 그 그룹의
+    행만 대상으로 삼기 위한 추가 등호 필터.
+
+    D1은 SQL IN 절 파라미터 개수에 사실상 999 바인드 제한이 있으므로
+    (Supabase 시절 URL 길이 414 문제와 동일한 이유로) 청크로 나눠 삭제한다."""
+    if not keep_values:
+        return True
+    select_params = {'select': column}
+    if extra_eq:
+        select_params.update({k: f'eq.{v}' for k, v in extra_eq.items()})
+    existing = supabase_select(table, select_params)
+    stale = {str(row[column]) for row in existing} - {str(v) for v in keep_values}
+    if not stale:
+        return True
+    stale_list = list(stale)
+    ok = True
+    for i in range(0, len(stale_list), 200):
+        chunk = stale_list[i:i + 200]
+        where_clauses = [f'"{column}" IN ({",".join(["?"] * len(chunk))})']
+        bind_params = list(chunk)
+        if extra_eq:
+            for k, v in extra_eq.items():
+                where_clauses.append(f'"{k}" = ?')
+                bind_params.append(v)
+        sql = f'DELETE FROM "{table}" WHERE ' + ' AND '.join(where_clauses)
+        try:
+            _d1_query(sql, bind_params)
+        except Exception as e:
+            logging.error(f"[{table}] 잔여 행 삭제 실패: {type(e).__name__}: {str(e)[:200]}")
+            ok = False
+    return ok
 
 
 def has_recent_data(table: str, filters: dict, date_field: str, days: int) -> bool:
