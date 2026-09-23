@@ -95,6 +95,23 @@ def analyze_rates(rates: list) -> str:
     )
 
 
+def _fmt_price(v, market: str) -> str:
+    """프롬프트에 넣기 전 가격을 미리 보기 좋게 포맷 - 안 그러면 AI가
+    '276500.0원'처럼 원본 float을 그대로 답습함 (2026-09-24 확인)."""
+    try:
+        n = float(v)
+    except (TypeError, ValueError):
+        return str(v)
+    return f"{n:,.2f}" if market == 'US' else f"{round(n):,}"
+
+
+def _fmt_pct(v) -> str:
+    try:
+        return f"{float(v):.2f}"
+    except (TypeError, ValueError):
+        return str(v)
+
+
 def analyze_market(indicators: list, stocks_by_market: list, kr_closed: bool = False) -> str:
     if not indicators and not stocks_by_market:
         return "시장 지표 수집 중"
@@ -104,11 +121,11 @@ def analyze_market(indicators: list, stocks_by_market: list, kr_closed: bool = F
     ])
     stock_lines = []
     for market, stocks in stocks_by_market:
-        unit = 'USD' if market == 'US' else '원'
+        unit = '달러' if market == 'US' else '원'
         for s in stocks:
             chg = s.get('flt_rt')
-            chg_txt = f", 등락률 {chg}%" if chg is not None else ""
-            stock_lines.append(f"- [{market}] {s.get('stock_name')}: 종가 {s.get('close_price')}{unit}{chg_txt}")
+            chg_txt = f", 등락률 {_fmt_pct(chg)}%" if chg is not None else ""
+            stock_lines.append(f"- [{market}] {s.get('stock_name')}: 종가 {_fmt_price(s.get('close_price'), market)}{unit}{chg_txt}")
     stock_text = "\n".join(stock_lines)
     if kr_closed:
         instruction = """오늘은 주말 또는 공휴일로 한국 증시(코스피/코스닥)가 휴장입니다.
