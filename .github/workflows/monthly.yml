@@ -16,8 +16,9 @@ jobs:
       - run: pip install -r requirements.txt
       - name: M2 유동성
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
           ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
         run: python fetchers/ecos_m2.py
       # 2026-09-04: apis.data.go.kr이 GitHub Actions 러너에서 전면 차단돼서
@@ -36,8 +37,9 @@ jobs:
       #   run: python fetchers/financial_corp_info.py
       - name: Export
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
         run: python exporters/export_data.py market
       - name: 커밋 및 배포
         run: |
