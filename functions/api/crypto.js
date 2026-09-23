@@ -7,6 +7,7 @@
 //      - 이건 "자사 제품에 통합해서 보여주는" 정상 허용 범위
 //   2) X-Api-Key 헤더가 FEED_API_KEY와 일치하는 요청 (뉴스파이널 등 승인된 프로젝트용)
 // 그 외(제3자의 임의 스크래핑)는 401로 거부한다.
+// 2026-09: Supabase REST -> Cloudflare D1 네이티브 바인딩으로 이전.
 export async function onRequestGet(context) {
   const { request, env } = context;
 
@@ -24,32 +25,23 @@ export async function onRequestGet(context) {
     });
   }
 
-  if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) {
+  if (!env.DB) {
     return new Response(JSON.stringify({ error: 'server not configured' }), {
       status: 500,
       headers: { 'content-type': 'application/json' }
     });
   }
 
-  const upstream = await fetch(
-    `${env.SUPABASE_URL}/rest/v1/crypto_prices?select=*&order=market_cap_rank.asc`,
-    {
-      headers: {
-        apikey: env.SUPABASE_SERVICE_ROLE_KEY,
-        Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`
-      }
-    }
-  );
+  const upstream = await env.DB.prepare('SELECT * FROM crypto_prices ORDER BY market_cap_rank ASC').all();
 
-  if (!upstream.ok) {
-    return new Response(JSON.stringify({ error: 'upstream fetch failed', status: upstream.status }), {
+  if (!upstream.success) {
+    return new Response(JSON.stringify({ error: 'upstream query failed' }), {
       status: 502,
       headers: { 'content-type': 'application/json' }
     });
   }
 
-  const coins = await upstream.json();
-  return new Response(JSON.stringify({ updated_at: new Date().toISOString().slice(0, 10), coins }), {
+  return new Response(JSON.stringify({ updated_at: new Date().toISOString().slice(0, 10), coins: upstream.results }), {
     status: 200,
     headers: { 'content-type': 'application/json', 'cache-control': 'private, no-store' }
   });

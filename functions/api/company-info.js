@@ -4,6 +4,7 @@
 // SELECT 없이 잠그고 이 Function으로만 서빙한다. X-Api-Key 필수(뉴스파이널
 // 등 승인된 프로젝트용) - moneyfinal 자체에는 아직 이 데이터를 쓰는 화면이
 // 없어서 crypto.js와 달리 same-origin 예외를 두지 않았다.
+// 2026-09: Supabase REST -> Cloudflare D1 네이티브 바인딩으로 이전.
 export async function onRequestGet(context) {
   const { request, env } = context;
 
@@ -15,37 +16,27 @@ export async function onRequestGet(context) {
     });
   }
 
-  if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) {
+  if (!env.DB) {
     return new Response(JSON.stringify({ error: 'server not configured' }), {
       status: 500,
       headers: { 'content-type': 'application/json' }
     });
   }
 
-  const headers = {
-    apikey: env.SUPABASE_SERVICE_ROLE_KEY,
-    Authorization: `Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`
-  };
-  const base = `${env.SUPABASE_URL}/rest/v1`;
-
   const [profilesRes, financialsRes, earningsRes, dividendsRes, splitsRes] = await Promise.all([
-    fetch(`${base}/us_company_profile?select=*`, { headers }),
-    fetch(`${base}/us_company_financials?select=*&order=fiscal_year.desc`, { headers }),
-    fetch(`${base}/us_company_earnings?select=*&order=report_date.desc`, { headers }),
-    fetch(`${base}/us_company_dividends?select=*&order=ex_date.desc`, { headers }),
-    fetch(`${base}/us_company_splits?select=*&order=split_date.desc`, { headers })
+    env.DB.prepare('SELECT * FROM us_company_profile').all(),
+    env.DB.prepare('SELECT * FROM us_company_financials ORDER BY fiscal_year DESC').all(),
+    env.DB.prepare('SELECT * FROM us_company_earnings ORDER BY report_date DESC').all(),
+    env.DB.prepare('SELECT * FROM us_company_dividends ORDER BY ex_date DESC').all(),
+    env.DB.prepare('SELECT * FROM us_company_splits ORDER BY split_date DESC').all()
   ]);
 
-  if (!profilesRes.ok || !financialsRes.ok || !earningsRes.ok || !dividendsRes.ok || !splitsRes.ok) {
-    return new Response(JSON.stringify({ error: 'upstream fetch failed' }), {
+  if (!profilesRes.success || !financialsRes.success || !earningsRes.success || !dividendsRes.success || !splitsRes.success) {
+    return new Response(JSON.stringify({ error: 'upstream query failed' }), {
       status: 502,
       headers: { 'content-type': 'application/json' }
     });
   }
-
-  const [profilesArr, financialsArr, earningsArr, dividendsArr, splitsArr] = await Promise.all([
-    profilesRes.json(), financialsRes.json(), earningsRes.json(), dividendsRes.json(), splitsRes.json()
-  ]);
 
   const groupBy = (arr) => {
     const out = {};
@@ -56,15 +47,15 @@ export async function onRequestGet(context) {
   };
 
   const profiles = {};
-  for (const p of profilesArr) profiles[p.ticker] = p;
+  for (const p of profilesRes.results) profiles[p.ticker] = p;
 
   return new Response(JSON.stringify({
     updated_at: new Date().toISOString().slice(0, 10),
     profiles,
-    financials: groupBy(financialsArr),
-    earnings: groupBy(earningsArr),
-    dividends: groupBy(dividendsArr),
-    splits: groupBy(splitsArr)
+    financials: groupBy(financialsRes.results),
+    earnings: groupBy(earningsRes.results),
+    dividends: groupBy(dividendsRes.results),
+    splits: groupBy(splitsRes.results)
   }), {
     status: 200,
     headers: { 'content-type': 'application/json', 'cache-control': 'private, no-store' }
