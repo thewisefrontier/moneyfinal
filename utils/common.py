@@ -61,6 +61,7 @@ CONFLICT_COLUMNS = {
     'us_company_splits': 'ticker,split_date',
     'crypto_prices': 'id',
     'superinvestor_holdings': 'investor_name,cusip',
+    'stock_ai_reports': 'code',
 }
 
 

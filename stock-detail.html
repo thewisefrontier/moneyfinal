@@ -50,6 +50,8 @@ th{color:var(--text2);font-weight:600}
 .sec-title{font-size:14px;font-weight:700;margin-bottom:10px}
 .up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
 .note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.ai-report{font-size:13.5px;color:var(--text);line-height:1.9}
+.ai-report-meta{font-size:11px;color:var(--text2);margin-top:10px}
 footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
 .ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
 .ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
@@ -88,8 +90,12 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="sec-title">기업 재무정보</div>
 <div class="card" id="financeCard"><div class="empty">로딩 중...</div></div>
 
+<div class="sec-title">AI 요약</div>
+<div class="card" id="aiReportCard"><div class="empty">로딩 중...</div></div>
+
 <div class="note">
   ⚠️ 시세는 공공데이터·Finnhub 기반 참고용이며 실시간 시세와 차이가 있을 수 있습니다. 기업 재무정보는 시가총액 상위 일부 종목만 제공합니다.<br>
+  · AI 요약은 위에 표시된 재무 데이터만 근거로 Gemini가 자동 생성한 참고용 정보이며, 투자 추천이 아닙니다. 분기 재무데이터 갱신 주기에 맞춰 갱신됩니다.<br>
   · 일별/월별/연별 데이터는 이 사이트가 수집을 시작한 시점부터 누적된 것으로, 서비스 초기라 과거 데이터가 제한적일 수 있습니다.
 </div>
 </main>
@@ -187,6 +193,16 @@ async function load(){
         <div class="brow"><span class="k">EPS</span><span class="v">${fmt(c.eps,0)}원</span></div>
       </div>`;
   }catch(e){document.getElementById('financeCard').innerHTML='<div class="empty">데이터를 불러오지 못했습니다</div>';}
+
+  try{
+    const r=await fetch('data/stock_reports.json');const d=await r.json();
+    const rep=(d.reports||{})[CODE];
+    const el=document.getElementById('aiReportCard');
+    if(!rep){el.innerHTML='<div class="empty">이 종목의 AI 요약은 아직 제공되지 않습니다 (재무정보 제공 종목만 생성)</div>';return;}
+    const escR=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const sentences=escR(rep.report_text||'').split(/(?<=\.)\s+/).filter(Boolean).join('<br><br>');
+    el.innerHTML=`<div class="ai-report">${sentences}</div><div class="ai-report-meta">${rep.based_on||''} 기준 · Gemini 자동 생성 · ${d.updated_at||''}</div>`;
+  }catch(e){document.getElementById('aiReportCard').innerHTML='<div class="empty">데이터를 불러오지 못했습니다</div>';}
 }
 load();
 

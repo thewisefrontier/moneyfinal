@@ -1,0 +1,277 @@
+{
+  "updated_at": "2026-09-24",
+  "reports": {
+    "005930": {
+      "code": "005930",
+      "market": "KR",
+      "corp_name": "삼성전자",
+      "report_text": "삼성전자의 2025년 매출액은 3,336,059억원, 영업이익은 436,011억원, 순이익은 452,068억원입니다. 주요 지표는 PER 34.66, PBR 3.59, ROE 10.36%를 기록했습니다. EPS는 7732.58원입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T22:01:11.029758+00:00"
+    },
+    "000660": {
+      "code": "000660",
+      "market": "KR",
+      "corp_name": "SK하이닉스",
+      "report_text": "SK하이닉스의 2025년 매출액은 971,467억원, 영업이익은 472,063억원, 순이익은 429,479억원입니다. 해당 기간 EPS는 58793.09원이며 ROE는 35.59%를 기록했습니다. PER은 27.1, PBR은 9.64입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:52:20.552812+00:00"
+    },
+    "MSFT": {
+      "code": "MSFT",
+      "market": "US",
+      "corp_name": "Microsoft Corporation",
+      "report_text": "Microsoft Corporation의 2026년 매출액은 331,839백만 USD입니다. 순이익은 133,749백만 USD를 기록했습니다. EPS는 18 USD입니다.",
+      "based_on": "FY2026",
+      "generated_at": "2026-09-23T21:54:28.721545+00:00"
+    },
+    "NVDA": {
+      "code": "NVDA",
+      "market": "US",
+      "corp_name": "NVIDIA Corporation",
+      "report_text": "NVIDIA의 2026 회계연도 매출액은 215,938백만 USD입니다. 순이익은 120,067백만 USD를 기록했습니다. 주당순이익(EPS)은 4.93 USD입니다.",
+      "based_on": "FY2026",
+      "generated_at": "2026-09-23T21:54:41.943342+00:00"
+    },
+    "LAND": {
+      "code": "LAND",
+      "market": "US",
+      "corp_name": "Gladstone Land Corporation",
+      "report_text": "Gladstone Land Corporation의 2025년 매출액은 88백만 USD이며 순이익은 14백만 USD를 기록했습니다. 해당 기간의 EPS는 -0.29 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:54:56.835359+00:00"
+    },
+    "PSEC": {
+      "code": "PSEC",
+      "market": "US",
+      "corp_name": "Prospect Capital Corporation",
+      "report_text": "Prospect Capital Corporation의 2026년 회계연도 매출액은 193백만 USD입니다. 순이익은 154백만 USD를 기록했습니다. 주당순이익(EPS)은 0.06 USD입니다.",
+      "based_on": "FY2026",
+      "generated_at": "2026-09-23T21:55:12.166078+00:00"
+    },
+    "ABR": {
+      "code": "ABR",
+      "market": "US",
+      "corp_name": "Arbor Realty Trust",
+      "report_text": "Arbor Realty Trust의 2025년 매출액은 501백만 USD입니다. 순이익은 149백만 USD를 기록했습니다. EPS는 0.56 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:55:24.292595+00:00"
+    },
+    "GOOGL": {
+      "code": "GOOGL",
+      "market": "US",
+      "corp_name": "Alphabet Inc.",
+      "report_text": "Alphabet Inc.의 2025년 매출액은 402,836백만 USD이며 순이익은 132,170백만 USD입니다. 해당 기간의 EPS는 10.91 USD를 기록했습니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:55:36.619281+00:00"
+    },
+    "O": {
+      "code": "O",
+      "market": "US",
+      "corp_name": "Realty Income Corporation",
+      "report_text": "Realty Income Corporation의 2025년 매출액은 5,749백만 USD입니다. 순이익은 1,059백만 USD를 기록했습니다. EPS는 1.17 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:55:49.414344+00:00"
+    },
+    "005380": {
+      "code": "005380",
+      "market": "KR",
+      "corp_name": "현대차",
+      "report_text": "현대차의 2025년 매출액은 1,862,545억원, 영업이익은 114,679억원, 순이익은 103,648억원입니다. EPS는 50619.69원이며 ROE는 8.12%를 기록했습니다. PER은 8.27, PBR은 0.67입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:52:34.687896+00:00"
+    },
+    "035420": {
+      "code": "035420",
+      "market": "KR",
+      "corp_name": "NAVER",
+      "report_text": "NAVER의 2025년 매출액은 120,350억원, 영업이익은 22,081억원, 순이익은 18,187억원입니다. PER은 19.55, PBR은 1.23, ROE는 6.28%를 기록했습니다. EPS는 11586.03원입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:52:48.204236+00:00"
+    },
+    "005490": {
+      "code": "005490",
+      "market": "KR",
+      "corp_name": "POSCO홀딩스",
+      "report_text": "POSCO홀딩스의 2025년 매출액은 690,949억원, 영업이익은 18,271억원, 순이익은 5,044억원입니다. EPS는 6365.39원이며 ROE는 0.81%를 기록했습니다. PER은 51.14, PBR은 0.41입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:53:02.497545+00:00"
+    },
+    "051910": {
+      "code": "051910",
+      "market": "KR",
+      "corp_name": "LG화학",
+      "report_text": "LG화학의 2025년 매출액은 459,322억원, 영업이익은 11,809억원입니다. 순이익은 -9,771억원이며 EPS는 -13840.92원을 기록했습니다. PBR은 0.41, ROE는 -2.07%입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:53:16.828084+00:00"
+    },
+    "006400": {
+      "code": "006400",
+      "market": "KR",
+      "corp_name": "삼성SDI",
+      "report_text": "삼성SDI의 2025년 매출액은 132,667억원이며 영업이익과 순이익은 각각 -17,224억원과 -5,849억원을 기록했습니다. PBR은 1.67이고 ROE는 -2.48%입니다. EPS는 -7257.82원이며 PER은 0.0입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:53:29.67595+00:00"
+    },
+    "035720": {
+      "code": "035720",
+      "market": "KR",
+      "corp_name": "카카오",
+      "report_text": "카카오의 2025년 매출액은 80,991억원, 영업이익은 7,320억원, 순이익은 5,180억원입니다. 주당순이익(EPS)은 1169.26원이며 자기자본이익률(ROE)은 3.4%를 기록했습니다. 현재 PER은 34.3, PBR은 1.17입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:53:43.298134+00:00"
+    },
+    "000270": {
+      "code": "000270",
+      "market": "KR",
+      "corp_name": "기아",
+      "report_text": "기아의 2025년 매출액은 1,141,409억원, 영업이익은 90,781억원, 순이익은 75,542억원입니다. 주요 지표는 PER 7.1, PBR 0.88, ROE 12.35%를 기록했습니다. EPS는 19349.19원입니다.",
+      "based_on": "2025년 사업보고서",
+      "generated_at": "2026-09-23T21:53:56.849469+00:00"
+    },
+    "AAPL": {
+      "code": "AAPL",
+      "market": "US",
+      "corp_name": "Apple Inc.",
+      "report_text": "Apple Inc.의 2025년 매출액은 416,161백만 USD입니다. 순이익은 112,010백만 USD를 기록했습니다. 주당순이익(EPS)은 7.49 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:54:11.671122+00:00"
+    },
+    "AGNC": {
+      "code": "AGNC",
+      "market": "US",
+      "corp_name": "AGNC Investment Corp.",
+      "report_text": "AGNC Investment Corp.의 2025년 매출액은 1,797백만 USD이며 순이익은 1,670백만 USD를 기록했습니다. 해당 기간의 EPS는 1.47 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:56:03.229105+00:00"
+    },
+    "TSLA": {
+      "code": "TSLA",
+      "market": "US",
+      "corp_name": "Tesla, Inc.",
+      "report_text": "Tesla, Inc.의 2025년 매출액은 94,827백만 USD입니다. 순이익은 3,794백만 USD를 기록했습니다. 주당순이익(EPS)은 1.18 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:56:18.120469+00:00"
+    },
+    "STAG": {
+      "code": "STAG",
+      "market": "US",
+      "corp_name": "STAG Industrial, Inc.",
+      "report_text": "STAG Industrial의 2025년 매출액은 845백만 USD이며 순이익은 274백만 USD를 기록했습니다. 해당 기간의 EPS는 1.46 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:56:30.538313+00:00"
+    },
+    "GOOD": {
+      "code": "GOOD",
+      "market": "US",
+      "corp_name": "Gladstone Commercial Corporation",
+      "report_text": "Gladstone Commercial Corporation의 2025년 매출액은 161백만 USD입니다. 순이익은 19백만 USD이며, EPS는 0.14 USD를 기록했습니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:56:43.276879+00:00"
+    },
+    "LTC": {
+      "code": "LTC",
+      "market": "US",
+      "corp_name": "LTC Properties, Inc.",
+      "report_text": "LTC Properties, Inc.의 2025년 매출액은 263백만 USD입니다. 순이익은 118백만 USD를 기록했습니다. 주당순이익(EPS)은 2.52 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:56:58.615355+00:00"
+    },
+    "EPR": {
+      "code": "EPR",
+      "market": "US",
+      "corp_name": "EPR Properties",
+      "report_text": "EPR Properties의 2025년 매출액은 673백만 USD입니다. 순이익은 275백만 USD를 기록했습니다. 주당순이익(EPS)은 3.28 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:57:11.053795+00:00"
+    },
+    "ORC": {
+      "code": "ORC",
+      "market": "US",
+      "corp_name": "Orchid Island Capital, Inc.",
+      "report_text": "Orchid Island Capital의 2025년 매출액은 180백만 USD입니다. 순이익은 159백만 USD를 기록했습니다. 주당순이익(EPS)은 1.24 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:57:24.191013+00:00"
+    },
+    "JPM": {
+      "code": "JPM",
+      "market": "US",
+      "corp_name": "JPMorgan Chase & Co.",
+      "report_text": "JPMorgan Chase & Co.의 2025년 매출액은 279,745백만 USD입니다. 순이익은 57,048백만 USD를 기록했습니다. EPS는 20.09 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:57:38.592863+00:00"
+    },
+    "MAIN": {
+      "code": "MAIN",
+      "market": "US",
+      "corp_name": "Main Street Capital Corporation",
+      "report_text": "Main Street Capital Corporation의 2025년 매출액은 592백만 USD이며 순이익은 493백만 USD를 기록했습니다. 해당 기간의 EPS는 5.52 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:57:56.109734+00:00"
+    },
+    "AMZN": {
+      "code": "AMZN",
+      "market": "US",
+      "corp_name": "Amazon.com, Inc.",
+      "report_text": "Amazon.com, Inc.의 2025년 매출액은 716,924백만 USD입니다. 순이익은 77,670백만 USD를 기록했습니다. 주당순이익(EPS)은 7.29 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:58:09.957676+00:00"
+    },
+    "META": {
+      "code": "META",
+      "market": "US",
+      "corp_name": "Meta Platforms, Inc.",
+      "report_text": "Meta Platforms의 2025년 매출액은 200,966백만 USD입니다. 순이익은 60,458백만 USD를 기록했습니다. EPS는 23.98 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:58:24.048118+00:00"
+    },
+    "ADC": {
+      "code": "ADC",
+      "market": "US",
+      "corp_name": "Agree Realty Corporation",
+      "report_text": "Agree Realty Corporation의 2025년 매출액은 718백만 USD입니다. 순이익은 204백만 USD를 기록했습니다. EPS는 1.77 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:58:36.332837+00:00"
+    },
+    "EFC": {
+      "code": "EFC",
+      "market": "US",
+      "corp_name": "Ellington Financial Inc.",
+      "report_text": "Ellington Financial Inc.의 2025년 매출액은 307백만 USD입니다. 순이익은 147백만 USD를 기록했습니다. 주당순이익(EPS)은 1.19 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:58:49.45443+00:00"
+    },
+    "NLY": {
+      "code": "NLY",
+      "market": "US",
+      "corp_name": "Annaly Capital Management, Inc.",
+      "report_text": "Annaly Capital Management의 2025년 매출액은 2,244백만 USD입니다. 순이익은 2,027백만 USD를 기록했습니다. 주당순이익(EPS)은 2.92 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:59:02.26379+00:00"
+    },
+    "ARR": {
+      "code": "ARR",
+      "market": "US",
+      "corp_name": "ARMOUR Residential REIT, Inc.",
+      "report_text": "ARMOUR Residential REIT, Inc.의 2025년 매출액은 332백만 USD입니다. 순이익은 323백만 USD를 기록했습니다. 주당순이익(EPS)은 3.3 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:59:14.86133+00:00"
+    },
+    "GAIN": {
+      "code": "GAIN",
+      "market": "US",
+      "corp_name": "Gladstone Investment Corp.",
+      "report_text": "Gladstone Investment Corp.의 2026년 회계연도 매출액은 178백만 USD입니다. 순이익은 185백만 USD를 기록했습니다. 주당순이익(EPS)은 4.77 USD입니다.",
+      "based_on": "FY2026",
+      "generated_at": "2026-09-23T21:59:27.403916+00:00"
+    },
+    "V": {
+      "code": "V",
+      "market": "US",
+      "corp_name": "Visa Inc.",
+      "report_text": "Visa Inc.의 2025년 회계연도 매출액은 40,000백만 USD입니다. 순이익은 20,058백만 USD를 기록했습니다. 주당순이익(EPS)은 10.22 USD입니다.",
+      "based_on": "FY2025",
+      "generated_at": "2026-09-23T21:59:39.788101+00:00"
+    }
+  }
+}
