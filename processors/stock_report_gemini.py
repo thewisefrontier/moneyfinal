@@ -18,10 +18,17 @@ logger = logging.getLogger(__name__)
 
 
 def _eok(won) -> str:
-    """원 단위 숫자를 프롬프트에 억원 단위로 넣어준다. AI가 답할 때도 억원
-    단위를 그대로 써서 '333605938000000원' 같은 안 읽히는 숫자를 안 쓰게 됨.
+    """원 단위 숫자를 프롬프트에 조/억원 단위로 넣어준다. AI가 답할 때도 이
+    단위를 그대로 써서 '333605938000000원'이나 '3,336,059억원'처럼 안
+    읽히는 숫자를 안 쓰게 됨 (won.js의 조/억 표기 관례와 동일하게 맞춤).
     PostgREST가 numeric/bigint를 문자열로 내려줄 수 있어 float()로 캐스팅."""
-    return f"{round(float(won or 0) / 1e8):,}억원"
+    n = round(float(won or 0) / 1e8)  # 억 단위
+    jo, eok = divmod(n, 10000)
+    if jo and eok:
+        return f"{jo}조{eok}억원"
+    if jo:
+        return f"{jo}조원"
+    return f"{eok}억원"
 
 
 def _man_usd(v) -> str:
