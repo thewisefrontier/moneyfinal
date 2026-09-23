@@ -47,8 +47,9 @@
 | `daily.yml` | `fetchers/us_stocks.py`, `fetchers/market_news.py`, `fetchers/us_technical.py`, `fetchers/us_company_info.py`, `fetchers/stock_prices.py`, `processors/kr_technical.py`, `fetchers/dart_disclosure.py`, `fetchers/ecos_daily.py`, `fetchers/fred_global.py`, `fetchers/crypto_price.py`, `fetchers/gold_price.py`, `fetchers/oil_price.py`, `fetchers/krx_index.py`, `fetchers/fss_jobs.py`, `fetchers/bond_info.py`, `fetchers/fss_info.py`, `fetchers/fss_fintip.py`, `fetchers/fss_press.py`, `fetchers/fss_consumer_news.py`, `fetchers/fss_realm_sector.py`, `fetchers/fss_realm_general.py`, `fetchers/fss_foreign_invest.py`, `fetchers/fss_market_trend.py`, `fetchers/etf_dividends.py`, `fetchers/kr_etf_dividends.py`, `fetchers/etf_prices.py`, `fetchers/etf_profile.py`, `processors/gemini_analyzer.py`, `exporters/export_data.py` | `CMC_API_KEY`, `DART_API_KEY`, `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `FINNHUB_API_KEY`, `FMP_API_KEY`, `FRED_API_KEY`, `FSS_API_KEY`, `GEMINI_API_KEY`, `OPINET_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_bank_rates.yml` | `fetchers/bank_rates.py`, `exporters/export_data.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_fss_bank_stats.yml` | `fetchers/fss_bank_stats_fisis.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_insurance.yml` | `exporters/export_data.py` | `SUPABASE_KEY`, `SUPABASE_URL` |
+| `fetch_insurance.yml` | — | — |
 | `fetch_loan_rates.yml` | `fetchers/loan_rates.py`, `fetchers/annuity_savings.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
+| `fetch_stock_ai_reports.yml` | `processors/stock_report_gemini.py`, `exporters/export_data.py` | `GEMINI_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fetch_superinvestor_13f.yml` | `fetchers/superinvestor_13f.py`, `exporters/export_data.py` | `SUPABASE_KEY`, `SUPABASE_URL` |
 | `fix_ticker_sticky.yml` | — | — |
 | `monthly.yml` | `fetchers/ecos_m2.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |

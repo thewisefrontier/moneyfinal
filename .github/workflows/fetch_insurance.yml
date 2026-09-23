@@ -24,14 +24,18 @@ jobs:
       #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
       #   run: python fetchers/insurance_info.py
-      - name: Export
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python exporters/export_data.py
-      - name: 커밋 및 배포
-        run: |
-          git config user.name "moneyfinal-bot"
-          git config user.email "bot@moneyfinal.kr"
-          git add data/
-          git diff --staged --quiet || (git commit -m "data: insurance update" && git pull --rebase origin main && git push)
+      # 2026-09-24: 위 수집 스텝 자체가 이미 꺼져 있어서 이 export가 갱신할
+      # 데이터가 아예 없는데도, 5일짜리 재시도 윈도우 내내 매일 전체
+      # export_data.py(테이블 16개)를 돌려서 Supabase 무료 티어 egress(5GB/월)
+      # 초과의 원인 중 하나였음. 수집 스텝을 복구하기 전까진 같이 꺼둠.
+      # - name: Export
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #   run: python exporters/export_data.py
+      # - name: 커밋 및 배포
+      #   run: |
+      #     git config user.name "moneyfinal-bot"
+      #     git config user.email "bot@moneyfinal.kr"
+      #     git add data/
+      #     git diff --staged --quiet || (git commit -m "data: insurance update" && git pull --rebase origin main && git push)

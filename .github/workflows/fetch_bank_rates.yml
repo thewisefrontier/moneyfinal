@@ -26,7 +26,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python exporters/export_data.py
+        run: python exporters/export_data.py rates
       - name: 커밋 및 배포
         run: |
           git config user.name "moneyfinal-bot"

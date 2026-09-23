@@ -368,6 +368,18 @@ def export_superinvestors():
     })
 
 
+def export_stock_reports():
+    """종목별 AI 요약 리포트 export - stock-detail.html에서 code로 조회"""
+    rows = supabase_select_all('stock_ai_reports', {
+        'select': 'code,market,corp_name,report_text,based_on,generated_at'
+    })
+    by_code = {r['code']: r for r in rows}
+    save_json('stock_reports.json', {
+        'updated_at': today_kst(),
+        'reports': by_code
+    })
+
+
 def export_kr_dividends():
     """국내 상장 배당 ETF 분배금 이력 + 시세 export (국내 배당ETF 계산기 페이지용)"""
     rows = supabase_select_all('kr_etf_dividends', {
@@ -408,8 +420,23 @@ def main():
     export_dividends()
     export_kr_dividends()
     export_superinvestors()
+    export_stock_reports()
     logger.info("=== JSON Export 완료 ===")
 
 
 if __name__ == '__main__':
-    main()
+    # 인자 없이 실행하면 전체 export(main), 인자를 주면 그 이름의 export_*만 실행.
+    # 2026-09-24: Supabase 무료 티어 egress(5GB/월)를 초과해서 발견한 문제 -
+    # 워크플로우 9개가 저마다 자기 데이터 하나만 갱신하고서도 매번 전체
+    # export_data.py(테이블 16개, stock_history/superinvestor_holdings 등
+    # 큰 것 포함)를 통째로 다시 뽑아가고 있었음. 이제 각 워크플로우가 실제로
+    # 갱신한 데이터에 해당하는 export만 골라 부르도록 바꿈.
+    if len(sys.argv) > 1:
+        for name in sys.argv[1:]:
+            fn = globals().get(f'export_{name}')
+            if fn:
+                fn()
+            else:
+                logger.error(f"알 수 없는 export 대상: {name}")
+    else:
+        main()
