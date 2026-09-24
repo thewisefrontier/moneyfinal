@@ -31,9 +31,10 @@ D1_HEADERS = {
     'Content-Type': 'application/json',
 }
 
-# SQLite/D1 바인드 파라미터 상한(SQLITE_MAX_VARIABLE_NUMBER 기본값 999).
-# 배치 upsert 시 컴럼 수 대비 안전하게 청크 크기를 계산하는 데 사용.
-D1_MAX_BOUND_PARAMS = 900
+# D1 HTTP API의 statement당 바인드 파라미터 상한. 문서상 SQLite 기본값(999)과
+# 다르며, 실제로는 100임을 실측으로 확인함(2026-09-24, 실제 D1 API에 100/101개
+# 파라미터로 SELECT 보내서 확인: 100=성공, 101=too many SQL variables 에러).
+D1_MAX_BOUND_PARAMS = 100
 
 # 테이블별 upsert conflict 컴럼 (Supabase 시절과 동일 - D1 UNIQUE 인덱스와 1:1 대응,
 # migrations/0001_init.sql 참고. stock_dividends/stock_issuance는 원본 Postgres 제약과
