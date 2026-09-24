@@ -5,6 +5,7 @@
  내부 구현만 D1로 교체됨. 이름 정리는 별도 후속 작업으로 남겨둠.)
 """
 import atexit
+import json
 import os
 import logging
 import requests
@@ -31,10 +32,10 @@ D1_HEADERS = {
 }
 
 # SQLite/D1 바인드 파라미터 상한(SQLITE_MAX_VARIABLE_NUMBER 기본값 999).
-# 배치 upsert 시 컬럼 수 대비 안전하게 청크 크기를 계산하는 데 사용.
+# 배치 upsert 시 컴럼 수 대비 안전하게 청크 크기를 계산하는 데 사용.
 D1_MAX_BOUND_PARAMS = 900
 
-# 테이블별 upsert conflict 컬럼 (Supabase 시절과 동일 - D1 UNIQUE 인덱스와 1:1 대응,
+# 테이블별 upsert conflict 컴럼 (Supabase 시절과 동일 - D1 UNIQUE 인덱스와 1:1 대응,
 # migrations/0001_init.sql 참고. stock_dividends/stock_issuance는 원본 Postgres 제약과
 # 실제로 달랐던 케이스이니 그 파일 상단 주석 참고)
 CONFLICT_COLUMNS = {
@@ -106,6 +107,17 @@ def _dedupe_by_conflict(table: str, data: list, conflict: str) -> list:
     if removed > 0:
         logging.warning(f"[{table}] 배치 내 conflict key 중복 {removed}건 자동 제거 (원본 {len(data)} → {len(seen)})")
     return list(seen.values())
+
+
+def _coerce_value(v):
+    """D1(SQLite) 바인드 파라미터로 보낼 수 있는 타입으로 변환.
+    Supabase REST는 boolean을 JSON true/false로, jsonb를 dict/list로 돌려주는데
+    D1은 boolean 타입이 없어 INTEGER(0/1)로, jsonb는 TEXT(JSON 문자열)로 저장해야 함."""
+    if isinstance(v, bool):
+        return int(v)
+    if isinstance(v, (dict, list)):
+        return json.dumps(v, ensure_ascii=False)
+    return v
 
 
 def _d1_query(sql: str, params: list = None, timeout: int = 30) -> list:
@@ -224,7 +236,7 @@ def supabase_upsert(table: str, data: list) -> bool:
         params = []
         for row in chunk:
             for c in all_cols:
-                params.append(row.get(c))
+                params.append(_coerce_value(row.get(c)))
         sql = f'INSERT INTO "{table}" ({col_list_sql}) VALUES {values_sql} {upsert_clause}'
         try:
             _d1_query(sql, params)
