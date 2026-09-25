@@ -49,6 +49,14 @@ PAGE_SIZE = 1000
 SHARD_SIZE = 3000
 MAX_WORKERS = 10
 
+# D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)를 백필이 한 번에 다
+# 써버리면, 같은 날 나중에 도는 운영 워크플로우(daily.yml=UTC 22:00,
+# fetch_loan_rates.yml=UTC 23:00 등 - 백필 재시도 트리거인 UTC 00:30보다 늦게 도는
+# 것들)가 write 한도 초과로 실패할 수 있다. 백필 1회 실행당 처리량에 상한을 둬서
+# 운영 워크플로우 몫을 항상 남겨둔다(2026-09-25 실측: 운영 워크플로우들의 하루 총
+# write량은 수천 건 수준이라 30,000이면 넉넉한 여유).
+MAX_ROWS_PER_RUN = 70000
+
 
 def fetch_all_from_supabase(table: str) -> list:
     rows = []
@@ -94,6 +102,13 @@ def backfill_table(table: str) -> None:
     if not rows:
         logger.info(f"[{table}] 신규/변경 행 없음 - 건너뜀")
         return
+
+    if len(rows) > MAX_ROWS_PER_RUN:
+        logger.info(
+            f"[{table}] 신규 {len(rows)}건 중 이번 실행은 {MAX_ROWS_PER_RUN}건만 처리 "
+            f"(같은 날 운영 워크플로우 write 할당량 확보 - 나머지는 다음 재시도에서 처리)"
+        )
+        rows = rows[:MAX_ROWS_PER_RUN]
 
     shards = [rows[i:i + SHARD_SIZE] for i in range(0, len(rows), SHARD_SIZE)]
     ok = True
