@@ -12,6 +12,11 @@ D1 스키마(migrations/0001_init.sql)가 이미 적용되어 있어야 한다
 
 멱등성: utils.common.supabase_upsert()의 ON CONFLICT DO UPDATE를 그대로 쓰므로
 여러 번 실행해도 안전하다(재실행 시 최신 Supabase 값으로 덮어씀).
+
+D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)에 걸려 중간에 멈출 수 있는
+큰 테이블(stock_prices 등) 대비: 재실행 시 D1에 이미 있는 conflict key는 건너뛰고
+새 행만 upsert해서 한도를 낭비하지 않는다(2026-09-25 실측: 이 필터링 없이 재실행했다가
+이미 있던 93,180건 재업서트에 하루 write 한도를 거의 다 쓰고 신규 행은 못 넣은 전례 있음).
 """
 import concurrent.futures
 import logging
@@ -20,7 +25,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import requests
-from utils.common import supabase_upsert, CONFLICT_COLUMNS  # noqa: E402  (D1로 교체된 구현)
+from utils.common import supabase_upsert, supabase_select, CONFLICT_COLUMNS  # noqa: E402  (D1로 교체된 구현)
 
 logger = logging.getLogger(__name__)
 
@@ -64,12 +69,32 @@ def fetch_all_from_supabase(table: str) -> list:
     return rows
 
 
+def fetch_existing_keys(table: str, conflict_cols: list) -> set:
+    """D1에 이미 있는 conflict key 조합 전체 조회 (write 한도 낭비 방지용).
+    D1은 PostgREST식 1000행 상한이 없어 한 번의 SELECT로 전량 조회 가능."""
+    rows = supabase_select(table, {'select': ','.join(conflict_cols)})
+    return {tuple(str(row.get(c)) for c in conflict_cols) for row in rows}
+
+
 def backfill_table(table: str) -> None:
     logger.info(f"[{table}] Supabase에서 조회 중...")
     rows = fetch_all_from_supabase(table)
-    logger.info(f"[{table}] {len(rows)}건 조회됨 -> D1 upsert 시작")
+    logger.info(f"[{table}] {len(rows)}건 조회됨")
     if not rows:
         return
+
+    conflict = CONFLICT_COLUMNS.get(table, '')
+    if conflict:
+        conflict_cols = [c.strip() for c in conflict.split(',')]
+        existing = fetch_existing_keys(table, conflict_cols)
+        if existing:
+            before = len(rows)
+            rows = [r for r in rows if tuple(str(r.get(c)) for c in conflict_cols) not in existing]
+            logger.info(f"[{table}] D1에 이미 있는 {before - len(rows)}건 제외 -> {len(rows)}건만 upsert")
+    if not rows:
+        logger.info(f"[{table}] 신규/변경 행 없음 - 건너뜀")
+        return
+
     shards = [rows[i:i + SHARD_SIZE] for i in range(0, len(rows), SHARD_SIZE)]
     ok = True
     with concurrent.futures.ThreadPoolExecutor(max_workers=min(MAX_WORKERS, len(shards))) as ex:
