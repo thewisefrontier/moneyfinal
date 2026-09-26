@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-26",
   "history": {
     "USD_KRW": [
       {
@@ -573,6 +573,13 @@
         "indicator_code": "USD_KRW",
         "indicator_name": "원달러 환율",
         "reference_date": "2026-09-24",
+        "value": 1360.0,
+        "unit": "원"
+      },
+      {
+        "indicator_code": "USD_KRW",
+        "indicator_name": "원달러 환율",
+        "reference_date": "2026-09-26",
         "value": 1360.0,
         "unit": "원"
       }
@@ -1237,6 +1244,13 @@
         "reference_date": "2026-09-25",
         "value": 4.0,
         "unit": "%"
+      },
+      {
+        "indicator_code": "FED_RATE",
+        "indicator_name": "미국 기준금리",
+        "reference_date": "2026-09-26",
+        "value": 4.0,
+        "unit": "%"
       }
     ],
     "M2_TOTAL": [
@@ -1824,6 +1838,13 @@
         "reference_date": "2026-09-25",
         "value": 7080.92,
         "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSPI",
+        "indicator_name": "코스피 지수",
+        "reference_date": "2026-09-26",
+        "value": 7080.92,
+        "unit": "pt"
       }
     ],
     "KOSDAQ": [
@@ -2351,6 +2372,13 @@
         "reference_date": "2026-09-25",
         "value": 844.48,
         "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSDAQ",
+        "indicator_name": "코스닥 지수",
+        "reference_date": "2026-09-26",
+        "value": 844.48,
+        "unit": "pt"
       }
     ],
     "KOSPI200": [
@@ -2862,6 +2890,13 @@
         "indicator_code": "KOSPI200",
         "indicator_name": "코스피 200",
         "reference_date": "2026-09-25",
+        "value": 1126.12,
+        "unit": "pt"
+      },
+      {
+        "indicator_code": "KOSPI200",
+        "indicator_name": "코스피 200",
+        "reference_date": "2026-09-26",
         "value": 1126.12,
         "unit": "pt"
       }
@@ -3475,6 +3510,13 @@
         "reference_date": "2026-09-25",
         "value": 119.5133,
         "unit": "Index"
+      },
+      {
+        "indicator_code": "USD_INDEX",
+        "indicator_name": "달러 인덱스(DXY)",
+        "reference_date": "2026-09-26",
+        "value": 119.5133,
+        "unit": "Index"
       }
     ],
     "US_SP500": [
@@ -4050,6 +4092,13 @@
         "indicator_name": "S&P 500",
         "reference_date": "2026-09-25",
         "value": 7704.13,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_SP500",
+        "indicator_name": "S&P 500",
+        "reference_date": "2026-09-26",
+        "value": 7743.41,
         "unit": "Index"
       }
     ],
@@ -4627,6 +4676,13 @@
         "reference_date": "2026-09-25",
         "value": 51349.98,
         "unit": "Index"
+      },
+      {
+        "indicator_code": "US_DJIA",
+        "indicator_name": "다우존스 산업평균",
+        "reference_date": "2026-09-26",
+        "value": 51828.62,
+        "unit": "Index"
       }
     ],
     "US_NASDAQ": [
@@ -5202,6 +5258,13 @@
         "indicator_name": "나스닥 종합지수",
         "reference_date": "2026-09-25",
         "value": 26936.04,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_NASDAQ",
+        "indicator_name": "나스닥 종합지수",
+        "reference_date": "2026-09-26",
+        "value": 26939.37,
         "unit": "Index"
       }
     ],
@@ -5812,6 +5875,13 @@
         "indicator_code": "US_CPI",
         "indicator_name": "미국 소비자물가지수(CPI)",
         "reference_date": "2026-09-25",
+        "value": 334.131,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "US_CPI",
+        "indicator_name": "미국 소비자물가지수(CPI)",
+        "reference_date": "2026-09-26",
         "value": 334.131,
         "unit": "Index"
       }
@@ -6425,6 +6495,13 @@
         "reference_date": "2026-09-25",
         "value": 0.31,
         "unit": "%"
+      },
+      {
+        "indicator_code": "US_YIELD_CURVE",
+        "indicator_name": "미국 장단기 금리차(10Y-2Y)",
+        "reference_date": "2026-09-26",
+        "value": 0.36,
+        "unit": "%"
       }
     ],
     "VIX": [
@@ -7027,6 +7104,13 @@
         "indicator_code": "VIX",
         "indicator_name": "VIX 공포지수",
         "reference_date": "2026-09-25",
+        "value": 14.21,
+        "unit": "Index"
+      },
+      {
+        "indicator_code": "VIX",
+        "indicator_name": "VIX 공포지수",
+        "reference_date": "2026-09-26",
         "value": 14.21,
         "unit": "Index"
       }
@@ -7633,6 +7717,13 @@
         "reference_date": "2026-09-25",
         "value": 96.41,
         "unit": "USD/배럴"
+      },
+      {
+        "indicator_code": "WTI",
+        "indicator_name": "WTI 원유가격",
+        "reference_date": "2026-09-26",
+        "value": 96.41,
+        "unit": "USD/배럴"
       }
     ],
     "GOLD": [
@@ -7900,6 +7991,13 @@
         "indicator_name": "금 가격 (국제 금선물 환산)",
         "reference_date": "2026-09-25",
         "value": 188188.09,
+        "unit": "원/g"
+      },
+      {
+        "indicator_code": "GOLD",
+        "indicator_name": "금 가격 (국제 금선물 환산)",
+        "reference_date": "2026-09-26",
+        "value": 188913.93,
         "unit": "원/g"
       }
     ]
