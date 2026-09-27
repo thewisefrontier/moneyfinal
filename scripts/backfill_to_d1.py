@@ -49,13 +49,14 @@ PAGE_SIZE = 1000
 SHARD_SIZE = 3000
 MAX_WORKERS = 10
 
-# D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)를 백필이 한 번에 다
-# 써버리면, 같은 날 나중에 도는 운영 워크플로우(daily.yml=UTC 22:00,
-# fetch_loan_rates.yml=UTC 23:00 등 - 백필 재시도 트리거인 UTC 00:30보다 늦게 도는
-# 것들)가 write 한도 초과로 실패할 수 있다. 백필 1회 실행당 처리량에 상한을 둬서
-# 운영 워크플로우 몫을 항상 남겨둔다(2026-09-25 실측: 운영 워크플로우들의 하루 총
-# write량은 수천 건 수준이라 30,000이면 넉넉한 여유).
-MAX_ROWS_PER_RUN = 70000
+# D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)는 DB 단위가 아니라
+# Cloudflare 계정 전체 공유 한도다. 이 계정은 moneyfinal 외에 hotdealworld도 같은
+# D1을 쓰고 있어서, 백필이 한도를 많이 가져가면 hotdealworld의 write가 막힌다
+# (2026-09-25~27 실측: 백필이 매일 대부분/전부의 계정 한도를 소진해 hotdealworld가
+# 3일간 write 불가 상태였음 - 실제 장애 발생). 남은 백필 분량은 수백~수천 건
+# 수준이라 크게 잡을 필요가 없으므로, 다른 프로젝트 몫을 최대한 남기도록 상한을
+# 낮게 잡는다.
+MAX_ROWS_PER_RUN = 5000
 
 
 def fetch_all_from_supabase(table: str) -> list:
