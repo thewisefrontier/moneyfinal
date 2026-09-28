@@ -118,6 +118,20 @@ def dedupe(rows: list) -> list:
     return list(seen.values())
 
 
+def only_new_dates(rows: list, market: str) -> list:
+    """폴백 범위조회(최근 10일)로 받은 행 중 이미 저장된 과거 날짜는 뺀다.
+    D1 무료 쓰기 한도(계정 전체 하루 10만 행)는 행마다 인덱스 포함 3행씩 잡혀, 10일치를 매번 다시
+    upsert하면 시장 하나당 ~3만 행, 두 시장이면 하루 한도 대부분이 이 폴백 한 번에 사라진다.
+    저장된 마지막 날짜 이후(같은 날짜는 갱신)만 쓰면 빠진 날짜는 그대로 메워진다."""
+    latest = supabase_select('stock_prices', {
+        'select': 'base_date', 'market_type': f'eq.{market}', 'order': 'base_date.desc', 'limit': '1'
+    })
+    if not latest:
+        return rows
+    cutoff = latest[0]['base_date']
+    return [r for r in rows if r['base_date'] >= cutoff]
+
+
 def upsert_batched(rows: list, batch: int = 1000):
     for i in range(0, len(rows), batch):
         supabase_upsert('stock_prices', rows[i:i + batch])
@@ -224,7 +238,7 @@ def run_daily():
             begin_date = get_recent_date(10)
             items = fetch_price_pages(market, {'beginBasDt': begin_date})
             if items:
-                all_prices.extend(process_stock_prices(items, market))
+                all_prices.extend(only_new_dates(process_stock_prices(items, market), market))
                 logger.info(f"✅ {market} 폴백: {len(items)}건 (data.go.kr)")
             else:
                 logger.error(f"❌ {market}: 1차/2차 모두 실패")
