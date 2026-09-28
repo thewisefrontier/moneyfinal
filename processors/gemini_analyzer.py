@@ -74,8 +74,8 @@ def ko_num(n: int) -> str:
     return ''.join(parts)
 
 
-_COMMA_AMT = re.compile(r'(\d{1,3}(?:,\d{3})+)(\.\d+)?(원|달러)')
-_PLAIN_AMT = re.compile(r'(?<![\d.,])(\d{5,})(\.\d+)?(원|달러)')
+_COMMA_AMT = re.compile(r'(\d{1,3}(?:,\d{3})+)(\.\d+)?(원|달러|포인트)')
+_PLAIN_AMT = re.compile(r'(?<![\d.,])(\d{5,})(\.\d+)?(원|달러|포인트)')
 
 
 def normalize_amounts(text: str) -> str:
@@ -166,7 +166,8 @@ def _fmt_indicator(i: dict) -> str:
         s = f"{f:.2f}"
         return (s[:-1] if s.endswith('0') else s) + '%'
     if u in ('pt', 'Index'):
-        return _num(f) + '포인트'
+        ip, _, dec = _num(f).partition('.')
+        return ko_num(int(ip)) + (f'.{dec}' if dec else '') + '포인트'
     return f"{_num(f)}{u}"
 
 
