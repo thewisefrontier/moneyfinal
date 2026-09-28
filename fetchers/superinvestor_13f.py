@@ -28,34 +28,34 @@ set_identity("moneyfinal-research overmandol@gmail.com")
 # 이름만으로 CIK를 추측하면 조용히 엉뚱한/빈 데이터를 가져오는 filer가 섞여
 # 있어서 - 예: Mohnish Pabrai는 2012년 이후 13F-HR을 안 내서 명단에서 뺌).
 SUPERINVESTORS = [
-    {"cik": "0001067983", "investor_name": "Warren Buffett", "fund_name": "Berkshire Hathaway"},
-    {"cik": "0001336528", "investor_name": "Bill Ackman", "fund_name": "Pershing Square Capital Management"},
-    {"cik": "0001649339", "investor_name": "Michael Burry", "fund_name": "Scion Asset Management"},
-    {"cik": "0000921669", "investor_name": "Carl Icahn", "fund_name": "Icahn Enterprises"},
-    {"cik": "0001061768", "investor_name": "Seth Klarman", "fund_name": "Baupost Group"},
-    {"cik": "0001536411", "investor_name": "Stanley Druckenmiller", "fund_name": "Duquesne Family Office"},
-    {"cik": "0001079114", "investor_name": "David Einhorn", "fund_name": "Greenlight Capital"},
-    {"cik": "0001656456", "investor_name": "David Tepper", "fund_name": "Appaloosa"},
-    {"cik": "0001709323", "investor_name": "Li Lu", "fund_name": "Himalaya Capital Management"},
-    {"cik": "0000949509", "investor_name": "Howard Marks", "fund_name": "Oaktree Capital Management"},
-    {"cik": "0001167483", "investor_name": "Chase Coleman", "fund_name": "Tiger Global Management"},
-    {"cik": "0001345471", "investor_name": "Nelson Peltz", "fund_name": "Trian Fund Management"},
-    {"cik": "0000915191", "investor_name": "Prem Watsa", "fund_name": "Fairfax Financial Holdings"},
-    {"cik": "0001056831", "investor_name": "Bruce Berkowitz", "fund_name": "Fairholme Capital Management"},
-    {"cik": "0001553733", "investor_name": "Glenn Greenberg", "fund_name": "Brave Warrior Advisors"},
-    {"cik": "0001096343", "investor_name": "Tom Gayner", "fund_name": "Markel Group"},
-    {"cik": "0001135778", "investor_name": "Bill Miller", "fund_name": "Miller Value Partners"},
-    {"cik": "0001040273", "investor_name": "Daniel Loeb", "fund_name": "Third Point"},
-    {"cik": "0001103804", "investor_name": "Andreas Halvorsen", "fund_name": "Viking Global Investors"},
-    {"cik": "0001061165", "investor_name": "Stephen Mandel", "fund_name": "Lone Pine Capital"},
+    {"cik": "0001067983", "investor_name": "워런 버핏", "fund_name": "Berkshire Hathaway"},
+    {"cik": "0001336528", "investor_name": "빌 애크먼", "fund_name": "Pershing Square Capital Management"},
+    {"cik": "0001649339", "investor_name": "마이클 버리", "fund_name": "Scion Asset Management"},
+    {"cik": "0000921669", "investor_name": "칼 아이칸", "fund_name": "Icahn Enterprises"},
+    {"cik": "0001061768", "investor_name": "세스 클라만", "fund_name": "Baupost Group"},
+    {"cik": "0001536411", "investor_name": "스탠리 드러켄밀러", "fund_name": "Duquesne Family Office"},
+    {"cik": "0001079114", "investor_name": "데이비드 아인혼", "fund_name": "Greenlight Capital"},
+    {"cik": "0001656456", "investor_name": "데이비드 테퍼", "fund_name": "Appaloosa"},
+    {"cik": "0001709323", "investor_name": "리 루", "fund_name": "Himalaya Capital Management"},
+    {"cik": "0000949509", "investor_name": "하워드 막스", "fund_name": "Oaktree Capital Management"},
+    {"cik": "0001167483", "investor_name": "체이스 콜먼", "fund_name": "Tiger Global Management"},
+    {"cik": "0001345471", "investor_name": "넬슨 펠츠", "fund_name": "Trian Fund Management"},
+    {"cik": "0000915191", "investor_name": "프렘 왓사", "fund_name": "Fairfax Financial Holdings"},
+    {"cik": "0001056831", "investor_name": "브루스 버코위츠", "fund_name": "Fairholme Capital Management"},
+    {"cik": "0001553733", "investor_name": "글렌 그린버그", "fund_name": "Brave Warrior Advisors"},
+    {"cik": "0001096343", "investor_name": "톰 게이너", "fund_name": "Markel Group"},
+    {"cik": "0001135778", "investor_name": "빌 밀러", "fund_name": "Miller Value Partners"},
+    {"cik": "0001040273", "investor_name": "대니얼 로브", "fund_name": "Third Point"},
+    {"cik": "0001103804", "investor_name": "안드레아스 할보르센", "fund_name": "Viking Global Investors"},
+    {"cik": "0001061165", "investor_name": "스티븐 만델", "fund_name": "Lone Pine Capital"},
 
     # 초분산 멀티전략/퀀트/기관 운용사 - 종목 수가 수백~수천 개라 위 집중투자형
     # 목록과 같이 컨센서스(겹치는 투자자 수)에 넣으면 신호가 희석되고, Citadel은
     # 실제로 보유종목이 너무 많아 삭제 쿼리가 URL 길이 초과로 실패하기도 했음
     # (supabase_delete_not_in을 청크 삭제 방식으로 고쳐서 지금은 문제없음).
     # 컨센서스 집계에선 빼고, 개별 투자자 조회에서만 보여줌 (investor_type 구분).
-    {"cik": "0001350694", "investor_name": "Bridgewater Associates", "fund_name": "Bridgewater Associates", "investor_type": "institutional"},
-    {"cik": "0001423053", "investor_name": "Citadel Advisors", "fund_name": "Citadel Advisors", "investor_type": "institutional"},
+    {"cik": "0001350694", "investor_name": "브릿지워터", "fund_name": "Bridgewater Associates", "investor_type": "institutional"},
+    {"cik": "0001423053", "investor_name": "시타델", "fund_name": "Citadel Advisors", "investor_type": "institutional"},
     {"cik": "0001608046", "investor_name": "국민연금공단", "fund_name": "National Pension Service", "investor_type": "institutional"},
 ]
 
