@@ -321,21 +321,14 @@ def supabase_select(table: str, params: dict = None) -> list:
 
 
 def supabase_select_all(table: str, params: dict = None, page_size: int = 1000, max_pages: int = 20) -> list:
-    """D1은 PostgREST식 1000행 응답 상한이 없어 사실상 한 번에 다 가져올 수 있지만,
-    호출부 호환을 위해 기존과 동일한 페이징 시그니처를 유지한다."""
+    """D1은 PostgREST식 1000행 응답 상한이 없어 한 번에 다 가져온다(page_size/max_pages는 호출부 호환용).
+    LIMIT/OFFSET 페이징을 쓰지 않는 이유(2026-09-28): ORDER BY 컬럼에 인덱스가 없으면 페이지마다
+    전체 스캔+정렬이라 읽기 행이 (페이지 수 × 테이블 크기)로 폭증했다(market_indicators 1회 export가
+    46만 행). 게다가 20페이지(2만 행)를 넘으면 결과가 조용히 잘려 오래된 저빈도 지표가 export에서 빠졌다."""
     base_params = dict(params or {'select': '*'})
     base_params.pop('limit', None)
     base_params.pop('offset', None)
-    all_rows = []
-    for page in range(max_pages):
-        page_params = {**base_params, 'limit': str(page_size), 'offset': str(page * page_size)}
-        batch = supabase_select(table, page_params)
-        all_rows.extend(batch)
-        if len(batch) < page_size:
-            break
-    else:
-        logging.warning(f"[{table}] select_all 최대 페이지({max_pages}) 도달 - 결과가 잘렸을 수 있음")
-    return all_rows
+    return supabase_select(table, base_params)
 
 
 def supabase_delete_not_in(table: str, column: str, keep_values: list, extra_eq: dict = None) -> bool:

@@ -32,6 +32,15 @@ export async function onRequestGet(context) {
     });
   }
 
+  const headers = { 'content-type': 'application/json', 'cache-control': 'private, no-store' };
+
+  // 공개(same-origin) 페이지가 방문마다 호출하는 엔드포인트라, 5분간 엣지 캐시로 D1 읽기를 방문 수와 분리한다
+  // (시세 fetcher는 하루 1회 갱신). 인증은 위에서 이미 끝났으므로 캐시 조회는 그 뒤에 한다.
+  const cache = caches.default;
+  const cacheKey = new Request(new URL('/api/crypto', request.url).toString());
+  const hit = await cache.match(cacheKey);
+  if (hit) return new Response(hit.body, { status: 200, headers });
+
   const upstream = await env.DB.prepare('SELECT * FROM crypto_prices ORDER BY market_cap_rank ASC').all();
 
   if (!upstream.success) {
@@ -41,8 +50,9 @@ export async function onRequestGet(context) {
     });
   }
 
-  return new Response(JSON.stringify({ updated_at: new Date().toISOString().slice(0, 10), coins: upstream.results }), {
-    status: 200,
-    headers: { 'content-type': 'application/json', 'cache-control': 'private, no-store' }
-  });
+  const body = JSON.stringify({ updated_at: new Date().toISOString().slice(0, 10), coins: upstream.results });
+  context.waitUntil(cache.put(cacheKey, new Response(body, {
+    headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=300' }
+  })));
+  return new Response(body, { status: 200, headers });
 }

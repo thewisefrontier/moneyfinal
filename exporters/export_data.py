@@ -283,9 +283,11 @@ def export_dividends():
     for r in rows:
         by_ticker.setdefault(r['ticker'], []).append(r)
 
+    # 종목별 최신 시세 1건만 쓰므로 전체 이력이 아니라 최근 30일만 읽는다(이력이 매일 쌓여 읽기 행이 계속 늘던 문제).
     price_rows = supabase_select_all('stock_prices', {
         'select': 'stock_code,close_price,vs,flt_rt,base_date,fetched_at',
         'market_type': 'eq.ETF',
+        'base_date': f"gte.{(datetime.now(timezone.utc) - timedelta(days=30)).strftime('%Y-%m-%d')}",
         'order': 'fetched_at.desc'
     })
     prices = {}
