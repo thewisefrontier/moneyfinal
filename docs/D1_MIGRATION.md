@@ -68,9 +68,35 @@ python scripts/backfill_to_d1.py
 `python scripts/backfill_to_d1.py rates market_indicators` 처럼 인자로 지정.
 
 ### 6. 검증
+
+**백필 8개 테이블 전체 완료 (2026-09-28 최종 확인)**
+
+기존 26개 테이블은 2026-09-23 이전에 이미 백필+검증 완료됨. 남아있던 8개 테이블
+(corp_info, stocks, etf_dividends, corporate_alerts, rates, superinvestor_holdings,
+market_indicators, stock_prices)도 아래와 같이 완료:
+
+| 테이블 | Supabase | D1 | 상태 |
+|---|---:|---:|---|
+| corp_info | 1,013 | 1,013 | 일치 |
+| stocks | 2,012 | 2,012 | 일치 |
+| etf_dividends | 2,585 | 2,585 | 일치 |
+| corporate_alerts | 2,874 | 2,873 | 실시간 반영 중(운영 fetcher가 계속 새 공시를 추가해 조회 시점 차이로 근소하게 어긋남) |
+| rates | 2,932 | 2,932 | 일치 |
+| superinvestor_holdings | 9,596 | 9,596 | 일치 |
+| market_indicators | 17,940 | 17,909 | 실시간 반영 중(위와 동일한 사유) |
+| stock_prices | 219,103 | 219,103 | 일치(21만 행 전체 백필 완료, 2026-09-27) |
+
+**주의: D1 무료 플랜 일일 write 한도(100,000행/일)는 DB 단위가 아니라 Cloudflare
+계정 전체 공유 한도.** 이 계정은 moneyfinal 외에 hotdealworld도 같은 D1을 쓰고
+있어서, 2026-09-25~27에 stock_prices 백필이 계정 한도를 매일 대부분/전부
+소진해 **hotdealworld가 3일간 write 불가 상태에 빠지는 장애가 실제로 발생함**.
+이후 백필 스크립트(`scripts/backfill_to_d1.py`)의 `MAX_ROWS_PER_RUN`을
+1회 실행당 5,000행으로 제한해서 재발을 막음. **향후 이 계정에서 대량 백필/이관
+작업을 할 때는 반드시 다른 프로젝트(hotdealworld 등)의 D1 write 할당량 여유를
+먼저 확인할 것.**
+
 - `npx wrangler d1 execute moneyfinal-db --remote --command="SELECT COUNT(*) FROM stock_prices"` 등으로
-  Supabase 쪽 행 수(`rates` 2,932 / `stock_prices` 215,983 / `superinvestor_holdings` 9,596 등,
-  2026-09-23 기준 실측치)와 대조.
+  위 표의 수치와 대조 가능.
 - 워크플로우 1개(예: `daily.yml`)를 `workflow_dispatch`로 수동 실행해 에러 없이 끝나는지 확인.
 - `functions/api/crypto.js` 등 게이트웨이가 실제로 D1에서 값을 반환하는지 curl로 확인.
 - 문제없이 며칠 안정화되면 Supabase 프로젝트(`ygnwfkvjjjfqrsqbymdp`)는 정지(pause) 또는 삭제.
