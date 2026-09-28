@@ -8,7 +8,8 @@ GitHub Actions 자동화로는 갱신이 안 됨 - 사용자 PC(정상 연결)�
 하루 한 번 돌려서 대신 채운다.
 
 사용법:
-  1. .env 파일에 DATA_GO_KR_API_KEY / SUPABASE_URL / SUPABASE_KEY가 채워져
+  1. .env 파일에 DATA_GO_KR_API_KEY / CF_ACCOUNT_ID / CF_API_TOKEN /
+     CF_D1_DATABASE_ID가 채워져
      있는지 확인 (D:\\thewise\\moneyfinal\\.env)
   2. python scripts/local_daily_update.py 실행
      (또는 local_daily_update.bat 더블클릭)
@@ -52,7 +53,7 @@ def load_env():
 
 load_env()
 
-REQUIRED = ['DATA_GO_KR_API_KEY', 'SUPABASE_URL', 'SUPABASE_KEY']
+REQUIRED = ['DATA_GO_KR_API_KEY', 'CF_ACCOUNT_ID', 'CF_API_TOKEN', 'CF_D1_DATABASE_ID']
 missing = [k for k in REQUIRED if not os.environ.get(k)]
 if missing:
     print(f"❌ .env에 다음 값이 비어있습니다: {', '.join(missing)}")

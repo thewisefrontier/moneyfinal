@@ -40,7 +40,7 @@
                          │ ② 적재 (upsert)
                          ▼
               ┌──────────────────────┐
-              │ Supabase (싱가포르)   │  PostgreSQL
+              │ Cloudflare D1        │  SQLite
               │ 21개 테이블           │
               └──────────┬───────────┘
                          │ ③ 가공
@@ -66,7 +66,7 @@
                      사용자
 ```
 
-**핵심 설계 원칙**: 런타임 서버가 없다. 프론트엔드는 순수 정적 HTML이며, 빌드 시점에 생성된 JSON 파일만 fetch한다. Supabase는 수집 파이프라인 내부에서만 접근하고 브라우저에 노출되지 않는다.
+**핵심 설계 원칙**: 런타임 서버가 없다. 프론트엔드는 순수 정적 HTML이며, 빌드 시점에 생성된 JSON 파일만 fetch한다. D1은 수집 파이프라인 내부에서만 접근하고 브라우저에 노출되지 않는다.
 
 ---
 
@@ -75,12 +75,12 @@
 ```
 moneyfinal/
 ├─ .github/workflows/     28개 YAML — 수집 스케줄
-├─ fetchers/              39개 .py — 외부 API 호출 → Supabase upsert
+├─ fetchers/              39개 .py — 외부 API 호출 → D1 upsert
 ├─ processors/            2개 .py — DB 데이터 가공
 │   ├─ kr_technical.py      국내주식 RSI(14) 계산
 │   └─ gemini_analyzer.py   Gemini 기반 일일 브리핑 생성
 ├─ exporters/
-│   ├─ export_data.py       Supabase → data/*.json
+│   ├─ export_data.py       D1 → data/*.json
 │   └─ telegram_sender.py   텔레그램 알림 발송
 ├─ utils/
 │   └─ common.py            공통 유틸 (아래 §6)
@@ -131,9 +131,11 @@ us_stocks → us_technical → stock_prices → kr_technical
 
 ---
 
-## 5. 데이터 계층 (Supabase)
+## 5. 데이터 계층 (Cloudflare D1)
 
-리전: 싱가포르. 접근은 서비스 롤 키로 PostgREST 경유.
+2026-09 Supabase에서 이전(상세: `docs/D1_MIGRATION.md`). 접근은 Cloudflare REST API(`/d1/database/{id}/query`) 경유.
+함수명 `supabase_*`는 호출부 호환을 위해 그대로 두고 내부만 D1로 바뀌었다.
+무료 한도(쓰기 10만 행/일)는 같은 Cloudflare 계정의 다른 프로젝트와 합산.
 
 ### 5.1 테이블 및 upsert 충돌 키
 
@@ -188,16 +190,15 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public
 | `data_go_kr_get(url, service_key, params)` | 공공데이터포털 호출. `params`로 키 전달해 이중 인코딩 방지 |
 | `fss_open_api_get(jsp_name, auth_key, days_back)` | 금감원 오픈API 호출 (authKey 방식) |
 | `supabase_upsert(table, data)` | 배치 upsert. conflict 키 기준 배치 내 중복 자동 제거 |
-| `supabase_select(table, params)` | 단일 조회 (PostgREST 1000행 제한 적용) |
+| `supabase_select(table, params)` | 단일 조회 (D1 REST 조회) |
 | `supabase_select_all(table, params, page_size=1000, max_pages=20)` | 페이지네이션 조회. 1000행 초과 테이블용 |
 | `now_kst()` / `today_kst()` | KST 타임스탬프 |
 
 **실패 처리**: `_UPSERT_FAILURES` 카운터 + `atexit` 훅으로, upsert가 하나라도 실패하면 모든 작업을 마친 뒤 **non-zero exit**한다. 워크플로우가 실패를 green으로 위장하지 않도록 하는 장치다.
 
-**환경변수 (코드가 읽는 이름)**: `SUPABASE_URL`, `SUPABASE_KEY`, `DATA_GO_KR_API_KEY`, `FINLIFE_API_KEY`, `FSS_API_KEY`, `ECOS_API_KEY`, `DART_API_KEY`, `FRED_API_KEY`, `FINNHUB_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `GEMINI_API_KEY`
+**환경변수 (코드가 읽는 이름)**: `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `DATA_GO_KR_API_KEY`, `FINLIFE_API_KEY`, `FSS_API_KEY`, `ECOS_API_KEY`, `DART_API_KEY`, `FRED_API_KEY`, `FINNHUB_API_KEY`, `ALPHA_VANTAGE_API_KEY`, `GEMINI_API_KEY`
 
 **GitHub Secret ↔ 환경변수 매핑 (주의)**:
-- `secrets.SUPABASE_SERVICE_KEY` → 코드는 `SUPABASE_KEY`로 읽음
 - `secrets.DATA_GO_KR_API_KEY_DEC` → 코드는 `DATA_GO_KR_API_KEY`로 읽음 (**DEC = 디코딩 키. ENC를 URL에 직접 삽입하면 이중 인코딩 버그**)
 - 상세는 프로젝트 파일 `API_KEY_REFERENCE.md` 참조
 
@@ -205,7 +206,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public
 
 ## 7. 내보내기 계층 (`exporters/export_data.py`)
 
-Supabase → `data/*.json` 8개 파일 생성. `main()`이 아래 순서로 호출한다.
+D1 → `data/*.json` 8개 파일 생성. `main()`이 아래 순서로 호출한다.
 
 | 함수 | 산출 파일 | 소스 테이블 | 필터 |
 |---|---|---|---|

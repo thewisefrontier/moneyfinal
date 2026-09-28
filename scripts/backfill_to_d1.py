@@ -1,0 +1,143 @@
+"""
+1회성 데이터 백필: Supabase(Postgres) -> Cloudflare D1
+
+사용법 (로컬 또는 GitHub Actions workflow_dispatch에서):
+  SUPABASE_URL=... SUPABASE_KEY=...(service role) \
+  CF_ACCOUNT_ID=... CF_API_TOKEN=... CF_D1_DATABASE_ID=... \
+  python scripts/backfill_to_d1.py [table1 table2 ...]
+
+인자 없이 실행하면 TABLES 전체를 순서대로 백필한다.
+D1 스키마(migrations/0001_init.sql)가 이미 적용되어 있어야 한다
+(`wrangler d1 execute moneyfinal-db --remote --file=migrations/0001_init.sql`).
+
+멱등성: utils.common.supabase_upsert()의 ON CONFLICT DO UPDATE를 그대로 쓰므로
+여러 번 실행해도 안전하다(재실행 시 최신 Supabase 값으로 덮어씀).
+
+D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)에 걸려 중간에 멈출 수 있는
+큰 테이블(stock_prices 등) 대비: 재실행 시 D1에 이미 있는 conflict key는 건너뛰고
+새 행만 upsert해서 한도를 낭비하지 않는다(2026-09-25 실측: 이 필터링 없이 재실행했다가
+이미 있던 93,180건 재업서트에 하루 write 한도를 거의 다 쓰고 신규 행은 못 넣은 전례 있음).
+"""
+import concurrent.futures
+import logging
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import requests
+from utils.common import supabase_upsert, supabase_select, CONFLICT_COLUMNS  # noqa: E402  (D1로 교체된 구현)
+
+logger = logging.getLogger(__name__)
+
+SB_URL = os.environ['SUPABASE_URL'].rstrip('/')
+SB_KEY = os.environ['SUPABASE_KEY']
+SB_HEADERS = {'apikey': SB_KEY, 'Authorization': f'Bearer {SB_KEY}'}
+
+# migrations/0001_init.sql에 정의된 34개 테이블 전체 (card_news는 CONFLICT_COLUMNS에
+# 없어 upsert 대상이 아니므로 별도 append-only 백필 필요 - 아래 TABLES에서 제외하고
+# 필요 시 수동으로 따로 처리할 것)
+TABLES = list(CONFLICT_COLUMNS.keys())
+
+PAGE_SIZE = 1000
+
+# D1 REST API가 statement당 파라미터 100개로 제한돼 있어(utils.common.D1_MAX_BOUND_PARAMS)
+# supabase_upsert 내부에서 청크를 잘게(테이블당 몇 행씩) 나눠 순차 HTTP 요청을 보낸다.
+# stock_prices처럼 행이 많은 테이블은 순차 실행 시 수만 건의 요청이 필요해 시간이
+# 너무 오래 걸리므로(실측: corp_info 1013건/15컬럼 -> 169 요청에 94초), 데이터를
+# 샤드로 나눠 여러 스레드에서 동시에 upsert 요청을 보낸다(네트워크 I/O 대기 구간이라
+# GIL에 영향받지 않고 실측상 순차 대비 약 7배 빨라짐).
+SHARD_SIZE = 3000
+MAX_WORKERS = 10
+
+# D1 무료 플랜 일일 write 한도(100,000행/일, UTC 자정 리셋)는 DB 단위가 아니라
+# Cloudflare 계정 전체 공유 한도다. 이 계정은 moneyfinal 외에 hotdealworld도 같은
+# D1을 쓰고 있어서, 백필이 한도를 많이 가져가면 hotdealworld의 write가 막힌다
+# (2026-09-25~27 실측: 백필이 매일 대부분/전부의 계정 한도를 소진해 hotdealworld가
+# 3일간 write 불가 상태였음 - 실제 장애 발생). 남은 백필 분량은 수백~수천 건
+# 수준이라 크게 잡을 필요가 없으므로, 다른 프로젝트 몫을 최대한 남기도록 상한을
+# 낮게 잡는다.
+MAX_ROWS_PER_RUN = 5000
+
+
+def fetch_all_from_supabase(table: str) -> list:
+    rows = []
+    offset = 0
+    while True:
+        res = requests.get(
+            f"{SB_URL}/rest/v1/{table}",
+            headers=SB_HEADERS,
+            params={'select': '*', 'limit': str(PAGE_SIZE), 'offset': str(offset)},
+            timeout=30
+        )
+        res.raise_for_status()
+        batch = res.json()
+        rows.extend(batch)
+        if len(batch) < PAGE_SIZE:
+            break
+        offset += PAGE_SIZE
+    return rows
+
+
+def fetch_existing_keys(table: str, conflict_cols: list) -> set:
+    """D1에 이미 있는 conflict key 조합 전체 조회 (write 한도 낭비 방지용).
+    D1은 PostgREST식 1000행 상한이 없어 한 번의 SELECT로 전량 조회 가능."""
+    rows = supabase_select(table, {'select': ','.join(conflict_cols)})
+    return {tuple(str(row.get(c)) for c in conflict_cols) for row in rows}
+
+
+def backfill_table(table: str) -> None:
+    logger.info(f"[{table}] Supabase에서 조회 중...")
+    rows = fetch_all_from_supabase(table)
+    logger.info(f"[{table}] {len(rows)}건 조회됨")
+    if not rows:
+        return
+
+    conflict = CONFLICT_COLUMNS.get(table, '')
+    if conflict:
+        conflict_cols = [c.strip() for c in conflict.split(',')]
+        existing = fetch_existing_keys(table, conflict_cols)
+        if existing:
+            before = len(rows)
+            rows = [r for r in rows if tuple(str(r.get(c)) for c in conflict_cols) not in existing]
+            logger.info(f"[{table}] D1에 이미 있는 {before - len(rows)}건 제외 -> {len(rows)}건만 upsert")
+    if not rows:
+        logger.info(f"[{table}] 신규/변경 행 없음 - 건너뜀")
+        return
+
+    if len(rows) > MAX_ROWS_PER_RUN:
+        logger.info(
+            f"[{table}] 신규 {len(rows)}건 중 이번 실행은 {MAX_ROWS_PER_RUN}건만 처리 "
+            f"(같은 날 운영 워크플로우 write 할당량 확보 - 나머지는 다음 재시도에서 처리)"
+        )
+        rows = rows[:MAX_ROWS_PER_RUN]
+
+    shards = [rows[i:i + SHARD_SIZE] for i in range(0, len(rows), SHARD_SIZE)]
+    ok = True
+    with concurrent.futures.ThreadPoolExecutor(max_workers=min(MAX_WORKERS, len(shards))) as ex:
+        futures = [ex.submit(supabase_upsert, table, shard) for shard in shards]
+        for f in concurrent.futures.as_completed(futures):
+            if not f.result():
+                ok = False
+    if not ok:
+        logger.error(f"[{table}] 일부 실패 - 위 에러 로그 확인")
+    else:
+        logger.info(f"[{table}] 완료 ({len(rows)}건)")
+
+
+def main():
+    targets = sys.argv[1:] if len(sys.argv) > 1 else TABLES
+    logger.info(f"=== D1 백필 시작: {len(targets)}개 테이블 ===")
+    for table in targets:
+        if table not in TABLES:
+            logger.error(f"알 수 없는 테이블: {table} (건너뜀)")
+            continue
+        try:
+            backfill_table(table)
+        except Exception as e:
+            logger.error(f"[{table}] 백필 중 예외: {type(e).__name__}: {e}")
+    logger.info("=== D1 백필 종료 ===")
+
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+    main()
