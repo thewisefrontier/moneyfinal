@@ -37,19 +37,13 @@ D1_HEADERS = {
 D1_MAX_BOUND_PARAMS = 100
 
 # 테이블별 upsert conflict 컴럼 (Supabase 시절과 동일 - D1 UNIQUE 인덱스와 1:1 대응,
-# migrations/0001_init.sql 참고. stock_dividends/stock_issuance는 원본 Postgres 제약과
-# 실제로 달랐던 케이스이니 그 파일 상단 주석 참고)
+# migrations/0001_init.sql 참고)
 CONFLICT_COLUMNS = {
     'rates': 'institution,product_name,category,period',
     'market_indicators': 'indicator_code,reference_date',
     'corporate_alerts': 'company_name,alert_type,disclosure_date',
-    'ipo_status': 'company_name,status,request_date',
-    'financial_health': 'institution,reference_date',
     'daily_briefing': 'briefing_date',
     'stock_prices': 'stock_code,base_date,market_type',
-    'stock_short': 'stock_code,base_date',
-    'stock_dividends': 'stock_code,base_date',
-    'stock_issuance': 'stock_code,issuance_date,issuance_type',
     'stocks': 'stock_code',
     'corp_info': 'stock_code',
     'corp_finance': 'stock_code,fiscal_year',

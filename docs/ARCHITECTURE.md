@@ -146,13 +146,8 @@ us_stocks → us_technical → stock_prices → kr_technical
 | `rates` | institution, product_name, category, period |
 | `market_indicators` | indicator_code, reference_date |
 | `corporate_alerts` | company_name, alert_type, disclosure_date |
-| `ipo_status` | company_name, status, request_date |
-| `financial_health` | institution, reference_date |
 | `daily_briefing` | briefing_date |
 | `stock_prices` | stock_code, base_date, market_type |
-| `stock_short` | stock_code, base_date |
-| `stock_dividends` | stock_code, base_date, dividend_type |
-| `stock_issuance` | stock_code, issuance_date, issuance_type |
 | `stocks` | stock_code |
 | `corp_info` | stock_code |
 | `corp_finance` | stock_code, fiscal_year |
