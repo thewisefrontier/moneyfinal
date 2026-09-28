@@ -6,6 +6,7 @@ Gemini AI 데이터 분석기
 """
 import logging
 import os
+import re
 import time
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -55,7 +56,33 @@ SYSTEM_PROMPT = """당신은 금융 데이터 분석 AI입니다.
 3. 투자 추천, 매매 권유, 수익 보장 표현 절대 금지.
 4. 마크다운 기호(**, ##, [] 등) 사용 금지.
 5. 데이터가 부족하면 "데이터 수집 중"이라고만 하세요.
-6. 한국어로 간결하게 작성하세요."""
+6. 한국어로 간결하게 작성하세요.
+7. 금액은 제공된 표기 그대로 쓰세요. 억/만 단위 표기(예: 10만5000원, 3000만원, 12억3456만원)이고 콤마·공백을 넣지 않으며, 숫자를 다시 풀어 쓰거나 콤마를 붙이지 마세요."""
+
+
+def ko_num(n: int) -> str:
+    """정수를 조/억/만 그룹핑으로 (콤마·공백 없음, 단위 '원'은 호출부에서 붙임).
+    1508069 -> '150만8069', 30000000 -> '3000만', 285500 -> '28만5500'."""
+    n = int(n)
+    parts = []
+    for unit, size in (('조', 10**12), ('억', 10**8), ('만', 10**4)):
+        q, n = divmod(n, size)
+        if q:
+            parts.append(f"{q}{unit}")
+    if n or not parts:
+        parts.append(str(n))
+    return ''.join(parts)
+
+
+_COMMA_AMT = re.compile(r'(\d{1,3}(?:,\d{3})+)(\.\d+)?(원|달러)')
+_PLAIN_AMT = re.compile(r'(?<![\d.,])(\d{5,})(\.\d+)?(원|달러)')
+
+
+def normalize_amounts(text: str) -> str:
+    """프롬프트 지시를 무시하고 '285,500원'/'285500원'으로 쓴 금액을 억/만 표기로 강제 교정."""
+    def _sub(m):
+        return f"{ko_num(int(m.group(1).replace(',', '')))}{m.group(2) or ''}{m.group(3)}"
+    return _PLAIN_AMT.sub(_sub, _COMMA_AMT.sub(_sub, text))
 
 
 def call_gemini(prompt: str, max_tokens: int = 500) -> str:
@@ -69,7 +96,7 @@ def call_gemini(prompt: str, max_tokens: int = 500) -> str:
             )
         )
         time.sleep(10)
-        return response.text.strip()
+        return normalize_amounts(response.text.strip())
     except Exception as e:
         logger.error(f"Gemini 호출 오류: {type(e).__name__} - {e}")
         time.sleep(15)
@@ -102,7 +129,10 @@ def _fmt_price(v, market: str) -> str:
         n = float(v)
     except (TypeError, ValueError):
         return str(v)
-    return f"{n:,.2f}" if market == 'US' else f"{round(n):,}"
+    if market != 'US':
+        return ko_num(round(n))
+    ip, dec = f"{n:.2f}".split('.')
+    return f"{ko_num(int(ip))}.{dec}"
 
 
 def _fmt_pct(v) -> str:
@@ -112,11 +142,39 @@ def _fmt_pct(v) -> str:
         return str(v)
 
 
+def _num(f: float, min_dec: int = 0) -> str:
+    s = f"{f:.2f}".rstrip('0').rstrip('.')
+    if min_dec and '.' not in s:
+        s += '.' + '0' * min_dec
+    return s
+
+
+def _fmt_indicator(i: dict) -> str:
+    """지표 값+단위를 프롬프트에 넣기 전에 우리 서식으로 미리 만든다."""
+    v, u = i.get('value'), (i.get('unit') or '')
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return f"{v}{u}"
+    if u == '십억원':
+        return ko_num(round(f * 10**9)) + '원'
+    if u.startswith('원'):
+        return ko_num(round(f)) + '원' + u[1:]
+    if u.startswith('USD'):
+        return _num(f) + '달러' + u[3:]
+    if u == '%':
+        s = f"{f:.2f}"
+        return (s[:-1] if s.endswith('0') else s) + '%'
+    if u in ('pt', 'Index'):
+        return _num(f) + '포인트'
+    return f"{_num(f)}{u}"
+
+
 def analyze_market(indicators: list, stocks_by_market: list, kr_closed: bool = False) -> str:
     if not indicators and not stocks_by_market:
         return "시장 지표 수집 중"
     ind_text = "\n".join([
-        f"- {i['indicator_name']}: {i['value']} {i.get('unit', '')} (출처: {i.get('source', '')})"
+        f"- {i['indicator_name']}: {_fmt_indicator(i)} (출처: {i.get('source', '')})"
         for i in indicators
     ])
     stock_lines = []

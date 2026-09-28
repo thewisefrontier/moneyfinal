@@ -12,7 +12,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.common import supabase_select_all, supabase_upsert, now_kst
-from processors.gemini_analyzer import call_gemini
+from processors.gemini_analyzer import call_gemini, ko_num
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +32,7 @@ def _eok(won) -> str:
 
 
 def _man_usd(v) -> str:
-    return f"{round(float(v or 0) / 1e6):,}백만 USD"
+    return ko_num(round(float(v or 0))) + "달러"
 
 
 def generate_kr_reports() -> int:
