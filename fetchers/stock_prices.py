@@ -132,6 +132,23 @@ def only_new_dates(rows: list, market: str) -> list:
     return [r for r in rows if r['base_date'] >= cutoff]
 
 
+def skip_complete_dates(rows: list, market: str) -> list:
+    """이미 그 날짜의 종목이 (받은 수 이상) 저장돼 있으면 다시 쓰지 않는다. data.go.kr은 반영이 늦어
+    최신 날짜가 며칠씩 그대로라, only_new_dates만으로는 같은 날짜를 매일 재기록(약 2800행x3쓰기)한다.
+    Yahoo 상위 100종목만 들어간 날짜는 저장 수가 모자라 그대로 전종목으로 채워진다."""
+    by_date = {}
+    for r in rows:
+        by_date.setdefault(r['base_date'], []).append(r)
+    out = []
+    for d, group in by_date.items():
+        stored = supabase_select('stock_prices', {
+            'select': 'stock_code', 'market_type': f'eq.{market}', 'base_date': f'eq.{d}'
+        })
+        if len(stored) < len(group):
+            out.extend(group)
+    return out
+
+
 def upsert_batched(rows: list, batch: int = 1000):
     for i in range(0, len(rows), batch):
         supabase_upsert('stock_prices', rows[i:i + batch])
@@ -250,8 +267,10 @@ def run_daily():
         logger.info(f"✅ 상장종목 {len(stocks)}건")
 
 
-def run_backfill(days: int = 35):
-    """RSI 계산용 과거 시세 백필. endBasDt는 '검색값보다 작은' 조건이므로 내일 날짜 사용"""
+def run_backfill(days: int = 35, only_new: bool = False):
+    """RSI 계산용 과거 시세 백필. endBasDt는 '검색값보다 작은' 조건이므로 내일 날짜 사용.
+    only_new=True(로컬 일일 갱신용): 이미 저장된 과거 날짜는 다시 쓰지 않는다(only_new_dates 참고).
+    전종목 10일치를 매번 upsert하면 D1 계정 공용 쓰기 한도(10만 행/일)를 한 번에 소진한다."""
     now = datetime.now(KST)
     begin = (now - timedelta(days=days)).strftime('%Y%m%d')
     end = (now + timedelta(days=1)).strftime('%Y%m%d')
@@ -261,7 +280,10 @@ def run_backfill(days: int = 35):
         if not items:
             logger.warning(f"❌ {market}: 백필 데이터 없음")
             continue
-        rows = dedupe(process_stock_prices(items, market))
+        rows = process_stock_prices(items, market)
+        if only_new:
+            rows = skip_complete_dates(dedupe(only_new_dates(rows, market)), market)
+        rows = dedupe(rows)
         upsert_batched(rows)
         logger.info(f"✅ {market} 백필: {len(rows)}건")
 

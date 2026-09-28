@@ -14,6 +14,10 @@ GitHub Actions 자동화로는 갱신이 안 됨 - 사용자 PC(정상 연결)�
   2. python scripts/local_daily_update.py 실행
      (또는 local_daily_update.bat 더블클릭)
 
+DB는 Cloudflare D1이다(2026-09 이전). 무료 쓰기 한도(10만 행/일)는 같은 계정의 다른 프로젝트와 공유되므로
+국내주식 백필은 이미 저장된 날짜를 건너뛴다(run_backfill only_new=True). 전체 재기록이 필요하면
+fetchers/stock_prices.py backfill 을 직접 실행할 것.
+
 한 작업이 실패해도 나머지는 계속 진행한다. 끝나면 성공/실패 요약을 보여준다.
 """
 import os
@@ -96,7 +100,7 @@ def run_stock_backfill_task() -> bool:
     print(f"\n{'=' * 60}\n▶ {desc}\n{'=' * 60}")
     try:
         from fetchers.stock_prices import run_backfill
-        run_backfill(days=10)
+        run_backfill(days=10, only_new=True)
         print(f"✅ {desc} 완료")
         return True
     except Exception as e:
