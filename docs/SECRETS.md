@@ -11,6 +11,8 @@
 
 | 환경변수 | 읽는 파일 |
 |---|---|
+| `SUPABASE_KEY` | `scripts/backfill_to_d1.py` |
+| `SUPABASE_URL` | `scripts/backfill_to_d1.py` |
 | `TELEGRAM_BOT_TOKEN` | `exporters/telegram_sender.py` |
 | `TELEGRAM_CHANNEL_ID` | `exporters/telegram_sender.py` |
 
@@ -20,6 +22,9 @@
 
 | GitHub Secret | 코드가 읽는 이름 | 사용 파일 |
 |---|---|---|
+| `CF_ACCOUNT_ID` | `CF_ACCOUNT_ID` | `utils/common.py` |
+| `CF_API_TOKEN` | `CF_API_TOKEN` | `utils/common.py` |
+| `CF_D1_DATABASE_ID` | `CF_D1_DATABASE_ID` | `utils/common.py` |
 | `CMC_API_KEY` | `CMC_API_KEY` | `fetchers/crypto_price.py` |
 | `DART_API_KEY` | `DART_API_KEY` | `fetchers/dart_disclosure.py` |
 | `DATA_GO_KR_API_KEY_DEC` | `DATA_GO_KR_API_KEY` | `fetchers/bank_stats.py`, `fetchers/bond_info.py`, `fetchers/corp_finance.py`, `fetchers/derivatives_info.py`, `fetchers/disclosure_alerts.py`, `fetchers/fdi_stats.py`, `fetchers/financial_corp_info.py`, `fetchers/fund_info.py`, `fetchers/gold_price.py`, `fetchers/governance_info.py`, `fetchers/insurance_info.py`, `fetchers/isa_info.py`, `fetchers/kofia_stats.py`, `fetchers/krx_index.py`, `fetchers/oil_price.py`, `fetchers/stock_prices.py` |
@@ -31,8 +36,8 @@
 | `FSS_API_KEY` | `FSS_API_KEY` | `fetchers/fss_bank_stats_fisis.py`, `fetchers/fss_consumer_news.py`, `fetchers/fss_fintip.py`, `fetchers/fss_foreign_invest.py`, `fetchers/fss_info.py`, `fetchers/fss_jobs.py`, `fetchers/fss_market_trend.py`, `fetchers/fss_press.py`, `fetchers/fss_realm_general.py`, `fetchers/fss_realm_sector.py` |
 | `GEMINI_API_KEY` | `GEMINI_API_KEY` | `processors/gemini_analyzer.py` |
 | `OPINET_API_KEY` | `OPINET_API_KEY` | `fetchers/oil_price.py` |
-| `SUPABASE_SERVICE_KEY` | `SUPABASE_KEY` | `utils/common.py` |
-| `SUPABASE_URL` | `SUPABASE_URL` | `utils/common.py` |
+| — (미주입) | `SUPABASE_KEY` | `scripts/backfill_to_d1.py` |
+| — (미주입) | `SUPABASE_URL` | `scripts/backfill_to_d1.py` |
 | — (미주입) | `TELEGRAM_BOT_TOKEN` | `exporters/telegram_sender.py` |
 | — (미주입) | `TELEGRAM_CHANNEL_ID` | `exporters/telegram_sender.py` |
 
@@ -43,17 +48,17 @@
 | 워크플로우 | 실행 스크립트 | 주입 환경변수 |
 |---|---|---|
 | `audit_secrets.yml` | `scripts/audit_secrets.py` | — |
-| `backfill_stocks.yml` | `fetchers/stock_prices.py`, `processors/kr_technical.py` | `DATA_GO_KR_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `daily.yml` | `fetchers/us_stocks.py`, `fetchers/market_news.py`, `fetchers/us_technical.py`, `fetchers/us_company_info.py`, `fetchers/stock_prices.py`, `processors/kr_technical.py`, `fetchers/dart_disclosure.py`, `fetchers/ecos_daily.py`, `fetchers/fred_global.py`, `fetchers/crypto_price.py`, `fetchers/gold_price.py`, `fetchers/oil_price.py`, `fetchers/krx_index.py`, `fetchers/fss_jobs.py`, `fetchers/bond_info.py`, `fetchers/fss_info.py`, `fetchers/fss_fintip.py`, `fetchers/fss_press.py`, `fetchers/fss_consumer_news.py`, `fetchers/fss_realm_sector.py`, `fetchers/fss_realm_general.py`, `fetchers/fss_foreign_invest.py`, `fetchers/fss_market_trend.py`, `fetchers/etf_dividends.py`, `fetchers/kr_etf_dividends.py`, `fetchers/etf_prices.py`, `fetchers/etf_profile.py`, `processors/gemini_analyzer.py`, `exporters/export_data.py` | `CMC_API_KEY`, `DART_API_KEY`, `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `FINNHUB_API_KEY`, `FMP_API_KEY`, `FRED_API_KEY`, `FSS_API_KEY`, `GEMINI_API_KEY`, `OPINET_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_bank_rates.yml` | `fetchers/bank_rates.py`, `exporters/export_data.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_fss_bank_stats.yml` | `fetchers/fss_bank_stats_fisis.py` | `FSS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
+| `backfill_stocks.yml` | `fetchers/stock_prices.py`, `processors/kr_technical.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `DATA_GO_KR_API_KEY` |
+| `daily.yml` | `fetchers/us_stocks.py`, `fetchers/market_news.py`, `fetchers/us_technical.py`, `fetchers/us_company_info.py`, `fetchers/stock_prices.py`, `processors/kr_technical.py`, `fetchers/dart_disclosure.py`, `fetchers/ecos_daily.py`, `fetchers/fred_global.py`, `fetchers/crypto_price.py`, `fetchers/gold_price.py`, `fetchers/oil_price.py`, `fetchers/krx_index.py`, `fetchers/fss_jobs.py`, `fetchers/bond_info.py`, `fetchers/fss_info.py`, `fetchers/fss_fintip.py`, `fetchers/fss_press.py`, `fetchers/fss_consumer_news.py`, `fetchers/fss_realm_sector.py`, `fetchers/fss_realm_general.py`, `fetchers/fss_foreign_invest.py`, `fetchers/fss_market_trend.py`, `fetchers/etf_dividends.py`, `fetchers/kr_etf_dividends.py`, `fetchers/etf_prices.py`, `fetchers/etf_profile.py`, `processors/gemini_analyzer.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `CMC_API_KEY`, `DART_API_KEY`, `DATA_GO_KR_API_KEY`, `ECOS_API_KEY`, `FINNHUB_API_KEY`, `FMP_API_KEY`, `FRED_API_KEY`, `FSS_API_KEY`, `GEMINI_API_KEY`, `OPINET_API_KEY` |
+| `fetch_bank_rates.yml` | `fetchers/bank_rates.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `FINLIFE_API_KEY` |
+| `fetch_fss_bank_stats.yml` | `fetchers/fss_bank_stats_fisis.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `FSS_API_KEY` |
 | `fetch_insurance.yml` | — | — |
-| `fetch_loan_rates.yml` | `fetchers/loan_rates.py`, `fetchers/annuity_savings.py` | `FINLIFE_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_stock_ai_reports.yml` | `processors/stock_report_gemini.py`, `exporters/export_data.py` | `GEMINI_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `fetch_superinvestor_13f.yml` | `fetchers/superinvestor_13f.py`, `exporters/export_data.py` | `SUPABASE_KEY`, `SUPABASE_URL` |
+| `fetch_loan_rates.yml` | `fetchers/loan_rates.py`, `fetchers/annuity_savings.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `FINLIFE_API_KEY` |
+| `fetch_stock_ai_reports.yml` | `processors/stock_report_gemini.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `GEMINI_API_KEY` |
+| `fetch_superinvestor_13f.yml` | `fetchers/superinvestor_13f.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID` |
 | `fix_ticker_sticky.yml` | — | — |
-| `monthly.yml` | `fetchers/ecos_m2.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `quarterly.yml` | `fetchers/ecos_household_credit.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `rate.yml` | `fetchers/ecos_base_rate.py`, `exporters/export_data.py` | `ECOS_API_KEY`, `SUPABASE_KEY`, `SUPABASE_URL` |
-| `run_export.yml` | `exporters/export_data.py` | `SUPABASE_KEY`, `SUPABASE_URL` |
+| `monthly.yml` | `fetchers/ecos_m2.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `ECOS_API_KEY` |
+| `quarterly.yml` | `fetchers/ecos_household_credit.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `ECOS_API_KEY` |
+| `rate.yml` | `fetchers/ecos_base_rate.py`, `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID`, `ECOS_API_KEY` |
+| `run_export.yml` | `exporters/export_data.py` | `CF_ACCOUNT_ID`, `CF_API_TOKEN`, `CF_D1_DATABASE_ID` |
 
