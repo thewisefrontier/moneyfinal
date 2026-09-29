@@ -1,7 +1,11 @@
 """
-1회성 데이터 백필: Supabase(Postgres) -> Cloudflare D1
+[완료된 1회성 스크립트] 데이터 백필: Supabase(Postgres) -> Cloudflare D1
 
-사용법 (로컬 또는 GitHub Actions workflow_dispatch에서):
+2026-09-29 백필 완료 + 34개 테이블 행 수 대조 검증 완료, Supabase 프로젝트(ygnwfkvjjjfqrsqbymdp)
+정지함. 이 스크립트는 더 이상 실행되지 않는다(Supabase가 정지 상태라 접속 자체가 실패함).
+재개하지 않는 한 다시 쓸 일 없음 - 삭제하지 않고 이력·재해복구용으로만 남겨둠.
+
+사용법 (로컬 또는 GitHub Actions workflow_dispatch에서, Supabase 재개 후에나 유효):
   SUPABASE_URL=... SUPABASE_KEY=...(service role) \
   CF_ACCOUNT_ID=... CF_API_TOKEN=... CF_D1_DATABASE_ID=... \
   python scripts/backfill_to_d1.py [table1 table2 ...]
