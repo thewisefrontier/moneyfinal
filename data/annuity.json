@@ -1,63 +1,7 @@
 {
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-09-29",
   "total": 12,
   "annuity": [
-    {
-      "id": 11,
-      "dcls_month": "202608",
-      "fin_co_no": "0011320",
-      "kor_co_nm": "푸본현대생명보험주식회사",
-      "fin_prdt_cd": "0103",
-      "fin_prdt_nm": "개인사업자담보대출",
-      "join_way": "모집인",
-      "pnsn_kind": "",
-      "pnsn_kind_nm": "",
-      "prdt_type": "",
-      "prdt_type_nm": "",
-      "sale_strt_day": "",
-      "mntn_cnt": null,
-      "avg_prft_rate": null,
-      "dcls_rate": null,
-      "guar_rate": null,
-      "btrm_prft_rate_1": null,
-      "btrm_prft_rate_2": null,
-      "btrm_prft_rate_3": null,
-      "etc": "",
-      "sale_co": "",
-      "sector": "보험",
-      "dcls_strt_day": "20250516",
-      "source": "금융감독원 금융상품한눈에",
-      "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:49.644322+00:00"
-    },
-    {
-      "id": 3,
-      "dcls_month": "202607",
-      "fin_co_no": "0010001",
-      "kor_co_nm": "우리은행",
-      "fin_prdt_cd": "1003",
-      "fin_prdt_nm": "우리CUBE론-X(우리자산신탁)",
-      "join_way": "영업점",
-      "pnsn_kind": "",
-      "pnsn_kind_nm": "",
-      "prdt_type": "",
-      "prdt_type_nm": "",
-      "sale_strt_day": "",
-      "mntn_cnt": null,
-      "avg_prft_rate": null,
-      "dcls_rate": null,
-      "guar_rate": null,
-      "btrm_prft_rate_1": null,
-      "btrm_prft_rate_2": null,
-      "btrm_prft_rate_3": null,
-      "etc": "",
-      "sale_co": "",
-      "sector": "은행",
-      "dcls_strt_day": "20260703",
-      "source": "금융감독원 금융상품한눈에",
-      "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-08-20T23:18:12.030518+00:00"
-    },
     {
       "id": 1,
       "dcls_month": "202608",
@@ -84,7 +28,7 @@
       "dcls_strt_day": "20260806",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46.370066+00:00"
+      "fetched_at": "2026-09-21T00:41:46Z"
     },
     {
       "id": 2,
@@ -112,14 +56,14 @@
       "dcls_strt_day": "20260806",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46.370099+00:00"
+      "fetched_at": "2026-09-21T00:41:46Z"
     },
     {
-      "id": 36,
-      "dcls_month": "202608",
+      "id": 3,
+      "dcls_month": "202607",
       "fin_co_no": "0010001",
       "kor_co_nm": "우리은행",
-      "fin_prdt_cd": "10039999",
+      "fin_prdt_cd": "1003",
       "fin_prdt_nm": "우리CUBE론-X(우리자산신탁)",
       "join_way": "영업점",
       "pnsn_kind": "",
@@ -137,10 +81,10 @@
       "etc": "",
       "sale_co": "",
       "sector": "은행",
-      "dcls_strt_day": "20260806",
+      "dcls_strt_day": "20260703",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46.370112+00:00"
+      "fetched_at": "2026-08-20T23:18:12Z"
     },
     {
       "id": 4,
@@ -168,7 +112,7 @@
       "dcls_strt_day": "20260806",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46.370134+00:00"
+      "fetched_at": "2026-09-21T00:41:46Z"
     },
     {
       "id": 5,
@@ -196,7 +140,7 @@
       "dcls_strt_day": "20260806",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46.370143+00:00"
+      "fetched_at": "2026-09-21T00:41:46Z"
     },
     {
       "id": 6,
@@ -224,7 +168,7 @@
       "dcls_strt_day": "20250520",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47.523921+00:00"
+      "fetched_at": "2026-09-21T00:41:47Z"
     },
     {
       "id": 7,
@@ -252,7 +196,7 @@
       "dcls_strt_day": "20260820",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47.52395+00:00"
+      "fetched_at": "2026-09-21T00:41:47Z"
     },
     {
       "id": 8,
@@ -280,7 +224,7 @@
       "dcls_strt_day": "20260818",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47.523963+00:00"
+      "fetched_at": "2026-09-21T00:41:47Z"
     },
     {
       "id": 9,
@@ -308,7 +252,7 @@
       "dcls_strt_day": "20260818",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47.523981+00:00"
+      "fetched_at": "2026-09-21T00:41:47Z"
     },
     {
       "id": 10,
@@ -336,7 +280,63 @@
       "dcls_strt_day": "20260820",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47.523989+00:00"
+      "fetched_at": "2026-09-21T00:41:47Z"
+    },
+    {
+      "id": 11,
+      "dcls_month": "202608",
+      "fin_co_no": "0011320",
+      "kor_co_nm": "푸본현대생명보험주식회사",
+      "fin_prdt_cd": "0103",
+      "fin_prdt_nm": "개인사업자담보대출",
+      "join_way": "모집인",
+      "pnsn_kind": "",
+      "pnsn_kind_nm": "",
+      "prdt_type": "",
+      "prdt_type_nm": "",
+      "sale_strt_day": "",
+      "mntn_cnt": null,
+      "avg_prft_rate": null,
+      "dcls_rate": null,
+      "guar_rate": null,
+      "btrm_prft_rate_1": null,
+      "btrm_prft_rate_2": null,
+      "btrm_prft_rate_3": null,
+      "etc": "",
+      "sale_co": "",
+      "sector": "보험",
+      "dcls_strt_day": "20250516",
+      "source": "금융감독원 금융상품한눈에",
+      "source_url": "https://finlife.fss.or.kr",
+      "fetched_at": "2026-09-21T00:41:49Z"
+    },
+    {
+      "id": 36,
+      "dcls_month": "202608",
+      "fin_co_no": "0010001",
+      "kor_co_nm": "우리은행",
+      "fin_prdt_cd": "10039999",
+      "fin_prdt_nm": "우리CUBE론-X(우리자산신탁)",
+      "join_way": "영업점",
+      "pnsn_kind": "",
+      "pnsn_kind_nm": "",
+      "prdt_type": "",
+      "prdt_type_nm": "",
+      "sale_strt_day": "",
+      "mntn_cnt": null,
+      "avg_prft_rate": null,
+      "dcls_rate": null,
+      "guar_rate": null,
+      "btrm_prft_rate_1": null,
+      "btrm_prft_rate_2": null,
+      "btrm_prft_rate_3": null,
+      "etc": "",
+      "sale_co": "",
+      "sector": "은행",
+      "dcls_strt_day": "20260806",
+      "source": "금융감독원 금융상품한눈에",
+      "source_url": "https://finlife.fss.or.kr",
+      "fetched_at": "2026-09-21T00:41:46Z"
     }
   ]
 }
