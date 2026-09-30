@@ -262,8 +262,12 @@ def _params_to_sql(table: str, params: dict) -> tuple:
     bind_params = []
     for key, value in params.items():
         if value.startswith('eq.'):
+            v = value[3:]
+            # PostgREST 스타일 'eq.true'/'eq.false'는 D1에서 boolean이 INTEGER(0/1)로
+            # 저장되므로 문자열 그대로 바인딩하면 매칭이 안 됨(2026-09-30: is_published
+            # eq.true 필터가 전부 빈 결과를 내 브리핑/공시 export가 통째로 비었음).
             where_clauses.append(f'"{key}" = ?')
-            bind_params.append(value[3:])
+            bind_params.append(1 if v == 'true' else 0 if v == 'false' else v)
         elif value.startswith('gte.'):
             where_clauses.append(f'"{key}" >= ?')
             bind_params.append(value[4:])
