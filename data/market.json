@@ -2,6 +2,21 @@
   "updated_at": "2026-10-01",
   "indicators": [
     {
+      "id": 24327,
+      "indicator_code": "HOUSEHOLD_CREDIT",
+      "indicator_name": "가계신용 잔액",
+      "category": "가계부채",
+      "value": 2019785.3,
+      "prev_value": 1993923.9,
+      "unit": "십억원",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-10-01",
+      "summary_text": null,
+      "fetched_at": "2026-10-01T11:52:13.593384+09:00",
+      "created_at": "2026-10-01 02:52:13"
+    },
+    {
       "id": 24326,
       "indicator_code": "BOND_CORPAA3Y",
       "indicator_name": "회사채(AA-, 3년)",
@@ -40907,21 +40922,6 @@
       "created_at": "2026-07-30T23:01:57.206095+00:00"
     },
     {
-      "id": 2262,
-      "indicator_code": "HOUSEHOLD_CREDIT",
-      "indicator_name": "가계신용 잔액",
-      "category": "가계부채",
-      "value": 1993110.8,
-      "prev_value": 1979088.4,
-      "unit": "십억원",
-      "signal": "green",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-07-13",
-      "summary_text": null,
-      "fetched_at": "2026-07-13T12:23:57.684426+00:00",
-      "created_at": "2026-07-13T11:59:53.693379+00:00"
-    },
-    {
       "id": 697,
       "indicator_code": "KR_RSI_298040",
       "indicator_name": "효성중공업 RSI(14)",
@@ -40938,6 +40938,23 @@
     }
   ],
   "by_category": {
+    "가계부채": [
+      {
+        "id": 24327,
+        "indicator_code": "HOUSEHOLD_CREDIT",
+        "indicator_name": "가계신용 잔액",
+        "category": "가계부채",
+        "value": 2019785.3,
+        "prev_value": 1993923.9,
+        "unit": "십억원",
+        "signal": "green",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-10-01",
+        "summary_text": null,
+        "fetched_at": "2026-10-01T11:52:13.593384+09:00",
+        "created_at": "2026-10-01 02:52:13"
+      }
+    ],
     "채권금리": [
       {
         "id": 24326,
@@ -81902,23 +81919,6 @@
         "summary_text": null,
         "fetched_at": "2026-09-01T04:52:05.644279+00:00",
         "created_at": "2026-09-01T04:52:06.206578+00:00"
-      }
-    ],
-    "가계부채": [
-      {
-        "id": 2262,
-        "indicator_code": "HOUSEHOLD_CREDIT",
-        "indicator_name": "가계신용 잔액",
-        "category": "가계부채",
-        "value": 1993110.8,
-        "prev_value": 1979088.4,
-        "unit": "십억원",
-        "signal": "green",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-07-13",
-        "summary_text": null,
-        "fetched_at": "2026-07-13T12:23:57.684426+00:00",
-        "created_at": "2026-07-13T11:59:53.693379+00:00"
       }
     ]
   }
