@@ -2,6 +2,21 @@
   "updated_at": "2026-10-01",
   "indicators": [
     {
+      "id": 24328,
+      "indicator_code": "M2_TOTAL",
+      "indicator_name": "시중 유동성(M2, 평잔)",
+      "category": "유동성",
+      "value": 4223410,
+      "prev_value": 4209875.1,
+      "unit": "십억원",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-10-01",
+      "summary_text": null,
+      "fetched_at": "2026-10-01T14:34:54.420745+09:00",
+      "created_at": "2026-10-01 05:34:54"
+    },
+    {
       "id": 24327,
       "indicator_code": "HOUSEHOLD_CREDIT",
       "indicator_name": "가계신용 잔액",
@@ -26327,21 +26342,6 @@
       "created_at": "2026-09-02T19:56:39.340589+00:00"
     },
     {
-      "id": 14911,
-      "indicator_code": "M2_TOTAL",
-      "indicator_name": "시중 유동성(M2, 평잔)",
-      "category": "유동성",
-      "value": 4209874,
-      "prev_value": 4183219.5,
-      "unit": "십억원",
-      "signal": "green",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-09-01",
-      "summary_text": null,
-      "fetched_at": "2026-09-01T04:52:05.644279+00:00",
-      "created_at": "2026-09-01T04:52:06.206578+00:00"
-    },
-    {
       "id": 14838,
       "indicator_code": "FUND_AQ731",
       "indicator_name": "키움쥬니어적립식증권자투자신탁제1호S[주식]",
@@ -40938,6 +40938,23 @@
     }
   ],
   "by_category": {
+    "유동성": [
+      {
+        "id": 24328,
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "category": "유동성",
+        "value": 4223410,
+        "prev_value": 4209875.1,
+        "unit": "십억원",
+        "signal": "green",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-10-01",
+        "summary_text": null,
+        "fetched_at": "2026-10-01T14:34:54.420745+09:00",
+        "created_at": "2026-10-01 05:34:54"
+      }
+    ],
     "가계부채": [
       {
         "id": 24327,
@@ -81902,23 +81919,6 @@
         "summary_text": "계좌수 26991437건, 증권사 23개",
         "fetched_at": "2026-09-25T20:19:51.882859+00:00",
         "created_at": "2026-09-25T20:19:52.208349+00:00"
-      }
-    ],
-    "유동성": [
-      {
-        "id": 14911,
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "category": "유동성",
-        "value": 4209874,
-        "prev_value": 4183219.5,
-        "unit": "십억원",
-        "signal": "green",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-09-01",
-        "summary_text": null,
-        "fetched_at": "2026-09-01T04:52:05.644279+00:00",
-        "created_at": "2026-09-01T04:52:06.206578+00:00"
       }
     ]
   }
