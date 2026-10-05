@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "history": {
     "316140": [
       {
@@ -40721,6 +40721,14 @@
         "flt_rt": 0.2251,
         "volume": 0,
         "market_cap": 673369311737
+      },
+      {
+        "stock_code": "V",
+        "base_date": "2026-10-05",
+        "close_price": 360.66,
+        "flt_rt": 0.2251,
+        "volume": 0,
+        "market_cap": 673369311737
       }
     ],
     "JPM": [
@@ -41479,6 +41487,14 @@
       {
         "stock_code": "JPM",
         "base_date": "2026-10-04",
+        "close_price": 332.38,
+        "flt_rt": -0.2401,
+        "volume": 0,
+        "market_cap": 883527936090
+      },
+      {
+        "stock_code": "JPM",
+        "base_date": "2026-10-05",
         "close_price": 332.38,
         "flt_rt": -0.2401,
         "volume": 0,
@@ -42245,6 +42261,14 @@
         "flt_rt": 0.2962,
         "volume": 0,
         "market_cap": 1854788247305
+      },
+      {
+        "stock_code": "META",
+        "base_date": "2026-10-05",
+        "close_price": 728.08,
+        "flt_rt": 0.2962,
+        "volume": 0,
+        "market_cap": 1854788247305
       }
     ],
     "TSLA": [
@@ -43003,6 +43027,14 @@
       {
         "stock_code": "TSLA",
         "base_date": "2026-10-04",
+        "close_price": 370.59,
+        "flt_rt": 4.6539,
+        "volume": 0,
+        "market_cap": 1463662787286
+      },
+      {
+        "stock_code": "TSLA",
+        "base_date": "2026-10-05",
         "close_price": 370.59,
         "flt_rt": 4.6539,
         "volume": 0,
@@ -43769,6 +43801,14 @@
         "flt_rt": 3.3465,
         "volume": 0,
         "market_cap": 1695306988848
+      },
+      {
+        "stock_code": "AVGO",
+        "base_date": "2026-10-05",
+        "close_price": 355.14,
+        "flt_rt": 3.3465,
+        "volume": 0,
+        "market_cap": 1695306988848
       }
     ],
     "AMZN": [
@@ -44527,6 +44567,14 @@
       {
         "stock_code": "AMZN",
         "base_date": "2026-10-04",
+        "close_price": 251.52,
+        "flt_rt": 1.3254,
+        "volume": 0,
+        "market_cap": 2712973764554
+      },
+      {
+        "stock_code": "AMZN",
+        "base_date": "2026-10-05",
         "close_price": 251.52,
         "flt_rt": 1.3254,
         "volume": 0,
@@ -45293,6 +45341,14 @@
         "flt_rt": 0.9224,
         "volume": 0,
         "market_cap": 3842942424637
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-10-05",
+        "close_price": 517.53,
+        "flt_rt": 0.9224,
+        "volume": 0,
+        "market_cap": 3842942424637
       }
     ],
     "AAPL": [
@@ -46051,6 +46107,14 @@
       {
         "stock_code": "AAPL",
         "base_date": "2026-10-04",
+        "close_price": 333.69,
+        "flt_rt": 1.0202,
+        "volume": 0,
+        "market_cap": 4869931927903
+      },
+      {
+        "stock_code": "AAPL",
+        "base_date": "2026-10-05",
         "close_price": 333.69,
         "flt_rt": 1.0202,
         "volume": 0,
@@ -46817,6 +46881,14 @@
         "flt_rt": 1.5551,
         "volume": 0,
         "market_cap": 4201005000000
+      },
+      {
+        "stock_code": "GOOGL",
+        "base_date": "2026-10-05",
+        "close_price": 343.5,
+        "flt_rt": 1.5551,
+        "volume": 0,
+        "market_cap": 4201005000000
       }
     ],
     "NVDA": [
@@ -47575,6 +47647,14 @@
       {
         "stock_code": "NVDA",
         "base_date": "2026-10-04",
+        "close_price": 233.95,
+        "flt_rt": 1.3385,
+        "volume": 0,
+        "market_cap": 5638195014905
+      },
+      {
+        "stock_code": "NVDA",
+        "base_date": "2026-10-05",
         "close_price": 233.95,
         "flt_rt": 1.3385,
         "volume": 0,
