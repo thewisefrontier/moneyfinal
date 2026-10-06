@@ -57,6 +57,8 @@ def page_html(code: str, name: str, category: str, is_domestic_equity: bool) -> 
 <meta name="robots" content="noindex">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{name} 배당금 계산기","description":"{desc}","url":"{url}","inLanguage":"ko-KR","isPartOf":{{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}}}</script>
 <style>{STYLE}</style>
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
@@ -222,6 +224,8 @@ table.etf-tbl tr:hover{{background:var(--bg3)}}
 .tk-name{{font-weight:600}}
 .tk-code{{color:var(--text2);font-size:11px}}
 main{{max-width:1100px}}</style>
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>

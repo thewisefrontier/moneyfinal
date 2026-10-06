@@ -42,6 +42,8 @@ def page_html(ticker: str, name: str, category: str) -> str:
 <meta name="twitter:description" content="{desc}">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{ticker} 배당금 계산기","description":"{desc}","url":"{url}","inLanguage":"ko-KR","isPartOf":{{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}}}</script>
 <style>{STYLE}</style>
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
@@ -240,6 +242,8 @@ table.etf-tbl tr:last-child td{{border-bottom:none}}
 .tk-name{{font-size:11px;color:var(--text2);display:block;margin-top:1px}}
 .tbl-wrap{{overflow-x:auto}}
 </style>
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
