@@ -77,30 +77,41 @@ def fetch_bonds_primary(begin_date: str) -> list:
         return []
 
 
+_ECOS_ITEMS = None
+
+
 def ecos_find_item_code(keywords: list) -> tuple | None:
-    """817Y002 통계표의 세부항목 목록에서 keywords를 모두 포함하는 첫 항목을 찾는다."""
-    url = f"https://ecos.bok.or.kr/api/StatisticItemList/{ECOS_API_KEY}/json/kr/1/500/817Y002"
-    try:
-        res = requests.get(url, timeout=15)
-        res.raise_for_status()
-        data = res.json()
-        rows = data.get('StatisticItemList', {}).get('row', [])
-        for row in rows:
-            name = row.get('ITEM_NAME', '')
-            if all(kw in name for kw in keywords):
-                return row.get('ITEM_CODE'), name
-        return None
-    except Exception as e:
-        logger.error(f"ECOS 항목목록 조회 실패: {type(e).__name__}")
-        return None
+    """817Y002 통계표의 세부항목 목록에서 keywords를 모두 포함하는 첫 항목을 찾는다.
+    항목 목록은 1회만 조회해 캐시하고, 빈 응답이면 1회 재시도한다(2026-10-07: 첫 호출이 빈 응답을 줘서
+    국고채(3년)만 '매칭 실패'로 빠진 적 있음)."""
+    global _ECOS_ITEMS
+    if not _ECOS_ITEMS:
+        url = f"https://ecos.bok.or.kr/api/StatisticItemList/{ECOS_API_KEY}/json/kr/1/500/817Y002"
+        for attempt in range(2):
+            try:
+                res = requests.get(url, timeout=15)
+                res.raise_for_status()
+                _ECOS_ITEMS = res.json().get('StatisticItemList', {}).get('row', [])
+            except Exception as e:
+                logger.error(f"ECOS 항목목록 조회 실패: {type(e).__name__}")
+                _ECOS_ITEMS = None
+            if _ECOS_ITEMS:
+                break
+        if not _ECOS_ITEMS:
+            return None
+    for row in _ECOS_ITEMS:
+        name = row.get('ITEM_NAME', '')
+        if all(kw in name for kw in keywords):
+            return row.get('ITEM_CODE'), name
+    return None
 
 
-def fetch_bonds_fallback() -> list:
+def fetch_bonds_fallback(days: int = 10) -> list:
     if not ECOS_API_KEY:
         logger.error("채권시세 2차(ECOS) 실패: ECOS_API_KEY 미설정")
         return []
     now = datetime.now(KST)
-    start = (now - timedelta(days=10)).strftime('%Y%m%d')
+    start = (now - timedelta(days=days)).strftime('%Y%m%d')
     end = now.strftime('%Y%m%d')
     results = []
     for target in ECOS_BOND_TARGETS:
@@ -109,7 +120,7 @@ def fetch_bonds_fallback() -> list:
             logger.warning(f"ECOS 폴백: '{target['indicator_name']}' 항목 매칭 실패 (키워드 {target['keywords']})")
             continue
         item_code, matched_name = found
-        url = (f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_API_KEY}/json/kr/1/100"
+        url = (f"https://ecos.bok.or.kr/api/StatisticSearch/{ECOS_API_KEY}/json/kr/1/1000"
                f"/817Y002/D/{start}/{end}/{item_code}")
         try:
             res = requests.get(url, timeout=15)
@@ -120,20 +131,24 @@ def fetch_bonds_fallback() -> list:
             if not valid:
                 logger.warning(f"ECOS 폴백: '{matched_name}' 유효 데이터 없음")
                 continue
-            latest = valid[-1]
-            ytm = float(latest.get('DATA_VALUE', 0) or 0)
-            results.append({
-                'indicator_code': target['indicator_code'],
-                'indicator_name': target['indicator_name'],
-                'category': '채권금리',
-                'value': ytm,
-                'unit': '%',
-                'signal': 'green' if ytm<4 else 'yellow' if ytm<5 else 'red',
-                'source': '한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)',
-                'reference_date': today_kst(),
-                'summary_text': f"{matched_name} {ytm:.2f}%",
-                'fetched_at': now_kst()
-            })
+            # 수집일이 아니라 ECOS가 준 실제 기준일(TIME)로 저장 - 주말·휴일·게시 지연 구간에
+            # 마지막 값이 오늘 날짜로 반복 저장되던 문제(2026-10-07 확인) 수정. 윈도우 내 전체 행 저장.
+            for latest in valid:
+                t = latest.get('TIME', '')
+                ytm = float(latest.get('DATA_VALUE', 0) or 0)
+                results.append({
+                    'indicator_code': target['indicator_code'],
+                    'indicator_name': target['indicator_name'],
+                    'category': '채권금리',
+                    'value': ytm,
+                    'unit': '%',
+                    'signal': 'green' if ytm<4 else 'yellow' if ytm<5 else 'red',
+                    'source': '한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)',
+                    'reference_date': f"{t[:4]}-{t[4:6]}-{t[6:8]}",
+                    'summary_text': f"{matched_name} {ytm:.2f}%",
+                    'fetched_at': now_kst()
+                })
+            ytm = float(valid[-1].get('DATA_VALUE', 0) or 0)
             logger.info(f"✅ ECOS 폴백: '{matched_name}' = {ytm}%")
         except Exception as e:
             logger.error(f"ECOS 폴백 '{matched_name}' 조회 실패: {type(e).__name__}")
@@ -142,7 +157,8 @@ def fetch_bonds_fallback() -> list:
 
 def main():
     logger.info("=== 채권 시세 수집 시작 ===")
-    results = fetch_bonds_fallback()
+    days = int(sys.argv[1]) if len(sys.argv) > 1 else 10  # 이력 백필: python fetchers/bond_info.py 400
+    results = fetch_bonds_fallback(days)
     if not results:
         logger.warning("채권시세: ECOS 1차 실패 -> data.go.kr 폴백 시도")
         begin_date = get_recent_date(10)

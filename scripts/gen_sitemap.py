@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://moneyfinal.pages.dev'
 today = datetime.now(timezone(timedelta(hours=9))).strftime('%Y-%m-%d')
 # 신규 페이지 기본값: (changefreq, priority)
-NEW = {'crypto': ('daily', '0.7'), 'superinvestor': ('monthly', '0.7'), 'dividend-kr-etf': ('weekly', '0.7')}
+NEW = {'bond': ('daily', '0.8'), 'crypto': ('daily', '0.7'), 'superinvestor': ('monthly', '0.7'), 'dividend-kr-etf': ('weekly', '0.7')}
 
 old = {}
 sm = os.path.join(ROOT, 'sitemap.xml')

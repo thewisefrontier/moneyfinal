@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="국고채 3·5·10년과 회사채(AA-) 3년 대표금리, 장단기·신용 스프레드와 1년 추이를 한국은행 ECOS 데이터로 확인합니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/bond">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="채권 금리 | 머니파이널">
+<meta property="og:description" content="국고채 3·5·10년과 회사채(AA-) 3년 대표금리, 장단기·신용 스프레드와 1년 추이를 한국은행 ECOS 데이터로 확인합니다.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/bond">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="채권 금리 | 머니파이널">
+<meta name="twitter:description" content="국고채 3·5·10년과 회사채(AA-) 3년 대표금리, 장단기·신용 스프레드와 1년 추이를 한국은행 ECOS 데이터로 확인합니다.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"채권 금리","description":"국고채 3·5·10년과 회사채(AA-) 3년 대표금리, 장단기·신용 스프레드와 1년 추이를 한국은행 ECOS 데이터로 확인합니다.","url":"https://moneyfinal.pages.dev/bond","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<title>채권 금리 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.bond-hd{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:9px 16px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr:last-child td{border-bottom:none}
+.explain{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:24px;font-size:13px;color:var(--text2);line-height:1.8}
+.explain h2{font-size:14px;color:var(--text);margin:0 0 6px}
+.explain p+h2{margin-top:14px}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav id="site-nav" data-active="bond.html"></nav>
+<script src="nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">채권 금리</div><span class="sec-more" id="asof"></span></div>
+<div class="grid4" id="kpis"><div class="loading">로딩 중...</div></div>
+
+<div class="grid2">
+  <div class="card"><div class="card-hd"><span class="card-title">스프레드</span></div><div id="spreads"><div class="loading">로딩 중...</div></div></div>
+  <div class="card"><div class="card-hd"><span class="card-title">최근 영업일</span></div><div id="recent" style="overflow-x:auto"><div class="loading">로딩 중...</div></div></div>
+</div>
+
+<div class="card">
+  <div class="bond-hd"><span class="card-title">금리 추이</span>
+    <div class="filter-tabs" style="padding:0;border:0" id="range-tabs">
+      <button class="ft" data-d="30">1개월</button><button class="ft" data-d="90">3개월</button><button class="ft" data-d="180">6개월</button><button class="ft active" data-d="365">1년</button>
+    </div></div>
+  <div id="chart" style="padding:8px 8px 0"></div>
+  <div class="legend" id="legend"></div>
+</div>
+
+<div class="explain">
+  <h2>국고채 금리와 회사채 금리</h2>
+  <p>국고채는 정부가 발행하는 채권이라 신용위험이 거의 없어 시장 금리의 기준으로 쓰입니다. 만기가 길수록 보통 금리가 높고, 3년물은 기준금리 전망을, 10년물은 장기 경기·물가 기대를 더 많이 반영합니다.</p>
+  <h2>장단기 스프레드</h2>
+  <p>10년물 금리에서 3년물 금리를 뺀 값입니다. 값이 줄어들거나 음수(장단기 금리 역전)가 되면 시장이 향후 경기 둔화나 금리 인하를 예상한다는 신호로 해석되기도 하지만, 항상 들어맞는 것은 아닙니다.</p>
+  <h2>신용 스프레드</h2>
+  <p>회사채(AA-) 3년물 금리에서 국고채 3년물 금리를 뺀 값으로, 기업이 국채보다 더 얹어 줘야 하는 금리입니다. 커지면 기업 자금조달 여건이 나빠지고 있다는 뜻으로 볼 수 있습니다.</p>
+</div>
+</main>
+<div class="disclaimer">⚠️ 한국은행 ECOS 시장금리(일별) 통계의 대표금리이며 개별 채권 종목의 시세·수익률이 아닙니다. 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 한국은행 경제통계시스템(ECOS) · 게시 지연으로 최신 영업일이 반영되지 않을 수 있습니다.</div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script src="theme.js"></script><script>
+const SER=[['BOND_KTB3Y','국고채 3년','--blue'],['BOND_KTB5Y','국고채 5년','--green'],['BOND_KTB10Y','국고채 10년','--yellow'],['BOND_CORPAA3Y','회사채 AA- 3년','--red']];
+let DATES=[],VAL={},range=365;
+const pct=v=>v==null?'-':v.toFixed(3)+'%';
+const bp=d=>{if(d==null)return'-';const x=Math.round(d*1000)/10;return (x>0?'+':'')+x.toFixed(1)+'bp';};
+function cls(d){return d>0?'down':d<0?'up':'neutral'} // 금리 상승=빨강, 하락=초록 (환율 표시와 동일)
+function kpis(){
+  const n=DATES.length-1;
+  document.getElementById('kpis').innerHTML=SER.map(([c,name])=>{
+    const cur=VAL[c][n],prev=VAL[c][n-1],d=cur!=null&&prev!=null?cur-prev:null;
+    return `<div class="kpi"><div class="kpi-label">${name}</div><div class="kpi-value">${pct(cur)}</div><div class="kpi-sub"><span class="${cls(d)}">전일대비 ${bp(d)}</span></div></div>`;}).join('');
+  document.getElementById('asof').textContent=DATES[n]+' 기준';
+}
+function spreads(){
+  const n=DATES.length-1,g=(c,i)=>VAL[c][i];
+  const rows=[['장단기 스프레드 (10년-3년)',i=>g('BOND_KTB10Y',i)-g('BOND_KTB3Y',i)],['국고채 5년-3년',i=>g('BOND_KTB5Y',i)-g('BOND_KTB3Y',i)],['신용 스프레드 (회사채AA- 3년-국고채 3년)',i=>g('BOND_CORPAA3Y',i)-g('BOND_KTB3Y',i)]];
+  document.getElementById('spreads').innerHTML=rows.map(([l,f])=>{const cur=f(n),d=cur-f(n-1);
+    return `<div class="row" style="grid-template-columns:1fr auto;gap:12px"><div class="ind-name">${l}</div><div><span class="ind-val">${Math.round(cur*100)}bp</span> <span class="${cls(d)}" style="font-size:11px">${bp(d)}</span></div></div>`;}).join('');
+}
+function recent(){
+  const idx=DATES.map((_,i)=>i).slice(-10).reverse();
+  document.getElementById('recent').innerHTML='<table class="bt"><tr><th>날짜</th>'+SER.map(s=>`<th>${s[1]}</th>`).join('')+'</tr>'+idx.map(i=>`<tr><td>${DATES[i]}</td>${SER.map(s=>`<td>${pct(VAL[s[0]][i])}</td>`).join('')}</tr>`).join('')+'</table>';
+}
+function chart(){
+  const cs=getComputedStyle(document.documentElement),col=n=>cs.getPropertyValue(n).trim();
+  const from=new Date(Date.now()-range*864e5).toISOString().slice(0,10);
+  const ix=DATES.map((d,i)=>i).filter(i=>DATES[i]>=from);
+  if(ix.length<2){document.getElementById('chart').innerHTML='<div class="empty">데이터 없음</div>';return;}
+  const W=800,H=300,pl=44,pr=12,pt=12,pb=26;
+  let lo=Infinity,hi=-Infinity;
+  SER.forEach(([c])=>ix.forEach(i=>{const v=VAL[c][i];if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));
+  lo=Math.floor((lo-0.1)*10)/10;hi=Math.ceil((hi+0.1)*10)/10;
+  const X=k=>pl+(W-pl-pr)*k/(ix.length-1),Y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">`;
+  for(let g=0;g<=4;g++){const v=lo+(hi-lo)*g/4,y=Y(v);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${col('--border')}"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${col('--text2')}">${v.toFixed(2)}</text>`;}
+  const step=Math.ceil(ix.length/6);
+  ix.forEach((i,k)=>{if(k%step===0||k===ix.length-1)s+=`<text x="${X(k)}" y="${H-8}" text-anchor="middle" font-size="9" fill="${col('--text2')}">${DATES[i].slice(2)}</text>`;});
+  SER.forEach(([c,,vc])=>{const pts=ix.map((i,k)=>VAL[c][i]==null?null:`${X(k).toFixed(1)},${Y(VAL[c][i]).toFixed(1)}`).filter(Boolean).join(' ');
+    s+=`<polyline points="${pts}" fill="none" stroke="${col(vc)}" stroke-width="2" stroke-linejoin="round"/>`;});
+  document.getElementById('chart').innerHTML=s+'</svg>';
+  document.getElementById('legend').innerHTML=SER.map(([,n,vc])=>`<span><i style="background:${col(vc)}"></i>${n}</span>`).join('');
+}
+async function load(){
+  try{
+    const d=(await (await fetch('data/bonds.json')).json()).series||{};
+    const set=new Set();SER.forEach(([c])=>(d[c]&&d[c].data||[]).forEach(r=>set.add(r[0])));
+    DATES=[...set].sort();
+    SER.forEach(([c])=>{const m=new Map((d[c]&&d[c].data)||[]);VAL[c]=DATES.map(x=>m.has(x)?m.get(x):null);});
+    // 한 시리즈만 최신일 값이 비어 있으면(게시 시차) 모두 값이 있는 마지막 영업일까지만 보여준다
+    while(DATES.length>2&&SER.some(([c])=>VAL[c][DATES.length-1]==null)){DATES.pop();SER.forEach(([c])=>VAL[c].pop());}
+    if(DATES.length<2)throw 0;
+    kpis();spreads();recent();chart();
+  }catch(e){document.getElementById('kpis').innerHTML='<div class="empty">채권 데이터 없음</div>';}
+}
+document.getElementById('range-tabs').addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;
+  document.querySelectorAll('#range-tabs .ft').forEach(t=>t.classList.remove('active'));b.classList.add('active');range=+b.dataset.d;chart();});
+load();
+</script><script src="ticker.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -370,6 +370,23 @@ def export_superinvestors():
     })
 
 
+BOND_CODES = ['BOND_KTB3Y', 'BOND_KTB5Y', 'BOND_KTB10Y', 'BOND_CORPAA3Y']
+
+
+def export_bonds():
+    """bond.html용 국고채·회사채 대표금리 일별 이력 (ECOS 817Y002, 지표코드당 수백 행)."""
+    rows = supabase_select('market_indicators', {
+        'select': 'indicator_code,indicator_name,reference_date,value',
+        'indicator_code': f"in.({','.join(BOND_CODES)})",
+        'order': 'reference_date.asc',
+    })
+    series = {}
+    for r in rows:
+        series.setdefault(r['indicator_code'], {'name': r['indicator_name'], 'data': []})['data'].append(
+            [r['reference_date'], r['value']])
+    save_json('bonds.json', {'updated_at': today_kst(), 'series': series})
+
+
 def export_stock_reports():
     """종목별 AI 요약 리포트 export - stock-detail.html에서 code로 조회"""
     rows = supabase_select_all('stock_ai_reports', {
@@ -423,6 +440,7 @@ def main():
     export_kr_dividends()
     export_superinvestors()
     export_stock_reports()
+    export_bonds()
     logger.info("=== JSON Export 완료 ===")
 
 
