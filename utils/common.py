@@ -309,10 +309,28 @@ def _params_to_sql(table: str, params: dict) -> tuple:
     return sql, bind_params
 
 
+# jsonb였다가 D1에서 TEXT(JSON 문자열)로 저장되는 컬럼. 읽을 때 되돌리지 않으면 프론트가
+# 배열로 기대하는 값이 문자열로 export되어 .map() 등에서 예외가 남(2026-10-08: dividend-*.html
+# 전체에서 ETF 정보·배당이력이 '불러오지 못했습니다'로 뜬 원인).
+JSON_COLUMNS = {'etf_profiles': ('sectors', 'top_holdings')}
+
+
+def _decode_json_columns(table: str, rows: list) -> list:
+    for col in JSON_COLUMNS.get(table, ()):
+        for r in rows:
+            v = r.get(col)
+            if isinstance(v, str):
+                try:
+                    r[col] = json.loads(v)
+                except ValueError:
+                    pass
+    return rows
+
+
 def supabase_select(table: str, params: dict = None) -> list:
     try:
         sql, bind_params = _params_to_sql(table, params)
-        return _d1_query(sql, bind_params)
+        return _decode_json_columns(table, _d1_query(sql, bind_params))
     except Exception as e:
         logging.error(f"[{table}] 조회 실패: {type(e).__name__}: {str(e)[:200]}")
         return []

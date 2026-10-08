@@ -24469,8 +24469,90 @@
       "expense_ratio": 0.0045,
       "dividend_yield": 0.0556,
       "inception_date": "2007-03-26",
-      "sectors": "[{\"sector\": \"utilities\", \"weight\": 0.78129995}, {\"sector\": \"healthcare\", \"weight\": 0.1449}, {\"sector\": \"technology\", \"weight\": 0.0738}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"STRC\", \"weight\": 0.0343503}, {\"symbol\": \"BAPA\", \"weight\": 0.0335738}, {\"symbol\": \"SMCIP\", \"weight\": 0.0254444}, {\"symbol\": \"HPEPC\", \"weight\": 0.024218298}, {\"symbol\": \"GOOGM\", \"weight\": 0.023866301}, {\"symbol\": \"GOOGN\", \"weight\": 0.0231461}, {\"symbol\": \"WFCPL\", \"weight\": 0.0212109}, {\"symbol\": \"BACPL\", \"weight\": 0.0145002995}, {\"symbol\": \"XTSLA\", \"weight\": 0.0129663}]",
+      "sectors": [
+        {
+          "sector": "utilities",
+          "weight": 0.78129995
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1449
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0738
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "STRC",
+          "weight": 0.0343503
+        },
+        {
+          "symbol": "BAPA",
+          "weight": 0.0335738
+        },
+        {
+          "symbol": "SMCIP",
+          "weight": 0.0254444
+        },
+        {
+          "symbol": "HPEPC",
+          "weight": 0.024218298
+        },
+        {
+          "symbol": "GOOGM",
+          "weight": 0.023866301
+        },
+        {
+          "symbol": "GOOGN",
+          "weight": 0.0231461
+        },
+        {
+          "symbol": "WFCPL",
+          "weight": 0.0212109
+        },
+        {
+          "symbol": "BACPL",
+          "weight": 0.0145002995
+        },
+        {
+          "symbol": "XTSLA",
+          "weight": 0.0129663
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:35.282026+09:00"
     },
     "SPHY": {
@@ -24479,8 +24561,53 @@
       "expense_ratio": 0.0005,
       "dividend_yield": 0.074,
       "inception_date": "2012-06-18",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.9986}, {\"sector\": \"energy\", \"weight\": 0.0014}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.9986
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0014
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [],
       "fetched_at": "2026-10-08T10:35:36.113958+09:00"
     },
     "USHY": {
@@ -24489,8 +24616,58 @@
       "expense_ratio": 0.0008,
       "dividend_yield": 0.0712,
       "inception_date": "2017-10-25",
-      "sectors": "[{\"sector\": \"energy\", \"weight\": 0.9919}, {\"sector\": \"realestate\", \"weight\": 0.0081}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"XTSLA\", \"weight\": 0.0160456}]",
+      "sectors": [
+        {
+          "sector": "energy",
+          "weight": 0.9919
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0081
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "XTSLA",
+          "weight": 0.0160456
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:36.892309+09:00"
     },
     "SMCY": {
@@ -24499,8 +24676,13 @@
       "expense_ratio": 0.0101,
       "dividend_yield": 0.45130002,
       "inception_date": "2024-09-11",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.011675299}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.011675299
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:15.064164+09:00"
     },
     "PLTY": {
@@ -24509,8 +24691,13 @@
       "expense_ratio": 0.0107,
       "dividend_yield": 0.5574,
       "inception_date": "2024-10-07",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.037246}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.037246
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:15.923177+09:00"
     },
     "JEPI": {
@@ -24519,8 +24706,94 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.081599995,
       "inception_date": "2020-05-20",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.2002}, {\"sector\": \"industrials\", \"weight\": 0.1455}, {\"sector\": \"healthcare\", \"weight\": 0.1345}, {\"sector\": \"financial_services\", \"weight\": 0.1117}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1083}, {\"sector\": \"consumer_defensive\", \"weight\": 0.092}, {\"sector\": \"communication_services\", \"weight\": 0.0844}, {\"sector\": \"utilities\", \"weight\": 0.052399997}, {\"sector\": \"energy\", \"weight\": 0.032}, {\"sector\": \"realestate\", \"weight\": 0.0232}, {\"sector\": \"basic_materials\", \"weight\": 0.016}]",
-      "top_holdings": "[{\"symbol\": \"MSFT\", \"weight\": 0.0202911}, {\"symbol\": \"NVDA\", \"weight\": 0.0193203}, {\"symbol\": \"AAPL\", \"weight\": 0.0192301}, {\"symbol\": \"JIMXX\", \"weight\": 0.019186}, {\"symbol\": \"META\", \"weight\": 0.0188288}, {\"symbol\": \"AMZN\", \"weight\": 0.0184935}, {\"symbol\": \"TT\", \"weight\": 0.018095}, {\"symbol\": \"JNJ\", \"weight\": 0.0178724}, {\"symbol\": \"GOOGL\", \"weight\": 0.017532099}, {\"symbol\": \"MA\", \"weight\": 0.017419301}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.2002
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1455
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1345
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1117
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1083
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.092
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0844
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.052399997
+        },
+        {
+          "sector": "energy",
+          "weight": 0.032
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0232
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.016
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "MSFT",
+          "weight": 0.0202911
+        },
+        {
+          "symbol": "NVDA",
+          "weight": 0.0193203
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0192301
+        },
+        {
+          "symbol": "JIMXX",
+          "weight": 0.019186
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0188288
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0184935
+        },
+        {
+          "symbol": "TT",
+          "weight": 0.018095
+        },
+        {
+          "symbol": "JNJ",
+          "weight": 0.0178724
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.017532099
+        },
+        {
+          "symbol": "MA",
+          "weight": 0.017419301
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:43.741963+09:00"
     },
     "JEPQ": {
@@ -24529,8 +24802,94 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.1105,
       "inception_date": "2022-05-03",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6095}, {\"sector\": \"communication_services\", \"weight\": 0.12640001}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1046}, {\"sector\": \"consumer_defensive\", \"weight\": 0.052199997}, {\"sector\": \"healthcare\", \"weight\": 0.0424}, {\"sector\": \"industrials\", \"weight\": 0.039}, {\"sector\": \"utilities\", \"weight\": 0.0089}, {\"sector\": \"basic_materials\", \"weight\": 0.007900001}, {\"sector\": \"financial_services\", \"weight\": 0.0038}, {\"sector\": \"energy\", \"weight\": 0.0034999999}, {\"sector\": \"realestate\", \"weight\": 0.0018000001}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.0735526}, {\"symbol\": \"AAPL\", \"weight\": 0.0640072}, {\"symbol\": \"MSFT\", \"weight\": 0.0518964}, {\"symbol\": \"MU\", \"weight\": 0.0494294}, {\"symbol\": \"GOOG\", \"weight\": 0.0471463}, {\"symbol\": \"AMD\", \"weight\": 0.0393679}, {\"symbol\": \"AMZN\", \"weight\": 0.0371807}, {\"symbol\": \"META\", \"weight\": 0.029639699}, {\"symbol\": \"LRCX\", \"weight\": 0.021086099}, {\"symbol\": \"TSLA\", \"weight\": 0.0200385}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6095
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.12640001
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1046
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.052199997
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0424
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.039
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0089
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.007900001
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0038
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0034999999
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0018000001
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.0735526
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0640072
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0518964
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0494294
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.0471463
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.0393679
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0371807
+        },
+        {
+          "symbol": "META",
+          "weight": 0.029639699
+        },
+        {
+          "symbol": "LRCX",
+          "weight": 0.021086099
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0200385
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:44.574241+09:00"
     },
     "QYLD": {
@@ -24539,8 +24898,90 @@
       "expense_ratio": 0.006,
       "dividend_yield": 0.0571,
       "inception_date": "2013-12-11",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6032}, {\"sector\": \"communication_services\", \"weight\": 0.1258}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1007}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0556}, {\"sector\": \"industrials\", \"weight\": 0.0512}, {\"sector\": \"healthcare\", \"weight\": 0.0379}, {\"sector\": \"utilities\", \"weight\": 0.0101}, {\"sector\": \"basic_materials\", \"weight\": 0.0092}, {\"sector\": \"energy\", \"weight\": 0.0044}, {\"sector\": \"financial_services\", \"weight\": 0.0019}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.086915106}, {\"symbol\": \"AAPL\", \"weight\": 0.076747395}, {\"symbol\": \"MSFT\", \"weight\": 0.0601372}, {\"symbol\": \"MU\", \"weight\": 0.0524369}, {\"symbol\": \"AMD\", \"weight\": 0.043530002}, {\"symbol\": \"AMZN\", \"weight\": 0.0424303}, {\"symbol\": \"META\", \"weight\": 0.0340406}, {\"symbol\": \"GOOGL\", \"weight\": 0.0319321}, {\"symbol\": \"GOOG\", \"weight\": 0.029623799}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6032
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1258
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1007
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0556
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0512
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0379
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0101
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0092
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0044
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0019
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.086915106
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.076747395
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0601372
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0524369
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.043530002
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0424303
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0340406
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0319321
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.029623799
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:45.472092+09:00"
     },
     "RYLD": {
@@ -24549,8 +24990,58 @@
       "expense_ratio": 0.006,
       "dividend_yield": 0.0618,
       "inception_date": "2019-04-18",
-      "sectors": "[{\"sector\": \"healthcare\", \"weight\": 0.2084}, {\"sector\": \"financial_services\", \"weight\": 0.1822}, {\"sector\": \"technology\", \"weight\": 0.1433}, {\"sector\": \"industrials\", \"weight\": 0.13350001}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0863}, {\"sector\": \"realestate\", \"weight\": 0.0645}, {\"sector\": \"energy\", \"weight\": 0.0629}, {\"sector\": \"basic_materials\", \"weight\": 0.0431}, {\"sector\": \"utilities\", \"weight\": 0.0269}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0257}, {\"sector\": \"communication_services\", \"weight\": 0.0232}]",
-      "top_holdings": "[{\"symbol\": \"RSSL\", \"weight\": 1.0067408}]",
+      "sectors": [
+        {
+          "sector": "healthcare",
+          "weight": 0.2084
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1822
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1433
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.13350001
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0863
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0645
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0629
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0431
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0269
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0257
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0232
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "RSSL",
+          "weight": 1.0067408
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:46.224580+09:00"
     },
     "XYLD": {
@@ -24559,8 +25050,94 @@
       "expense_ratio": 0.006,
       "dividend_yield": 0.0638,
       "inception_date": "2013-06-21",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.4049}, {\"sector\": \"financial_services\", \"weight\": 0.1121}, {\"sector\": \"communication_services\", \"weight\": 0.099300005}, {\"sector\": \"healthcare\", \"weight\": 0.092700005}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0876}, {\"sector\": \"industrials\", \"weight\": 0.075500004}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0429}, {\"sector\": \"energy\", \"weight\": 0.0341}, {\"sector\": \"utilities\", \"weight\": 0.0185}, {\"sector\": \"realestate\", \"weight\": 0.0168}, {\"sector\": \"basic_materials\", \"weight\": 0.0156}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.084818095}, {\"symbol\": \"AAPL\", \"weight\": 0.0746694}, {\"symbol\": \"MSFT\", \"weight\": 0.0584475}, {\"symbol\": \"AMZN\", \"weight\": 0.0375866}, {\"symbol\": \"GOOGL\", \"weight\": 0.0309411}, {\"symbol\": \"AVGO\", \"weight\": 0.0256833}, {\"symbol\": \"GOOG\", \"weight\": 0.024807101}, {\"symbol\": \"META\", \"weight\": 0.024584798}, {\"symbol\": \"MU\", \"weight\": 0.0184963}, {\"symbol\": \"TSLA\", \"weight\": 0.0153797}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.4049
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1121
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.099300005
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.092700005
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0876
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.075500004
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0429
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0341
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0185
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0168
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0156
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.084818095
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0746694
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0584475
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0375866
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0309411
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.0256833
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.024807101
+        },
+        {
+          "symbol": "META",
+          "weight": 0.024584798
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0184963
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0153797
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:46.930695+09:00"
     },
     "DIVO": {
@@ -24569,8 +25146,94 @@
       "expense_ratio": 0.0056,
       "dividend_yield": 0.025999999,
       "inception_date": "2016-12-13",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.24149999}, {\"sector\": \"technology\", \"weight\": 0.17899999}, {\"sector\": \"industrials\", \"weight\": 0.1273}, {\"sector\": \"healthcare\", \"weight\": 0.120699994}, {\"sector\": \"energy\", \"weight\": 0.0743}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.069299996}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0633}, {\"sector\": \"basic_materials\", \"weight\": 0.058000002}, {\"sector\": \"communication_services\", \"weight\": 0.0469}, {\"sector\": \"utilities\", \"weight\": 0.0196}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"MSFT\", \"weight\": 0.0662472}, {\"symbol\": \"CAT\", \"weight\": 0.057139102}, {\"symbol\": \"AAPL\", \"weight\": 0.0567645}, {\"symbol\": \"AMGN\", \"weight\": 0.055360097}, {\"symbol\": \"V\", \"weight\": 0.0536187}, {\"symbol\": \"JPM\", \"weight\": 0.049513303}, {\"symbol\": \"GS\", \"weight\": 0.0485432}, {\"symbol\": \"CVX\", \"weight\": 0.0476056}, {\"symbol\": \"XLY\", \"weight\": 0.0474878}, {\"symbol\": \"SOFR\", \"weight\": 0.0443948}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.24149999
+        },
+        {
+          "sector": "technology",
+          "weight": 0.17899999
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1273
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.120699994
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0743
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.069299996
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0633
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.058000002
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0469
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0196
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "MSFT",
+          "weight": 0.0662472
+        },
+        {
+          "symbol": "CAT",
+          "weight": 0.057139102
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0567645
+        },
+        {
+          "symbol": "AMGN",
+          "weight": 0.055360097
+        },
+        {
+          "symbol": "V",
+          "weight": 0.0536187
+        },
+        {
+          "symbol": "JPM",
+          "weight": 0.049513303
+        },
+        {
+          "symbol": "GS",
+          "weight": 0.0485432
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0476056
+        },
+        {
+          "symbol": "XLY",
+          "weight": 0.0474878
+        },
+        {
+          "symbol": "SOFR",
+          "weight": 0.0443948
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:47.690263+09:00"
     },
     "SPYI": {
@@ -24579,8 +25242,94 @@
       "expense_ratio": 0.0068,
       "dividend_yield": 0.014400001,
       "inception_date": "2022-08-29",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.4061}, {\"sector\": \"financial_services\", \"weight\": 0.1118}, {\"sector\": \"communication_services\", \"weight\": 0.0996}, {\"sector\": \"healthcare\", \"weight\": 0.0924}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0877}, {\"sector\": \"industrials\", \"weight\": 0.0749}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0431}, {\"sector\": \"energy\", \"weight\": 0.033800002}, {\"sector\": \"utilities\", \"weight\": 0.0185}, {\"sector\": \"realestate\", \"weight\": 0.0166}, {\"sector\": \"basic_materials\", \"weight\": 0.0156}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.0838842}, {\"symbol\": \"AAPL\", \"weight\": 0.0735031}, {\"symbol\": \"MSFT\", \"weight\": 0.057581}, {\"symbol\": \"AMZN\", \"weight\": 0.0369983}, {\"symbol\": \"GOOGL\", \"weight\": 0.030320698}, {\"symbol\": \"AVGO\", \"weight\": 0.0252078}, {\"symbol\": \"GOOG\", \"weight\": 0.024442999}, {\"symbol\": \"META\", \"weight\": 0.023900298}, {\"symbol\": \"MU\", \"weight\": 0.018046401}, {\"symbol\": \"TSLA\", \"weight\": 0.0151429}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.4061
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1118
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0996
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0924
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0877
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0749
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0431
+        },
+        {
+          "sector": "energy",
+          "weight": 0.033800002
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0185
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0166
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0156
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.0838842
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0735031
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.057581
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0369983
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.030320698
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.0252078
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.024442999
+        },
+        {
+          "symbol": "META",
+          "weight": 0.023900298
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.018046401
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0151429
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:48.428202+09:00"
     },
     "QQQI": {
@@ -24589,8 +25338,94 @@
       "expense_ratio": 0.0068,
       "dividend_yield": 0.0011,
       "inception_date": "2024-01-29",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6122}, {\"sector\": \"communication_services\", \"weight\": 0.1272}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1011}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0563}, {\"sector\": \"healthcare\", \"weight\": 0.0387}, {\"sector\": \"industrials\", \"weight\": 0.0382}, {\"sector\": \"utilities\", \"weight\": 0.0104}, {\"sector\": \"basic_materials\", \"weight\": 0.0093}, {\"sector\": \"energy\", \"weight\": 0.0045}, {\"sector\": \"financial_services\", \"weight\": 0.002}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.085861705}, {\"symbol\": \"AAPL\", \"weight\": 0.0751622}, {\"symbol\": \"MSFT\", \"weight\": 0.0591266}, {\"symbol\": \"MU\", \"weight\": 0.0513905}, {\"symbol\": \"AMD\", \"weight\": 0.0427932}, {\"symbol\": \"AMZN\", \"weight\": 0.041610397}, {\"symbol\": \"META\", \"weight\": 0.0333658}, {\"symbol\": \"GOOGL\", \"weight\": 0.0310959}, {\"symbol\": \"GOOG\", \"weight\": 0.0288546}, {\"symbol\": \"TSLA\", \"weight\": 0.0275867}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6122
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1272
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1011
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0563
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0387
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0382
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0104
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0093
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0045
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.002
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.085861705
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0751622
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0591266
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0513905
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.0427932
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.041610397
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0333658
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0310959
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.0288546
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0275867
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:49.145896+09:00"
     },
     "SVOL": {
@@ -24599,8 +25434,70 @@
       "expense_ratio": 0.0066000004,
       "dividend_yield": 0.084300004,
       "inception_date": "2021-05-12",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.3989}, {\"sector\": \"financial_services\", \"weight\": 0.1145}, {\"sector\": \"healthcare\", \"weight\": 0.098500006}, {\"sector\": \"communication_services\", \"weight\": 0.0937}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0863}, {\"sector\": \"industrials\", \"weight\": 0.077}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0446}, {\"sector\": \"energy\", \"weight\": 0.0353}, {\"sector\": \"realestate\", \"weight\": 0.0179}, {\"sector\": \"utilities\", \"weight\": 0.0176}, {\"sector\": \"basic_materials\", \"weight\": 0.0156}]",
-      "top_holdings": "[{\"symbol\": \"QIS\", \"weight\": 0.0936066}, {\"symbol\": \"CTAP\", \"weight\": 0.079889104}, {\"symbol\": \"NMB\", \"weight\": 0.0698345}, {\"symbol\": \"XV\", \"weight\": 0.053875297}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.3989
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1145
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.098500006
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0937
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0863
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.077
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0446
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0353
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0179
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0176
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0156
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "QIS",
+          "weight": 0.0936066
+        },
+        {
+          "symbol": "CTAP",
+          "weight": 0.079889104
+        },
+        {
+          "symbol": "NMB",
+          "weight": 0.0698345
+        },
+        {
+          "symbol": "XV",
+          "weight": 0.053875297
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:49.974300+09:00"
     },
     "NUSI": {
@@ -24609,8 +25506,94 @@
       "expense_ratio": 0.0068,
       "dividend_yield": 0.0761,
       "inception_date": "2019-12-19",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.5077}, {\"sector\": \"communication_services\", \"weight\": 0.1611}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1487}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0546}, {\"sector\": \"healthcare\", \"weight\": 0.0521}, {\"sector\": \"industrials\", \"weight\": 0.0355}, {\"sector\": \"utilities\", \"weight\": 0.0137}, {\"sector\": \"basic_materials\", \"weight\": 0.013099999}, {\"sector\": \"energy\", \"weight\": 0.0058999998}, {\"sector\": \"financial_services\", \"weight\": 0.0055}, {\"sector\": \"realestate\", \"weight\": 0.0019}]",
-      "top_holdings": "[{\"symbol\": \"AAPL\", \"weight\": 0.091534205}, {\"symbol\": \"MSFT\", \"weight\": 0.0791452}, {\"symbol\": \"NVDA\", \"weight\": 0.075705096}, {\"symbol\": \"AMZN\", \"weight\": 0.0639897}, {\"symbol\": \"AVGO\", \"weight\": 0.0439668}, {\"symbol\": \"META\", \"weight\": 0.0386757}, {\"symbol\": \"TSLA\", \"weight\": 0.0377568}, {\"symbol\": \"GOOGL\", \"weight\": 0.0305758}, {\"symbol\": \"GOOG\", \"weight\": 0.0292218}, {\"symbol\": \"COST\", \"weight\": 0.0274508}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.5077
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1611
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1487
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0546
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0521
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0355
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0137
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.013099999
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0058999998
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0055
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0019
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "AAPL",
+          "weight": 0.091534205
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0791452
+        },
+        {
+          "symbol": "NVDA",
+          "weight": 0.075705096
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0639897
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.0439668
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0386757
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0377568
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0305758
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.0292218
+        },
+        {
+          "symbol": "COST",
+          "weight": 0.0274508
+        }
+      ],
       "fetched_at": "2026-09-23T00:07:32Z"
     },
     "FEPI": {
@@ -24619,8 +25602,94 @@
       "expense_ratio": 0.0064999997,
       "dividend_yield": 0.010199999,
       "inception_date": "2023-10-11",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6877}, {\"sector\": \"communication_services\", \"weight\": 0.1869}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.1254}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"INTC\", \"weight\": 0.08016381}, {\"symbol\": \"AMD\", \"weight\": 0.0786492}, {\"symbol\": \"MU\", \"weight\": 0.0749667}, {\"symbol\": \"SNDK\", \"weight\": 0.0744379}, {\"symbol\": \"META\", \"weight\": 0.0703554}, {\"symbol\": \"NVDA\", \"weight\": 0.0700509}, {\"symbol\": \"PLTR\", \"weight\": 0.0695014}, {\"symbol\": \"AVGO\", \"weight\": 0.0672418}, {\"symbol\": \"MSFT\", \"weight\": 0.066838}, {\"symbol\": \"AAPL\", \"weight\": 0.065425}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6877
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1869
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.1254
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "INTC",
+          "weight": 0.08016381
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.0786492
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0749667
+        },
+        {
+          "symbol": "SNDK",
+          "weight": 0.0744379
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0703554
+        },
+        {
+          "symbol": "NVDA",
+          "weight": 0.0700509
+        },
+        {
+          "symbol": "PLTR",
+          "weight": 0.0695014
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.0672418
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.066838
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.065425
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:51.551043+09:00"
     },
     "GPIX": {
@@ -24629,8 +25698,94 @@
       "expense_ratio": 0.0029,
       "dividend_yield": 0.0095999995,
       "inception_date": "2023-10-24",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.4025}, {\"sector\": \"financial_services\", \"weight\": 0.111899994}, {\"sector\": \"communication_services\", \"weight\": 0.1035}, {\"sector\": \"healthcare\", \"weight\": 0.0932}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0862}, {\"sector\": \"industrials\", \"weight\": 0.075500004}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0429}, {\"sector\": \"energy\", \"weight\": 0.034}, {\"sector\": \"utilities\", \"weight\": 0.0182}, {\"sector\": \"realestate\", \"weight\": 0.0165}, {\"sector\": \"basic_materials\", \"weight\": 0.015800001}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.0846623}, {\"symbol\": \"AAPL\", \"weight\": 0.074708}, {\"symbol\": \"MSFT\", \"weight\": 0.0574481}, {\"symbol\": \"AMZN\", \"weight\": 0.037663702}, {\"symbol\": \"XLC\", \"weight\": 0.0362965}, {\"symbol\": \"GOOGL\", \"weight\": 0.0338829}, {\"symbol\": \"AVGO\", \"weight\": 0.024751501}, {\"symbol\": \"MU\", \"weight\": 0.0184377}, {\"symbol\": \"META\", \"weight\": 0.0168802}, {\"symbol\": \"AMD\", \"weight\": 0.015322}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.4025
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.111899994
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1035
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0932
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0862
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.075500004
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0429
+        },
+        {
+          "sector": "energy",
+          "weight": 0.034
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0182
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0165
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.015800001
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.0846623
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.074708
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0574481
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.037663702
+        },
+        {
+          "symbol": "XLC",
+          "weight": 0.0362965
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0338829
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.024751501
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0184377
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0168802
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.015322
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:52.294651+09:00"
     },
     "GPIQ": {
@@ -24639,8 +25794,94 @@
       "expense_ratio": 0.0029,
       "dividend_yield": 0.0063,
       "inception_date": "2023-10-24",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6069}, {\"sector\": \"communication_services\", \"weight\": 0.12560001}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.099300005}, {\"sector\": \"consumer_defensive\", \"weight\": 0.054899998}, {\"sector\": \"industrials\", \"weight\": 0.0508}, {\"sector\": \"healthcare\", \"weight\": 0.0382}, {\"sector\": \"basic_materials\", \"weight\": 0.0093}, {\"sector\": \"utilities\", \"weight\": 0.009}, {\"sector\": \"energy\", \"weight\": 0.0045}, {\"sector\": \"financial_services\", \"weight\": 0.0015}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.0844962}, {\"symbol\": \"AAPL\", \"weight\": 0.0747465}, {\"symbol\": \"MSFT\", \"weight\": 0.0585171}, {\"symbol\": \"MU\", \"weight\": 0.050594904}, {\"symbol\": \"AMD\", \"weight\": 0.0428874}, {\"symbol\": \"AMZN\", \"weight\": 0.040619303}, {\"symbol\": \"GOOGL\", \"weight\": 0.038655803}, {\"symbol\": \"META\", \"weight\": 0.0337856}, {\"symbol\": \"SPCX\", \"weight\": 0.0275191}, {\"symbol\": \"TSLA\", \"weight\": 0.027234599}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6069
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.12560001
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.099300005
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.054899998
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0508
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0382
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0093
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.009
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0045
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0015
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.0844962
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0747465
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0585171
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.050594904
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.0428874
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.040619303
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.038655803
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0337856
+        },
+        {
+          "symbol": "SPCX",
+          "weight": 0.0275191
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.027234599
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:53.031662+09:00"
     },
     "QDTE": {
@@ -24649,8 +25890,17 @@
       "expense_ratio": 0.0095999995,
       "dividend_yield": 0.010299999,
       "inception_date": "2024-03-06",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"WEEK\", \"weight\": 0.0489677}, {\"symbol\": \"FGXXX\", \"weight\": 0.0422671}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "WEEK",
+          "weight": 0.0489677
+        },
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0422671
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:53.770802+09:00"
     },
     "XDTE": {
@@ -24659,8 +25909,62 @@
       "expense_ratio": 0.0097,
       "dividend_yield": 0.0082,
       "inception_date": "2024-03-06",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.39049998}, {\"sector\": \"financial_services\", \"weight\": 0.1107}, {\"sector\": \"communication_services\", \"weight\": 0.106400006}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.098900005}, {\"sector\": \"healthcare\", \"weight\": 0.083000004}, {\"sector\": \"industrials\", \"weight\": 0.078200005}, {\"sector\": \"consumer_defensive\", \"weight\": 0.045}, {\"sector\": \"energy\", \"weight\": 0.0313}, {\"sector\": \"utilities\", \"weight\": 0.0211}, {\"sector\": \"realestate\", \"weight\": 0.018099999}, {\"sector\": \"basic_materials\", \"weight\": 0.0167}]",
-      "top_holdings": "[{\"symbol\": \"WEEK\", \"weight\": 0.072736405}, {\"symbol\": \"FGXXX\", \"weight\": 0.0118434}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.39049998
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1107
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.106400006
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.098900005
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.083000004
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.078200005
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.045
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0313
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0211
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.018099999
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0167
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "WEEK",
+          "weight": 0.072736405
+        },
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0118434
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:54.505122+09:00"
     },
     "YMAG": {
@@ -24669,8 +25973,41 @@
       "expense_ratio": 0.0134000005,
       "dividend_yield": 0.4109,
       "inception_date": "2024-01-29",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FBY\", \"weight\": 0.1489444}, {\"symbol\": \"NVDY\", \"weight\": 0.14846599}, {\"symbol\": \"MSFO\", \"weight\": 0.1429241}, {\"symbol\": \"APLY\", \"weight\": 0.1409315}, {\"symbol\": \"GOOY\", \"weight\": 0.1399027}, {\"symbol\": \"AMZY\", \"weight\": 0.1390157}, {\"symbol\": \"TSLY\", \"weight\": 0.1376325}, {\"symbol\": \"FGXXX\", \"weight\": 0.0094081005}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FBY",
+          "weight": 0.1489444
+        },
+        {
+          "symbol": "NVDY",
+          "weight": 0.14846599
+        },
+        {
+          "symbol": "MSFO",
+          "weight": 0.1429241
+        },
+        {
+          "symbol": "APLY",
+          "weight": 0.1409315
+        },
+        {
+          "symbol": "GOOY",
+          "weight": 0.1399027
+        },
+        {
+          "symbol": "AMZY",
+          "weight": 0.1390157
+        },
+        {
+          "symbol": "TSLY",
+          "weight": 0.1376325
+        },
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0094081005
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:55.246589+09:00"
     },
     "YMAX": {
@@ -24679,8 +26016,94 @@
       "expense_ratio": 0.013300001,
       "dividend_yield": 0.3834,
       "inception_date": "2024-01-16",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6099}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0762}, {\"sector\": \"communication_services\", \"weight\": 0.0716}, {\"sector\": \"financial_services\", \"weight\": 0.0551}, {\"sector\": \"industrials\", \"weight\": 0.053600002}, {\"sector\": \"healthcare\", \"weight\": 0.0507}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0299}, {\"sector\": \"basic_materials\", \"weight\": 0.0176}, {\"sector\": \"realestate\", \"weight\": 0.0164}, {\"sector\": \"energy\", \"weight\": 0.0127}, {\"sector\": \"utilities\", \"weight\": 0.0064}]",
-      "top_holdings": "[{\"symbol\": \"MRNY\", \"weight\": 0.0970895}, {\"symbol\": \"HOOY\", \"weight\": 0.07388}, {\"symbol\": \"AMDY\", \"weight\": 0.0681234}, {\"symbol\": \"FBY\", \"weight\": 0.0646776}, {\"symbol\": \"APLY\", \"weight\": 0.0633493}, {\"symbol\": \"GDXY\", \"weight\": 0.053291}, {\"symbol\": \"TSLY\", \"weight\": 0.0488169}, {\"symbol\": \"CONY\", \"weight\": 0.046907}, {\"symbol\": \"CRCO\", \"weight\": 0.0466813}, {\"symbol\": \"SNOY\", \"weight\": 0.0439293}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6099
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0762
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0716
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0551
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.053600002
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0507
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0299
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0176
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0164
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0127
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0064
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "MRNY",
+          "weight": 0.0970895
+        },
+        {
+          "symbol": "HOOY",
+          "weight": 0.07388
+        },
+        {
+          "symbol": "AMDY",
+          "weight": 0.0681234
+        },
+        {
+          "symbol": "FBY",
+          "weight": 0.0646776
+        },
+        {
+          "symbol": "APLY",
+          "weight": 0.0633493
+        },
+        {
+          "symbol": "GDXY",
+          "weight": 0.053291
+        },
+        {
+          "symbol": "TSLY",
+          "weight": 0.0488169
+        },
+        {
+          "symbol": "CONY",
+          "weight": 0.046907
+        },
+        {
+          "symbol": "CRCO",
+          "weight": 0.0466813
+        },
+        {
+          "symbol": "SNOY",
+          "weight": 0.0439293
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:55.978720+09:00"
     },
     "LFGY": {
@@ -24689,8 +26112,94 @@
       "expense_ratio": 0.010199999,
       "dividend_yield": 0.5658,
       "inception_date": "2025-01-13",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.5557}, {\"sector\": \"technology\", \"weight\": 0.3389}, {\"sector\": \"communication_services\", \"weight\": 0.063}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0424}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.1440224}, {\"symbol\": \"NVDA\", \"weight\": 0.059105102}, {\"symbol\": \"XYZ\", \"weight\": 0.0524314}, {\"symbol\": \"OPRA\", \"weight\": 0.049433697}, {\"symbol\": \"GLXY\", \"weight\": 0.0484234}, {\"symbol\": \"RIOT\", \"weight\": 0.0457224}, {\"symbol\": \"MSTR\", \"weight\": 0.044187102}, {\"symbol\": \"HUT\", \"weight\": 0.0411929}, {\"symbol\": \"COIN\", \"weight\": 0.0396832}, {\"symbol\": \"BMNR\", \"weight\": 0.037576202}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.5557
+        },
+        {
+          "sector": "technology",
+          "weight": 0.3389
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.063
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0424
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.1440224
+        },
+        {
+          "symbol": "NVDA",
+          "weight": 0.059105102
+        },
+        {
+          "symbol": "XYZ",
+          "weight": 0.0524314
+        },
+        {
+          "symbol": "OPRA",
+          "weight": 0.049433697
+        },
+        {
+          "symbol": "GLXY",
+          "weight": 0.0484234
+        },
+        {
+          "symbol": "RIOT",
+          "weight": 0.0457224
+        },
+        {
+          "symbol": "MSTR",
+          "weight": 0.044187102
+        },
+        {
+          "symbol": "HUT",
+          "weight": 0.0411929
+        },
+        {
+          "symbol": "COIN",
+          "weight": 0.0396832
+        },
+        {
+          "symbol": "BMNR",
+          "weight": 0.037576202
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:56.735832+09:00"
     },
     "GDXY": {
@@ -24699,8 +26208,13 @@
       "expense_ratio": 0.01,
       "dividend_yield": 0.818,
       "inception_date": "2024-05-20",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.037318397}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.037318397
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:57.498861+09:00"
     },
     "KLIP": {
@@ -24709,8 +26223,58 @@
       "expense_ratio": 0.0094,
       "dividend_yield": 0.1126,
       "inception_date": "2023-01-11",
-      "sectors": "[{\"sector\": \"communication_services\", \"weight\": 0.3688}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.3326}, {\"sector\": \"technology\", \"weight\": 0.1754}, {\"sector\": \"realestate\", \"weight\": 0.044299997}, {\"sector\": \"healthcare\", \"weight\": 0.0392}, {\"sector\": \"consumer_defensive\", \"weight\": 0.030199999}, {\"sector\": \"financial_services\", \"weight\": 0.0095}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"KWEB\", \"weight\": 1.010016}]",
+      "sectors": [
+        {
+          "sector": "communication_services",
+          "weight": 0.3688
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.3326
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1754
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.044299997
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0392
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.030199999
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0095
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "KWEB",
+          "weight": 1.010016
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:58.396623+09:00"
     },
     "IWMY": {
@@ -24719,8 +26283,58 @@
       "expense_ratio": 0.0105,
       "dividend_yield": 0.2882,
       "inception_date": "2023-10-30",
-      "sectors": "[{\"sector\": \"healthcare\", \"weight\": 0.2094}, {\"sector\": \"financial_services\", \"weight\": 0.18020001}, {\"sector\": \"technology\", \"weight\": 0.1454}, {\"sector\": \"industrials\", \"weight\": 0.13270001}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0859}, {\"sector\": \"realestate\", \"weight\": 0.0639}, {\"sector\": \"energy\", \"weight\": 0.0636}, {\"sector\": \"basic_materials\", \"weight\": 0.043}, {\"sector\": \"utilities\", \"weight\": 0.0269}, {\"sector\": \"consumer_defensive\", \"weight\": 0.025799999}, {\"sector\": \"communication_services\", \"weight\": 0.0232}]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0023063}]",
+      "sectors": [
+        {
+          "sector": "healthcare",
+          "weight": 0.2094
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.18020001
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1454
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.13270001
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0859
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0639
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0636
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.043
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0269
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.025799999
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0232
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0023063
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:59.162251+09:00"
     },
     "QYLG": {
@@ -24729,8 +26343,94 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.0363,
       "inception_date": "2020-09-18",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.6035}, {\"sector\": \"communication_services\", \"weight\": 0.1258}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.100600004}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0555}, {\"sector\": \"industrials\", \"weight\": 0.0512}, {\"sector\": \"healthcare\", \"weight\": 0.0378}, {\"sector\": \"utilities\", \"weight\": 0.01}, {\"sector\": \"basic_materials\", \"weight\": 0.0092}, {\"sector\": \"energy\", \"weight\": 0.0045}, {\"sector\": \"financial_services\", \"weight\": 0.0019}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.0851748}, {\"symbol\": \"AAPL\", \"weight\": 0.0752179}, {\"symbol\": \"MSFT\", \"weight\": 0.058936402}, {\"symbol\": \"MU\", \"weight\": 0.0514009}, {\"symbol\": \"AMD\", \"weight\": 0.0426508}, {\"symbol\": \"AMZN\", \"weight\": 0.0415831}, {\"symbol\": \"META\", \"weight\": 0.0333575}, {\"symbol\": \"GOOGL\", \"weight\": 0.031240001}, {\"symbol\": \"GOOG\", \"weight\": 0.0291325}, {\"symbol\": \"TSLA\", \"weight\": 0.028836802}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.6035
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1258
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.100600004
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0555
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0512
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0378
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.01
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0092
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0045
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0019
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.0851748
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0752179
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.058936402
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0514009
+        },
+        {
+          "symbol": "AMD",
+          "weight": 0.0426508
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0415831
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0333575
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.031240001
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.0291325
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.028836802
+        }
+      ],
       "fetched_at": "2026-10-08T10:34:59.867451+09:00"
     },
     "XYLG": {
@@ -24739,8 +26439,94 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.025,
       "inception_date": "2020-09-18",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.4043}, {\"sector\": \"financial_services\", \"weight\": 0.1121}, {\"sector\": \"communication_services\", \"weight\": 0.0994}, {\"sector\": \"healthcare\", \"weight\": 0.0928}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0874}, {\"sector\": \"industrials\", \"weight\": 0.0752}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0434}, {\"sector\": \"energy\", \"weight\": 0.0341}, {\"sector\": \"utilities\", \"weight\": 0.019}, {\"sector\": \"realestate\", \"weight\": 0.016900001}, {\"sector\": \"basic_materials\", \"weight\": 0.0155}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.08424869}, {\"symbol\": \"AAPL\", \"weight\": 0.0742122}, {\"symbol\": \"MSFT\", \"weight\": 0.0580193}, {\"symbol\": \"AMZN\", \"weight\": 0.0373206}, {\"symbol\": \"GOOGL\", \"weight\": 0.0307324}, {\"symbol\": \"AVGO\", \"weight\": 0.025473299}, {\"symbol\": \"GOOG\", \"weight\": 0.024612}, {\"symbol\": \"META\", \"weight\": 0.0244044}, {\"symbol\": \"MU\", \"weight\": 0.0183374}, {\"symbol\": \"TSLA\", \"weight\": 0.0152663}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.4043
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1121
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0994
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0928
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0874
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0752
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0434
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0341
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.019
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.016900001
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0155
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.08424869
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.0742122
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0580193
+        },
+        {
+          "symbol": "AMZN",
+          "weight": 0.0373206
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0307324
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.025473299
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.024612
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0244044
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.0183374
+        },
+        {
+          "symbol": "TSLA",
+          "weight": 0.0152663
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:00.667385+09:00"
     },
     "TSLY": {
@@ -24749,8 +26535,13 @@
       "expense_ratio": 0.0107,
       "dividend_yield": 0.4209,
       "inception_date": "2022-11-22",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0217286}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0217286
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:01.537833+09:00"
     },
     "NVDY": {
@@ -24759,8 +26550,13 @@
       "expense_ratio": 0.0109,
       "dividend_yield": 0.2908,
       "inception_date": "2023-05-10",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.011266201}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.011266201
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:02.339782+09:00"
     },
     "CONY": {
@@ -24769,8 +26565,13 @@
       "expense_ratio": 0.0104,
       "dividend_yield": 0.3449,
       "inception_date": "2023-08-14",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0312835}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0312835
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:03.100180+09:00"
     },
     "MSTY": {
@@ -24779,8 +26580,13 @@
       "expense_ratio": 0.010299999,
       "dividend_yield": 0.2706,
       "inception_date": "2024-02-21",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0296564}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0296564
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:03.875317+09:00"
     },
     "AMZY": {
@@ -24789,8 +26595,13 @@
       "expense_ratio": 0.0109,
       "dividend_yield": 0.2034,
       "inception_date": "2023-07-24",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0353132}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0353132
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:04.718301+09:00"
     },
     "FBY": {
@@ -24799,8 +26610,13 @@
       "expense_ratio": 0.0106,
       "dividend_yield": 0.2401,
       "inception_date": "2023-07-27",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0072332}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0072332
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:05.429277+09:00"
     },
     "GOOY": {
@@ -24809,8 +26625,13 @@
       "expense_ratio": 0.0114,
       "dividend_yield": 0.3728,
       "inception_date": "2023-07-27",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0159332}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0159332
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:06.224791+09:00"
     },
     "APLY": {
@@ -24819,8 +26640,13 @@
       "expense_ratio": 0.0104,
       "dividend_yield": 0.099300005,
       "inception_date": "2023-04-17",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0053899996}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0053899996
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:06.987325+09:00"
     },
     "NFLY": {
@@ -24829,8 +26655,13 @@
       "expense_ratio": 0.0101,
       "dividend_yield": 0.3351,
       "inception_date": "2023-08-07",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0200645}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0200645
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:07.805236+09:00"
     },
     "XOMO": {
@@ -24839,8 +26670,8 @@
       "expense_ratio": 0.0117,
       "dividend_yield": 0.121800005,
       "inception_date": "2023-08-30",
-      "sectors": "[]",
-      "top_holdings": "[]",
+      "sectors": [],
+      "top_holdings": [],
       "fetched_at": "2026-10-08T10:35:08.544822+09:00"
     },
     "JPMO": {
@@ -24849,8 +26680,13 @@
       "expense_ratio": 0.0104,
       "dividend_yield": 0.3327,
       "inception_date": "2023-09-11",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0256063}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0256063
+        }
+      ],
       "fetched_at": "2026-09-23T00:07:49Z"
     },
     "DISO": {
@@ -24859,8 +26695,13 @@
       "expense_ratio": 0.0121,
       "dividend_yield": 0.4293,
       "inception_date": "2023-08-24",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0237464}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0237464
+        }
+      ],
       "fetched_at": "2026-09-23T00:07:50Z"
     },
     "PYPY": {
@@ -24869,8 +26710,58 @@
       "expense_ratio": 0.013099999,
       "dividend_yield": 0.0326,
       "inception_date": "2023-09-25",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 1.0}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0357621}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 1.0
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0357621
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:11.179356+09:00"
     },
     "SQY": {
@@ -24879,8 +26770,13 @@
       "expense_ratio": 0.014400001,
       "dividend_yield": 0.98870003,
       "inception_date": "2023-10-10",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0353675}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0353675
+        }
+      ],
       "fetched_at": "2026-09-23T00:07:52Z"
     },
     "ULTY": {
@@ -24889,8 +26785,94 @@
       "expense_ratio": 0.012999999,
       "dividend_yield": 0.28030002,
       "inception_date": "2024-02-28",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.4889}, {\"sector\": \"industrials\", \"weight\": 0.1476}, {\"sector\": \"basic_materials\", \"weight\": 0.083000004}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0801}, {\"sector\": \"financial_services\", \"weight\": 0.072399996}, {\"sector\": \"communication_services\", \"weight\": 0.071100004}, {\"sector\": \"healthcare\", \"weight\": 0.0343}, {\"sector\": \"energy\", \"weight\": 0.0226}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"AMD\", \"weight\": 0.0522426}, {\"symbol\": \"LITE\", \"weight\": 0.050511}, {\"symbol\": \"LRCX\", \"weight\": 0.050412897}, {\"symbol\": \"FIX\", \"weight\": 0.047006503}, {\"symbol\": \"PLTR\", \"weight\": 0.0457678}, {\"symbol\": \"ADI\", \"weight\": 0.0441371}, {\"symbol\": \"GOOGL\", \"weight\": 0.0440019}, {\"symbol\": \"SHOP\", \"weight\": 0.041722998}, {\"symbol\": \"SPCX\", \"weight\": 0.041371398}, {\"symbol\": \"MELI\", \"weight\": 0.0405256}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.4889
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1476
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.083000004
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0801
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.072399996
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.071100004
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0343
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0226
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "AMD",
+          "weight": 0.0522426
+        },
+        {
+          "symbol": "LITE",
+          "weight": 0.050511
+        },
+        {
+          "symbol": "LRCX",
+          "weight": 0.050412897
+        },
+        {
+          "symbol": "FIX",
+          "weight": 0.047006503
+        },
+        {
+          "symbol": "PLTR",
+          "weight": 0.0457678
+        },
+        {
+          "symbol": "ADI",
+          "weight": 0.0441371
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0440019
+        },
+        {
+          "symbol": "SHOP",
+          "weight": 0.041722998
+        },
+        {
+          "symbol": "SPCX",
+          "weight": 0.041371398
+        },
+        {
+          "symbol": "MELI",
+          "weight": 0.0405256
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:12.842377+09:00"
     },
     "OARK": {
@@ -24899,8 +26881,58 @@
       "expense_ratio": 0.01,
       "dividend_yield": 0.289,
       "inception_date": "2022-11-22",
-      "sectors": "[{\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0261891}]",
+      "sectors": [
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0261891
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:13.651157+09:00"
     },
     "AIYY": {
@@ -24909,8 +26941,13 @@
       "expense_ratio": 0.0099,
       "dividend_yield": 0.3404,
       "inception_date": "2023-11-27",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.1010618}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.1010618
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:14.359669+09:00"
     },
     "ABNY": {
@@ -24919,8 +26956,13 @@
       "expense_ratio": 0.010199999,
       "dividend_yield": 0.48669997,
       "inception_date": "2024-06-24",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.063017204}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.063017204
+        }
+      ],
       "fetched_at": "2026-09-23T00:07:56Z"
     },
     "AMDY": {
@@ -24929,8 +26971,13 @@
       "expense_ratio": 0.01,
       "dividend_yield": 0.3721,
       "inception_date": "2023-09-18",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0055684}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0055684
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:17.501382+09:00"
     },
     "CVNY": {
@@ -24939,8 +26986,13 @@
       "expense_ratio": 0.0109,
       "dividend_yield": 0.577,
       "inception_date": "2025-01-29",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.107065}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.107065
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:18.276852+09:00"
     },
     "MRNY": {
@@ -24949,8 +27001,13 @@
       "expense_ratio": 0.01,
       "dividend_yield": 0.1783,
       "inception_date": "2023-10-23",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"FGXXX\", \"weight\": 0.0131308995}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "FGXXX",
+          "weight": 0.0131308995
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:19.039596+09:00"
     },
     "TLTW": {
@@ -24959,8 +27016,17 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.107700005,
       "inception_date": "2022-08-18",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"TLT\", \"weight\": 0.99998283}, {\"symbol\": \"XTSLA\", \"weight\": 0.0016587999}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "TLT",
+          "weight": 0.99998283
+        },
+        {
+          "symbol": "XTSLA",
+          "weight": 0.0016587999
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:31.181200+09:00"
     },
     "HYG": {
@@ -24969,8 +27035,58 @@
       "expense_ratio": 0.0049,
       "dividend_yield": 0.0614,
       "inception_date": "2007-04-04",
-      "sectors": "[{\"sector\": \"utilities\", \"weight\": 0.9959}, {\"sector\": \"realestate\", \"weight\": 0.0041}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"XTSLA\", \"weight\": 0.009912}]",
+      "sectors": [
+        {
+          "sector": "utilities",
+          "weight": 0.9959
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0041
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "XTSLA",
+          "weight": 0.009912
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:31.955424+09:00"
     },
     "PFFA": {
@@ -24979,8 +27095,90 @@
       "expense_ratio": 0.0211,
       "dividend_yield": 0.097600006,
       "inception_date": "2018-05-15",
-      "sectors": "[{\"sector\": \"healthcare\", \"weight\": 0.4972}, {\"sector\": \"realestate\", \"weight\": 0.2014}, {\"sector\": \"technology\", \"weight\": 0.1727}, {\"sector\": \"industrials\", \"weight\": 0.078}, {\"sector\": \"utilities\", \"weight\": 0.046}, {\"sector\": \"financial_services\", \"weight\": 0.0047999998}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"STRD\", \"weight\": 0.0294343}, {\"symbol\": \"GOOGM\", \"weight\": 0.026458599}, {\"symbol\": \"FLGPA\", \"weight\": 0.0261556}, {\"symbol\": \"KKRPD\", \"weight\": 0.025975399}, {\"symbol\": \"GOOGN\", \"weight\": 0.0242645}, {\"symbol\": \"TDSPV\", \"weight\": 0.0231081}, {\"symbol\": \"ETPI\", \"weight\": 0.0228092}, {\"symbol\": \"ORCLPD\", \"weight\": 0.0226}, {\"symbol\": \"BAPA\", \"weight\": 0.022008}]",
+      "sectors": [
+        {
+          "sector": "healthcare",
+          "weight": 0.4972
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.2014
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1727
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.078
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.046
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0047999998
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "STRD",
+          "weight": 0.0294343
+        },
+        {
+          "symbol": "GOOGM",
+          "weight": 0.026458599
+        },
+        {
+          "symbol": "FLGPA",
+          "weight": 0.0261556
+        },
+        {
+          "symbol": "KKRPD",
+          "weight": 0.025975399
+        },
+        {
+          "symbol": "GOOGN",
+          "weight": 0.0242645
+        },
+        {
+          "symbol": "TDSPV",
+          "weight": 0.0231081
+        },
+        {
+          "symbol": "ETPI",
+          "weight": 0.0228092
+        },
+        {
+          "symbol": "ORCLPD",
+          "weight": 0.0226
+        },
+        {
+          "symbol": "BAPA",
+          "weight": 0.022008
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:32.718335+09:00"
     },
     "PFFD": {
@@ -24989,8 +27187,94 @@
       "expense_ratio": 0.0023,
       "dividend_yield": 0.0682,
       "inception_date": "2017-09-11",
-      "sectors": "[{\"sector\": \"utilities\", \"weight\": 0.84910005}, {\"sector\": \"technology\", \"weight\": 0.09770001}, {\"sector\": \"industrials\", \"weight\": 0.053200003}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"energy\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"BAPA\", \"weight\": 0.0412708}, {\"symbol\": \"HPEPC\", \"weight\": 0.0388768}, {\"symbol\": \"ORCLPD\", \"weight\": 0.0341958}, {\"symbol\": \"WFCPL\", \"weight\": 0.022622}, {\"symbol\": \"CPN\", \"weight\": 0.020053599}, {\"symbol\": \"KKRPD\", \"weight\": 0.0174121}, {\"symbol\": \"NEEPV\", \"weight\": 0.016699601}, {\"symbol\": \"MCHPP\", \"weight\": 0.0160707}, {\"symbol\": \"SOMN\", \"weight\": 0.015417}, {\"symbol\": \"BACPL\", \"weight\": 0.0142481}]",
+      "sectors": [
+        {
+          "sector": "utilities",
+          "weight": 0.84910005
+        },
+        {
+          "sector": "technology",
+          "weight": 0.09770001
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.053200003
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "BAPA",
+          "weight": 0.0412708
+        },
+        {
+          "symbol": "HPEPC",
+          "weight": 0.0388768
+        },
+        {
+          "symbol": "ORCLPD",
+          "weight": 0.0341958
+        },
+        {
+          "symbol": "WFCPL",
+          "weight": 0.022622
+        },
+        {
+          "symbol": "CPN",
+          "weight": 0.020053599
+        },
+        {
+          "symbol": "KKRPD",
+          "weight": 0.0174121
+        },
+        {
+          "symbol": "NEEPV",
+          "weight": 0.016699601
+        },
+        {
+          "symbol": "MCHPP",
+          "weight": 0.0160707
+        },
+        {
+          "symbol": "SOMN",
+          "weight": 0.015417
+        },
+        {
+          "symbol": "BACPL",
+          "weight": 0.0142481
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:33.459921+09:00"
     },
     "JNK": {
@@ -24999,8 +27283,53 @@
       "expense_ratio": 0.004,
       "dividend_yield": 0.0683,
       "inception_date": "2007-11-28",
-      "sectors": "[{\"sector\": \"energy\", \"weight\": 1.0}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0}, {\"sector\": \"technology\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}, {\"sector\": \"financial_services\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}, {\"sector\": \"industrials\", \"weight\": 0.0}, {\"sector\": \"healthcare\", \"weight\": 0.0}]",
-      "top_holdings": "[]",
+      "sectors": [
+        {
+          "sector": "energy",
+          "weight": 1.0
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [],
       "fetched_at": "2026-10-08T10:35:34.485664+09:00"
     },
     "BKLN": {
@@ -25009,8 +27338,13 @@
       "expense_ratio": 0.0064999997,
       "dividend_yield": 0.0639,
       "inception_date": "2011-03-03",
-      "sectors": "[]",
-      "top_holdings": "[{\"symbol\": \"IUGXX\", \"weight\": 0.048133798}]",
+      "sectors": [],
+      "top_holdings": [
+        {
+          "symbol": "IUGXX",
+          "weight": 0.048133798
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:37.621107+09:00"
     },
     "SCHD": {
@@ -25019,8 +27353,94 @@
       "expense_ratio": 0.00059999997,
       "dividend_yield": 0.0324,
       "inception_date": "2011-10-20",
-      "sectors": "[{\"sector\": \"consumer_defensive\", \"weight\": 0.2007}, {\"sector\": \"healthcare\", \"weight\": 0.1933}, {\"sector\": \"technology\", \"weight\": 0.1598}, {\"sector\": \"energy\", \"weight\": 0.1535}, {\"sector\": \"financial_services\", \"weight\": 0.091800004}, {\"sector\": \"industrials\", \"weight\": 0.0731}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0673}, {\"sector\": \"communication_services\", \"weight\": 0.059499998}, {\"sector\": \"utilities\", \"weight\": 0.00090000004}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"basic_materials\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"TXN\", \"weight\": 0.046566702}, {\"symbol\": \"QCOM\", \"weight\": 0.0456261}, {\"symbol\": \"PG\", \"weight\": 0.0423155}, {\"symbol\": \"MRK\", \"weight\": 0.0414663}, {\"symbol\": \"KO\", \"weight\": 0.0414537}, {\"symbol\": \"CVX\", \"weight\": 0.0406494}, {\"symbol\": \"AMGN\", \"weight\": 0.0402952}, {\"symbol\": \"UNH\", \"weight\": 0.0395164}, {\"symbol\": \"PEP\", \"weight\": 0.0385756}, {\"symbol\": \"VZ\", \"weight\": 0.0385659}]",
+      "sectors": [
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.2007
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1933
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1598
+        },
+        {
+          "sector": "energy",
+          "weight": 0.1535
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.091800004
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0731
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0673
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.059499998
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.00090000004
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "TXN",
+          "weight": 0.046566702
+        },
+        {
+          "symbol": "QCOM",
+          "weight": 0.0456261
+        },
+        {
+          "symbol": "PG",
+          "weight": 0.0423155
+        },
+        {
+          "symbol": "MRK",
+          "weight": 0.0414663
+        },
+        {
+          "symbol": "KO",
+          "weight": 0.0414537
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0406494
+        },
+        {
+          "symbol": "AMGN",
+          "weight": 0.0402952
+        },
+        {
+          "symbol": "UNH",
+          "weight": 0.0395164
+        },
+        {
+          "symbol": "PEP",
+          "weight": 0.0385756
+        },
+        {
+          "symbol": "VZ",
+          "weight": 0.0385659
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:38.387684+09:00"
     },
     "VYM": {
@@ -25029,8 +27449,94 @@
       "expense_ratio": 0.0004,
       "dividend_yield": 0.023699999,
       "inception_date": "2006-11-10",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.2165}, {\"sector\": \"technology\", \"weight\": 0.1696}, {\"sector\": \"healthcare\", \"weight\": 0.1363}, {\"sector\": \"industrials\", \"weight\": 0.1159}, {\"sector\": \"energy\", \"weight\": 0.0999}, {\"sector\": \"consumer_defensive\", \"weight\": 0.081199996}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0629}, {\"sector\": \"utilities\", \"weight\": 0.0507}, {\"sector\": \"communication_services\", \"weight\": 0.033800002}, {\"sector\": \"basic_materials\", \"weight\": 0.032899998}, {\"sector\": \"realestate\", \"weight\": 0.0002}]",
-      "top_holdings": "[{\"symbol\": \"AVGO\", \"weight\": 0.0692938}, {\"symbol\": \"JPM\", \"weight\": 0.038287}, {\"symbol\": \"XOM\", \"weight\": 0.0269401}, {\"symbol\": \"JNJ\", \"weight\": 0.025764799}, {\"symbol\": \"ABBV\", \"weight\": 0.0182598}, {\"symbol\": \"CSCO\", \"weight\": 0.017557599}, {\"symbol\": \"BAC\", \"weight\": 0.0164764}, {\"symbol\": \"CVX\", \"weight\": 0.0153821}, {\"symbol\": \"MRK\", \"weight\": 0.0147027}, {\"symbol\": \"CAT\", \"weight\": 0.014569599}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.2165
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1696
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1363
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1159
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0999
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.081199996
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0629
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0507
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.033800002
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.032899998
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0002
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "AVGO",
+          "weight": 0.0692938
+        },
+        {
+          "symbol": "JPM",
+          "weight": 0.038287
+        },
+        {
+          "symbol": "XOM",
+          "weight": 0.0269401
+        },
+        {
+          "symbol": "JNJ",
+          "weight": 0.025764799
+        },
+        {
+          "symbol": "ABBV",
+          "weight": 0.0182598
+        },
+        {
+          "symbol": "CSCO",
+          "weight": 0.017557599
+        },
+        {
+          "symbol": "BAC",
+          "weight": 0.0164764
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0153821
+        },
+        {
+          "symbol": "MRK",
+          "weight": 0.0147027
+        },
+        {
+          "symbol": "CAT",
+          "weight": 0.014569599
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:39.145687+09:00"
     },
     "DGRO": {
@@ -25039,8 +27545,94 @@
       "expense_ratio": 0.0008,
       "dividend_yield": 0.0198,
       "inception_date": "2014-06-10",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.1965}, {\"sector\": \"technology\", \"weight\": 0.1927}, {\"sector\": \"healthcare\", \"weight\": 0.1745}, {\"sector\": \"consumer_defensive\", \"weight\": 0.1232}, {\"sector\": \"industrials\", \"weight\": 0.105500005}, {\"sector\": \"utilities\", \"weight\": 0.0685}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0587}, {\"sector\": \"energy\", \"weight\": 0.0553}, {\"sector\": \"basic_materials\", \"weight\": 0.023699999}, {\"sector\": \"communication_services\", \"weight\": 0.0014}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"MSFT\", \"weight\": 0.0321525}, {\"symbol\": \"AAPL\", \"weight\": 0.031610798}, {\"symbol\": \"XOM\", \"weight\": 0.031098299}, {\"symbol\": \"ABBV\", \"weight\": 0.0290713}, {\"symbol\": \"JNJ\", \"weight\": 0.028984498}, {\"symbol\": \"JPM\", \"weight\": 0.0280314}, {\"symbol\": \"AVGO\", \"weight\": 0.027777601}, {\"symbol\": \"PG\", \"weight\": 0.023418}, {\"symbol\": \"PM\", \"weight\": 0.022299}, {\"symbol\": \"HD\", \"weight\": 0.0191912}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.1965
+        },
+        {
+          "sector": "technology",
+          "weight": 0.1927
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1745
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.1232
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.105500005
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0685
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0587
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0553
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.023699999
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0014
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "MSFT",
+          "weight": 0.0321525
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.031610798
+        },
+        {
+          "symbol": "XOM",
+          "weight": 0.031098299
+        },
+        {
+          "symbol": "ABBV",
+          "weight": 0.0290713
+        },
+        {
+          "symbol": "JNJ",
+          "weight": 0.028984498
+        },
+        {
+          "symbol": "JPM",
+          "weight": 0.0280314
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.027777601
+        },
+        {
+          "symbol": "PG",
+          "weight": 0.023418
+        },
+        {
+          "symbol": "PM",
+          "weight": 0.022299
+        },
+        {
+          "symbol": "HD",
+          "weight": 0.0191912
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:39.887728+09:00"
     },
     "VIG": {
@@ -25049,8 +27641,94 @@
       "expense_ratio": 0.0004,
       "dividend_yield": 0.0156,
       "inception_date": "2006-04-21",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.2631}, {\"sector\": \"financial_services\", \"weight\": 0.2184}, {\"sector\": \"healthcare\", \"weight\": 0.1832}, {\"sector\": \"industrials\", \"weight\": 0.1087}, {\"sector\": \"consumer_defensive\", \"weight\": 0.08979999}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0422}, {\"sector\": \"energy\", \"weight\": 0.0347}, {\"sector\": \"basic_materials\", \"weight\": 0.0323}, {\"sector\": \"utilities\", \"weight\": 0.0273}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"communication_services\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"MSFT\", \"weight\": 0.046751097}, {\"symbol\": \"AAPL\", \"weight\": 0.045073}, {\"symbol\": \"AVGO\", \"weight\": 0.0434762}, {\"symbol\": \"JPM\", \"weight\": 0.040704697}, {\"symbol\": \"LLY\", \"weight\": 0.039044198}, {\"symbol\": \"XOM\", \"weight\": 0.0284659}, {\"symbol\": \"JNJ\", \"weight\": 0.027306499}, {\"symbol\": \"V\", \"weight\": 0.025021901}, {\"symbol\": \"MA\", \"weight\": 0.020289099}, {\"symbol\": \"WMT\", \"weight\": 0.019617401}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.2631
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.2184
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1832
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1087
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.08979999
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0422
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0347
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0323
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0273
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "MSFT",
+          "weight": 0.046751097
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.045073
+        },
+        {
+          "symbol": "AVGO",
+          "weight": 0.0434762
+        },
+        {
+          "symbol": "JPM",
+          "weight": 0.040704697
+        },
+        {
+          "symbol": "LLY",
+          "weight": 0.039044198
+        },
+        {
+          "symbol": "XOM",
+          "weight": 0.0284659
+        },
+        {
+          "symbol": "JNJ",
+          "weight": 0.027306499
+        },
+        {
+          "symbol": "V",
+          "weight": 0.025021901
+        },
+        {
+          "symbol": "MA",
+          "weight": 0.020289099
+        },
+        {
+          "symbol": "WMT",
+          "weight": 0.019617401
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:40.615374+09:00"
     },
     "HDV": {
@@ -25059,8 +27737,94 @@
       "expense_ratio": 0.0008,
       "dividend_yield": 0.0305,
       "inception_date": "2011-03-29",
-      "sectors": "[{\"sector\": \"consumer_defensive\", \"weight\": 0.2691}, {\"sector\": \"energy\", \"weight\": 0.24610001}, {\"sector\": \"healthcare\", \"weight\": 0.13520001}, {\"sector\": \"utilities\", \"weight\": 0.1089}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0942}, {\"sector\": \"communication_services\", \"weight\": 0.058000002}, {\"sector\": \"financial_services\", \"weight\": 0.049099997}, {\"sector\": \"industrials\", \"weight\": 0.016900001}, {\"sector\": \"technology\", \"weight\": 0.0145000005}, {\"sector\": \"basic_materials\", \"weight\": 0.008}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"XOM\", \"weight\": 0.0928531}, {\"symbol\": \"CVX\", \"weight\": 0.0699742}, {\"symbol\": \"ABBV\", \"weight\": 0.066993296}, {\"symbol\": \"VZ\", \"weight\": 0.0578263}, {\"symbol\": \"PG\", \"weight\": 0.053965803}, {\"symbol\": \"PM\", \"weight\": 0.0513873}, {\"symbol\": \"HD\", \"weight\": 0.0442252}, {\"symbol\": \"KO\", \"weight\": 0.043524697}, {\"symbol\": \"PEP\", \"weight\": 0.0399944}, {\"symbol\": \"MO\", \"weight\": 0.0372086}]",
+      "sectors": [
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.2691
+        },
+        {
+          "sector": "energy",
+          "weight": 0.24610001
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.13520001
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.1089
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0942
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.058000002
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.049099997
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.016900001
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0145000005
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.008
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "XOM",
+          "weight": 0.0928531
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0699742
+        },
+        {
+          "symbol": "ABBV",
+          "weight": 0.066993296
+        },
+        {
+          "symbol": "VZ",
+          "weight": 0.0578263
+        },
+        {
+          "symbol": "PG",
+          "weight": 0.053965803
+        },
+        {
+          "symbol": "PM",
+          "weight": 0.0513873
+        },
+        {
+          "symbol": "HD",
+          "weight": 0.0442252
+        },
+        {
+          "symbol": "KO",
+          "weight": 0.043524697
+        },
+        {
+          "symbol": "PEP",
+          "weight": 0.0399944
+        },
+        {
+          "symbol": "MO",
+          "weight": 0.0372086
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:41.482417+09:00"
     },
     "SPHD": {
@@ -25069,8 +27833,94 @@
       "expense_ratio": 0.003,
       "dividend_yield": 0.0512,
       "inception_date": "2012-10-18",
-      "sectors": "[{\"sector\": \"realestate\", \"weight\": 0.1973}, {\"sector\": \"consumer_defensive\", \"weight\": 0.1852}, {\"sector\": \"utilities\", \"weight\": 0.1391}, {\"sector\": \"financial_services\", \"weight\": 0.1273}, {\"sector\": \"energy\", \"weight\": 0.1084}, {\"sector\": \"communication_services\", \"weight\": 0.087}, {\"sector\": \"healthcare\", \"weight\": 0.0809}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.035099998}, {\"sector\": \"technology\", \"weight\": 0.0207}, {\"sector\": \"industrials\", \"weight\": 0.019}, {\"sector\": \"basic_materials\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"PFE\", \"weight\": 0.0378983}, {\"symbol\": \"VZ\", \"weight\": 0.033746198}, {\"symbol\": \"KHC\", \"weight\": 0.0288652}, {\"symbol\": \"GIS\", \"weight\": 0.028737199}, {\"symbol\": \"VICI\", \"weight\": 0.028501999}, {\"symbol\": \"T\", \"weight\": 0.0280303}, {\"symbol\": \"MO\", \"weight\": 0.027140401}, {\"symbol\": \"DOC\", \"weight\": 0.0253251}, {\"symbol\": \"CMCSA\", \"weight\": 0.0245535}, {\"symbol\": \"PRU\", \"weight\": 0.0240379}]",
+      "sectors": [
+        {
+          "sector": "realestate",
+          "weight": 0.1973
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.1852
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.1391
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1273
+        },
+        {
+          "sector": "energy",
+          "weight": 0.1084
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.087
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0809
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.035099998
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0207
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.019
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "PFE",
+          "weight": 0.0378983
+        },
+        {
+          "symbol": "VZ",
+          "weight": 0.033746198
+        },
+        {
+          "symbol": "KHC",
+          "weight": 0.0288652
+        },
+        {
+          "symbol": "GIS",
+          "weight": 0.028737199
+        },
+        {
+          "symbol": "VICI",
+          "weight": 0.028501999
+        },
+        {
+          "symbol": "T",
+          "weight": 0.0280303
+        },
+        {
+          "symbol": "MO",
+          "weight": 0.027140401
+        },
+        {
+          "symbol": "DOC",
+          "weight": 0.0253251
+        },
+        {
+          "symbol": "CMCSA",
+          "weight": 0.0245535
+        },
+        {
+          "symbol": "PRU",
+          "weight": 0.0240379
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:42.351866+09:00"
     },
     "SDIV": {
@@ -25079,8 +27929,94 @@
       "expense_ratio": 0.0058,
       "dividend_yield": 0.0954,
       "inception_date": "2011-06-08",
-      "sectors": "[{\"sector\": \"realestate\", \"weight\": 0.32669997}, {\"sector\": \"financial_services\", \"weight\": 0.1842}, {\"sector\": \"energy\", \"weight\": 0.1513}, {\"sector\": \"industrials\", \"weight\": 0.1079}, {\"sector\": \"basic_materials\", \"weight\": 0.053000003}, {\"sector\": \"communication_services\", \"weight\": 0.052399997}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0466}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.044}, {\"sector\": \"healthcare\", \"weight\": 0.0147}, {\"sector\": \"utilities\", \"weight\": 0.010299999}, {\"sector\": \"technology\", \"weight\": 0.0091}]",
-      "top_holdings": "[{\"symbol\": \"NAT\", \"weight\": 0.018493399}, {\"symbol\": \"TFG-R\", \"weight\": 0.018156901}, {\"symbol\": \"HAUTO.OL\", \"weight\": 0.0178071}, {\"symbol\": \"VCT.L\", \"weight\": 0.0161657}, {\"symbol\": \"VARO.ST\", \"weight\": 0.015907299}, {\"symbol\": \"RHI\", \"weight\": 0.0151356}, {\"symbol\": \"ITH.L\", \"weight\": 0.0150403}, {\"symbol\": \"PK\", \"weight\": 0.0146326}, {\"symbol\": \"PRGO\", \"weight\": 0.0143924}, {\"symbol\": \"PETR4\", \"weight\": 0.014318399}]",
+      "sectors": [
+        {
+          "sector": "realestate",
+          "weight": 0.32669997
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1842
+        },
+        {
+          "sector": "energy",
+          "weight": 0.1513
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1079
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.053000003
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.052399997
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0466
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.044
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0147
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.010299999
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0091
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NAT",
+          "weight": 0.018493399
+        },
+        {
+          "symbol": "TFG-R",
+          "weight": 0.018156901
+        },
+        {
+          "symbol": "HAUTO.OL",
+          "weight": 0.0178071
+        },
+        {
+          "symbol": "VCT.L",
+          "weight": 0.0161657
+        },
+        {
+          "symbol": "VARO.ST",
+          "weight": 0.015907299
+        },
+        {
+          "symbol": "RHI",
+          "weight": 0.0151356
+        },
+        {
+          "symbol": "ITH.L",
+          "weight": 0.0150403
+        },
+        {
+          "symbol": "PK",
+          "weight": 0.0146326
+        },
+        {
+          "symbol": "PRGO",
+          "weight": 0.0143924
+        },
+        {
+          "symbol": "PETR4",
+          "weight": 0.014318399
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:43.259452+09:00"
     },
     "DGRW": {
@@ -25089,8 +28025,94 @@
       "expense_ratio": 0.0028,
       "dividend_yield": 0.012200001,
       "inception_date": "2013-05-22",
-      "sectors": "[{\"sector\": \"technology\", \"weight\": 0.35209998}, {\"sector\": \"healthcare\", \"weight\": 0.129}, {\"sector\": \"communication_services\", \"weight\": 0.1181}, {\"sector\": \"industrials\", \"weight\": 0.1027}, {\"sector\": \"financial_services\", \"weight\": 0.0836}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0672}, {\"sector\": \"consumer_defensive\", \"weight\": 0.0656}, {\"sector\": \"energy\", \"weight\": 0.0507}, {\"sector\": \"basic_materials\", \"weight\": 0.0293}, {\"sector\": \"utilities\", \"weight\": 0.0017}, {\"sector\": \"realestate\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"NVDA\", \"weight\": 0.089239396}, {\"symbol\": \"MSFT\", \"weight\": 0.0777553}, {\"symbol\": \"AAPL\", \"weight\": 0.043790597}, {\"symbol\": \"META\", \"weight\": 0.0376285}, {\"symbol\": \"KO\", \"weight\": 0.030015599}, {\"symbol\": \"UNH\", \"weight\": 0.0254015}, {\"symbol\": \"JNJ\", \"weight\": 0.0240258}, {\"symbol\": \"HD\", \"weight\": 0.0222845}, {\"symbol\": \"GOOG\", \"weight\": 0.021977998}, {\"symbol\": \"GOOGL\", \"weight\": 0.0218852}]",
+      "sectors": [
+        {
+          "sector": "technology",
+          "weight": 0.35209998
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.129
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.1181
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1027
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.0836
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0672
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.0656
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0507
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0293
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0017
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "NVDA",
+          "weight": 0.089239396
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0777553
+        },
+        {
+          "symbol": "AAPL",
+          "weight": 0.043790597
+        },
+        {
+          "symbol": "META",
+          "weight": 0.0376285
+        },
+        {
+          "symbol": "KO",
+          "weight": 0.030015599
+        },
+        {
+          "symbol": "UNH",
+          "weight": 0.0254015
+        },
+        {
+          "symbol": "JNJ",
+          "weight": 0.0240258
+        },
+        {
+          "symbol": "HD",
+          "weight": 0.0222845
+        },
+        {
+          "symbol": "GOOG",
+          "weight": 0.021977998
+        },
+        {
+          "symbol": "GOOGL",
+          "weight": 0.0218852
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:43.980194+09:00"
     },
     "NOBL": {
@@ -25099,8 +28121,94 @@
       "expense_ratio": 0.0034999999,
       "dividend_yield": 0.0217,
       "inception_date": "2013-10-09",
-      "sectors": "[{\"sector\": \"consumer_defensive\", \"weight\": 0.2284}, {\"sector\": \"industrials\", \"weight\": 0.2015}, {\"sector\": \"financial_services\", \"weight\": 0.13}, {\"sector\": \"healthcare\", \"weight\": 0.1103}, {\"sector\": \"basic_materials\", \"weight\": 0.1009}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0572}, {\"sector\": \"utilities\", \"weight\": 0.052699998}, {\"sector\": \"technology\", \"weight\": 0.0478}, {\"sector\": \"realestate\", \"weight\": 0.0395}, {\"sector\": \"energy\", \"weight\": 0.0318}, {\"sector\": \"communication_services\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"BDX\", \"weight\": 0.017589299}, {\"symbol\": \"TGT\", \"weight\": 0.0170985}, {\"symbol\": \"NDSN\", \"weight\": 0.0169213}, {\"symbol\": \"EMR\", \"weight\": 0.016718}, {\"symbol\": \"FDS\", \"weight\": 0.0165685}, {\"symbol\": \"FAST\", \"weight\": 0.0164448}, {\"symbol\": \"IBM\", \"weight\": 0.016086299}, {\"symbol\": \"ADP\", \"weight\": 0.0159754}, {\"symbol\": \"CVX\", \"weight\": 0.0159264}, {\"symbol\": \"MDT\", \"weight\": 0.0158591}]",
+      "sectors": [
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.2284
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.2015
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.13
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.1103
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.1009
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0572
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.052699998
+        },
+        {
+          "sector": "technology",
+          "weight": 0.0478
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0395
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0318
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "BDX",
+          "weight": 0.017589299
+        },
+        {
+          "symbol": "TGT",
+          "weight": 0.0170985
+        },
+        {
+          "symbol": "NDSN",
+          "weight": 0.0169213
+        },
+        {
+          "symbol": "EMR",
+          "weight": 0.016718
+        },
+        {
+          "symbol": "FDS",
+          "weight": 0.0165685
+        },
+        {
+          "symbol": "FAST",
+          "weight": 0.0164448
+        },
+        {
+          "symbol": "IBM",
+          "weight": 0.016086299
+        },
+        {
+          "symbol": "ADP",
+          "weight": 0.0159754
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0159264
+        },
+        {
+          "symbol": "MDT",
+          "weight": 0.0158591
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:44.738231+09:00"
     },
     "SPYD": {
@@ -25109,8 +28217,94 @@
       "expense_ratio": 0.0007,
       "dividend_yield": 0.0454,
       "inception_date": "2015-10-21",
-      "sectors": "[{\"sector\": \"realestate\", \"weight\": 0.24620001}, {\"sector\": \"consumer_defensive\", \"weight\": 0.1398}, {\"sector\": \"financial_services\", \"weight\": 0.1261}, {\"sector\": \"utilities\", \"weight\": 0.1078}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.09020001}, {\"sector\": \"technology\", \"weight\": 0.060500003}, {\"sector\": \"communication_services\", \"weight\": 0.054899998}, {\"sector\": \"energy\", \"weight\": 0.053600002}, {\"sector\": \"healthcare\", \"weight\": 0.045}, {\"sector\": \"basic_materials\", \"weight\": 0.0381}, {\"sector\": \"industrials\", \"weight\": 0.0377}]",
-      "top_holdings": "[{\"symbol\": \"ACN\", \"weight\": 0.018035801}, {\"symbol\": \"HPQ\", \"weight\": 0.0171723}, {\"symbol\": \"PFE\", \"weight\": 0.0158339}, {\"symbol\": \"TGT\", \"weight\": 0.0156544}, {\"symbol\": \"T\", \"weight\": 0.0145928}, {\"symbol\": \"CVX\", \"weight\": 0.0145811}, {\"symbol\": \"MDT\", \"weight\": 0.014519201}, {\"symbol\": \"VZ\", \"weight\": 0.0142714}, {\"symbol\": \"BMY\", \"weight\": 0.0141517}, {\"symbol\": \"BBY\", \"weight\": 0.0139581}]",
+      "sectors": [
+        {
+          "sector": "realestate",
+          "weight": 0.24620001
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.1398
+        },
+        {
+          "sector": "financial_services",
+          "weight": 0.1261
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.1078
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.09020001
+        },
+        {
+          "sector": "technology",
+          "weight": 0.060500003
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.054899998
+        },
+        {
+          "sector": "energy",
+          "weight": 0.053600002
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.045
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0381
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.0377
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "ACN",
+          "weight": 0.018035801
+        },
+        {
+          "symbol": "HPQ",
+          "weight": 0.0171723
+        },
+        {
+          "symbol": "PFE",
+          "weight": 0.0158339
+        },
+        {
+          "symbol": "TGT",
+          "weight": 0.0156544
+        },
+        {
+          "symbol": "T",
+          "weight": 0.0145928
+        },
+        {
+          "symbol": "CVX",
+          "weight": 0.0145811
+        },
+        {
+          "symbol": "MDT",
+          "weight": 0.014519201
+        },
+        {
+          "symbol": "VZ",
+          "weight": 0.0142714
+        },
+        {
+          "symbol": "BMY",
+          "weight": 0.0141517
+        },
+        {
+          "symbol": "BBY",
+          "weight": 0.0139581
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:45.499997+09:00"
     },
     "RDVY": {
@@ -25119,8 +28313,94 @@
       "expense_ratio": 0.0047,
       "dividend_yield": 0.0087,
       "inception_date": "2014-01-06",
-      "sectors": "[{\"sector\": \"financial_services\", \"weight\": 0.3804}, {\"sector\": \"technology\", \"weight\": 0.2715}, {\"sector\": \"industrials\", \"weight\": 0.1237}, {\"sector\": \"consumer_cyclical\", \"weight\": 0.0971}, {\"sector\": \"communication_services\", \"weight\": 0.0423}, {\"sector\": \"healthcare\", \"weight\": 0.0392}, {\"sector\": \"consumer_defensive\", \"weight\": 0.023599999}, {\"sector\": \"energy\", \"weight\": 0.0176}, {\"sector\": \"basic_materials\", \"weight\": 0.0046}, {\"sector\": \"realestate\", \"weight\": 0.0}, {\"sector\": \"utilities\", \"weight\": 0.0}]",
-      "top_holdings": "[{\"symbol\": \"AMAT\", \"weight\": 0.0269132}, {\"symbol\": \"LRCX\", \"weight\": 0.0267435}, {\"symbol\": \"KLAC\", \"weight\": 0.0241975}, {\"symbol\": \"MU\", \"weight\": 0.023264}, {\"symbol\": \"META\", \"weight\": 0.022553999}, {\"symbol\": \"NVDA\", \"weight\": 0.0225509}, {\"symbol\": \"GEV\", \"weight\": 0.022549}, {\"symbol\": \"TRV\", \"weight\": 0.0220025}, {\"symbol\": \"MSFT\", \"weight\": 0.0216981}, {\"symbol\": \"ROST\", \"weight\": 0.021543501}]",
+      "sectors": [
+        {
+          "sector": "financial_services",
+          "weight": 0.3804
+        },
+        {
+          "sector": "technology",
+          "weight": 0.2715
+        },
+        {
+          "sector": "industrials",
+          "weight": 0.1237
+        },
+        {
+          "sector": "consumer_cyclical",
+          "weight": 0.0971
+        },
+        {
+          "sector": "communication_services",
+          "weight": 0.0423
+        },
+        {
+          "sector": "healthcare",
+          "weight": 0.0392
+        },
+        {
+          "sector": "consumer_defensive",
+          "weight": 0.023599999
+        },
+        {
+          "sector": "energy",
+          "weight": 0.0176
+        },
+        {
+          "sector": "basic_materials",
+          "weight": 0.0046
+        },
+        {
+          "sector": "realestate",
+          "weight": 0.0
+        },
+        {
+          "sector": "utilities",
+          "weight": 0.0
+        }
+      ],
+      "top_holdings": [
+        {
+          "symbol": "AMAT",
+          "weight": 0.0269132
+        },
+        {
+          "symbol": "LRCX",
+          "weight": 0.0267435
+        },
+        {
+          "symbol": "KLAC",
+          "weight": 0.0241975
+        },
+        {
+          "symbol": "MU",
+          "weight": 0.023264
+        },
+        {
+          "symbol": "META",
+          "weight": 0.022553999
+        },
+        {
+          "symbol": "NVDA",
+          "weight": 0.0225509
+        },
+        {
+          "symbol": "GEV",
+          "weight": 0.022549
+        },
+        {
+          "symbol": "TRV",
+          "weight": 0.0220025
+        },
+        {
+          "symbol": "MSFT",
+          "weight": 0.0216981
+        },
+        {
+          "symbol": "ROST",
+          "weight": 0.021543501
+        }
+      ],
       "fetched_at": "2026-10-08T10:35:46.354775+09:00"
     }
   }
