@@ -73,6 +73,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="crumb"><a href="market.html">시장</a> &gt; <span id="crumb-name">종목</span></div>
 <h1 id="stock-title">-</h1>
 <div class="sub" id="stock-sub"></div>
+<div class="sub" id="sim-link" style="margin-top:6px"></div>
 
 <div class="card" id="priceCard">
   <div class="result-hero">
@@ -114,6 +115,7 @@ const NAME=params.get('name')||CODE;
 const MARKET=params.get('market')||'KOSPI';
 const IS_US=MARKET==='US';
 document.getElementById('stock-title').textContent=NAME;
+if(/^[0-9][0-9A-Z]{5}$/.test(CODE))document.getElementById('sim-link').innerHTML='<a href="sim.html?code='+encodeURIComponent(CODE)+'&years=3" style="color:var(--accent)">📈 이 종목에 3년 전 투자했다면? 투자 시뮬레이터로 보기 →</a>';
 document.getElementById('crumb-name').textContent=NAME;
 document.getElementById('stock-sub').textContent=MARKET+' · '+CODE;
 
