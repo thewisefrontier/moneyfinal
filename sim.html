@@ -174,6 +174,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
       <div class="fld"><label>시장</label><select id="f-mkt"><option value="">전체</option><option value="P">코스피</option><option value="Q">코스닥</option></select></div>
       <div class="fld"><label>순이익</label><select id="f-ni"><option value="">전체</option><option value="pos">흑자만</option><option value="turn">적자→흑자 전환</option></select></div>
       <div class="fld"><button class="btn" id="scr-go" style="width:100%">검색</button></div>
+      <div class="fld"><button class="btn" id="scr-share" style="width:100%;background:var(--bg3);color:var(--text)">🔗 조건 링크 복사</button></div>
     </div>
     <div class="note" id="scr-count" style="padding-top:0"></div>
     <div id="scr-table" style="overflow-x:auto"><div class="loading">로딩 중...</div></div>
@@ -248,7 +249,32 @@ async function init(){
   $('go').addEventListener('click',run);
   $('mode').addEventListener('change',()=>{$('amtlbl').textContent=$('mode').value==='lump'?'투자금(원)':'월 적립금(원)';$('amt').value=$('mode').value==='lump'?'10000000':'500000';});
   loadRank();
-  const u=new URLSearchParams(location.search);if(u.get('code')){const r=INDEX.find(x=>x[0]===u.get('code'));if(r){pick(r[0],r[1]);if(u.get('years'))$('start').value=Math.max(0,yearsBackIdx(+u.get('years')));run();}}
+  applyParams(new URLSearchParams(location.search));
+}
+
+const SCR_KEYS={roe:'f-roe',margin:'f-margin',debt:'f-debt',per:'f-per',pbr:'f-pbr',rev:'f-rev',dy:'f-dy',mcap:'f-mcap',mkt:'f-mkt',ni:'f-ni'};
+async function applyParams(u){
+  if(u.get('tab')==='scr'){showTab('scr');await loadScreen();
+    Object.keys(SCR_KEYS).forEach(k=>{if(u.get(k)!=null)$(SCR_KEYS[k]).value=u.get(k);});
+    if(u.get('sk')){SK=u.get('sk');SD=+u.get('sd')||-1;}
+    drawScr();return;}
+  if(u.get('tab')==='rank'){showTab('rank');return;}
+  const code=u.get('code');if(!code)return;
+  const r=INDEX.find(x=>x[0]===code);if(!r)return;
+  showTab('sim');pick(r[0],r[1]);
+  if(u.get('start')){const i=META.grid.findIndex(d=>d.startsWith(u.get('start')));if(i>=0)$('start').value=i;}
+  else if(u.get('years'))$('start').value=Math.max(0,yearsBackIdx(+u.get('years')));
+  if(u.get('mode')){$('mode').value=u.get('mode');$('mode').dispatchEvent(new Event('change'));}
+  if(u.get('amt'))$('amt').value=u.get('amt');
+  if(u.get('div'))$('div').value=u.get('div');
+  run();
+}
+function shareUrl(params){const q=new URLSearchParams();Object.keys(params).forEach(k=>{if(params[k]!==''&&params[k]!=null)q.set(k,params[k]);});return location.origin+location.pathname+'?'+q.toString();}
+function simShare(){return shareUrl({code:CUR,start:META.grid[+$('start').value].slice(0,7),mode:$('mode').value,amt:$('amt').value.replace(/[^0-9]/g,''),div:$('div').value});}
+function scrShare(){const o={tab:'scr',sk:SK,sd:SD};Object.keys(SCR_KEYS).forEach(k=>{o[k]=$(SCR_KEYS[k]).value;});return shareUrl(o);}
+async function copyLink(url,btn){
+  try{await navigator.clipboard.writeText(url);}catch(e){const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();try{document.execCommand('copy');}catch(_){}t.remove();}
+  const old=btn.textContent;btn.textContent='✅ 복사됨';setTimeout(()=>btn.textContent=old,1500);
 }
 function yearsBackIdx(n){const g=META.grid,end=new Date(META.asof);const t=new Date(end.getFullYear()-n,end.getMonth(),Math.min(end.getDate(),28));
   let best=0;g.forEach((d,i)=>{if(new Date(d)<=t)best=i;});return best;}
@@ -306,11 +332,13 @@ async function run(){
   </div><div id="chart" style="padding:0 8px"></div><div class="legend" id="lg"></div>`;
   if(divInfo)h+=`<div class="note">💰 ${divInfo}</div>`;
   if(ev.length)h+=`<div class="note">⚙️ 액면분할·병합 보정: ${ev.map(e=>mm(e[0])+' '+(e[1]>1?e[1]+'분할':'1/'+Math.round(1/e[1])+' 병합')).join(', ')} (이전 주가를 환산해 표시)</div>`;
-  h+='</div>';
+  h+=`<div class="note"><button class="ft" id="share-sim">🔗 이 조건 링크 복사</button></div></div>`;
   if(f)h+=decompCard(f,mcArr,s,si,lastGi);
   if(f)h+=finCard(f,s);
   $('result').innerHTML=h;
   chart(pts,B,si,lastGi,mode);
+  try{history.replaceState(null,'',simShare());}catch(e){}
+  const sb=$('share-sim');if(sb)sb.onclick=()=>copyLink(simShare(),sb);
 }
 function axr(v){const u=v>=1e9?1e7:v>=1e8?1e6:v>=1e6?1e5:v>=1e4?1e3:1;return Math.round(v/u)*u;}
 function chart(pts,B,si,lastGi,mode){
@@ -412,6 +440,7 @@ async function loadScreen(){
   $('scr-asof').textContent='FY'+SCR.fy+' 연결 재무 · '+SCR.rows.length+'개 종목(시총 상위)';
   $('scr-presets').addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;applyPreset(b.dataset.p);});
   $('scr-go').addEventListener('click',drawScr);
+  $('scr-share').addEventListener('click',()=>copyLink(scrShare(),$('scr-share')));
   document.querySelectorAll('#p-scr .sim-form input,#p-scr .sim-form select').forEach(el=>el.addEventListener('change',drawScr));
   drawScr();drawBt('');
 }
