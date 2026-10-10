@@ -17,6 +17,7 @@
     ['company.html', '기업정보'],
     ['superinvestor.html', '슈퍼인베스터'],
     ['bond.html', '채권'],
+    ['sim.html', '시뮬레이터'],
     ['macro.html', '경제지표'],
     ['calc.html', '계산기']
   ];
