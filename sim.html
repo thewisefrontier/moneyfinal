@@ -79,7 +79,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
 .br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
 .sim-form{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
-@media(max-width:800px){.sim-form{grid-template-columns:1fr 1fr}.sim-form .wide{grid-column:1/-1}}
+@media(max-width:800px){.sim-form{grid-template-columns:1fr 1fr!important}.sim-form .wide{grid-column:1/-1}}
 .fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
 .fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
 .suggest{position:relative}
@@ -123,6 +123,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="tabs" id="tabs">
   <button class="tab active" data-t="sim">투자 시뮬레이션</button>
   <button class="tab" data-t="rank">기간별 랭킹</button>
+  <button class="tab" data-t="scr">재무 스크리너</button>
   <button class="tab" data-t="scen">가정 시나리오</button>
 </div>
 
@@ -150,6 +151,36 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
     <div id="rk-stats"></div>
     <div id="rk-table" style="overflow-x:auto"><div class="loading">로딩 중...</div></div>
     <div class="note" id="rk-note"></div>
+  </div>
+</div>
+
+<div class="panel" id="p-scr">
+  <div class="card">
+    <div class="card-hd"><span class="card-title">재무제표 기준으로 종목 찾기</span><span class="sec-more" id="scr-asof"></span></div>
+    <div class="quick" id="scr-presets" style="padding-top:12px">
+      <button class="ft" data-p="valueQuality">저PER·고ROE</button><button class="ft" data-p="growth">매출 성장</button><button class="ft" data-p="lowDebt">저부채·수익성</button>
+      <button class="ft" data-p="lowPbr">저PBR</button><button class="ft" data-p="turnaround">흑자 전환</button><button class="ft" data-p="">조건 초기화</button>
+    </div>
+    <div class="sim-form" style="grid-template-columns:repeat(5,1fr)">
+      <div class="fld"><label>ROE 최소(%)</label><input id="f-roe" inputmode="decimal"></div>
+      <div class="fld"><label>영업이익률 최소(%)</label><input id="f-margin" inputmode="decimal"></div>
+      <div class="fld"><label>부채비율 최대(%)</label><input id="f-debt" inputmode="decimal"></div>
+      <div class="fld"><label>PER 최대(배)</label><input id="f-per" inputmode="decimal"></div>
+      <div class="fld"><label>PBR 최대(배)</label><input id="f-pbr" inputmode="decimal"></div>
+      <div class="fld"><label>매출 3년 연평균성장 최소(%)</label><input id="f-rev" inputmode="decimal"></div>
+      <div class="fld"><label>시가총액 최소(억원)</label><input id="f-mcap" inputmode="numeric"></div>
+      <div class="fld"><label>시장</label><select id="f-mkt"><option value="">전체</option><option value="P">코스피</option><option value="Q">코스닥</option></select></div>
+      <div class="fld"><label>순이익</label><select id="f-ni"><option value="">전체</option><option value="pos">흑자만</option><option value="turn">적자→흑자 전환</option></select></div>
+      <div class="fld"><button class="btn" id="scr-go" style="width:100%">검색</button></div>
+    </div>
+    <div class="note" id="scr-count" style="padding-top:0"></div>
+    <div id="scr-table" style="overflow-x:auto"><div class="loading">로딩 중...</div></div>
+    <div class="note">금융지주·은행·보험·증권사는 매출액과 부채비율이 일반 기업과 의미가 달라 '-'로 보이거나 값이 크게 나올 수 있으니 PER·PBR·ROE 위주로 보세요. 지주회사는 영업이익이 매출보다 커서 영업이익률을 비워 둡니다. 재무는 DART 연결 기준 최근 사업보고서(FY) 값이며, PER·PBR은 오늘 시가총액으로 계산했습니다. 이 화면은 조건에 맞는 종목을 나열할 뿐 매수 추천이 아닙니다.</div>
+  </div>
+  <div class="card">
+    <div class="card-hd"><span class="card-title">과거에 같은 조건으로 골랐다면 (과거 검증)</span></div>
+    <div id="bt-table" style="overflow-x:auto"></div>
+    <div class="note" id="bt-note"></div>
   </div>
 </div>
 
@@ -183,11 +214,14 @@ function krw(n){n=Math.round(n);const neg=n<0;n=Math.abs(n);if(n===0)return'0원
   const jo=Math.floor(n/1e12),eok=Math.floor(n%1e12/1e8),man=Math.floor(n%1e8/1e4),r=n%1e4;
   let s='';if(jo)s+=jo+'조';if(eok)s+=eok+'억';if(man)s+=man+'만';if(r&&!jo&&!eok)s+=r;
   if(!s)s=String(r);return(neg?'-':'')+s+'원';}
+function krwE(n){return n==null||!n?'-':(Math.abs(n)>=1e8?krw(Math.round(n/1e8)*1e8):krw(n));}
 const pct=(v,d=1)=>v==null||!isFinite(v)?'-':(v>0?'+':'')+(v*100).toFixed(d)+'%';
 const cls=v=>v>0?'down':v<0?'up':'neutral'; // 이 사이트: 상승=빨강(down 클래스가 red) ← 아래 반전
 function clr(v){return v>0?'var(--red)':v<0?'var(--blue)':'var(--text2)';} // 한국식: 상승 빨강, 하락 파랑
 async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
 async function shard(code){const k=code.slice(0,2);if(!SHARDS[k])SHARDS[k]=await J('data/sim/p_'+k+'.json');return SHARDS[k][code];}
+let MCS={};
+async function mcs(code){const k=code.slice(0,2);if(MCS[k]===undefined){try{MCS[k]=await J('data/sim/m_'+k+'.json');}catch(e){MCS[k]={};}}return MCS[k][code];}
 async function fin(code){const k=code.slice(0,2);if(FIN[k]===undefined){try{FIN[k]=await J('data/sim/f_'+k+'.json');}catch(e){FIN[k]={};}}return FIN[k][code];}
 function mm(d){return d.slice(0,7);}
 
@@ -242,7 +276,7 @@ async function run(){
   // 벤치마크(일시금일 때만)
   const bk=info[2]==='P'?'kospi':'kosdaq',B=META.bench[bk];
   let bret=null;if(mode==='lump'&&B[si]&&B[Math.min(lastGi,L)])bret=B[Math.min(lastGi,L)]/B[si]-1;
-  const f=await fin(CUR);
+  const f=await fin(CUR),mcArr=await mcs(CUR);
   let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(info[1])} <span class="badge">${CUR}</span>${delisted?'<span class="badge">상장폐지 · '+mm(g[lastGi])+'까지</span>':''}</span></div>
   <div class="stat">
    <div class="s"><div class="l">${mode==='lump'?'평가금액':'적립 평가금액'}</div><div class="v" style="color:${clr(tot)}">${krw(end.v)}</div></div>
@@ -256,6 +290,7 @@ async function run(){
   </div><div id="chart" style="padding:0 8px"></div><div class="legend" id="lg"></div>`;
   if(ev.length)h+=`<div class="note">⚙️ 액면분할·병합 보정: ${ev.map(e=>mm(e[0])+' '+(e[1]>1?e[1]+'분할':'1/'+Math.round(1/e[1])+' 병합')).join(', ')} (이전 주가를 환산해 표시)</div>`;
   h+='</div>';
+  if(f)h+=decompCard(f,mcArr,s,si,lastGi);
   if(f)h+=finCard(f,s);
   $('result').innerHTML=h;
   chart(pts,B,si,lastGi,mode);
@@ -279,13 +314,33 @@ function chart(pts,B,si,lastGi,mode){
   $('chart').innerHTML=s+'</svg>';
   $('lg').innerHTML=`<span><i style="background:${col('--accent')}"></i>평가금액</span>`+(bench?`<span><i style="background:${col('--text2')}"></i>같은 금액을 지수에 투자한 경우</span>`:'')+(mode==='dca'?`<span><i style="background:${col('--text2')}"></i>누적 납입금</span>`:'');
 }
+
+function decompCard(f,mc,s,si,lastGi){
+  if(!mc)return'';const g=META.grid,k0=si-s.f,k1=lastGi-s.f;
+  const a=mc[k0],b=mc[k1];if(!a||!b||lastGi<META.grid.length-1)return'';
+  const sd=new Date(g[si]),ed=new Date(g[lastGi]);
+  const fy0=sd.getMonth()>=3?sd.getFullYear()-1:sd.getFullYear()-2,fy1=ed.getMonth()>=3?ed.getFullYear()-1:ed.getFullYear()-2;
+  const r0=f[String(fy0)],r1=f[String(fy1)];
+  if(!r0||!r1||fy1<=fy0)return'';
+  const n0=r0[2],n1=r1[2];
+  if(!(n0>0&&n1>0))return`<div class="card"><div class="card-hd"><span class="card-title">주가 변화 분해</span></div><div class="note">이 기간 시작 또는 끝 시점의 순이익이 적자라 PER로 나눠 볼 수 없습니다 (FY${fy0}: ${r0[2]==null?'-':krwE(r0[2]*1e6)}, FY${fy1}: ${r1[2]==null?'-':krwE(r1[2]*1e6)}).</div></div>`;
+  const mcr=b/a,nir=n1/n0,per0=a*100/n0,per1=b*100/n1,perr=per1/per0;
+  return `<div class="card"><div class="card-hd"><span class="card-title">시가총액 변화 = 순이익 변화 × PER 변화</span></div>
+  <div class="stat">
+   <div class="s"><div class="l">시가총액 변화</div><div class="v" style="color:${clr(mcr-1)}">${pct(mcr-1,0)}</div></div>
+   <div class="s"><div class="l">순이익 변화 (FY${fy0}→FY${fy1})</div><div class="v" style="color:${clr(nir-1)}">${pct(nir-1,0)}</div></div>
+   <div class="s"><div class="l">PER 변화</div><div class="v" style="color:${clr(perr-1)}">${per0.toFixed(1)}배 → ${per1.toFixed(1)}배</div></div>
+   <div class="s"><div class="l">PER 배수 변화율</div><div class="v" style="color:${clr(perr-1)}">${pct(perr-1,0)}</div></div>
+  </div>
+  <div class="note">${mcr>1?'오른 몫을':'움직인 몫을'} 나눠 보면 <b>이익이 ${nir>=1?'늘어난':'줄어든'} 효과 ${pct(nir-1,0)}</b>와 <b>시장이 이익 1원에 매기는 배수(PER)가 ${perr>=1?'높아진':'낮아진'} 효과 ${pct(perr-1,0)}</b>가 곱해진 결과입니다. 시가총액 기준이라 증자·자사주 소각으로 주식 수가 바뀐 경우 주가 수익률과 다를 수 있고, 순이익은 해당 사업연도 연결 기준(공시 시점 반영해 시작 ${g[si].slice(0,7)}은 FY${fy0}, 끝은 FY${fy1})입니다.</div></div>`;
+}
 function finCard(f,s){
   const ys=Object.keys(f).sort();if(!ys.length)return'';
   const g=META.grid;
   const rows=ys.map(y=>{const r=f[y];// [매출,영업이익,순이익,자본]
     const dec=g.map((d,i)=>[d,i]).filter(x=>x[0].startsWith(y+'-12')).pop();
     let mc=null;if(dec&&s.mc0)mc=null;
-    return `<tr><td>${y}</td><td>${r[0]==null?'-':krw(r[0]*1e6)}</td><td>${r[1]==null?'-':krw(r[1]*1e6)}</td><td style="color:${clr(r[2])}">${r[2]==null?'-':krw(r[2]*1e6)}</td><td>${r[3]==null?'-':krw(r[3]*1e6)}</td><td>${r[2]&&r[3]?pct(r[2]/r[3]):'-'}</td></tr>`;}).join('');
+    return `<tr><td>${y}</td><td>${r[0]==null?'-':krwE(r[0]*1e6)}</td><td>${r[1]==null?'-':krwE(r[1]*1e6)}</td><td style="color:${clr(r[2])}">${r[2]==null?'-':krwE(r[2]*1e6)}</td><td>${r[3]==null?'-':krwE(r[3]*1e6)}</td><td>${r[2]&&r[3]?pct(r[2]/r[3]):'-'}</td></tr>`;}).join('');
   return `<div class="card"><div class="card-hd"><span class="card-title">연결 재무 추이 (DART 사업보고서)</span></div><div style="overflow-x:auto"><table class="bt"><tr><th>연도</th><th>매출액</th><th>영업이익</th><th>순이익</th><th>자본</th><th>ROE(순이익/기말자본)</th></tr>${rows}</table></div>
   <div class="note">순이익은 연결 기준 당기순이익입니다(지배주주 구분 없음). 위 재무가 주가 변화와 얼마나 맞물렸는지는 매출·순이익 추이와 위 주가 차트를 나란히 비교해 보세요.</div></div>`;
 }
@@ -329,8 +384,65 @@ function scen(){
 }
 ['sc-price','sc-eps','sc-g','sc-y','sc-per'].forEach(i=>$(i).addEventListener('input',scen));scen();
 
-function showTab(t){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.t===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p-'+t));}
-$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b)showTab(b.dataset.t);});
+
+/* 재무 스크리너 */
+let SCR=null,BT=null,SK='mcap',SD=-1;
+const PRE={valueQuality:{roe:10,per:10},growth:{rev:15,margin:5},lowDebt:{debt:50,roe:8},lowPbr:{pbr:0.8,roe:5},turnaround:{ni:'turn'}};
+async function loadScreen(){
+  if(SCR)return;
+  try{SCR=await J('data/sim/screen.json');}catch(e){$('scr-table').innerHTML='<div class="empty">재무 데이터를 준비 중입니다</div>';return;}
+  try{BT=await J('data/sim/backtest.json');}catch(e){BT=null;}
+  $('scr-asof').textContent='FY'+SCR.fy+' 연결 재무 · '+SCR.rows.length+'개 종목(시총 상위)';
+  $('scr-presets').addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;applyPreset(b.dataset.p);});
+  $('scr-go').addEventListener('click',drawScr);
+  document.querySelectorAll('#p-scr .sim-form input,#p-scr .sim-form select').forEach(el=>el.addEventListener('change',drawScr));
+  drawScr();drawBt('');
+}
+function applyPreset(k){
+  const F={roe:'f-roe',margin:'f-margin',debt:'f-debt',per:'f-per',pbr:'f-pbr',rev:'f-rev',mcap:'f-mcap'};
+  Object.values(F).forEach(id=>$(id).value='');$('f-ni').value='';$('f-mkt').value='';
+  const c=PRE[k]||{};Object.keys(c).forEach(x=>{if(x==='ni')$('f-ni').value=c[x];else $(F[x]).value=c[x];});
+  document.querySelectorAll('#scr-presets .ft').forEach(b=>b.classList.toggle('active',b.dataset.p===k&&k!==''));
+  drawScr();drawBt(k);
+}
+function drawScr(){
+  const C=SCR.cols,ix={};C.forEach((c,i)=>ix[c]=i);
+  const v=id=>{const x=parseFloat($(id).value);return isNaN(x)?null:x;};
+  const roe=v('f-roe'),mg=v('f-margin'),debt=v('f-debt'),per=v('f-per'),pbr=v('f-pbr'),rev=v('f-rev'),mc=v('f-mcap'),mkt=$('f-mkt').value,ni=$('f-ni').value;
+  let rows=SCR.rows.filter(r=>{
+    if(roe!=null&&!(r[ix.roe]!=null&&r[ix.roe]*100>=roe))return false;
+    if(mg!=null&&!(r[ix.margin]!=null&&r[ix.margin]*100>=mg))return false;
+    if(debt!=null&&!(r[ix.debt]!=null&&r[ix.debt]*100<=debt))return false;
+    if(per!=null&&!(r[ix.per]!=null&&r[ix.per]>0&&r[ix.per]<=per))return false;
+    if(pbr!=null&&!(r[ix.pbr]!=null&&r[ix.pbr]>0&&r[ix.pbr]<=pbr))return false;
+    if(rev!=null&&!(r[ix.revCagr3]!=null&&r[ix.revCagr3]*100>=rev))return false;
+    if(mc!=null&&!(r[ix.mcap]>=mc))return false;
+    if(mkt&&r[ix.mkt]!==mkt)return false;
+    if(ni==='pos'&&!(r[ix.ni]>0))return false;
+    if(ni==='turn'&&r[ix.turn]!==1)return false;
+    return true;});
+  const key={mcap:'mcap',roe:'roe',margin:'margin',debt:'debt',per:'per',pbr:'pbr',rev:'revCagr3',ret1:'ret1y',ret3:'ret3y'}[SK]||'mcap',k=ix[key];
+  rows.sort((a,b)=>{const x=a[k],y=b[k];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;return (x-y)*SD;});
+  $('scr-count').innerHTML=`조건에 맞는 종목 <b>${rows.length}개</b> / ${SCR.rows.length}개 (상위 100개 표시) · 정렬: 열 제목을 누르세요`;
+  const f1=x=>x==null?'-':(x*100).toFixed(1)+'%';
+  const th=(k,l)=>`<th data-k="${k}" style="cursor:pointer">${l}${SK===k?(SD<0?' ▼':' ▲'):''}</th>`;
+  $('scr-table').innerHTML='<table class="bt"><tr><th>종목</th>'+th('mcap','시가총액')+'<th>매출</th>'+th('margin','영업이익률')+th('roe','ROE')+th('debt','부채비율')+th('per','PER')+th('pbr','PBR')+th('rev','매출 3년 성장')+th('ret1','1년 주가')+th('ret3','3년 주가')+'</tr>'+
+   rows.slice(0,100).map(r=>`<tr class="clk" data-c="${r[ix.code]}" data-n="${esc(r[ix.name])}"><td>${esc(r[ix.name])}<span class="badge">${r[ix.mkt]==='P'?'코스피':'코스닥'}</span></td><td>${krwE(r[ix.mcap]*1e8)}</td><td>${krwE(r[ix.rev]*1e6)}</td><td>${f1(r[ix.margin])}</td><td>${f1(r[ix.roe])}</td><td>${f1(r[ix.debt])}</td><td>${r[ix.per]==null?'-':r[ix.per].toFixed(1)+'배'}</td><td>${r[ix.pbr]==null?'-':r[ix.pbr].toFixed(2)+'배'}</td><td>${f1(r[ix.revCagr3])}</td><td style="color:${clr(r[ix.ret1y])}">${pct(r[ix.ret1y],0)}</td><td style="color:${clr(r[ix.ret3y])}">${pct(r[ix.ret3y],0)}</td></tr>`).join('')+'</table>';
+  $('scr-table').querySelectorAll('th[data-k]').forEach(h=>h.addEventListener('click',()=>{if(SK===h.dataset.k)SD=-SD;else{SK=h.dataset.k;SD=['debt','per','pbr'].includes(SK)?1:-1;}drawScr();}));
+  $('scr-table').querySelectorAll('tr.clk').forEach(tr=>tr.addEventListener('click',()=>{pick(tr.dataset.c,tr.dataset.n);$('start').value=Math.max(0,yearsBackIdx(3));showTab('sim');run();window.scrollTo({top:0,behavior:'smooth'});}));
+}
+function drawBt(sel){
+  if(!BT){$('bt-table').innerHTML='<div class="empty">과거 검증 데이터 없음</div>';return;}
+  const P=BT.presets,yrs=Object.keys(P._all.years).sort();
+  const cell=(k,y)=>{const a=P._all.years[y],d=P[k].years[y];if(!d)return'<td>-</td>';
+    return `<td><span style="color:${clr(d.med)};font-weight:700">${pct(d.med,0)}</span><br><small style="color:var(--text2)">${d.n}개 · 전체 ${pct(a.med,0)}</small></td>`;};
+  $('bt-table').innerHTML='<table class="bt"><tr><th>조건</th>'+yrs.map(y=>`<th>${y}년 4월 말<br><small>(${P._all.years[y].yrs}년 보유)</small></th>`).join('')+'</tr>'+
+   Object.keys(PRE).map(k=>`<tr${k===sel?' style="background:var(--bg3)"':''}><td>${P[k].label}</td>${yrs.map(y=>cell(k,y)).join('')}</tr>`).join('')+'</table>';
+  $('bt-note').innerHTML=`각 칸은 그해 4월 말, <b>직전 사업연도 재무와 그때의 시가총액</b>으로 조건에 맞는 종목을 골랐다고 가정하고 <b>오늘까지의 주가 수익률 중앙값</b>(아래 작은 글씨: 종목 수 · 같은 풀 전체의 중앙값)을 계산한 값입니다. 보유 기간이 칸마다 달라 칸끼리 직접 비교할 수 없습니다.<br>⚠️ <b>한계</b>: ${esc(BT.universe)}만 대상이라, 당시에는 작았거나 이후 상장폐지된 기업이 빠져 있어 <b>결과가 실제보다 좋게 보일 수 있습니다(생존 편향)</b>. 이 때문에 '전체' 중앙값도 높게 나옵니다(전 종목 기준 중앙값은 '기간별 랭킹' 탭에서 확인). 조건별 칸은 같은 풀 안에서 서로 견주어 보는 용도로만 보세요. 사업보고서 공시 시점은 4월 말로 단순화했고, 배당과 거래비용은 반영하지 않았으며, 종목 수가 적은 칸은 우연의 영향이 큽니다. 과거 결과는 미래 수익을 보장하지 않습니다.`;
+}
+
+function showTab(t){if(t==='scr')loadScreen();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.t===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p-'+t));}
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b){showTab(b.dataset.t);if(b.dataset.t==='scr')loadScreen();}});
 init();
 </script><script src="ticker.js"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
