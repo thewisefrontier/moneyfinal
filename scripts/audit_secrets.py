@@ -7,10 +7,10 @@
   2. 파이썬 코드가 읽는 환경변수        : os.environ[...] / os.getenv(...)
   3. 불일치 (고아 시크릿 / 누락 주입)
 
-산출물: docs/SECRETS.md  (수기 관리 금지 — 이 스크립트가 유일한 생성자)
+산출물: docs/SECRETS.md  (수기 관리 금지 — 이 스크립트가 유일한 생성자, 로컬 전용·git 미추적)
 사용법:
   python scripts/audit_secrets.py          # docs/SECRETS.md 갱신
-  python scripts/audit_secrets.py --check  # 갱신 필요하면 exit 1 (CI용)
+  python scripts/audit_secrets.py --check  # 매핑 구멍이면 exit 1(CI용), 로컬에 파일이 있으면 최신 여부도 검사
 """
 import os
 import re
@@ -243,7 +243,9 @@ def main():
     old = open(OUT, encoding='utf-8').read() if os.path.exists(OUT) else ''
 
     if check:
-        if old != content:
+        # docs/는 내부 문서라 2026-10-18부터 git에 올리지 않는다(로컬 전용) — Actions엔 파일이 없으니
+        # 최신 여부 비교는 파일이 있을 때(로컬)만 하고, 매핑 구멍 검사(has_problem)는 어디서나 한다.
+        if old and old != content:
             print('docs/SECRETS.md 가 최신이 아니다. python scripts/audit_secrets.py 실행 필요.')
             sys.exit(1)
         if has_problem:
