@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-21",
-  "total": 11,
+  "updated_at": "2026-10-22",
+  "total": 12,
   "annuity": [
     {
       "id": 1,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010001",
       "kor_co_nm": "우리은행",
       "fin_prdt_cd": "1001",
@@ -25,14 +25,14 @@
       "etc": "",
       "sale_co": "",
       "sector": "은행",
-      "dcls_strt_day": "20260806",
+      "dcls_strt_day": "20260903",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46Z"
+      "fetched_at": "2026-10-21T10:13:11.085117+09:00"
     },
     {
       "id": 2,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010001",
       "kor_co_nm": "우리은행",
       "fin_prdt_cd": "1002",
@@ -53,14 +53,42 @@
       "etc": "",
       "sale_co": "",
       "sector": "은행",
-      "dcls_strt_day": "20260806",
+      "dcls_strt_day": "20260903",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46Z"
+      "fetched_at": "2026-10-21T10:13:11.085150+09:00"
+    },
+    {
+      "id": 3,
+      "dcls_month": "202609",
+      "fin_co_no": "0010001",
+      "kor_co_nm": "우리은행",
+      "fin_prdt_cd": "1003",
+      "fin_prdt_nm": "우리CUBE론-X(우리자산신탁)",
+      "join_way": "영업점",
+      "pnsn_kind": "",
+      "pnsn_kind_nm": "",
+      "prdt_type": "",
+      "prdt_type_nm": "",
+      "sale_strt_day": "",
+      "mntn_cnt": null,
+      "avg_prft_rate": null,
+      "dcls_rate": null,
+      "guar_rate": null,
+      "btrm_prft_rate_1": null,
+      "btrm_prft_rate_2": null,
+      "btrm_prft_rate_3": null,
+      "etc": "",
+      "sale_co": "",
+      "sector": "은행",
+      "dcls_strt_day": "20260903",
+      "source": "금융감독원 금융상품한눈에",
+      "source_url": "https://finlife.fss.or.kr",
+      "fetched_at": "2026-10-21T10:13:11.085160+09:00"
     },
     {
       "id": 4,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010001",
       "kor_co_nm": "우리은행",
       "fin_prdt_cd": "1004",
@@ -81,14 +109,14 @@
       "etc": "",
       "sale_co": "",
       "sector": "은행",
-      "dcls_strt_day": "20260806",
+      "dcls_strt_day": "20260903",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46Z"
+      "fetched_at": "2026-10-21T10:13:11.085180+09:00"
     },
     {
       "id": 5,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010001",
       "kor_co_nm": "우리은행",
       "fin_prdt_cd": "1005",
@@ -109,14 +137,14 @@
       "etc": "",
       "sale_co": "",
       "sector": "은행",
-      "dcls_strt_day": "20260806",
+      "dcls_strt_day": "20260903",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:46Z"
+      "fetched_at": "2026-10-21T10:13:11.085189+09:00"
     },
     {
       "id": 6,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010595",
       "kor_co_nm": "삼성생명보험주식회사",
       "fin_prdt_cd": "F25605",
@@ -140,11 +168,11 @@
       "dcls_strt_day": "20250520",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47Z"
+      "fetched_at": "2026-10-21T10:13:11.882886+09:00"
     },
     {
       "id": 7,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010630",
       "kor_co_nm": "흥국화재해상보험주식회사",
       "fin_prdt_cd": "24038",
@@ -165,10 +193,10 @@
       "etc": "",
       "sale_co": "",
       "sector": "보험",
-      "dcls_strt_day": "20260820",
+      "dcls_strt_day": "20260918",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47Z"
+      "fetched_at": "2026-10-21T10:13:11.882922+09:00"
     },
     {
       "id": 8,
@@ -228,7 +256,7 @@
     },
     {
       "id": 10,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0010634",
       "kor_co_nm": "현대해상화재보험주식회사",
       "fin_prdt_cd": "10224002",
@@ -249,14 +277,14 @@
       "etc": "",
       "sale_co": "",
       "sector": "보험",
-      "dcls_strt_day": "20260820",
+      "dcls_strt_day": "20260920",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:47Z"
+      "fetched_at": "2026-10-21T10:13:11.882935+09:00"
     },
     {
       "id": 11,
-      "dcls_month": "202608",
+      "dcls_month": "202609",
       "fin_co_no": "0011320",
       "kor_co_nm": "푸본현대생명보험주식회사",
       "fin_prdt_cd": "0103",
@@ -280,7 +308,7 @@
       "dcls_strt_day": "20250516",
       "source": "금융감독원 금융상품한눈에",
       "source_url": "https://finlife.fss.or.kr",
-      "fetched_at": "2026-09-21T00:41:49Z"
+      "fetched_at": "2026-10-21T10:13:11.882955+09:00"
     },
     {
       "id": 36,
