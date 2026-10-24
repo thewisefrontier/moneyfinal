@@ -128,7 +128,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 </div>
 
 <div class="panel active" id="p-sim">
-  <div class="card">
+  <div class="card" style="overflow:visible">
     <div class="sim-form">
       <div class="fld suggest wide"><label>종목 (이름 또는 코드)</label><input id="q" autocomplete="off" placeholder="예: 삼성전자, 005930"><div class="sg-list" id="sg"></div></div>
       <div class="fld"><label>시작 시점</label><select id="start"></select></div>
@@ -245,6 +245,7 @@ async function init(){
     sg.innerHTML=hits.map(r=>`<div data-c="${r[0]}" data-n="${esc(r[1])}">${esc(r[1])}<small>${r[0]} · ${r[2]==='P'?'코스피':'코스닥'}${r[3]<g.length-1?' · 상장폐지':''}</small></div>`).join('');
     sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-c]');if(!d)return;pick(d.dataset.c,d.dataset.n);});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-c]');if(d){e.preventDefault();pick(d.dataset.c,d.dataset.n);run();}}else if(e.key==='Escape')sg.style.display='none';});
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
   $('go').addEventListener('click',run);
   $('mode').addEventListener('change',()=>{$('amtlbl').textContent=$('mode').value==='lump'?'투자금(원)':'월 적립금(원)';$('amt').value=$('mode').value==='lump'?'10000000':'500000';});

@@ -119,7 +119,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
   <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
 <main>
 <div class="sec-hd"><div class="sec-title">미국 기업 재무제표</div><span class="sec-more" id="asof"></span></div>
-<div class="card">
+<div class="card" style="overflow:visible">
   <div class="uf-form">
     <div class="fld suggest"><label>기업 (티커 또는 영문 이름)</label><input id="q" autocomplete="off" placeholder="예: AAPL, Microsoft, Coca-Cola"><div class="sg-list" id="sg"></div></div>
     <div class="fld"><label>주기</label><select id="per"><option value="a">연간</option><option value="q">분기</option></select></div>
@@ -158,6 +158,7 @@ async function init(){
     const hits=IDX.filter(r=>r[0].toLowerCase().startsWith(t)||r[1].toLowerCase().includes(t)).sort((a,b)=>(b[0].toLowerCase()===t)-(a[0].toLowerCase()===t)).slice(0,10);
     sg.innerHTML=hits.map(r=>`<div data-t="${r[0]}">${esc(r[0])} <small>${esc(r[1])}${r[2]?' · '+esc(r[2]):''}</small></div>`).join('');sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-t]');if(d)pick(d.dataset.t);});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-t]');if(d){e.preventDefault();pick(d.dataset.t);}}else if(e.key==='Escape')sg.style.display='none';});
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
   fillYrs();
   $('per').addEventListener('change',()=>{fillYrs();CUR&&render();});
