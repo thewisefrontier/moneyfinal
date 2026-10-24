@@ -1,0 +1,25 @@
+name: 미국 기업 재무제표
+on:
+  workflow_dispatch:
+  schedule:
+    # 10-K는 결산 후 2~3개월 사이에 몰려 나오므로 매월 둘째 주 일요일 전후로 갱신 (SEC companyfacts, 호출 약 520회)
+    - cron: '0 3 8-14 * 0'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: SEC 재무제표 수집 (D1·시크릿 불필요, data/us_fin/ 생성)
+        run: python fetchers/us_fin_sec.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/us_fin/
+          git diff --staged --quiet || (git commit -m "data: 미국 기업 재무제표 갱신" && git pull --rebase origin main && git push)

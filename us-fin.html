@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="S&P 500 등 미국 기업의 연간 손익계산서·재무상태표·현금흐름표와 마진·ROE·부채비율·잉여현금흐름을 SEC 공시 데이터(XBRL)로 12년치까지 확인합니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/us-fin">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="미국 기업 재무제표 | 머니파이널">
+<meta property="og:description" content="S&P 500 등 미국 기업의 연간 손익계산서·재무상태표·현금흐름표와 마진·ROE·부채비율·잉여현금흐름을 SEC 공시 데이터(XBRL)로 12년치까지 확인합니다.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/us-fin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="미국 기업 재무제표 | 머니파이널">
+<meta name="twitter:description" content="S&P 500 등 미국 기업의 연간 손익계산서·재무상태표·현금흐름표와 마진·ROE·부채비율·잉여현금흐름을 SEC 공시 데이터(XBRL)로 12년치까지 확인합니다.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"미국 기업 재무제표","description":"S&P 500 등 미국 기업의 연간 손익계산서·재무상태표·현금흐름표와 마진·ROE·부채비율·잉여현금흐름을 SEC 공시 데이터(XBRL)로 12년치까지 확인합니다.","url":"https://moneyfinal.pages.dev/us-fin","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<title>미국 기업 재무제표 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav id="site-nav" data-active="us-fin.html"></nav>
+<script src="nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">미국 기업 재무제표</div><span class="sec-more" id="asof"></span></div>
+<div class="card">
+  <div class="uf-form">
+    <div class="fld suggest"><label>기업 (티커 또는 영문 이름)</label><input id="q" autocomplete="off" placeholder="예: AAPL, Microsoft, Coca-Cola"><div class="sg-list" id="sg"></div></div>
+    <div class="fld"><label>표시 기간</label><select id="yrs"><option value="5">최근 5년</option><option value="8" selected>최근 8년</option><option value="12">최근 12년</option></select></div>
+  </div>
+  <div class="pop" id="pop"></div>
+</div>
+<div id="result"><div class="empty">기업을 선택해 주세요</div></div>
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
+  <b>데이터 기준</b> · SEC(미국 증권거래위원회)에 제출된 10-K(연차보고서) XBRL 데이터입니다. 결산월이 기업마다 달라 연도 대신 <b>결산일</b>로 표시합니다. 금액은 달러이며 <b>억·만 단위</b>로 줄여 표기합니다. 같은 결산일이 정정 공시된 경우 가장 최근 값을 씁니다. 은행·보험·리츠처럼 매출총이익·영업이익 항목이 없는 업종은 '-'로 보이고, XBRL 계정이 기업마다 달라 일부 항목이 비어 있을 수 있습니다. 대상은 S&P 500 구성 종목과 이 사이트가 추적하는 일부 종목이며, 투자 권유가 아닌 참고 자료입니다.
+</div>
+</main>
+<div class="disclaimer">⚠️ 본 정보는 SEC 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: U.S. Securities and Exchange Commission (EDGAR)</div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script src="theme.js"></script><script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let IDX=[],SH={},CUR=null,TAB='is';
+// 억/만 단위(콤마·공백 없음) 달러 표기. 100만달러 단위로 반올림해 표를 조밀하게 유지.
+function usd(n){if(n==null)return'-';const neg=n<0;let v=Math.abs(n);if(v>=1e8)v=Math.round(v/1e6)*1e6;else if(v>=1e4)v=Math.round(v/1e3)*1e3;
+  const jo=Math.floor(v/1e12),eok=Math.floor(v%1e12/1e8),man=Math.floor(v%1e8/1e4),r=Math.round(v%1e4);
+  let s='';if(jo)s+=jo+'조';if(eok)s+=eok+'억';if(man)s+=man+'만';if(r&&!jo&&!eok)s+=r;if(!s)s='0';return(neg?'-':'')+s+'달러';}
+const pct=(v,d=1)=>v==null||!isFinite(v)?'-':(v*100).toFixed(d)+'%';
+const dlr=v=>v==null?'-':v.toFixed(2)+'달러';
+async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
+async function shard(t){const k=t[0].toUpperCase();if(!SH[k])SH[k]=await J('data/us_fin/'+k+'.json');return SH[k][t];}
+
+async function init(){
+  try{const d=await J('data/us_fin/index.json');IDX=d.stocks;$('asof').textContent=d.updated_at+' 갱신 · '+d.count+'개 기업';}
+  catch(e){$('result').innerHTML='<div class="empty">재무 데이터를 준비 중입니다</div>';return;}
+  const pop=['AAPL','MSFT','NVDA','GOOGL','AMZN','META','TSLA','KO','JPM','WMT','O','V'].filter(t=>IDX.some(r=>r[0]===t));
+  $('pop').innerHTML=pop.map(t=>`<button class="tab" data-t="${t}">${t}</button>`).join('');
+  $('pop').onclick=e=>{const b=e.target.closest('.tab');if(b)pick(b.dataset.t);};
+  const q=$('q'),sg=$('sg');
+  q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){sg.style.display='none';return;}
+    const hits=IDX.filter(r=>r[0].toLowerCase().startsWith(t)||r[1].toLowerCase().includes(t)).sort((a,b)=>(b[0].toLowerCase()===t)-(a[0].toLowerCase()===t)).slice(0,10);
+    sg.innerHTML=hits.map(r=>`<div data-t="${r[0]}">${esc(r[0])} <small>${esc(r[1])}${r[2]?' · '+esc(r[2]):''}</small></div>`).join('');sg.style.display=hits.length?'block':'none';});
+  sg.addEventListener('click',e=>{const d=e.target.closest('div[data-t]');if(d)pick(d.dataset.t);});
+  document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
+  $('yrs').addEventListener('change',()=>CUR&&render());
+  const u=new URLSearchParams(location.search);if(u.get('t'))pick(u.get('t').toUpperCase());
+}
+async function pick(t){
+  const r=IDX.find(x=>x[0]===t);if(!r){$('result').innerHTML='<div class="empty">'+esc(t)+' 데이터가 없습니다</div>';return;}
+  $('q').value=t+' - '+r[1];$('sg').style.display='none';
+  CUR=await shard(t);CUR.t=t;
+  try{history.replaceState(null,'','?t='+encodeURIComponent(t));}catch(e){}
+  render();
+}
+function col(d,k){return d[k]||null;}
+function render(){
+  const v=CUR,n=+$('yrs').value,L=v.e.length,s0=Math.max(0,L-n),E=v.e.slice(s0),D={};
+  Object.keys(v.d).forEach(k=>D[k]=v.d[k].slice(s0));
+  const last=E.length-1,g=(k,i=last)=>D[k]?D[k][i]:null;
+  const div=(a,b)=>a!=null&&b!=null&&b!==0?a/b:null;
+  const fcf=i=>g('cfo',i)!=null&&g('capex',i)!=null?g('cfo',i)-Math.abs(g('capex',i)):null;
+  const cagr=(k,yrs)=>{const a=D[k],i=last,j=last-yrs;if(!a||j<0||a[i]==null||a[j]==null||a[j]<=0||a[i]<=0)return null;return Math.pow(a[i]/a[j],1/yrs)-1;};
+  const kp=[['매출',usd(g('rev')),'매출 5년 성장 '+pct(cagr('rev',5))],['순이익',usd(g('ni')),'순이익 5년 성장 '+pct(cagr('ni',5))],
+    ['영업이익률',pct(div(g('op'),g('rev'))),'매출총이익률 '+pct(div(g('gp'),g('rev')))],['순이익률',pct(div(g('ni'),g('rev'))),'ROE '+pct(div(g('ni'),g('eq')))],
+    ['잉여현금흐름',usd(fcf(last)),'영업CF '+usd(g('cfo'))],['부채비율',pct(div(g('tl'),g('eq')),0),'부채총계 '+usd(g('tl'))],
+    ['총자산',usd(g('ta')),'ROA '+pct(div(g('ni'),g('ta')))],['희석 EPS',dlr(g('eps')),'EPS 5년 성장 '+pct(cagr('eps',5))]];
+  let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(v.n)} <span class="badge">${v.t}</span>${v.s?'<span class="badge">'+esc(v.s)+'</span>':''}<span class="badge">최근 결산 ${E[last]}</span></span></div>
+  <div class="stat">${kp.map(x=>`<div class="s"><div class="l">${x[0]}</div><div class="v">${x[1]}</div><div class="l" style="margin-top:2px">${x[2]}</div></div>`).join('')}</div>
+  <div id="chart" style="padding:0 8px"></div><div class="legend" id="lg"></div></div>`;
+  const hdr='<tr><th>항목</th>'+E.map(e=>`<th>${e.slice(0,7)}</th>`).join('')+'</tr>';
+  const row=(label,k,fmt,cls)=>D[k]?`<tr class="${cls||''}"><td>${label}</td>${D[k].map((x,i)=>`<td>${fmt(x,i)}</td>`).join('')}</tr>`:'';
+  const calc=(label,f,fmt,cls)=>`<tr class="${cls||''}"><td>${label}</td>${E.map((_,i)=>`<td>${fmt(f(i))}</td>`).join('')}</tr>`;
+  const T={
+   is:[row('매출','rev',usd,'bold'),row('매출원가','cogs',usd,'sub'),row('매출총이익','gp',usd,'bold'),row('연구개발비','rd',usd,'sub'),row('판매관리비','sga',usd,'sub'),row('영업이익','op',usd,'bold'),row('이자비용','int',usd,'sub'),row('법인세','tax',usd,'sub'),row('순이익','ni',usd,'bold'),row('희석 EPS','eps',dlr),row('가중평균 희석주식수','sh',x=>x==null?'-':(x>=1e8?Math.round(x/1e6)*1e6:x)>0?usd(x).replace('달러','주'):'-')],
+   bs:[row('현금및현금성자산','cash',usd),row('매출채권','ar',usd,'sub'),row('재고자산','inv',usd,'sub'),row('유동자산','ca',usd),row('총자산','ta',usd,'bold'),row('유동부채','cl',usd),row('장기차입금','debt',usd),row('부채총계','tl',usd,'bold'),row('자본총계','eq',usd,'bold')],
+   cf:[row('영업활동 현금흐름','cfo',usd,'bold'),row('투자활동 현금흐름','cfi',usd),row('재무활동 현금흐름','cff',usd),row('설비투자(CAPEX)','capex',usd,'sub'),row('감가상각비','da',usd,'sub'),row('배당 지급','div',usd,'sub'),row('자사주 매입','buyback',usd,'sub'),calc('잉여현금흐름(영업CF-CAPEX)',fcf,usd,'bold')],
+   ra:[calc('매출 증가율',i=>i>0?div(g('rev',i)!=null&&g('rev',i-1)!=null?g('rev',i)-g('rev',i-1):null,g('rev',i-1)):null,x=>pct(x)),
+       calc('매출총이익률',i=>div(g('gp',i),g('rev',i)),x=>pct(x)),calc('영업이익률',i=>div(g('op',i),g('rev',i)),x=>pct(x)),calc('순이익률',i=>div(g('ni',i),g('rev',i)),x=>pct(x)),
+       calc('ROE(순이익/기말자본)',i=>div(g('ni',i),g('eq',i)),x=>pct(x)),calc('ROA(순이익/기말자산)',i=>div(g('ni',i),g('ta',i)),x=>pct(x)),
+       calc('부채비율(부채/자본)',i=>div(g('tl',i),g('eq',i)),x=>pct(x,0)),calc('유동비율',i=>div(g('ca',i),g('cl',i)),x=>pct(x,0)),
+       calc('FCF 마진',i=>div(fcf(i),g('rev',i)),x=>pct(x)),calc('배당+자사주매입 / 순이익',i=>div((g('div',i)||0)+(g('buyback',i)||0),g('ni',i)),x=>pct(x,0))]
+  };
+  const names={is:'손익계산서',bs:'재무상태표',cf:'현금흐름표',ra:'비율·지표'};
+  h+=`<div class="card"><div class="tabs" id="stabs">${Object.keys(names).map(k=>`<button class="tab${k===TAB?' active':''}" data-k="${k}">${names[k]}</button>`).join('')}</div>
+  <div style="overflow-x:auto;padding-top:8px"><table class="bt">${hdr}${T[TAB].join('')}</table></div></div>`;
+  $('result').innerHTML=h;
+  $('stabs').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;TAB=b.dataset.k;render();};
+  chart(E,D);
+}
+function chart(E,D){
+  const cs=getComputedStyle(document.documentElement),c=n=>cs.getPropertyValue(n).trim();
+  const rev=D.rev||[],ni=D.ni||[];if(!rev.some(x=>x!=null)&&!ni.some(x=>x!=null)){$('chart').innerHTML='';return;}
+  const W=800,H=260,pl=64,pr=12,pt=14,pb=26,n=E.length;
+  const vals=[...rev,...ni].filter(x=>x!=null);let hi=Math.max(...vals,0),lo=Math.min(...vals,0);if(hi===lo)hi=lo+1;
+  const Y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo)),gw=(W-pl-pr)/n,bw=Math.min(26,gw/2.6);
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">`;
+  for(let g=0;g<=4;g++){const v=lo+(hi-lo)*g/4,y=Y(v);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--border')}"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${c('--text2')}">${usd(Math.round(v/1e9)*1e9)}</text>`;}
+  E.forEach((e,i)=>{const cx=pl+gw*i+gw/2;
+    [[rev[i],c('--blue'),-bw/2-1],[ni[i],c('--green'),bw/2+1]].forEach(([v,col,off])=>{if(v==null)return;const y0=Y(0),y1=Y(v);s+=`<rect x="${cx+off-bw/2}" y="${Math.min(y0,y1)}" width="${bw}" height="${Math.max(1,Math.abs(y1-y0))}" fill="${col}" rx="2"/>`;});
+    s+=`<text x="${cx}" y="${H-8}" text-anchor="middle" font-size="9" fill="${c('--text2')}">${e.slice(2,7)}</text>`;});
+  $('chart').innerHTML=s+'</svg>';
+  $('lg').innerHTML=`<span><i style="background:${c('--blue')}"></i>매출</span><span><i style="background:${c('--green')}"></i>순이익</span>`;
+}
+init();
+</script><script src="ticker.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
