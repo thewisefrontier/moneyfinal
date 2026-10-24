@@ -15,6 +15,7 @@
     ['annuity.html', '연금저축'],
     ['insurance.html', '보험'],
     ['company.html', '기업정보'],
+    ['kr-fin.html', '한국재무'],
     ['us-fin.html', '미국재무'],
     ['superinvestor.html', '슈퍼인베스터'],
     ['bond.html', '채권'],
