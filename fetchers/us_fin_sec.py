@@ -28,7 +28,10 @@ SP500_CSV = 'https://raw.githubusercontent.com/datasets/s-and-p-500-companies/ma
 EXTRA = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'NVDA', 'META', 'TSLA', 'AVGO', 'JPM', 'V',
          'O', 'MAIN', 'STAG', 'AGNC', 'ARR', 'GAIN', 'GOOD', 'LAND', 'PSEC', 'EPR', 'ORC', 'NLY', 'ADC', 'LTC', 'ABR', 'EFC']
 KEEP_YEARS = 12
+KEEP_Q = 20  # 분기: 최근 5년
 FORMS = ('10-K', '10-K/A', '10-KT')
+QFORMS = FORMS + ('10-Q', '10-Q/A')
+NONADD = {'sh'}  # 가중평균 주식수는 누계 차분으로 분기값을 만들 수 없음
 
 # 지표 -> (종류, 단위, 후보 태그들)  종류: dur(기간) / inst(시점)
 METRICS = {
@@ -92,6 +95,56 @@ def series(ug, kind, unit, concepts):
     return out
 
 
+def qseries(ug, kind, unit, concepts, additive=True):
+    """분기 값: 결산일 -> 값. 기간 항목은 단독 3개월 값 > 누계(YTD) 차분 > Q4(연간-3분기 누계).
+    현금흐름은 10-Q에 누계만 있어 차분이 필요하고, Q4는 어떤 항목이든 10-K 연간에서 뺀 값이다."""
+    out = {}
+    for c in concepts:
+        node = ug.get(c)
+        if not node:
+            continue
+        facts = [x for x in node['units'].get(unit, []) if x.get('form') in QFORMS]
+        if kind == 'inst':
+            best = {}
+            for x in facts:
+                if 'start' in x:
+                    continue
+                e, f = x['end'], x.get('filed', '')
+                if e not in best or f > best[e][0]:
+                    best[e] = (f, x['val'])
+            for e, (_, v) in best.items():
+                out.setdefault(e, v)
+            continue
+        byse = {}
+        for x in facts:
+            if 'start' not in x:
+                continue
+            d = _days(x['start'], x['end'])
+            if not (80 <= d <= 100 or 170 <= d <= 200 or 260 <= d <= 290 or 340 <= d <= 390):
+                continue
+            k, f = (x['start'], x['end']), x.get('filed', '')
+            if k not in byse or f > byse[k][0]:
+                byse[k] = (f, x['val'])
+        res = {}
+        for (st, en), (_, v) in byse.items():  # 단독 3개월(또는 Q1 누계)
+            if 80 <= _days(st, en) <= 100:
+                res[en] = v
+        if additive:
+            groups = {}
+            for (st, en), (_, v) in byse.items():
+                groups.setdefault(st, []).append((en, v, _days(st, en)))
+            for st, lst in groups.items():
+                lst.sort()
+                prev_v, prev_d = 0, 0
+                for en, v, d in lst:
+                    if 80 <= d - prev_d <= 125:  # 직전 누계와 한 분기 차이일 때만
+                        res.setdefault(en, v - prev_v)
+                        prev_v, prev_d = v, d
+        for en, v in res.items():
+            out.setdefault(en, v)
+    return out
+
+
 def extract(facts):
     ug = facts.get('facts', {}).get('us-gaap', {})
     ser = {k: series(ug, *spec) for k, spec in METRICS.items()}
@@ -105,7 +158,17 @@ def extract(facts):
     ends = [e for e in ends if e in ser['ni'] or e in ser['rev']][-KEEP_YEARS:]
     if not ends:
         return None
-    return {'e': ends, 'd': {k: [s.get(e) for e in ends] for k, s in ser.items() if any(s.get(e) is not None for e in ends)}}
+    res = {'e': ends, 'd': {k: [s.get(e) for e in ends] for k, s in ser.items() if any(s.get(e) is not None for e in ends)}}
+    qs = {k: qseries(ug, spec[0], spec[1], spec[2], additive=k not in NONADD) for k, spec in METRICS.items()}
+    if not qs['tl'] and qs['ta'] and qs['eq']:
+        qs['tl'] = {e: qs['ta'][e] - qs['eq'][e] for e in qs['ta'] if e in qs['eq']}
+    if not qs['gp'] and qs['rev'] and qs['cogs']:
+        qs['gp'] = {e: qs['rev'][e] - qs['cogs'][e] for e in qs['rev'] if e in qs['cogs']}
+    qends = [e for e in sorted(set(qs['rev']) | set(qs['ni'])) if e in qs['rev'] or e in qs['ni']][-KEEP_Q:]
+    if qends:
+        qs['eps'] = {e: round(v, 4) for e, v in qs['eps'].items()}  # 차분 부동소수 오차 제거
+        res['q'] = {'e': qends, 'd': {k: [s.get(e) for e in qends] for k, s in qs.items() if any(s.get(e) is not None for e in qends)}}
+    return res
 
 
 def universe():

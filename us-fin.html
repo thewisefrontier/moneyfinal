@@ -78,7 +78,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
 .br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
 .br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
-.uf-form{display:grid;grid-template-columns:3fr 1fr;gap:12px;padding:16px;align-items:end}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
 .fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
 .fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
 .suggest{position:relative}
@@ -122,13 +122,14 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="card">
   <div class="uf-form">
     <div class="fld suggest"><label>기업 (티커 또는 영문 이름)</label><input id="q" autocomplete="off" placeholder="예: AAPL, Microsoft, Coca-Cola"><div class="sg-list" id="sg"></div></div>
-    <div class="fld"><label>표시 기간</label><select id="yrs"><option value="5">최근 5년</option><option value="8" selected>최근 8년</option><option value="12">최근 12년</option></select></div>
+    <div class="fld"><label>주기</label><select id="per"><option value="a">연간</option><option value="q">분기</option></select></div>
+    <div class="fld"><label>표시 개수</label><select id="yrs"></select></div>
   </div>
   <div class="pop" id="pop"></div>
 </div>
 <div id="result"><div class="empty">기업을 선택해 주세요</div></div>
 <div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
-  <b>데이터 기준</b> · SEC(미국 증권거래위원회)에 제출된 10-K(연차보고서) XBRL 데이터입니다. 결산월이 기업마다 달라 연도 대신 <b>결산일</b>로 표시합니다. 금액은 달러이며 <b>억·만 단위</b>로 줄여 표기합니다. 같은 결산일이 정정 공시된 경우 가장 최근 값을 씁니다. 은행·보험·리츠처럼 매출총이익·영업이익 항목이 없는 업종은 '-'로 보이고, XBRL 계정이 기업마다 달라 일부 항목이 비어 있을 수 있습니다. 대상은 S&P 500 구성 종목과 이 사이트가 추적하는 일부 종목이며, 투자 권유가 아닌 참고 자료입니다.
+  <b>데이터 기준</b> · SEC(미국 증권거래위원회)에 제출된 10-K(연차보고서) XBRL 데이터입니다. 결산월이 기업마다 달라 연도 대신 <b>결산일</b>로 표시합니다. 금액은 달러이며 <b>억·만 단위</b>로 줄여 표기합니다. 같은 결산일이 정정 공시된 경우 가장 최근 값을 씁니다. 은행·보험·리츠처럼 매출총이익·영업이익 항목이 없는 업종은 '-'로 보이고, XBRL 계정이 기업마다 달라 일부 항목이 비어 있을 수 있습니다. 연간은 10-K, 분기는 10-Q 기준(최근 5년)입니다. 대상은 S&P 500 구성 종목과 이 사이트가 추적하는 일부 종목이며, 투자 권유가 아닌 참고 자료입니다.
 </div>
 </main>
 <div class="disclaimer">⚠️ 본 정보는 SEC 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: U.S. Securities and Exchange Commission (EDGAR)</div>
@@ -136,7 +137,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <script src="theme.js"></script><script>
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let IDX=[],SH={},CUR=null,TAB='is';
+let IDX=[],SH={},CUR=null,TAB='is',TOPNOTE='',TOPT='';
 // 억/만 단위(콤마·공백 없음) 달러 표기. 100만달러 단위로 반올림해 표를 조밀하게 유지.
 function usd(n){if(n==null)return'-';const neg=n<0;let v=Math.abs(n);if(v>=1e8)v=Math.round(v/1e6)*1e6;else if(v>=1e4)v=Math.round(v/1e3)*1e3;
   const jo=Math.floor(v/1e12),eok=Math.floor(v%1e12/1e8),man=Math.floor(v%1e8/1e4),r=Math.round(v%1e4);
@@ -158,29 +159,54 @@ async function init(){
     sg.innerHTML=hits.map(r=>`<div data-t="${r[0]}">${esc(r[0])} <small>${esc(r[1])}${r[2]?' · '+esc(r[2]):''}</small></div>`).join('');sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-t]');if(d)pick(d.dataset.t);});
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
+  fillYrs();
+  $('per').addEventListener('change',()=>{fillYrs();CUR&&render();});
   $('yrs').addEventListener('change',()=>CUR&&render());
-  const u=new URLSearchParams(location.search);if(u.get('t'))pick(u.get('t').toUpperCase());
+  const u=new URLSearchParams(location.search);
+  if(u.get('p')==='q'){$('per').value='q';fillYrs();}
+  if(u.get('t'))pick(u.get('t').toUpperCase());
+  else pick(await topByMcap());
+}
+function fillYrs(){
+  const q=$('per').value==='q';
+  $('yrs').innerHTML=(q?[[8,'최근 8분기'],[12,'최근 12분기'],[20,'최근 20분기']]:[[5,'최근 5년'],[8,'최근 8년'],[12,'최근 12년']]).map((o,i)=>`<option value="${o[0]}"${i===1?' selected':''}>${o[1]}</option>`).join('');
+}
+// 첫 화면 기본 기업: 이 사이트가 매일 갱신하는 미국 종목(stocks.json) 중 가장 최근 기준일의 시가총액 1위. 못 구하면 NVDA.
+async function topByMcap(){
+  try{
+    const us=(await J('data/stocks.json')).us||[];
+    const have=new Set(IDX.map(r=>r[0]));
+    const day=us.reduce((m,r)=>r.base_date>m?r.base_date:m,'');
+    const best=us.filter(r=>r.base_date===day&&have.has(r.stock_code)).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0))[0];
+    if(best){TOPNOTE='미국 시가총액 1위(추적 종목 기준 · '+day+')';TOPT=best.stock_code;return best.stock_code;}
+  }catch(e){}
+  return IDX.some(r=>r[0]==='NVDA')?'NVDA':IDX[0][0];
 }
 async function pick(t){
   const r=IDX.find(x=>x[0]===t);if(!r){$('result').innerHTML='<div class="empty">'+esc(t)+' 데이터가 없습니다</div>';return;}
   $('q').value=t+' - '+r[1];$('sg').style.display='none';
   CUR=await shard(t);CUR.t=t;
-  try{history.replaceState(null,'','?t='+encodeURIComponent(t));}catch(e){}
   render();
 }
 function col(d,k){return d[k]||null;}
 function render(){
-  const v=CUR,n=+$('yrs').value,L=v.e.length,s0=Math.max(0,L-n),E=v.e.slice(s0),D={};
+  const Q=$('per').value==='q',src=Q?(CUR.q||null):CUR;
+  try{history.replaceState(null,'','?t='+encodeURIComponent(CUR.t)+(Q?'&p=q':''));}catch(e){}
+  if(!src){$('result').innerHTML='<div class="card"><div class="empty">이 기업은 분기 데이터가 없습니다 (연간 보기를 이용해 주세요)</div></div>';return;}
+  const v={e:src.e,d:src.d,n:CUR.n,s:CUR.s,t:CUR.t},n=+$('yrs').value,L=v.e.length,s0=Math.max(0,L-n),E=v.e.slice(s0),D={};
   Object.keys(v.d).forEach(k=>D[k]=v.d[k].slice(s0));
+  const per=Q?4:1,lbl=Q?'분기':'연간';
   const last=E.length-1,g=(k,i=last)=>D[k]?D[k][i]:null;
   const div=(a,b)=>a!=null&&b!=null&&b!==0?a/b:null;
   const fcf=i=>g('cfo',i)!=null&&g('capex',i)!=null?g('cfo',i)-Math.abs(g('capex',i)):null;
   const cagr=(k,yrs)=>{const a=D[k],i=last,j=last-yrs;if(!a||j<0||a[i]==null||a[j]==null||a[j]<=0||a[i]<=0)return null;return Math.pow(a[i]/a[j],1/yrs)-1;};
-  const kp=[['매출',usd(g('rev')),'매출 5년 성장 '+pct(cagr('rev',5))],['순이익',usd(g('ni')),'순이익 5년 성장 '+pct(cagr('ni',5))],
-    ['영업이익률',pct(div(g('op'),g('rev'))),'매출총이익률 '+pct(div(g('gp'),g('rev')))],['순이익률',pct(div(g('ni'),g('rev'))),'ROE '+pct(div(g('ni'),g('eq')))],
+  const yoy=k=>{const a=D[k];if(!a||last-per<0||a[last]==null||a[last-per]==null||a[last-per]<=0)return null;return a[last]/a[last-per]-1;};
+  const gtxt=(k,nm)=>Q?'전년동기 대비 '+pct(yoy(k)):nm+' 5년 성장 '+pct(cagr(k,5));
+  const kp=[['매출',usd(g('rev')),gtxt('rev','매출')],['순이익',usd(g('ni')),gtxt('ni','순이익')],
+    ['영업이익률',pct(div(g('op'),g('rev'))),'매출총이익률 '+pct(div(g('gp'),g('rev')))],['순이익률',pct(div(g('ni'),g('rev'))),'ROE'+(Q?'(연환산) ':' ')+pct(div(g('ni')*per,g('eq')))],
     ['잉여현금흐름',usd(fcf(last)),'영업CF '+usd(g('cfo'))],['부채비율',pct(div(g('tl'),g('eq')),0),'부채총계 '+usd(g('tl'))],
-    ['총자산',usd(g('ta')),'ROA '+pct(div(g('ni'),g('ta')))],['희석 EPS',dlr(g('eps')),'EPS 5년 성장 '+pct(cagr('eps',5))]];
-  let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(v.n)} <span class="badge">${v.t}</span>${v.s?'<span class="badge">'+esc(v.s)+'</span>':''}<span class="badge">최근 결산 ${E[last]}</span></span></div>
+    ['총자산',usd(g('ta')),'ROA '+pct(div(g('ni')*per,g('ta')))],['희석 EPS',dlr(g('eps')),gtxt('eps','EPS')]];
+  let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(v.n)} <span class="badge">${v.t}</span>${v.s?'<span class="badge">'+esc(v.s)+'</span>':''}<span class="badge">${Q?'최근 분기':'최근 결산'} ${E[last]}</span>${TOPNOTE&&v.t===TOPT?'<span class="badge">'+TOPNOTE+'</span>':''}</span></div>
   <div class="stat">${kp.map(x=>`<div class="s"><div class="l">${x[0]}</div><div class="v">${x[1]}</div><div class="l" style="margin-top:2px">${x[2]}</div></div>`).join('')}</div>
   <div id="chart" style="padding:0 8px"></div><div class="legend" id="lg"></div></div>`;
   const hdr='<tr><th>항목</th>'+E.map(e=>`<th>${e.slice(0,7)}</th>`).join('')+'</tr>';
@@ -190,15 +216,17 @@ function render(){
    is:[row('매출','rev',usd,'bold'),row('매출원가','cogs',usd,'sub'),row('매출총이익','gp',usd,'bold'),row('연구개발비','rd',usd,'sub'),row('판매관리비','sga',usd,'sub'),row('영업이익','op',usd,'bold'),row('이자비용','int',usd,'sub'),row('법인세','tax',usd,'sub'),row('순이익','ni',usd,'bold'),row('희석 EPS','eps',dlr),row('가중평균 희석주식수','sh',x=>x==null?'-':(x>=1e8?Math.round(x/1e6)*1e6:x)>0?usd(x).replace('달러','주'):'-')],
    bs:[row('현금및현금성자산','cash',usd),row('매출채권','ar',usd,'sub'),row('재고자산','inv',usd,'sub'),row('유동자산','ca',usd),row('총자산','ta',usd,'bold'),row('유동부채','cl',usd),row('장기차입금','debt',usd),row('부채총계','tl',usd,'bold'),row('자본총계','eq',usd,'bold')],
    cf:[row('영업활동 현금흐름','cfo',usd,'bold'),row('투자활동 현금흐름','cfi',usd),row('재무활동 현금흐름','cff',usd),row('설비투자(CAPEX)','capex',usd,'sub'),row('감가상각비','da',usd,'sub'),row('배당 지급','div',usd,'sub'),row('자사주 매입','buyback',usd,'sub'),calc('잉여현금흐름(영업CF-CAPEX)',fcf,usd,'bold')],
-   ra:[calc('매출 증가율',i=>i>0?div(g('rev',i)!=null&&g('rev',i-1)!=null?g('rev',i)-g('rev',i-1):null,g('rev',i-1)):null,x=>pct(x)),
+   ra:[calc(Q?'매출 증가율(전년동기 대비)':'매출 증가율',i=>i>=per?div(g('rev',i)!=null&&g('rev',i-per)!=null?g('rev',i)-g('rev',i-per):null,g('rev',i-per)):null,x=>pct(x)),
+       calc(Q?'순이익 증가율(전년동기 대비)':'순이익 증가율',i=>i>=per&&g('ni',i-per)>0?div(g('ni',i)-g('ni',i-per),g('ni',i-per)):null,x=>pct(x)),
        calc('매출총이익률',i=>div(g('gp',i),g('rev',i)),x=>pct(x)),calc('영업이익률',i=>div(g('op',i),g('rev',i)),x=>pct(x)),calc('순이익률',i=>div(g('ni',i),g('rev',i)),x=>pct(x)),
-       calc('ROE(순이익/기말자본)',i=>div(g('ni',i),g('eq',i)),x=>pct(x)),calc('ROA(순이익/기말자산)',i=>div(g('ni',i),g('ta',i)),x=>pct(x)),
+       calc(Q?'ROE(분기 순이익×4/기말자본)':'ROE(순이익/기말자본)',i=>div(g('ni',i)*per,g('eq',i)),x=>pct(x)),calc(Q?'ROA(분기 순이익×4/기말자산)':'ROA(순이익/기말자산)',i=>div(g('ni',i)*per,g('ta',i)),x=>pct(x)),
        calc('부채비율(부채/자본)',i=>div(g('tl',i),g('eq',i)),x=>pct(x,0)),calc('유동비율',i=>div(g('ca',i),g('cl',i)),x=>pct(x,0)),
        calc('FCF 마진',i=>div(fcf(i),g('rev',i)),x=>pct(x)),calc('배당+자사주매입 / 순이익',i=>div((g('div',i)||0)+(g('buyback',i)||0),g('ni',i)),x=>pct(x,0))]
   };
   const names={is:'손익계산서',bs:'재무상태표',cf:'현금흐름표',ra:'비율·지표'};
+  const qnote=Q?'<div class="note">분기 값은 10-Q의 단독 3개월 값이고, 4분기(Q4)는 10-K 연간 값에서 3분기 누계를 뺀 값입니다. 현금흐름은 누계 값의 차이로 계산했고 EPS의 Q4는 근사치입니다. 결산월이 달라 분기 이름 대신 분기 말일을 표시합니다.</div>':'';
   h+=`<div class="card"><div class="tabs" id="stabs">${Object.keys(names).map(k=>`<button class="tab${k===TAB?' active':''}" data-k="${k}">${names[k]}</button>`).join('')}</div>
-  <div style="overflow-x:auto;padding-top:8px"><table class="bt">${hdr}${T[TAB].join('')}</table></div></div>`;
+  <div style="overflow-x:auto;padding-top:8px"><table class="bt">${hdr}${T[TAB].join('')}</table></div>${qnote}</div>`;
   $('result').innerHTML=h;
   $('stabs').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;TAB=b.dataset.k;render();};
   chart(E,D);
