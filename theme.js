@@ -3,6 +3,22 @@
    3개 페이지만 localStorage에 테마를 저장하고 나머지 128개는 저장을
    안 해서 새로고침·페이지 이동할 때마다 다크모드로 초기화되는 버그가 있었다
    (2026-09-06 발견). 이 파일로 통일하면서 저장 방식으로 맞춤. */
+/* 스크롤바: 사이트 테마색(CSS 변수)을 따라가는 얇은 스크롤바. 페이지·표·자동완성 목록 등 전체에 적용.
+   표준 속성(scrollbar-*)을 우선 쓰고, 지원하지 않는 구형 WebKit만 ::-webkit-scrollbar로 대체한다.
+   페이지 CSS의 nav{scrollbar-width:none}처럼 요소 선택자가 있는 규칙은 이 규칙보다 우선한다. */
+(function () {
+  var st = document.createElement('style');
+  st.textContent =
+    '*{scrollbar-width:thin;scrollbar-color:var(--border) transparent}' +
+    '*{scrollbar-color:color-mix(in srgb,var(--text2) 45%,transparent) transparent}' +
+    '@supports not (scrollbar-color:auto){' +
+    '*::-webkit-scrollbar{width:8px;height:8px}' +
+    '*::-webkit-scrollbar-track{background:transparent}' +
+    '*::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px}' +
+    '*::-webkit-scrollbar-thumb:hover{background:var(--text2)}}';
+  document.head.appendChild(st);
+})();
+
 (function () {
   var saved = localStorage.getItem('theme');
   if (saved) document.documentElement.setAttribute('data-theme', saved);
