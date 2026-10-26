@@ -106,6 +106,9 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
 .tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
 .pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{display:flex;gap:8px}.qrow input{flex:1;min-width:0}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -121,7 +124,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="sec-hd"><div class="sec-title">한국 기업 재무제표</div><span class="sec-more" id="asof"></span></div>
 <div class="card" style="overflow:visible">
   <div class="uf-form">
-    <div class="fld suggest"><label>기업 (이름 또는 종목코드)</label><input id="q" autocomplete="off" placeholder="예: 삼성전자, 005930"><div class="sg-list" id="sg"></div></div>
+    <div class="fld suggest"><label>기업 (이름 또는 종목코드)</label><div class="qrow"><input id="q" autocomplete="off" placeholder="예: 삼성전자, 005930"><button class="btn" id="go" type="button">검색</button></div><div class="sg-list" id="sg"></div></div>
     <div class="fld"><label>주기</label><select id="per"><option value="a">연간</option><option value="q">분기</option></select></div>
     <div class="fld"><label>표시 개수</label><select id="yrs"></select></div>
   </div>
@@ -147,6 +150,8 @@ const wonp=v=>v==null?'-':String(Math.round(v)).replace(/\B(?=(\d{4})+(?!\d))/g,
 async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
 async function shard(c){const k=c.slice(0,2);if(!SH[k])SH[k]=await J('data/kr_fin/'+k+'.json');return SH[k][c];}
 
+function krRank(r,t){const c=r[0].toLowerCase(),nm=r[1].toLowerCase();return (c===t||nm===t)?0:nm.startsWith(t)?1:2;}
+function krHits(t){return IDX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)).sort((a,b)=>krRank(a,t)-krRank(b,t));}
 async function init(){
   try{const d=await J('data/kr_fin/index.json');IDX=d.stocks;$('asof').textContent=d.updated_at+' 갱신 · '+d.count+'개 종목';}
   catch(e){$('result').innerHTML='<div class="empty">재무 데이터를 준비 중입니다</div>';return;}
@@ -154,10 +159,11 @@ async function init(){
   $('pop').onclick=e=>{const b=e.target.closest('.tab');if(b)pick(b.dataset.t);};
   const q=$('q'),sg=$('sg');
   q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){sg.style.display='none';return;}
-    const hits=IDX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)).slice(0,10);
+    const hits=krHits(t).slice(0,10);
     sg.innerHTML=hits.map(r=>`<div data-t="${r[0]}">${esc(r[1])} <small>${r[0]} · ${r[2]==='P'?'코스피':'코스닥'}</small></div>`).join('');sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-t]');if(d)pick(d.dataset.t);});
-  q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-t]');if(d){e.preventDefault();pick(d.dataset.t);}}else if(e.key==='Escape')sg.style.display='none';});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();doSearch();}else if(e.key==='Escape')sg.style.display='none';});
+  $('go').addEventListener('click',doSearch);
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
   fillYrs();
   $('per').addEventListener('change',()=>{fillYrs();CUR&&render();});
@@ -168,6 +174,13 @@ async function init(){
 }
 function fillYrs(){const q=$('per').value==='q';
   $('yrs').innerHTML=(q?[[8,'최근 8분기'],[12,'최근 12분기']]:[[5,'최근 5년'],[9,'최근 9년']]).map((o,i)=>`<option value="${o[0]}"${i===(q?1:1)?' selected':''}>${o[1]}</option>`).join('');}
+function doSearch(){
+  const raw=$('q').value.trim();if(!raw)return;
+  const m=raw.match(/\((\w+)\)\s*$/),t=(m?m[1]:raw).toLowerCase();
+  const hits=krHits(t);
+  if(hits.length)pick(hits[0][0]);
+  else{$('sg').style.display='none';$('result').innerHTML='<div class="card"><div class="empty">"'+esc(raw)+'"에 해당하는 종목이 없습니다 (재무 데이터가 있는 코스피·코스닥 종목만 제공합니다)</div></div>';}
+}
 async function pick(c){
   const r=IDX.find(x=>x[0]===c);if(!r){$('result').innerHTML='<div class="empty">'+esc(c)+' 데이터가 없습니다</div>';return;}
   $('q').value=r[1]+' ('+c+')';$('sg').style.display='none';
