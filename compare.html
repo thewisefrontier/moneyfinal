@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="한국·미국 기업 2~4개를 골라 매출, 영업이익률, ROE, 부채비율, 성장률을 한눈에 비교하고 연도별 추이를 겹쳐 봅니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/compare">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="기업 비교 | 머니파이널">
+<meta property="og:description" content="한국·미국 기업 2~4개를 골라 매출, 영업이익률, ROE, 부채비율, 성장률을 한눈에 비교하고 연도별 추이를 겹쳐 봅니다.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/compare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="기업 비교 | 머니파이널">
+<meta name="twitter:description" content="한국·미국 기업 2~4개를 골라 매출, 영업이익률, ROE, 부채비율, 성장률을 한눈에 비교하고 연도별 추이를 겹쳐 봅니다.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"기업 비교","description":"한국·미국 기업 2~4개를 골라 매출, 영업이익률, ROE, 부채비율, 성장률을 한눈에 비교하고 연도별 추이를 겹쳐 봅니다.","url":"https://moneyfinal.pages.dev/compare","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"머니파이널","url":"https://moneyfinal.pages.dev"}}</script>
+<title>기업 비교 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 14px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--bg3);border-radius:20px;padding:5px 6px 5px 12px;font-size:13px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip button{background:none;border:0;color:var(--text2);cursor:pointer;font-size:15px;line-height:1;padding:2px 6px;border-radius:50%}
+.chip button:hover{color:var(--red);background:var(--bg2)}
+.bt td.best{font-weight:700;color:var(--accent)}
+.bt th .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.mtabs{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px 0}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav id="site-nav" data-active="compare.html"></nav>
+<script src="nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">기업 비교</div><span class="sec-more" id="asof"></span></div>
+<div class="card" style="overflow:visible">
+  <div class="tabs" id="mk"><button class="tab active" data-m="kr">한국 기업</button><button class="tab" data-m="us">미국 기업</button></div>
+  <div class="uf-form" style="grid-template-columns:1fr">
+    <div class="fld suggest"><label id="qlbl">비교할 기업 추가 (최대 4개)</label>
+      <div class="qrow"><input id="q" autocomplete="off" placeholder="이름 또는 코드"><button class="qgo" id="go" type="button" aria-label="검색" title="검색"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+      <div class="sg-list" id="sg"></div></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+<div id="result"><div class="empty">로딩 중...</div></div>
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
+  <b>보는 법</b> · 한국은 DART 연결 재무(주요계정), 미국은 SEC 10-K 연간 데이터입니다. 통화가 달라 <b>한국끼리 또는 미국끼리만</b> 비교합니다. 각 행에서 <b style="color:var(--accent)">파란 굵은 글씨</b>는 비교 대상 중 가장 높은 값(부채비율은 가장 낮은 값)일 뿐 좋고 나쁨의 판단이 아닙니다. 업종이 다르면 마진·부채비율의 기준이 달라 직접 비교가 어렵고, 금융회사는 매출액·부채비율이 일반 기업과 다릅니다. 결산월이 다른 기업은 결산 연도(결산일의 연도) 기준으로 맞췄습니다. PER·PBR은 오늘 시가총액으로 계산한 한국 종목만 표시합니다. 투자 권유가 아닌 참고 자료입니다.
+</div>
+</main>
+<div class="disclaimer">⚠️ 본 정보는 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: 금융감독원 DART, SEC EDGAR</div>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script src="theme.js"></script><script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const PAL=['#388bfd','#3fb950','#d29922','#f85149'];
+const CFG={kr:{idx:'data/kr_fin/index.json',dir:'data/kr_fin/',key:c=>c.slice(0,2),ph:'이름 또는 종목코드 (예: 삼성전자)'},us:{idx:'data/us_fin/index.json',dir:'data/us_fin/',key:c=>c[0].toUpperCase(),ph:'티커 또는 영문 이름 (예: AAPL, Microsoft)'}};
+let M='kr',IDX={kr:null,us:null},SEL=[],SH={},MET='rev';
+// 억/만 단위 표기 (원 / 달러), 억 단위 미만 반올림
+function amt(n,unit){if(n==null)return'-';const neg=n<0;let v=Math.abs(n);if(v>=1e8)v=Math.round(v/1e8)*1e8;
+  const jo=Math.floor(v/1e12),eok=Math.floor(v%1e12/1e8),man=Math.floor(v%1e8/1e4),r=Math.round(v%1e4);
+  let s='';if(jo)s+=jo+'조';if(eok)s+=eok+'억';if(man)s+=man+'만';if(r&&!jo&&!eok)s+=r;if(!s)s='0';return(neg?'-':'')+s+unit;}
+const pct=(v,d=1)=>v==null||!isFinite(v)?'-':(v*100).toFixed(d)+'%';
+const bei=v=>v==null||!isFinite(v)?'-':v.toFixed(1)+'배';
+async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
+
+async function loadIdx(m){
+  if(IDX[m])return IDX[m];
+  const d=await J(CFG[m].idx);
+  IDX[m]=d.stocks.map(r=>m==='kr'?{id:r[0],name:r[1],sub:(r[2]==='P'?'코스피':'코스닥'),mc:r[3]}:{id:r[0],name:r[1],sub:r[2]||'',mc:null});
+  IDX[m].updated=d.updated_at;return IDX[m];
+}
+// 회사 1개를 공통 형식으로 (금액 원/달러 단위)
+async function loadCo(m,id){
+  const k=CFG[m].key(id),ck=m+k;
+  if(!SH[ck])SH[ck]=await J(CFG[m].dir+k+'.json');
+  const raw=SH[ck][id];if(!raw)return null;
+  const meta=IDX[m].find(x=>x.id===id);
+  const src=m==='kr'?raw.a:raw,sc=m==='kr'?1e6:1,d={};
+  Object.keys(src.d).forEach(k2=>d[k2]=src.d[k2].map(v=>v==null?null:(k2==='dps'||k2==='eps'||k2==='sh'?v:v*sc)));
+  return {m,id,name:raw.n||meta.name,e:src.e,d,mc:m==='kr'&&meta&&meta.mc?meta.mc*1e8:null};
+}
+const idxOf=(c,i)=>c.d[i]?c.d[i]:null;
+const g=(c,k,i)=>c.d[k]?c.d[k][i]:null;
+const last=c=>c.e.length-1;
+const div=(a,b)=>a!=null&&b!=null&&b!==0?a/b:null;
+const mg=(a,b)=>a!=null&&b!=null&&b>0&&a<=b?a/b:null;  // 이익>매출(지주사 등)이면 마진을 비움
+function cagr(c,k,y){const i=last(c),j=i-y,a=c.d[k];if(!a||j<0||a[i]==null||a[j]==null||a[j]<=0||a[i]<=0)return null;return Math.pow(a[i]/a[j],1/y)-1;}
+function yearOf(c,i){return c.e[i].slice(0,4);}
+// 지표 정의: [라벨, 계산, 표시, 방향(hi=높을수록 강조, lo=낮을수록 강조, ''=강조 없음)]
+function rows(){
+  const kr=M==='kr',u=kr?'원':'달러';
+  const L=c=>last(c);
+  const R=[
+    ['최근 결산일',c=>c.e[L(c)],x=>x,''],
+    ['매출',c=>g(c,'rev',L(c)),x=>amt(x,u),'hi'],
+    ['영업이익',c=>g(c,'op',L(c)),x=>amt(x,u),'hi'],
+    ['순이익',c=>g(c,'ni',L(c)),x=>amt(x,u),'hi'],
+    ['자산총계',c=>g(c,'ta',L(c)),x=>amt(x,u),'hi'],
+    ['영업이익률',c=>mg(g(c,'op',L(c)),g(c,'rev',L(c))),x=>pct(x),'hi'],
+    ['순이익률',c=>mg(g(c,'ni',L(c)),g(c,'rev',L(c))),x=>pct(x),'hi'],
+    ['ROE',c=>div(g(c,'ni',L(c)),g(c,'eq',L(c))),x=>pct(x),'hi'],
+    ['ROA',c=>div(g(c,'ni',L(c)),g(c,'ta',L(c))),x=>pct(x),'hi'],
+    ['부채비율',c=>div(g(c,'tl',L(c)),g(c,'eq',L(c))),x=>pct(x,0),'lo'],
+    ['매출 3년 연평균 성장',c=>cagr(c,'rev',3),x=>pct(x),'hi'],
+    ['매출 5년 연평균 성장',c=>cagr(c,'rev',5),x=>pct(x),'hi'],
+    ['순이익 5년 연평균 성장',c=>cagr(c,'ni',5),x=>pct(x),'hi']
+  ];
+  if(kr){
+    R.push(['시가총액(오늘)',c=>c.mc,x=>amt(x,u),'hi']);
+    R.push(['PER(시총/순이익)',c=>c.mc&&g(c,'ni',L(c))>0?c.mc/g(c,'ni',L(c)):null,bei,'']);
+    R.push(['PBR(시총/자본)',c=>c.mc&&g(c,'eq',L(c))>0?c.mc/g(c,'eq',L(c)):null,bei,'']);
+    R.push(['주당 배당금',c=>g(c,'dps',L(c)),x=>x==null?'-':Math.round(x)+'원','hi']);
+  }else{
+    R.push(['잉여현금흐름',c=>g(c,'cfo',L(c))!=null&&g(c,'capex',L(c))!=null?g(c,'cfo',L(c))-Math.abs(g(c,'capex',L(c))):null,x=>amt(x,u),'hi']);
+    R.push(['FCF 마진',c=>{const f=g(c,'cfo',L(c))!=null&&g(c,'capex',L(c))!=null?g(c,'cfo',L(c))-Math.abs(g(c,'capex',L(c))):null;return div(f,g(c,'rev',L(c)));},x=>pct(x),'hi']);
+    R.push(['희석 EPS',c=>g(c,'eps',L(c)),x=>x==null?'-':x.toFixed(2)+'달러','hi']);
+    R.push(['배당+자사주 / 순이익',c=>div((g(c,'div',L(c))||0)+(g(c,'buyback',L(c))||0),g(c,'ni',L(c))),x=>pct(x,0),'']);
+  }
+  return R;
+}
+// 추이 지표
+const METS={rev:['매출 지수(시작=100)'],ni:['순이익 지수(시작=100)'],opm:['영업이익률'],npm:['순이익률'],roe:['ROE'],debt:['부채비율']};
+function trend(c,k){
+  // 결산 연도 -> 값
+  const out={};
+  c.e.forEach((e,i)=>{const y=e.slice(0,4);let v=null;
+    if(k==='rev'||k==='ni')v=g(c,k,i);
+    else if(k==='opm')v=mg(g(c,'op',i),g(c,'rev',i));
+    else if(k==='npm')v=mg(g(c,'ni',i),g(c,'rev',i));
+    else if(k==='roe')v=div(g(c,'ni',i),g(c,'eq',i));
+    else if(k==='debt')v=div(g(c,'tl',i),g(c,'eq',i));
+    if(v!=null)out[y]=v;});
+  return out;
+}
+
+async function init(){
+  document.querySelectorAll('#mk .tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.m===M)return;M=b.dataset.m;document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x===b));SEL=[];setup();}));
+  const u=new URLSearchParams(location.search);
+  if(u.get('m')==='us'){M='us';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='us'));}
+  const q=$('q'),sg=$('sg');
+  q.addEventListener('input',()=>suggest());
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addFirst();}else if(e.key==='Escape')sg.style.display='none';});
+  $('go').addEventListener('click',addFirst);
+  sg.addEventListener('click',e=>{const d=e.target.closest('div[data-id]');if(d)add(d.dataset.id);});
+  document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
+  await setup(u.get('t')?u.get('t').split(','):null);
+}
+async function setup(ids){
+  $('q').placeholder=CFG[M].ph;$('q').value='';$('sg').style.display='none';
+  try{await loadIdx(M);}catch(e){$('result').innerHTML='<div class="empty">재무 데이터를 준비 중입니다</div>';return;}
+  $('asof').textContent=IDX[M].updated+' 갱신';
+  let start=ids;
+  if(!start||!start.length){const pref=M==='kr'?['005930','000660','005380']:['NVDA','AAPL','MSFT'];start=pref.filter(t=>IDX[M].some(x=>x.id===t));if(start.length<2)start=IDX[M].slice(0,3).map(x=>x.id);}
+  SEL=[];for(const id of start.slice(0,4)){const c=await loadCo(M,id);if(c)SEL.push(c);}
+  render();
+}
+function rank(r,t){const id=r.id.toLowerCase(),n=r.name.toLowerCase();return (id===t||n===t)?0:n.startsWith(t)?1:id.startsWith(t)?2:3;}
+function hits(t){return IDX[M].filter(r=>!SEL.some(s=>s.id===r.id)&&(r.id.toLowerCase().startsWith(t)||r.name.toLowerCase().includes(t))).sort((a,b)=>rank(a,t)-rank(b,t));}
+function suggest(){
+  const t=$('q').value.trim().toLowerCase(),sg=$('sg');if(!t){sg.style.display='none';return;}
+  const h=hits(t).slice(0,10);
+  sg.innerHTML=h.map(r=>`<div data-id="${esc(r.id)}">${esc(r.name)} <small>${esc(r.id)}${r.sub?' · '+esc(r.sub):''}</small></div>`).join('')||'<div style="cursor:default">결과 없음</div>';
+  sg.style.display='block';
+}
+async function addFirst(){
+  const raw=$('q').value.trim();if(!raw)return;
+  const h=hits(raw.toLowerCase());
+  if(h.length)add(h[0].id);else{$('sg').innerHTML='<div style="cursor:default">"'+esc(raw)+'"에 해당하는 기업이 없습니다</div>';$('sg').style.display='block';}
+}
+async function add(id){
+  $('sg').style.display='none';$('q').value='';
+  if(SEL.length>=4){$('sg').innerHTML='<div style="cursor:default">최대 4개까지 비교할 수 있습니다. 위 목록에서 기업을 하나 빼고 추가해 주세요.</div>';$('sg').style.display='block';$('q').value=id;return;}
+  const c=await loadCo(M,id);if(c){SEL.push(c);render();}
+}
+function remove(id){SEL=SEL.filter(c=>c.id!==id);render();}
+
+function render(){
+  try{history.replaceState(null,'','?m='+M+'&t='+SEL.map(c=>encodeURIComponent(c.id)).join(','));}catch(e){}
+  $('chips').innerHTML=SEL.map((c,i)=>`<span class="chip"><i style="background:${PAL[i]}"></i>${esc(c.name)}<button type="button" data-id="${esc(c.id)}" aria-label="제거" title="제거">×</button></span>`).join('')||'<span style="color:var(--text2);font-size:12px">기업을 검색해서 추가해 주세요 (2개 이상)</span>';
+  $('chips').onclick=e=>{const b=e.target.closest('button[data-id]');if(b)remove(b.dataset.id);};
+  if(SEL.length<2){$('result').innerHTML='<div class="card"><div class="empty">비교하려면 기업을 2개 이상 선택해 주세요</div></div>';return;}
+  const R=rows();
+  let h='<div class="card"><div class="card-hd"><span class="card-title">핵심 지표 비교 (최근 연간 결산)</span></div><div style="overflow-x:auto"><table class="bt"><tr><th>항목</th>'+
+    SEL.map((c,i)=>`<th><span class="dot" style="background:${PAL[i]}"></span>${esc(c.name)}</th>`).join('')+'</tr>';
+  R.forEach(([lab,fn,fmt,dir])=>{
+    const vals=SEL.map(c=>fn(c));
+    let best=-1;
+    if(dir){const nums=vals.map((v,i)=>[v,i]).filter(x=>typeof x[0]==='number'&&isFinite(x[0]));
+      if(nums.length>=2){best=(dir==='hi'?nums.reduce((a,b)=>b[0]>a[0]?b:a):nums.reduce((a,b)=>b[0]<a[0]?b:a))[1];}}
+    h+=`<tr><td>${lab}</td>${vals.map((v,i)=>`<td${i===best?' class="best"':''}>${fmt(v)}</td>`).join('')}</tr>`;});
+  h+='</table></div></div>';
+  h+=`<div class="card"><div class="card-hd"><span class="card-title">연도별 추이 비교</span></div>
+  <div class="mtabs" id="mt">${Object.keys(METS).map(k=>`<button class="tab${k===MET?' active':''}" data-k="${k}">${METS[k][0]}</button>`).join('')}</div>
+  <div id="chart" style="padding:8px 8px 0"></div><div class="legend" id="lg"></div><div style="overflow-x:auto" id="ttab"></div>
+  <div class="note" id="tnote"></div></div>`;
+  $('result').innerHTML=h;
+  $('mt').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;MET=b.dataset.k;document.querySelectorAll('#mt .tab').forEach(x=>x.classList.toggle('active',x===b));drawTrend();};
+  drawTrend();
+}
+function drawTrend(){
+  const idx=MET==='rev'||MET==='ni',ratio=!idx;
+  const series=SEL.map(c=>trend(c,MET));
+  let years=[...new Set(series.flatMap(s=>Object.keys(s)))].sort().slice(-9);
+  if(!years.length){$('chart').innerHTML='<div class="empty">데이터 없음</div>';return;}
+  // 지수화: 각 기업의 (공통 구간 내) 첫 값 = 100
+  const data=series.map(s=>{
+    const o={};const first=years.find(y=>s[y]!=null&&(idx?s[y]>0:true));
+    years.forEach(y=>{let v=s[y];if(v==null){o[y]=null;return;}
+      if(idx){o[y]=first&&s[first]>0?v/s[first]*100:null;}else o[y]=v*100;});return o;});
+  const all=data.flatMap(o=>years.map(y=>o[y])).filter(v=>v!=null&&isFinite(v));
+  if(!all.length){$('chart').innerHTML='<div class="empty">표시할 값이 없습니다</div>';return;}
+  let lo=Math.min(...all),hi=Math.max(...all);if(idx)lo=Math.min(lo,100);if(hi===lo){hi+=1;lo-=1;}const pad=(hi-lo)*.08;lo-=pad;hi+=pad;
+  const W=800,H=300,pl=58,pr=14,pt=14,pb=26,n=years.length;
+  const X=i=>pl+(W-pl-pr)*(n===1?0.5:i/(n-1)),Y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));
+  const cs=getComputedStyle(document.documentElement),c=k=>cs.getPropertyValue(k).trim();
+  const fmtY=v=>idx?Math.round(v):v.toFixed(Math.abs(hi-lo)<10?1:0)+'%';
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">`;
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--border')}"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${c('--text2')}">${fmtY(v)}</text>`;}
+  if(idx){const y=Y(100);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--text2')}" stroke-dasharray="4 4"/>`;}
+  years.forEach((y,i)=>{s+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="10" fill="${c('--text2')}">${y}</text>`;});
+  data.forEach((o,ci)=>{const pts=years.map((y,i)=>o[y]==null?null:[X(i),Y(o[y])]);
+    const path=pts.filter(Boolean).map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+    s+=`<polyline points="${path}" fill="none" stroke="${PAL[ci]}" stroke-width="2.2" stroke-linejoin="round"/>`;
+    pts.forEach(p=>{if(p)s+=`<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="${PAL[ci]}"/>`;});});
+  $('chart').innerHTML=s+'</svg>';
+  $('lg').innerHTML=SEL.map((cc,i)=>`<span><i style="background:${PAL[i]}"></i>${esc(cc.name)}</span>`).join('');
+  $('ttab').innerHTML='<table class="bt"><tr><th>결산 연도</th>'+SEL.map((cc,i)=>`<th><span class="dot" style="background:${PAL[i]}"></span>${esc(cc.name)}</th>`).join('')+'</tr>'+
+    years.slice().reverse().map(y=>`<tr><td>${y}</td>${series.map((s2,i)=>`<td>${s2[y]==null?'-':idx?(data[i][y]==null?'-':data[i][y].toFixed(0)):pct(s2[y])}</td>`).join('')}</tr>`).join('')+'</table>';
+  $('tnote').innerHTML=idx?'지수는 각 기업이 비교 구간에서 처음 값이 있는 해를 100으로 맞춘 값이며 적자·결측 연도는 비어 있습니다. 규모가 다른 기업의 성장 속도를 견주는 용도입니다.':'결산 연도는 결산일의 연도 기준입니다. 비율은 연간 값입니다.';
+}
+init();
+</script><script src="ticker.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

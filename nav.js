@@ -17,6 +17,7 @@
     ['company.html', '기업정보'],
     ['kr-fin.html', '한국재무'],
     ['us-fin.html', '미국재무'],
+    ['compare.html', '기업비교'],
     ['superinvestor.html', '슈퍼인베스터'],
     ['bond.html', '채권'],
     ['sim.html', '시뮬레이터'],
