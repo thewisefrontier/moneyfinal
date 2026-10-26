@@ -197,12 +197,13 @@ function render(){
   Object.keys(src.d).forEach(k=>D[k]=src.d[k].slice(s0));
   const last=E.length-1,per=Q?4:1,g=(k,i=last)=>D[k]?D[k][i]:null;
   const div=(a,b)=>a!=null&&b!=null&&b!==0?a/b:null;
+  const ts=(k,i)=>{if(!Q)return g(k,i);if(i<3)return null;let s=0;for(let j=i-3;j<=i;j++){const v=g(k,j);if(v==null)return null;if(j<i){const dd=(new Date(E[j+1])-new Date(E[j]))/864e5;if(dd<70||dd>110)return null;}s+=v;}return s;};
   const yoy=k=>{const a=D[k];if(!a||last-per<0||a[last]==null||a[last-per]==null||a[last-per]<=0)return null;return a[last]/a[last-per]-1;};
   const cagr=(k,y)=>{const a=D[k],j=last-y;if(!a||j<0||a[last]==null||a[j]==null||a[j]<=0||a[last]<=0)return null;return Math.pow(a[last]/a[j],1/y)-1;};
   const gtxt=(k,nm)=>Q?'전년동기 대비 '+pct(yoy(k)):nm+' 5년 성장 '+pct(cagr(k,5));
   const kp=[['매출',won(g('rev')),gtxt('rev','매출')],['순이익',won(g('ni')),gtxt('ni','순이익')],
-    ['영업이익률',pct(div(g('op'),g('rev'))),'영업이익 '+won(g('op'))],['순이익률',pct(div(g('ni'),g('rev'))),'ROE'+(Q?'(연환산) ':' ')+pct(div(g('ni')*per,g('eq')))],
-    ['자산총계',won(g('ta')),'ROA '+pct(div(g('ni')*per,g('ta')))],['부채비율',pct(div(g('tl'),g('eq')),0),'부채총계 '+won(g('tl'))],
+    ['영업이익률',pct(div(g('op'),g('rev'))),'영업이익 '+won(g('op'))],['순이익률',pct(div(g('ni'),g('rev'))),'ROE'+(Q?'(최근 4분기 순이익 기준) ':' ')+pct(div(ts('ni',last),g('eq')))],
+    ['자산총계',won(g('ta')),'ROA'+(Q?'(최근 4분기) ':' ')+pct(div(ts('ni',last),g('ta')))],['부채비율',pct(div(g('tl'),g('eq')),0),'부채총계 '+won(g('tl'))],
     ['자본총계',won(g('eq')),'유동비율 '+pct(div(g('ca'),g('cl')),0)],['주당 배당금',D.dps?wonp(g('dps')):'-',D.dps?'연간 보통주 현금배당':'배당 데이터 없음']];
   let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(CUR.n)} <span class="badge">${CUR.t}</span><span class="badge">${CUR.m==='P'?'코스피':'코스닥'}</span><span class="badge">${Q?'최근 분기':'최근 결산'} ${E[last]}</span>${CUR.t===TOPT?'<span class="badge">시가총액 1위</span>':''}</span></div>
   <div class="stat">${kp.map(x=>`<div class="s"><div class="l">${x[0]}</div><div class="v">${x[1]}</div><div class="l" style="margin-top:2px">${x[2]}</div></div>`).join('')}</div>
@@ -216,11 +217,11 @@ function render(){
    ra:[calc(Q?'매출 증가율(전년동기 대비)':'매출 증가율',i=>i>=per?div(g('rev',i)!=null&&g('rev',i-per)!=null?g('rev',i)-g('rev',i-per):null,g('rev',i-per)):null,x=>pct(x)),
        calc(Q?'순이익 증가율(전년동기 대비)':'순이익 증가율',i=>i>=per&&g('ni',i-per)>0?div(g('ni',i)-g('ni',i-per),g('ni',i-per)):null,x=>pct(x)),
        calc('영업이익률',i=>div(g('op',i),g('rev',i)),x=>pct(x)),calc('순이익률',i=>div(g('ni',i),g('rev',i)),x=>pct(x)),
-       calc(Q?'ROE(분기 순이익×4/기말자본)':'ROE(순이익/기말자본)',i=>div(g('ni',i)*per,g('eq',i)),x=>pct(x)),calc(Q?'ROA(분기 순이익×4/기말자산)':'ROA(순이익/기말자산)',i=>div(g('ni',i)*per,g('ta',i)),x=>pct(x)),
+       calc(Q?'ROE(최근 4분기 순이익/분기말 자본)':'ROE(순이익/기말자본)',i=>div(ts('ni',i),g('eq',i)),x=>pct(x)),calc(Q?'ROA(최근 4분기 순이익/분기말 자산)':'ROA(순이익/기말자산)',i=>div(ts('ni',i),g('ta',i)),x=>pct(x)),
        calc('부채비율(부채/자본)',i=>div(g('tl',i),g('eq',i)),x=>pct(x,0)),calc('유동비율',i=>div(g('ca',i),g('cl',i)),x=>pct(x,0))]
   };
   const names={is:'손익계산서',bs:'재무상태표',ra:'비율·지표'};
-  const qnote=Q?'<div class="note">분기 값은 분기보고서의 3개월 값이고, 4분기(Q4)는 사업보고서 연간 값에서 3분기 누계를 뺀 값입니다.</div>':'';
+  const qnote=Q?'<div class="note">분기 값은 분기보고서의 3개월 값이고, 4분기(Q4)는 사업보고서 연간 값에서 3분기 누계를 뺀 값입니다. ROE·ROA는 최근 4분기 순이익 합계를 분기말 자본·자산으로 나눈 값입니다.</div>':'';
   h+=`<div class="card"><div class="tabs" id="stabs">${Object.keys(names).map(k=>`<button class="tab${k===TAB?' active':''}" data-k="${k}">${names[k]}</button>`).join('')}</div>
   <div style="overflow-x:auto;padding-top:8px"><table class="bt">${hdr}${T[TAB].join('')}</table></div>${qnote}</div>`;
   $('result').innerHTML=h;

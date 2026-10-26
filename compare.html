@@ -195,6 +195,7 @@ function cagr(c,k,y){const i=c.at,j=i-y,a=c.d[k];if(!a||j<0||a[i]==null||a[j]==n
 function growth(c,k,dq){ // 분기: 라벨 기준 전년동기(-4)·전분기(-1) 증가율
   const j=c.lab.indexOf(labShift(c.lab[c.at],dq)),a=g(c,k,c.at),b=g(c,k,j);return j>=0&&a!=null&&b!=null&&b>0?a/b-1:null;}
 function ttm(c,k){const i=c.at;let s=0;for(let j=i-3;j<=i;j++){const v=g(c,k,j);if(j<0||v==null||c.lab[j]!==labShift(c.lab[i],j-i))return null;s+=v;}return s;}
+function ttmAt(c,k,i){if(i<3)return null;let s=0;for(let j=i-3;j<=i;j++){const v=g(c,k,j);if(v==null||c.lab[j]!==labShift(c.lab[i],j-i))return null;s+=v;}return s;}
 function fcfOf(c,i){const a=g(c,'cfo',i),b=g(c,'capex',i);return a!=null&&b!=null?a-Math.abs(b):null;}
 
 function rowsA(){
@@ -239,8 +240,8 @@ function rowsQ(){
     ['매출 증가율(전년 동기)',c=>growth(c,'rev',-4),x=>pct(x),'hi'],
     ['순이익 증가율(전년 동기)',c=>growth(c,'ni',-4),x=>pct(x),'hi'],
     ['매출 증가율(전분기)',c=>growth(c,'rev',-1),x=>pct(x),'hi'],
-    ['ROE(분기×4 연환산)',c=>{const a=g(c,'ni',c.at),b=g(c,'eq',c.at);return a!=null&&b>0?a*4/b:null;},x=>pct(x),'hi'],
-    ['ROA(분기×4 연환산)',c=>{const a=g(c,'ni',c.at),b=g(c,'ta',c.at);return a!=null&&b>0?a*4/b:null;},x=>pct(x),'hi'],
+    ['ROE(최근 4분기 순이익/분기말 자본)',c=>{const a=ttm(c,'ni'),b=g(c,'eq',c.at);return a!=null&&b>0?a/b:null;},x=>pct(x),'hi'],
+    ['ROA(최근 4분기 순이익/분기말 자산)',c=>{const a=ttm(c,'ni'),b=g(c,'ta',c.at);return a!=null&&b>0?a/b:null;},x=>pct(x),'hi'],
     ['부채비율',c=>div(g(c,'tl',c.at),g(c,'eq',c.at)),x=>pct(x,0),'lo'],
     ['최근 4분기 매출 합계',c=>ttm(c,'rev'),x=>amt(x,u),'hi'],
     ['최근 4분기 순이익 합계',c=>ttm(c,'ni'),x=>amt(x,u),'hi']
@@ -251,13 +252,12 @@ function rowsQ(){
     R.push(['PBR(시총/최근 분기 자본)',c=>c.mc&&g(c,'eq',c.at)>0?c.mc/g(c,'eq',c.at):null,bei,'']);
   }else{
     R.push(['잉여현금흐름(분기)',c=>fcfOf(c,c.at),x=>amt(x,u),'hi']);
-    R.push(['희석 EPS(분기)',c=>g(c,'eps',c.at),x=>x==null?'-':x.toFixed(2)+'달러','hi']);
   }
   return R;
 }
 // 추이 지표
 const METS_A={rev:'매출 지수(시작=100)',ni:'순이익 지수(시작=100)',opm:'영업이익률',npm:'순이익률',roe:'ROE',debt:'부채비율'};
-const METS_Q={revyoy:'매출 증가율(전년 동기)',niyoy:'순이익 증가율(전년 동기)',opm:'영업이익률',npm:'순이익률',roe:'ROE(연환산)',debt:'부채비율'};
+const METS_Q={revyoy:'매출 증가율(전년 동기)',niyoy:'순이익 증가율(전년 동기)',opm:'영업이익률',npm:'순이익률',roe:'ROE(최근 4분기 기준)',debt:'부채비율'};
 const isIdx=k=>P==='a'&&(k==='rev'||k==='ni');
 function trend(c,k){
   const out={};
@@ -265,7 +265,7 @@ function trend(c,k){
     if(k==='rev'||k==='ni')v=g(c,k,i);
     else if(k==='opm')v=mg(g(c,'op',i),g(c,'rev',i));
     else if(k==='npm')v=nm(g(c,'ni',i),g(c,'rev',i));
-    else if(k==='roe'){const a=g(c,'ni',i),b=g(c,'eq',i);v=a!=null&&b>0?a*(P==='q'?4:1)/b:null;}
+    else if(k==='roe'){let a=g(c,'ni',i);if(P==='q'){a=ttmAt(c,'ni',i);}const b=g(c,'eq',i);v=a!=null&&b>0?a/b:null;}
     else if(k==='debt')v=div(g(c,'tl',i),g(c,'eq',i));
     else if(k==='revyoy'||k==='niyoy'){const kk=k==='revyoy'?'rev':'ni',j=c.lab.indexOf(labShift(y,-4)),a=g(c,kk,i),b=g(c,kk,j);v=j>=0&&a!=null&&b>0?a/b-1:null;}
     if(v!=null)out[y]=v;});
