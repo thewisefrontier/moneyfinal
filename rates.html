@@ -101,6 +101,10 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
 .calc-result{margin-top:10px;padding:8px;background:var(--bg);border-left:3px solid var(--accent);border-radius:4px}
 .result-item{display:flex;justify-content:space-between;margin:3px 0;font-size:12px}
 .result-label{color:var(--text2)}.result-value{font-weight:600;color:var(--accent)}
+.qrow{position:relative;flex:1;min-width:150px}
+.qrow input{width:100%;padding-right:44px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -124,7 +128,7 @@ select.sel{background:var(--bg);border:1px solid var(--border);border-radius:6px
     <div class="tb-row">
       <button class="ft active" data-f="cat" data-v="적금" onclick="setF(this)">적금</button>
       <button class="ft" data-f="cat" data-v="예금" onclick="setF(this)">예금</button>
-      <input type="text" class="search-box" id="q" placeholder="은행명·상품명 검색" oninput="render()">
+      <div class="qrow"><input type="text" class="search-box" id="q" placeholder="은행명·상품명 검색" oninput="render()"><button class="qgo" type="button" aria-label="검색" title="검색" onclick="var i=document.getElementById('q');i.focus();i.dispatchEvent(new Event('input',{bubbles:true}))"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
       <select class="sel" id="sort" onchange="render()" style="display:none">
         <option value="max">최고금리순</option>
         <option value="base">기본금리순</option>

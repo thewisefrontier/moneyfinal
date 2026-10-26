@@ -108,6 +108,9 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
 .ti .name{color:var(--text);font-weight:500}
 .ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+.tk-search input{padding-right:40px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:5px 7px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -414,7 +417,7 @@ function renderPortfolio(){
   const el=document.getElementById('portRows');
   el.innerHTML=portfolio.map((row,i)=>{
     const marketSel=`<select onchange="onMarketChange(${i},this.value)"><option value="us" ${row.market==='us'?'selected':''}>해외</option><option value="domestic" ${row.market==='domestic'?'selected':''}>국내</option></select>`;
-    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" onkeydown="onTkKeydown(event,${i},'${row.market}')" autocomplete="off" placeholder="티커/종목명 검색"><div class="tk-search-list" id="tkList${i}"></div></div>`;
+    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" onkeydown="onTkKeydown(event,${i},'${row.market}')" autocomplete="off" placeholder="티커/종목명 검색"><button class="qgo" type="button" aria-label="검색" title="검색" onmousedown="event.preventDefault()" onclick="document.getElementById('tkInput${i}').focus()"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button><div class="tk-search-list" id="tkList${i}"></div></div>`;
     let tickerField;
     if(row.market==='domestic'&&row.ticker==='__custom__'){
       tickerField=`<div style="margin-bottom:4px">${searchBox}</div><input type="text" placeholder="ETF명 직접 입력" value="${row.name}" oninput="onNameInput(${i},this.value)">`;

@@ -65,6 +65,10 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
 .ti .name{color:var(--text);font-weight:500}
+.qrow{position:relative;flex:1;min-width:140px}
+.qrow input{width:100%;padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -92,7 +96,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
     <select class="search-box" id="inv-sel" style="flex:0 0 auto;min-width:160px" onchange="renderTbl()">
       <option value="">전체 컨센서스</option>
     </select>
-    <input type="text" class="search-box" id="q" placeholder="종목명 검색" oninput="renderTbl()">
+    <div class="qrow"><input type="text" class="search-box" id="q" placeholder="종목명·티커·투자자 검색" autocomplete="off" oninput="renderTbl()" onkeydown="if(event.key==='Enter'){event.preventDefault();searchGo();}"><button class="qgo" type="button" aria-label="검색" title="검색" onclick="searchGo()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
   </div>
   <div class="tbl-wrap">
   <table>
@@ -149,6 +153,15 @@ async function load(){
     document.getElementById('tbody').innerHTML='<tr><td colspan="4" class="empty">데이터를 불러오지 못했습니다</td></tr>';
   }
 }
+function searchGo(){
+  // 돋보기/Enter: 입력이 투자자 이름이고 종목에는 안 걸리면 그 투자자 보기로 이동한다.
+  const input=document.getElementById('q'),t=input.value.trim().toLowerCase();
+  if(t&&!document.getElementById('inv-sel').value&&!CONSENSUS.some(c=>c.name_of_issuer.toLowerCase().includes(t)||(c.ticker||'').toLowerCase().includes(t))){
+    const inv=Object.keys(BY_INVESTOR).find(n=>n.toLowerCase().includes(t));
+    if(inv){document.getElementById('inv-sel').value=inv;input.value='';}
+  }
+  renderTbl();
+}
 function renderTbl(){
   const q=document.getElementById('q').value.trim().toLowerCase();
   const invName=document.getElementById('inv-sel').value;
@@ -157,7 +170,7 @@ function renderTbl(){
   if(!invName){
     document.getElementById('thead-consensus').hidden=false;
     document.getElementById('thead-investor').hidden=true;
-    const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q));
+    const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q)||(c.ticker||'').toLowerCase().includes(q));
     if(!list.length){tbody.innerHTML='<tr><td colspan="3" class="empty">검색 결과가 없습니다</td></tr>';return;}
     tbody.innerHTML=list.map((c,i)=>`<tr>
       <td><span class="rank">${i+1}.</span><span class="stock-name">${c.name_of_issuer}</span>${c.ticker?`<span class="coin-sym">${c.ticker}</span>`:''}</td>
@@ -170,7 +183,7 @@ function renderTbl(){
   document.getElementById('thead-consensus').hidden=true;
   document.getElementById('thead-investor').hidden=false;
   const inv=BY_INVESTOR[invName];
-  const list=(inv?.holdings||[]).filter(h=>!q||h.name_of_issuer.toLowerCase().includes(q));
+  const list=(inv?.holdings||[]).filter(h=>!q||h.name_of_issuer.toLowerCase().includes(q)||(h.ticker||'').toLowerCase().includes(q));
   if(!list.length){tbody.innerHTML='<tr><td colspan="4" class="empty">검색 결과가 없습니다</td></tr>';return;}
   tbody.innerHTML=list.map((h,i)=>`<tr>
     <td><span class="rank">${i+1}.</span><span class="stock-name">${h.name_of_issuer}</span>${h.ticker?`<span class="coin-sym">${h.ticker}</span>`:''}</td>

@@ -81,6 +81,10 @@ table.etf-tbl tr:last-child td{border-bottom:none}
 .tk-code{font-weight:700}
 .tk-name{font-size:11px;color:var(--text2);display:block;margin-top:1px}
 .tbl-wrap{overflow-x:auto}
+.qrow{position:relative;flex:1;min-width:150px}
+.qrow input{width:100%;padding-right:44px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -98,7 +102,7 @@ table.etf-tbl tr:last-child td{border-bottom:none}
 <div class="card">
   <div class="toolbar">
     <button class="ft active" data-cat="all" onclick="setCat(this)">전체</button><button class="ft" data-cat="개별종목 옵션인컴" onclick="setCat(this)">개별종목 옵션인컴</button><button class="ft" data-cat="분기배당 대표" onclick="setCat(this)">분기배당 대표</button><button class="ft" data-cat="월배당 BDC" onclick="setCat(this)">월배당 BDC</button><button class="ft" data-cat="월배당 리츠" onclick="setCat(this)">월배당 리츠</button><button class="ft" data-cat="월배당 모기지리츠" onclick="setCat(this)">월배당 모기지리츠</button><button class="ft" data-cat="채권인컴" onclick="setCat(this)">채권인컴</button><button class="ft" data-cat="커버드콜" onclick="setCat(this)">커버드콜</button>
-    <input type="text" class="search-box" id="q" placeholder="티커·이름 검색" oninput="renderTbl()">
+    <div class="qrow"><input type="text" class="search-box" id="q" placeholder="티커·이름 검색" oninput="renderTbl()"><button class="qgo" type="button" aria-label="검색" title="검색" onclick="var i=document.getElementById('q');i.focus();i.dispatchEvent(new Event('input',{bubbles:true}))"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
   </div>
   <div class="tbl-wrap">
   <table class="etf-tbl">

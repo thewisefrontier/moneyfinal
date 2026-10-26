@@ -107,6 +107,10 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 .stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
 .stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
 .badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
 </style>
 <meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
 <meta name="google-adsense-account" content="ca-pub-4162743270017653">
@@ -130,7 +134,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="panel active" id="p-sim">
   <div class="card" style="overflow:visible">
     <div class="sim-form">
-      <div class="fld suggest wide"><label>종목 (이름 또는 코드)</label><input id="q" autocomplete="off" placeholder="예: 삼성전자, 005930"><div class="sg-list" id="sg"></div></div>
+      <div class="fld suggest wide"><label>종목 (이름 또는 코드)</label><div class="qrow"><input id="q" autocomplete="off" placeholder="예: 삼성전자, 005930"><button class="qgo" id="qgo" type="button" aria-label="검색" title="검색"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div><div class="sg-list" id="sg"></div></div>
       <div class="fld"><label>시작 시점</label><select id="start"></select></div>
       <div class="fld"><label>투자 방식</label><select id="mode"><option value="lump">일시금</option><option value="dca">매월 적립</option></select></div>
       <div class="fld"><label id="amtlbl">투자금(원)</label><input id="amt" inputmode="numeric" value="10000000"></div>
@@ -245,6 +249,7 @@ async function init(){
     sg.innerHTML=hits.map(r=>`<div data-c="${r[0]}" data-n="${esc(r[1])}">${esc(r[1])}<small>${r[0]} · ${r[2]==='P'?'코스피':'코스닥'}${r[3]<g.length-1?' · 상장폐지':''}</small></div>`).join('');
     sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-c]');if(!d)return;pick(d.dataset.c,d.dataset.n);});
+  $('qgo').addEventListener('click',()=>{const t=q.value.trim().toLowerCase().replace(/\s*\(\w+\)\s*$/,'');if(!t)return;const h=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t))[0];if(h){pick(h[0],h[1]);run();}else{sg.style.display='none';$('result').innerHTML='<div class="empty">"'+esc(q.value)+'"에 해당하는 종목이 없습니다</div>';}});
   q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-c]');if(d){e.preventDefault();pick(d.dataset.c,d.dataset.n);run();}}else if(e.key==='Escape')sg.style.display='none';});
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
   $('go').addEventListener('click',run);
