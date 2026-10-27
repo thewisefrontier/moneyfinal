@@ -2,6 +2,21 @@
   "updated_at": "2026-10-27",
   "indicators": [
     {
+      "id": 31569,
+      "indicator_code": "BASE_RATE",
+      "indicator_name": "한국은행 기준금리",
+      "category": "금리",
+      "value": 3,
+      "prev_value": 3,
+      "unit": "%",
+      "signal": "yellow",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-10-27",
+      "summary_text": null,
+      "fetched_at": "2026-10-27T10:39:46.195131+09:00",
+      "created_at": "2026-10-27 01:39:46"
+    },
+    {
       "id": 31568,
       "indicator_code": "BOND_CORPAA3Y",
       "indicator_name": "회사채(AA-, 3년)",
@@ -9975,21 +9990,6 @@
       "summary_text": "중립 구간",
       "fetched_at": "2026-10-21T09:19:48.859955+09:00",
       "created_at": "2026-10-20 00:55:16"
-    },
-    {
-      "id": 29793,
-      "indicator_code": "BASE_RATE",
-      "indicator_name": "한국은행 기준금리",
-      "category": "금리",
-      "value": 3,
-      "prev_value": 3,
-      "unit": "%",
-      "signal": "yellow",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-10-20",
-      "summary_text": null,
-      "fetched_at": "2026-10-20T10:20:04.111674+09:00",
-      "created_at": "2026-10-20 01:20:04"
     },
     {
       "id": 29278,
@@ -53973,6 +53973,68 @@
     }
   ],
   "by_category": {
+    "금리": [
+      {
+        "id": 31569,
+        "indicator_code": "BASE_RATE",
+        "indicator_name": "한국은행 기준금리",
+        "category": "금리",
+        "value": 3,
+        "prev_value": 3,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-10-27",
+        "summary_text": null,
+        "fetched_at": "2026-10-27T10:39:46.195131+09:00",
+        "created_at": "2026-10-27 01:39:46"
+      },
+      {
+        "id": 31533,
+        "indicator_code": "US_10Y_TREASURY",
+        "indicator_name": "미국 10년물 국채금리",
+        "category": "금리",
+        "value": 5,
+        "prev_value": 4.96,
+        "unit": "%",
+        "signal": "green",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-10-27",
+        "summary_text": null,
+        "fetched_at": "2026-10-27T10:04:54.898600+09:00",
+        "created_at": "2026-10-27 01:04:55"
+      },
+      {
+        "id": 31527,
+        "indicator_code": "US_YIELD_CURVE",
+        "indicator_name": "미국 장단기 금리차(10Y-2Y)",
+        "category": "금리",
+        "value": 0.32,
+        "prev_value": 0.31,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-10-27",
+        "summary_text": null,
+        "fetched_at": "2026-10-27T10:04:52.606783+09:00",
+        "created_at": "2026-10-27 01:04:55"
+      },
+      {
+        "id": 31524,
+        "indicator_code": "FED_RATE",
+        "indicator_name": "미국 기준금리",
+        "category": "금리",
+        "value": 4,
+        "prev_value": 4,
+        "unit": "%",
+        "signal": "yellow",
+        "source": "FRED (미국 연준)",
+        "reference_date": "2026-10-27",
+        "summary_text": null,
+        "fetched_at": "2026-10-27T10:04:51.355832+09:00",
+        "created_at": "2026-10-27 01:04:55"
+      }
+    ],
     "채권금리": [
       {
         "id": 31568,
@@ -64376,68 +64438,6 @@
         "summary_text": null,
         "fetched_at": "2026-10-27T10:04:55.433897+09:00",
         "created_at": "2026-10-27 01:04:56"
-      }
-    ],
-    "금리": [
-      {
-        "id": 31533,
-        "indicator_code": "US_10Y_TREASURY",
-        "indicator_name": "미국 10년물 국채금리",
-        "category": "금리",
-        "value": 5,
-        "prev_value": 4.96,
-        "unit": "%",
-        "signal": "green",
-        "source": "FRED (미국 연준)",
-        "reference_date": "2026-10-27",
-        "summary_text": null,
-        "fetched_at": "2026-10-27T10:04:54.898600+09:00",
-        "created_at": "2026-10-27 01:04:55"
-      },
-      {
-        "id": 31527,
-        "indicator_code": "US_YIELD_CURVE",
-        "indicator_name": "미국 장단기 금리차(10Y-2Y)",
-        "category": "금리",
-        "value": 0.32,
-        "prev_value": 0.31,
-        "unit": "%",
-        "signal": "yellow",
-        "source": "FRED (미국 연준)",
-        "reference_date": "2026-10-27",
-        "summary_text": null,
-        "fetched_at": "2026-10-27T10:04:52.606783+09:00",
-        "created_at": "2026-10-27 01:04:55"
-      },
-      {
-        "id": 31524,
-        "indicator_code": "FED_RATE",
-        "indicator_name": "미국 기준금리",
-        "category": "금리",
-        "value": 4,
-        "prev_value": 4,
-        "unit": "%",
-        "signal": "yellow",
-        "source": "FRED (미국 연준)",
-        "reference_date": "2026-10-27",
-        "summary_text": null,
-        "fetched_at": "2026-10-27T10:04:51.355832+09:00",
-        "created_at": "2026-10-27 01:04:55"
-      },
-      {
-        "id": 29793,
-        "indicator_code": "BASE_RATE",
-        "indicator_name": "한국은행 기준금리",
-        "category": "금리",
-        "value": 3,
-        "prev_value": 3,
-        "unit": "%",
-        "signal": "yellow",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-10-20",
-        "summary_text": null,
-        "fetched_at": "2026-10-20T10:20:04.111674+09:00",
-        "created_at": "2026-10-20 01:20:04"
       }
     ],
     "시장위험": [
