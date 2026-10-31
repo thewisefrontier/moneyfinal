@@ -1,186 +1,2206 @@
 {
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-10-31",
   "by_ticker": {
+    "458730": [
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:47.581121+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 39,
+        "fetched_at": "2026-10-31T10:24:47.581114+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:47.581108+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 37,
+        "fetched_at": "2026-10-31T10:24:47.581102+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:47.581095+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 36,
+        "fetched_at": "2026-10-31T10:24:47.581089+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:47.581082+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 36,
+        "fetched_at": "2026-10-31T10:24:47.581076+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:47.581070+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:47.581063+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:47.581057+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:47.581050+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:47.581043+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:47.581036+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:47.581029+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:47.581022+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:47.581015+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 39,
+        "fetched_at": "2026-10-31T10:24:47.581009+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 26,
+        "fetched_at": "2026-10-31T10:24:47.581002+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:47.580994+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:47.580986+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:47.580978+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:47.580968+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 48,
+        "fetched_at": "2026-10-31T10:24:47.580957+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:47.580949+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:47.580942+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 39,
+        "fetched_at": "2026-10-31T10:24:47.580935+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 41,
+        "fetched_at": "2026-10-31T10:24:47.580927+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 42,
+        "fetched_at": "2026-10-31T10:24:47.580917+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 42,
+        "fetched_at": "2026-10-31T10:24:47.580891+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 35,
+        "fetched_at": "2026-10-30T10:34:12.106406+09:00"
+      },
+      {
+        "ticker": "458730",
+        "ex_dividend_date": "2024-03-28",
+        "amount": 28,
+        "fetched_at": "2026-09-30T10:01:33.610223+09:00"
+      }
+    ],
+    "446720": [
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:48.571800+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 37,
+        "fetched_at": "2026-10-31T10:24:48.571794+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 27,
+        "fetched_at": "2026-10-31T10:24:48.571788+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571781+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 42,
+        "fetched_at": "2026-10-31T10:24:48.571774+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:48.571767+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:48.571760+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:48.571754+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571748+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:48.571741+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 37,
+        "fetched_at": "2026-10-31T10:24:48.571734+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571727+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:48.571720+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571714+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:48.571707+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 28,
+        "fetched_at": "2026-10-31T10:24:48.571700+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:48.571694+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:48.571687+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 26,
+        "fetched_at": "2026-10-31T10:24:48.571680+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:48.571673+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:48.571666+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 42,
+        "fetched_at": "2026-10-31T10:24:48.571660+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571652+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 46,
+        "fetched_at": "2026-10-31T10:24:48.571645+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:48.571638+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:48.571631+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571624+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:48.571615+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:48.571606+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 39,
+        "fetched_at": "2026-10-31T10:24:48.571578+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 33,
+        "fetched_at": "2026-10-30T10:34:12.941768+09:00"
+      },
+      {
+        "ticker": "446720",
+        "ex_dividend_date": "2024-03-28",
+        "amount": 24,
+        "fetched_at": "2026-09-30T10:01:34.295297+09:00"
+      }
+    ],
+    "329200": [
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626618+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626612+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626606+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626599+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626590+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626578+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626568+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626556+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626545+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626538+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626532+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626525+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626517+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626496+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626490+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626483+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626477+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626471+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626465+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 33,
+        "fetched_at": "2026-10-31T10:24:52.626458+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 41,
+        "fetched_at": "2026-10-31T10:24:52.626452+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 8,
+        "fetched_at": "2026-10-31T10:24:52.626445+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:24:52.626439+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 10,
+        "fetched_at": "2026-10-31T10:24:52.626432+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 29,
+        "fetched_at": "2026-10-31T10:24:52.626424+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:52.626417+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 32,
+        "fetched_at": "2026-10-31T10:24:52.626410+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 12,
+        "fetched_at": "2026-10-31T10:24:52.626402+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 41,
+        "fetched_at": "2026-10-31T10:24:52.626393+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 13,
+        "fetched_at": "2026-10-31T10:24:52.626370+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 40,
+        "fetched_at": "2026-10-30T10:34:16.265667+09:00"
+      },
+      {
+        "ticker": "329200",
+        "ex_dividend_date": "2024-03-28",
+        "amount": 48,
+        "fetched_at": "2026-09-30T10:01:37.111524+09:00"
+      }
+    ],
+    "429000": [
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 21,
+        "fetched_at": "2026-10-31T10:24:54.621152+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 25,
+        "fetched_at": "2026-10-31T10:24:54.621146+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.621140+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 23,
+        "fetched_at": "2026-10-31T10:24:54.621134+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 28,
+        "fetched_at": "2026-10-31T10:24:54.621127+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 24,
+        "fetched_at": "2026-10-31T10:24:54.621121+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 24,
+        "fetched_at": "2026-10-31T10:24:54.621115+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 27,
+        "fetched_at": "2026-10-31T10:24:54.621109+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 24,
+        "fetched_at": "2026-10-31T10:24:54.621103+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 16,
+        "fetched_at": "2026-10-31T10:24:54.621096+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 25,
+        "fetched_at": "2026-10-31T10:24:54.621090+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.621084+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.621077+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 23,
+        "fetched_at": "2026-10-31T10:24:54.621071+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.621064+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.621056+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.621050+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.621043+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 23,
+        "fetched_at": "2026-10-31T10:24:54.621037+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 24,
+        "fetched_at": "2026-10-31T10:24:54.621030+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 23,
+        "fetched_at": "2026-10-31T10:24:54.621023+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.621015+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.621008+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 25,
+        "fetched_at": "2026-10-31T10:24:54.621002+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.620995+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:54.620989+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.620981+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.620973+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 23,
+        "fetched_at": "2026-10-31T10:24:54.620964+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:54.620940+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 18,
+        "fetched_at": "2026-10-30T10:34:17.926654+09:00"
+      },
+      {
+        "ticker": "429000",
+        "ex_dividend_date": "2024-03-28",
+        "amount": 20,
+        "fetched_at": "2026-09-30T10:01:38.466211+09:00"
+      }
+    ],
+    "466940": [
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 104,
+        "fetched_at": "2026-10-31T10:24:55.646860+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 104,
+        "fetched_at": "2026-10-31T10:24:55.646854+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 100,
+        "fetched_at": "2026-10-31T10:24:55.646847+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 100,
+        "fetched_at": "2026-10-31T10:24:55.646840+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 87,
+        "fetched_at": "2026-10-31T10:24:55.646834+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 87,
+        "fetched_at": "2026-10-31T10:24:55.646827+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 87,
+        "fetched_at": "2026-10-31T10:24:55.646821+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 87,
+        "fetched_at": "2026-10-31T10:24:55.646813+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 87,
+        "fetched_at": "2026-10-31T10:24:55.646806+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646800+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:24:55.646794+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:24:55.646787+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:24:55.646781+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:24:55.646774+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:24:55.646767+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 68,
+        "fetched_at": "2026-10-31T10:24:55.646761+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 68,
+        "fetched_at": "2026-10-31T10:24:55.646754+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 68,
+        "fetched_at": "2026-10-31T10:24:55.646747+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 68,
+        "fetched_at": "2026-10-31T10:24:55.646741+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646734+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646727+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646720+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646713+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:55.646706+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646699+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646692+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646685+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646677+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646668+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:55.646644+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-03-28",
+        "amount": 61,
+        "fetched_at": "2026-10-30T10:34:18.702621+09:00"
+      },
+      {
+        "ticker": "466940",
+        "ex_dividend_date": "2024-02-28",
+        "amount": 61,
+        "fetched_at": "2026-09-30T10:01:39.154570+09:00"
+      }
+    ],
+    "161510": [
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 103,
+        "fetched_at": "2026-10-31T10:24:56.681899+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 103,
+        "fetched_at": "2026-10-31T10:24:56.681893+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 103,
+        "fetched_at": "2026-10-31T10:24:56.681887+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 103,
+        "fetched_at": "2026-10-31T10:24:56.681881+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681875+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681868+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681862+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681856+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681849+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:24:56.681843+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681836+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681830+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681824+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681817+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681810+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:24:56.681803+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:56.681796+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:24:56.681790+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681783+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681775+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681768+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681760+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681753+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681746+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681739+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681731+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681724+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681717+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681707+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 63,
+        "fetched_at": "2026-10-31T10:24:56.681684+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 750,
+        "fetched_at": "2026-10-30T10:34:19.532532+09:00"
+      },
+      {
+        "ticker": "161510",
+        "ex_dividend_date": "2023-04-27",
+        "amount": 730,
+        "fetched_at": "2026-09-30T10:01:39.872993+09:00"
+      }
+    ],
+    "279530": [
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:24:57.748749+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:24:57.748742+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:24:57.748736+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:24:57.748730+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:24:57.748724+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:24:57.748717+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:24:57.748711+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 65,
+        "fetched_at": "2026-10-31T10:24:57.748704+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 47,
+        "fetched_at": "2026-10-31T10:24:57.748698+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:57.748691+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:24:57.748684+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:24:57.748677+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 53,
+        "fetched_at": "2026-10-31T10:24:57.748671+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 53,
+        "fetched_at": "2026-10-31T10:24:57.748665+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 57,
+        "fetched_at": "2026-10-31T10:24:57.748658+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 59,
+        "fetched_at": "2026-10-31T10:24:57.748652+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 58,
+        "fetched_at": "2026-10-31T10:24:57.748646+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 58,
+        "fetched_at": "2026-10-31T10:24:57.748639+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 60,
+        "fetched_at": "2026-10-31T10:24:57.748633+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-03-28",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:24:57.748626+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:57.748620+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:57.748613+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:24:57.748607+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 22,
+        "fetched_at": "2026-10-31T10:24:57.748600+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 37,
+        "fetched_at": "2026-10-31T10:24:57.748593+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:57.748586+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 75,
+        "fetched_at": "2026-10-31T10:24:57.748578+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 77,
+        "fetched_at": "2026-10-31T10:24:57.748570+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-06-27",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:57.748561+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-05-30",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:57.748537+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 40,
+        "fetched_at": "2026-10-30T10:34:20.355890+09:00"
+      },
+      {
+        "ticker": "279530",
+        "ex_dividend_date": "2024-01-30",
+        "amount": 14,
+        "fetched_at": "2026-09-30T10:01:40.655286+09:00"
+      }
+    ],
+    "325020": [
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 113,
+        "fetched_at": "2026-10-31T10:24:58.728780+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 156,
+        "fetched_at": "2026-10-31T10:24:58.728774+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 335,
+        "fetched_at": "2026-10-31T10:24:58.728768+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 191,
+        "fetched_at": "2026-10-31T10:24:58.728762+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 158,
+        "fetched_at": "2026-10-31T10:24:58.728756+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 143,
+        "fetched_at": "2026-10-31T10:24:58.728749+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 90,
+        "fetched_at": "2026-10-31T10:24:58.728743+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:24:58.728737+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:24:58.728731+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 128,
+        "fetched_at": "2026-10-31T10:24:58.728724+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 390,
+        "fetched_at": "2026-10-31T10:24:58.728718+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2024-01-30",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:24:58.728711+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2023-10-30",
+        "amount": 56,
+        "fetched_at": "2026-10-31T10:24:58.728705+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2023-07-28",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:58.728698+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2023-04-27",
+        "amount": 319,
+        "fetched_at": "2026-10-31T10:24:58.728690+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2023-01-30",
+        "amount": 34,
+        "fetched_at": "2026-10-31T10:24:58.728682+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2022-10-28",
+        "amount": 46,
+        "fetched_at": "2026-10-31T10:24:58.728674+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2022-04-28",
+        "amount": 385,
+        "fetched_at": "2026-10-31T10:24:58.728667+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2021-04-29",
+        "amount": 340,
+        "fetched_at": "2026-10-31T10:24:58.728658+09:00"
+      },
+      {
+        "ticker": "325020",
+        "ex_dividend_date": "2020-04-28",
+        "amount": 270,
+        "fetched_at": "2026-10-31T10:24:58.728636+09:00"
+      }
+    ],
+    "210780": [
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 61,
+        "fetched_at": "2026-10-31T10:24:59.785209+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 241,
+        "fetched_at": "2026-10-31T10:24:59.785203+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 742,
+        "fetched_at": "2026-10-31T10:24:59.785196+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 47,
+        "fetched_at": "2026-10-31T10:24:59.785190+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:24:59.785184+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:24:59.785177+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 470,
+        "fetched_at": "2026-10-31T10:24:59.785170+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 38,
+        "fetched_at": "2026-10-31T10:24:59.785164+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:24:59.785157+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 60,
+        "fetched_at": "2026-10-31T10:24:59.785151+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 630,
+        "fetched_at": "2026-10-31T10:24:59.785145+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2023-10-30",
+        "amount": 60,
+        "fetched_at": "2026-10-31T10:24:59.785139+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2023-07-28",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:24:59.785132+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2023-04-27",
+        "amount": 690,
+        "fetched_at": "2026-10-31T10:24:59.785125+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2022-10-28",
+        "amount": 35,
+        "fetched_at": "2026-10-31T10:24:59.785119+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2022-04-28",
+        "amount": 660,
+        "fetched_at": "2026-10-31T10:24:59.785112+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2021-10-28",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:24:59.785105+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2021-07-29",
+        "amount": 25,
+        "fetched_at": "2026-10-31T10:24:59.785099+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2021-04-29",
+        "amount": 500,
+        "fetched_at": "2026-10-31T10:24:59.785092+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2020-10-29",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:24:59.785085+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2020-07-30",
+        "amount": 5,
+        "fetched_at": "2026-10-31T10:24:59.785078+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2020-04-28",
+        "amount": 385,
+        "fetched_at": "2026-10-31T10:24:59.785071+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2020-01-30",
+        "amount": 5,
+        "fetched_at": "2026-10-31T10:24:59.785064+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2019-10-30",
+        "amount": 10,
+        "fetched_at": "2026-10-31T10:24:59.785057+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2019-07-30",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:24:59.785049+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2019-04-29",
+        "amount": 400,
+        "fetched_at": "2026-10-31T10:24:59.785042+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2019-01-30",
+        "amount": 40,
+        "fetched_at": "2026-10-31T10:24:59.785035+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2018-04-27",
+        "amount": 360,
+        "fetched_at": "2026-10-31T10:24:59.785027+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2018-01-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:59.785019+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2017-07-28",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:24:59.784997+09:00"
+      },
+      {
+        "ticker": "210780",
+        "ex_dividend_date": "2017-04-27",
+        "amount": 350,
+        "fetched_at": "2026-10-30T10:34:22.111716+09:00"
+      }
+    ],
+    "266160": [
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 150,
+        "fetched_at": "2026-10-31T10:25:00.892675+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 80,
+        "fetched_at": "2026-10-31T10:25:00.892669+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 400,
+        "fetched_at": "2026-10-31T10:25:00.892663+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 90,
+        "fetched_at": "2026-10-31T10:25:00.892657+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:25:00.892650+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 400,
+        "fetched_at": "2026-10-31T10:25:00.892644+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 160,
+        "fetched_at": "2026-10-31T10:25:00.892637+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 90,
+        "fetched_at": "2026-10-31T10:25:00.892631+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 75,
+        "fetched_at": "2026-10-31T10:25:00.892625+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2024-04-29",
+        "amount": 405,
+        "fetched_at": "2026-10-31T10:25:00.892618+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2024-01-30",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:25:00.892612+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2023-10-30",
+        "amount": 56,
+        "fetched_at": "2026-10-31T10:25:00.892606+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2023-07-28",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:25:00.892599+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2023-04-27",
+        "amount": 365,
+        "fetched_at": "2026-10-31T10:25:00.892593+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2023-01-30",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:25:00.892586+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2022-10-28",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:25:00.892579+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2022-04-28",
+        "amount": 380,
+        "fetched_at": "2026-10-31T10:25:00.892573+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2022-01-27",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:25:00.892566+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2021-10-28",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:25:00.892560+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2021-07-29",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:25:00.892553+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2021-04-29",
+        "amount": 360,
+        "fetched_at": "2026-10-31T10:25:00.892546+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2021-01-28",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:25:00.892539+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2020-10-29",
+        "amount": 20,
+        "fetched_at": "2026-10-31T10:25:00.892531+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2020-07-30",
+        "amount": 30,
+        "fetched_at": "2026-10-31T10:25:00.892524+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2020-04-28",
+        "amount": 300,
+        "fetched_at": "2026-10-31T10:25:00.892500+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2019-04-29",
+        "amount": 232,
+        "fetched_at": "2026-10-31T10:25:00.892494+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2019-01-30",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:25:00.892487+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2018-10-30",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:25:00.892480+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2018-07-30",
+        "amount": 15,
+        "fetched_at": "2026-10-31T10:25:00.892470+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2018-04-27",
+        "amount": 218,
+        "fetched_at": "2026-10-31T10:25:00.892447+09:00"
+      },
+      {
+        "ticker": "266160",
+        "ex_dividend_date": "2018-01-30",
+        "amount": 10,
+        "fetched_at": "2026-10-30T10:34:22.943960+09:00"
+      }
+    ],
+    "484880": [
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-10-29",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:25:01.855983+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-09-29",
+        "amount": 91,
+        "fetched_at": "2026-10-31T10:25:01.855976+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-08-28",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:25:01.855970+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-07-30",
+        "amount": 86,
+        "fetched_at": "2026-10-31T10:25:01.855963+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-06-29",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:25:01.855957+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-05-28",
+        "amount": 78,
+        "fetched_at": "2026-10-31T10:25:01.855951+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-04-29",
+        "amount": 76,
+        "fetched_at": "2026-10-31T10:25:01.855944+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-03-30",
+        "amount": 66,
+        "fetched_at": "2026-10-31T10:25:01.855938+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-02-26",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:25:01.855931+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2026-01-29",
+        "amount": 45,
+        "fetched_at": "2026-10-31T10:25:01.855925+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-12-29",
+        "amount": 44,
+        "fetched_at": "2026-10-31T10:25:01.855918+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-11-27",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:25:01.855912+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-10-30",
+        "amount": 73,
+        "fetched_at": "2026-10-31T10:25:01.855905+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-09-29",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:25:01.855898+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-08-28",
+        "amount": 70,
+        "fetched_at": "2026-10-31T10:25:01.855891+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-07-30",
+        "amount": 72,
+        "fetched_at": "2026-10-31T10:25:01.855884+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-06-27",
+        "amount": 67,
+        "fetched_at": "2026-10-31T10:25:01.855878+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-05-29",
+        "amount": 59,
+        "fetched_at": "2026-10-31T10:25:01.855871+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-04-29",
+        "amount": 52,
+        "fetched_at": "2026-10-31T10:25:01.855865+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-02-27",
+        "amount": 53,
+        "fetched_at": "2026-10-31T10:25:01.855858+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2025-01-24",
+        "amount": 51,
+        "fetched_at": "2026-10-31T10:25:01.855852+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-12-27",
+        "amount": 55,
+        "fetched_at": "2026-10-31T10:25:01.855845+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-11-28",
+        "amount": 51,
+        "fetched_at": "2026-10-31T10:25:01.855837+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-10-30",
+        "amount": 47,
+        "fetched_at": "2026-10-31T10:25:01.855831+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-09-27",
+        "amount": 46,
+        "fetched_at": "2026-10-31T10:25:01.855824+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-08-29",
+        "amount": 50,
+        "fetched_at": "2026-10-31T10:25:01.855814+09:00"
+      },
+      {
+        "ticker": "484880",
+        "ex_dividend_date": "2024-07-30",
+        "amount": 46,
+        "fetched_at": "2026-10-31T10:25:01.855791+09:00"
+      }
+    ],
     "402970": [
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-10-14",
         "amount": 38,
-        "fetched_at": "2026-10-30T10:34:13.772610+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546529+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-09-14",
         "amount": 35,
-        "fetched_at": "2026-10-30T10:34:13.772605+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546522+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-08-13",
         "amount": 25,
-        "fetched_at": "2026-10-30T10:34:13.772600+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546500+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-07-14",
         "amount": 50,
-        "fetched_at": "2026-10-30T10:34:13.772596+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546494+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-06-12",
         "amount": 40,
-        "fetched_at": "2026-10-30T10:34:13.772591+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546487+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-05-14",
         "amount": 27,
-        "fetched_at": "2026-10-30T10:34:13.772586+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546481+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-04-14",
         "amount": 44,
-        "fetched_at": "2026-10-30T10:34:13.772582+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546474+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-03-12",
         "amount": 46,
-        "fetched_at": "2026-10-30T10:34:13.772577+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546467+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-02-12",
         "amount": 24,
-        "fetched_at": "2026-10-30T10:34:13.772573+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546461+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2026-01-14",
         "amount": 39,
-        "fetched_at": "2026-10-30T10:34:13.772568+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546455+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-12-12",
         "amount": 53,
-        "fetched_at": "2026-10-30T10:34:13.772563+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546448+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-11-13",
         "amount": 21,
-        "fetched_at": "2026-10-30T10:34:13.772559+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546442+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-10-14",
         "amount": 37,
-        "fetched_at": "2026-10-30T10:34:13.772554+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546435+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-09-12",
         "amount": 44,
-        "fetched_at": "2026-10-30T10:34:13.772550+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546429+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-08-13",
         "amount": 20,
-        "fetched_at": "2026-10-30T10:34:13.772545+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546421+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-07-14",
         "amount": 38,
-        "fetched_at": "2026-10-30T10:34:13.772540+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546415+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-06-12",
         "amount": 45,
-        "fetched_at": "2026-10-30T10:34:13.772536+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546409+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-05-14",
         "amount": 21,
-        "fetched_at": "2026-10-30T10:34:13.772531+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546403+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-04-14",
         "amount": 35,
-        "fetched_at": "2026-10-30T10:34:13.772526+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546396+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-03-13",
         "amount": 46,
-        "fetched_at": "2026-10-30T10:34:13.772522+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546390+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-02-13",
         "amount": 28,
-        "fetched_at": "2026-10-30T10:34:13.772517+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546384+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2025-01-14",
         "amount": 39,
-        "fetched_at": "2026-10-30T10:34:13.772511+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546377+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-11-14",
         "amount": 30,
-        "fetched_at": "2026-10-30T10:34:13.772506+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546370+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-10-14",
         "amount": 45,
-        "fetched_at": "2026-10-30T10:34:13.772502+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546364+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-09-12",
         "amount": 56,
-        "fetched_at": "2026-10-30T10:34:13.772496+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546357+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-07-30",
         "amount": 44,
-        "fetched_at": "2026-10-30T10:34:13.772490+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546350+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-06-27",
         "amount": 44,
-        "fetched_at": "2026-10-30T10:34:13.772485+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546342+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-05-30",
         "amount": 39,
-        "fetched_at": "2026-10-30T10:34:13.772479+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546333+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-04-29",
         "amount": 32,
-        "fetched_at": "2026-10-30T10:34:13.772472+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546323+09:00"
       },
       {
         "ticker": "402970",
         "ex_dividend_date": "2024-03-28",
         "amount": 44,
-        "fetched_at": "2026-10-30T10:34:13.772452+09:00"
+        "fetched_at": "2026-10-31T10:24:49.546301+09:00"
       },
       {
         "ticker": "402970",
@@ -200,157 +2220,157 @@
         "ticker": "489250",
         "ex_dividend_date": "2026-10-14",
         "amount": 37,
-        "fetched_at": "2026-10-30T10:34:14.556979+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575623+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-09-14",
         "amount": 24,
-        "fetched_at": "2026-10-30T10:34:14.556974+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575617+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-08-13",
         "amount": 37,
-        "fetched_at": "2026-10-30T10:34:14.556970+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575610+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-07-14",
         "amount": 40,
-        "fetched_at": "2026-10-30T10:34:14.556965+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575604+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-06-12",
         "amount": 29,
-        "fetched_at": "2026-10-30T10:34:14.556960+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575597+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-05-14",
         "amount": 26,
-        "fetched_at": "2026-10-30T10:34:14.556956+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575591+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-04-14",
         "amount": 33,
-        "fetched_at": "2026-10-30T10:34:14.556951+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575585+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-03-12",
         "amount": 32,
-        "fetched_at": "2026-10-30T10:34:14.556946+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575579+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-02-12",
         "amount": 28,
-        "fetched_at": "2026-10-30T10:34:14.556942+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575572+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2026-01-14",
         "amount": 34,
-        "fetched_at": "2026-10-30T10:34:14.556937+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575566+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-12-12",
         "amount": 33,
-        "fetched_at": "2026-10-30T10:34:14.556932+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575560+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-11-13",
         "amount": 21,
-        "fetched_at": "2026-10-30T10:34:14.556927+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575553+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-10-14",
         "amount": 31,
-        "fetched_at": "2026-10-30T10:34:14.556922+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575547+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-09-12",
         "amount": 28,
-        "fetched_at": "2026-10-30T10:34:14.556916+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575541+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-08-13",
         "amount": 22,
-        "fetched_at": "2026-10-30T10:34:14.556911+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575534+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-07-14",
         "amount": 31,
-        "fetched_at": "2026-10-30T10:34:14.556905+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575528+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-06-12",
         "amount": 30,
-        "fetched_at": "2026-10-30T10:34:14.556901+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575500+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-05-14",
         "amount": 24,
-        "fetched_at": "2026-10-30T10:34:14.556896+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575493+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-04-14",
         "amount": 34,
-        "fetched_at": "2026-10-30T10:34:14.556891+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575487+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-03-13",
         "amount": 29,
-        "fetched_at": "2026-10-30T10:34:14.556886+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575480+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-02-13",
         "amount": 32,
-        "fetched_at": "2026-10-30T10:34:14.556880+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575473+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2025-01-14",
         "amount": 40,
-        "fetched_at": "2026-10-30T10:34:14.556875+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575465+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2024-12-12",
         "amount": 41,
-        "fetched_at": "2026-10-30T10:34:14.556869+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575459+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2024-11-14",
         "amount": 28,
-        "fetched_at": "2026-10-30T10:34:14.556864+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575452+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2024-10-14",
         "amount": 33,
-        "fetched_at": "2026-10-30T10:34:14.556858+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575443+09:00"
       },
       {
         "ticker": "489250",
         "ex_dividend_date": "2024-09-12",
         "amount": 30,
-        "fetched_at": "2026-10-30T10:34:14.556838+09:00"
+        "fetched_at": "2026-10-31T10:24:50.575421+09:00"
       }
     ],
     "441640": [
@@ -358,181 +2378,181 @@
         "ticker": "441640",
         "ex_dividend_date": "2026-10-14",
         "amount": 94,
-        "fetched_at": "2026-10-30T10:34:15.457194+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639407+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-09-14",
         "amount": 96,
-        "fetched_at": "2026-10-30T10:34:15.457189+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639401+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-08-13",
         "amount": 102,
-        "fetched_at": "2026-10-30T10:34:15.457185+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639394+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-07-14",
         "amount": 103,
-        "fetched_at": "2026-10-30T10:34:15.457180+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639388+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-06-12",
         "amount": 101,
-        "fetched_at": "2026-10-30T10:34:15.457176+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639382+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-05-14",
         "amount": 100,
-        "fetched_at": "2026-10-30T10:34:15.457171+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639375+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-04-14",
         "amount": 99,
-        "fetched_at": "2026-10-30T10:34:15.457167+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639369+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-03-12",
         "amount": 99,
-        "fetched_at": "2026-10-30T10:34:15.457162+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639362+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-02-12",
         "amount": 99,
-        "fetched_at": "2026-10-30T10:34:15.457158+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639356+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2026-01-14",
         "amount": 98,
-        "fetched_at": "2026-10-30T10:34:15.457153+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639350+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-12-12",
         "amount": 98,
-        "fetched_at": "2026-10-30T10:34:15.457148+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639344+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-11-13",
         "amount": 96,
-        "fetched_at": "2026-10-30T10:34:15.457144+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639337+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-10-14",
         "amount": 93,
-        "fetched_at": "2026-10-30T10:34:15.457139+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639331+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-09-12",
         "amount": 92,
-        "fetched_at": "2026-10-30T10:34:15.457135+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639324+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-08-13",
         "amount": 92,
-        "fetched_at": "2026-10-30T10:34:15.457130+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639317+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-07-14",
         "amount": 91,
-        "fetched_at": "2026-10-30T10:34:15.457126+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639311+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-06-12",
         "amount": 90,
-        "fetched_at": "2026-10-30T10:34:15.457121+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639305+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-05-14",
         "amount": 92,
-        "fetched_at": "2026-10-30T10:34:15.457117+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639299+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-04-14",
         "amount": 92,
-        "fetched_at": "2026-10-30T10:34:15.457112+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639293+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-03-13",
         "amount": 97,
-        "fetched_at": "2026-10-30T10:34:15.457107+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639286+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-02-13",
         "amount": 97,
-        "fetched_at": "2026-10-30T10:34:15.457102+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639279+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2025-01-14",
         "amount": 100,
-        "fetched_at": "2026-10-30T10:34:15.457097+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639272+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-12-12",
         "amount": 100,
-        "fetched_at": "2026-10-30T10:34:15.457092+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639263+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-11-14",
         "amount": 88,
-        "fetched_at": "2026-10-30T10:34:15.457087+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639255+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-10-14",
         "amount": 82,
-        "fetched_at": "2026-10-30T10:34:15.457082+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639248+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-09-27",
         "amount": 83,
-        "fetched_at": "2026-10-30T10:34:15.457076+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639242+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-08-29",
         "amount": 83,
-        "fetched_at": "2026-10-30T10:34:15.457071+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639235+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-07-30",
         "amount": 85,
-        "fetched_at": "2026-10-30T10:34:15.457066+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639228+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-06-27",
         "amount": 85,
-        "fetched_at": "2026-10-30T10:34:15.457059+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639219+09:00"
       },
       {
         "ticker": "441640",
         "ex_dividend_date": "2024-05-30",
         "amount": 80,
-        "fetched_at": "2026-10-30T10:34:15.457040+09:00"
+        "fetched_at": "2026-10-31T10:24:51.639196+09:00"
       },
       {
         "ticker": "441640",
@@ -547,1966 +2567,12 @@
         "fetched_at": "2026-09-13T23:54:59Z"
       }
     ],
-    "458730": [
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 39,
-        "fetched_at": "2026-10-30T10:34:12.106663+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.106655+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 37,
-        "fetched_at": "2026-10-30T10:34:12.106648+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:12.106640+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 36,
-        "fetched_at": "2026-10-30T10:34:12.106633+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:12.106625+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 36,
-        "fetched_at": "2026-10-30T10:34:12.106618+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.106610+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 32,
-        "fetched_at": "2026-10-30T10:34:12.106603+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:12.106595+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.106588+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.106580+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.106572+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.106564+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.106556+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:12.106549+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 39,
-        "fetched_at": "2026-10-30T10:34:12.106541+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 26,
-        "fetched_at": "2026-10-30T10:34:12.106533+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:12.106525+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.106518+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:12.106509+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.106499+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 48,
-        "fetched_at": "2026-10-30T10:34:12.106488+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:12.106477+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:12.106469+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 39,
-        "fetched_at": "2026-10-30T10:34:12.106461+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 41,
-        "fetched_at": "2026-10-30T10:34:12.106453+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 42,
-        "fetched_at": "2026-10-30T10:34:12.106444+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 42,
-        "fetched_at": "2026-10-30T10:34:12.106433+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.106406+09:00"
-      },
-      {
-        "ticker": "458730",
-        "ex_dividend_date": "2024-03-28",
-        "amount": 28,
-        "fetched_at": "2026-09-30T10:01:33.610223+09:00"
-      }
-    ],
-    "446720": [
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 37,
-        "fetched_at": "2026-10-30T10:34:12.941935+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 27,
-        "fetched_at": "2026-10-30T10:34:12.941930+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941925+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 42,
-        "fetched_at": "2026-10-30T10:34:12.941920+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:12.941915+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.941910+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:12.941905+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941899+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.941894+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 37,
-        "fetched_at": "2026-10-30T10:34:12.941889+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941884+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:12.941879+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941874+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 32,
-        "fetched_at": "2026-10-30T10:34:12.941869+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 28,
-        "fetched_at": "2026-10-30T10:34:12.941864+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:12.941859+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.941854+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 26,
-        "fetched_at": "2026-10-30T10:34:12.941849+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.941844+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 32,
-        "fetched_at": "2026-10-30T10:34:12.941838+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 42,
-        "fetched_at": "2026-10-30T10:34:12.941834+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941828+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 46,
-        "fetched_at": "2026-10-30T10:34:12.941823+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 32,
-        "fetched_at": "2026-10-30T10:34:12.941819+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:12.941814+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941808+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:12.941803+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:12.941796+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 39,
-        "fetched_at": "2026-10-30T10:34:12.941789+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:12.941768+09:00"
-      },
-      {
-        "ticker": "446720",
-        "ex_dividend_date": "2024-03-28",
-        "amount": 24,
-        "fetched_at": "2026-09-30T10:01:34.295297+09:00"
-      }
-    ],
-    "329200": [
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265824+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265820+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265815+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265811+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265806+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265801+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265796+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265791+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265787+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265782+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265778+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265773+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265768+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265763+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265758+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265754+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265749+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265744+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 33,
-        "fetched_at": "2026-10-30T10:34:16.265739+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 41,
-        "fetched_at": "2026-10-30T10:34:16.265734+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 8,
-        "fetched_at": "2026-10-30T10:34:16.265730+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:16.265725+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 10,
-        "fetched_at": "2026-10-30T10:34:16.265719+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 29,
-        "fetched_at": "2026-10-30T10:34:16.265714+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:16.265710+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 32,
-        "fetched_at": "2026-10-30T10:34:16.265705+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 12,
-        "fetched_at": "2026-10-30T10:34:16.265700+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 41,
-        "fetched_at": "2026-10-30T10:34:16.265694+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 13,
-        "fetched_at": "2026-10-30T10:34:16.265687+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:16.265667+09:00"
-      },
-      {
-        "ticker": "329200",
-        "ex_dividend_date": "2024-03-28",
-        "amount": 48,
-        "fetched_at": "2026-09-30T10:01:37.111524+09:00"
-      }
-    ],
-    "429000": [
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 25,
-        "fetched_at": "2026-10-30T10:34:17.926811+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926807+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 23,
-        "fetched_at": "2026-10-30T10:34:17.926802+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 28,
-        "fetched_at": "2026-10-30T10:34:17.926798+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 24,
-        "fetched_at": "2026-10-30T10:34:17.926793+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 24,
-        "fetched_at": "2026-10-30T10:34:17.926789+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 27,
-        "fetched_at": "2026-10-30T10:34:17.926784+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 24,
-        "fetched_at": "2026-10-30T10:34:17.926779+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 16,
-        "fetched_at": "2026-10-30T10:34:17.926774+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 25,
-        "fetched_at": "2026-10-30T10:34:17.926770+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926765+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926760+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 23,
-        "fetched_at": "2026-10-30T10:34:17.926755+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926751+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926746+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926741+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926736+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 23,
-        "fetched_at": "2026-10-30T10:34:17.926732+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 24,
-        "fetched_at": "2026-10-30T10:34:17.926726+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 23,
-        "fetched_at": "2026-10-30T10:34:17.926721+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926716+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926711+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 25,
-        "fetched_at": "2026-10-30T10:34:17.926706+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926701+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:17.926696+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926691+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926686+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 23,
-        "fetched_at": "2026-10-30T10:34:17.926681+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:17.926675+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 18,
-        "fetched_at": "2026-10-30T10:34:17.926654+09:00"
-      },
-      {
-        "ticker": "429000",
-        "ex_dividend_date": "2024-03-28",
-        "amount": 20,
-        "fetched_at": "2026-09-30T10:01:38.466211+09:00"
-      }
-    ],
-    "466940": [
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 104,
-        "fetched_at": "2026-10-30T10:34:18.702775+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 100,
-        "fetched_at": "2026-10-30T10:34:18.702771+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 100,
-        "fetched_at": "2026-10-30T10:34:18.702766+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 87,
-        "fetched_at": "2026-10-30T10:34:18.702762+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 87,
-        "fetched_at": "2026-10-30T10:34:18.702757+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 87,
-        "fetched_at": "2026-10-30T10:34:18.702753+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 87,
-        "fetched_at": "2026-10-30T10:34:18.702748+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 87,
-        "fetched_at": "2026-10-30T10:34:18.702743+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702739+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:18.702734+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:18.702730+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:18.702725+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:18.702720+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:18.702716+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 68,
-        "fetched_at": "2026-10-30T10:34:18.702711+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 68,
-        "fetched_at": "2026-10-30T10:34:18.702706+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 68,
-        "fetched_at": "2026-10-30T10:34:18.702700+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 68,
-        "fetched_at": "2026-10-30T10:34:18.702695+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702690+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702685+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702681+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702676+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:18.702671+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702666+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702661+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702657+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702651+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702646+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702640+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-03-28",
-        "amount": 61,
-        "fetched_at": "2026-10-30T10:34:18.702621+09:00"
-      },
-      {
-        "ticker": "466940",
-        "ex_dividend_date": "2024-02-28",
-        "amount": 61,
-        "fetched_at": "2026-09-30T10:01:39.154570+09:00"
-      }
-    ],
-    "161510": [
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 103,
-        "fetched_at": "2026-10-30T10:34:19.532693+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 103,
-        "fetched_at": "2026-10-30T10:34:19.532689+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 103,
-        "fetched_at": "2026-10-30T10:34:19.532684+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532679+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532674+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532670+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532665+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532660+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:19.532655+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532651+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532646+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532641+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532637+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532632+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:19.532627+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:19.532622+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:19.532617+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532612+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532607+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532602+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532597+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532591+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532586+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532580+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532574+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532569+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532564+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532559+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 63,
-        "fetched_at": "2026-10-30T10:34:19.532552+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 750,
-        "fetched_at": "2026-10-30T10:34:19.532532+09:00"
-      },
-      {
-        "ticker": "161510",
-        "ex_dividend_date": "2023-04-27",
-        "amount": 730,
-        "fetched_at": "2026-09-30T10:01:39.872993+09:00"
-      }
-    ],
-    "279530": [
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 76,
-        "fetched_at": "2026-10-30T10:34:20.356040+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 76,
-        "fetched_at": "2026-10-30T10:34:20.356036+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 76,
-        "fetched_at": "2026-10-30T10:34:20.356031+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 76,
-        "fetched_at": "2026-10-30T10:34:20.356027+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:20.356023+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:20.356018+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 65,
-        "fetched_at": "2026-10-30T10:34:20.356014+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 47,
-        "fetched_at": "2026-10-30T10:34:20.356009+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:20.356005+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:20.356000+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:20.355995+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 53,
-        "fetched_at": "2026-10-30T10:34:20.355991+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 53,
-        "fetched_at": "2026-10-30T10:34:20.355986+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 57,
-        "fetched_at": "2026-10-30T10:34:20.355982+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 59,
-        "fetched_at": "2026-10-30T10:34:20.355977+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 58,
-        "fetched_at": "2026-10-30T10:34:20.355973+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 58,
-        "fetched_at": "2026-10-30T10:34:20.355968+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 60,
-        "fetched_at": "2026-10-30T10:34:20.355964+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-03-28",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:20.355960+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:20.355955+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:20.355950+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:20.355945+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 22,
-        "fetched_at": "2026-10-30T10:34:20.355940+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 37,
-        "fetched_at": "2026-10-30T10:34:20.355935+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:20.355931+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 75,
-        "fetched_at": "2026-10-30T10:34:20.355926+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 77,
-        "fetched_at": "2026-10-30T10:34:20.355921+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-06-27",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:20.355916+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-05-30",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:20.355908+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:20.355890+09:00"
-      },
-      {
-        "ticker": "279530",
-        "ex_dividend_date": "2024-01-30",
-        "amount": 14,
-        "fetched_at": "2026-09-30T10:01:40.655286+09:00"
-      }
-    ],
-    "484880": [
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-09-29",
-        "amount": 91,
-        "fetched_at": "2026-10-30T10:34:23.731934+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-08-28",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:23.731929+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 86,
-        "fetched_at": "2026-10-30T10:34:23.731924+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-06-29",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:23.731920+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-05-28",
-        "amount": 78,
-        "fetched_at": "2026-10-30T10:34:23.731915+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 76,
-        "fetched_at": "2026-10-30T10:34:23.731910+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-03-30",
-        "amount": 66,
-        "fetched_at": "2026-10-30T10:34:23.731905+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-02-26",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:23.731901+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:23.731896+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-12-29",
-        "amount": 44,
-        "fetched_at": "2026-10-30T10:34:23.731891+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-11-27",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:23.731886+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 73,
-        "fetched_at": "2026-10-30T10:34:23.731881+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-09-29",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:23.731877+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-08-28",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:23.731872+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 72,
-        "fetched_at": "2026-10-30T10:34:23.731866+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-06-27",
-        "amount": 67,
-        "fetched_at": "2026-10-30T10:34:23.731861+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-05-29",
-        "amount": 59,
-        "fetched_at": "2026-10-30T10:34:23.731856+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 52,
-        "fetched_at": "2026-10-30T10:34:23.731851+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-02-27",
-        "amount": 53,
-        "fetched_at": "2026-10-30T10:34:23.731846+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 51,
-        "fetched_at": "2026-10-30T10:34:23.731841+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-12-27",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:23.731836+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-11-28",
-        "amount": 51,
-        "fetched_at": "2026-10-30T10:34:23.731831+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 47,
-        "fetched_at": "2026-10-30T10:34:23.731825+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-09-27",
-        "amount": 46,
-        "fetched_at": "2026-10-30T10:34:23.731819+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-08-29",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:23.731812+09:00"
-      },
-      {
-        "ticker": "484880",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 46,
-        "fetched_at": "2026-10-30T10:34:23.731792+09:00"
-      }
-    ],
-    "325020": [
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 156,
-        "fetched_at": "2026-10-30T10:34:21.178038+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 335,
-        "fetched_at": "2026-10-30T10:34:21.178033+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 191,
-        "fetched_at": "2026-10-30T10:34:21.178029+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 158,
-        "fetched_at": "2026-10-30T10:34:21.178024+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 143,
-        "fetched_at": "2026-10-30T10:34:21.178019+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 90,
-        "fetched_at": "2026-10-30T10:34:21.178015+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:21.178010+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:21.178005+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 128,
-        "fetched_at": "2026-10-30T10:34:21.178000+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 390,
-        "fetched_at": "2026-10-30T10:34:21.177995+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2024-01-30",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:21.177990+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2023-10-30",
-        "amount": 56,
-        "fetched_at": "2026-10-30T10:34:21.177985+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2023-07-28",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:21.177980+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2023-04-27",
-        "amount": 319,
-        "fetched_at": "2026-10-30T10:34:21.177975+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2023-01-30",
-        "amount": 34,
-        "fetched_at": "2026-10-30T10:34:21.177970+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2022-10-28",
-        "amount": 46,
-        "fetched_at": "2026-10-30T10:34:21.177965+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2022-04-28",
-        "amount": 385,
-        "fetched_at": "2026-10-30T10:34:21.177959+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2021-04-29",
-        "amount": 340,
-        "fetched_at": "2026-10-30T10:34:21.177953+09:00"
-      },
-      {
-        "ticker": "325020",
-        "ex_dividend_date": "2020-04-28",
-        "amount": 270,
-        "fetched_at": "2026-10-30T10:34:21.177933+09:00"
-      }
-    ],
-    "210780": [
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 241,
-        "fetched_at": "2026-10-30T10:34:22.111879+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 742,
-        "fetched_at": "2026-10-30T10:34:22.111874+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 47,
-        "fetched_at": "2026-10-30T10:34:22.111870+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:22.111865+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 45,
-        "fetched_at": "2026-10-30T10:34:22.111861+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 470,
-        "fetched_at": "2026-10-30T10:34:22.111856+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 38,
-        "fetched_at": "2026-10-30T10:34:22.111851+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2024-10-30",
-        "amount": 70,
-        "fetched_at": "2026-10-30T10:34:22.111847+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 60,
-        "fetched_at": "2026-10-30T10:34:22.111842+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 630,
-        "fetched_at": "2026-10-30T10:34:22.111837+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2023-10-30",
-        "amount": 60,
-        "fetched_at": "2026-10-30T10:34:22.111832+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2023-07-28",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.111828+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2023-04-27",
-        "amount": 690,
-        "fetched_at": "2026-10-30T10:34:22.111823+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2022-10-28",
-        "amount": 35,
-        "fetched_at": "2026-10-30T10:34:22.111818+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2022-04-28",
-        "amount": 660,
-        "fetched_at": "2026-10-30T10:34:22.111812+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2021-10-28",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.111807+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2021-07-29",
-        "amount": 25,
-        "fetched_at": "2026-10-30T10:34:22.111802+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2021-04-29",
-        "amount": 500,
-        "fetched_at": "2026-10-30T10:34:22.111797+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2020-10-29",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.111792+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2020-07-30",
-        "amount": 5,
-        "fetched_at": "2026-10-30T10:34:22.111787+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2020-04-28",
-        "amount": 385,
-        "fetched_at": "2026-10-30T10:34:22.111782+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2020-01-30",
-        "amount": 5,
-        "fetched_at": "2026-10-30T10:34:22.111777+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2019-10-30",
-        "amount": 10,
-        "fetched_at": "2026-10-30T10:34:22.111771+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2019-07-30",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.111766+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2019-04-29",
-        "amount": 400,
-        "fetched_at": "2026-10-30T10:34:22.111760+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2019-01-30",
-        "amount": 40,
-        "fetched_at": "2026-10-30T10:34:22.111754+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2018-04-27",
-        "amount": 360,
-        "fetched_at": "2026-10-30T10:34:22.111749+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2018-01-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:22.111744+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2017-07-28",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:22.111737+09:00"
-      },
-      {
-        "ticker": "210780",
-        "ex_dividend_date": "2017-04-27",
-        "amount": 350,
-        "fetched_at": "2026-10-30T10:34:22.111716+09:00"
-      }
-    ],
-    "266160": [
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2026-07-30",
-        "amount": 80,
-        "fetched_at": "2026-10-30T10:34:22.944120+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2026-04-29",
-        "amount": 400,
-        "fetched_at": "2026-10-30T10:34:22.944115+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2026-01-29",
-        "amount": 90,
-        "fetched_at": "2026-10-30T10:34:22.944111+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2025-10-30",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:22.944106+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2025-07-30",
-        "amount": 400,
-        "fetched_at": "2026-10-30T10:34:22.944101+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2025-04-29",
-        "amount": 160,
-        "fetched_at": "2026-10-30T10:34:22.944097+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2025-01-24",
-        "amount": 90,
-        "fetched_at": "2026-10-30T10:34:22.944092+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2024-07-30",
-        "amount": 75,
-        "fetched_at": "2026-10-30T10:34:22.944088+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2024-04-29",
-        "amount": 405,
-        "fetched_at": "2026-10-30T10:34:22.944083+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2024-01-30",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:22.944078+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2023-10-30",
-        "amount": 56,
-        "fetched_at": "2026-10-30T10:34:22.944074+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2023-07-28",
-        "amount": 50,
-        "fetched_at": "2026-10-30T10:34:22.944069+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2023-04-27",
-        "amount": 365,
-        "fetched_at": "2026-10-30T10:34:22.944064+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2023-01-30",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.944059+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2022-10-28",
-        "amount": 55,
-        "fetched_at": "2026-10-30T10:34:22.944055+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2022-04-28",
-        "amount": 380,
-        "fetched_at": "2026-10-30T10:34:22.944050+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2022-01-27",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.944045+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2021-10-28",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:22.944040+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2021-07-29",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.944035+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2021-04-29",
-        "amount": 360,
-        "fetched_at": "2026-10-30T10:34:22.944030+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2021-01-28",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.944025+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2020-10-29",
-        "amount": 20,
-        "fetched_at": "2026-10-30T10:34:22.944019+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2020-07-30",
-        "amount": 30,
-        "fetched_at": "2026-10-30T10:34:22.944014+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2020-04-28",
-        "amount": 300,
-        "fetched_at": "2026-10-30T10:34:22.944009+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2019-04-29",
-        "amount": 232,
-        "fetched_at": "2026-10-30T10:34:22.944003+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2019-01-30",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.943997+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2018-10-30",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.943992+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2018-07-30",
-        "amount": 15,
-        "fetched_at": "2026-10-30T10:34:22.943987+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2018-04-27",
-        "amount": 218,
-        "fetched_at": "2026-10-30T10:34:22.943980+09:00"
-      },
-      {
-        "ticker": "266160",
-        "ex_dividend_date": "2018-01-30",
-        "amount": 10,
-        "fetched_at": "2026-10-30T10:34:22.943960+09:00"
-      }
-    ],
     "465580": [
       {
         "ticker": "465580",
         "ex_dividend_date": "2025-12-29",
         "amount": 54,
-        "fetched_at": "2026-10-30T10:34:17.144379+09:00"
+        "fetched_at": "2026-10-31T10:24:53.601449+09:00"
       }
     ]
   },
@@ -2514,29 +2580,29 @@
     "458730": {
       "id": 1,
       "ticker": "458730",
-      "price": 15170,
-      "change": 215,
-      "change_pct": 1.44,
+      "price": 15175,
+      "change": 220,
+      "change_pct": 1.47,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:12.188612+09:00"
+      "fetched_at": "2026-10-31T10:24:47.727264+09:00"
     },
     "446720": {
       "id": 2,
       "ticker": "446720",
-      "price": 13895,
-      "change": 210,
-      "change_pct": 1.53,
+      "price": 13900,
+      "change": 215,
+      "change_pct": 1.57,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:13.033723+09:00"
+      "fetched_at": "2026-10-31T10:24:48.716625+09:00"
     },
     "402970": {
       "id": 3,
       "ticker": "402970",
-      "price": 15420,
-      "change": 225,
-      "change_pct": 1.48,
+      "price": 15450,
+      "change": 255,
+      "change_pct": 1.68,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:13.857716+09:00"
+      "fetched_at": "2026-10-31T10:24:49.673580+09:00"
     },
     "489250": {
       "id": 4,
@@ -2545,106 +2611,106 @@
       "change": 195,
       "change_pct": 1.51,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:14.663699+09:00"
+      "fetched_at": "2026-10-31T10:24:50.711816+09:00"
     },
     "441640": {
       "id": 5,
       "ticker": "441640",
-      "price": 12105,
-      "change": -80,
-      "change_pct": -0.66,
+      "price": 12080,
+      "change": -105,
+      "change_pct": -0.86,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:15.547164+09:00"
+      "fetched_at": "2026-10-31T10:24:51.775979+09:00"
     },
     "329200": {
       "id": 6,
       "ticker": "329200",
-      "price": 3920,
-      "change": -20,
-      "change_pct": -0.51,
+      "price": 3915,
+      "change": -25,
+      "change_pct": -0.63,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:16.423222+09:00"
+      "fetched_at": "2026-10-31T10:24:52.768841+09:00"
     },
     "465580": {
       "id": 7,
       "ticker": "465580",
-      "price": 22650,
-      "change": -940,
-      "change_pct": -3.98,
+      "price": 22695,
+      "change": -895,
+      "change_pct": -3.79,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:17.226286+09:00"
+      "fetched_at": "2026-10-31T10:24:53.740922+09:00"
     },
     "429000": {
       "id": 8,
       "ticker": "429000",
-      "price": 13350,
-      "change": 195,
-      "change_pct": 1.48,
+      "price": 13320,
+      "change": 165,
+      "change_pct": 1.25,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:18.011261+09:00"
+      "fetched_at": "2026-10-31T10:24:54.827376+09:00"
     },
     "466940": {
       "id": 9,
       "ticker": "466940",
-      "price": 23160,
-      "change": -310,
-      "change_pct": -1.32,
+      "price": 23450,
+      "change": -20,
+      "change_pct": -0.09,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:18.785977+09:00"
+      "fetched_at": "2026-10-31T10:24:55.781774+09:00"
     },
     "161510": {
       "id": 10,
       "ticker": "161510",
-      "price": 22140,
-      "change": -260,
-      "change_pct": -1.16,
+      "price": 22240,
+      "change": -160,
+      "change_pct": -0.71,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:19.624661+09:00"
+      "fetched_at": "2026-10-31T10:24:56.823233+09:00"
     },
     "279530": {
       "id": 11,
       "ticker": "279530",
-      "price": 16150,
-      "change": -65,
-      "change_pct": -0.4,
+      "price": 16195,
+      "change": -20,
+      "change_pct": -0.12,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:20.442567+09:00"
+      "fetched_at": "2026-10-31T10:24:57.879739+09:00"
     },
     "325020": {
       "id": 12,
       "ticker": "325020",
-      "price": 25555,
-      "change": -450,
-      "change_pct": -1.73,
+      "price": 25800,
+      "change": -205,
+      "change_pct": -0.79,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:21.265130+09:00"
+      "fetched_at": "2026-10-31T10:24:58.870439+09:00"
     },
     "210780": {
       "id": 13,
       "ticker": "210780",
-      "price": 21645,
-      "change": -65,
-      "change_pct": -0.3,
+      "price": 21715,
+      "change": 5,
+      "change_pct": 0.02,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:22.207482+09:00"
+      "fetched_at": "2026-10-31T10:24:59.934261+09:00"
     },
     "266160": {
       "id": 14,
       "ticker": "266160",
-      "price": 28005,
-      "change": -1415,
-      "change_pct": -4.81,
+      "price": 28425,
+      "change": -995,
+      "change_pct": -3.38,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:23.031484+09:00"
+      "fetched_at": "2026-10-31T10:25:01.031212+09:00"
     },
     "484880": {
       "id": 15,
       "ticker": "484880",
-      "price": 19430,
-      "change": -535,
-      "change_pct": -2.68,
+      "price": 19865,
+      "change": -100,
+      "change_pct": -0.5,
       "base_date": "2026-10-30",
-      "fetched_at": "2026-10-30T10:34:23.820329+09:00"
+      "fetched_at": "2026-10-31T10:25:01.992495+09:00"
     }
   }
 }
