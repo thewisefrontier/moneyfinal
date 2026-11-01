@@ -2,6 +2,21 @@
   "updated_at": "2026-11-01",
   "indicators": [
     {
+      "id": 32474,
+      "indicator_code": "M2_TOTAL",
+      "indicator_name": "시중 유동성(M2, 평잔)",
+      "category": "유동성",
+      "value": 4257820.8,
+      "prev_value": 4225455.9,
+      "unit": "십억원",
+      "signal": "green",
+      "source": "한국은행 ECOS",
+      "reference_date": "2026-11-01",
+      "summary_text": null,
+      "fetched_at": "2026-11-01T14:46:22.247656+09:00",
+      "created_at": "2026-11-01 05:46:22"
+    },
+    {
       "id": 32368,
       "indicator_code": "BOND_CORPAA3Y",
       "indicator_name": "회사채(AA-, 3년)",
@@ -24630,21 +24645,6 @@
       "summary_text": "자산운용 / 주식형 설정일 20150930",
       "fetched_at": "2026-10-04T13:56:19.260073+09:00",
       "created_at": "2026-10-04 04:56:20"
-    },
-    {
-      "id": 24328,
-      "indicator_code": "M2_TOTAL",
-      "indicator_name": "시중 유동성(M2, 평잔)",
-      "category": "유동성",
-      "value": 4223410,
-      "prev_value": 4209875.1,
-      "unit": "십억원",
-      "signal": "green",
-      "source": "한국은행 ECOS",
-      "reference_date": "2026-10-01",
-      "summary_text": null,
-      "fetched_at": "2026-10-01T14:34:54.420745+09:00",
-      "created_at": "2026-10-01 05:34:54"
     },
     {
       "id": 24327,
@@ -55203,6 +55203,23 @@
     }
   ],
   "by_category": {
+    "유동성": [
+      {
+        "id": 32474,
+        "indicator_code": "M2_TOTAL",
+        "indicator_name": "시중 유동성(M2, 평잔)",
+        "category": "유동성",
+        "value": 4257820.8,
+        "prev_value": 4225455.9,
+        "unit": "십억원",
+        "signal": "green",
+        "source": "한국은행 ECOS",
+        "reference_date": "2026-11-01",
+        "summary_text": null,
+        "fetched_at": "2026-11-01T14:46:22.247656+09:00",
+        "created_at": "2026-11-01 05:46:22"
+      }
+    ],
     "채권금리": [
       {
         "id": 32368,
@@ -110415,23 +110432,6 @@
         "summary_text": "계좌수 194건, 증권사 1개",
         "fetched_at": "2026-10-26T20:07:20.781627+09:00",
         "created_at": "2026-10-26 11:07:28"
-      }
-    ],
-    "유동성": [
-      {
-        "id": 24328,
-        "indicator_code": "M2_TOTAL",
-        "indicator_name": "시중 유동성(M2, 평잔)",
-        "category": "유동성",
-        "value": 4223410,
-        "prev_value": 4209875.1,
-        "unit": "십억원",
-        "signal": "green",
-        "source": "한국은행 ECOS",
-        "reference_date": "2026-10-01",
-        "summary_text": null,
-        "fetched_at": "2026-10-01T14:34:54.420745+09:00",
-        "created_at": "2026-10-01 05:34:54"
       }
     ],
     "가계부채": [
