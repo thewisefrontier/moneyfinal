@@ -133,7 +133,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="sec-hd"><div class="sec-title">미국 하원 의원 주식·ETF 거래</div><span class="sec-more" id="asof"></span></div>
 <div class="grid4" id="kpis"><div class="loading">로딩 중...</div></div>
 <div class="card" style="overflow:visible">
-  <div class="tabs" id="tabs"><button class="tab active" data-t="recent">최근 거래</button><button class="tab" data-t="stock">종목별</button><button class="tab" data-t="member">의원별</button></div>
+  <div class="tabs" id="tabs"><button class="tab active" data-t="recent">최근 거래</button><button class="tab" data-t="stock">종목별</button><button class="tab" data-t="member">의원별</button><button class="tab" data-t="scan">스캔 신고서</button></div>
   <div class="uf-form" style="grid-template-columns:1fr">
     <div class="fld"><label>의원 이름 · 종목명 · 티커</label>
       <div class="qrow"><input id="q" autocomplete="off" placeholder="예: Pelosi, NVDA, Apple, SPY"><button class="qgo" id="go" type="button" aria-label="검색" title="검색"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div></div>
@@ -147,7 +147,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="card"><div id="result" style="overflow-x:auto"><div class="loading">로딩 중...</div></div><div id="moreWrap"></div></div>
 <div class="legal"><b>이용 안내</b> · 이 자료는 미국 하원 서기국(Clerk)에 제출된 거래 신고서(STOCK Act PTR)에서 가져왔습니다. 미국법(5 U.S.C. §13107)은 이 신고서를 <b>상업적 목적, 금전 모금, 신용평가에 쓰는 것을 금지</b>합니다. 머니파이널은 이 페이지에 광고나 후원 요청을 싣지 않습니다. 신고는 거래 후 최대 45일 늦게 공개되고, 금액은 정확한 값이 아니라 <b>구간</b>입니다. 상원 의원 거래는 포함하지 않았습니다. 특정 종목의 매수·매도 권유가 아니며, 의원의 거래가 이후 수익을 보장하지 않습니다.</div>
 <div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
-  <b>데이터 기준</b> · 출처: 미국 하원 서기국 재산공개 시스템(<a href="https://disclosures-clerk.house.gov/FinancialDisclosure" target="_blank" rel="noopener" style="color:var(--accent)">disclosures-clerk.house.gov</a>)의 거래 신고서(PTR) PDF를 읽어 정리했고, 각 행의 "원문"에서 신고서를 직접 확인할 수 있습니다. 소유자는 본인·배우자(SP)·공동(JT)·자녀(DC)입니다. 매도(일부)는 보유분 중 일부 매도입니다. 신고서 PDF가 스캔 이미지인 일부는 읽지 못해 빠져 있을 수 있습니다. ETF는 신고서의 자산 분류와 이름·티커로 판별했고 틀릴 수 있습니다. 갱신: 매주.
+  <b>데이터 기준</b> · 출처: 미국 하원 서기국 재산공개 시스템(<a href="https://disclosures-clerk.house.gov/FinancialDisclosure" target="_blank" rel="noopener" style="color:var(--accent)">disclosures-clerk.house.gov</a>)의 거래 신고서(PTR) PDF를 읽어 정리했고, 각 행의 "원문"에서 신고서를 직접 확인할 수 있습니다. 소유자는 본인·배우자(SP)·공동(JT)·자녀(DC)입니다. 매도(일부)는 보유분 중 일부 매도입니다. 스캔 이미지로만 공개된 신고서(약 13%)는 거래 내용을 읽지 못해 '스캔 신고서' 탭에 목록과 원문 링크만 제공합니다. ETF는 신고서의 자산 분류와 이름·티커로 판별했고 틀릴 수 있습니다. 갱신: 매주.
 </div>
 </main>
 <div class="disclaimer">⚠️ 공시 자료를 가공한 참고 정보이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 이 자료를 상업적 목적, 모금, 신용평가에 사용하지 마세요.</div>
@@ -155,7 +155,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <script src="theme.js"></script><script>
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let ALL=[],META=null,TAB='recent',F={cat:'',side:'',days:'90'},LIMIT=200,Q='';
+let ALL=[],SCANS=[],META=null,TAB='recent',F={cat:'',side:'',days:'90'},LIMIT=200,Q='';
 // 달러 금액: 억/만 단위, 콤마 없음
 function usd(n){if(n==null)return'';const jo=Math.floor(n/1e12),eok=Math.floor(n%1e12/1e8),man=Math.floor(n%1e8/1e4),r=n%1e4;let s='';if(jo)s+=jo+'조';if(eok)s+=eok+'억';if(man)s+=man+'만';if(r||!s)s+=r;return s+'달러';}
 const amt=t=>t.lo==null?'-':t.hi==null?usd(t.lo)+' 초과':t.lo===t.hi?usd(t.lo):usd(t.lo)+' ~ '+usd(t.hi);
@@ -169,7 +169,8 @@ function daysAgo(n){const d=new Date(META.updated_at+'T00:00:00');d.setDate(d.ge
 async function init(){
   try{META=await J('data/congress/meta.json');}catch(e){$('result').innerHTML='<div class="empty">데이터를 준비 중입니다</div>';$('kpis').innerHTML='';return;}
   const parts=await Promise.all(META.years.map(y=>J('data/congress/trades_'+y+'.json').catch(()=>null)));
-  parts.forEach(p=>{if(p)ALL=ALL.concat(p.trades);});
+  parts.forEach((p,i)=>{if(p){ALL=ALL.concat(p.trades);Object.entries(p.scans||{}).forEach(([doc,v])=>SCANS.push({doc,y:META.years[i],m:v.m,sd:v.sd,f:v.f}));}});
+  SCANS.sort((a,b)=>b.f<a.f?-1:b.f>a.f?1:0);
   ALL.sort((a,b)=>ed(b)<ed(a)?-1:ed(b)>ed(a)?1:0);
   $('asof').textContent=META.updated_at+' 갱신';
   document.querySelectorAll('#tabs .tab').forEach(b=>b.addEventListener('click',()=>{TAB=b.dataset.t;document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.toggle('active',x===b));LIMIT=200;render();}));
@@ -198,7 +199,13 @@ function filtered(){
 function sideBadge(t){const s=SIDE[t.tt]||[t.tt,''];return `<span class="badge ${s[1]}">${s[0]}</span>`;}
 function render(){
   const rows=filtered();
-  if(TAB==='recent')renderRecent(rows);else if(TAB==='stock')renderGroup(rows,'stock');else renderGroup(rows,'member');
+  if(TAB==='scan')renderScans();else if(TAB==='recent')renderRecent(rows);else if(TAB==='stock')renderGroup(rows,'stock');else renderGroup(rows,'member');
+}
+function renderScans(){
+  $('moreWrap').innerHTML='';
+  const list=SCANS.filter(x=>!Q||x.m.toLowerCase().includes(Q));
+  $('result').innerHTML=`<div class="note" style="padding-bottom:0">종이로 제출돼 <b>스캔 이미지로만 공개된 신고서</b> ${list.length}건입니다. 이미지에는 글자 정보가 없어 자동으로 읽지 못했고, 손으로 체크한 양식은 자동 판독이 틀리기 쉬워 거래 내용을 싣지 않았습니다. 원문 PDF에서 직접 확인해 주세요.</div>`+
+   (list.length?'<table class="bt"><tr><th>신고일</th><th>의원</th><th>원문</th></tr>'+list.map(x=>`<tr><td>${x.f}</td><td>${esc(x.m)} <small style="color:var(--text2)">${esc(x.sd)}</small></td><td><a href="https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${x.y}/${x.doc}.pdf" target="_blank" rel="noopener" style="color:var(--accent)">PDF 열기</a></td></tr>`).join('')+'</table>':'<div class="empty">조건에 맞는 신고서가 없습니다</div>');
 }
 function renderRecent(rows){
   if(!rows.length){$('result').innerHTML='<div class="empty">조건에 맞는 거래가 없습니다</div>';$('moreWrap').innerHTML='';return;}

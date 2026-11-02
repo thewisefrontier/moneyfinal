@@ -179,6 +179,7 @@ def main(years=None, limit=None):
                     cur['trades'].append(t)
             else:
                 cur['unparsed'].append(d['doc'])
+                cur.setdefault('scans', {})[d['doc']] = {'m': d['name'], 'sd': d['sd'], 'f': d['filed']}  # 스캔 이미지라 못 읽은 신고서: 목록·원문 링크로만 제공
             if n % 50 == 0:
                 logger.info(f'  {n}/{len(todo)}')
             time.sleep(0.25)
