@@ -1,0 +1,25 @@
+name: 의원 거래(하원 PTR)
+on:
+  workflow_dispatch:
+  schedule:
+    # 하원 서기국 거래 신고서 신규분 수집 (매주 월요일 새벽, 이미 읽은 신고서는 건너뜀)
+    - cron: '30 2 * * 1'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 하원 PTR 수집 (D1·시크릿 불필요, data/congress/ 생성)
+        run: python fetchers/house_ptr.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/congress/
+          git diff --staged --quiet || (git commit -m "data: 의원 거래 갱신" && git pull --rebase origin main && git push)

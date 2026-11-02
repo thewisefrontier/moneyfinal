@@ -19,6 +19,7 @@
     ['us-fin.html', '미국재무'],
     ['compare.html', '기업비교'],
     ['superinvestor.html', '슈퍼인베스터'],
+    ['congress.html', '의원거래'],
     ['bond.html', '채권'],
     ['sim.html', '시뮬레이터'],
     ['macro.html', '경제지표'],
