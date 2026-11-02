@@ -213,7 +213,7 @@ function render(){
   const row=(label,k,fmt,cls)=>D[k]?`<tr class="${cls||''}"><td>${label}</td>${D[k].map(x=>`<td>${fmt(x)}</td>`).join('')}</tr>`:'';
   const calc=(label,f,fmt,cls)=>`<tr class="${cls||''}"><td>${label}</td>${E.map((_,i)=>`<td>${fmt(f(i))}</td>`).join('')}</tr>`;
   const T={
-   is:[row('매출액','rev',won,'bold'),row('영업이익','op',won,'bold'),row('법인세차감전 순이익','pbt',won,'sub'),row('당기순이익'+(D.nip?'(비지배 포함)':''),'ni',won,D.nip?'':'bold'),...(D.nip?[row('지배주주 순이익','nip',won,'bold')]:[]),calc('영업이익률',i=>div(g('op',i),g('rev',i)),x=>pct(x),'sub'),calc('순이익률',i=>div(g('ni',i),g('rev',i)),x=>pct(x),'sub'),...(!Q?[row('주당 배당금','dps',wonp)]:[])],
+   is:[row('매출액','rev',won,'bold'),row('영업이익','op',won,'bold'),row('법인세차감전 순이익','pbt',won,'sub'),row('당기순이익'+(D.nip?'(비지배 포함)':''),'ni',won,D.nip?'':'bold'),...(D.nip?[row('지배주주 순이익','nip',won,'bold')]:[]),calc('영업이익률',i=>div(g('op',i),g('rev',i)),x=>pct(x),'sub'),calc('순이익률',i=>div(g(NK,i),g('rev',i)),x=>pct(x),'sub'),...(!Q?[row('주당 배당금','dps',wonp)]:[])],
    bs:[row('유동자산','ca',won),row('자산총계','ta',won,'bold'),row('유동부채','cl',won),row('부채총계','tl',won,'bold'),row('자본총계','eq',won,'bold'),...(D.eqp?[row('지배주주 지분','eqp',won,'sub')]:[])],
    ra:[calc(Q?'매출 증가율(전년동기 대비)':'매출 증가율',i=>i>=per?div(g('rev',i)!=null&&g('rev',i-per)!=null?g('rev',i)-g('rev',i-per):null,g('rev',i-per)):null,x=>pct(x)),
        calc(Q?'순이익 증가율(전년동기 대비)':'순이익 증가율',i=>i>=per&&g(NK,i-per)>0?div(g(NK,i)-g(NK,i-per),g(NK,i-per)):null,x=>pct(x)),
