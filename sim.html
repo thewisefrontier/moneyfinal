@@ -391,9 +391,9 @@ function finCard(f,s){
   const rows=ys.map(y=>{const r=f[y];// [매출,영업이익,순이익,자본]
     const dec=g.map((d,i)=>[d,i]).filter(x=>x[0].startsWith(y+'-12')).pop();
     let mc=null;if(dec&&s.mc0)mc=null;
-    return `<tr><td>${y}</td><td>${r[0]==null?'-':krwE(r[0]*1e6)}</td><td>${r[1]==null?'-':krwE(r[1]*1e6)}</td><td style="color:${clr(r[2])}">${r[2]==null?'-':krwE(r[2]*1e6)}</td><td>${r[3]==null?'-':krwE(r[3]*1e6)}</td><td>${r[2]&&r[3]?pct(r[2]/r[3]):'-'}</td></tr>`;}).join('');
+    return `<tr><td>${y}</td><td>${r[0]==null?'-':krwE(r[0]*1e6)}</td><td>${r[1]==null?'-':krwE(r[1]*1e6)}</td><td style="color:${clr(r[2])}">${r[2]==null?'-':krwE(r[2]*1e6)}</td><td>${r[3]==null?'-':krwE(r[3]*1e6)}</td><td>${r[2]&&(r[6]||r[3])?pct(r[2]/(r[6]||r[3])):'-'}</td></tr>`;}).join('');
   return `<div class="card"><div class="card-hd"><span class="card-title">연결 재무 추이 (DART 사업보고서)</span></div><div style="overflow-x:auto"><table class="bt"><tr><th>연도</th><th>매출액</th><th>영업이익</th><th>순이익</th><th>자본</th><th>ROE(순이익/기말자본)</th></tr>${rows}</table></div>
-  <div class="note">순이익은 연결 기준 당기순이익입니다(지배주주 구분 없음). 위 재무가 주가 변화와 얼마나 맞물렸는지는 매출·순이익 추이와 위 주가 차트를 나란히 비교해 보세요.</div></div>`;
+  <div class="note">순이익·ROE는 지배주주 순이익과 지배주주 지분 기준입니다(해당 값이 없는 종목은 연결 당기순이익). 위 재무가 주가 변화와 얼마나 맞물렸는지는 매출·순이익 추이와 위 주가 차트를 나란히 비교해 보세요.</div></div>`;
 }
 
 /* 랭킹 */
