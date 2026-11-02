@@ -1,0 +1,30 @@
+name: 의원 거래 스캔 신고서 판독
+on:
+  workflow_dispatch:
+  schedule:
+    # 종이 제출 스캔본을 하루 40회 이내의 Gemini 호출로 조금씩 판독 (daily.yml 07:00 KST와 겹치지 않게 19:00 KST)
+    - cron: '0 10 * * *'
+concurrency:
+  group: congress-data
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 스캔 신고서 판독 (한도 429·연속 오류 시 자동 중단)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/ptr_scan_ocr.py --max-calls 40
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/congress/
+          git diff --staged --quiet || (git commit -m "data: 의원 거래 스캔 판독 갱신" && git pull --rebase origin main && git push)

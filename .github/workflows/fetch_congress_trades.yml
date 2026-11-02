@@ -4,6 +4,9 @@ on:
   schedule:
     # 하원 서기국 거래 신고서 신규분 수집 (매주 월요일 새벽, 이미 읽은 신고서는 건너뜀)
     - cron: '30 2 * * 1'
+concurrency:
+  group: congress-data
+  cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-latest
