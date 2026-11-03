@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Date and Duration Calculator | MoneyFinal</title>
+<meta name="description" content="Calculates the period between two dates (D-day) and the date N days from a given day.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-date"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-date">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-date">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-date">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-date">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-date">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-date">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Date and Duration Calculator | MoneyFinal">
+<meta property="og:description" content="Calculates the period between two dates (D-day) and the date N days from a given day.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-date">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Date and Duration Calculator | MoneyFinal">
+<meta name="twitter:description" content="Calculates the period between two dates (D-day) and the date N days from a given day.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Date and duration calculator","description":"Calculates the period between two dates (D-day) and the date N days from a given day.","url":"https://moneyfinal.pages.dev/en/calc-date","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.card-t{font-size:14px;font-weight:700;margin-bottom:14px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none;color-scheme:dark}
+:root[data-theme="light"] .field input{color-scheme:light}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}}
+.res{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;margin-top:4px}
+.res-main{font-size:22px;font-weight:700;color:var(--green)}
+.res-sub{font-size:12px;color:var(--text2);margin-top:4px;line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Date and duration calculator</h1>
+<div class="sub">Period between two dates · date N days from now</div>
+
+<div class="card">
+  <div class="card-t">📅 Period between two dates</div>
+  <div class="grid2">
+    <div class="field"><label>Start date</label><input type="date" id="d1" onchange="calcDiff()"></div>
+    <div class="field"><label>End date</label><input type="date" id="d2" onchange="calcDiff()"></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="diff-main">-</div>
+    <div class="res-sub" id="diff-sub"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-t">➕ N days after or before a date</div>
+  <div class="grid3">
+    <div class="field"><label>Reference date</label><input type="date" id="b1" onchange="calcAdd()"></div>
+    <div class="field"><label>Number of days</label><input type="number" id="days" value="100" oninput="calcAdd()"></div>
+    <div class="field"><label>Direction</label><select id="dir" onchange="calcAdd()"><option value="1">After (+)</option><option value="-1">Before (−)</option></select></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="add-main">-</div>
+    <div class="res-sub" id="add-sub"></div>
+  </div>
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+function fd(d){return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} (${WD[d.getDay()]})`;}
+function toInput(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function calcDiff(){
+  const a=document.getElementById('d1').valueAsDate,b=document.getElementById('d2').valueAsDate;
+  if(!a||!b){document.getElementById('diff-main').textContent='-';return;}
+  const days=Math.round((b-a)/86400000);
+  const abs=Math.abs(days);
+  document.getElementById('diff-main').textContent=(days<0?'−':'')+abs.toLocaleString('en-US')+' days';
+  
+  let y=b.getFullYear()-a.getFullYear(),m=b.getMonth()-a.getMonth(),d=b.getDate()-a.getDate();
+  const sign=days<0?-1:1;
+  let s=[a,b];if(days<0)s=[b,a];
+  y=s[1].getFullYear()-s[0].getFullYear();m=s[1].getMonth()-s[0].getMonth();d=s[1].getDate()-s[0].getDate();
+  if(d<0){m--;d+=new Date(s[1].getFullYear(),s[1].getMonth(),0).getDate();}
+  if(m<0){y--;m+=12;}
+  document.getElementById('diff-sub').innerHTML=
+    `About ${y} years ${m} months ${d} days · ${Math.floor(abs/7).toLocaleString('en-US')} weeks ${abs%7} days<br>`+
+    `Counting the start date (D-day style): <b>day ${(abs+1).toLocaleString('en-US')}</b>`;
+}
+function calcAdd(){
+  const b=document.getElementById('b1').valueAsDate;
+  const n=parseInt(document.getElementById('days').value,10);
+  const dir=parseInt(document.getElementById('dir').value,10);
+  if(!b||isNaN(n)){document.getElementById('add-main').textContent='-';return;}
+  const r=new Date(b.getTime()+n*dir*86400000);
+  document.getElementById('add-main').textContent=fd(r);
+  const r2=new Date(b.getTime()+(n-1)*dir*86400000);
+  document.getElementById('add-sub').innerHTML=`${n.toLocaleString('en-US')} days from the reference date ${dir>0?'after':'before'}<br>Counting the reference date as day 1 (like the 100th-day tradition): <b>${fd(r2)}</b>`;
+}
+(function(){
+  const t=new Date();
+  document.getElementById('d1').value=toInput(t);
+  document.getElementById('d2').value=toInput(new Date(t.getFullYear(),11,31));
+  document.getElementById('b1').value=toInput(t);
+  calcDiff();calcAdd();
+})();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

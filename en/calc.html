@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Calculators | MoneyFinal</title>
+<meta name="description" content="A collection of personal-finance calculators: Korean take-home pay, exchange rates, loan repayment, brokerage fees and acquisition tax on Korean real estate, floor-area conversion, lottery tax and more.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Calculators | MoneyFinal">
+<meta property="og:description" content="A collection of personal-finance calculators: Korean take-home pay, exchange rates, loan repayment, brokerage fees and acquisition tax on Korean real estate, floor-area conversion, lottery tax and more.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Calculators | MoneyFinal">
+<meta name="twitter:description" content="A collection of personal-finance calculators: Korean take-home pay, exchange rates, loan repayment, brokerage fees and acquisition tax on Korean real estate, floor-area conversion, lottery tax and more.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Calculators","description":"A collection of personal-finance calculators: Korean take-home pay, exchange rates, loan repayment, brokerage fees and acquisition tax on Korean real estate, floor-area conversion, lottery tax and more.","url":"https://moneyfinal.pages.dev/en/calc","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:900px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.sec{font-size:13px;font-weight:700;color:var(--accent);margin:24px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.cc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;transition:border-color .15s}
+.cc:hover{border-color:var(--accent)}
+.cc-icon{font-size:26px;margin-bottom:10px}
+.cc-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.cc-desc{font-size:12px;color:var(--text2);line-height:1.6}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Calculators</h1>
+<div class="sub">Quick calculations for personal finance</div>
+
+<div class="sec">💼 Income & tax</div>
+<div class="grid">
+  <a class="cc" href="/en/calc-salary.html"><div class="cc-icon">💵</div><div class="cc-title">Korean take-home pay calculator</div><div class="cc-desc">Calculates monthly take-home pay with 2026 Korean social insurance rates and income tax.</div></a>
+  <a class="cc" href="/en/calc-freelancer.html"><div class="cc-icon">🧾</div><div class="cc-title">Freelancer withholding tax calculator</div><div class="cc-desc">Compares withholding tax and take-home pay for business income (3.3%) and other income (8.8%) in Korea.</div></a>
+</div>
+
+<div class="sec">🏦 Finance</div>
+<div class="grid">
+  <a class="cc" href="/calc-interest.html"><div class="cc-icon">🏦</div><div class="cc-title">Savings interest calculator</div><div class="cc-desc">Calculates deposit and savings interest with simple or monthly compounding and shows the after-tax amount.</div></a>
+  <a class="cc" href="/en/calc-dividend.html"><div class="cc-icon">📈</div><div class="cc-title">Dividend calculator</div><div class="cc-desc">Calculates annual dividends from the shares you hold, the after-tax amount and the dividend yield.</div></a>
+  <a class="cc" href="/en/calc-loan.html"><div class="cc-icon">💳</div><div class="cc-title">Loan interest and repayment calculator</div><div class="cc-desc">Calculates the monthly payment and total interest for equal-installment, equal-principal and bullet repayment.</div></a>
+  <a class="cc" href="/en/calc-fx.html"><div class="cc-icon">💱</div><div class="cc-title">Currency converter</div><div class="cc-desc">Converts between foreign currency and Korean won in both directions using the latest USD/KRW rate.</div></a>
+</div>
+
+<div class="sec">🔥 Retirement & FIRE</div>
+<div class="grid">
+  <a class="cc" href="/en/calc-fire.html"><div class="cc-icon">🔥</div><div class="cc-title">FIRE calculator</div><div class="cc-desc">Calculates your FIRE number, retirement age and Coast FIRE point, including the Korean National Pension.</div></a>
+</div>
+
+<div class="sec">🏠 Real estate</div>
+<div class="grid">
+  <a class="cc" href="/en/calc-realty.html"><div class="cc-icon">🏠</div><div class="cc-title">Korean real estate commission and acquisition tax calculator</div><div class="cc-desc">Calculates the maximum brokerage fee for sales, jeonse and monthly rent in Korea and the acquisition tax (including surcharges for multiple homes).</div></a>
+  <a class="cc" href="/en/calc-pyeong.html"><div class="cc-icon">📐</div><div class="cc-title">Floor area converter (pyeong ↔ ㎡)</div><div class="cc-desc">Converts between pyeong and square meters in both directions, with a table of common sizes.</div></a>
+</div>
+
+<div class="sec">🎰 Lottery</div>
+<div class="grid">
+  <a class="cc" href="/en/calc-lotto-tax.html"><div class="cc-icon">🎫</div><div class="cc-title">Lottery tax calculator</div><div class="cc-desc">Calculates tax on winnings (22% and 33%) and the amount you receive.</div></a>
+  <a class="cc" href="/en/calc-lotto-sim.html"><div class="cc-icon">🎰</div><div class="cc-title">Lottery simulator</div><div class="cc-desc">Runs up to 1 million virtual draws with your numbers to show winnings by rank and profit or loss.</div></a>
+</div>
+
+<div class="sec">📅 Everyday</div>
+<div class="grid">
+  <a class="cc" href="/en/calc-age.html"><div class="cc-icon">🎂</div><div class="cc-title">Korean age calculator</div><div class="cc-desc">Calculates international age, year-based age and Korean counting age, plus days until the next birthday.</div></a>
+  <a class="cc" href="/en/calc-date.html"><div class="cc-icon">📅</div><div class="cc-title">Date and duration calculator</div><div class="cc-desc">Calculates the period between two dates and the date N days from a given day.</div></a>
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

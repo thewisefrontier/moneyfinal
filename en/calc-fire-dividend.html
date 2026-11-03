@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dividend FIRE Simulator - Monthly-Dividend ETF Retirement Calculator | MoneyFinal</title>
+<meta name="description" content="Calculate how much you need to invest, and for how long, to retire on an ETF portfolio (Korean and overseas mixed), including monthly take-home pay after dividend tax and health insurance premiums.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-fire-dividend">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-fire-dividend">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-fire-dividend">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-fire-dividend">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-fire-dividend">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-fire-dividend">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-fire-dividend">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Dividend FIRE Simulator - Monthly-Dividend ETF Retirement Calculator | MoneyFinal">
+<meta property="og:description" content="Calculate how much you need to invest, and for how long, to retire on an ETF portfolio (Korean and overseas mixed), including monthly take-home pay after dividend tax and health insurance premiums.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-fire-dividend">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dividend FIRE Simulator - Monthly-Dividend ETF Retirement Calculator | MoneyFinal">
+<meta name="twitter:description" content="Calculate how much you need to invest, and for how long, to retire on an ETF portfolio (Korean and overseas mixed), including monthly take-home pay after dividend tax and health insurance premiums.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dividend FIRE Simulator","description":"Calculate when you reach your retirement fund and the after-tax monthly income from an ETF portfolio.","url":"https://moneyfinal.pages.dev/en/calc-fire-dividend","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd;color-scheme:dark}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da;color-scheme:light}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1680px;margin:0 auto;padding:24px 16px}
+.dash{display:grid;grid-template-columns:440px 1fr;gap:16px;align-items:start}
+.dash-left,.dash-right{min-width:0}
+.dash-left{position:sticky;top:90px;max-height:calc(100vh - 100px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.dash-left::-webkit-scrollbar{width:6px}
+.dash-left::-webkit-scrollbar-track{background:transparent}
+.dash-left::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.dash-right .card{margin-bottom:16px}
+@media(max-width:960px){.dash{grid-template-columns:1fr}.dash-left{position:static;max-height:none}}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.sec-title{font-size:14px;font-weight:700;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:15px;background:var(--accent);border-radius:2px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px}
+.field{margin-bottom:14px}
+.field-title{font-size:13px;font-weight:700;margin-bottom:12px;color:var(--accent);display:flex;align-items:center;gap:6px}
+.preset-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.preset-btn{flex:1;min-width:44px;background:var(--bg3);border:1px solid var(--border);color:var(--text2);padding:7px 4px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer}
+.preset-btn:hover{border-color:var(--accent);color:var(--accent)}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:10px 11px;font-size:14px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}}
+.btn{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;margin-top:6px}
+.btn:hover{opacity:.9}
+.btn-ghost{background:none;border:1px dashed var(--border);color:var(--text2);padding:8px;border-radius:6px;font-size:13px;cursor:pointer;width:100%;margin-top:4px}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.port-row{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.port-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.port-row-top{display:grid;grid-template-columns:72px 1fr 26px;gap:8px;align-items:end;margin-bottom:8px}
+.port-row-bottom{display:grid;grid-template-columns:1fr 1.3fr;gap:8px}
+.port-row label{display:block;font-size:10px;color:var(--text2);margin-bottom:4px}
+.port-row select,.port-row input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:5px;color:var(--text);padding:8px 7px;font-size:13px;outline:none}
+.rm-btn{background:none;border:none;color:var(--text2);cursor:pointer;font-size:16px;padding:6px 0}
+.rm-btn:hover{color:var(--red)}
+.tk-search{position:relative}
+.tk-search-list{position:absolute;top:calc(100% + 2px);left:0;right:0;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:240px;overflow-y:auto;z-index:80;display:none;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.tk-search-list.open{display:block}
+.tk-search-item{padding:8px 10px;cursor:pointer;font-size:12.5px;line-height:1.4}
+.tk-search-item:hover,.tk-search-item.hl{background:var(--bg3)}
+.tk-search-item .code{font-weight:600;margin-right:6px}
+.tk-search-empty{padding:10px;color:var(--text2);font-size:12px;text-align:center}
+.tk-search-custom{color:var(--accent)}
+.result-hero{text-align:center;padding:16px 12px 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.rh-sub{font-size:12px;color:var(--text2);margin-top:6px}
+.brow{display:flex;justify-content:space-between;padding:9px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tab{flex:1;text-align:center;padding:8px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:12px;font-weight:600;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.radio-row{display:flex;gap:10px}
+.radio-opt{flex:1;border:1px solid var(--border);border-radius:6px;padding:10px;cursor:pointer;font-size:12px;text-align:center;color:var(--text2)}
+.radio-opt.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.warn{background:rgba(210,153,34,.1);border:1px solid var(--yellow);border-radius:6px;padding:10px 12px;font-size:12px;color:var(--yellow);margin-top:10px}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:12px}
+table th,table td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap;font-variant-numeric:tabular-nums}
+table th:first-child,table td:first-child{text-align:left}
+table th{color:var(--text2);font-weight:600;background:var(--bg3)}
+table tr:last-child td{border-bottom:none;font-weight:700}
+#backtestTable tbody tr:nth-child(even){background:var(--bg3)}
+#backtestTable tbody tr.row-proj{background:transparent;border-left:2px solid var(--accent)}
+#backtestTable tbody tr.row-proj td{color:var(--text2);font-style:italic}
+#backtestTable tbody tr.row-proj td:first-child{color:var(--accent);font-style:normal}
+.empty{color:var(--text2);text-align:center;padding:24px;font-size:13px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+.tk-search input{padding-right:40px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:5px 7px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc-fire-dividend.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Dividend FIRE Simulator</h1>
+<div class="sub">Change the conditions to your own situation and see everything from taxes based on actual dividend history to the survival probability of your assets in retirement on one screen</div>
+
+<div class="dash">
+<div class="dash-left">
+  <div class="card">
+    <div class="field-title">① ETF portfolio</div>
+    <div id="portRows"></div>
+    <button class="btn-ghost" onclick="addRow()">+ Add ETF</button>
+  </div>
+  <div class="card">
+    <div class="field-title">② Contribution settings</div>
+    <div class="field"><label>Initial investment (KRW, assets you already hold · 0 if none)</label><input type="text" id="initialLump" inputmode="numeric" value="0" oninput="fmtInput(this);calcAll()"></div>
+    <div class="field"><label>Investment period</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="position:relative"><input type="number" id="years" value="15" min="0" max="50" oninput="calcAll()" style="padding-right:28px"><span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">yrs</span></div>
+        <div style="position:relative"><input type="number" id="yearsMonths" value="0" min="0" max="11" oninput="calcAll()" style="padding-right:32px"><span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">mo</span></div>
+      </div>
+    </div>
+    <div class="field"><label>Assumed annual price growth (%)</label><input type="number" id="growth" value="5" step="0.1" oninput="calcAll()"></div>
+    <div class="field"><label>Dividend reinvestment</label><select id="reinvest" onchange="calcAll()"><option value="yes">Reinvest</option><option value="no">Do not reinvest (hold cash)</option></select></div>
+  </div>
+  <div class="card">
+    <div class="field-title">③ Assets at retirement</div>
+    <div class="field"><label>Quick select</label>
+      <div class="preset-row">
+        <button class="preset-btn" onclick="setCapitalPreset(1e8)">₩100M</button>
+        <button class="preset-btn" onclick="setCapitalPreset(3e8)">₩300M</button>
+        <button class="preset-btn" onclick="setCapitalPreset(5e8)">₩500M</button>
+        <button class="preset-btn" onclick="setCapitalPreset(10e8)">₩1B</button>
+        <button class="preset-btn" onclick="setCapitalPreset(20e8)">₩2B</button>
+      </div>
+    </div>
+    <div class="field"><label>Value at retirement (KRW; auto-filled from the contribution simulation above, editable)</label><input type="text" id="capital" inputmode="numeric" value="" oninput="fmtInput(this);capitalManual();calcRetire()"></div>
+    <div class="field"><label>Health insurance type</label>
+      <div class="radio-row">
+        <div class="radio-opt active" id="hi-region" onclick="setHealthType('region')">Regional subscriber</div>
+        <div class="radio-opt" id="hi-dependent" onclick="setHealthType('dependent')">Employee subscriber (staying as a dependent)</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="field-title">④ Survival simulation settings</div>
+    <div class="field"><label>Retirement period (years)</label><input type="number" id="mc-years" value="30" min="5" max="60" oninput="runMC()"></div>
+    <div class="field"><label>Assumed annual return volatility (%, standard deviation)</label><input type="number" id="mc-std" value="15" step="1" oninput="runMC()"></div>
+    <div class="field" style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <input type="checkbox" id="inflationOn" onchange="toggleInflation()" style="width:auto">
+      <label style="margin:0;flex:1;cursor:pointer" onclick="document.getElementById('inflationOn').click()">Adjust for inflation (withdrawals rise each year)</label>
+    </div>
+    <div class="field" id="inflationField" style="display:none"><label>Assumed inflation rate (%, annual)</label><input type="number" id="inflationPct" value="2.5" step="0.1" oninput="calcAll()"></div>
+    <div class="field" style="display:flex;align-items:center;gap:8px;margin-bottom:0">
+      <input type="checkbox" id="seqRiskOn" onchange="toggleSeqRisk()" style="width:auto">
+      <label style="margin:0;flex:1;cursor:pointer" onclick="document.getElementById('seqRiskOn').click()">Compare sequence-risk scenarios</label>
+    </div>
+    <button class="btn" onclick="runMC()">🎲 Run again</button>
+  </div>
+</div>
+
+<div class="dash-right">
+
+  <div class="card">
+    <div class="sec-title">Contribution simulation results</div>
+    <div class="result-hero">
+      <div class="rh-label">Expected value after the investment period</div>
+      <div class="rh-value" id="r-fv">-</div>
+      <div class="rh-sub" id="r-fv-sub"></div>
+      <div class="rh-sub" id="r-fv-real" style="display:none;color:var(--yellow)"></div>
+    </div>
+    <div class="brow"><span class="k">Total monthly investment (portfolio sum)</span><span class="v" id="r-monthly"></span></div>
+    <div class="brow"><span class="k">Total principal contributed</span><span class="v" id="r-principal"></span></div>
+    <div class="brow"><span class="k">Weighted average dividend yield (current)</span><span class="v" id="r-yield"></span></div>
+    <div class="brow"><span class="k">Domestic / overseas weight</span><span class="v" id="r-mix"></span></div>
+    <div id="accChartHolder" style="margin-top:14px"></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">Monthly cash flow in retirement</div>
+    <div id="hi-warn"></div>
+    <div class="result-hero">
+      <div class="rh-label">Monthly take-home after tax and health insurance premiums</div>
+      <div class="rh-value" id="rt-net">-</div>
+      <div class="rh-sub">Monthly average assuming dividends are paid evenly each month</div>
+    </div>
+    <div class="brow"><span class="k">Annual pre-tax dividends (domestic + overseas)</span><span class="v" id="rt-gross" style="color:var(--green)"></span></div>
+    <div class="brow"><span class="k">Domestic dividend withholding (15.4%)</span><span class="v" id="rt-tax-kr" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k">Overseas dividend US withholding (15%)</span><span class="v" id="rt-tax-us" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k" id="rt-comp-label">Additional comprehensive financial income tax</span><span class="v" id="rt-comp" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k" id="rt-hi-label">Health insurance premiums (annual)</span><span class="v" id="rt-hi" style="color:var(--red)"></span></div>
+    <div class="brow"><span class="k">Annual take-home pay</span><span class="v" id="rt-net-yr"></span></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">Asset survival simulation in retirement (Monte Carlo)</div>
+    <div class="result-hero">
+      <div class="rh-label" id="mc-label">Probability that assets last through retirement (1,000 simulations)</div>
+      <div class="rh-value" id="mc-rate">-</div>
+      <div class="rh-sub" id="mc-sub"></div>
+    </div>
+    <div id="mcChartHolder"></div>
+    <div class="legend" style="display:flex;gap:16px;font-size:11px;color:var(--text2);margin-top:8px;justify-content:center">
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>Median (50%)</span>
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>Top 10% / bottom 10% range</span>
+    </div>
+  </div>
+
+  <div class="card" id="seqRiskCard" style="display:none">
+    <div class="sec-title">Sequence-risk check (effect of return order)</div>
+    <div class="rh-sub" style="text-align:left;margin-bottom:10px">Shows how much the final balance changes depending on whether a shock of the same size (annual return of −2 standard deviations) hits early or late in retirement. In years without a shock, the return is the assumed average.</div>
+    <div id="seqChartHolder"></div>
+    <div style="overflow-x:auto;margin-top:10px">
+    <table><thead><tr><th>Scenario</th><th>Final balance</th></tr></thead><tbody id="seqTableBody"></tbody></table>
+    </div>
+    <div class="legend" style="display:flex;gap:16px;font-size:11px;color:var(--text2);margin-top:8px;justify-content:center;flex-wrap:wrap">
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--text2);margin-right:4px;vertical-align:middle"></span>Normal (no shock)</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--red);margin-right:4px;vertical-align:middle"></span>Early shock</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--accent);margin-right:4px;vertical-align:middle"></span>Late shock</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-title">📊 Yearly taxes based on actual dividend history (backtest)</div>
+    <div class="rh-sub" style="text-align:left;margin-bottom:10px">Assumes you held the current portfolio weights from that point on and calculates with actually paid dividends. Real history is used for the 82 overseas and 15 domestic ETFs (only when chosen from the list); manually entered holdings are excluded.</div>
+    <div style="overflow-x:auto">
+    <table id="backtestTable"><thead><tr><th>Year</th><th>Pre-tax dividends</th><th>Tax</th><th>After-tax net</th></tr></thead><tbody id="backtestBody"><tr><td colspan="4" class="empty">Loading data...</td></tr></tbody></table>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="note">
+  ⚠️ This calculator gives reference estimates and does not replace tax or health insurance advice.<br>
+  · For overseas (US and other) ETFs, the dividend yield is applied automatically from actual dividend history and profiles (<a href="/en/dividend-etf.html" style="color:var(--accent)">Dividend ETF</a> data); for Korean ETFs there is no live data source yet, so the yield you enter is used.<br>
+  · The contribution simulation assumes "price growth + dividend yield"is the total return and grows with monthly compounding (when dividends are reinvested). Actual results can vary widely with market volatility.<br>
+  · If financial income (interest + dividends) exceeds ₩20 million a year, progressive comprehensive income tax rates apply to the excess. US withholding already paid on overseas dividends is approximated as a foreign tax credit. If you have other comprehensive income (such as salary), your tax bracket may differ.<br>
+  · Health insurance premiums (regional subscriber) are a <b>simplified estimate based on income only</b>. Actual regional premiums also factor in property and vehicle scores and may be higher than this estimate. A dependent loses eligibility when financial income exceeds ₩20 million a year and switches to a regional subscriber.<br>
+  · The Monte Carlo simulation assumes each year’s return follows "a normal distribution of weighted average total return (mean) ± volatility (standard deviation)"and repeats 1,000 times, withdrawing the after-tax annual take-home amount calculated above each year. "Adjust for inflation"increases withdrawals each year by the assumed inflation rate (nominal amount fixed when off).<br>
+  · "Compare sequence-risk scenarios"is a simplified deterministic scenario that compares a return shock of the same size (−2 standard deviations) arriving early versus late in retirement, showing that with the same average return the final balance can differ greatly depending on when the bad year comes (separate from the actual Monte Carlo probability calculation).<br>
+  · For Korean ETFs, picking from the list of 15 applies actual distribution history (Yahoo Finance); for stocks not on the list, you must enter the yield by hand with "Custom" to enter the yield manually.
+</div>
+
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('en-US'):'';}
+</script><script src="/won.js"></script><script>
+function fmtEok(v){const a=Math.abs(v);if(a>=1e9)return (v<0?'-':'')+'₩'+(+(a/1e9).toFixed(2))+'B';return won(v);}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+
+const US_TICKERS=[{"t": "JEPI", "n": "JPMorgan Equity Premium Income ETF"}, {"t": "JEPQ", "n": "JPMorgan Nasdaq Equity Premium Income ETF"}, {"t": "QYLD", "n": "Global X Nasdaq 100 Covered Call ETF"}, {"t": "RYLD", "n": "Global X Russell 2000 Covered Call ETF"}, {"t": "XYLD", "n": "Global X S&P 500 Covered Call ETF"}, {"t": "DIVO", "n": "Amplify CWP Enhanced Dividend Income ETF"}, {"t": "SPYI", "n": "NEOS S&P 500 High Income ETF"}, {"t": "QQQI", "n": "NEOS Nasdaq 100 High Income ETF"}, {"t": "SVOL", "n": "Simplify Volatility Premium ETF"}, {"t": "NUSI", "n": "Nationwide Risk-Managed Income ETF"}, {"t": "FEPI", "n": "REX FANG & Innovation Equity Premium Income ETF"}, {"t": "GPIX", "n": "Goldman Sachs S&P 500 Core Premium Income ETF"}, {"t": "GPIQ", "n": "Goldman Sachs Nasdaq-100 Core Premium Income ETF"}, {"t": "QDTE", "n": "Roundhill Innovation-100 0DTE Covered Call ETF"}, {"t": "XDTE", "n": "Roundhill S&P 500 0DTE Covered Call ETF"}, {"t": "YMAG", "n": "YieldMax Magnificent 7 Fund of Option Income ETFs"}, {"t": "YMAX", "n": "YieldMax Universe Fund of Option Income ETFs"}, {"t": "LFGY", "n": "YieldMax Crypto Industry & Tech Portfolio Option Income ETF"}, {"t": "GDXY", "n": "YieldMax Gold Miners Option Income Strategy ETF"}, {"t": "KLIP", "n": "Global X China Internet Covered Call ETF"}, {"t": "IWMY", "n": "YieldMax Russell 2000 Option Income Strategy ETF"}, {"t": "QYLG", "n": "Global X Nasdaq 100 Covered Call & Growth ETF"}, {"t": "XYLG", "n": "Global X S&P 500 Covered Call & Growth ETF"}, {"t": "TSLY", "n": "YieldMax TSLA Option Income Strategy ETF"}, {"t": "NVDY", "n": "YieldMax NVDA Option Income Strategy ETF"}, {"t": "CONY", "n": "YieldMax COIN Option Income Strategy ETF"}, {"t": "MSTY", "n": "YieldMax MSTR Option Income Strategy ETF"}, {"t": "AMZY", "n": "YieldMax AMZN Option Income Strategy ETF"}, {"t": "FBY", "n": "YieldMax META Option Income Strategy ETF"}, {"t": "GOOY", "n": "YieldMax GOOGL Option Income Strategy ETF"}, {"t": "APLY", "n": "YieldMax AAPL Option Income Strategy ETF"}, {"t": "NFLY", "n": "YieldMax NFLX Option Income Strategy ETF"}, {"t": "XOMO", "n": "YieldMax XOM Option Income Strategy ETF"}, {"t": "JPMO", "n": "YieldMax JPM Option Income Strategy ETF"}, {"t": "DISO", "n": "YieldMax DIS Option Income Strategy ETF"}, {"t": "PYPY", "n": "YieldMax PYPL Option Income Strategy ETF"}, {"t": "SQY", "n": "YieldMax SQ Option Income Strategy ETF"}, {"t": "ULTY", "n": "YieldMax Ultra Option Income Strategy ETF"}, {"t": "OARK", "n": "YieldMax Innovation Option Income Strategy ETF"}, {"t": "AIYY", "n": "YieldMax AI Option Income ETF"}, {"t": "SMCY", "n": "YieldMax SMCI Option Income Strategy ETF"}, {"t": "PLTY", "n": "YieldMax PLTR Option Income Strategy ETF"}, {"t": "ABNY", "n": "YieldMax ABNB Option Income Strategy ETF"}, {"t": "AMDY", "n": "YieldMax AMD Option Income Strategy ETF"}, {"t": "CVNY", "n": "YieldMax CVNA Option Income Strategy ETF"}, {"t": "MRNY", "n": "YieldMax MRNA Option Income Strategy ETF"}, {"t": "O", "n": "Realty Income Corp"}, {"t": "MAIN", "n": "Main Street Capital Corp"}, {"t": "STAG", "n": "Stag Industrial"}, {"t": "AGNC", "n": "AGNC Investment Corp"}, {"t": "ARR", "n": "ARMOUR Residential REIT"}, {"t": "GAIN", "n": "Gladstone Investment Corp"}, {"t": "GOOD", "n": "Gladstone Commercial Corp"}, {"t": "LAND", "n": "Gladstone Land Corp"}, {"t": "PSEC", "n": "Prospect Capital Corp"}, {"t": "EPR", "n": "EPR Properties"}, {"t": "ORC", "n": "Orchid Island Capital"}, {"t": "NLY", "n": "Annaly Capital Management"}, {"t": "ADC", "n": "Agree Realty Corp"}, {"t": "LTC", "n": "LTC Properties"}, {"t": "ABR", "n": "Arbor Realty Trust"}, {"t": "EFC", "n": "Ellington Financial"}, {"t": "TLTW", "n": "iShares 20+ Year Treasury Bond BuyWrite Strategy ETF"}, {"t": "HYG", "n": "iShares iBoxx High Yield Corp Bond ETF"}, {"t": "PFFA", "n": "Virtus InfraCap US Preferred Stock ETF"}, {"t": "PFFD", "n": "Global X US Preferred ETF"}, {"t": "JNK", "n": "SPDR Bloomberg High Yield Bond ETF"}, {"t": "PFF", "n": "iShares Preferred and Income Securities ETF"}, {"t": "SPHY", "n": "SPDR Portfolio High Yield Bond ETF"}, {"t": "USHY", "n": "iShares Broad USD High Yield Corp Bond ETF"}, {"t": "BKLN", "n": "Invesco Senior Loan ETF"}, {"t": "SCHD", "n": "Schwab US Dividend Equity ETF"}, {"t": "VYM", "n": "Vanguard High Dividend Yield ETF"}, {"t": "DGRO", "n": "iShares Core Dividend Growth ETF"}, {"t": "VIG", "n": "Vanguard Dividend Appreciation ETF"}, {"t": "HDV", "n": "iShares Core High Dividend ETF"}, {"t": "SPHD", "n": "Invesco S&P 500 High Dividend Low Volatility ETF"}, {"t": "SDIV", "n": "Global X SuperDividend ETF"}, {"t": "DGRW", "n": "WisdomTree US Quality Dividend Growth Fund"}, {"t": "NOBL", "n": "ProShares S&P 500 Dividend Aristocrats ETF"}, {"t": "SPYD", "n": "SPDR Portfolio S&P 500 High Dividend ETF"}, {"t": "RDVY", "n": "First Trust Rising Dividend Achievers ETF"}];
+const KR_TICKERS=[{"t":"458730","n":"TIGER US Dividend Dow Jones","eq":false},{"t":"446720","n":"SOL US Dividend Dow Jones","eq":false},{"t":"402970","n":"ACE US Dividend Dow Jones","eq":false},{"t":"489250","n":"KODEX US Dividend Dow Jones","eq":false},{"t":"441640","n":"KODEX US Dividend Covered Call Active","eq":false},{"t":"329200","n":"TIGER REITs Real Estate Infrastructure","eq":false},{"t":"465580","n":"ACE US Big Tech TOP7 Plus","eq":false},{"t":"429000","n":"TIGER US S&P500 Dividend Aristocrats","eq":false},{"t":"466940","n":"TIGER Bank High Dividend Plus TOP10","eq":true},{"t":"161510","n":"PLUS High Dividend Stocks","eq":true},{"t":"279530","n":"KODEX High Dividend Stocks","eq":true},{"t":"325020","n":"KODEX Dividend Value","eq":true},{"t":"210780","n":"TIGER KOSPI High Dividend","eq":true},{"t":"266160","n":"RISE High Dividend","eq":true},{"t":"484880","n":"SOL Financial Holdings Plus High Dividend","eq":true}];
+let ETF_YIELDS={},KR_YIELDS={}; // ticker -> yieldPct (real data, loaded async)
+let DIV_RAW={},PRICE_RAW={},KR_DIV_RAW={},KR_PRICE_RAW={};
+Promise.all([
+  fetch('/data/dividends.json').then(r=>r.json()).catch(()=>null),
+  fetch('/data/kr_dividends.json').then(r=>r.json()).catch(()=>null)
+]).then(([d,dk])=>{
+  if(d){
+    const profiles=d.profiles||{},prices=d.prices||{},byTicker=d.by_ticker||{};
+    DIV_RAW=byTicker;PRICE_RAW=prices;
+    US_TICKERS.forEach(o=>{
+      const pf=profiles[o.t],rows=byTicker[o.t]||[],p=prices[o.t];
+      if(pf&&pf.dividend_yield){ETF_YIELDS[o.t]=pf.dividend_yield*100;return;}
+      if(rows.length&&p){
+        let freq=12;
+        if(rows.length>=2){const gap=(new Date(rows[0].ex_dividend_date)-new Date(rows[1].ex_dividend_date))/86400000;freq=gap<=45?12:gap<=100?4:gap<=200?2:1;}
+        ETF_YIELDS[o.t]=parseFloat(rows[0].amount)*freq/parseFloat(p.price)*100;
+      }
+    });
+  }
+  if(dk){
+    const kByTicker=dk.by_ticker||{},kPrices=dk.prices||{};
+    KR_DIV_RAW=kByTicker;KR_PRICE_RAW=kPrices;
+    KR_TICKERS.forEach(o=>{
+      const rows=kByTicker[o.t]||[],p=kPrices[o.t];
+      if(rows.length&&p){
+        let freq=12;
+        if(rows.length>=2){const gap=(new Date(rows[0].ex_dividend_date)-new Date(rows[1].ex_dividend_date))/86400000;freq=gap<=45?12:gap<=100?4:gap<=200?2:1;}
+        KR_YIELDS[o.t]=parseFloat(rows[0].amount)*freq/parseFloat(p.price)*100;
+      }
+    });
+  }
+  portfolio.forEach((row,i)=>{
+    if(row.market==='us'&&ETF_YIELDS[row.ticker])applyYield(i);
+    if(row.market==='domestic'&&KR_YIELDS[row.ticker])applyYield(i);
+  });
+  calcAll();
+}).catch(()=>{document.getElementById('backtestBody').innerHTML='<tr><td colspan="5" class="empty">Could not load data</td></tr>';});
+
+let portfolio=[
+  {market:'us',ticker:'SCHD',name:'',yieldPct:3.5,monthly:500000},
+  {market:'us',ticker:'JEPI',name:'',yieldPct:7.5,monthly:500000}
+];
+
+function tickerLabel(market,ticker){
+  if(market==='us'){const o=US_TICKERS.find(x=>x.t===ticker);return o?o.t+' - '+o.n:ticker;}
+  if(ticker==='__custom__')return'+ Enter manually';
+  const o=KR_TICKERS.find(x=>x.t===ticker);return o?o.n+(o.eq?' (Korean equity fund)':''):ticker;
+}
+function tkItemsHtml(i,market,query){
+  const q=(query||'').trim().toLowerCase();
+  if(market==='us'){
+    const list=(q?US_TICKERS.filter(o=>o.t.toLowerCase().includes(q)||o.n.toLowerCase().includes(q)):US_TICKERS).slice(0,40);
+    return list.length?list.map(o=>`<div class="tk-search-item" data-val="${o.t}" data-market="us" onmousedown="event.preventDefault();selectTicker(${i},'us','${o.t}')"><span class="code">${o.t}</span>${o.n}</div>`).join(''):'<div class="tk-search-empty">No results</div>';
+  }
+  const list=(q?KR_TICKERS.filter(o=>o.t.includes(q)||o.n.toLowerCase().includes(q)):KR_TICKERS).slice(0,40);
+  const items=list.map(o=>`<div class="tk-search-item" data-val="${o.t}" data-market="domestic" onmousedown="event.preventDefault();selectTicker(${i},'domestic','${o.t}')">${o.n}${o.eq?' (Korean equity fund)':''}</div>`).join('');
+  const customItem=`<div class="tk-search-item tk-search-custom" data-val="__custom__" data-market="domestic" onmousedown="event.preventDefault();selectTicker(${i},'domestic','__custom__')">+ Enter a holding not on the list</div>`;
+  return (items||'<div class="tk-search-empty">No results</div>')+customItem;
+}
+function onTkInput(i,market){
+  const list=document.getElementById('tkList'+i),input=document.getElementById('tkInput'+i);
+  if(!list||!input)return;
+  list.innerHTML=tkItemsHtml(i,market,input.value);
+  list.classList.add('open');
+}
+function onTkFocus(i,market){
+  const input=document.getElementById('tkInput'+i);
+  if(input)input.select();
+  const list=document.getElementById('tkList'+i);
+  if(list){list.innerHTML=tkItemsHtml(i,market,'');list.classList.add('open');}
+}
+function hideTkList(i){
+  const list=document.getElementById('tkList'+i);
+  if(list)list.classList.remove('open');
+  renderPortfolio();
+}
+function moveTkHighlight(i,delta){
+  const list=document.getElementById('tkList'+i);
+  if(!list)return;
+  const items=Array.from(list.querySelectorAll('.tk-search-item'));
+  if(!items.length)return;
+  let idx=items.findIndex(el=>el.classList.contains('hl'));
+  items.forEach(el=>el.classList.remove('hl'));
+  idx=idx<0?(delta>0?0:items.length-1):Math.max(0,Math.min(items.length-1,idx+delta));
+  items[idx].classList.add('hl');
+  items[idx].scrollIntoView({block:'nearest'});
+}
+function onTkKeydown(e,i,market){
+  const list=document.getElementById('tkList'+i);
+  if(!list||!list.classList.contains('open')){
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();onTkFocus(i,market);}
+    return;
+  }
+  if(e.key==='ArrowDown'){e.preventDefault();moveTkHighlight(i,1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();moveTkHighlight(i,-1);}
+  else if(e.key==='Enter'){
+    const hl=list.querySelector('.tk-search-item.hl');
+    if(hl){e.preventDefault();selectTicker(i,hl.dataset.market,hl.dataset.val);}
+  }else if(e.key==='Escape'){
+    list.classList.remove('open');
+    const input=document.getElementById('tkInput'+i);
+    if(input)input.blur();
+  }
+}
+function selectTicker(i,market,val){
+  const row=portfolio[i];
+  row.market=market;
+  row.ticker=val;
+  if(market==='us'){
+    row.name='';
+    applyYield(i);
+  }else if(val==='__custom__'){
+    row.name='';
+  }else{
+    const meta=KR_TICKERS.find(o=>o.t===val);
+    row.name=meta?meta.n:'';
+    applyYield(i);
+  }
+  renderPortfolio();
+  calcAll();
+}
+function applyYield(i){
+  const row=portfolio[i];
+  if(row.market==='us'&&ETF_YIELDS[row.ticker]!==undefined)row.yieldPct=Math.round(ETF_YIELDS[row.ticker]*100)/100;
+  if(row.market==='domestic'&&row.ticker!=='__custom__'&&KR_YIELDS[row.ticker]!==undefined)row.yieldPct=Math.round(KR_YIELDS[row.ticker]*100)/100;
+}
+function addRow(){portfolio.push({market:'us',ticker:'SCHD',name:'',yieldPct:ETF_YIELDS['SCHD']||3.5,monthly:300000});renderPortfolio();calcAll();}
+function removeRow(i){portfolio.splice(i,1);renderPortfolio();calcAll();}
+function onMarketChange(i,val){
+  portfolio[i].market=val;
+  if(val==='us'){portfolio[i].ticker='SCHD';portfolio[i].name='';applyYield(i);}
+  else{portfolio[i].ticker=KR_TICKERS[0].t;portfolio[i].name=KR_TICKERS[0].n;applyYield(i);}
+  renderPortfolio();calcAll();
+}
+function onNameInput(i,val){portfolio[i].name=val;calcAll();}
+function onYieldInput(i,val){portfolio[i].yieldPct=parseFloat(val)||0;calcAll();}
+function onMonthlyInput(i,el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('en-US'):'';portfolio[i].monthly=parseInt(v,10)||0;calcAll();}
+
+function renderPortfolio(){
+  const el=document.getElementById('portRows');
+  el.innerHTML=portfolio.map((row,i)=>{
+    const marketSel=`<select onchange="onMarketChange(${i},this.value)"><option value="us" ${row.market==='us'?'selected':''}>Overseas</option><option value="domestic" ${row.market==='domestic'?'selected':''}>Domestic</option></select>`;
+    const searchBox=`<div class="tk-search"><input type="text" id="tkInput${i}" value="${tickerLabel(row.market,row.ticker)}" oninput="onTkInput(${i},'${row.market}')" onfocus="onTkFocus(${i},'${row.market}')" onblur="hideTkList(${i})" onkeydown="onTkKeydown(event,${i},'${row.market}')" autocomplete="off" placeholder="Search ticker or name"><button class="qgo" type="button" aria-label="Search" title="Search" onmousedown="event.preventDefault()" onclick="document.getElementById('tkInput${i}').focus()"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button><div class="tk-search-list" id="tkList${i}"></div></div>`;
+    let tickerField;
+    if(row.market==='domestic'&&row.ticker==='__custom__'){
+      tickerField=`<div style="margin-bottom:4px">${searchBox}</div><input type="text" placeholder="Enter ETF name" value="${row.name}" oninput="onNameInput(${i},this.value)">`;
+    }else{
+      tickerField=searchBox;
+    }
+    return `<div class="port-row">
+      <div class="port-row-top">
+        <div><label>Type</label>${marketSel}</div>
+        <div><label>ETF</label>${tickerField}</div>
+        <button class="rm-btn" onclick="removeRow(${i})" title="Delete">✕</button>
+      </div>
+      <div class="port-row-bottom">
+        <div><label>Dividend yield (%)</label><input type="number" step="0.1" value="${row.yieldPct}" oninput="onYieldInput(${i},this.value)"></div>
+        <div><label>Monthly investment (KRW)</label><input type="text" inputmode="numeric" value="${row.monthly.toLocaleString('en-US')}" oninput="onMonthlyInput(${i},this)"></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function monthlyRateFromAnnual(annualRate){return Math.pow(1+annualRate,1/12)-1;}
+function futureValue(pv,pmt,rMonthly,months){
+  const fvPv=pv*Math.pow(1+rMonthly,months);
+  const fvPmt=Math.abs(rMonthly)<1e-9?pmt*months:pmt*((Math.pow(1+rMonthly,months)-1)/rMonthly);
+  return fvPv+fvPmt;
+}
+
+function rowWeight(row,s){return s.totalMonthly>0?row.monthly/s.totalMonthly:(portfolio.length?1/portfolio.length:0);}
+function portfolioStats(){
+  if(!portfolio.length)return null;
+  const totalMonthly=portfolio.reduce((s,r)=>s+r.monthly,0);
+  
+  
+  const weightedYield=totalMonthly>0
+    ?portfolio.reduce((s,r)=>s+r.yieldPct*r.monthly,0)/totalMonthly
+    :portfolio.reduce((s,r)=>s+r.yieldPct,0)/portfolio.length;
+  const usMonthly=portfolio.filter(r=>r.market==='us').reduce((s,r)=>s+r.monthly,0);
+  const domMonthly=totalMonthly-usMonthly;
+  const usRatio=totalMonthly>0?usMonthly/totalMonthly:portfolio.filter(r=>r.market==='us').length/portfolio.length;
+  return{totalMonthly,weightedYield,usRatio,domRatio:1-usRatio};
+}
+
+function calcAll(){
+  renderStats();
+  calcAccumulation();
+  calcRetire();
+  renderBacktest();
+}
+function setCapitalPreset(v){
+  const el=document.getElementById('capital');
+  el.dataset.userEdited='1';
+  el.value=Math.round(v).toLocaleString('en-US');
+  calcRetire();renderBacktest();
+}
+function capitalManual(){document.getElementById('capital').dataset.userEdited='1';}
+
+function wonMan(v){return won(Math.round(v/10000)*10000);}
+function renderBacktest(){
+  const tbody=document.getElementById('backtestBody');
+  const s=portfolioStats();
+  const capital=num('capital');
+  if(!s||!capital){tbody.innerHTML='<tr><td colspan="4" class="empty">Enter a portfolio and the value at retirement to calculate with actual dividend history</td></tr>';return;}
+  const usRows=portfolio.filter(r=>r.market==='us'&&DIV_RAW[r.ticker]&&DIV_RAW[r.ticker].length&&PRICE_RAW[r.ticker]);
+  const krRows=portfolio.filter(r=>r.market==='domestic'&&r.ticker!=='__custom__'&&KR_DIV_RAW[r.ticker]&&KR_DIV_RAW[r.ticker].length&&KR_PRICE_RAW[r.ticker]);
+  if(!usRows.length&&!krRows.length){tbody.innerHTML='<tr><td colspan="4" class="empty">Add ETFs with actual dividend history (82 overseas or 15 Korean) to your portfolio to see the backtest</td></tr>';return;}
+  const byYearUs={},byYearKr={};
+  usRows.forEach(row=>{
+    const price=parseFloat(PRICE_RAW[row.ticker].price);
+    const tickerCapital=capital*rowWeight(row,s);
+    if(price<=0)return;
+    (DIV_RAW[row.ticker]||[]).forEach(d=>{
+      const year=(d.ex_dividend_date||'').slice(0,4);
+      if(!year)return;
+      byYearUs[year]=(byYearUs[year]||0)+tickerCapital*(parseFloat(d.amount)/price);
+    });
+  });
+  krRows.forEach(row=>{
+    const price=parseFloat(KR_PRICE_RAW[row.ticker].price);
+    const tickerCapital=capital*rowWeight(row,s);
+    if(price<=0)return;
+    (KR_DIV_RAW[row.ticker]||[]).forEach(d=>{
+      const year=(d.ex_dividend_date||'').slice(0,4);
+      if(!year)return;
+      byYearKr[year]=(byYearKr[year]||0)+tickerCapital*(parseFloat(d.amount)/price);
+    });
+  });
+  const years=Array.from(new Set([...Object.keys(byYearUs),...Object.keys(byYearKr)])).sort();
+  if(!years.length){tbody.innerHTML='<tr><td colspan="4" class="empty">Dividend history data is being collected</td></tr>';return;}
+  const taxCell=(withheld,comp)=>{
+    const total=withheld+comp;
+    const title=`Withholding ${wonMan(withheld)}${comp>0?' + comprehensive tax add-on '+wonMan(comp):''}`;
+    return `<td title="${title}">-${wonMan(total)}</td>`;
+  };
+  const projGrossUs=capital*s.weightedYield/100*s.usRatio;
+  const projGrossKr=capital*s.weightedYield/100*s.domRatio;
+  const projGross=projGrossUs+projGrossKr;
+  const projWithheld=projGrossUs*0.15+projGrossKr*0.154;
+  let projComp=0;
+  if(projGross>20000000){
+    const over=projGross-20000000;
+    const overUsRatio=projGross>0?projGrossUs/projGross:0;
+    const alreadyWithheldOnOver=over*(overUsRatio*0.15+(1-overUsRatio)*0.154);
+    projComp=Math.max(0,progressiveTax(over)-alreadyWithheldOnOver);
+  }
+  const projNet=projGross-projWithheld-projComp;
+  let rowsHtml=`<tr class="row-proj" title="An estimate applying the portfolio’s weighted average dividend yield (${s.weightedYield.toFixed(2)}%) as is to the value at retirement"><td>Estimate (current assumptions)</td><td>${wonMan(projGross)}</td>${taxCell(projWithheld,projComp)}<td>${wonMan(projNet)}</td></tr>`;
+  let sumGross=0,sumWithheld=0,sumComp=0,sumNet=0;
+  rowsHtml+=years.map(y=>{
+    const grossUs=byYearUs[y]||0,grossKr=byYearKr[y]||0;
+    const gross=grossUs+grossKr;
+    const withheld=grossUs*0.15+grossKr*0.154;
+    let comp=0;
+    if(gross>20000000){
+      const over=gross-20000000;
+      const overUsRatio=gross>0?grossUs/gross:0;
+      const alreadyWithheldOnOver=over*(overUsRatio*0.15+(1-overUsRatio)*0.154);
+      comp=Math.max(0,progressiveTax(over)-alreadyWithheldOnOver);
+    }
+    const net=gross-withheld-comp;
+    sumGross+=gross;sumWithheld+=withheld;sumComp+=comp;sumNet+=net;
+    return `<tr><td>${y}</td><td>${wonMan(gross)}</td>${taxCell(withheld,comp)}<td>${wonMan(net)}</td></tr>`;
+  }).join('');
+  rowsHtml+=`<tr><td>Total (actual history)</td><td>${wonMan(sumGross)}</td>${taxCell(sumWithheld,sumComp)}<td>${wonMan(sumNet)}</td></tr>`;
+  tbody.innerHTML=rowsHtml;
+}
+function renderStats(){
+  const s=portfolioStats();
+  if(!s)return;
+  document.getElementById('r-monthly').textContent=won(s.totalMonthly);
+  document.getElementById('r-yield').textContent=s.weightedYield.toFixed(2)+'%';
+  document.getElementById('r-mix').textContent=Math.round(s.domRatio*100)+'% / '+Math.round(s.usRatio*100)+'%';
+}
+
+function calcAccumulation(){
+  const s=portfolioStats();
+  const years=parseInt(document.getElementById('years').value,10)||0;
+  const extraMonths=Math.min(11,Math.max(0,parseInt(document.getElementById('yearsMonths').value,10)||0));
+  const months=years*12+extraMonths;
+  const growthPct=parseFloat(document.getElementById('growth').value)||0;
+  const reinvest=document.getElementById('reinvest').value;
+  if(!s||months<=0){document.getElementById('r-fv').textContent='-';return;}
+  const yearsFrac=months/12;
+  const periodLabel=years+' yrs'+(extraMonths?' '+extraMonths+' months':'');
+  const initialLump=num('initialLump');
+  const totalReturnPct=reinvest==='yes'?(growthPct+s.weightedYield):growthPct;
+  const rm=monthlyRateFromAnnual(totalReturnPct/100);
+  const fv=futureValue(initialLump,s.totalMonthly,rm,months);
+  const principal=s.totalMonthly*months+initialLump;
+  document.getElementById('r-fv').textContent=fmtEok(fv);
+  document.getElementById('r-fv-sub').textContent=periodLabel+' later, assuming an annual total return of '+totalReturnPct.toFixed(1)+'% (price growth '+growthPct+'%'+(reinvest==='yes'?' + dividend reinvestment '+s.weightedYield.toFixed(1)+'%':'')+')';
+  document.getElementById('r-principal').textContent=won(principal);
+  const realEl=document.getElementById('r-fv-real');
+  if(document.getElementById('inflationOn').checked){
+    const inflationPct=parseFloat(document.getElementById('inflationPct').value)||0;
+    const realFv=fv/Math.pow(1+inflationPct/100,yearsFrac);
+    realEl.style.display='block';
+    realEl.textContent='inflation '+inflationPct+'% applied, roughly '+fmtEok(realFv);
+  }else{
+    realEl.style.display='none';
+  }
+  const capitalInput=document.getElementById('capital');
+  if(!capitalInput.dataset.userEdited){capitalInput.value=Math.round(fv).toLocaleString('en-US');}
+  drawAccChart(initialLump,s.totalMonthly,rm,yearsFrac);
+}
+document.getElementById('capital').addEventListener('input',function(){this.dataset.userEdited='1';});
+
+function svgEl(tag){return document.createElementNS('http://www.w3.org/2000/svg',tag);}
+function themeColors(){const css=getComputedStyle(document.documentElement);return{green:css.getPropertyValue('--green').trim(),accent:css.getPropertyValue('--accent').trim(),text2:css.getPropertyValue('--text2').trim(),border:css.getPropertyValue('--border').trim(),red:css.getPropertyValue('--red').trim()};}
+
+function drawAccChart(initialLump,monthly,rm,years){
+  const holder=document.getElementById('accChartHolder');
+  const data=[];
+  for(let y=0;y<=years;y++)data.push({y,val:futureValue(initialLump,monthly,rm,y*12)});
+  const W=760,H=220,padL=64,padR=16,padT=14,padB=28;
+  const maxVal=Math.max.apply(null,data.map(d=>d.val))*1.08||1;
+  const x=yv=>padL+yv/years*(W-padL-padR);
+  const yy=val=>H-padB-(val/maxVal)*(H-padT-padB);
+  const c=themeColors();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=4;i++){
+    const gv=maxVal*i/4,gy=yy(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',c.border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-8);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',c.text2);lbl.textContent=fmtEok(gv);svg.appendChild(lbl);
+  }
+  const xTicks=Math.min(6,years)||1;
+  for(let t=0;t<=xTicks;t++){
+    const yv=Math.round(years*t/xTicks);
+    const xl=svgEl('text');xl.setAttribute('x',x(yv));xl.setAttribute('y',H-padB+18);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','10');xl.setAttribute('fill',c.text2);xl.textContent=yv+' yrs';svg.appendChild(xl);
+  }
+  const points=data.map(d=>x(d.y)+','+yy(d.val)).join(' ');
+  const pl=svgEl('polyline');pl.setAttribute('points',points);pl.setAttribute('fill','none');pl.setAttribute('stroke',c.green);pl.setAttribute('stroke-width','3');pl.setAttribute('stroke-linejoin','round');svg.appendChild(pl);
+  holder.innerHTML='';holder.appendChild(svg);
+}
+
+function toggleInflation(){
+  document.getElementById('inflationField').style.display=document.getElementById('inflationOn').checked?'block':'none';
+  calcAll();
+}
+function toggleSeqRisk(){
+  document.getElementById('seqRiskCard').style.display=document.getElementById('seqRiskOn').checked?'block':'none';
+  runMC();
+}
+
+let healthType='region';
+function setHealthType(t){healthType=t;document.getElementById('hi-region').classList.toggle('active',t==='region');document.getElementById('hi-dependent').classList.toggle('active',t==='dependent');calcRetire();}
+
+function progressiveTax(base){
+  
+  const brackets=[[14000000,0.06,0],[50000000,0.15,1260000],[88000000,0.24,5760000],[150000000,0.35,15440000],[300000000,0.38,19940000],[500000000,0.40,25940000],[1000000000,0.42,35940000],[Infinity,0.45,65940000]];
+  for(const[limit,rate,ded] of brackets){if(base<=limit)return Math.max(0,base*rate-ded)*1.1;}
+  return 0;
+}
+
+function calcRetire(){
+  const s=portfolioStats();
+  const capital=num('capital');
+  if(!s||capital<=0){document.getElementById('rt-net').textContent='-';return;}
+  const grossAnnual=capital*s.weightedYield/100;
+  const domDiv=grossAnnual*s.domRatio;
+  const usDiv=grossAnnual*s.usRatio;
+  const domWithheld=domDiv*0.154;
+  const usWithheld=usDiv*0.15;
+
+  let compTax=0,compLabel='Comprehensive financial income tax add-on';
+  const THRESHOLD=20000000;
+  if(grossAnnual>THRESHOLD){
+    const over=grossAnnual-THRESHOLD;
+    const grossProgTax=progressiveTax(over);
+    const overUsRatio=s.usRatio;
+    const alreadyWithheldOnOver=over*(overUsRatio*0.15+(1-overUsRatio)*0.154);
+    compTax=Math.max(0,grossProgTax-alreadyWithheldOnOver);
+    compLabel='Comprehensive financial income tax add-on (on the amount over ₩20 million)';
+  }else{
+    compLabel='Comprehensive financial income tax (₩20 million or less, not applicable)';
+  }
+
+  let hiAnnual=0,hiNote='';
+  const DEDUCT=3360000,RATE=0.0709*1.1295;
+  if(healthType==='region'){
+    hiAnnual=Math.max(0,grossAnnual-DEDUCT)*RATE;
+    hiNote='';
+  }else{
+    if(grossAnnual>THRESHOLD){
+      hiAnnual=Math.max(0,grossAnnual-DEDUCT)*RATE;
+      hiNote='⚠️ Financial income exceeds ₩20 million a year, so dependent status is lost and you switch to a regional subscriber. The amount below is the estimated premium after switching to regional subscriber.';
+    }else{
+      hiAnnual=0;
+      hiNote='✅ Financial income is ₩20 million a year or less, so you can keep dependent status and pay no health insurance premium.';
+    }
+  }
+  document.getElementById('hi-warn').innerHTML=hiNote?`<div class="warn">${hiNote}</div>`:'';
+
+  const netAnnual=grossAnnual-domWithheld-usWithheld-compTax-hiAnnual;
+
+  document.getElementById('rt-gross').textContent='+'+won(grossAnnual);
+  document.getElementById('rt-tax-kr').textContent=domWithheld>0?'-'+won(domWithheld):'₩0';
+  document.getElementById('rt-tax-us').textContent=usWithheld>0?'-'+won(usWithheld):'₩0';
+  document.getElementById('rt-comp-label').textContent=compLabel;
+  document.getElementById('rt-comp').textContent=compTax>0?'-'+won(compTax):'₩0';
+  document.getElementById('rt-hi-label').textContent='Health insurance premiums (annual, '+(healthType==='region'?'Regional subscriber':'employee dependent')+')';
+  document.getElementById('rt-hi').textContent=hiAnnual>0?'-'+won(hiAnnual):'₩0';
+  document.getElementById('rt-net-yr').textContent=won(netAnnual);
+  document.getElementById('rt-net').textContent=won(netAnnual/12);
+
+  window.__mcState={capital,netAnnual,weightedYield:s.weightedYield};
+  runMC();
+}
+
+function randNormal(mean,std){
+  let u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();
+  const z=Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);
+  return mean+z*std;
+}
+function withdrawalAt(baseAnnual,yearIdx){
+  
+  if(!document.getElementById('inflationOn').checked)return baseAnnual;
+  const inflationPct=parseFloat(document.getElementById('inflationPct').value)||0;
+  return baseAnnual*Math.pow(1+inflationPct/100,yearIdx-1);
+}
+function runMC(){
+  const st=window.__mcState;
+  if(!st||!st.capital)return;
+  const years=parseInt(document.getElementById('mc-years').value,10)||30;
+  const stdPct=parseFloat(document.getElementById('mc-std').value)||15;
+  const growthPct=parseFloat(document.getElementById('growth').value)||0;
+  const meanReturn=(growthPct+st.weightedYield)/100;
+  const std=stdPct/100;
+  const trials=1000;
+  let successes=0;
+  const yearlyBalances=Array.from({length:years+1},()=>[]);
+  for(let t=0;t<trials;t++){
+    let bal=st.capital;
+    yearlyBalances[0].push(bal);
+    let failed=false;
+    for(let y=1;y<=years;y++){
+      const r=randNormal(meanReturn,std);
+      bal=bal*(1+r)-withdrawalAt(st.netAnnual,y);
+      if(bal<0){bal=0;failed=true;}
+      yearlyBalances[y].push(bal);
+    }
+    if(!failed)successes++;
+  }
+  const successRate=successes/trials*100;
+  const el=document.getElementById('mc-rate');
+  el.textContent=successRate.toFixed(1)+'%';
+  el.style.color=successRate>=80?'var(--green)':successRate>=50?'var(--yellow)':'var(--red)';
+  const inflNote=document.getElementById('inflationOn').checked?' (withdrawals rise each year with inflation)':'';
+  document.getElementById('mc-sub').textContent=years+'years, withdrawing after-tax '+won(st.netAnnual)+'each year (assumption)'+inflNote;
+  drawFanChart(yearlyBalances,years);
+  if(document.getElementById('seqRiskOn').checked)runSeqRisk(st,years,meanReturn,std);
+}
+
+function runSeqRisk(st,years,meanReturn,std){
+  const shock=meanReturn-2*std; 
+  function path(shockYear){
+    let bal=st.capital;
+    const series=[bal];
+    for(let y=1;y<=years;y++){
+      const r=(y===shockYear)?shock:meanReturn;
+      bal=Math.max(0,bal*(1+r)-withdrawalAt(st.netAnnual,y));
+      series.push(bal);
+    }
+    return series;
+  }
+  const flat=path(-1);          
+  const early=path(1);          
+  const late=path(years);       
+  document.getElementById('seqTableBody').innerHTML=
+    `<tr><td>Normal (no shock)</td><td>${fmtEok(flat[flat.length-1])}</td></tr>`+
+    `<tr><td>Early (year 1) shock</td><td>${fmtEok(early[early.length-1])}</td></tr>`+
+    `<tr><td>Late (final year) shock</td><td>${fmtEok(late[late.length-1])}</td></tr>`;
+  drawSeqChart({flat,early,late},years);
+}
+function drawSeqChart(scenarios,years){
+  const holder=document.getElementById('seqChartHolder');
+  const all=[...scenarios.flat,...scenarios.early,...scenarios.late];
+  const W=760,H=220,padL=64,padR=16,padT=14,padB=28;
+  const maxVal=Math.max.apply(null,all)*1.08||1;
+  const x=yv=>padL+yv/years*(W-padL-padR);
+  const yy=val=>H-padB-(val/maxVal)*(H-padT-padB);
+  const c=themeColors();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=4;i++){
+    const gv=maxVal*i/4,gy=yy(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',c.border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-8);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',c.text2);lbl.textContent=fmtEok(gv);svg.appendChild(lbl);
+  }
+  const xTicks=Math.min(6,years)||1;
+  for(let t=0;t<=xTicks;t++){
+    const yv=Math.round(years*t/xTicks);
+    const xl=svgEl('text');xl.setAttribute('x',x(yv));xl.setAttribute('y',H-padB+18);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','10');xl.setAttribute('fill',c.text2);xl.textContent=yv+' yrs';svg.appendChild(xl);
+  }
+  function drawLine(series,color,dash){
+    const pl=svgEl('polyline');pl.setAttribute('points',series.map((v,i)=>x(i)+','+yy(v)).join(' '));pl.setAttribute('fill','none');pl.setAttribute('stroke',color);pl.setAttribute('stroke-width','2.5');pl.setAttribute('stroke-linejoin','round');if(dash)pl.setAttribute('stroke-dasharray',dash);svg.appendChild(pl);
+  }
+  drawLine(scenarios.flat,c.text2,'4,3');
+  drawLine(scenarios.early,c.red,null);
+  drawLine(scenarios.late,c.accent,null);
+  holder.innerHTML='';holder.appendChild(svg);
+}
+function percentileOf(arr,p){const s=arr.slice().sort((a,b)=>a-b);const idx=Math.min(s.length-1,Math.floor(s.length*p));return s[idx];}
+function drawFanChart(yearlyBalances,years){
+  const holder=document.getElementById('mcChartHolder');
+  const p10=yearlyBalances.map(a=>percentileOf(a,0.10));
+  const p50=yearlyBalances.map(a=>percentileOf(a,0.50));
+  const p90=yearlyBalances.map(a=>percentileOf(a,0.90));
+  const W=760,H=240,padL=64,padR=16,padT=14,padB=28;
+  const maxVal=Math.max.apply(null,p90)*1.08||1;
+  const x=yv=>padL+yv/years*(W-padL-padR);
+  const yy=val=>H-padB-(val/maxVal)*(H-padT-padB);
+  const c=themeColors();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=4;i++){
+    const gv=maxVal*i/4,gy=yy(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',c.border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-8);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',c.text2);lbl.textContent=fmtEok(gv);svg.appendChild(lbl);
+  }
+  const xTicks=Math.min(6,years)||1;
+  for(let t=0;t<=xTicks;t++){
+    const yv=Math.round(years*t/xTicks);
+    const xl=svgEl('text');xl.setAttribute('x',x(yv));xl.setAttribute('y',H-padB+18);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','10');xl.setAttribute('fill',c.text2);xl.textContent=yv+' yrs';svg.appendChild(xl);
+  }
+  // p10~p90 band
+  const bandPts=p90.map((v,i)=>x(i)+','+yy(v)).concat(p10.slice().reverse().map((v,i)=>x(years-i)+','+yy(v))).join(' ');
+  const band=svgEl('polygon');band.setAttribute('points',bandPts);band.setAttribute('fill',c.accent);band.setAttribute('fill-opacity','0.15');band.setAttribute('stroke','none');svg.appendChild(band);
+  const p10Line=svgEl('polyline');p10Line.setAttribute('points',p10.map((v,i)=>x(i)+','+yy(v)).join(' '));p10Line.setAttribute('fill','none');p10Line.setAttribute('stroke',c.accent);p10Line.setAttribute('stroke-width','1');p10Line.setAttribute('stroke-dasharray','4,3');p10Line.setAttribute('opacity','.6');svg.appendChild(p10Line);
+  const p90Line=svgEl('polyline');p90Line.setAttribute('points',p90.map((v,i)=>x(i)+','+yy(v)).join(' '));p90Line.setAttribute('fill','none');p90Line.setAttribute('stroke',c.accent);p90Line.setAttribute('stroke-width','1');p90Line.setAttribute('stroke-dasharray','4,3');p90Line.setAttribute('opacity','.6');svg.appendChild(p90Line);
+  const p50Line=svgEl('polyline');p50Line.setAttribute('points',p50.map((v,i)=>x(i)+','+yy(v)).join(' '));p50Line.setAttribute('fill','none');p50Line.setAttribute('stroke',c.green);p50Line.setAttribute('stroke-width','3');p50Line.setAttribute('stroke-linejoin','round');svg.appendChild(p50Line);
+  holder.innerHTML='';holder.appendChild(svg);
+}
+
+renderPortfolio();
+calcAll();
+
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+<script src="/en-names.js"></script>
+</body>
+</html>

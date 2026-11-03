@@ -68,3 +68,83 @@ PATCHES = {
          "const W=n=>n>=1e8?'₩'+(n/1e9).toFixed(2)+'B':'₩'+n.toLocaleString('en-US'),CNT=n=>n.toLocaleString('en-US')+' shares';"),
     ],
 }
+
+# ---- 한국 종목·시장·재무·계산기 영어판 (원화 표기는 ₩ + K/M/B/T) ----
+_ABB = "const t=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']].find(x=>abs>=x[0]);const s=t?(abs/t[0]).toFixed(abs/t[0]>=100?0:abs/t[0]>=10?1:2)+t[1]:String(Math.round(abs));"
+
+# 한국 ETF 영문 이름(longest first) — 한글 이름이 페이지 문구·코드에 섞여 있어 영어판에서는 일괄 치환
+_KR_ETF = [
+    ('KODEX 미국배당커버드콜액티브', 'KODEX US Dividend Covered Call Active'), ('TIGER 은행고배당플러스TOP10', 'TIGER Bank High Dividend Plus TOP10'),
+    ('SOL 금융지주플러스고배당', 'SOL Financial Holdings Plus High Dividend'), ('TIGER 미국S&P500배당귀족', 'TIGER US S&P500 Dividend Aristocrats'),
+    ('TIGER 리츠부동산인프라', 'TIGER REITs Real Estate Infrastructure'), ('ACE 미국빅테크TOP7 Plus', 'ACE US Big Tech TOP7 Plus'),
+    ('TIGER 미국배당다우존스', 'TIGER US Dividend Dow Jones'), ('KODEX 미국배당다우존스', 'KODEX US Dividend Dow Jones'),
+    ('ACE 미국배당다우존스', 'ACE US Dividend Dow Jones'), ('SOL 미국배당다우존스', 'SOL US Dividend Dow Jones'),
+    ('TIGER 코스피고배당', 'TIGER KOSPI High Dividend'), ('PLUS 고배당주', 'PLUS High Dividend Stocks'),
+    ('KODEX 고배당주', 'KODEX High Dividend Stocks'), ('KODEX 배당가치', 'KODEX Dividend Value'), ('RISE 고배당', 'RISE High Dividend'),
+]
+_KR_CAT = [(' · 국내 금융지주 고배당 · 실제', ' · Korea financial holdings high dividend · 실제'), (' · 국내 은행 고배당 · 실제', ' · Korea bank high dividend · 실제'),
+           (' · 국내 고배당 · 실제', ' · Korea high dividend · 실제'), (' · 국내 배당가치 · 실제', ' · Korea dividend value · 실제'),
+           (' · 국내 리츠 · 실제', ' · Korea REITs · 실제'), (' · 미국 빅테크 · 실제', ' · US big tech · 실제'),
+           (' · 미국배당 커버드콜 · 실제', ' · US dividend covered call · 실제'), (' · 미국배당 · 실제', ' · US dividend · 실제')]
+PATCHES['dividend-kr-*.html'] = _KR_ETF + _KR_CAT + [
+    ('  · "연간 환산"은 가장 최근 분배금 × 분배 횟수(월분배=12, 분기분배=4)로 단순 추정한 값입니다<br>\n'
+     '  · 분배금은 배당소득에 해당하여 국내 이자·배당소득 합계가 연 2천만원을 초과하면 금융소득종합과세 대상이 될 수 있습니다<br>\n'
+     '  · 본 페이지는 분배금만 계산하며 매매차익(양도)은 계산 범위에 포함하지 않습니다\n',
+     '  · “Annualized” is a simple estimate: the latest distribution × distributions per year (monthly = 12, quarterly = 4)<br>\n'
+     '  · Distributions are dividend income in Korea; if interest and dividend income together exceed ₩20 million a year, comprehensive financial income taxation may apply<br>\n'
+     '  · This page calculates distributions only and does not cover capital gains on sale\n'),
+]
+PATCHES['calc-fire-dividend.html'] = _KR_ETF + [
+    ("function fmtEok(v){if(Math.abs(v)>=100000000){const eok=v/100000000;return (Math.abs(eok)>=100?eok.toFixed(0):eok.toFixed(1).replace(/\.0$/,''))+'억원';}return won(v);}",
+     "function fmtEok(v){const a=Math.abs(v);if(a>=1e9)return (v<0?'-':'')+'₩'+(+(a/1e9).toFixed(2))+'B';return won(v);}"),
+]
+PATCHES['calc-fire.html'] = [PATCHES['calc-fire-dividend.html'][-1]]
+PATCHES['kr-fin.html'] = [
+    ("re:function won\(m\)\{.*?'원';\}",
+     "function won(m){if(m==null)return'-';const n=m*1e6,abs=Math.abs(n);" + _ABB + "return(n<0?'-':'')+'₩'+s;}"),
+    ("re:const wonp=v=>[^\n]*\n", "const wonp=v=>v==null?'-':'₩'+Math.round(v).toLocaleString('en-US');\n"),
+]
+PATCHES['market.html'] = [
+    ("re:function bigNum\(v\)\{[^\n]*\n",
+     "function bigNum(v){const n=parseFloat(v);if(isNaN(n))return'-';const abs=Math.abs(n);" + _ABB + "return(n<0?'-':'')+s;}\n"),
+    ("fmt(i.value,'원',0)", "'₩'+fmt(i.value,'',0)"),
+]
+PATCHES['macro.html'] = [
+    ("re:function krWon\(v,unit\)\{.*?원`;\}",
+     "function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const abs=Math.abs(n*(WON_MULT[unit]||1));" + _ABB + "return(n<0?'-':'')+'₩'+s;}"),
+    ("re:function usdEok\(v\)\{[^\n]*\n",
+     "function usdEok(v){const n=parseFloat(v);if(isNaN(n))return'-';const abs=Math.abs(n);" + _ABB + "return(n<0?'-':'')+'$'+s;}\n"),
+]
+PATCHES['macro-detail.html'] = [
+    ("re:function krWon\(v,unit\)\{[^\n]*\n",
+     "function krWon(v,unit){const n=parseFloat(v);if(isNaN(n))return'-';const mult={'백만원':1e6,'십억원':1e9,'원':1}[unit]||1;const abs=Math.abs(n*mult);" + _ABB + "return(n<0?'-':'')+'₩'+s;}\n"),
+    ("return (i.value/1e8).toLocaleString('ko-KR',{maximumFractionDigits:1})+'억 달러';",
+     "{const abs=Math.abs(i.value);" + _ABB + "return (i.value<0?'-':'')+'$'+s;}"),
+]
+PATCHES['stock-detail.html'] = [
+    ("((n/1e12).toFixed(1)+'조원')", "('₩'+(n/1e12).toFixed(1)+'T')"),
+    ("${IS_US?'':'원'}", ""),
+    ("+(IS_US?'':'원')", ""),
+    ("${IS_US?'$':''}${fmt(r.close_price", "${IS_US?'$':'₩'}${fmt(r.close_price"),
+    ("(IS_US?'$':'')+fmt(last.close_price", "(IS_US?'$':'₩')+fmt(last.close_price"),
+    ('<span class="v">${c.fiscal_year}년</span>', '<span class="v">${c.fiscal_year}</span>'),
+    ('<span class="v">${fmt((c.revenue||0)/1e8,0)}억원</span>', '<span class="v">₩${fmt((c.revenue||0)/1e9,1)}B</span>'),
+    ('<span class="v">${fmt((c.operating_profit||0)/1e8,0)}억원</span>', '<span class="v">₩${fmt((c.operating_profit||0)/1e9,1)}B</span>'),
+    ('<span class="v">${fmt((c.net_profit||0)/1e8,0)}억원</span>', '<span class="v">₩${fmt((c.net_profit||0)/1e9,1)}B</span>'),
+    ('<span class="v">${fmt(c.eps,0)}원</span>', '<span class="v">₩${fmt(c.eps,0)}</span>'),
+]
+PATCHES['sim.html'] = [
+    ("re:function krw\(n\)\{.*?'원';\}",
+     "function krw(n){n=Math.round(n);const neg=n<0,abs=Math.abs(n);if(abs===0)return'₩0';" + _ABB + "return(neg?'-':'')+'₩'+s;}"),
+]
+PATCHES['calc-fx.html'] = [("+'원'", "+' KRW'")]
+PATCHES['calc-lotto-sim.html'] = [("cnt[i].toLocaleString('ko-KR')+'회'", "cnt[i].toLocaleString('ko-KR')+' times'")]
+PATCHES['calc-freelancer.html'] = [("'0원 (과세최저한)'", "'₩0 (below the minimum taxable threshold)'")]
+PATCHES['calc-loan.html'] = [("(m==='bullet'?' (원금 포함)':'')", "(m==='bullet'?' (incl. principal)':'')")]
+PATCHES['calc-salary.html'] = [("'연 환산 약 '+won(net*12)", "'About '+won(net*12)+' per year'")]
+PATCHES['calc-realty.html'] = [
+    ("'최대 '+won(r.fee)", "'Max '+won(r.fee)"),
+    ("extra+='거래금액(환산): '+won(amount)+'<br>'", "extra+='Transaction amount (converted): '+won(amount)+'<br>'"),
+    ("'적용 상한요율 '+(r.rate*100).toFixed(1)+'% · 부가세(10%) 포함 시 '+won(r.fee*1.1)", "'Rate cap applied '+(r.rate*100).toFixed(1)+'% · including VAT (10%): '+won(r.fee*1.1)"),
+]
+PATCHES['calc-date.html'] = [("const WD=['일','월','화','수','목','금','토'];", "const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];")]

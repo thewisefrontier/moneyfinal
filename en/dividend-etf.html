@@ -146,10 +146,10 @@ async function loadData(){
       if(rows.length>=2){
         const d0=new Date(rows[0].ex_dividend_date),d1=new Date(rows[1].ex_dividend_date);
         const gapDays=(d0-d1)/86400000;
-        freq=gapDays<=45?'Monthly':gapDays<=100?'Quarterly':gapDays<=200?'Semiannual':'Annual';
+        freq=gapDays<=45?'월배당':gapDays<=100?'분기배당':gapDays<=200?'반기배당':'Annual';
       }
       if(rows.length){
-        const n=freq==='Monthly'?12:freq==='Quarterly'?4:freq==='Semiannual'?2:1;
+        const n=freq==='월배당'?12:freq==='분기배당'?4:freq==='반기배당'?2:1;
         annualDps=parseFloat(rows[0].amount)*n;
       }
       const price=p?parseFloat(p.price):null;

@@ -34,13 +34,21 @@
     ['us-fin.html', 'US Financials'],
     ['compare.html', 'Compare'],
     ['superinvestor.html', 'Superinvestors'],
+    ['kr-fin.html', 'Korea Financials'],
     ['congress.html', 'Congress Trades'],
-    ['ipo.html', 'IPO']
+    ['ipo.html', 'IPO'],
+    ['market.html', 'Markets'],
+    ['macro.html', 'Indicators'],
+    ['bond.html', 'Bonds'],
+    ['crypto.html', 'Crypto'],
+    ['sim.html', 'Simulator'],
+    ['calc.html', 'Calculators']
   ];
-  var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin'];
+  var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin', 'kr-fin', 'market', 'macro',
+    'macro-detail', 'indicator-detail', 'stock-detail', 'company', 'bond', 'crypto', 'sim', 'calc'];
   var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
   var isEn = /^\/en(\/|$)/.test(path), rest = path.replace(/^\/en/, '');
-  var hasEn = rest === '' || EN_ONLY.indexOf(rest.slice(1)) >= 0 || /^\/dividend-(?!kr-)/.test(rest);
+  var hasEn = rest === '' || EN_ONLY.indexOf(rest.slice(1)) >= 0 || /^\/(dividend|calc)-/.test(rest);
   var navs = document.querySelectorAll('#site-nav');
   for (var i = 0; i < navs.length; i++) {
     var nav = navs[i];

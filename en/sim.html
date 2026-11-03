@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="If you had bought a Korean stock N years ago, what would it be worth now? See past returns based on month-end closes, annualized returns, maximum drawdown, period rankings and financial trends.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/sim"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/sim">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/sim">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/sim">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/sim">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/sim">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/sim">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Stock Investment Simulator | MoneyFinal">
+<meta property="og:description" content="If you had bought a Korean stock N years ago, what would it be worth now? See past returns based on month-end closes, annualized returns, maximum drawdown, period rankings and financial trends.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/sim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stock Investment Simulator | MoneyFinal">
+<meta name="twitter:description" content="If you had bought a Korean stock N years ago, what would it be worth now? See past returns based on month-end closes, annualized returns, maximum drawdown, period rankings and financial trends.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Stock Investment Simulator","description":"If you had bought a Korean stock N years ago, what would it be worth now? See past returns based on month-end closes, annualized returns, maximum drawdown, period rankings and financial trends.","url":"https://moneyfinal.pages.dev/en/sim","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>Stock Investment Simulator | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.sim-form{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+@media(max-width:800px){.sim-form{grid-template-columns:1fr 1fr!important}.sim-form .wide{grid-column:1/-1}}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:240px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:9px 16px;font-size:13px;font-weight:600;cursor:pointer}
+.quick{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px}
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.panel{display:none}.panel.active{display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:9px 14px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left}
+.bt th{font-size:11px;color:var(--text2);font-weight:600;cursor:default}
+.bt tr.clk{cursor:pointer}.bt tr.clk:hover{background:var(--bg3)}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="sim.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">Stock Investment Simulator</div><span class="sec-more" id="asof"></span></div>
+<div class="tabs" id="tabs">
+  <button class="tab active" data-t="sim">Investment simulation</button>
+  <button class="tab" data-t="rank">Period rankings</button>
+  <button class="tab" data-t="scr">Financial screener</button>
+  <button class="tab" data-t="scen">What-if scenario</button>
+</div>
+
+<div class="panel active" id="p-sim">
+  <div class="card" style="overflow:visible">
+    <div class="sim-form">
+      <div class="fld suggest wide"><label>Stock (name or code)</label><div class="qrow"><input id="q" autocomplete="off" placeholder="e.g. Samsung Electronics, 005930"><button class="qgo" id="qgo" type="button" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div><div class="sg-list" id="sg"></div></div>
+      <div class="fld"><label>Start date</label><select id="start"></select></div>
+      <div class="fld"><label>Investment method</label><select id="mode"><option value="lump">Lump sum</option><option value="dca">Monthly contribution</option></select></div>
+      <div class="fld"><label id="amtlbl">Amount invested (KRW)</label><input id="amt" inputmode="numeric" value="10000000"></div>
+      <div class="fld"><label>Dividends</label><select id="div"><option value="0">Excluded (price return)</option><option value="1">Included (reinvested)</option></select></div>
+      <div class="wide" style="grid-column:1/-1"><button class="btn" id="go">Simulate</button></div>
+    </div>
+    <div class="quick" id="quick"></div>
+  </div>
+  <div id="result"><div class="empty">Select a stock and click Simulate</div></div>
+</div>
+
+<div class="panel" id="p-rank">
+  <div class="card">
+    <div class="filter-tabs" id="rk-years"></div>
+    <div class="filter-tabs" id="rk-side" style="border-top:0">
+      <button class="ft active" data-s="top">Top gainers</button><button class="ft" data-s="bottom">Top decliners</button>
+      <button class="ft active" data-m="all" id="m-all">All</button><button class="ft" data-m="P">KOSPI</button><button class="ft" data-m="Q">KOSDAQ</button>
+    </div>
+    <div id="rk-stats"></div>
+    <div id="rk-table" style="overflow-x:auto"><div class="loading">Loading...</div></div>
+    <div class="note" id="rk-note"></div>
+  </div>
+</div>
+
+<div class="panel" id="p-scr">
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Find stocks by financial statements</span><span class="sec-more" id="scr-asof"></span></div>
+    <div class="quick" id="scr-presets" style="padding-top:12px">
+      <button class="ft" data-p="valueQuality">Low PER · high ROE</button><button class="ft" data-p="growth">Revenue growth</button><button class="ft" data-p="lowDebt">Low debt · profitability</button>
+      <button class="ft" data-p="lowPbr">Low PBR</button><button class="ft" data-p="turnaround">Turned profitable</button><button class="ft" data-p="">Reset filters</button>
+    </div>
+    <div class="sim-form" style="grid-template-columns:repeat(6,1fr)">
+      <div class="fld"><label>Min ROE (%)</label><input id="f-roe" inputmode="decimal"></div>
+      <div class="fld"><label>Min operating margin (%)</label><input id="f-margin" inputmode="decimal"></div>
+      <div class="fld"><label>Max debt ratio (%)</label><input id="f-debt" inputmode="decimal"></div>
+      <div class="fld"><label>Max PER (x)</label><input id="f-per" inputmode="decimal"></div>
+      <div class="fld"><label>Max PBR (x)</label><input id="f-pbr" inputmode="decimal"></div>
+      <div class="fld"><label>Min revenue 3-yr CAGR (%)</label><input id="f-rev" inputmode="decimal"></div>
+      <div class="fld"><label>Min dividend yield (%)</label><input id="f-dy" inputmode="decimal"></div>
+      <div class="fld"><label>Min market cap (₩100M)</label><input id="f-mcap" inputmode="numeric"></div>
+      <div class="fld"><label>Markets</label><select id="f-mkt"><option value="">All</option><option value="P">KOSPI</option><option value="Q">KOSDAQ</option></select></div>
+      <div class="fld"><label>Net income</label><select id="f-ni"><option value="">All</option><option value="pos">Profitable only</option><option value="turn">Loss to profit turnaround</option></select></div>
+      <div class="fld"><button class="btn" id="scr-go" style="width:100%">Search</button></div>
+      <div class="fld"><button class="btn" id="scr-share" style="width:100%;background:var(--bg3);color:var(--text)">🔗 Copy filter link</button></div>
+    </div>
+    <div class="note" id="scr-count" style="padding-top:0"></div>
+    <div id="scr-table" style="overflow-x:auto"><div class="loading">Loading...</div></div>
+    <div class="note">Financial holding companies, banks, insurers and brokerages report revenue and debt differently from ordinary companies, so these may show as '-'or look unusually large; focus on PER, PBR and ROE. Holding companies have operating income above revenue, so operating margin is left blank. Financials are from the latest annual report (FY) on a DART consolidated basis; PER and PBR use today’s market cap, and dividend yield divides the latest fiscal year’s per-share common cash dividend by today’s price. This screen only lists stocks that match the filters and is not a buy recommendation.</div>
+  </div>
+  <div class="card">
+    <div class="card-hd"><span class="card-title">If you had picked with the same filters in the past (backtest)</span></div>
+    <div id="bt-table" style="overflow-x:auto"></div>
+    <div class="note" id="bt-note"></div>
+  </div>
+</div>
+
+<div class="panel" id="p-scen">
+  <div class="card">
+    <div class="card-hd"><span class="card-title">Convert using earnings growth and a target PER</span></div>
+    <div class="sim-form">
+      <div class="fld"><label>Current price (KRW)</label><input id="sc-price" inputmode="numeric" value="50000"></div>
+      <div class="fld"><label>Current EPS (KRW)</label><input id="sc-eps" inputmode="numeric" value="5000"></div>
+      <div class="fld"><label>Annual earnings growth (%)</label><input id="sc-g" inputmode="decimal" value="8"></div>
+      <div class="fld"><label>Period (years)</label><input id="sc-y" inputmode="numeric" value="5"></div>
+      <div class="fld"><label>Target PER at that time (x)</label><input id="sc-per" inputmode="decimal" value="10"></div>
+    </div>
+    <div id="sc-out"></div>
+    <div class="note">This is a <b>simple formula that multiplies the assumptions you enter</b>. It is not a forecast, and actual earnings and PER can differ greatly. The current PER is calculated automatically from the values above.</div>
+  </div>
+</div>
+
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
+  <b>Basis and limits</b> · Month-end closing prices are used, so intra-month swings (drawdowns) are not reflected. Dividends are not included in price returns. Stock splits and reverse splits are adjusted by estimating from changes in listed shares (rights issues, capital reductions and mergers are not adjusted), and adjustments can be wrong. Delisted stocks are reflected only up to their last confirmed month-end close. Data starts in January 2020. Past performance does not guarantee future returns, and nothing here recommends buying or selling any stock.
+</div>
+</main>
+<div class="disclaimer">⚠️ This simulator is reference information built from public data (Financial Services Commission stock price data and DART). You are solely responsible for your investment decisions and any losses.</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script src="/won.js"></script><script>
+let META=null,INDEX=[],SHARDS={},FIN={},CUR=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function krw(n){n=Math.round(n);const neg=n<0,abs=Math.abs(n);if(abs===0)return'₩0';const t=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']].find(x=>abs>=x[0]);const s=t?(abs/t[0]).toFixed(abs/t[0]>=100?0:abs/t[0]>=10?1:2)+t[1]:String(Math.round(abs));return(neg?'-':'')+'₩'+s;}
+function krwE(n){return n==null||!n?'-':(Math.abs(n)>=1e8?krw(Math.round(n/1e8)*1e8):krw(n));}
+const pct=(v,d=1)=>v==null||!isFinite(v)?'-':(v>0?'+':'')+(v*100).toFixed(d)+'%';
+const cls=v=>v>0?'down':v<0?'up':'neutral'; 
+function clr(v){return v>0?'var(--red)':v<0?'var(--blue)':'var(--text2)';} 
+async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
+async function shard(code){const k=code.slice(0,2);if(!SHARDS[k])SHARDS[k]=await J('/data/sim/p_'+k+'.json');return SHARDS[k][code];}
+let MCS={};
+async function mcs(code){const k=code.slice(0,2);if(MCS[k]===undefined){try{MCS[k]=await J('/data/sim/m_'+k+'.json');}catch(e){MCS[k]={};}}return MCS[k][code];}
+async function fin(code){const k=code.slice(0,2);if(FIN[k]===undefined){try{FIN[k]=await J('/data/sim/f_'+k+'.json');}catch(e){FIN[k]={};}}return FIN[k][code];}
+function mm(d){return d.slice(0,7);}
+
+async function init(){
+  try{META=await J('/data/sim/meta.json');INDEX=await J('/data/sim/index.json');}
+  catch(e){$('result').innerHTML='<div class="empty">Simulator data is being prepared</div>';return;}
+  $('asof').textContent=META.asof+'  basis · '+INDEX.length.toLocaleString('en-US')+' companies';
+  const g=META.grid;
+  $('start').innerHTML=g.slice(0,-1).map((d,i)=>`<option value="${i}">${mm(d)}</option>`).reverse().join('');
+  const quick=[['1 year ago',1],['3 years ago',3],['5 years ago',5],['Max (2020-01)',0]];
+  $('quick').innerHTML=quick.map(([l,n])=>`<button class="ft" data-n="${n}">${l}</button>`).join('');
+  $('quick').addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;const n=+b.dataset.n;
+    const L=g.length-1;$('start').value=n?Math.max(0,yearsBackIdx(n)):0;});
+  $('start').value=Math.max(0,yearsBackIdx(3));
+  const q=$('q'),sg=$('sg');
+  q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){sg.style.display='none';return;}
+    const hits=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)).slice(0,10);
+    sg.innerHTML=hits.map(r=>`<div data-c="${r[0]}" data-n="${esc(r[1])}">${esc(r[1])}<small>${r[0]} · ${r[2]==='P'?'KOSPI':'KOSDAQ'}${r[3]<g.length-1?' · delisted':''}</small></div>`).join('');
+    sg.style.display=hits.length?'block':'none';});
+  sg.addEventListener('click',e=>{const d=e.target.closest('div[data-c]');if(!d)return;pick(d.dataset.c,d.dataset.n);});
+  $('qgo').addEventListener('click',()=>{const t=q.value.trim().toLowerCase().replace(/\s*\(\w+\)\s*$/,'');if(!t)return;const h=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t))[0];if(h){pick(h[0],h[1]);run();}else{sg.style.display='none';$('result').innerHTML='<div class="empty">"'+esc(q.value)+'" — no stock matches</div>';}});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-c]');if(d){e.preventDefault();pick(d.dataset.c,d.dataset.n);run();}}else if(e.key==='Escape')sg.style.display='none';});
+  document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
+  $('go').addEventListener('click',run);
+  $('mode').addEventListener('change',()=>{$('amtlbl').textContent=$('mode').value==='lump'?'Amount invested (KRW)':'Monthly contribution (KRW)';$('amt').value=$('mode').value==='lump'?'10000000':'500000';});
+  loadRank();
+  applyParams(new URLSearchParams(location.search));
+}
+
+const SCR_KEYS={roe:'f-roe',margin:'f-margin',debt:'f-debt',per:'f-per',pbr:'f-pbr',rev:'f-rev',dy:'f-dy',mcap:'f-mcap',mkt:'f-mkt',ni:'f-ni'};
+async function applyParams(u){
+  if(u.get('tab')==='scr'){showTab('scr');await loadScreen();
+    Object.keys(SCR_KEYS).forEach(k=>{if(u.get(k)!=null)$(SCR_KEYS[k]).value=u.get(k);});
+    if(u.get('sk')){SK=u.get('sk');SD=+u.get('sd')||-1;}
+    drawScr();return;}
+  if(u.get('tab')==='rank'){showTab('rank');return;}
+  const code=u.get('code');if(!code)return;
+  const r=INDEX.find(x=>x[0]===code);if(!r)return;
+  showTab('sim');pick(r[0],r[1]);
+  if(u.get('start')){const i=META.grid.findIndex(d=>d.startsWith(u.get('start')));if(i>=0)$('start').value=i;}
+  else if(u.get('years'))$('start').value=Math.max(0,yearsBackIdx(+u.get('years')));
+  if(u.get('mode')){$('mode').value=u.get('mode');$('mode').dispatchEvent(new Event('change'));}
+  if(u.get('amt'))$('amt').value=u.get('amt');
+  if(u.get('div'))$('div').value=u.get('div');
+  run();
+}
+function shareUrl(params){const q=new URLSearchParams();Object.keys(params).forEach(k=>{if(params[k]!==''&&params[k]!=null)q.set(k,params[k]);});return location.origin+location.pathname+'?'+q.toString();}
+function simShare(){return shareUrl({code:CUR,start:META.grid[+$('start').value].slice(0,7),mode:$('mode').value,amt:$('amt').value.replace(/[^0-9]/g,''),div:$('div').value});}
+function scrShare(){const o={tab:'scr',sk:SK,sd:SD};Object.keys(SCR_KEYS).forEach(k=>{o[k]=$(SCR_KEYS[k]).value;});return shareUrl(o);}
+async function copyLink(url,btn){
+  try{await navigator.clipboard.writeText(url);}catch(e){const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();try{document.execCommand('copy');}catch(_){}t.remove();}
+  const old=btn.textContent;btn.textContent='✅ Copied';setTimeout(()=>btn.textContent=old,1500);
+}
+function yearsBackIdx(n){const g=META.grid,end=new Date(META.asof);const t=new Date(end.getFullYear()-n,end.getMonth(),Math.min(end.getDate(),28));
+  let best=0;g.forEach((d,i)=>{if(new Date(d)<=t)best=i;});return best;}
+function pick(code,name){CUR=code;$('q').value=name+' ('+code+')';$('sg').style.display='none';}
+
+async function run(){
+  if(!CUR){$('result').innerHTML='<div class="empty">Please select a stock first</div>';return;}
+  const s=await shard(CUR);if(!s){$('result').innerHTML='<div class="empty">No data for this stock</div>';return;}
+  const g=META.grid,L=g.length-1,si=+$('start').value,amt=Math.max(0,parseFloat($('amt').value.replace(/[^0-9.]/g,''))||0),mode=$('mode').value;
+  const info=INDEX.find(r=>r[0]===CUR);const delisted=info[3]<L;const lastGi=s.f+s.p.length-1;
+  if(si<s.f){$('result').innerHTML=`<div class="empty">${esc(info[1])} has data only from ${mm(g[s.f])}, so choose a later start date</div>`;return;}
+  const pt=i=>s.p[i-s.f]; 
+  
+  const f0=await fin(CUR);const useDiv=$('div').value==='1';const divAt={};let divInfo='';
+  if(useDiv){
+    const ys=f0?Object.keys(f0).filter(y=>f0[y][5]!=null&&f0[y][5]>0):[];
+    if(!ys.length)divInfo='This stock has no dividend data, so only price return was calculated.';
+    else{
+      const evs=(s.ev||[]);
+      ys.forEach(y=>{const gi=g.findIndex(d=>d.startsWith((+y+1)+'-04'));if(gi<=si||gi>lastGi)return;
+        let fac=1;evs.forEach(e=>{if(e[0]>g[gi])fac*=e[1];});
+        divAt[gi]=f0[y][5]/(pt(gi)*fac);});
+      divInfo='Dividends included: '+ys.filter(y=>{const gi=g.findIndex(d=>d.startsWith((+y+1)+'-04'));return gi>si&&gi<=lastGi;}).map(y=>'FY'+y).join(', ')+' Assumes cash dividends are received at the end of April the following year and reinvested (taxes excluded).';
+    }
+  }
+  const pts=[];let units=0,invested=0;
+  for(let i=si;i<=lastGi;i++){
+    const p=pt(i);
+    if(divAt[i])units*=1+divAt[i];
+    if(mode==='lump'){if(i===si){units=amt/p;invested=amt;}}
+    else{units+=amt/p;invested+=amt;} 
+    pts.push({d:g[i],v:units*p,inv:invested,p:p});
+  }
+  const end=pts[pts.length-1],start=pts[0];
+  const years=(new Date(end.d)-new Date(start.d))/(365.25*864e5);
+  const tot=end.v/end.inv-1;
+  let cagr=null;if(mode==='lump'&&years>0)cagr=Math.pow(end.v/start.v,1/years)-1;
+  let peak=0,mdd=0,mddD='';pts.forEach(x=>{if(x.v>peak)peak=x.v;const dd=peak?x.v/peak-1:0;if(dd<mdd){mdd=dd;mddD=x.d;}});
+  const hi=pts.reduce((a,b)=>b.p>a.p?b:a),lo=pts.reduce((a,b)=>b.p<a.p?b:a);
+  const ev=(s.ev||[]).filter(e=>e[0]>g[si]);
+  
+  const bk=info[2]==='P'?'kospi':'kosdaq',B=META.bench[bk];
+  let bret=null;if(mode==='lump'&&B[si]&&B[Math.min(lastGi,L)])bret=B[Math.min(lastGi,L)]/B[si]-1;
+  const f=f0,mcArr=await mcs(CUR);
+  let h=`<div class="card"><div class="card-hd"><span class="card-title">${esc(info[1])} <span class="badge">${CUR}</span>${delisted?'<span class="badge">Delisted · '+mm(g[lastGi])+' </span>':''}</span></div>
+  <div class="stat">
+   <div class="s"><div class="l">${mode==='lump'?'Market value':'Contribution market value'}</div><div class="v" style="color:${clr(tot)}">${krw(end.v)}</div></div>
+   <div class="s"><div class="l">${mode==='lump'?'Principal invested':'Total contributions'}</div><div class="v">${krw(end.inv)}</div></div>
+   <div class="s"><div class="l">Total return</div><div class="v" style="color:${clr(tot)}">${pct(tot)}</div></div>
+   <div class="s"><div class="l">${cagr==null?'Period':'Annualized return'}</div><div class="v" style="color:${clr(cagr||0)}">${cagr==null?years.toFixed(1)+' yrs':pct(cagr)}</div></div>
+   <div class="s"><div class="l">Max drawdown (month-end basis)</div><div class="v" style="color:var(--blue)">${pct(mdd)}</div></div>
+   <div class="s"><div class="l">Period high (month-end)</div><div class="v">₩${Math.round(hi.p).toLocaleString('en-US').replace(/,/g,'')}<span class="badge">${mm(hi.d)}</span></div></div>
+   <div class="s"><div class="l">Period low (month-end)</div><div class="v">₩${Math.round(lo.p).toLocaleString('en-US').replace(/,/g,'')}<span class="badge">${mm(lo.d)}</span></div></div>
+   <div class="s"><div class="l">${bk==='kospi'?'KOSPI':'KOSDAQ'} Index (same period, excl. dividends)</div><div class="v" style="color:${clr(bret||0)}">${bret==null?'-':pct(bret)}</div></div>
+  </div><div id="chart" style="padding:0 8px"></div><div class="legend" id="lg"></div>`;
+  if(divInfo)h+=`<div class="note">💰 ${divInfo}</div>`;
+  if(ev.length)h+=`<div class="note">⚙️ Split / reverse-split adjustment: ${ev.map(e=>mm(e[0])+' '+(e[1]>1?e[1]+'split':'1/'+Math.round(1/e[1])+' reverse split')).join(', ')} (earlier prices converted)</div>`;
+  h+=`<div class="note"><button class="ft" id="share-sim">🔗 Copy link to these settings</button></div></div>`;
+  if(f)h+=decompCard(f,mcArr,s,si,lastGi);
+  if(f)h+=finCard(f,s);
+  $('result').innerHTML=h;
+  chart(pts,B,si,lastGi,mode);
+  try{history.replaceState(null,'',simShare());}catch(e){}
+  const sb=$('share-sim');if(sb)sb.onclick=()=>copyLink(simShare(),sb);
+}
+function axr(v){const u=v>=1e9?1e7:v>=1e8?1e6:v>=1e6?1e5:v>=1e4?1e3:1;return Math.round(v/u)*u;}
+function chart(pts,B,si,lastGi,mode){
+  const cs=getComputedStyle(document.documentElement),col=n=>cs.getPropertyValue(n).trim();
+  const W=800,H=300,pl=60,pr=12,pt=12,pb=26;
+  const vals=pts.map(x=>x.v);const bench=(mode==='lump'&&B[si])?pts.map((x,k)=>B[si+k]?B[si+k]/B[si]*pts[0].v:null):null;
+  const all=vals.concat((bench||[]).filter(v=>v!=null)).concat(mode==='dca'?pts.map(x=>x.inv):[]);
+  let lo=Math.min(...all),hi=Math.max(...all);if(hi===lo)hi=lo+1;const padv=(hi-lo)*.08;lo-=padv;hi+=padv;
+  const X=k=>pl+(W-pl-pr)*k/Math.max(1,pts.length-1),Y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">`;
+  for(let g=0;g<=4;g++){const v=lo+(hi-lo)*g/4,y=Y(v);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${col('--border')}"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${col('--text2')}">${krw(axr(v))}</text>`;}
+  const step=Math.ceil(pts.length/6);
+  pts.forEach((x,k)=>{if(k%step===0||k===pts.length-1)s+=`<text x="${X(k)}" y="${H-8}" text-anchor="middle" font-size="9" fill="${col('--text2')}">${x.d.slice(2,7)}</text>`;});
+  const line=(arr,c,dash)=>{const p=arr.map((v,k)=>v==null?null:`${X(k).toFixed(1)},${Y(v).toFixed(1)}`).filter(Boolean).join(' ');return `<polyline points="${p}" fill="none" stroke="${c}" stroke-width="2" ${dash?'stroke-dasharray="5 4"':''} stroke-linejoin="round"/>`;};
+  if(bench)s+=line(bench,col('--text2'),true);
+  if(mode==='dca')s+=line(pts.map(x=>x.inv),col('--text2'),true);
+  s+=line(vals,col('--accent'));
+  $('chart').innerHTML=s+'</svg>';
+  $('lg').innerHTML=`<span><i style="background:${col('--accent')}"></i>Market value</span>`+(bench?`<span><i style="background:${col('--text2')}"></i>Same amount invested in the index</span>`:'')+(mode==='dca'?`<span><i style="background:${col('--text2')}"></i>Cumulative contributions</span>`:'');
+}
+
+function decompCard(f,mc,s,si,lastGi){
+  if(!mc)return'';const g=META.grid,k0=si-s.f,k1=lastGi-s.f;
+  const a=mc[k0],b=mc[k1];if(!a||!b||lastGi<META.grid.length-1)return'';
+  const sd=new Date(g[si]),ed=new Date(g[lastGi]);
+  const fy0=sd.getMonth()>=3?sd.getFullYear()-1:sd.getFullYear()-2,fy1=ed.getMonth()>=3?ed.getFullYear()-1:ed.getFullYear()-2;
+  const r0=f[String(fy0)],r1=f[String(fy1)];
+  if(!r0||!r1||fy1<=fy0)return'';
+  const n0=r0[2],n1=r1[2];
+  if(!(n0>0&&n1>0))return`<div class="card"><div class="card-hd"><span class="card-title">Share price change breakdown</span></div><div class="note">Net income at the start or end of this period was a loss, so it cannot be divided into PER terms (FY${fy0}: ${r0[2]==null?'-':krwE(r0[2]*1e6)}, FY${fy1}: ${r1[2]==null?'-':krwE(r1[2]*1e6)}).</div></div>`;
+  const mcr=b/a,nir=n1/n0,per0=a*100/n0,per1=b*100/n1,perr=per1/per0;
+  return `<div class="card"><div class="card-hd"><span class="card-title">Market cap change = = net income change × PER change</span></div>
+  <div class="stat">
+   <div class="s"><div class="l">Market cap change</div><div class="v" style="color:${clr(mcr-1)}">${pct(mcr-1,0)}</div></div>
+   <div class="s"><div class="l">Net income change (FY${fy0}→FY${fy1})</div><div class="v" style="color:${clr(nir-1)}">${pct(nir-1,0)}</div></div>
+   <div class="s"><div class="l">PER change</div><div class="v" style="color:${clr(perr-1)}">${per0.toFixed(1)}x → ${per1.toFixed(1)}x</div></div>
+   <div class="s"><div class="l">PER multiple change</div><div class="v" style="color:${clr(perr-1)}">${pct(perr-1,0)}</div></div>
+  </div>
+  <div class="note">${mcr>1?'the gain':'the move'} Splitting it up, the result is <b>the earnings ${nir>=1?'growth':'decline'} effect ${pct(nir-1,0)}</b> multiplied by <b>the effect of the multiple (PER) the market puts on each won of earnings ${perr>=1?'rising':'falling'} effect ${pct(perr-1,0)}</b>. It is based on market cap, so it can differ from the share price return if the share count changed through rights issues or buyback cancellations; net income is the consolidated figure for the fiscal year (reflecting filing dates: FY${fy0} for the start ${g[si].slice(0,7)} and FY${fy1} for the end).</div></div>`;
+}
+function finCard(f,s){
+  const ys=Object.keys(f).sort();if(!ys.length)return'';
+  const g=META.grid;
+  const rows=ys.map(y=>{const r=f[y];
+    const dec=g.map((d,i)=>[d,i]).filter(x=>x[0].startsWith(y+'-12')).pop();
+    let mc=null;if(dec&&s.mc0)mc=null;
+    return `<tr><td>${y}</td><td>${r[0]==null?'-':krwE(r[0]*1e6)}</td><td>${r[1]==null?'-':krwE(r[1]*1e6)}</td><td style="color:${clr(r[2])}">${r[2]==null?'-':krwE(r[2]*1e6)}</td><td>${r[3]==null?'-':krwE(r[3]*1e6)}</td><td>${r[2]&&(r[6]||r[3])?pct(r[2]/(r[6]||r[3])):'-'}</td></tr>`;}).join('');
+  return `<div class="card"><div class="card-hd"><span class="card-title">Consolidated financial trend (DART business reports)</span></div><div style="overflow-x:auto"><table class="bt"><tr><th>Year</th><th>Revenue</th><th>Operating income</th><th>Net income</th><th>Equity</th><th>ROE (net income / ending equity)</th></tr>${rows}</table></div>
+  <div class="note">Net income and ROE are based on net income and equity attributable to owners of the parent (consolidated net income for stocks without those values). To see how the financials moved with the share price, compare the revenue and net income trend with the price chart above.</div></div>`;
+}
+
+
+let RK={y:3,side:'top',m:'all'},RKD={};
+async function loadRank(){
+  const ys=[1,3,5,6];$('rk-years').innerHTML=ys.map(y=>`<button class="ft${y===RK.y?' active':''}" data-y="${y}">${y}</button>`).join('');
+  $('rk-years').onclick=e=>{const b=e.target.closest('.ft');if(!b)return;RK.y=+b.dataset.y;[...$('rk-years').children].forEach(c=>c.classList.toggle('active',c===b));drawRank();};
+  $('rk-side').onclick=e=>{const b=e.target.closest('.ft');if(!b)return;if(b.dataset.s){RK.side=b.dataset.s;[...$('rk-side').querySelectorAll('[data-s]')].forEach(c=>c.classList.toggle('active',c===b));}
+    if(b.dataset.m){RK.m=b.dataset.m;[...$('rk-side').querySelectorAll('[data-m]')].forEach(c=>c.classList.toggle('active',c===b));}drawRank();};
+  drawRank();
+}
+async function drawRank(){
+  try{if(!RKD[RK.y])RKD[RK.y]=await J('/data/sim/rank_'+RK.y+'y.json');}catch(e){$('rk-table').innerHTML='<div class="empty">No ranking data</div>';return;}
+  const d=RKD[RK.y],st=d.stats;
+  $('rk-stats').innerHTML=`<div class="stat">
+   <div class="s"><div class="l">Stocks covered</div><div class="v">${st.count.toLocaleString('en-US')}</div></div>
+   <div class="s"><div class="l">Median return</div><div class="v" style="color:${clr(st.median)}">${pct(st.median)}</div></div>
+   <div class="s"><div class="l">Share of stocks with a loss of principal</div><div class="v">${(st.pctLoss*100).toFixed(0)}%</div></div>
+   <div class="s"><div class="l">of which delisted</div><div class="v">${(st.pctDelisted*100).toFixed(1)}%</div></div>
+   <div class="s"><div class="l">KOSPI index</div><div class="v" style="color:${clr(st.kospi)}">${pct(st.kospi)}</div></div>
+   <div class="s"><div class="l">KOSDAQ index</div><div class="v" style="color:${clr(st.kosdaq)}">${pct(st.kosdaq)}</div></div></div>`;
+  let rows=(RK.side==='top'?d.top:d.bottom).filter(r=>RK.m==='all'||r[2]===RK.m);
+  $('rk-table').innerHTML='<table class="bt"><tr><th>Stock</th><th>Start price</th><th>Price</th><th>Return</th><th>Annualized</th><th>Market cap</th></tr>'+rows.slice(0,100).map(r=>`<tr class="clk" data-c="${r[0]}" data-n="${esc(r[1])}"><td>${esc(r[1])}<span class="badge">${r[2]==='P'?'KOSPI':'KOSDAQ'}</span>${r[8]?'<span class="badge">Delisted</span>':''}</td><td>₩${Math.round(r[3])}</td><td>₩${Math.round(r[4])}</td><td style="color:${clr(r[5])}">${pct(r[5],0)}</td><td style="color:${clr(r[6])}">${pct(r[6])}</td><td>${krw(r[7]*1e8)}</td></tr>`).join('')+'</table>';
+  $('rk-table').onclick=e=>{const tr=e.target.closest('tr.clk');if(!tr)return;pick(tr.dataset.c,tr.dataset.n);$('start').value=Math.max(0,yearsBackIdx(RK.y));showTab('sim');run();window.scrollTo({top:0,behavior:'smooth'});};
+  $('rk-note').innerHTML=`<b>${d.start} → ${d.end}</b> based on month-end closes, for stocks with a market cap of at least ₩${d.minMcap.toLocaleString('en-US').replace(/,/g,'')}00M at the start. Only the top and bottom ${rows.length} are shown. This lists stocks that had already risen after the fact and does not imply future returns. Delisted stocks are included up to their last month-end close.`;
+}
+
+
+function scen(){
+  const p=parseFloat($('sc-price').value)||0,e=parseFloat($('sc-eps').value)||0,g=(parseFloat($('sc-g').value)||0)/100,y=parseFloat($('sc-y').value)||0,per=parseFloat($('sc-per').value)||0;
+  if(p<=0||e<=0||y<=0||per<=0){$('sc-out').innerHTML='<div class="empty">Enter values (EPS must be positive)</div>';return;}
+  const cur=p/e,eps2=e*Math.pow(1+g,y),p2=eps2*per,ret=p2/p-1,cg=Math.pow(p2/p,1/y)-1;
+  $('sc-out').innerHTML=`<div class="stat">
+   <div class="s"><div class="l">Current PER</div><div class="v">${cur.toFixed(1)}x</div></div>
+   <div class="s"><div class="l">EPS after ${y} years</div><div class="v">${krw(eps2)}</div></div>
+   <div class="s"><div class="l">Converted share price</div><div class="v">${krw(p2)}</div></div>
+   <div class="s"><div class="l">vs current / annualized</div><div class="v" style="color:${clr(ret)}">${pct(ret,0)} / ${pct(cg)}</div></div></div>
+   <div class="note">Price change = <b>Earnings change ${pct(Math.pow(1+g,y)-1,0)}</b> × <b>PER change ${pct(per/cur-1,0)}</b>. Even if earnings grow, a lower PER can make the price rise less or fall.</div>`;
+}
+['sc-price','sc-eps','sc-g','sc-y','sc-per'].forEach(i=>$(i).addEventListener('input',scen));scen();
+
+
+
+let SCR=null,BT=null,SK='mcap',SD=-1;
+const PRE={valueQuality:{roe:10,per:10},growth:{rev:15,margin:5},lowDebt:{debt:50,roe:8},lowPbr:{pbr:0.8,roe:5},turnaround:{ni:'turn'}};
+async function loadScreen(){
+  if(SCR)return;
+  try{SCR=await J('/data/sim/screen.json');}catch(e){$('scr-table').innerHTML='<div class="empty">Financial data is being prepared</div>';return;}
+  try{BT=await J('/data/sim/backtest.json');}catch(e){BT=null;}
+  $('scr-asof').textContent='FY'+SCR.fy+' Consolidated financials · '+SCR.rows.length+' stocks (top by market cap)';
+  $('scr-presets').addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;applyPreset(b.dataset.p);});
+  $('scr-go').addEventListener('click',drawScr);
+  $('scr-share').addEventListener('click',()=>copyLink(scrShare(),$('scr-share')));
+  document.querySelectorAll('#p-scr .sim-form input,#p-scr .sim-form select').forEach(el=>el.addEventListener('change',drawScr));
+  drawScr();drawBt('');
+}
+function applyPreset(k){
+  const F={roe:'f-roe',margin:'f-margin',debt:'f-debt',per:'f-per',pbr:'f-pbr',rev:'f-rev',dy:'f-dy',mcap:'f-mcap'};
+  Object.values(F).forEach(id=>$(id).value='');$('f-ni').value='';$('f-mkt').value='';
+  const c=PRE[k]||{};Object.keys(c).forEach(x=>{if(x==='ni')$('f-ni').value=c[x];else $(F[x]).value=c[x];});
+  document.querySelectorAll('#scr-presets .ft').forEach(b=>b.classList.toggle('active',b.dataset.p===k&&k!==''));
+  drawScr();drawBt(k);
+}
+function drawScr(){
+  const C=SCR.cols,ix={};C.forEach((c,i)=>ix[c]=i);
+  const v=id=>{const x=parseFloat($(id).value);return isNaN(x)?null:x;};
+  const roe=v('f-roe'),mg=v('f-margin'),debt=v('f-debt'),per=v('f-per'),pbr=v('f-pbr'),rev=v('f-rev'),dy=v('f-dy'),mc=v('f-mcap'),mkt=$('f-mkt').value,ni=$('f-ni').value;
+  let rows=SCR.rows.filter(r=>{
+    if(roe!=null&&!(r[ix.roe]!=null&&r[ix.roe]*100>=roe))return false;
+    if(mg!=null&&!(r[ix.margin]!=null&&r[ix.margin]*100>=mg))return false;
+    if(debt!=null&&!(r[ix.debt]!=null&&r[ix.debt]*100<=debt))return false;
+    if(per!=null&&!(r[ix.per]!=null&&r[ix.per]>0&&r[ix.per]<=per))return false;
+    if(pbr!=null&&!(r[ix.pbr]!=null&&r[ix.pbr]>0&&r[ix.pbr]<=pbr))return false;
+    if(rev!=null&&!(r[ix.revCagr3]!=null&&r[ix.revCagr3]*100>=rev))return false;
+    if(dy!=null&&!(r[ix.dy]!=null&&r[ix.dy]*100>=dy))return false;
+    if(mc!=null&&!(r[ix.mcap]>=mc))return false;
+    if(mkt&&r[ix.mkt]!==mkt)return false;
+    if(ni==='pos'&&!(r[ix.ni]>0))return false;
+    if(ni==='turn'&&r[ix.turn]!==1)return false;
+    return true;});
+  const key={mcap:'mcap',roe:'roe',margin:'margin',debt:'debt',per:'per',pbr:'pbr',rev:'revCagr3',dy:'dy',ret1:'ret1y',ret3:'ret3y'}[SK]||'mcap',k=ix[key];
+  rows.sort((a,b)=>{const x=a[k],y=b[k];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;return (x-y)*SD;});
+  $('scr-count').innerHTML=`<b>${rows.length}</b> of ${SCR.rows.length} stocks match (top 100 shown) · Sort: click a column header`;
+  const f1=x=>x==null?'-':(x*100).toFixed(1)+'%';
+  const th=(k,l)=>`<th data-k="${k}" style="cursor:pointer">${l}${SK===k?(SD<0?' ▼':' ▲'):''}</th>`;
+  $('scr-table').innerHTML='<table class="bt"><tr><th>Stock</th>'+th('mcap','Market cap')+'<th>Revenue</th>'+th('margin','Operating margin')+th('roe','ROE')+th('debt','Debt ratio')+th('per','PER')+th('pbr','PBR')+th('rev','Revenue 3-yr growth')+th('dy','Dividend yield')+th('ret1','1-yr price')+th('ret3','3-yr price')+'</tr>'+
+   rows.slice(0,100).map(r=>`<tr class="clk" data-c="${r[ix.code]}" data-n="${esc(r[ix.name])}"><td>${esc(r[ix.name])}<span class="badge">${r[ix.mkt]==='P'?'KOSPI':'KOSDAQ'}</span></td><td>${krwE(r[ix.mcap]*1e8)}</td><td>${krwE(r[ix.rev]*1e6)}</td><td>${f1(r[ix.margin])}</td><td>${f1(r[ix.roe])}</td><td>${f1(r[ix.debt])}</td><td>${r[ix.per]==null?'-':r[ix.per].toFixed(1)+'x'}</td><td>${r[ix.pbr]==null?'-':r[ix.pbr].toFixed(2)+'x'}</td><td>${f1(r[ix.revCagr3])}</td><td>${f1(r[ix.dy])}</td><td style="color:${clr(r[ix.ret1y])}">${pct(r[ix.ret1y],0)}</td><td style="color:${clr(r[ix.ret3y])}">${pct(r[ix.ret3y],0)}</td></tr>`).join('')+'</table>';
+  $('scr-table').querySelectorAll('th[data-k]').forEach(h=>h.addEventListener('click',()=>{if(SK===h.dataset.k)SD=-SD;else{SK=h.dataset.k;SD=['debt','per','pbr'].includes(SK)?1:-1;}drawScr();}));
+  $('scr-table').querySelectorAll('tr.clk').forEach(tr=>tr.addEventListener('click',()=>{pick(tr.dataset.c,tr.dataset.n);$('start').value=Math.max(0,yearsBackIdx(3));showTab('sim');run();window.scrollTo({top:0,behavior:'smooth'});}));
+}
+function drawBt(sel){
+  if(!BT){$('bt-table').innerHTML='<div class="empty">No backtest data</div>';return;}
+  const P=BT.presets,yrs=Object.keys(P._all.years).sort();
+  const cell=(k,y)=>{const a=P._all.years[y],d=P[k].years[y];if(!d)return'<td>-</td>';
+    return `<td><span style="color:${clr(d.med)};font-weight:700">${pct(d.med,0)}</span><br><small style="color:var(--text2)">${d.n} stocks · all ${pct(a.med,0)}</small></td>`;};
+  $('bt-table').innerHTML='<table class="bt"><tr><th>Filter</th>'+yrs.map(y=>`<th>End of April ${y}<br><small>(held ${P._all.years[y].yrs} yrs)</small></th>`).join('')+'</tr>'+
+   Object.keys(PRE).map(k=>`<tr${k===sel?' style="background:var(--bg3)"':''}><td>${P[k].label}</td>${yrs.map(y=>cell(k,y)).join('')}</tr>`).join('')+'</table>';
+  $('bt-note').innerHTML=`Each cell assumes you picked the stocks that matched the filter at the end of April that year using <b>the prior fiscal year’s financials and the market cap at that time</b>, and shows <b>the median share price return through today</b> (small print below: number of stocks · median of the whole pool). Holding periods differ by cell, so cells cannot be compared directly.<br>⚠️ <b>Limits</b>: the universe is ${esc(BT.universe)}. The pool is built from <b>market cap at that time</b> rather than today, and delisted stocks are included with returns up to their last month-end close to reduce survivorship bias, but stocks without matching DART financials are missing, so some bias may remain. The business report filing date is simplified to the end of April, dividends and trading costs are not reflected, and cells with few stocks are heavily affected by chance. Note that the same filter gives different results from year to year. Past results do not guarantee future returns.`;
+}
+
+function showTab(t){if(t==='scr')loadScreen();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.t===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p-'+t));}
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b){showTab(b.dataset.t);if(b.dataset.t==='scr')loadScreen();}});
+init();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+<script src="/en-names.js"></script>
+</body>
+</html>

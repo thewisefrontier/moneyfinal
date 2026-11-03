@@ -18,14 +18,22 @@ I18N = os.path.join(ROOT, 'i18n')
 SITE = 'https://moneyfinal.pages.dev'
 HANGUL = re.compile(r'[가-힣]')
 
-# 영어판에 싣는 페이지. 한국 전용(예금·대출·연금·ISA·보험·한국 종목·원화 계산기)은 제외.
-CORE = ['dividend-etf.html', 'us-fin.html', 'compare.html', 'superinvestor.html', 'congress.html', 'ipo.html',
-        'about.html', 'privacy.html', 'terms.html', '404.html']
+# 영어판에 싣는 페이지. 한국 예금·대출·연금저축·ISA·보험·AI 브리핑은 제외.
+CORE = ['dividend-etf.html', 'us-fin.html', 'kr-fin.html', 'compare.html', 'superinvestor.html', 'congress.html', 'ipo.html',
+        'market.html', 'macro.html', 'macro-detail.html', 'indicator-detail.html', 'stock-detail.html', 'company.html', 'bond.html',
+        'crypto.html', 'sim.html', 'about.html', 'privacy.html', 'terms.html', '404.html',
+        'calc.html', 'calc-age.html', 'calc-date.html', 'calc-dividend.html', 'calc-fire-dividend.html', 'calc-fire.html',
+        'calc-freelancer.html', 'calc-fx.html', 'calc-loan.html', 'calc-lotto-sim.html', 'calc-lotto-tax.html', 'calc-pyeong.html',
+        'calc-realty.html', 'calc-salary.html']
+
+
+NAME_PAGES = {'market.html', 'macro.html', 'macro-detail.html', 'indicator-detail.html', 'stock-detail.html', 'company.html', 'kr-fin.html',
+              'sim.html', 'compare.html', 'calc-fire-dividend.html', 'ipo.html'}
 
 
 def en_pages():
     extra = [os.path.basename(p) for p in glob.glob(os.path.join(ROOT, 'dividend-*.html'))
-             if not os.path.basename(p).startswith('dividend-kr-') and os.path.basename(p) != 'dividend-etf.html']
+             if os.path.basename(p) != 'dividend-etf.html']
     return CORE + sorted(extra)
 
 
@@ -111,6 +119,19 @@ def by_rule(u, rules):
     return None
 
 
+_PROT = re.compile(r"""(?:===?|!==?)\s*'([^']*[가-힣][^']*)'|'([^']*[가-힣][^']*)'\s*(?:===?|!==?)|\.includes\('([^']*[가-힣][^']*)'\)|\{\s*'([^']*[가-힣][^']*)'\s*:|,\s*'([^']*[가-힣][^']*)'\s*:\s*[\d.e]""")
+
+
+def protected(s):
+    """코드에서 데이터 값과 비교하거나 키로 쓰는 한글 문자열(예: unit==='원')은 번역하면 로직이 깨지므로 원문 유지."""
+    out = set()
+    for m in _PROT.finditer(s):
+        out.add(next(g for g in m.groups() if g))
+    for m in re.finditer(r"""\[((?:'[^']*',?\s*)+)\]\.includes""", s):
+        out.update(x for x in re.findall(r"'([^']*)'", m.group(1)) if HANGUL.search(x))
+    return out
+
+
 def sig(u):
     return (sorted(re.findall(r'\$\{[^{}]*\}', u)), sorted(re.findall(r'</?(\w+)', ''.join(re.findall(INLINE, u)))))
 
@@ -167,10 +188,15 @@ def main(todo_only=False):
             s = s.replace(old, new)
         s = strip_comments(s)
         spans = scan(s)
+        prot = protected(s)
         parts, last = [], 0
         for a, b in spans:
             u = s[a:b]
             parts.append(s[last:a])
+            if u in prot:  # 데이터 키: 번역하지 않고 그대로
+                parts.append(u)
+                last = b
+                continue
             t = dic.get(name + '::' + u) or dic.get(u) or by_rule(u, rules)
             if t is None:
                 todo.setdefault(u, []).append(name)
@@ -222,6 +248,8 @@ def localize(name, s, enset):
                lambda m: m.group(1) + ('/en/' if m.group(2) in enset else '/') + m.group(2) + m.group(3), s)
     s = re.sub(r'([\'"`])((?:data|notes)/)', r'\1/\2', s)
     s = re.sub(r'(?<!data-active=)([\'"`])([\w\-]+\.html)(?=[?#\'"`])', lambda m: m.group(1) + ('/en/' if m.group(2) in enset else '/') + m.group(2), s)
+    if name in NAME_PAGES:  # 한글 데이터(기업명·지표명)를 영어로 바꿔 주는 런타임 사전
+        s = s.replace('</body>', '<script src="/en-names.js"></script>\n</body>', 1)
     s = s.replace('href="/index.html"', 'href="/en/"').replace('href="/en/index.html"', 'href="/en/"')
     # 검색엔진용 언어 대응 링크
     alt = (f'<link rel="alternate" hreflang="en" href="{SITE}/en/{page}">\n<link rel="alternate" hreflang="ko" href="{SITE}/{page}">\n'

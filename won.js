@@ -2,6 +2,7 @@
    (예: 1,508,069원 -> 150만8069원). 계산기류 페이지 전반에서 쓰는 공용 함수. */
 function won(v) {
   const n = Math.round(v);
+  if (document.documentElement.lang === 'en') return (n < 0 ? '-' : '') + '₩' + Math.abs(n).toLocaleString('en-US');  // 영어판: ₩1,508,069
   const sign = n < 0 ? '-' : '';
   const abs = Math.abs(n);
   const eok = Math.floor(abs / 1e8);

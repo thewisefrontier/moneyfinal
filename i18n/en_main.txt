@@ -1304,15 +1304,15 @@ About | MoneyFinal
 ====
 머니파이널은 공공 금융 데이터를 무료로 비교·분석해주는 개인 운영 재테크 정보 사이트입니다. 데이터 출처, 운영 원칙, 연락처를 안내합니다.
 --->
-MoneyFinal is a personally run personal-finance site that compares and analyzes public financial data for free. This page explains our data sources, operating principles and contact.
+MoneyFinal is a free, independently run site that turns official filings and public financial data into plain tables and calculators for investors. This page explains our data sources, operating principles and contact.
 ====
 공공 금융 데이터를 무료로 비교·분석해주는 개인 운영 재테크 정보 사이트.
 --->
-A personally run personal-finance site that compares and analyzes public financial data for free.
+A free, independently run site that turns official filings and public financial data into plain tables and calculators.
 ====
 세상의 모든 재테크 - 공공 금융 데이터 무료 비교·분석 서비스
 --->
-All about personal finance — free comparison and analysis of public financial data
+All about personal finance — free tools built on official filings and public data
 ====
 머니파이널 운영자
 --->
@@ -1332,7 +1332,7 @@ Purpose
 ====
 머니파이널은 흩어져 있는 <strong>공공 금융 데이터를 한 곳에 모아 무료로 비교·분석</strong>할 수 있게 하는 개인 프로젝트입니다. 예금·적금 금리, 대출 조건, 시장 지표, 세금 계산 등 재테크에 필요한 정보를 광고나 유료 결제 없이 접근할 수 있도록 만드는 것을 지향합니다.
 --->
-MoneyFinal is a personal project that <strong>gathers scattered public financial data in one place so you can compare and analyze it for free</strong>. We aim to make the information you need for personal finance, such as savings rates, loan terms, market indicators and tax calculations, accessible without ads or paid subscriptions.
+MoneyFinal is an independent project that <strong>gathers scattered official filings and public financial data in one place so you can compare and analyze it for free</strong>. Our tools include ETF dividend calculators, company financial statements, side-by-side company comparisons, superinvestor 13F holdings, US House members’ stock trades and an IPO calendar, all free to use.
 ====
 운영 원칙
 --->
@@ -1344,11 +1344,11 @@ Operating principles
 ====
 <strong>공공데이터 우선</strong>: 정부·공공기관이 공식 개방한 API만 사용하며, 출처를 명시합니다.
 --->
-<strong>Public data first</strong>: we use only APIs officially opened by governments and public institutions, and we cite sources.
+<strong>Official data first</strong>: we rely on filings and APIs officially published by regulators and public institutions such as the SEC, and we cite our sources.
 ====
 <strong>중립적 정보 제공</strong>: 특정 금융회사·상품을 추천·중개하지 않습니다.
 --->
-<strong>Neutral information</strong>: we do not recommend or broker any financial company or product.
+<strong>Neutral information</strong>: we do not recommend or broker any security, financial company or product.
 ====
 <strong>투명한 계산</strong>: 계산기 결과의 산식과 기준을 페이지 내에 명시합니다.
 --->
@@ -1360,35 +1360,35 @@ Data sources
 ====
 금융감독원 금융상품한눈에
 --->
-Korea Financial Supervisory Service (FINLIFE)
+SEC EDGAR
 ====
 예금·적금·대출·연금저축 상품 정보
 --->
-Deposit, savings, loan and pension product information
+Company financial statements (10-K, 10-Q), 13F holdings and IPO filings
 ====
 금융감독원 DART
 --->
-Korea Financial Supervisory Service (DART)
+US House Clerk
 ====
 기업 공시 정보
 --->
-Corporate disclosures
+Periodic transaction reports filed by House members
 ====
 공공데이터포털
 --->
-Korea Public Data Portal
+Yahoo Finance
 ====
 주식 시세, 상장 정보, 실손보험 등
 --->
-Stock prices, listing information, indemnity insurance and more
+ETF prices, fund details and dividend history
 ====
 한국은행 ECOS
 --->
-Bank of Korea ECOS
+Korea Financial Supervisory Service (DART)
 ====
 기준금리, 통화량, 환율, 가계신용
 --->
-Policy rate, money supply, exchange rates and household credit
+Korean company filings and IPO registrations
 ====
 미국 연방준비제도 FRED
 --->
@@ -1412,7 +1412,7 @@ Important notice
 ====
 본 사이트는 <strong>투자 자문 서비스가 아닙니다</strong>. 제공되는 모든 정보는 참고 자료이며, 실제 금융 상품 가입·투자 결정 전 반드시 해당 금융회사 공식 채널을 통해 확인해야 합니다. 자세한 내용은 <a href="terms.html">이용약관</a>과 <a href="privacy.html">개인정보처리방침</a>을 참고해 주세요.
 --->
-This site is <strong>not an investment advisory service</strong>. All information is for reference only; before signing up for any financial product or making an investment decision, always confirm through the financial company’s official channels. See the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a> for details.
+This site is <strong>not an investment advisory service</strong>. All information is for reference only and is not personalized advice; before making any investment decision, verify it with the original filings and your own professional advisers. See the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a> for details.
 ====
 문의
 --->
@@ -1592,11 +1592,11 @@ The Service is provided free of charge and requires no sign-up or personal infor
 ====
 본 서비스는 정부·공공기관(금융감독원, 한국은행, 공공데이터포털, 미국 연방준비제도 등)이 공개한 데이터를 수집·정리·비교하여 제공하는 정보 서비스입니다.
 --->
-The Service is an information service that collects, organizes and compares data published by governments and public institutions (Korea’s Financial Supervisory Service, Bank of Korea, Public Data Portal, the US Federal Reserve and others).
+The Service is an information service that collects, organizes and compares data published by regulators and public institutions (the US Securities and Exchange Commission, the US House of Representatives, the US Federal Reserve, Korea’s Financial Supervisory Service and others) and by market data providers.
 ====
 본 서비스는 <strong>투자자문업, 유사수신업, 금융상품판매업, 금융상품중개업 등 금융 관련 인허가 사업에 해당하지 않습니다</strong>.
 --->
-The Service is <strong>not an investment advisory business, an unregistered deposit-taking business, a financial product sales business, a financial product brokerage business or any other licensed financial business</strong>.
+The Service is <strong>not a registered investment adviser, broker-dealer, bank or any other licensed financial business, and does not provide personalized investment advice</strong>.
 ====
 제3조 (데이터 정확성 및 무보증)
 --->
@@ -1604,11 +1604,11 @@ Article 3 (Data Accuracy and No Warranty)
 ====
 본 서비스가 제공하는 금리, 시세, 지표, 상품 조건 등의 데이터는 원천 공공 API의 응답을 기반으로 하며, 원천 데이터의 변경·지연·오류 가능성이 있습니다.
 --->
-Data such as interest rates, prices, indicators and product terms provided by the Service is based on responses from the underlying public APIs, and the source data may change, be delayed or contain errors.
+Data such as prices, dividends, financial statements, filings and indicators provided by the Service is based on responses from the underlying public sources and data providers, and the source data may change, be delayed or contain errors.
 ====
 이용자는 실제 금융 상품 가입, 투자 결정, 계약 체결 전 반드시 해당 금융회사·기관의 공식 채널을 통해 최신 정보를 재확인해야 합니다.
 --->
-Before signing up for any financial product, making an investment decision or entering a contract, users must reconfirm the latest information through the official channels of the relevant financial company or institution.
+Before making any investment decision or entering a contract, users must reconfirm the latest information in the original filings or through the official channels of the relevant company or institution.
 ====
 운영자는 데이터의 완전성·정확성·최신성을 보증하지 않으며, 이로 인한 이용자의 판단 오류에 대해 책임지지 않습니다.
 --->
@@ -1620,15 +1620,15 @@ Article 4 (Limitation of Liability)
 ====
 이용자가 본 서비스의 정보를 활용하여 진행한 예금·적금 가입, 대출 계약, 주식·펀드 매매, 보험 가입, 세금 계산, 그 밖의 모든 금융 의사결정으로 인해 발생한 손실·손해·기회비용에 대해 운영자는 어떠한 책임도 지지 않습니다.
 --->
-The operator bears no responsibility for any loss, damage or opportunity cost arising from deposits, loans, stock or fund trades, insurance, tax calculations or any other financial decisions made using information from the Service.
+The operator bears no responsibility for any loss, damage or opportunity cost arising from stock, ETF or other securities trades, tax calculations or any other financial decisions made using information from the Service.
 ====
 계산기 페이지의 결과는 이론적 추정값이며, 실제 세금·이자·수령액은 개인 상황, 법령 개정, 금융회사 정책에 따라 달라질 수 있습니다.
 --->
-Results on calculator pages are theoretical estimates; actual taxes, interest and amounts received may differ depending on personal circumstances, changes in law and financial company policies.
+Results on calculator pages are theoretical estimates; actual taxes, dividends and amounts received may differ depending on personal circumstances, changes in law and issuer or broker policies.
 ====
 본 서비스는 외부 링크(원문 공시, 금융회사 홈페이지 등)를 제공할 수 있으며, 외부 사이트의 내용에 대해 책임지지 않습니다.
 --->
-The Service may provide external links (original filings, financial company websites and so on), and the operator is not responsible for the content of external sites.
+The Service may provide external links (original filings, company websites and so on), and the operator is not responsible for the content of external sites.
 ====
 제5조 (지적재산권)
 --->
@@ -1636,7 +1636,7 @@ Article 5 (Intellectual Property)
 ====
 본 서비스가 제공하는 원천 공공데이터는 각 공공기관의 개방 정책(공공누리 등)에 따라 제공되며, 각 원천 기관에 저작권이 있습니다.
 --->
-The underlying public data provided by the Service is offered under each public institution’s open-data policy (such as KOGL), and copyright belongs to each source institution.
+The underlying public data provided by the Service remains subject to the terms of each source (for example SEC EDGAR and the US House Clerk), and copyright belongs to each source or provider.
 ====
 운영자가 자체 제작한 화면, 코드, 문구 등은 개인적·비상업적 이용을 허용하며, 상업적 재배포 및 대량 크롤링은 금지됩니다.
 --->
@@ -1688,7 +1688,7 @@ Article 9 (Governing Law)
 ====
 본 약관은 대한민국 법령에 따라 해석되며, 서비스 이용과 관련한 분쟁은 이용자 주소지 관할 법원을 제1심 관할 법원으로 합니다.
 --->
-These Terms are interpreted under the laws of the Republic of Korea, and disputes relating to use of the Service are subject to the first-instance jurisdiction of the court with jurisdiction over the user’s address.
+These Terms are interpreted under the laws of the Republic of Korea, where the operator is based, and disputes relating to use of the Service are subject to the first-instance jurisdiction of the court with jurisdiction over the user’s address.
 ====
 제10조 (문의)
 --->

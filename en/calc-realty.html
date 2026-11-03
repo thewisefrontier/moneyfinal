@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Korean Real Estate Commission and Acquisition Tax Calculator | MoneyFinal</title>
+<meta name="description" content="Calculates the brokerage commission and acquisition tax for home sales, jeonse and monthly rent in Korea, including surcharge rates for multiple homes.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-realty"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-realty">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-realty">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-realty">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-realty">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-realty">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-realty">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Korean Real Estate Commission and Acquisition Tax Calculator | MoneyFinal">
+<meta property="og:description" content="Calculates the brokerage commission and acquisition tax for home sales, jeonse and monthly rent in Korea, including surcharge rates for multiple homes.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-realty">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Korean Real Estate Commission and Acquisition Tax Calculator | MoneyFinal">
+<meta name="twitter:description" content="Calculates the brokerage commission and acquisition tax for home sales, jeonse and monthly rent in Korea, including surcharge rates for multiple homes.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Korean real estate commission and acquisition tax calculator","description":"Calculates the brokerage commission and acquisition tax for home sales, jeonse and monthly rent in Korea, including surcharge rates for multiple homes.","url":"https://moneyfinal.pages.dev/en/calc-realty","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.card-t{font-size:14px;font-weight:700;margin-bottom:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.res{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;margin-top:4px}
+.res-main{font-size:22px;font-weight:700;color:var(--green)}
+.res-sub{font-size:12px;color:var(--text2);margin-top:6px;line-height:1.8}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Korean real estate commission and acquisition tax calculator</h1>
+<div class="sub">Home brokerage fee cap and acquisition tax in one go</div>
+
+<div class="card">
+  <div class="card-t">🏠 Brokerage commission</div>
+  <div class="grid2">
+    <div class="field"><label>Transaction type</label><select id="f-type" onchange="calcFee()"><option value="sale">Sale / exchange</option><option value="jeonse">Jeonse</option><option value="wolse">Monthly rent</option></select></div>
+    <div class="field" id="f-amt-w"><label id="f-amt-label">Sale price (KRW)</label><input type="text" id="f-amt" inputmode="numeric" value="500,000,000" oninput="fmtInput(this);calcFee()"></div>
+  </div>
+  <div class="grid2" id="wolse-w" style="display:none">
+    <div class="field"><label>Deposit (KRW)</label><input type="text" id="f-dep" inputmode="numeric" value="20,000,000" oninput="fmtInput(this);calcFee()"></div>
+    <div class="field"><label>Monthly rent (KRW)</label><input type="text" id="f-rent" inputmode="numeric" value="600,000" oninput="fmtInput(this);calcFee()"></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="fee-main">-</div>
+    <div class="res-sub" id="fee-sub"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-t">📋 Acquisition tax (home purchase for value)</div>
+  <div class="grid2">
+    <div class="field"><label>Acquisition price (KRW)</label><input type="text" id="t-amt" inputmode="numeric" value="500,000,000" oninput="fmtInput(this);calcTax()"></div>
+    <div class="field"><label>Exclusive area</label><select id="t-size" onchange="calcTax()"><option value="s">85 ㎡ or less</option><option value="l">Over 85 ㎡</option></select></div>
+  </div>
+  <div class="grid2">
+    <div class="field"><label>Homes owned after purchase</label><select id="t-cnt" onchange="calcTax()"><option value="1">1 home</option><option value="2">2 homes</option><option value="3">3 homes</option><option value="4">4 or more homes / corporation</option></select></div>
+    <div class="field"><label>Adjustment target area</label><select id="t-adj" onchange="calcTax()"><option value="n">Non-adjustment area</option><option value="y">Adjustment target area</option></select></div>
+  </div>
+  <div class="res">
+    <div class="res-main" id="tax-main">-</div>
+    <div class="res-sub" id="tax-sub"></div>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ Reference calculation only. Actual tax and fees vary with contract terms, local ordinances and eligibility for reductions.<br>
+  · The brokerage commission is the legal <b>maximum</b>; the actual amount is negotiated with the agent within the cap. Rates are set by city and provincial ordinance and may differ by region (this calculation uses Table 1 of the Enforcement Rule). VAT is extra.<br>
+  · Monthly rent transaction amount = = deposit + monthly rent × 100 (recalculated as monthly rent × 70 if under ₩50 million)<br>
+  · Acquisition tax: 1 home 1–3% (1% up to ₩600M, sliding scale from ₩600–900M, 3% over ₩900M), 8% for 2 homes in an adjustment area, 3 homes 12% in adjustment and 8% in non-adjustment areas, 12% for 4 or more homes or corporations. A temporary 2-home owner gets the 1-home rate.<br>
+  · The total includes local education tax and the special rural development tax (over 85 ㎡); reductions such as for first-time buyers are not reflected.
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('en-US'):'';}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+</script><script src="/won.js"></script><script>
+
+
+const SALE=[[5e7,.006,25e4],[2e8,.005,8e5],[9e8,.004,null],[12e8,.005,null],[15e8,.006,null],[Infinity,.007,null]];
+const RENT=[[5e7,.005,2e5],[1e8,.004,3e5],[6e8,.003,null],[12e8,.004,null],[15e8,.005,null],[Infinity,.006,null]];
+function feeCalc(amount,table){for(const[lim,rate,cap]of table){if(amount<lim||lim===Infinity){let f=amount*rate;if(cap!==null)f=Math.min(f,cap);return{fee:f,rate:rate};}}}
+function calcFee(){
+  const type=document.getElementById('f-type').value;
+  document.getElementById('wolse-w').style.display=type==='wolse'?'grid':'none';
+  document.getElementById('f-amt-w').style.display=type==='wolse'?'none':'block';
+  document.getElementById('f-amt-label').textContent=type==='sale'?'Sale price (KRW)':'Jeonse deposit (KRW)';
+  let amount,extra='';
+  if(type==='wolse'){
+    const dep=num('f-dep'),rent=num('f-rent');
+    amount=dep+rent*100;
+    if(amount<5e7){amount=dep+rent*70;extra='Converted deposit under ₩50 million → deposit + monthly rent × 70 recalculated<br>';}
+    extra+='Transaction amount (converted): '+won(amount)+'<br>';
+  }else{amount=num('f-amt');}
+  if(!amount){document.getElementById('fee-main').textContent='-';return;}
+  const r=feeCalc(amount,type==='sale'?SALE:RENT);
+  document.getElementById('fee-main').textContent='Max '+won(r.fee);
+  document.getElementById('fee-sub').innerHTML=extra+'Rate cap applied '+(r.rate*100).toFixed(1)+'% · including VAT (10%): '+won(r.fee*1.1);
+}
+
+
+function calcTax(){
+  const amt=num('t-amt');
+  const large=document.getElementById('t-size').value==='l';
+  const cnt=parseInt(document.getElementById('t-cnt').value,10);
+  const adj=document.getElementById('t-adj').value==='y';
+  if(!amt){document.getElementById('tax-main').textContent='-';return;}
+  let rate,label,heavy=false;
+  const basic=()=>{if(amt<=6e8)return .01;if(amt>9e8)return .03;return Math.round(((amt/1e8)*(2/3)-3)*100)/10000;};
+  if(cnt===1||(cnt===2&&!adj)){rate=basic();label=(cnt===2?'2 homes in non-adjustment area → basic rate ':'1 home basic rate ')+(rate*100).toFixed(2)+'%';}
+  else if(cnt===2&&adj){rate=.08;heavy=true;label='2 homes in adjustment area surcharge 8%';}
+  else if(cnt===3){rate=adj?.12:.08;heavy=true;label=(adj?'3 homes in adjustment area surcharge 12%':'3 homes in non-adjustment area surcharge 8%');}
+  else{rate=.12;heavy=true;label='4 or more homes / corporation surcharge 12%';}
+  const acq=amt*rate;
+  
+  const edu=heavy?amt*.004:amt*(rate/2)*.2;
+  
+  let farm=0;
+  if(large)farm=amt*(heavy?(rate===.08?.006:.01):.002);
+  const total=acq+edu+farm;
+  document.getElementById('tax-main').textContent=won(total);
+  document.getElementById('tax-sub').innerHTML=label+'<br>Acquisition tax '+won(acq)+' + local education tax '+won(edu)+(large?' + special rural development tax '+won(farm):' (special rural development tax exempt at 85 ㎡ or less)')+'<br>Effective tax rate '+((total/amt)*100).toFixed(2)+'%';
+}
+calcFee();calcTax();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

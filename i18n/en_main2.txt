@@ -1,0 +1,3383 @@
+코스피·코스닥 상장사의 연간·분기 손익계산서, 재무상태표와 영업이익률·ROE·부채비율·배당을 DART 공시 데이터로 확인합니다.
+--->
+Annual and quarterly income statements, balance sheets, operating margin, ROE, debt ratio and dividends for KOSPI and KOSDAQ listed companies, from DART filings.
+====
+한국 기업 재무제표 | 머니파이널
+--->
+Korean Company Financial Statements | MoneyFinal
+====
+한국 기업 재무제표
+--->
+Korean Company Financial Statements
+====
+기업 (이름 또는 종목코드)
+--->
+Company (name or stock code)
+====
+예: 삼성전자, 005930
+--->
+e.g. Samsung Electronics, 005930
+====
+<b>데이터 기준</b> · 금융감독원 DART 공시의 <b>연결재무제표 주요계정</b>(연결이 없으면 별도)입니다. 금액은 원화이며 <b>억·만 단위</b>로 표기합니다(억 단위 미만 반올림). 분기 값은 분기보고서의 3개월 값이고 <b>4분기(Q4)는 사업보고서 연간 값에서 3분기 누계를 뺀 값</b>입니다. 분기 재무는 시가총액 상위 약 600개 종목만 제공하고, 나머지는 연간만 볼 수 있습니다. 순이익은 <b>지배기업 소유주 귀속 순이익(지배주주 순이익)</b>이고 ROE·PER도 이 값과 지배주주 지분으로 계산하며, 해당 값이 없는 종목(12월 결산이 아니거나 신규 상장 등)은 비지배 포함 당기순이익을 쓰고 이름에 표시합니다. 금융지주·은행·보험은 매출액과 부채비율이 일반 기업과 달라
+--->
+<b>Data basis</b> · Key accounts of the <b>consolidated financial statements</b> in filings to Korea’s Financial Supervisory Service (DART), or separate statements where no consolidated ones exist. Amounts are in Korean won (₩) and abbreviated as <b>K, M, B and T</b>. Quarterly values are three-month figures from quarterly reports, and <b>Q4 is the annual figure from the business report minus the nine-month year-to-date total</b>. Quarterly financials are provided only for roughly the top 600 companies by market cap; the rest have annual data only. Net income is <b>net income attributable to owners of the parent</b>, and ROE and PER are computed from it and parent equity; for companies without it (non-December year-ends, new listings and so on), net income including non-controlling interests is used and noted in the name. Financial holding companies, banks and insurers report revenue and debt differently from ordinary companies, so these may show as
+====
+이거나 크게 보일 수 있습니다. 투자 권유가 아닌 참고 자료입니다.
+--->
+or look unusually large. This is reference material, not investment advice.
+====
+⚠️ 본 정보는 DART 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: 금융감독원 전자공시시스템(DART)
+--->
+⚠️ This information is reference material derived from DART filing data. You are solely responsible for your investment decisions and any losses. Source: Korea Financial Supervisory Service DART electronic disclosure system
+====
+개 종목
+--->
+⎵companies
+====
+최근 9년
+--->
+Last 9 years
+====
+에 해당하는 종목이 없습니다 (재무 데이터가 있는 코스피·코스닥 종목만 제공합니다)
+--->
+⎵— no company matches (only KOSPI and KOSDAQ stocks with financial data are covered)
+====
+이 종목은 분기 데이터가 없습니다 (시가총액 상위 약 600개만 제공합니다. 연간 보기를 이용해 주세요)
+--->
+This company has no quarterly data (only about the top 600 by market cap have it; use the annual view)
+====
+순이익(지배주주)
+--->
+Net income (to owners)
+====
+순이익(비지배 포함)
+--->
+Net income (incl. non-controlling)
+====
+연간 보통주 현금배당
+--->
+Annual cash dividend per common share
+====
+배당 데이터 없음
+--->
+No dividend data
+====
+<span class="badge">시가총액 1위</span>
+--->
+<span class="badge">#1 by market cap</span>
+====
+매출액
+--->
+Revenue
+====
+법인세차감전 순이익
+--->
+Pre-tax income
+====
+당기순이익
+--->
+Net income
+====
+(비지배 포함)
+--->
+⎵(incl. non-controlling)
+====
+지배주주 순이익
+--->
+Net income to owners of the parent
+====
+지배주주 지분
+--->
+Equity attributable to owners
+====
+분기 값은 분기보고서의 3개월 값이고, 4분기(Q4)는 사업보고서 연간 값에서 3분기 누계를 뺀 값입니다. ROE·ROA는 최근 4분기 순이익 합계를 분기말 자본·자산으로 나눈 값입니다.
+--->
+Quarterly values are three-month figures from quarterly reports, and Q4 is the annual figure from the business report minus the nine-month year-to-date total. ROE and ROA divide the sum of the last four quarters of net income by quarter-end equity and assets.
+====
+년</b>은 공시 재작성(중단영업 재분류 등)으로 분기 값의 합이 연간 값과 다릅니다. 각 값은 DART 공시 그대로입니다.
+--->
+</b> sum of quarterly values differs from the annual value because of restated filings (e.g. discontinued operations). Each value is as filed with DART.
+====
+코스피·코스닥·미국 주식 시가총액 상위 종목, 지수 시세, RSI 기술 지표, 기업 재무지표를 한눈에 확인.
+--->
+Top stocks by market cap on KOSPI, KOSDAQ and the US market, index quotes, RSI technical indicators and company financial metrics at a glance.
+====
+시장 | 머니파이널
+--->
+Markets | MoneyFinal
+====
+시장
+--->
+Markets
+====
+시장 지수
+--->
+Market indices
+====
+코스피200
+--->
+KOSPI 200
+====
+원달러 환율
+--->
+USD/KRW
+====
+달러 인덱스
+--->
+US dollar index
+====
+다우존스
+--->
+Dow Jones
+====
+나스닥
+--->
+Nasdaq
+====
+한국 주식
+--->
+Korean stocks
+====
+<span class="card-title">시가총액 상위 · RSI(14) 기술지표</span>
+--->
+<span class="card-title">Top by market cap · RSI(14) technical indicator</span>
+====
+<span>#</span><span>종목</span><span style="text-align:right">종가</span><span style="text-align:right">등락률</span><span style="text-align:right">RSI(14)</span><span style="text-align:right">시가총액</span>
+--->
+<span>#</span><span>Stock</span><span style="text-align:right">Close</span><span style="text-align:right">Change</span><span style="text-align:right">RSI(14)</span><span style="text-align:right">Market cap</span>
+====
+기업 재무지표
+--->
+Company financial metrics
+====
+<span class="card-title">주요 20개 종목</span>
+--->
+<span class="card-title">Top 20 stocks</span>
+====
+<span>기업</span><span>PER</span><span>PBR</span><span>ROE</span><span>EPS</span>
+--->
+<span>Company</span><span>PER</span><span>PBR</span><span>ROE</span><span>EPS</span>
+====
+시장 위험 지표
+--->
+Market risk indicators
+====
+미국 주식
+--->
+US stocks
+====
+파생상품 지수
+--->
+Derivatives indices
+====
+<span class="card-title">해외파생거래 · 파생결합증권</span>
+--->
+<span class="card-title">Overseas derivatives · structured securities</span>
+====
+⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · 공공데이터포털 · Finnhub · Alpha Vantage
+--->
+⚠️ This site provides reference information based on public data. You are solely responsible for your investment decisions and any losses.<br>Data sources: Korea Financial Supervisory Service · Bank of Korea ECOS · US Federal Reserve FRED · Korea Public Data Portal · Finnhub · Alpha Vantage
+====
+<span style="color:var(--red)">${v.toFixed(1)} 과매수</span>
+--->
+<span style="color:var(--red)">${v.toFixed(1)} overbought</span>
+====
+<span style="color:var(--yellow)">${v.toFixed(1)} 과매도</span>
+--->
+<span style="color:var(--yellow)">${v.toFixed(1)} oversold</span>
+====
+${diff>0?'+':''}${diff}원</span>
+--->
+${diff>0?'+':''}${diff} KRW</span>
+====
+해외파생거래
+--->
+Overseas derivatives
+====
+파생결합증권
+--->
+Structured securities
+====
+데이터 수집 예정
+--->
+Data coming soon
+====
+주식 데이터 수집 예정
+--->
+Stock data coming soon
+====
+기업재무 데이터 수집 예정
+--->
+Company financial data coming soon
+====
+국내외 거시경제 지표 - 기준금리, 통화량, 환율, 채권 금리, 국제 원자재 시세를 한눈에.
+--->
+Key macro indicators at home and abroad: policy rate, money supply, exchange rates, bond yields and global commodity prices at a glance.
+====
+경제지표 | 머니파이널
+--->
+Economic Indicators | MoneyFinal
+====
+경제지표
+--->
+Economic Indicators
+====
+국내 거시지표
+--->
+Korea macro indicators
+====
+<span class="card-title">한국은행 ECOS</span>
+--->
+<span class="card-title">Bank of Korea ECOS</span>
+====
+은행 건전성 (BIS)
+--->
+Bank soundness (BIS)
+====
+<span class="card-title">은행별 BIS 총자본비율</span><a class="more-link" href="macro-detail.html?cat=은행통계">전체보기 →</a>
+--->
+<span class="card-title">BIS total capital ratio by bank</span><a class="more-link" href="macro-detail.html?cat=은행통계">View all →</a>
+====
+금융회사 부채비율
+--->
+Financial company debt ratios
+====
+<span class="card-title">비은행 금융회사 재무건전성 참고지표</span><a class="more-link" href="macro-detail.html?cat=금융회사건전성">전체보기 →</a>
+--->
+<span class="card-title">Soundness reference indicators for non-bank financial companies</span><a class="more-link" href="macro-detail.html?cat=금융회사건전성">View all →</a>
+====
+글로벌 지표
+--->
+Global indicators
+====
+채권 시장
+--->
+Bond market
+====
+<span class="card-title">채권 시세 (YTM)</span><a class="more-link" href="macro-detail.html?cat=채권금리">전체보기 →</a>
+--->
+<span class="card-title">Bond yields (YTM)</span><a class="more-link" href="macro-detail.html?cat=채권금리">View all →</a>
+====
+금융투자협회 통계
+--->
+Financial investment association statistics
+====
+<span class="card-title">ETF · 펀드 통계</span><a class="more-link" href="macro-detail.html?cat=금융투자">전체보기 →</a>
+--->
+<span class="card-title">ETF · fund statistics</span><a class="more-link" href="macro-detail.html?cat=금융투자">View all →</a>
+====
+⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 · 한국은행 ECOS · 미국 연준 FRED · KOTRA · 공공데이터포털
+--->
+⚠️ This site provides reference information based on public data. You are solely responsible for your investment decisions and any losses.<br>Data sources: Korea Financial Supervisory Service · Bank of Korea ECOS · US Federal Reserve FRED · KOTRA · Korea Public Data Portal
+====
+${i.reference_date} 기준
+--->
+as of ${i.reference_date}
+====
+총 ${bisTotal.length}개 은행
+--->
+${bisTotal.length} banks in total
+====
+데이터 로드 실패
+--->
+Failed to load data
+====
+경제지표 전체보기 | 머니파이널
+--->
+All Economic Indicators | MoneyFinal
+====
+은행 건전성, 금융회사 부채비율, 채권 시세, 금융투자협회 통계 전체 목록을 검색·정렬하여 확인합니다.
+--->
+Search and sort the full lists of bank soundness, financial company debt ratios, bond yields and financial investment association statistics.
+====
+<a href="macro.html">경제지표</a> &gt
+--->
+<a href="macro.html">Economic indicators</a> &gt
+====
+<span id="crumb-name">전체보기</span>
+--->
+<span id="crumb-name">View all</span>
+====
+은행별 BIS 총자본비율·기본자본비율·보통주자본비율 전체
+--->
+All banks’ BIS total capital, Tier 1 and common equity Tier 1 ratios
+====
+비은행 금융회사 재무건전성 참고지표 전체
+--->
+All soundness reference indicators for non-bank financial companies
+====
+채권 시세 (YTM)
+--->
+Bond yields (YTM)
+====
+국내 채권 종목별 시세 전체
+--->
+Quotes for all Korean bonds by issue
+====
+신탁·펀드·신용공여 등 통계 전체
+--->
+All statistics on trusts, funds, credit extensions and more
+====
+전체보기
+--->
+View all
+====
+| 머니파이널
+--->
+| MoneyFinal
+====
+지표 상세 - 일/월/연도별 추이 | 머니파이널
+--->
+Indicator Detail - Daily, Monthly and Yearly Trends | MoneyFinal
+====
+원달러 환율·기준금리·M2 등 주요 거시지표의 일별·월별·연도별 추이를 확인합니다.
+--->
+Daily, monthly and yearly trends of key macro indicators such as USD/KRW, policy rates and M2.
+====
+<a href="index.html" id="crumb-back">홈</a> &gt
+--->
+<a href="index.html" id="crumb-back">Home</a> &gt
+====
+<span id="crumb-name">지표</span>
+--->
+<span id="crumb-name">Indicator</span>
+====
+일별
+--->
+Daily
+====
+월별
+--->
+Monthly
+====
+연별
+--->
+Yearly
+====
+날짜
+--->
+Date
+====
+값
+--->
+Value
+====
+전기대비
+--->
+Change
+====
+⚠️ 한국은행 ECOS·미국 연준 FRED·공공데이터포털 등 공공 데이터 기반 참고용 수치입니다.<br>
+  · 일별/월별/연별 데이터는 이 사이트가 수집을 시작한 시점부터 누적된 것으로, 서비스 초기라 과거 데이터가 제한적일 수 있습니다.
+--->
+⚠️ Figures are for reference, based on public data such as Bank of Korea ECOS, US Federal Reserve FRED and the Korea Public Data Portal.<br>
+  · Daily, monthly and yearly data accumulate from when this site started collecting, so history may be limited early on.
+====
+한은 기준금리
+--->
+Bank of Korea policy rate
+====
+미국 기준금리
+--->
+US policy rate
+====
+시중 유동성 M2
+--->
+Money supply M2
+====
+가계신용
+--->
+Household credit
+====
+달러인덱스
+--->
+US dollar index
+====
+미국 CPI
+--->
+US CPI
+====
+미국 장단기금리차
+--->
+US yield curve (10Y−2Y)
+====
+VIX 변동성지수
+--->
+VIX volatility index
+====
+WTI 유가
+--->
+WTI crude oil
+====
+국제 금값
+--->
+Gold (international)
+====
+${chgTxt}${last.reference_date} 기준
+--->
+${chgTxt}as of ${last.reference_date}
+====
+이 지표의 히스토리를 아직 수집 중입니다
+--->
+History for this indicator is still being collected
+====
+개 데이터포인트
+--->
+⎵data points
+====
+종목 상세 - 일/월/연도별 시세 · 기업정보 | 머니파이널
+--->
+Stock Detail - Daily, Monthly and Yearly Prices · Company Info | MoneyFinal
+====
+국내·미국 상위 종목의 일별·월별·연도별 시세 추이와 기업 재무정보(PER·PBR·ROE·EPS)를 확인합니다.
+--->
+Daily, monthly and yearly price trends and company financials (PER, PBR, ROE, EPS) for top Korean and US stocks.
+====
+<a href="market.html">시장</a> &gt
+--->
+<a href="market.html">Markets</a> &gt
+====
+<span id="crumb-name">종목</span>
+--->
+<span id="crumb-name">Stock</span>
+====
+종가
+--->
+Close
+====
+등락률
+--->
+Change
+====
+시가총액
+--->
+Market cap
+====
+기업 재무정보
+--->
+Company financials
+====
+AI 요약
+--->
+AI summary
+====
+⚠️ 시세는 공공데이터·Finnhub 기반 참고용이며 실시간 시세와 차이가 있을 수 있습니다. 기업 재무정보는 시가총액 상위 일부 종목만 제공합니다.<br>
+  · AI 요약은 위에 표시된 재무 데이터만 근거로 Gemini가 자동 생성한 참고용 정보이며, 투자 추천이 아닙니다. 분기 재무데이터 갱신 주기에 맞춰 갱신됩니다.<br>
+  · 일별/월별/연별 데이터는 이 사이트가 수집을 시작한 시점부터 누적된 것으로, 서비스 초기라 과거 데이터가 제한적일 수 있습니다.
+--->
+⚠️ Prices are for reference, based on public data and Finnhub, and may differ from real-time quotes. Company financials are provided only for some top stocks by market cap.<br>
+  · The AI summary is reference information auto-generated by Gemini using only the financial data shown above; it is not an investment recommendation. It is refreshed with the quarterly financial data cycle.<br>
+  · Daily, monthly and yearly data accumulate from when this site started collecting, so history may be limited early on.
+====
+<a href="sim.html?code='+encodeURIComponent(CODE)+'&years=3" style="color:var(--accent)">📈 이 종목에 3년 전 투자했다면? 투자 시뮬레이터로 보기 →</a>
+--->
+<a href="sim.html?code='+encodeURIComponent(CODE)+'&years=3" style="color:var(--accent)">📈 What if you had invested 3 years ago? See it in the investment simulator →</a>
+====
+${chg>0?'+':''}${fmt(chg,2)}%</span> · ${last.base_date} 기준
+--->
+${chg>0?'+':''}${fmt(chg,2)}%</span> · as of ${last.base_date}
+====
+이 종목의 시세 히스토리를 아직 수집 중입니다
+--->
+Price history for this stock is still being collected
+====
+이 종목의 재무정보는 아직 제공되지 않습니다 (시가총액 상위 일부 종목만 제공)
+--->
+Financials for this stock are not available yet (only some top stocks by market cap are covered)
+====
+<span class="k">회계연도</span><span class="v">${c.fiscal_year}년</span>
+--->
+<span class="k">Fiscal year</span><span class="v">${c.fiscal_year}</span>
+====
+이 종목의 AI 요약은 아직 제공되지 않습니다 (재무정보 제공 종목만 생성)
+--->
+No AI summary is available for this stock yet (generated only for stocks with financials)
+====
+${rep.based_on||''} 기준 · Gemini 자동 생성 · ${d.updated_at||''}
+--->
+${rep.based_on||''} basis · Auto-generated by Gemini · ${d.updated_at||''}
+====
+DART 공시 정보, 불성실 공시, 주요사항보고 등 상장기업 공시 현황을 실시간으로 확인.
+--->
+Real-time status of listed-company disclosures, including DART filings, unfaithful disclosures and material event reports.
+====
+기업정보 | 머니파이널
+--->
+Company Filings | MoneyFinal
+====
+기업정보
+--->
+Company Filings
+====
+수집된 공시
+--->
+Filings collected
+====
+불성실 공시
+--->
+Unfaithful disclosures
+====
+주요사항보고
+--->
+Material event reports
+====
+기업 공시 현황
+--->
+Company filing status
+====
+<span class="card-title">DART 공시 · 권리일정</span>
+--->
+<span class="card-title">DART filings · rights schedule</span>
+====
+불성실
+--->
+Unfaithful
+====
+주요사항
+--->
+Material event
+====
+유상증자
+--->
+Rights offering
+====
+전환사채
+--->
+Convertible bond
+====
+권리일정
+--->
+Rights schedule
+====
+⚠️ 본 사이트는 공공데이터 기반 참고 정보만 제공하며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 금융감독원 DART · 공공데이터포털 · 한국은행 ECOS · 미국 연준 FRED
+--->
+⚠️ This site provides reference information based on public data. You are solely responsible for your investment decisions and any losses.<br>Data sources: Korea Financial Supervisory Service DART · Korea Public Data Portal · Bank of Korea ECOS · US Federal Reserve FRED
+====
+<span class="dart-link" onclick="event.stopPropagation()">상세 →</span></a>
+--->
+<span class="dart-link" onclick="event.stopPropagation()">Details →</span></a>
+====
+공시 데이터 없음
+--->
+No filing data
+====
+국고채 3·5·10년과 회사채(AA-) 3년 대표금리, 장단기·신용 스프레드와 1년 추이를 한국은행 ECOS 데이터로 확인합니다.
+--->
+Benchmark Korean Treasury 3-, 5- and 10-year yields and the 3-year corporate (AA-) yield, term and credit spreads and a one-year trend, from Bank of Korea ECOS data.
+====
+채권 금리 | 머니파이널
+--->
+Bond Yields | MoneyFinal
+====
+채권 금리
+--->
+Bond Yields
+====
+<span class="card-title">스프레드</span>
+--->
+<span class="card-title">Spreads</span>
+====
+<span class="card-title">최근 영업일</span>
+--->
+<span class="card-title">Latest business day</span>
+====
+<span class="card-title">금리 추이</span>
+--->
+<span class="card-title">Yield trend</span>
+====
+1개월
+--->
+1 month
+====
+3개월
+--->
+3 months
+====
+6개월
+--->
+6 months
+====
+국고채 금리와 회사채 금리
+--->
+Treasury yields and corporate yields
+====
+국고채는 정부가 발행하는 채권이라 신용위험이 거의 없어 시장 금리의 기준으로 쓰입니다. 만기가 길수록 보통 금리가 높고, 3년물은 기준금리 전망을, 10년물은 장기 경기·물가 기대를 더 많이 반영합니다.
+--->
+Treasury bonds are issued by the government and carry almost no credit risk, so they serve as the benchmark for market rates. Longer maturities usually carry higher yields; the 3-year reflects policy-rate expectations and the 10-year reflects long-term growth and inflation expectations.
+====
+장단기 스프레드
+--->
+Term spread
+====
+10년물 금리에서 3년물 금리를 뺀 값입니다. 값이 줄어들거나 음수(장단기 금리 역전)가 되면 시장이 향후 경기 둔화나 금리 인하를 예상한다는 신호로 해석되기도 하지만, 항상 들어맞는 것은 아닙니다.
+--->
+The 10-year yield minus the 3-year yield. When it narrows or turns negative (an inverted yield curve), it is sometimes read as a sign that markets expect slower growth or rate cuts, though it is not always right.
+====
+신용 스프레드
+--->
+Credit spread
+====
+회사채(AA-) 3년물 금리에서 국고채 3년물 금리를 뺀 값으로, 기업이 국채보다 더 얹어 줘야 하는 금리입니다. 커지면 기업 자금조달 여건이 나빠지고 있다는 뜻으로 볼 수 있습니다.
+--->
+The 3-year corporate (AA-) yield minus the 3-year Treasury yield, i.e. the extra yield companies must pay over government debt. When it widens, corporate funding conditions may be worsening.
+====
+⚠️ 한국은행 ECOS 시장금리(일별) 통계의 대표금리이며 개별 채권 종목의 시세·수익률이 아닙니다. 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.<br>데이터 출처: 한국은행 경제통계시스템(ECOS) · 게시 지연으로 최신 영업일이 반영되지 않을 수 있습니다.
+--->
+⚠️ These are benchmark yields from the Bank of Korea ECOS daily market-rate statistics, not quotes or yields of individual bonds. You are solely responsible for your investment decisions and any losses.<br>Source: Bank of Korea Economic Statistics System (ECOS) · Due to publication delays the latest business day may not be reflected.
+====
+국고채 3년
+--->
+Treasury 3Y
+====
+국고채 5년
+--->
+Treasury 5Y
+====
+국고채 10년
+--->
+Treasury 10Y
+====
+회사채 AA- 3년
+--->
+Corporate AA- 3Y
+====
+<span class="${cls(d)}">전일대비 ${bp(d)}</span>
+--->
+<span class="${cls(d)}">vs previous day ${bp(d)}</span>
+====
+기준
+--->
+⎵as of
+====
+장단기 스프레드 (10년-3년)
+--->
+Term spread (10Y − 3Y)
+====
+국고채 5년-3년
+--->
+Treasury 5Y − 3Y
+====
+신용 스프레드 (회사채AA- 3년-국고채 3년)
+--->
+Credit spread (corporate AA- 3Y − Treasury 3Y)
+====
+채권 데이터 없음
+--->
+No bond data
+====
+비트코인, 이더리움 등 시가총액 상위 20개 암호화폐의 실시간 시세·시가총액·거래량·24시간/7일 변동률을 한 화면에서 확인.
+--->
+Live prices, market cap, volume and 24-hour and 7-day changes for the top 20 cryptocurrencies by market cap, including Bitcoin and Ethereum, on one screen.
+====
+암호화폐 시세 | 머니파이널
+--->
+Cryptocurrency Prices | MoneyFinal
+====
+암호화폐 시세
+--->
+Cryptocurrency Prices
+====
+시가총액 상위 20개 암호화폐 실시간 시세
+--->
+Live prices of the top 20 cryptocurrencies by market cap
+====
+시가총액 상위 20개 코인의 실시간 시세·시가총액·거래량·변동률
+--->
+Live prices, market cap, volume and changes of the top 20 coins by market cap
+====
+비트코인
+--->
+Bitcoin
+====
+이더리움
+--->
+Ethereum
+====
+전체 시가총액 (상위 20개 합)
+--->
+Total market cap (top 20 combined)
+====
+코인 이름/심볼 검색
+--->
+Search coin name or symbol
+====
+코인
+--->
+Coin
+====
+가격
+--->
+Price
+====
+거래량(24h)
+--->
+Volume (24h)
+====
+⚠️ 본 페이지는 CoinGecko 공개 API 기준 참고용 시세이며, 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 실제 거래소 시세와 소폭 차이가 있을 수 있습니다.
+--->
+⚠️ This page shows reference prices based on the CoinGecko public API, and you are solely responsible for your investment decisions and any losses. Prices may differ slightly from actual exchanges.
+====
+업데이트:
+--->
+Updated:
+====
+국내 주식을 N년 전에 샀다면 지금 얼마일까? 월말 종가 기준 과거 수익률, 연환산 수익률, 최대 낙폭, 기간별 랭킹과 재무 추이를 확인합니다.
+--->
+If you had bought a Korean stock N years ago, what would it be worth now? See past returns based on month-end closes, annualized returns, maximum drawdown, period rankings and financial trends.
+====
+주식 투자 시뮬레이터 | 머니파이널
+--->
+Stock Investment Simulator | MoneyFinal
+====
+주식 투자 시뮬레이터
+--->
+Stock Investment Simulator
+====
+투자 시뮬레이션
+--->
+Investment simulation
+====
+기간별 랭킹
+--->
+Period rankings
+====
+재무 스크리너
+--->
+Financial screener
+====
+가정 시나리오
+--->
+What-if scenario
+====
+종목 (이름 또는 코드)
+--->
+Stock (name or code)
+====
+시작 시점
+--->
+Start date
+====
+투자 방식
+--->
+Investment method
+====
+일시금
+--->
+Lump sum
+====
+매월 적립
+--->
+Monthly contribution
+====
+투자금(원)
+--->
+Amount invested (KRW)
+====
+배당
+--->
+Dividends
+====
+미포함(가격수익률)
+--->
+Excluded (price return)
+====
+포함(재투자)
+--->
+Included (reinvested)
+====
+시뮬레이션
+--->
+Simulate
+====
+종목을 선택하고 시뮬레이션을 눌러 주세요
+--->
+Select a stock and click Simulate
+====
+많이 오른 종목
+--->
+Top gainers
+====
+많이 내린 종목
+--->
+Top decliners
+====
+<span class="card-title">재무제표 기준으로 종목 찾기</span><span class="sec-more" id="scr-asof"></span>
+--->
+<span class="card-title">Find stocks by financial statements</span><span class="sec-more" id="scr-asof"></span>
+====
+저PER·고ROE
+--->
+Low PER · high ROE
+====
+매출 성장
+--->
+Revenue growth
+====
+저부채·수익성
+--->
+Low debt · profitability
+====
+저PBR
+--->
+Low PBR
+====
+흑자 전환
+--->
+Turned profitable
+====
+조건 초기화
+--->
+Reset filters
+====
+ROE 최소(%)
+--->
+Min ROE (%)
+====
+영업이익률 최소(%)
+--->
+Min operating margin (%)
+====
+부채비율 최대(%)
+--->
+Max debt ratio (%)
+====
+PER 최대(배)
+--->
+Max PER (x)
+====
+PBR 최대(배)
+--->
+Max PBR (x)
+====
+매출 3년 연평균성장 최소(%)
+--->
+Min revenue 3-yr CAGR (%)
+====
+배당수익률 최소(%)
+--->
+Min dividend yield (%)
+====
+시가총액 최소(억원)
+--->
+Min market cap (₩100M)
+====
+흑자만
+--->
+Profitable only
+====
+적자→흑자 전환
+--->
+Loss to profit turnaround
+====
+🔗 조건 링크 복사
+--->
+🔗 Copy filter link
+====
+금융지주·은행·보험·증권사는 매출액과 부채비율이 일반 기업과 의미가 달라
+--->
+Financial holding companies, banks, insurers and brokerages report revenue and debt differently from ordinary companies, so these may show as
+====
+로 보이거나 값이 크게 나올 수 있으니 PER·PBR·ROE 위주로 보세요. 지주회사는 영업이익이 매출보다 커서 영업이익률을 비워 둡니다. 재무는 DART 연결 기준 최근 사업보고서(FY) 값이며, PER·PBR은 오늘 시가총액으로, 배당수익률은 최근 사업연도 보통주 주당 현금배당금을 오늘 주가로 나눠 계산했습니다. 이 화면은 조건에 맞는 종목을 나열할 뿐 매수 추천이 아닙니다.
+--->
+or look unusually large; focus on PER, PBR and ROE. Holding companies have operating income above revenue, so operating margin is left blank. Financials are from the latest annual report (FY) on a DART consolidated basis; PER and PBR use today’s market cap, and dividend yield divides the latest fiscal year’s per-share common cash dividend by today’s price. This screen only lists stocks that match the filters and is not a buy recommendation.
+====
+<span class="card-title">과거에 같은 조건으로 골랐다면 (과거 검증)</span>
+--->
+<span class="card-title">If you had picked with the same filters in the past (backtest)</span>
+====
+<span class="card-title">이익 성장과 목표 PER로 환산해 보기</span>
+--->
+<span class="card-title">Convert using earnings growth and a target PER</span>
+====
+현재 주가(원)
+--->
+Current price (KRW)
+====
+현재 EPS(원)
+--->
+Current EPS (KRW)
+====
+연 이익 성장률(%)
+--->
+Annual earnings growth (%)
+====
+기간(년)
+--->
+Period (years)
+====
+그때의 목표 PER(배)
+--->
+Target PER at that time (x)
+====
+이 계산은 <b>입력하신 가정을 곱해 보는 단순 산식</b>입니다. 예측이 아니며, 실제 이익과 PER은 크게 다를 수 있습니다. 현재 PER은 위 값으로 자동 계산됩니다.
+--->
+This is a <b>simple formula that multiplies the assumptions you enter</b>. It is not a forecast, and actual earnings and PER can differ greatly. The current PER is calculated automatically from the values above.
+====
+<b>계산 기준과 한계</b> · 월말 종가 기준이라 월중 등락(낙폭)은 반영되지 않습니다. 배당은 포함하지 않은 가격수익률입니다. 액면분할·병합은 상장주식수 변화로 추정해 보정했고(증자·감자·합병은 보정하지 않음) 보정이 틀릴 수 있습니다. 상장폐지 종목은 마지막으로 확인된 월말 종가까지만 반영합니다. 제공 데이터는 2020년 1월부터입니다. 과거 성과는 미래 수익을 보장하지 않으며, 특정 종목의 매수·매도를 권유하는 것이 아닙니다.
+--->
+<b>Basis and limits</b> · Month-end closing prices are used, so intra-month swings (drawdowns) are not reflected. Dividends are not included in price returns. Stock splits and reverse splits are adjusted by estimating from changes in listed shares (rights issues, capital reductions and mergers are not adjusted), and adjustments can be wrong. Delisted stocks are reflected only up to their last confirmed month-end close. Data starts in January 2020. Past performance does not guarantee future returns, and nothing here recommends buying or selling any stock.
+====
+⚠️ 본 시뮬레이터는 공공데이터(금융위원회 주식시세정보, DART)를 가공한 참고 정보이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다.
+--->
+⚠️ This simulator is reference information built from public data (Financial Services Commission stock price data and DART). You are solely responsible for your investment decisions and any losses.
+====
+0원
+--->
+₩0
+====
+시뮬레이터 데이터를 준비 중입니다
+--->
+Simulator data is being prepared
+====
+기준 ·
+--->
+⎵basis ·
+====
+1년 전
+--->
+1 year ago
+====
+3년 전
+--->
+3 years ago
+====
+5년 전
+--->
+5 years ago
+====
+최대(2020-01)
+--->
+Max (2020-01)
+====
+· 상장폐지
+--->
+· delisted
+====
+에 해당하는 종목이 없습니다
+--->
+⎵— no stock matches
+====
+월 적립금(원)
+--->
+Monthly contribution (KRW)
+====
+✅ 복사됨
+--->
+✅ Copied
+====
+종목을 먼저 선택해 주세요
+--->
+Please select a stock first
+====
+이 종목의 데이터가 없습니다
+--->
+No data for this stock
+====
+${esc(info[1])}는 ${mm(g[s.f])}부터 데이터가 있어 그 이후 시점을 선택해 주세요
+--->
+${esc(info[1])} has data only from ${mm(g[s.f])}, so choose a later start date
+====
+이 종목은 배당 데이터가 없어 가격수익률만 계산했습니다.
+--->
+This stock has no dividend data, so only price return was calculated.
+====
+배당 반영:
+--->
+Dividends included:
+====
+현금배당을 다음 해 4월 말에 받아 재투자한 것으로 가정(세금 제외).
+--->
+Assumes cash dividends are received at the end of April the following year and reinvested (taxes excluded).
+====
+<span class="badge">상장폐지 ·
+--->
+<span class="badge">Delisted ·
+====
+까지</span>
+--->
+⎵</span>
+====
+평가금액
+--->
+Market value
+====
+적립 평가금액
+--->
+Contribution market value
+====
+투자 원금
+--->
+Principal invested
+====
+총 납입금
+--->
+Total contributions
+====
+총 수익률
+--->
+Total return
+====
+기간
+--->
+Period
+====
+연환산 수익률
+--->
+Annualized return
+====
+년
+--->
+⎵yrs
+====
+최대 낙폭(월말 기준)
+--->
+Max drawdown (month-end basis)
+====
+기간 최고가 (월말)
+--->
+Period high (month-end)
+====
+${Math.round(hi.p).toLocaleString('ko-KR').replace(/,/g,'')}원<span class="badge">${mm(hi.d)}</span>
+--->
+₩${Math.round(hi.p).toLocaleString('ko-KR').replace(/,/g,'')}<span class="badge">${mm(hi.d)}</span>
+====
+기간 최저가 (월말)
+--->
+Period low (month-end)
+====
+${Math.round(lo.p).toLocaleString('ko-KR').replace(/,/g,'')}원<span class="badge">${mm(lo.d)}</span>
+--->
+₩${Math.round(lo.p).toLocaleString('ko-KR').replace(/,/g,'')}<span class="badge">${mm(lo.d)}</span>
+====
+지수 (같은 기간, 배당 제외)
+--->
+Index (same period, excl. dividends)
+====
+⚙️ 액면분할·병합 보정:
+--->
+⚙️ Split / reverse-split adjustment:
+====
+분할
+--->
+split
+====
+병합
+--->
+reverse split
+====
+(이전 주가를 환산해 표시)
+--->
+(earlier prices converted)
+====
+🔗 이 조건 링크 복사
+--->
+🔗 Copy link to these settings
+====
+<span><i style="background:${col('--accent')}"></i>평가금액</span>
+--->
+<span><i style="background:${col('--accent')}"></i>Market value</span>
+====
+<span><i style="background:${col('--text2')}"></i>같은 금액을 지수에 투자한 경우</span>
+--->
+<span><i style="background:${col('--text2')}"></i>Same amount invested in the index</span>
+====
+<span><i style="background:${col('--text2')}"></i>누적 납입금</span>
+--->
+<span><i style="background:${col('--text2')}"></i>Cumulative contributions</span>
+====
+<span class="card-title">주가 변화 분해</span>
+--->
+<span class="card-title">Share price change breakdown</span>
+====
+이 기간 시작 또는 끝 시점의 순이익이 적자라 PER로 나눠 볼 수 없습니다 (FY${fy0}: ${r0[2]==null?'-':krwE(r0[2]*1e6)}, FY${fy1}: ${r1[2]==null?'-':krwE(r1[2]*1e6)}).
+--->
+Net income at the start or end of this period was a loss, so it cannot be divided into PER terms (FY${fy0}: ${r0[2]==null?'-':krwE(r0[2]*1e6)}, FY${fy1}: ${r1[2]==null?'-':krwE(r1[2]*1e6)}).
+====
+<span class="card-title">시가총액 변화
+--->
+<span class="card-title">Market cap change
+====
+순이익 변화 × PER 변화</span>
+--->
+= net income change × PER change</span>
+====
+시가총액 변화
+--->
+Market cap change
+====
+순이익 변화 (FY${fy0}→FY${fy1})
+--->
+Net income change (FY${fy0}→FY${fy1})
+====
+PER 변화
+--->
+PER change
+====
+${per0.toFixed(1)}배 → ${per1.toFixed(1)}배
+--->
+${per0.toFixed(1)}x → ${per1.toFixed(1)}x
+====
+PER 배수 변화율
+--->
+PER multiple change
+====
+오른 몫을
+--->
+the gain
+====
+움직인 몫을
+--->
+the move
+====
+나눠 보면 <b>이익이
+--->
+Splitting it up, the result is <b>the earnings
+====
+늘어난
+--->
+growth
+====
+줄어든
+--->
+decline
+====
+효과 ${pct(nir-1,0)}</b>와 <b>시장이 이익 1원에 매기는 배수(PER)가
+--->
+effect ${pct(nir-1,0)}</b> multiplied by <b>the effect of the multiple (PER) the market puts on each won of earnings
+====
+높아진
+--->
+rising
+====
+낮아진
+--->
+falling
+====
+효과 ${pct(perr-1,0)}</b>가 곱해진 결과입니다. 시가총액 기준이라 증자·자사주 소각으로 주식 수가 바뀐 경우 주가 수익률과 다를 수 있고, 순이익은 해당 사업연도 연결 기준(공시 시점 반영해 시작 ${g[si].slice(0,7)}은 FY${fy0}, 끝은 FY${fy1})입니다.
+--->
+effect ${pct(perr-1,0)}</b>. It is based on market cap, so it can differ from the share price return if the share count changed through rights issues or buyback cancellations; net income is the consolidated figure for the fiscal year (reflecting filing dates: FY${fy0} for the start ${g[si].slice(0,7)} and FY${fy1} for the end).
+====
+<span class="card-title">연결 재무 추이 (DART 사업보고서)</span>
+--->
+<span class="card-title">Consolidated financial trend (DART business reports)</span>
+====
+연도
+--->
+Year
+====
+자본
+--->
+Equity
+====
+순이익·ROE는 지배주주 순이익과 지배주주 지분 기준입니다(해당 값이 없는 종목은 연결 당기순이익). 위 재무가 주가 변화와 얼마나 맞물렸는지는 매출·순이익 추이와 위 주가 차트를 나란히 비교해 보세요.
+--->
+Net income and ROE are based on net income and equity attributable to owners of the parent (consolidated net income for stocks without those values). To see how the financials moved with the share price, compare the revenue and net income trend with the price chart above.
+====
+${y}년
+--->
+${y}
+====
+랭킹 데이터 없음
+--->
+No ranking data
+====
+대상 종목
+--->
+Stocks covered
+====
+${st.count.toLocaleString('ko-KR')}개
+--->
+${st.count.toLocaleString('ko-KR')}
+====
+수익률 중앙값
+--->
+Median return
+====
+원금 손실 종목 비율
+--->
+Share of stocks with a loss of principal
+====
+그중 상장폐지
+--->
+of which delisted
+====
+코스피 지수
+--->
+KOSPI index
+====
+코스닥 지수
+--->
+KOSDAQ index
+====
+시작가
+--->
+Start price
+====
+수익률
+--->
+Return
+====
+연환산
+--->
+Annualized
+====
+<span class="badge">상장폐지</span>
+--->
+<span class="badge">Delisted</span>
+====
+${Math.round(r[3])}원
+--->
+₩${Math.round(r[3])}
+====
+${Math.round(r[4])}원
+--->
+₩${Math.round(r[4])}
+====
+<b>${d.start} → ${d.end}</b> 월말 종가 기준, 시작 시점 시가총액 ${d.minMcap.toLocaleString('ko-KR').replace(/,/g,'')}억원 이상 종목입니다. 상위·하위 ${rows.length}개만 표시합니다. 이미 오른 종목을 나열한 사후 결과이며 앞으로의 수익을 뜻하지 않습니다. 상장폐지 종목은 마지막 월말 종가까지 반영했습니다.
+--->
+<b>${d.start} → ${d.end}</b> based on month-end closes, for stocks with a market cap of at least ₩${d.minMcap.toLocaleString('ko-KR').replace(/,/g,'')}00M at the start. Only the top and bottom ${rows.length} are shown. This lists stocks that had already risen after the fact and does not imply future returns. Delisted stocks are included up to their last month-end close.
+====
+값을 입력해 주세요 (EPS는 양수)
+--->
+Enter values (EPS must be positive)
+====
+현재 PER
+--->
+Current PER
+====
+${cur.toFixed(1)}배
+--->
+${cur.toFixed(1)}x
+====
+${y}년 뒤 EPS
+--->
+EPS after ${y} years
+====
+환산 주가
+--->
+Converted share price
+====
+현재 대비 / 연환산
+--->
+vs current / annualized
+====
+주가 변화
+--->
+Price change
+====
+<b>이익 변화 ${pct(Math.pow(1+g,y)-1,0)}</b> × <b>PER 변화 ${pct(per/cur-1,0)}</b>. 이익이 늘어도 PER이 낮아지면 주가는 덜 오르거나 내릴 수 있습니다.
+--->
+<b>Earnings change ${pct(Math.pow(1+g,y)-1,0)}</b> × <b>PER change ${pct(per/cur-1,0)}</b>. Even if earnings grow, a lower PER can make the price rise less or fall.
+====
+연결 재무 ·
+--->
+Consolidated financials ·
+====
+개 종목(시총 상위)
+--->
+⎵stocks (top by market cap)
+====
+조건에 맞는 종목 <b>${rows.length}개</b> / ${SCR.rows.length}개 (상위 100개 표시) · 정렬: 열 제목을 누르세요
+--->
+<b>${rows.length}</b> of ${SCR.rows.length} stocks match (top 100 shown) · Sort: click a column header
+====
+매출 3년 성장
+--->
+Revenue 3-yr growth
+====
+1년 주가
+--->
+1-yr price
+====
+3년 주가
+--->
+3-yr price
+====
+과거 검증 데이터 없음
+--->
+No backtest data
+====
+<span style="color:${clr(d.med)};font-weight:700">${pct(d.med,0)}</span><br><small style="color:var(--text2)">${d.n}개 · 전체 ${pct(a.med,0)}</small>
+--->
+<span style="color:${clr(d.med)};font-weight:700">${pct(d.med,0)}</span><br><small style="color:var(--text2)">${d.n} stocks · all ${pct(a.med,0)}</small>
+====
+조건
+--->
+Filter
+====
+${y}년 4월 말<br><small>(${P._all.years[y].yrs}년 보유)</small>
+--->
+End of April ${y}<br><small>(held ${P._all.years[y].yrs} yrs)</small>
+====
+각 칸은 그해 4월 말, <b>직전 사업연도 재무와 그때의 시가총액</b>으로 조건에 맞는 종목을 골랐다고 가정하고 <b>오늘까지의 주가 수익률 중앙값</b>(아래 작은 글씨: 종목 수 · 같은 풀 전체의 중앙값)을 계산한 값입니다. 보유 기간이 칸마다 달라 칸끼리 직접 비교할 수 없습니다.<br>⚠️ <b>한계</b>: 대상은 ${esc(BT.universe)}입니다. 풀을 오늘이 아니라 <b>그 시점의 시가총액</b>으로 만들고 상장폐지 종목도 마지막 월말 종가까지의 수익률로 넣어 생존 편향을 줄였지만, DART 재무를 찾지 못한 종목은 빠져 있어 일부 편향이 남을 수 있습니다. 사업보고서 공시 시점은 4월 말로 단순화했고, 배당과 거래비용은 반영하지 않았으며, 종목 수가 적은 칸은 우연의 영향이 큽니다. 같은 조건이 해마다 다른 결과를 보인다는 점을 보세요. 과거 결과는 미래 수익을 보장하지 않습니다.
+--->
+Each cell assumes you picked the stocks that matched the filter at the end of April that year using <b>the prior fiscal year’s financials and the market cap at that time</b>, and shows <b>the median share price return through today</b> (small print below: number of stocks · median of the whole pool). Holding periods differ by cell, so cells cannot be compared directly.<br>⚠️ <b>Limits</b>: the universe is ${esc(BT.universe)}. The pool is built from <b>market cap at that time</b> rather than today, and delisted stocks are included with returns up to their last month-end close to reduce survivorship bias, but stocks without matching DART financials are missing, so some bias may remain. The business report filing date is simplified to the end of April, dividends and trading costs are not reflected, and cells with few stocks are heavily affected by chance. Note that the same filter gives different results from year to year. Past results do not guarantee future returns.
+====
+계산기 모음 | 머니파이널
+--->
+Calculators | MoneyFinal
+====
+연봉 실수령액, 환율, 예적금 이자, 대출 상환, 부동산 복비·취득세, 평수, 로또 세금 등 재테크 계산기 모음.
+--->
+A collection of personal-finance calculators: Korean take-home pay, exchange rates, loan repayment, brokerage fees and acquisition tax on Korean real estate, floor-area conversion, lottery tax and more.
+====
+계산기 모음
+--->
+Calculators
+====
+재테크에 필요한 계산을 빠르게
+--->
+Quick calculations for personal finance
+====
+💼 소득·세금
+--->
+💼 Income & tax
+====
+연봉 실수령액 계산기
+--->
+Korean take-home pay calculator
+====
+2026년 4대보험 요율과 소득세를 반영해 월 실수령액을 계산합니다.
+--->
+Calculates monthly take-home pay with 2026 Korean social insurance rates and income tax.
+====
+프리랜서 원천징수세 계산기
+--->
+Freelancer withholding tax calculator
+====
+사업소득(3.3%)·기타소득(8.8%) 원천징수세와 실수령액을 비교합니다.
+--->
+Compares withholding tax and take-home pay for business income (3.3%) and other income (8.8%) in Korea.
+====
+🏦 금융
+--->
+🏦 Finance
+====
+예적금 이자 계산기
+--->
+Savings interest calculator
+====
+예금·적금 이자를 단리·월복리로 계산하고 세후 실수령액까지 확인합니다.
+--->
+Calculates deposit and savings interest with simple or monthly compounding and shows the after-tax amount.
+====
+배당금 계산기
+--->
+Dividend calculator
+====
+보유 주식의 연간 배당금과 세후 실수령액, 배당수익률을 계산합니다.
+--->
+Calculates annual dividends from the shares you hold, the after-tax amount and the dividend yield.
+====
+대출 이자·상환 계산기
+--->
+Loan interest and repayment calculator
+====
+원리금균등·원금균등·만기일시 방식별 월 상환액과 총 이자를 계산합니다.
+--->
+Calculates the monthly payment and total interest for equal-installment, equal-principal and bullet repayment.
+====
+환율 계산기
+--->
+Currency converter
+====
+최신 원달러 환율을 자동 반영해 외화·원화를 양방향으로 환산합니다.
+--->
+Converts between foreign currency and Korean won in both directions using the latest USD/KRW rate.
+====
+🔥 은퇴·파이어
+--->
+🔥 Retirement & FIRE
+====
+파이어(FIRE) 계산기
+--->
+FIRE calculator
+====
+FIRE 넘버, 은퇴 가능 나이, 코스트파이어 시점을 국민연금까지 반영해 계산합니다.
+--->
+Calculates your FIRE number, retirement age and Coast FIRE point, including the Korean National Pension.
+====
+🏠 부동산
+--->
+🏠 Real estate
+====
+부동산 복비·취득세 계산기
+--->
+Korean real estate commission and acquisition tax calculator
+====
+매매·전세·월세 중개보수 상한액과 취득세(다주택 중과 포함)를 계산합니다.
+--->
+Calculates the maximum brokerage fee for sales, jeonse and monthly rent in Korea and the acquisition tax (including surcharges for multiple homes).
+====
+평수 계산기 (평 ↔ ㎡)
+--->
+Floor area converter (pyeong ↔ ㎡)
+====
+평과 제곱미터를 양방향으로 변환합니다. 주요 평형 조견표 포함.
+--->
+Converts between pyeong and square meters in both directions, with a table of common sizes.
+====
+🎰 로또
+--->
+🎰 Lottery
+====
+로또 세금 계산기
+--->
+Lottery tax calculator
+====
+당첨금 세금(22%·33%)과 실수령액을 계산합니다.
+--->
+Calculates tax on winnings (22% and 33%) and the amount you receive.
+====
+로또 당첨 시뮬레이터
+--->
+Lottery simulator
+====
+내 번호로 최대 100만 회 가상 추첨을 돌려 등수별 당첨과 손익을 확인합니다.
+--->
+Runs up to 1 million virtual draws with your numbers to show winnings by rank and profit or loss.
+====
+📅 생활
+--->
+📅 Everyday
+====
+만 나이 계산기
+--->
+Korean age calculator
+====
+만 나이·연 나이·세는 나이와 다음 생일까지 남은 날을 계산합니다.
+--->
+Calculates international age, year-based age and Korean counting age, plus days until the next birthday.
+====
+기간·날짜 계산기
+--->
+Date and duration calculator
+====
+두 날짜 사이 기간과 특정일로부터 N일 후 날짜를 계산합니다.
+--->
+Calculates the period between two dates and the date N days from a given day.
+====
+만 나이 계산기 | 머니파이널
+--->
+Korean Age Calculator | MoneyFinal
+====
+생년월일로 만 나이, 연 나이, 세는 나이를 한 번에 계산합니다. 다음 생일까지 남은 날도 확인하세요.
+--->
+Calculates international age, year-based age and Korean counting age from a birth date in one go, and shows days until your next birthday.
+====
+만 나이 · 연 나이 · 세는 나이를 한 번에
+--->
+International age · year-based age · Korean counting age at once
+====
+생년월일
+--->
+Date of birth
+====
+기준일
+--->
+Reference date
+====
+만 나이
+--->
+International age
+====
+<span class="k">연 나이 (기준연도 − 출생연도)</span><span class="v" id="r-year"></span>
+--->
+<span class="k">Year-based age (reference year − birth year)</span><span class="v" id="r-year"></span>
+====
+<span class="k">세는 나이 (한국식)</span><span class="v" id="r-korean"></span>
+--->
+<span class="k">Korean counting age</span><span class="v" id="r-korean"></span>
+====
+<span class="k">다음 생일</span><span class="v" id="r-bday"></span>
+--->
+<span class="k">Next birthday</span><span class="v" id="r-bday"></span>
+====
+<span class="k">살아온 날</span><span class="v" id="r-days"></span>
+--->
+<span class="k">Days lived</span><span class="v" id="r-days"></span>
+====
+· 2023년 6월부터 법적·행정적 나이는 <b>만 나이</b>로 통일되었습니다.<br>
+  · 연 나이는 병역법·청소년보호법 등 일부 법령에서, 세는 나이는 일상 관습에서 사용됩니다.
+--->
+· Since June 2023, Korea’s legal and administrative age is the <b>international age</b> (man-nai).<br>
+  · Year-based age is used in some laws such as the Military Service Act and the Youth Protection Act, and Korean counting age is used in everyday custom.
+====
+세
+--->
+⎵yrs
+====
+일
+--->
+⎵days
+====
+기간·날짜 계산기 | 머니파이널
+--->
+Date and Duration Calculator | MoneyFinal
+====
+두 날짜 사이 기간(D-day), 특정일로부터 N일 후 날짜를 계산합니다.
+--->
+Calculates the period between two dates (D-day) and the date N days from a given day.
+====
+두 날짜 사이 기간 · N일 후 날짜
+--->
+Period between two dates · date N days from now
+====
+📅 두 날짜 사이 기간
+--->
+📅 Period between two dates
+====
+시작일
+--->
+Start date
+====
+종료일
+--->
+End date
+====
+➕ 특정일로부터 N일 후/전
+--->
+➕ N days after or before a date
+====
+일수
+--->
+Number of days
+====
+방향
+--->
+Direction
+====
+후 (+)
+--->
+After (+)
+====
+전 (−)
+--->
+Before (−)
+====
+월
+--->
+Mon
+====
+화
+--->
+Tue
+====
+수
+--->
+Wed
+====
+목
+--->
+Thu
+====
+금
+--->
+Fri
+====
+토
+--->
+Sat
+====
+약 ${y}년 ${m}개월 ${d}일 · ${Math.floor(abs/7).toLocaleString('ko-KR')}주 ${abs%7}일<br>
+--->
+About ${y} years ${m} months ${d} days · ${Math.floor(abs/7).toLocaleString('ko-KR')} weeks ${abs%7} days<br>
+====
+시작일 포함 시(D-day 방식) <b>${(abs+1).toLocaleString('ko-KR')}일째</b>
+--->
+Counting the start date (D-day style): <b>day ${(abs+1).toLocaleString('ko-KR')}</b>
+====
+기준일로부터 ${n.toLocaleString('ko-KR')}일
+--->
+${n.toLocaleString('ko-KR')} days from the reference date
+====
+후
+--->
+after
+====
+전
+--->
+before
+====
+<br>기준일을 1일째로 세면(백일 등) <b>${fd(r2)}</b>
+--->
+<br>Counting the reference date as day 1 (like the 100th-day tradition): <b>${fd(r2)}</b>
+====
+배당금 계산기 (세후) | 머니파이널
+--->
+Dividend Calculator (After Tax) | MoneyFinal
+====
+보유 주식의 연간 배당금을 계산하고 배당소득세 15.4%를 반영한 세후 실수령액과 배당수익률을 확인하세요.
+--->
+Calculate the annual dividends from your shares and see the after-tax amount with Korea’s 15.4% dividend income tax and the dividend yield.
+====
+배당금 계산기 (세후)
+--->
+Dividend Calculator (After Tax)
+====
+보유 주식의 연간 배당금과 세후 실수령액 계산
+--->
+Annual dividends from your shares and the after-tax amount
+====
+보유 주식 수 (주)
+--->
+Shares held
+====
+주당 배당금 (원, 연간·세전)
+--->
+Dividend per share (KRW, annual, pre-tax)
+====
+매수 단가 (원, 선택)
+--->
+Purchase price (KRW, optional)
+====
+일반과세 (15.4%)
+--->
+Standard tax (15.4%)
+====
+비과세 (0%)
+--->
+Tax-free (0%)
+====
+세후 실수령 배당금 (연간)
+--->
+After-tax dividend income (annual)
+====
+<span class="k">세전 배당금 합계</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+--->
+<span class="k">Total pre-tax dividends</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+====
+<span class="k" id="r-tax-label">배당소득세</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+--->
+<span class="k" id="r-tax-label">Dividend income tax</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+====
+<span class="k">배당수익률 (세전, 매수단가 기준)</span><span class="v" id="r-yield"></span>
+--->
+<span class="k">Dividend yield (pre-tax, on purchase price)</span><span class="v" id="r-yield"></span>
+====
+⚠️ 본 계산기는 참고용 추정치입니다. 실제 배당금은 기업의 배당 정책·실적에 따라 매년 달라질 수 있습니다.<br>
+  · 일반과세: 배당소득세 14% + 지방소득세 1.4%
+--->
+⚠️ This calculator gives reference estimates. Actual dividends vary every year with the company’s dividend policy and earnings.<br>
+  · Standard tax: dividend income tax 14% + local income tax 1.4%
+====
+<b>15.4%</b> (원천징수)<br>
+  · 이자소득 + 배당소득 합계가 연 2천만원을 초과하면 금융소득종합과세 대상이 되어 다른 소득과 합산해 누진세율이 적용됩니다<br>
+  · 매수 단가를 입력하면 배당수익률(세전 기준)을 함께 계산합니다
+--->
+<b>15.4%</b> (withheld at source)<br>
+  · If interest and dividend income together exceed ₩20 million a year, you become subject to comprehensive financial income taxation and progressive rates apply on top of other income<br>
+  · If you enter a purchase price, the (pre-tax) dividend yield is calculated as well
+====
+배당소득세 (
+--->
+Dividend income tax (
+====
+배당 파이어 시뮬레이터 - ETF 월배당 은퇴 계산 | 머니파이널
+--->
+Dividend FIRE Simulator - Monthly-Dividend ETF Retirement Calculator | MoneyFinal
+====
+ETF 포트폴리오(국내·해외 혼합)로 얼마를 얼마나 투자해야 은퇴 가능한지, 은퇴 후 배당소득세·건강보험료를 뺀 월 실수령액까지 계산합니다.
+--->
+Calculate how much you need to invest, and for how long, to retire on an ETF portfolio (Korean and overseas mixed), including monthly take-home pay after dividend tax and health insurance premiums.
+====
+배당 파이어 시뮬레이터
+--->
+Dividend FIRE Simulator
+====
+ETF 포트폴리오로 은퇴 자금 도달 시점과 은퇴 후 세후 월 실수령액을 계산합니다.
+--->
+Calculate when you reach your retirement fund and the after-tax monthly income from an ETF portfolio.
+====
+본인 상황으로 조건을 바꿔가며, 실제 배당 이력 기반 세금부터 은퇴 후 자산 생존 확률까지 한 화면에서 확인합니다
+--->
+Change the conditions to your own situation and see everything from taxes based on actual dividend history to the survival probability of your assets in retirement on one screen
+====
+① ETF 포트폴리오
+--->
+① ETF portfolio
+====
++ ETF 추가
+--->
++ Add ETF
+====
+② 적립 설정
+--->
+② Contribution settings
+====
+초기 투자금 (원, 이미 보유 중인 자산 · 없으면 0)
+--->
+Initial investment (KRW, assets you already hold · 0 if none)
+====
+투자 기간
+--->
+Investment period
+====
+<span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">년</span>
+--->
+<span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">yrs</span>
+====
+<span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">개월</span>
+--->
+<span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text2);pointer-events:none">mo</span>
+====
+가정 연 가격상승률 (%)
+--->
+Assumed annual price growth (%)
+====
+배당 재투자
+--->
+Dividend reinvestment
+====
+재투자함
+--->
+Reinvest
+====
+재투자 안함(현금 보유)
+--->
+Do not reinvest (hold cash)
+====
+③ 은퇴 시점 자산
+--->
+③ Assets at retirement
+====
+빠른 선택
+--->
+Quick select
+====
+1억
+--->
+₩100M
+====
+3억
+--->
+₩300M
+====
+5억
+--->
+₩500M
+====
+10억
+--->
+₩1B
+====
+20억
+--->
+₩2B
+====
+은퇴 시점 평가금액 (원, 위 적립 시뮬레이션 결과 자동입력·수정 가능)
+--->
+Value at retirement (KRW; auto-filled from the contribution simulation above, editable)
+====
+건강보험료 유형
+--->
+Health insurance type
+====
+지역가입자
+--->
+Regional subscriber
+====
+직장가입자 (피부양자 유지 중)
+--->
+Employee subscriber (staying as a dependent)
+====
+④ 생존 시뮬레이션 설정
+--->
+④ Survival simulation settings
+====
+은퇴 기간 (년)
+--->
+Retirement period (years)
+====
+연 수익률 변동성 가정 (%, 표준편차)
+--->
+Assumed annual return volatility (%, standard deviation)
+====
+인플레이션 반영 (인출액 매년 증가)
+--->
+Adjust for inflation (withdrawals rise each year)
+====
+가정 물가상승률 (%, 연)
+--->
+Assumed inflation rate (%, annual)
+====
+시퀀스 리스크 시나리오 비교 보기
+--->
+Compare sequence-risk scenarios
+====
+🎲 다시 시뮬레이션
+--->
+🎲 Run again
+====
+적립 시뮬레이션 결과
+--->
+Contribution simulation results
+====
+투자기간 후 예상 평가금액
+--->
+Expected value after the investment period
+====
+<span class="k">월 총 투자금액 (포트폴리오 합계)</span><span class="v" id="r-monthly"></span>
+--->
+<span class="k">Total monthly investment (portfolio sum)</span><span class="v" id="r-monthly"></span>
+====
+<span class="k">총 납입원금</span><span class="v" id="r-principal"></span>
+--->
+<span class="k">Total principal contributed</span><span class="v" id="r-principal"></span>
+====
+<span class="k">가중평균 배당수익률 (현재 기준)</span><span class="v" id="r-yield"></span>
+--->
+<span class="k">Weighted average dividend yield (current)</span><span class="v" id="r-yield"></span>
+====
+<span class="k">국내 / 해외 비중</span><span class="v" id="r-mix"></span>
+--->
+<span class="k">Domestic / overseas weight</span><span class="v" id="r-mix"></span>
+====
+은퇴 후 월 캐시플로우
+--->
+Monthly cash flow in retirement
+====
+세후·건보료 차감 월 실수령액
+--->
+Monthly take-home after tax and health insurance premiums
+====
+배당은 매월 균등 지급된다고 가정한 월평균입니다
+--->
+Monthly average assuming dividends are paid evenly each month
+====
+<span class="k">연간 세전 배당금 (국내+해외)</span><span class="v" id="rt-gross" style="color:var(--green)"></span>
+--->
+<span class="k">Annual pre-tax dividends (domestic + overseas)</span><span class="v" id="rt-gross" style="color:var(--green)"></span>
+====
+<span class="k">국내 배당 원천징수 (15.4%)</span><span class="v" id="rt-tax-kr" style="color:var(--red)"></span>
+--->
+<span class="k">Domestic dividend withholding (15.4%)</span><span class="v" id="rt-tax-kr" style="color:var(--red)"></span>
+====
+<span class="k">해외 배당 미국 원천징수 (15%)</span><span class="v" id="rt-tax-us" style="color:var(--red)"></span>
+--->
+<span class="k">Overseas dividend US withholding (15%)</span><span class="v" id="rt-tax-us" style="color:var(--red)"></span>
+====
+<span class="k" id="rt-comp-label">금융소득종합과세 추가분</span><span class="v" id="rt-comp" style="color:var(--red)"></span>
+--->
+<span class="k" id="rt-comp-label">Additional comprehensive financial income tax</span><span class="v" id="rt-comp" style="color:var(--red)"></span>
+====
+<span class="k" id="rt-hi-label">건강보험료 (연간)</span><span class="v" id="rt-hi" style="color:var(--red)"></span>
+--->
+<span class="k" id="rt-hi-label">Health insurance premiums (annual)</span><span class="v" id="rt-hi" style="color:var(--red)"></span>
+====
+<span class="k">연간 실수령액</span><span class="v" id="rt-net-yr"></span>
+--->
+<span class="k">Annual take-home pay</span><span class="v" id="rt-net-yr"></span>
+====
+은퇴 후 자산 생존 시뮬레이션 (몬테카를로)
+--->
+Asset survival simulation in retirement (Monte Carlo)
+====
+<span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>중앙값(50%)</span>
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>상위 10% / 하위 10% 구간</span>
+--->
+<span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:4px"></span>Median (50%)</span>
+      <span><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);margin-right:4px;opacity:.5"></span>Top 10% / bottom 10% range</span>
+====
+시퀀스 리스크 확인 (수익률 순서의 영향)
+--->
+Sequence-risk check (effect of return order)
+====
+같은 크기의 충격(연 수익률 -2×표준편차)이 은퇴 초반에 오는지 후반에 오는지에 따라 최종 잔액이 얼마나 달라지는지 보여줍니다. 충격이 없는 해는 모두 가정 평균 수익률로 동일합니다.
+--->
+Shows how much the final balance changes depending on whether a shock of the same size (annual return of −2 standard deviations) hits early or late in retirement. In years without a shock, the return is the assumed average.
+====
+시나리오
+--->
+Scenario
+====
+최종 잔액
+--->
+Final balance
+====
+<span><span style="display:inline-block;width:16px;height:2px;background:var(--text2);margin-right:4px;vertical-align:middle"></span>평년(충격 없음)</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--red);margin-right:4px;vertical-align:middle"></span>초반 충격</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--accent);margin-right:4px;vertical-align:middle"></span>후반 충격</span>
+--->
+<span><span style="display:inline-block;width:16px;height:2px;background:var(--text2);margin-right:4px;vertical-align:middle"></span>Normal (no shock)</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--red);margin-right:4px;vertical-align:middle"></span>Early shock</span>
+      <span><span style="display:inline-block;width:16px;height:2px;background:var(--accent);margin-right:4px;vertical-align:middle"></span>Late shock</span>
+====
+📊 실제 배당 이력 기반 연도별 세금 (백테스트)
+--->
+📊 Yearly taxes based on actual dividend history (backtest)
+====
+현재 포트폴리오의 비중만큼을 그 시점부터 계속 보유했다고 가정하고, 실제 지급된 배당 이력으로 계산합니다. 해외 82종·국내 15종(목록에서 선택한 경우만)은 실이력이 반영되고, 그 외 직접입력 종목은 제외됩니다.
+--->
+Assumes you held the current portfolio weights from that point on and calculates with actually paid dividends. Real history is used for the 82 overseas and 15 domestic ETFs (only when chosen from the list); manually entered holdings are excluded.
+====
+세전 배당금
+--->
+Pre-tax dividends
+====
+세금
+--->
+Tax
+====
+세후 순액
+--->
+After-tax net
+====
+데이터 로딩 중...
+--->
+Loading data...
+====
+⚠️ 본 계산기는 참고용 추정치이며 세무·건강보험 상담을 대체하지 않습니다.<br>
+  · 해외(미국 등) ETF는 실제 배당 이력·프로필(<a href="dividend-etf.html" style="color:var(--accent)">배당ETF</a> 데이터)에서 배당수익률을 자동 반영하고, 국내 ETF는 실시간 데이터 소스가 아직 없어 직접 입력한 수익률을 사용합니다.<br>
+  · 적립 시뮬레이션은
+--->
+⚠️ This calculator gives reference estimates and does not replace tax or health insurance advice.<br>
+  · For overseas (US and other) ETFs, the dividend yield is applied automatically from actual dividend history and profiles (<a href="dividend-etf.html" style="color:var(--accent)">Dividend ETF</a> data); for Korean ETFs there is no live data source yet, so the yield you enter is used.<br>
+  · The contribution simulation assumes
+====
+가격상승률 + 배당수익률
+--->
+price growth + dividend yield
+====
+을 총수익률로 보고 매월 복리 성장한다고 가정합니다 (배당 재투자 시). 실제로는 시장 변동성에 따라 큰 편차가 있을 수 있습니다.<br>
+  · 금융소득(이자+배당) 합계가 연 2,000만원을 초과하면 초과분에 대해 종합소득세 누진세율이 적용됩니다. 해외 배당은 이미 낸 미국 원천징수세를 외국납부세액공제로 근사 반영했습니다. 다른 종합소득(근로소득 등)이 있으면 세율 구간이 달라질 수 있습니다.<br>
+  · 건강보험료(지역가입자)는 <b>소득 기준만 반영한 간이 추정치</b>입니다. 실제 지역가입자 보험료는 재산·자동차 점수가 추가로 반영되어 이 추정치보다 높을 수 있습니다. 피부양자는 금융소득이 연 2,000만원을 넘으면 자격을 잃고 지역가입자로 전환됩니다.<br>
+  · 몬테카를로 시뮬레이션은 매년 수익률이
+--->
+is the total return and grows with monthly compounding (when dividends are reinvested). Actual results can vary widely with market volatility.<br>
+  · If financial income (interest + dividends) exceeds ₩20 million a year, progressive comprehensive income tax rates apply to the excess. US withholding already paid on overseas dividends is approximated as a foreign tax credit. If you have other comprehensive income (such as salary), your tax bracket may differ.<br>
+  · Health insurance premiums (regional subscriber) are a <b>simplified estimate based on income only</b>. Actual regional premiums also factor in property and vehicle scores and may be higher than this estimate. A dependent loses eligibility when financial income exceeds ₩20 million a year and switches to a regional subscriber.<br>
+  · The Monte Carlo simulation assumes each year’s return follows
+====
+가중평균 총수익률(평균) ± 변동성(표준편차)
+--->
+a normal distribution of weighted average total return (mean) ± volatility (standard deviation)
+====
+의 정규분포를 따른다고 가정하고 위에서 계산한 세후 연간 실수령액만큼 매년 인출하는 것을 1,000회 반복합니다.
+--->
+and repeats 1,000 times, withdrawing the after-tax annual take-home amount calculated above each year.
+====
+인플레이션 반영
+--->
+Adjust for inflation
+====
+을 켜면 인출액이 매년 가정 물가상승률만큼 늘어난다고 계산합니다(꺼져 있으면 명목 금액 고정).<br>
+  ·
+--->
+increases withdrawals each year by the assumed inflation rate (nominal amount fixed when off).<br>
+  ·
+====
+시퀀스 리스크 시나리오 비교
+--->
+Compare sequence-risk scenarios
+====
+는 같은 크기의 수익률 충격(-2×표준편차)이 은퇴 초반 vs 후반에 오는 경우를 비교해, 동일한 평균 수익률이라도 나쁜 해가 언제 오느냐에 따라 최종 잔액이 크게 달라질 수 있음을 보여주는 단순화된 결정론적 시나리오입니다(실제 몬테카를로 확률 계산과는 별개).<br>
+  · 국내 ETF는 15종 목록에서 선택하면 실제 분배금 이력(Yahoo Finance)이 반영되고, 목록에 없는 종목은
+--->
+is a simplified deterministic scenario that compares a return shock of the same size (−2 standard deviations) arriving early versus late in retirement, showing that with the same average return the final balance can differ greatly depending on when the bad year comes (separate from the actual Monte Carlo probability calculation).<br>
+  · For Korean ETFs, picking from the list of 15 applies actual distribution history (Yahoo Finance); for stocks not on the list, you must enter the yield by hand with
+====
+으로 수익률을 손으로 넣어야 합니다.
+--->
+⎵to enter the yield manually.
+====
+억원
+--->
+⎵B KRW (hundreds of millions)
+====
+TIGER 미국배당다우존스
+--->
+TIGER US Dividend Dow Jones
+====
+SOL 미국배당다우존스
+--->
+SOL US Dividend Dow Jones
+====
+ACE 미국배당다우존스
+--->
+ACE US Dividend Dow Jones
+====
+KODEX 미국배당다우존스
+--->
+KODEX US Dividend Dow Jones
+====
+KODEX 미국배당커버드콜액티브
+--->
+KODEX US Dividend Covered Call Active
+====
+TIGER 리츠부동산인프라
+--->
+TIGER REITs Real Estate Infrastructure
+====
+ACE 미국빅테크TOP7 Plus
+--->
+ACE US Big Tech TOP7 Plus
+====
+TIGER 미국S&P500배당귀족
+--->
+TIGER US S&P500 Dividend Aristocrats
+====
+TIGER 은행고배당플러스TOP10
+--->
+TIGER Bank High Dividend Plus TOP10
+====
+PLUS 고배당주
+--->
+PLUS High Dividend Stocks
+====
+KODEX 고배당주
+--->
+KODEX High Dividend Stocks
+====
+KODEX 배당가치
+--->
+KODEX Dividend Value
+====
+TIGER 코스피고배당
+--->
+TIGER KOSPI High Dividend
+====
+RISE 고배당
+--->
+RISE High Dividend
+====
+SOL 금융지주플러스고배당
+--->
+SOL Financial Holdings Plus High Dividend
+====
++ 직접 입력
+--->
++ Enter manually
+====
+(국내주식형)
+--->
+(Korean equity fund)
+====
+검색 결과 없음
+--->
+No results
+====
++ 목록에 없는 종목 직접 입력
+--->
++ Enter a holding not on the list
+====
+해외
+--->
+Overseas
+====
+국내
+--->
+Domestic
+====
+티커/종목명 검색
+--->
+Search ticker or name
+====
+ETF명 직접 입력
+--->
+Enter ETF name
+====
+삭제
+--->
+Delete
+====
+배당수익률 (%)
+--->
+Dividend yield (%)
+====
+월 투자액 (원)
+--->
+Monthly investment (KRW)
+====
+포트폴리오와 은퇴 시점 평가금액을 입력하면 실제 배당 이력으로 계산됩니다
+--->
+Enter a portfolio and the value at retirement to calculate with actual dividend history
+====
+실제 배당 이력이 있는 ETF(해외 82종 또는 국내 15종)를 포트폴리오에 추가하면 백테스트를 볼 수 있습니다
+--->
+Add ETFs with actual dividend history (82 overseas or 15 Korean) to your portfolio to see the backtest
+====
+배당 이력 데이터 수집 중입니다
+--->
+Dividend history data is being collected
+====
+원천징수 ${wonMan(withheld)}
+--->
+Withholding ${wonMan(withheld)}
+====
++ 종합과세 추가
+--->
++ comprehensive tax add-on
+====
+현재 포트폴리오의 가중평균 배당수익률(${s.weightedYield.toFixed(2)}%)을 은퇴 시점 평가금액에 그대로 적용한 추정치입니다
+--->
+An estimate applying the portfolio’s weighted average dividend yield (${s.weightedYield.toFixed(2)}%) as is to the value at retirement
+====
+추정(현재 가정)
+--->
+Estimate (current assumptions)
+====
+합계(실이력)
+--->
+Total (actual history)
+====
+개월
+--->
+⎵months
+====
+후, 연 총수익률
+--->
+later, assuming an annual total return of
+====
+% 가정 (가격상승
+--->
+% (price growth
+====
++ 배당재투자
+--->
++ dividend reinvestment
+====
+물가상승률
+--->
+inflation
+====
+% 반영 시, 오늘 화폐가치로는 약
+--->
+% applied, roughly
+====
+금융소득종합과세 추가분
+--->
+Comprehensive financial income tax add-on
+====
+금융소득종합과세 추가분 (2천만원 초과분)
+--->
+Comprehensive financial income tax add-on (on the amount over ₩20 million)
+====
+금융소득종합과세 (2천만원 이하, 해당없음)
+--->
+Comprehensive financial income tax (₩20 million or less, not applicable)
+====
+⚠️ 금융소득이 연 2,000만원을 초과해 피부양자 자격을 잃고 지역가입자로 전환됩니다. 아래 금액은 전환 후 지역가입자 추정 보험료입니다.
+--->
+⚠️ Financial income exceeds ₩20 million a year, so dependent status is lost and you switch to a regional subscriber. The amount below is the estimated premium after switching to regional subscriber.
+====
+✅ 금융소득이 연 2,000만원 이하라 피부양자 자격을 유지할 수 있어 건강보험료가 발생하지 않습니다.
+--->
+✅ Financial income is ₩20 million a year or less, so you can keep dependent status and pay no health insurance premium.
+====
+건강보험료 (연간,
+--->
+Health insurance premiums (annual,
+====
+직장 피부양자
+--->
+employee dependent
+====
+(물가상승률 반영해 인출액 매년 증가)
+--->
+(withdrawals rise each year with inflation)
+====
+년 동안, 매년 세후
+--->
+years, withdrawing after-tax
+====
+을 인출한다고 가정
+--->
+each year (assumption)
+====
+평년(충격 없음)
+--->
+Normal (no shock)
+====
+초반(1년차) 충격
+--->
+Early (year 1) shock
+====
+후반(마지막 해) 충격
+--->
+Late (final year) shock
+====
+파이어(FIRE) 계산기 - 은퇴 가능 나이 | 머니파이널
+--->
+FIRE Calculator - When Can You Retire | MoneyFinal
+====
+현재 나이·순자산·저축액으로 FIRE 넘버, 은퇴 가능 나이, 코스트파이어 시점을 계산합니다. 국민연금 반영, 한국형 안전인출률 안내 포함.
+--->
+Calculate your FIRE number, retirement age and Coast FIRE point from current age, net worth and savings. Includes the Korean National Pension and a guide to Korea-specific safe withdrawal rates.
+====
+현재 나이·순자산·저축액으로 FIRE 넘버, 은퇴 가능 나이, 코스트파이어 시점을 계산합니다.
+--->
+Calculate your FIRE number, retirement age and Coast FIRE point from current age, net worth and savings.
+====
+FIRE 넘버 · 은퇴 가능 나이 · 코스트파이어 계산 (실질가치 기준)
+--->
+FIRE number · retirement age · Coast FIRE (in real terms)
+====
+현재 나이 (세)
+--->
+Current age (years)
+====
+현재 순자산 (원)
+--->
+Current net worth (KRW)
+====
+월 저축액 (원)
+--->
+Monthly savings (KRW)
+====
+은퇴 후 월 지출 목표 (원)
+--->
+Target monthly spending in retirement (KRW)
+====
+예상 연 투자수익률 (%)
+--->
+Expected annual investment return (%)
+====
+물가상승률 (%)
+--->
+Inflation rate (%)
+====
+안전인출률 SWR (%)
+--->
+Safe withdrawal rate SWR (%)
+====
+국민연금 예상 월 수령액 (원, 선택)
+--->
+Expected monthly National Pension (KRW, optional)
+====
+국민연금 수령 시작 나이 (선택)
+--->
+National Pension start age (optional)
+====
+계산하기
+--->
+Calculate
+====
+FIRE Number (필요 은퇴자산)
+--->
+FIRE Number (required retirement assets)
+====
+오늘 기준 실질가치
+--->
+Real value in today’s money
+====
+<span class="k">은퇴 가능 나이</span><span class="v" id="r-age"></span>
+--->
+<span class="k">Retirement age</span><span class="v" id="r-age"></span>
+====
+<span class="k">코스트파이어 시점</span><span class="v" id="r-coast"></span>
+--->
+<span class="k">Coast FIRE point</span><span class="v" id="r-coast"></span>
+====
+<span class="k">목표 월 지출 (연 환산)</span><span class="v" id="r-annual-exp"></span>
+--->
+<span class="k">Target monthly spending (annualized)</span><span class="v" id="r-annual-exp"></span>
+====
+연도별 자산 성장 추이
+--->
+Net worth growth by year
+====
+<span><span class="legend-dot" style="background:var(--green)"></span>예상 순자산</span>
+    <span><span class="legend-dot" style="background:var(--accent)"></span>FIRE Number</span>
+--->
+<span><span class="legend-dot" style="background:var(--green)"></span>Projected net worth</span>
+    <span><span class="legend-dot" style="background:var(--accent)"></span>FIRE Number</span>
+====
+연도별 상세표 펼치기
+--->
+Expand year-by-year table
+====
+나이
+--->
+Age
+====
+예상 순자산
+--->
+Projected net worth
+====
+⚠️ 참고용 추정치입니다. 모든 금액은 물가상승률을 반영한 <b>오늘 기준 실질가치</b>로 계산되며, 월 저축액·목표 지출·국민연금 수령액은 은퇴 시점까지 실질가치로 동일하게 유지된다고 가정합니다.<br>
+  · FIRE Number
+--->
+⚠️ These are reference estimates. All amounts are calculated as <b>real value in today’s money</b> after inflation, and monthly savings, target spending and National Pension payments are assumed to stay the same in real terms until retirement.<br>
+  · FIRE Number
+====
+연간 지출 목표 ÷ 안전인출률(SWR). 흔히 알려진
+--->
+Annual spending target ÷ safe withdrawal rate (SWR). The well-known
+====
+4% 룰
+--->
+4% rule
+====
+은 1998년 미국 트리니티 연구 기준이며, 한국은 국민연금·건강보험료 등 제도 차이와 원화 자산 변동성을 고려해 <b>3~3.5%의 보수적인 인출률</b>을 권장하는 의견이 많습니다.<br>
+  · 국민연금을 입력하면 수령 개시 전까지는 전액을, 개시 후에는 (목표 지출 − 국민연금)만 자산에서 인출한다고 가정한 2단계(브릿지) 모델로 계산합니다.<br>
+  · 은퇴 가능 나이는 예상 순자산이 해당 나이 시점 FIRE Number 이상이 되는 최초 시점이며, 코스트파이어 시점은 그 이후 추가 저축 없이 복리 성장만으로 은퇴 가능 나이 시점에 FIRE Number에 도달할 수 있는 최초 나이입니다.<br>
+  · FIRE 유형(Lean/Regular/Fat)은 커뮤니티에서 통용되는 월 지출 참고 기준(150만원 미만/150~350만원/350만원 초과)이며 절대적 기준은 아닙니다.
+--->
+comes from the 1998 US Trinity study; given differences in Korea such as the National Pension and health insurance premiums and the volatility of won assets, many recommend a <b>conservative withdrawal rate of 3–3.5%</b>.<br>
+  · If you enter a National Pension, a two-stage (bridge) model is used: the full amount is withdrawn from assets until payments begin, and afterward only (target spending − National Pension).<br>
+  · The retirement age is the first age at which projected net worth reaches the FIRE Number at that age, and the Coast FIRE point is the first age from which compounding alone, with no further savings, reaches the FIRE Number at the retirement age.<br>
+  · FIRE types (Lean/Regular/Fat) follow community rules of thumb for monthly spending (under ₩1.5 million / ₩1.5–3.5 million / over ₩3.5 million) and are not absolute standards.
+====
+100세 이내 미도달
+--->
+Not reached by age 100
+====
+세 (
+--->
+⎵(age
+====
+년 후)
+--->
+⎵years from now)
+====
+이미 달성
+--->
+Already achieved
+====
+<span class="badge coast">Coast FIRE 달성</span>
+--->
+<span class="badge coast">Coast FIRE achieved</span>
+====
+프리랜서 세금 계산기 - 사업소득 vs 기타소득 원천징수 비교 | 머니파이널
+--->
+Freelancer Tax Calculator - Business Income vs Other Income Withholding | MoneyFinal
+====
+프리랜서 사업소득(3.3%)과 기타소득(8.8%) 원천징수를 비교하고, 어느 쪽이 유리한지 계산합니다.
+--->
+Compare Korean withholding on freelancer business income (3.3%) and other income (8.8%) and see which is more favorable.
+====
+프리랜서 세금 계산기 - 사업소득 vs 기타소득 원천징수 비교
+--->
+Freelancer Tax Calculator - Business Income vs Other Income Withholding
+====
+프리랜서 세금 계산기
+--->
+Freelancer Tax Calculator
+====
+사업소득 vs 기타소득 원천징수 비교
+--->
+Business income vs other income withholding (Korea)
+====
+계약 금액 (지급 총액, 원)
+--->
+Contract amount (total payment, KRW)
+====
+사업소득 3.3%
+--->
+Business income 3.3%
+====
+소득세 3% + 지방소득세 0.3% · 계속·반복적 용역
+--->
+Income tax 3% + local income tax 0.3% · ongoing, repeated services
+====
+<span class="k">원천징수 세액</span><span class="v" id="b-tax" style="color:var(--red)"></span>
+--->
+<span class="k">Withholding tax</span><span class="v" id="b-tax" style="color:var(--red)"></span>
+====
+<span class="k">실수령액</span><span class="v net" id="b-net"></span>
+--->
+<span class="k">Take-home pay</span><span class="v net" id="b-net"></span>
+====
+기타소득 8.8%
+--->
+Other income 8.8%
+====
+필요경비 60% 인정 · 일시적·우발적 소득
+--->
+60% necessary expenses recognized · one-off or incidental income
+====
+<span class="k">기타소득금액 (지급액의 40%)</span><span class="v" id="o-base"></span>
+--->
+<span class="k">Other income amount (40% of payment)</span><span class="v" id="o-base"></span>
+====
+<span class="k">원천징수 세액 (22%)</span><span class="v" id="o-tax" style="color:var(--red)"></span>
+--->
+<span class="k">Withholding tax (22%)</span><span class="v" id="o-tax" style="color:var(--red)"></span>
+====
+<span class="k">실수령액</span><span class="v net" id="o-net"></span>
+--->
+<span class="k">Take-home pay</span><span class="v net" id="o-net"></span>
+====
+💡 어느 쪽이 유리할까?
+--->
+💡 Which is better?
+====
+⚠️ 원천징수는 <b>선납 개념</b>이며, 최종 세금은 다음 해 5월 종합소득세 신고로 정산됩니다.<br>
+  · 사업소득(3.3%): 계속·반복적으로 용역을 제공하는 경우. 필요경비를 실제 지출 또는 단순·기준경비율로 인정받습니다.<br>
+  · 기타소득(8.8%): 강연료·원고료 등 일시적·우발적 소득. 필요경비 60%가 자동 인정되며, 기타소득금액(경비 제외 후)이 건당 5만원 이하(지급액 125,000원 이하)면 과세최저한으로 원천징수하지 않습니다.<br>
+  · 기타소득금액 연 300만원 이하는 분리과세 선택 가능(종합소득 합산 제외)합니다.<br>
+  · 소득 유형은 계약 실질에 따라 결정되며 임의로 선택할 수 없습니다. 정확한 판단은 세무사와 상담하세요.
+--->
+⚠️ Withholding is a <b>prepayment</b>, and the final tax is settled in the comprehensive income tax return filed the following May.<br>
+  · Business income (3.3%): for services provided on an ongoing, repeated basis. Necessary expenses are recognized by actual spending or simplified or standard expense rates.<br>
+  · Other income (8.8%): one-off or incidental income such as lecture or manuscript fees. 60% necessary expenses are recognized automatically, and if the other income amount (after expenses) is ₩50,000 or less per case (payment of ₩125,000 or less), it falls under the minimum taxable threshold and no withholding applies.<br>
+  · You can choose separate taxation for other income of ₩3 million or less a year (excluded from comprehensive income).<br>
+  · The income type is decided by the substance of the contract and cannot be chosen freely. Consult a tax accountant for an exact determination.
+====
+0원 (과세최저한)
+--->
+₩0 (below the minimum taxable threshold)
+====
+금액을 입력해주세요.
+--->
+Please enter an amount.
+====
+지급액이 125,000원 이하이므로 기타소득이라면 <b>원천징수 세금이 없습니다</b> (과세최저한). 다만 소득 유형은 계약 실질로 결정됩니다.
+--->
+The payment is ₩125,000 or less, so as other income <b>there is no withholding tax</b> (minimum taxable threshold). The income type, however, is determined by the substance of the contract.
+====
+원천징수만 보면 3.3%(${won(bTax)})가 8.8%(${won(oTax)})보다 당장 떼이는 돈은 적습니다. 하지만 <b>최종 세금은 5월 종합소득세 신고에서 결정</b>됩니다 — 실제 경비가 60%보다 적다면 기타소득(경비 60% 자동 인정)이, 경비가 많거나 소득이 적어 환급받는 경우라면 사업소득이 유리할 수 있습니다.
+--->
+On withholding alone, 3.3% (${won(bTax)}) takes less money now than 8.8% (${won(oTax)}). But <b>the final tax is decided in the May comprehensive income tax return</b>: other income (60% expenses recognized automatically) can be better if your actual expenses are below 60%, while business income can be better if your expenses are high or your income is low enough to receive a refund.
+====
+환율 계산기 | 머니파이널
+--->
+Currency Converter | MoneyFinal
+====
+원달러 환율 자동 반영 환율 계산기. 달러(USD)·엔화(JPY)·유로(EUR)·위안(CNY)을 원화로 즉시 환산하고 환율을 직접 수정할 수 있습니다.
+--->
+A currency converter that applies the USD/KRW rate automatically. Instantly convert US dollars, Japanese yen, euros and Chinese yuan to Korean won, and edit the rate yourself.
+====
+달러는 최신 환율 자동 반영 · 환율 직접 수정 가능
+--->
+Dollar rate applied automatically · rate can be edited
+====
+통화
+--->
+Currency
+====
+🇺🇸 미국 달러 (USD)
+--->
+🇺🇸 US dollar (USD)
+====
+🇯🇵 일본 엔 (JPY, 100엔 기준)
+--->
+🇯🇵 Japanese yen (JPY, per 100 yen)
+====
+🇪🇺 유로 (EUR)
+--->
+🇪🇺 Euro (EUR)
+====
+🇨🇳 중국 위안 (CNY)
+--->
+🇨🇳 Chinese yuan (CNY)
+====
+기타 (직접 입력)
+--->
+Other (enter manually)
+====
+환율 (1달러당 원)
+--->
+Exchange rate (KRW per 1 dollar)
+====
+외화 금액 (USD)
+--->
+Foreign amount (USD)
+====
+원화 금액 (KRW)
+--->
+Korean won amount (KRW)
+====
+⚠️ 미국 달러 환율은 한국은행 ECOS 매매기준율(전일)을 자동 반영하며, 실제 은행 거래 환율(현찰 살 때/팔 때, 송금)과는 스프레드만큼 차이가 있습니다.<br>
+  · 엔화·유로·위안 등 기타 통화는 자동 환율 데이터를 제공하지 않으므로 환율을 직접 입력해주세요.<br>
+  · 엔화(JPY)는 관례에 따라 100엔당 원화 기준으로 계산합니다.
+--->
+⚠️ The US dollar rate automatically applies the Bank of Korea ECOS base rate (previous day) and differs from actual bank rates (cash buy/sell, remittance) by the spread.<br>
+  · For other currencies such as yen, euro and yuan, no automatic rate data is provided, so please enter the rate yourself.<br>
+  · By convention, the yen is calculated as won per 100 yen.
+====
+미국 달러
+--->
+US dollar
+====
+일본 엔
+--->
+Japanese yen
+====
+환율 (100엔당 원)
+--->
+Exchange rate (KRW per 100 yen)
+====
+유로
+--->
+Euro
+====
+환율 (1유로당 원)
+--->
+Exchange rate (KRW per 1 euro)
+====
+중국 위안
+--->
+Chinese yuan
+====
+환율 (1위안당 원)
+--->
+Exchange rate (KRW per 1 yuan)
+====
+외화
+--->
+Foreign currency
+====
+환율 (외화 1단위당 원)
+--->
+Exchange rate (KRW per 1 unit of foreign currency)
+====
+외화 금액 (
+--->
+Foreign amount (
+====
+직접 입력 통화
+--->
+Custom currency
+====
+<span class="src">자동 반영</span> ·
+--->
+<span class="src">Auto-applied</span> ·
+====
+최신 데이터
+--->
+latest data
+====
+환율을 직접 입력해주세요
+--->
+Please enter the exchange rate
+====
+자동 환율 미제공 통화입니다. 직접 입력해주세요.
+--->
+No automatic rate is available for this currency. Please enter it yourself.
+====
+환율 로드 실패 — 직접 입력해주세요
+--->
+Failed to load the rate — please enter it yourself
+====
+대출 이자·상환 계산기 | 머니파이널
+--->
+Loan Interest and Repayment Calculator | MoneyFinal
+====
+원리금균등·원금균등·만기일시 상환 방식별 월 상환액과 총 이자를 계산합니다.
+--->
+Calculates the monthly payment and total interest for equal-installment, equal-principal and bullet repayment.
+====
+원리금균등 · 원금균등 · 만기일시 상환 비교
+--->
+Equal-installment · equal-principal · bullet repayment compared
+====
+대출 금액 (원)
+--->
+Loan amount (KRW)
+====
+연 금리 (%)
+--->
+Annual interest rate (%)
+====
+기간 (년)
+--->
+Term (years)
+====
+상환 방식
+--->
+Repayment method
+====
+원리금균등 (매월 동일 금액)
+--->
+Equal installment (same amount every month)
+====
+원금균등 (매월 원금 동일, 초기 부담 큼)
+--->
+Equal principal (same principal each month, higher initial burden)
+====
+만기일시 (매월 이자만, 만기에 원금)
+--->
+Bullet (interest only monthly, principal at maturity)
+====
+월 상환액
+--->
+Monthly payment
+====
+<span class="k">대출 원금</span><span class="v" id="r-prin"></span>
+--->
+<span class="k">Loan principal</span><span class="v" id="r-prin"></span>
+====
+<span class="k">총 이자</span><span class="v" id="r-int" style="color:var(--red)"></span>
+--->
+<span class="k">Total interest</span><span class="v" id="r-int" style="color:var(--red)"></span>
+====
+<span class="k">총 상환액</span><span class="v" id="r-total"></span>
+--->
+<span class="k">Total repayment</span><span class="v" id="r-total"></span>
+====
+<span class="k">첫 달 상환액</span><span class="v" id="r-first"></span>
+--->
+<span class="k">First month’s payment</span><span class="v" id="r-first"></span>
+====
+<span class="k">마지막 달 상환액</span><span class="v" id="r-last"></span>
+--->
+<span class="k">Last month’s payment</span><span class="v" id="r-last"></span>
+====
+⚠️ 참고용 추정치입니다. 실제 대출은 은행의 일할 계산, 중도상환수수료, 금리 변동(변동금리), 거치기간 등에 따라 달라집니다.<br>
+  · 원리금균등: 매달 같은 금액 상환. 총이자는 원금균등보다 많지만 초기 부담이 적습니다.<br>
+  · 원금균등: 매달 원금은 같고 이자가 줄어 상환액이 점점 감소. 총이자가 가장 적습니다.<br>
+  · 만기일시: 매달 이자만 내고 만기에 원금 전액 상환. 총이자가 가장 많습니다.
+--->
+⚠️ These are reference estimates. Actual loans vary with a bank’s daily accrual, prepayment fees, rate changes (variable rate) and grace periods.<br>
+  · Equal installment: the same amount is repaid every month. Total interest is higher than equal principal, but the initial burden is lighter.<br>
+  · Equal principal: the principal portion is the same each month and interest falls, so payments gradually decrease. Total interest is the lowest.<br>
+  · Bullet: only interest is paid monthly and the whole principal is repaid at maturity. Total interest is the highest.
+====
+첫 달 상환액 (매달 감소)
+--->
+First month’s payment (decreases monthly)
+====
+월 이자 (만기 전까지)
+--->
+Monthly interest (until maturity)
+====
+(원금 포함)
+--->
+(including principal)
+====
+로또 당첨 시뮬레이터 | 머니파이널
+--->
+Lottery Simulator | MoneyFinal
+====
+로또 6/45를 가상으로 구매해보는 시뮬레이터. 수천 회를 돌려 등수별 당첨 횟수와 수익률을 확인하세요.
+--->
+A simulator for virtually buying Korean Lotto 6/45. Run thousands of draws to see winning counts by rank and your return.
+====
+내 번호로 가상 추첨을 반복하면 얼마나 잃을까?
+--->
+How much do you lose by repeating virtual draws with your numbers?
+====
+내 번호 (자동 생성 또는 직접 입력, 1~45 쉼표 구분)
+--->
+Your numbers (auto-generated or entered by hand, 1–45 separated by commas)
+====
+예: 3, 7, 12, 24, 33, 41
+--->
+e.g. 3, 7, 12, 24, 33, 41
+====
+🎲 자동 번호 생성
+--->
+🎲 Generate numbers
+====
+시뮬레이션 횟수 (1회
+--->
+Number of simulations (1 draw
+====
+1게임 1,000원)
+--->
+costs ₩1,000 per game)
+====
+52회 (매주 1게임 × 1년)
+--->
+52 draws (1 game a week × 1 year)
+====
+520회 (매주 1게임 × 10년)
+--->
+520 draws (1 game a week × 10 years)
+====
+2,600회 (매주 1게임 × 50년)
+--->
+2,600 draws (1 game a week × 50 years)
+====
+26,000회 (매주 10게임 × 50년)
+--->
+26,000 draws (10 games a week × 50 years)
+====
+100,000회 (매주 1게임 × 약 1,923년)
+--->
+100,000 draws (1 game a week × about 1,923 years)
+====
+1,000,000회 (매주 10게임 × 약 1,923년)
+--->
+1,000,000 draws (10 games a week × about 1,923 years)
+====
+시뮬레이션 실행
+--->
+Run simulation
+====
+최종 손익 (당첨금 − 구입비)
+--->
+Net result (winnings − cost)
+====
+<span class="k">총 구입비</span><span class="v" id="r-cost"></span>
+--->
+<span class="k">Total cost</span><span class="v" id="r-cost"></span>
+====
+<span class="k">총 당첨금 (추정)</span><span class="v" id="r-win" style="color:var(--green)"></span>
+--->
+<span class="k">Total winnings (estimated)</span><span class="v" id="r-win" style="color:var(--green)"></span>
+====
+<span class="k">회수율</span><span class="v" id="r-roi"></span>
+--->
+<span class="k">Payback rate</span><span class="v" id="r-roi"></span>
+====
+<span class="k">🥇 1등 (6개 일치)</span><span class="v" id="r-1"></span>
+--->
+<span class="k">🥇 1st (6 matches)</span><span class="v" id="r-1"></span>
+====
+<span class="k">🥈 2등 (5개+보너스)</span><span class="v" id="r-2"></span>
+--->
+<span class="k">🥈 2nd (5 + bonus)</span><span class="v" id="r-2"></span>
+====
+<span class="k">🥉 3등 (5개 일치)</span><span class="v" id="r-3"></span>
+--->
+<span class="k">🥉 3rd (5 matches)</span><span class="v" id="r-3"></span>
+====
+<span class="k">4등 (4개 일치)</span><span class="v" id="r-4"></span>
+--->
+<span class="k">4th (4 matches)</span><span class="v" id="r-4"></span>
+====
+<span class="k">5등 (3개 일치)</span><span class="v" id="r-5"></span>
+--->
+<span class="k">5th (3 matches)</span><span class="v" id="r-5"></span>
+====
+🎯 이론적 당첨 확률: 1등 1/8,145,060 · 2등 1/1,357,510 · 3등 약 1/35,724 · 4등 약 1/733 · 5등 약 1/45<br>
+  · 당첨금은 4등 5만원·5등 5천원(고정), 1~3등은 회차별 변동이므로 <b>평균 수준 추정치</b>(1등 20억, 2등 5천만, 3등 150만)를 사용하며 세전 기준입니다.<br>
+  · 본 시뮬레이터는 재미와 확률 체감을 위한 것으로, 실제 결과·기대수익과 다릅니다. 복권 구입은 계획적으로.
+--->
+🎯 Theoretical odds: 1st 1 in 8,145,060 · 2nd 1 in 1,357,510 · 3rd about 1 in 35,724 · 4th about 1 in 733 · 5th about 1 in 45<br>
+  · Prizes are fixed at ₩50,000 for 4th and ₩5,000 for 5th; 1st to 3rd vary by draw, so <b>average-level estimates</b> (1st ₩2 billion, 2nd ₩50 million, 3rd ₩1.5 million) are used, before tax.<br>
+  · This simulator is for fun and a feel for the odds; it differs from actual results and expected returns. Please buy lottery tickets responsibly.
+====
+회
+--->
+⎵times
+====
+로또 세금 계산기 | 머니파이널
+--->
+Lottery Tax Calculator | MoneyFinal
+====
+로또·복권 당첨금의 세금(22%·33%)과 실수령액을 계산합니다. 200만원 이하 비과세.
+--->
+Calculates tax (22% and 33%) and the amount you receive on lotto and lottery winnings. Winnings of ₩2 million or less are tax-free.
+====
+당첨금 세금과 실수령액 확인
+--->
+Check tax on winnings and your take-home amount
+====
+당첨금 (원)
+--->
+Winnings (KRW)
+====
+5등 5천원
+--->
+5th ₩5,000
+====
+4등 5만원
+--->
+4th ₩50,000
+====
+3등 150만
+--->
+3rd ₩1.5M
+====
+2등 5천만
+--->
+2nd ₩50M
+====
+1등 20억
+--->
+1st ₩2B
+====
+실수령액
+--->
+Winnings
+====
+<span class="k">당첨금</span><span class="v" id="r-gross"></span>
+--->
+<span class="k">Winnings</span><span class="v" id="r-gross"></span>
+====
+<span class="k">3억 이하분 세금 (22%)</span><span class="v" id="r-t1" style="color:var(--red)"></span>
+--->
+<span class="k">Tax on the part up to ₩300M (22%)</span><span class="v" id="r-t1" style="color:var(--red)"></span>
+====
+<span class="k">3억 초과분 세금 (33%)</span><span class="v" id="r-t2" style="color:var(--red)"></span>
+--->
+<span class="k">Tax on the part over ₩300M (33%)</span><span class="v" id="r-t2" style="color:var(--red)"></span>
+====
+<span class="k">총 세금</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+--->
+<span class="k">Total tax</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+====
+<span class="k">실효세율</span><span class="v" id="r-eff"></span>
+--->
+<span class="k">Effective tax rate</span><span class="v" id="r-eff"></span>
+====
+· 복권 당첨금은 기타소득으로 <b>분리과세(원천징수로 납세 종결)</b>되며 종합소득에 합산되지 않습니다.<br>
+  · 건별 당첨금 <b>200만원 이하는 비과세</b> — 4등(5만원)·5등(5천원)은 세금이 없습니다.<br>
+  · 200만원 초과분부터 과세: 3억원 이하분 22%(소득세 20%+지방소득세 2%), 3억원 초과분 33%(30%+3%).<br>
+  · 당첨금을 가족 등에게 나누어 줄 경우 별도로 증여세가 발생할 수 있습니다.
+--->
+· Lottery winnings are other income and are <b>taxed separately (tax settled by withholding)</b>, and are not added to comprehensive income.<br>
+  · Winnings of <b>₩2 million or less per ticket are tax-free</b>, so 4th prize (₩50,000) and 5th prize (₩5,000) carry no tax.<br>
+  · Tax applies to the amount over ₩2 million: 22% on the part up to ₩300 million (20% income tax + 2% local income tax) and 33% on the part over ₩300 million (30% + 3%).<br>
+  · If you share winnings with family or others, gift tax may apply separately.
+====
+0원 (200만원 이하 비과세)
+--->
+₩0 (tax-free up to ₩2 million)
+====
+평수 계산기 (평 ↔ ㎡) | 머니파이널
+--->
+Floor Area Calculator (pyeong ↔ ㎡) | MoneyFinal
+====
+평과 제곱미터(㎡)를 양방향으로 변환하는 부동산 단위 변환기. 주요 평형 조견표 포함.
+--->
+A real estate unit converter between pyeong and square meters (㎡) in both directions, with a table of common apartment sizes.
+====
+평수 계산기
+--->
+Floor Area Calculator
+====
+평 ↔ 제곱미터(㎡) 양방향 변환
+--->
+Pyeong ↔ square meter (㎡) converter
+====
+평 (坪)
+--->
+Pyeong (坪)
+====
+제곱미터 (㎡)
+--->
+Square meters (㎡)
+====
+📐 아파트 주요 평형 조견표
+--->
+📐 Common apartment sizes
+====
+통칭
+--->
+Common name
+====
+전용면적(㎡)
+--->
+Exclusive area (㎡)
+====
+전용 평수
+--->
+Exclusive area in pyeong
+====
+소형 (원룸·투룸)
+--->
+Small (studio, two-room)
+====
+약 5~12평
+--->
+About 5–12 pyeong
+====
+18평형
+--->
+18-pyeong type
+====
+45.9㎡ 내외
+--->
+About 45.9 ㎡
+====
+약 13.9평
+--->
+About 13.9 pyeong
+====
+24·25평형 (국민 소형)
+--->
+24–25-pyeong type (compact)
+====
+약 17.8평
+--->
+About 17.8 pyeong
+====
+32~34평형 (국민평형)
+--->
+32–34-pyeong type (standard)
+====
+약 25.4평
+--->
+About 25.4 pyeong
+====
+40평형대
+--->
+40-pyeong range
+====
+약 30.6~40.5평
+--->
+About 30.6–40.5 pyeong
+====
+50평형 이상
+--->
+50 pyeong and up
+====
+약 40.8평~
+--->
+About 40.8 pyeong and up
+====
+· 1평
+--->
+· 1 pyeong
+====
+400/121 ≈ <b>3.3058㎡</b>, 1㎡ ≈ 0.3025평<br>
+  ·
+--->
+= 400/121 ≈ <b>3.3058 ㎡</b>, and 1 ㎡ ≈ 0.3025 pyeong<br>
+  ·
+====
+○○평형
+--->
+○○-pyeong type
+====
+통칭은 공급면적(전용+주거공용) 기준이라, 전용면적을 평으로 환산한 값과 다릅니다. 예: 국민평형 34평형의 전용면적은 84㎡(약 25.4평)입니다.<br>
+  · 2007년부터 법정 표기 단위는 ㎡이며, 평은 관습적 표현입니다.
+--->
+The common name is based on supply area (exclusive plus shared residential area), so it differs from the exclusive area converted to pyeong. Example: the standard 34-pyeong type has an exclusive area of 84 ㎡ (about 25.4 pyeong).<br>
+  · Since 2007 the legal unit is ㎡; the pyeong is a customary expression.
+====
+부동산 복비·취득세 계산기 | 머니파이널
+--->
+Korean Real Estate Commission and Acquisition Tax Calculator | MoneyFinal
+====
+주택 매매·전세·월세 중개보수(복비)와 취득세를 계산합니다. 다주택 중과세율 반영.
+--->
+Calculates the brokerage commission and acquisition tax for home sales, jeonse and monthly rent in Korea, including surcharge rates for multiple homes.
+====
+주택 중개보수 상한액과 취득세를 한 번에
+--->
+Home brokerage fee cap and acquisition tax in one go
+====
+🏠 중개보수 (복비)
+--->
+🏠 Brokerage commission
+====
+거래 유형
+--->
+Transaction type
+====
+매매·교환
+--->
+Sale / exchange
+====
+전세
+--->
+Jeonse
+====
+월세
+--->
+Monthly rent
+====
+매매가 (원)
+--->
+Sale price (KRW)
+====
+보증금 (원)
+--->
+Deposit (KRW)
+====
+월세 (원)
+--->
+Monthly rent (KRW)
+====
+📋 취득세 (주택 유상취득)
+--->
+📋 Acquisition tax (home purchase for value)
+====
+취득가액 (원)
+--->
+Acquisition price (KRW)
+====
+전용면적
+--->
+Exclusive area
+====
+85㎡ 이하
+--->
+85 ㎡ or less
+====
+85㎡ 초과
+--->
+Over 85 ㎡
+====
+취득 후 주택 수
+--->
+Homes owned after purchase
+====
+1주택
+--->
+1 home
+====
+2주택
+--->
+2 homes
+====
+3주택
+--->
+3 homes
+====
+4주택 이상·법인
+--->
+4 or more homes / corporation
+====
+조정대상지역 여부
+--->
+Adjustment target area
+====
+비조정지역
+--->
+Non-adjustment area
+====
+조정대상지역
+--->
+Adjustment target area
+====
+⚠️ 참고용 계산입니다. 실제 세액·보수는 계약 조건과 지자체 조례, 감면 요건에 따라 달라질 수 있습니다.<br>
+  · 중개보수는 법정 <b>상한액</b>이며, 실제 금액은 상한 내에서 중개사와 협의해 결정합니다. 요율은 시·도 조례로 정해 지역별로 다를 수 있습니다(본 계산은 시행규칙 별표1 기준). 부가가치세 별도.<br>
+  · 월세 거래금액
+--->
+⚠️ Reference calculation only. Actual tax and fees vary with contract terms, local ordinances and eligibility for reductions.<br>
+  · The brokerage commission is the legal <b>maximum</b>; the actual amount is negotiated with the agent within the cap. Rates are set by city and provincial ordinance and may differ by region (this calculation uses Table 1 of the Enforcement Rule). VAT is extra.<br>
+  · Monthly rent transaction amount
+====
+보증금 + 월세×100 (5천만원 미만이면 월세×70으로 재계산)<br>
+  · 취득세: 1주택 1~3%(6억 이하 1%, 6~9억 사선 적용, 9억 초과 3%), 조정지역 2주택 8%, 3주택 조정 12%·비조정 8%, 4주택 이상·법인 12%. 일시적 2주택은 1주택 세율 적용.<br>
+  · 지방교육세·농어촌특별세(85㎡ 초과) 포함 합계를 표시하며, 생애최초 감면 등 각종 감면은 미반영입니다.
+--->
+= deposit + monthly rent × 100 (recalculated as monthly rent × 70 if under ₩50 million)<br>
+  · Acquisition tax: 1 home 1–3% (1% up to ₩600M, sliding scale from ₩600–900M, 3% over ₩900M), 8% for 2 homes in an adjustment area, 3 homes 12% in adjustment and 8% in non-adjustment areas, 12% for 4 or more homes or corporations. A temporary 2-home owner gets the 1-home rate.<br>
+  · The total includes local education tax and the special rural development tax (over 85 ㎡); reductions such as for first-time buyers are not reflected.
+====
+전세보증금 (원)
+--->
+Jeonse deposit (KRW)
+====
+환산보증금 5천만원 미만 → 보증금+월세×70 재계산<br>
+--->
+Converted deposit under ₩50 million → deposit + monthly rent × 70 recalculated<br>
+====
+거래금액(환산):
+--->
+Transaction amount (converted):
+====
+최대
+--->
+Maximum
+====
+적용 상한요율
+--->
+Rate cap applied
+====
+% · 부가세(10%) 포함 시
+--->
+% · including VAT (10%)
+====
+비조정 2주택 → 기본세율
+--->
+2 homes in non-adjustment area → basic rate
+====
+1주택 기본세율
+--->
+1 home basic rate
+====
+조정지역 2주택 중과 8%
+--->
+2 homes in adjustment area surcharge 8%
+====
+조정지역 3주택 중과 12%
+--->
+3 homes in adjustment area surcharge 12%
+====
+비조정 3주택 중과 8%
+--->
+3 homes in non-adjustment area surcharge 8%
+====
+4주택 이상·법인 중과 12%
+--->
+4 or more homes / corporation surcharge 12%
+====
+<br>취득세
+--->
+<br>Acquisition tax
+====
++ 지방교육세
+--->
++ local education tax
+====
++ 농어촌특별세
+--->
++ special rural development tax
+====
+(85㎡ 이하 농특세 비과세)
+--->
+(special rural development tax exempt at 85 ㎡ or less)
+====
+<br>실효세율
+--->
+<br>Effective tax rate
+====
+연봉 실수령액 계산기 (2026년 기준) | 머니파이널
+--->
+Korean Take-Home Pay Calculator (2026) | MoneyFinal
+====
+2026년 4대보험 요율(국민연금 9.5%, 건강보험 7.19%)과 소득세를 반영한 연봉 실수령액 계산기. 월 실수령액과 공제 내역을 바로 확인하세요.
+--->
+A take-home pay calculator using 2026 Korean social insurance rates (National Pension 9.5%, health insurance 7.19%) and income tax. See monthly take-home pay and deductions right away.
+====
+연봉 실수령액 계산기 (2026년 기준)
+--->
+Korean Take-Home Pay Calculator (2026)
+====
+2026년 4대보험 요율 · 소득세 기본세율 반영 (근사치)
+--->
+Applies 2026 Korean social insurance rates and basic income tax rates (approximation)
+====
+연봉 (세전, 원)
+--->
+Annual salary (pre-tax, KRW)
+====
+월 비과세액 (식대 등, 원)
+--->
+Monthly non-taxable pay (meals and so on, KRW)
+====
+부양가족 수 (본인 포함)
+--->
+Dependents (including yourself)
+====
+1명 (본인)
+--->
+1 (yourself)
+====
+2명
+--->
+2
+====
+3명
+--->
+3
+====
+4명
+--->
+4
+====
+5명
+--->
+5
+====
+6명
+--->
+6
+====
+월 예상 실수령액
+--->
+Estimated monthly take-home pay
+====
+<span class="k">월 급여 (세전)</span><span class="v" id="r-gross"></span>
+--->
+<span class="k">Monthly salary (pre-tax)</span><span class="v" id="r-gross"></span>
+====
+<span class="k">국민연금 (4.75%)</span><span class="v" id="r-np"></span>
+--->
+<span class="k">National Pension (4.75%)</span><span class="v" id="r-np"></span>
+====
+<span class="k">건강보험 (3.595%)</span><span class="v" id="r-hi"></span>
+--->
+<span class="k">Health insurance (3.595%)</span><span class="v" id="r-hi"></span>
+====
+<span class="k">장기요양 (건보료의 13.14%)</span><span class="v" id="r-ltc"></span>
+--->
+<span class="k">Long-term care (13.14% of health premium)</span><span class="v" id="r-ltc"></span>
+====
+<span class="k">고용보험 (0.9%)</span><span class="v" id="r-ei"></span>
+--->
+<span class="k">Employment insurance (0.9%)</span><span class="v" id="r-ei"></span>
+====
+<span class="k">소득세 (추정)</span><span class="v" id="r-it"></span>
+--->
+<span class="k">Income tax (estimated)</span><span class="v" id="r-it"></span>
+====
+<span class="k">지방소득세 (소득세의 10%)</span><span class="v" id="r-lit"></span>
+--->
+<span class="k">Local income tax (10% of income tax)</span><span class="v" id="r-lit"></span>
+====
+<span class="k">공제 합계</span><span class="v" id="r-ded"></span>
+--->
+<span class="k">Total deductions</span><span class="v" id="r-ded"></span>
+====
+⚠️ 본 계산기는 <b>2026년 기준 추정치</b>를 제공합니다. 실제 급여명세서와 차이가 있을 수 있습니다.<br>
+  · 4대보험: 국민연금 9.5%(근로자 4.75%, 기준소득월액 41만~659만원), 건강보험 7.19%(근로자 3.595%), 장기요양보험료율(건강보험료 대비) 13.14%, 고용보험 실업급여 1.8%(근로자 0.9%) 적용.<br>
+  · 소득세: 국세청 근로소득 간이세액표 대신 연말정산 방식(근로소득공제·인적공제·근로소득세액공제)으로 근사 계산하며, 자녀세액공제·특별공제 등은 반영하지 않습니다. 실제 원천징수액과 다를 수 있습니다.<br>
+  · 회사 규모, 산재보험(회사 전액 부담), 개인별 공제 항목에 따라 실수령액은 달라집니다.
+--->
+⚠️ This calculator gives <b>2026 estimates</b>. They may differ from your actual pay slip.<br>
+  · Social insurance: National Pension 9.5% (employee 4.75%, standard monthly income ₩410,000–6,590,000), health insurance 7.19% (employee 3.595%), long-term care insurance rate 13.14% of the health premium, and employment insurance unemployment benefit 1.8% (employee 0.9%).<br>
+  · Income tax: approximated with the year-end settlement method (earned income deduction, personal deductions, earned income tax credit) instead of the National Tax Service simplified withholding table; child tax credits and special deductions are not reflected. Actual withholding may differ.<br>
+  · Take-home pay varies with company size, industrial accident insurance (paid entirely by the employer) and individual deduction items.
+====
+연봉을 입력해주세요.
+--->
+Please enter your annual salary.
+====
+연 환산 약
+--->
+Annualized about
+====
+<a href="dividend-kr-etf.html">국내ETF</a> &gt
+--->
+<a href="dividend-kr-etf.html">Korean ETFs</a> &gt
+====
+ℹ️ 종목 정보
+--->
+ℹ️ Fund info
+====
+📅 최근 분배금 이력
+--->
+📅 Recent distribution history
+====
+보유 좌수 (좌)
+--->
+Units held
+====
+좌당 분배금 (원, 최근 분배 기준)
+--->
+Distribution per unit (KRW, based on latest distribution)
+====
+매수 단가 (원, 현재가 자동입력·수정 가능)
+--->
+Purchase price (KRW, auto-filled with current price, editable)
+====
+세후 실수령 분배금 (연간 환산, 원)
+--->
+After-tax distribution income (annualized, KRW)
+====
+<span class="k">세전 분배금 (연간 환산)</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+--->
+<span class="k">Pre-tax distributions (annualized)</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+====
+<span class="k">배당소득세 (15.4%)</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+--->
+<span class="k">Dividend income tax (15.4%)</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+====
+<span class="k">분배수익률 (연 환산, 세전)</span><span class="v" id="r-yield"></span>
+--->
+<span class="k">Distribution yield (annualized, pre-tax)</span><span class="v" id="r-yield"></span>
+====
+분배락일
+--->
+Ex-distribution date
+====
+좌당 분배금
+--->
+Distribution per unit
+====
+분배금 이력 수집 예정입니다
+--->
+Distribution history coming soon
+====
+<span class="k">현재가</span><span class="v">${krw(priceInfo.price)}${chgTxt}</span>
+--->
+<span class="k">Price</span><span class="v">${krw(priceInfo.price)}${chgTxt}</span>
+====
+<span class="k">기준일</span><span class="v">${priceInfo.base_date||'-'}</span>
+--->
+<span class="k">As of</span><span class="v">${priceInfo.base_date||'-'}</span>
+====
+시세 정보 수집 예정입니다
+--->
+Price information coming soon
+====
+분배금 이력을 불러오지 못했습니다
+--->
+Could not load distribution history
+====
+국내 상장 배당 ETF 계산기 모음 | 머니파이널
+--->
+Korean Dividend ETF Calculators | MoneyFinal
+====
+TIGER 미국배당다우존스, KODEX 고배당주 등 국내 상장 배당 ETF의 실제 분배금 이력과 세후 수령액을 계산합니다.
+--->
+Calculate actual distribution history and after-tax income for Korea-listed dividend ETFs such as TIGER US Dividend Dow Jones and KODEX High Dividend Stocks.
+====
+국내 배당ETF
+--->
+Korean dividend ETFs
+====
+국내ETF
+--->
+Korean ETFs
+====
+국내 상장 배당 ETF 계산기
+--->
+Korea-Listed Dividend ETF Calculators
+====
+실제 분배금 이력 기반 · 종목명을 클릭하면 상세 계산기로 이동합니다
+--->
+Based on actual distribution history · Click a fund name to open its detailed calculator
+====
+국내 고배당
+--->
+Korea high dividend
+====
+국내 금융지주 고배당
+--->
+Korea financial holdings high dividend
+====
+국내 리츠
+--->
+Korea REITs
+====
+국내 배당가치
+--->
+Korea dividend value
+====
+국내 은행 고배당
+--->
+Korea bank high dividend
+====
+미국 빅테크
+--->
+US big tech
+====
+미국배당
+--->
+US dividend
+====
+미국배당 커버드콜
+--->
+US dividend covered call
+====
+유형
+--->
+Type
+====
+최근 분배금
+--->
+Latest distribution
+====
+분배주기
+--->
+Distribution frequency
+====
+분배수익률
+--->
+Distribution yield
+====
+⚠️ 국내주식형 ETF는 매매차익이 비과세이고, 그 외(해외지수·리츠 등 추종) ETF는 매매차익도 배당소득세 과세 대상입니다. 분배금은 유형과 무관하게 15.4% 배당소득세가 부과됩니다.<br>
+  · 데이터는 Yahoo Finance 기반이며 국내 ETF는 운용규모·보수율 정보를 제공받지 못해 표시하지 않습니다.
+--->
+⚠️ For Korean equity ETFs, capital gains are tax-free; for other ETFs (tracking overseas indices, REITs and so on), capital gains are also subject to dividend income tax. Distributions are taxed at 15.4% dividend income tax regardless of type.<br>
+  · Data is based on Yahoo Finance; for Korean ETFs, assets under management and expense ratios are not available and are not shown.
+====
+월분배
+--->
+Monthly
+====
+반기
+--->
+Semiannual
+====
+연1회
+--->
+Annual
+====
+<span class="badge tax-free" style="margin-left:0">국내주식형</span>
+--->
+<span class="badge tax-free" style="margin-left:0">Korean equity</span>
+====
+<span class="badge tax-other" style="margin-left:0">기타</span>
+--->
+<span class="badge tax-other" style="margin-left:0">Other</span>

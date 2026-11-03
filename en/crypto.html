@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Live prices, market cap, volume and 24-hour and 7-day changes for the top 20 cryptocurrencies by market cap, including Bitcoin and Ethereum, on one screen.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/crypto">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/crypto">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/crypto">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/crypto">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/crypto">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/crypto">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/crypto">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Cryptocurrency Prices | MoneyFinal">
+<meta property="og:description" content="Live prices, market cap, volume and 24-hour and 7-day changes for the top 20 cryptocurrencies by market cap, including Bitcoin and Ethereum, on one screen.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/crypto">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cryptocurrency Prices | MoneyFinal">
+<meta name="twitter:description" content="Live prices, market cap, volume and 24-hour and 7-day changes for the top 20 cryptocurrencies by market cap, including Bitcoin and Ethereum, on one screen.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Cryptocurrency Prices","description":"Live prices of the top 20 cryptocurrencies by market cap","url":"https://moneyfinal.pages.dev/en/crypto","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>Cryptocurrency Prices | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:20px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card-title{font-size:13px;font-weight:600;flex-shrink:0}
+.search-box{flex:1;min-width:140px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:7px 10px;font-size:13px;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px}
+th{text-align:right;color:var(--text2);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--text)}
+th:first-child,td:first-child{text-align:left}
+td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg3)}
+.coin-cell{display:flex;align-items:center;gap:8px}
+.coin-cell img{width:22px;height:22px;border-radius:50%}
+.coin-name{font-weight:600}
+.coin-sym{color:var(--text2);font-size:11px;margin-left:4px}
+.rank{color:var(--text2);width:28px;display:inline-block}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.qrow{position:relative;flex:1;min-width:150px}
+.qrow input{width:100%;padding-right:44px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="crypto.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Cryptocurrency Prices</h1>
+<div class="sub">Live prices, market cap, volume and changes of the top 20 coins by market cap</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="kpi-label">Bitcoin</div><div class="kpi-value" id="k-btc">-</div><div class="kpi-sub" id="k-btc-chg">-</div></div>
+  <div class="kpi"><div class="kpi-label">Ethereum</div><div class="kpi-value" id="k-eth">-</div><div class="kpi-sub" id="k-eth-chg">-</div></div>
+  <div class="kpi"><div class="kpi-label">Total market cap (top 20 combined)</div><div class="kpi-value" id="k-mcap">-</div><div class="kpi-sub" id="k-updated">-</div></div>
+</div>
+
+<div class="card">
+  <div class="card-hd">
+    <span class="card-title">Full list</span>
+    <div class="qrow"><input type="text" class="search-box" id="q" placeholder="Search coin name or symbol" oninput="renderTbl()"><button class="qgo" type="button" aria-label="Search" title="Search" onclick="var i=document.getElementById('q');i.focus();i.dispatchEvent(new Event('input',{bubbles:true}))"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr>
+      <th style="text-align:left">Coin</th>
+      <th data-k="current_price" onclick="setSort(this)">Price</th>
+      <th data-k="change_pct_24h" onclick="setSort(this)">24h</th>
+      <th data-k="change_pct_7d" onclick="setSort(this)">7d</th>
+      <th data-k="market_cap" onclick="setSort(this)">Market cap</th>
+      <th data-k="total_volume" onclick="setSort(this)">Volume (24h)</th>
+    </tr></thead>
+    <tbody id="tbody"><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
+  </table>
+  </div>
+</div>
+</main>
+<div class="disclaimer">⚠️ This page shows reference prices based on the CoinGecko public API, and you are solely responsible for your investment decisions and any losses. Prices may differ slightly from actual exchanges.</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function usd(v,d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return '$'+n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function usdBig(v){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e8)return'$'+(n/1e8).toFixed(1)+'B';return usd(n,0);}
+function pct(v){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return (n>=0?'+':'')+n.toFixed(2)+'%';}
+function pctClass(v){const n=parseFloat(v);if(isNaN(n)||n===0)return'neutral';return n>0?'up':'down';}
+
+let COINS=[],SORT_KEY='market_cap',SORT_DIR='desc';
+
+async function load(){
+  try{
+    const r=await fetch('/api/crypto');const d=await r.json();
+    COINS=d.coins||[];
+    document.getElementById('k-updated').textContent='Updated: '+(d.updated_at||'-');
+    const btc=COINS.find(c=>c.id==='bitcoin'),eth=COINS.find(c=>c.id==='ethereum');
+    if(btc){document.getElementById('k-btc').textContent=usd(btc.current_price);const el=document.getElementById('k-btc-chg');el.textContent=pct(btc.change_pct_24h)+' (24h)';el.className='kpi-sub '+pctClass(btc.change_pct_24h);}
+    if(eth){document.getElementById('k-eth').textContent=usd(eth.current_price);const el=document.getElementById('k-eth-chg');el.textContent=pct(eth.change_pct_24h)+' (24h)';el.className='kpi-sub '+pctClass(eth.change_pct_24h);}
+    const totalMcap=COINS.reduce((s,c)=>s+(parseFloat(c.market_cap)||0),0);
+    document.getElementById('k-mcap').textContent=usdBig(totalMcap);
+    renderTbl();
+  }catch(e){
+    document.getElementById('tbody').innerHTML='<tr><td colspan="6" class="empty">Could not load data</td></tr>';
+  }
+}
+function setSort(th){
+  const k=th.dataset.k;
+  if(SORT_KEY===k){SORT_DIR=SORT_DIR==='desc'?'asc':'desc';}else{SORT_KEY=k;SORT_DIR='desc';}
+  renderTbl();
+}
+function renderTbl(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=COINS.filter(c=>!q||c.name.toLowerCase().includes(q)||c.symbol.toLowerCase().includes(q));
+  list=list.slice().sort((a,b)=>{
+    let av=parseFloat(a[SORT_KEY]),bv=parseFloat(b[SORT_KEY]);
+    if(isNaN(av))av=SORT_DIR==='desc'?-Infinity:Infinity;
+    if(isNaN(bv))bv=SORT_DIR==='desc'?-Infinity:Infinity;
+    return SORT_DIR==='asc'?av-bv:bv-av;
+  });
+  const tbody=document.getElementById('tbody');
+  if(!list.length){tbody.innerHTML='<tr><td colspan="6" class="empty">No results found</td></tr>';return;}
+  tbody.innerHTML=list.map(c=>`<tr>
+    <td><div class="coin-cell"><span class="rank">${c.market_cap_rank||'-'}</span><img src="${c.image_url||''}" alt="" loading="lazy" onerror="this.style.display='none'"><span class="coin-name">${c.name}</span><span class="coin-sym">${c.symbol}</span></div></td>
+    <td>${usd(c.current_price,c.current_price<1?4:2)}</td>
+    <td class="${pctClass(c.change_pct_24h)}">${pct(c.change_pct_24h)}</td>
+    <td class="${pctClass(c.change_pct_7d)}">${pct(c.change_pct_7d)}</td>
+    <td>${usdBig(c.market_cap)}</td>
+    <td>${usdBig(c.total_volume)}</td>
+  </tr>`).join('');
+}
+load();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

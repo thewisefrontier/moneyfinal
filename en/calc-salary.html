@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Korean Take-Home Pay Calculator (2026) | MoneyFinal</title>
+<meta name="description" content="A take-home pay calculator using 2026 Korean social insurance rates (National Pension 9.5%, health insurance 7.19%) and income tax. See monthly take-home pay and deductions right away.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-salary"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-salary">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-salary">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-salary">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-salary">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-salary">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-salary">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Korean Take-Home Pay Calculator (2026) | MoneyFinal">
+<meta property="og:description" content="A take-home pay calculator using 2026 Korean social insurance rates (National Pension 9.5%, health insurance 7.19%) and income tax. See monthly take-home pay and deductions right away.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-salary">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Korean Take-Home Pay Calculator (2026) | MoneyFinal">
+<meta name="twitter:description" content="A take-home pay calculator using 2026 Korean social insurance rates (National Pension 9.5%, health insurance 7.19%) and income tax. See monthly take-home pay and deductions right away.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Korean Take-Home Pay Calculator (2026)","description":"A take-home pay calculator using 2026 Korean social insurance rates (National Pension 9.5%, health insurance 7.19%) and income tax. See monthly take-home pay and deductions right away.","url":"https://moneyfinal.pages.dev/en/calc-salary","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:760px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:10px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.btn{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer}
+.btn:hover{opacity:.9}
+.result-hero{text-align:center;padding:24px 16px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:34px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.rh-sub{font-size:13px;color:var(--text2);margin-top:6px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.brow.total .k,.brow.total .v{color:var(--red);font-weight:700}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Korean take-home pay calculator</h1>
+<div class="sub">Applies 2026 Korean social insurance rates and basic income tax rates (approximation)</div>
+
+<div class="card">
+  <div class="field"><label>Annual salary (pre-tax, KRW)</label><input type="text" id="salary" inputmode="numeric" value="40,000,000" oninput="fmtInput(this)"></div>
+  <div class="grid2">
+    <div class="field"><label>Monthly non-taxable pay (meals and so on, KRW)</label><input type="text" id="taxfree" inputmode="numeric" value="200,000" oninput="fmtInput(this)"></div>
+    <div class="field"><label>Dependents (including yourself)</label><select id="deps"><option value="1">1 (yourself)</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select></div>
+  </div>
+  <button class="btn" onclick="calc()">Calculate</button>
+</div>
+
+<div class="card" id="result" style="display:none">
+  <div class="result-hero">
+    <div class="rh-label">Estimated monthly take-home pay</div>
+    <div class="rh-value" id="r-net">-</div>
+    <div class="rh-sub" id="r-annual"></div>
+  </div>
+  <div class="brow"><span class="k">Monthly salary (pre-tax)</span><span class="v" id="r-gross"></span></div>
+  <div class="brow"><span class="k">National Pension (4.75%)</span><span class="v" id="r-np"></span></div>
+  <div class="brow"><span class="k">Health insurance (3.595%)</span><span class="v" id="r-hi"></span></div>
+  <div class="brow"><span class="k">Long-term care (13.14% of health premium)</span><span class="v" id="r-ltc"></span></div>
+  <div class="brow"><span class="k">Employment insurance (0.9%)</span><span class="v" id="r-ei"></span></div>
+  <div class="brow"><span class="k">Income tax (estimated)</span><span class="v" id="r-it"></span></div>
+  <div class="brow"><span class="k">Local income tax (10% of income tax)</span><span class="v" id="r-lit"></span></div>
+  <div class="brow total"><span class="k">Total deductions</span><span class="v" id="r-ded"></span></div>
+</div>
+
+<div class="note">
+  ⚠️ This calculator gives <b>2026 estimates</b>. They may differ from your actual pay slip.<br>
+  · Social insurance: National Pension 9.5% (employee 4.75%, standard monthly income ₩410,000–6,590,000), health insurance 7.19% (employee 3.595%), long-term care insurance rate 13.14% of the health premium, and employment insurance unemployment benefit 1.8% (employee 0.9%).<br>
+  · Income tax: approximated with the year-end settlement method (earned income deduction, personal deductions, earned income tax credit) instead of the National Tax Service simplified withholding table; child tax credits and special deductions are not reflected. Actual withholding may differ.<br>
+  · Take-home pay varies with company size, industrial accident insurance (paid entirely by the employer) and individual deduction items.
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('en-US'):'';}
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+</script><script src="/won.js"></script><script>
+
+
+function earnedIncomeDeduction(g){
+  let d;
+  if(g<=5000000)d=g*0.7;
+  else if(g<=15000000)d=3500000+(g-5000000)*0.4;
+  else if(g<=45000000)d=7500000+(g-15000000)*0.15;
+  else if(g<=100000000)d=12000000+(g-45000000)*0.05;
+  else d=14750000+(g-100000000)*0.02;
+  return Math.min(d,20000000);
+}
+
+function basicTax(base){
+  if(base<=0)return 0;
+  const br=[[14000000,.06,0],[50000000,.15,1260000],[88000000,.24,5760000],[150000000,.35,15440000],[300000000,.38,19940000],[500000000,.40,25940000],[1000000000,.42,35940000],[Infinity,.45,65940000]];
+  for(const[lim,rate,ded]of br){if(base<=lim)return base*rate-ded;}
+}
+
+function earnedIncomeTaxCredit(calcTax,gross){
+  let c=calcTax<=1300000?calcTax*0.55:715000+(calcTax-1300000)*0.3;
+  let limit;
+  if(gross<=33000000)limit=740000;
+  else if(gross<=70000000)limit=Math.max(660000,740000-(gross-33000000)*0.008);
+  else if(gross<=120000000)limit=Math.max(500000,660000-(gross-70000000)*0.5);
+  else limit=Math.max(200000,500000-(gross-120000000)*0.5);
+  return Math.min(c,limit);
+}
+
+function calc(){
+  const annual=num('salary');
+  if(!annual){alert('Please enter your annual salary.');return;}
+  const taxfreeM=num('taxfree');
+  const deps=parseInt(document.getElementById('deps').value,10);
+  const grossM=annual/12;
+  const taxableM=Math.max(0,grossM-taxfreeM);
+
+  
+  const npBase=Math.min(Math.max(taxableM,410000),6590000); 
+  const np=Math.floor(npBase*0.0475);
+  const hi=Math.floor(taxableM*0.03595);
+  const ltc=Math.floor(hi*0.1314);
+  const ei=Math.floor(taxableM*0.009);
+
+  
+  const grossY=taxableM*12;
+  const eiDed=earnedIncomeDeduction(grossY);
+  const taxBase=Math.max(0,grossY-eiDed-1500000*deps-np*12);
+  const calcTax=basicTax(taxBase);
+  const credit=earnedIncomeTaxCredit(calcTax,grossY);
+  const finalY=Math.max(0,calcTax-credit);
+  const it=Math.floor(finalY/12);
+  const lit=Math.floor(it*0.1);
+
+  const ded=np+hi+ltc+ei+it+lit;
+  const net=grossM-ded;
+
+  document.getElementById('r-net').textContent=won(net);
+  document.getElementById('r-annual').textContent='About '+won(net*12)+' per year';
+  document.getElementById('r-gross').textContent=won(grossM);
+  document.getElementById('r-np').textContent='-'+won(np);
+  document.getElementById('r-hi').textContent='-'+won(hi);
+  document.getElementById('r-ltc').textContent='-'+won(ltc);
+  document.getElementById('r-ei').textContent='-'+won(ei);
+  document.getElementById('r-it').textContent='-'+won(it);
+  document.getElementById('r-lit').textContent='-'+won(lit);
+  document.getElementById('r-ded').textContent='-'+won(ded);
+  document.getElementById('result').style.display='block';
+}
+document.getElementById('salary').addEventListener('keydown',e=>{if(e.key==='Enter')calc();});
+calc();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

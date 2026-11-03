@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dividend Calculator (After Tax) | MoneyFinal</title>
+<meta name="description" content="Calculate the annual dividends from your shares and see the after-tax amount with Korea’s 15.4% dividend income tax and the dividend yield.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-dividend"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-dividend">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-dividend">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-dividend">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-dividend">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-dividend">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-dividend">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Dividend Calculator (After Tax) | MoneyFinal">
+<meta property="og:description" content="Calculate the annual dividends from your shares and see the after-tax amount with Korea’s 15.4% dividend income tax and the dividend yield.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-dividend">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dividend Calculator (After Tax) | MoneyFinal">
+<meta name="twitter:description" content="Calculate the annual dividends from your shares and see the after-tax amount with Korea’s 15.4% dividend income tax and the dividend yield.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dividend Calculator (After Tax)","description":"Calculate the annual dividends from your shares and see the after-tax amount with Korea’s 15.4% dividend income tax and the dividend yield.","url":"https://moneyfinal.pages.dev/en/calc-dividend","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:20px 0 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:32px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Dividend calculator</h1>
+<div class="sub">Annual dividends from your shares and the after-tax amount</div>
+
+<div class="card">
+  <div class="field"><label>Shares held</label><input type="text" id="shares" inputmode="numeric" value="100" oninput="fmtInput(this);calc()"></div>
+  <div class="grid2">
+    <div class="field"><label>Dividend per share (KRW, annual, pre-tax)</label><input type="text" id="dps" inputmode="numeric" value="500" oninput="fmtInput(this);calc()"></div>
+    <div class="field"><label>Purchase price (KRW, optional)</label><input type="text" id="price" inputmode="numeric" value="50,000" oninput="fmtInput(this);calc()"></div>
+  </div>
+  <div class="field"><label>Tax treatment</label><select id="tax" onchange="calc()"><option value="15.4">Standard tax (15.4%)</option><option value="0">Tax-free (0%)</option><option value="custom">Custom</option></select></div>
+  <div class="field" id="custom-tax-field" style="display:none"><label>Custom tax rate (%)</label><input type="number" id="custom-tax" value="9.5" step="0.1" min="0" max="50" oninput="calc()"></div>
+</div>
+
+<div class="card">
+  <div class="result-hero">
+    <div class="rh-label">After-tax dividend income (annual)</div>
+    <div class="rh-value" id="r-net">-</div>
+  </div>
+  <div class="brow"><span class="k">Total pre-tax dividends</span><span class="v" id="r-gross" style="color:var(--green)"></span></div>
+  <div class="brow"><span class="k" id="r-tax-label">Dividend income tax</span><span class="v" id="r-tax" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">Invested principal (at purchase price)</span><span class="v" id="r-prin"></span></div>
+  <div class="brow"><span class="k">Dividend yield (pre-tax, on purchase price)</span><span class="v" id="r-yield"></span></div>
+</div>
+
+<div class="note">
+  ⚠️ This calculator gives reference estimates. Actual dividends vary every year with the company’s dividend policy and earnings.<br>
+  · Standard tax: dividend income tax 14% + local income tax 1.4% = <b>15.4%</b> (withheld at source)<br>
+  · If interest and dividend income together exceed ₩20 million a year, you become subject to comprehensive financial income taxation and progressive rates apply on top of other income<br>
+  · If you enter a purchase price, the (pre-tax) dividend yield is calculated as well
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmtInput(el){const v=el.value.replace(/[^0-9]/g,'');el.value=v?parseInt(v,10).toLocaleString('en-US'):'';}
+</script><script src="/won.js"></script><script>
+function num(id){return parseInt((document.getElementById(id).value||'0').replace(/[^0-9]/g,''),10)||0;}
+function calc(){
+  const shares=num('shares');
+  const dps=num('dps');
+  const price=num('price');
+  const taxSel=document.getElementById('tax').value;
+  document.getElementById('custom-tax-field').style.display=taxSel==='custom'?'block':'none';
+  const taxRate=taxSel==='custom'?(parseFloat(document.getElementById('custom-tax').value)||0)/100:parseFloat(taxSel)/100;
+  if(!shares||!dps){document.getElementById('r-net').textContent='-';return;}
+  const gross=shares*dps;
+  const tax=gross*taxRate;
+  const net=gross-tax;
+  const principal=shares*price;
+  const yieldPct=price>0?(dps/price*100):null;
+  document.getElementById('r-gross').textContent='+'+won(gross);
+  document.getElementById('r-tax-label').textContent='Dividend income tax ('+(taxRate*100).toFixed(1).replace(/\.0$/,'')+'%)';
+  document.getElementById('r-tax').textContent='-'+won(tax);
+  document.getElementById('r-prin').textContent=price>0?won(principal):'-';
+  document.getElementById('r-yield').textContent=yieldPct!==null?yieldPct.toFixed(2)+'%':'-';
+  document.getElementById('r-net').textContent=won(net);
+}
+calc();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

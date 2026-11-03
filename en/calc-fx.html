@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Currency Converter | MoneyFinal</title>
+<meta name="description" content="A currency converter that applies the USD/KRW rate automatically. Instantly convert US dollars, Japanese yen, euros and Chinese yuan to Korean won, and edit the rate yourself.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-fx"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-fx">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-fx">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-fx">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-fx">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-fx">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-fx">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Currency Converter | MoneyFinal">
+<meta property="og:description" content="A currency converter that applies the USD/KRW rate automatically. Instantly convert US dollars, Japanese yen, euros and Chinese yuan to Korean won, and edit the rate yourself.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-fx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Currency Converter | MoneyFinal">
+<meta name="twitter:description" content="A currency converter that applies the USD/KRW rate automatically. Instantly convert US dollars, Japanese yen, euros and Chinese yuan to Korean won, and edit the rate yourself.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Currency converter","description":"A currency converter that applies the USD/KRW rate automatically. Instantly convert US dollars, Japanese yen, euros and Chinese yuan to Korean won, and edit the rate yourself.","url":"https://moneyfinal.pages.dev/en/calc-fx","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:12px;font-size:16px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.swap{text-align:center;font-size:18px;color:var(--text2);margin:-6px 0 10px}
+.rate-info{font-size:12px;color:var(--text2);margin-top:6px}
+.rate-info .src{color:var(--accent)}
+.result-hero{text-align:center;padding:16px 0 4px}
+.rh-value{font-size:30px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Currency converter</h1>
+<div class="sub">Dollar rate applied automatically · rate can be edited</div>
+
+<div class="card">
+  <div class="field">
+    <label>Currency</label>
+    <select id="cur" onchange="onCurChange()">
+      <option value="USD">🇺🇸 US dollar (USD)</option>
+      <option value="JPY">🇯🇵 Japanese yen (JPY, per 100 yen)</option>
+      <option value="EUR">🇪🇺 Euro (EUR)</option>
+      <option value="CNY">🇨🇳 Chinese yuan (CNY)</option>
+      <option value="ETC">Other (enter manually)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label id="rate-label">Exchange rate (KRW per 1 dollar)</label>
+    <input type="text" id="rate" inputmode="decimal" placeholder="Loading..." oninput="convert('fx')">
+    <div class="rate-info" id="rate-info"></div>
+  </div>
+  <div class="field">
+    <label id="fx-label">Foreign amount (USD)</label>
+    <input type="text" id="fx" inputmode="decimal" value="100" oninput="convert('fx')">
+  </div>
+  <div class="swap">⇅</div>
+  <div class="field">
+    <label>Korean won amount (KRW)</label>
+    <input type="text" id="krw" inputmode="numeric" oninput="convert('krw')">
+  </div>
+  <div class="result-hero"><div class="rh-value" id="hero">-</div></div>
+</div>
+
+<div class="note">
+  ⚠️ The US dollar rate automatically applies the Bank of Korea ECOS base rate (previous day) and differs from actual bank rates (cash buy/sell, remittance) by the spread.<br>
+  · For other currencies such as yen, euro and yuan, no automatic rate data is provided, so please enter the rate yourself.<br>
+  · By convention, the yen is calculated as won per 100 yen.
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function pnum(id){return parseFloat((document.getElementById(id).value||'').replace(/,/g,''))||0;}
+function fmt(v,d){return v.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:d});}
+
+let usdRate=null,usdDate='';
+const CUR={USD:{label:'US dollar',unit:1,rateLabel:'Exchange rate (KRW per 1 dollar)'},JPY:{label:'Japanese yen',unit:100,rateLabel:'Exchange rate (KRW per 100 yen)'},EUR:{label:'Euro',unit:1,rateLabel:'Exchange rate (KRW per 1 euro)'},CNY:{label:'Chinese yuan',unit:1,rateLabel:'Exchange rate (KRW per 1 yuan)'},ETC:{label:'Foreign currency',unit:1,rateLabel:'Exchange rate (KRW per 1 unit of foreign currency)'}};
+
+function onCurChange(){
+  const c=document.getElementById('cur').value;
+  document.getElementById('rate-label').textContent=CUR[c].rateLabel;
+  document.getElementById('fx-label').textContent='Foreign amount ('+(c==='ETC'?'Custom currency':c)+')';
+  const rateEl=document.getElementById('rate');
+  const info=document.getElementById('rate-info');
+  if(c==='USD'&&usdRate){rateEl.value=fmt(usdRate,2);info.innerHTML='<span class="src">Auto-applied</span> · '+(usdDate?usdDate+'  as of':'latest data');}
+  else if(c==='USD'){rateEl.value='';rateEl.placeholder='Loading...';info.textContent='';}
+  else{rateEl.value='';rateEl.placeholder='Please enter the exchange rate';info.textContent='No automatic rate is available for this currency. Please enter it yourself.';}
+  convert('fx');
+}
+
+function convert(src){
+  const c=document.getElementById('cur').value;
+  const unit=CUR[c].unit;
+  const rate=pnum('rate');
+  const hero=document.getElementById('hero');
+  if(!rate){hero.textContent='-';return;}
+  if(src==='fx'){
+    const fx=pnum('fx');
+    const krw=fx*rate/unit;
+    document.getElementById('krw').value=fmt(Math.round(krw),0);
+    hero.textContent=fmt(fx,2)+' '+(c==='ETC'?'':c)+' = '+fmt(Math.round(krw),0)+' KRW';
+  }else{
+    const krw=pnum('krw');
+    const fx=krw*unit/rate;
+    document.getElementById('fx').value=fmt(fx,2);
+    hero.textContent=fmt(Math.round(krw),0)+'KRW = '+fmt(fx,2)+' '+(c==='ETC'?'':c);
+  }
+}
+
+async function loadRate(){
+  try{
+    const r=await fetch('/data/market.json');
+    const d=await r.json();
+    const usd=(d.indicators||[]).find(i=>i.indicator_code==='USD_KRW');
+    if(usd&&usd.value){
+      usdRate=parseFloat(usd.value);
+      usdDate=usd.base_date||'';
+      if(document.getElementById('cur').value==='USD'){
+        document.getElementById('rate').value=fmt(usdRate,2);
+        document.getElementById('rate-info').innerHTML='<span class="src">Auto-applied</span> · '+(usdDate?usdDate+'  as of':'latest data');
+        convert('fx');
+      }
+    }else{document.getElementById('rate').placeholder='Failed to load the rate — please enter it yourself';}
+  }catch(e){document.getElementById('rate').placeholder='Failed to load the rate — please enter it yourself';}
+}
+loadRate();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

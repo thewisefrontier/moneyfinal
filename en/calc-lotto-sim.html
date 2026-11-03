@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lottery Simulator | MoneyFinal</title>
+<meta name="description" content="A simulator for virtually buying Korean Lotto 6/45. Run thousands of draws to see winning counts by rank and your return.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/calc-lotto-sim"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-lotto-sim">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-lotto-sim">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-lotto-sim">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/calc-lotto-sim">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/calc-lotto-sim">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/calc-lotto-sim">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Lottery Simulator | MoneyFinal">
+<meta property="og:description" content="A simulator for virtually buying Korean Lotto 6/45. Run thousands of draws to see winning counts by rank and your return.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/calc-lotto-sim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lottery Simulator | MoneyFinal">
+<meta name="twitter:description" content="A simulator for virtually buying Korean Lotto 6/45. Run thousands of draws to see winning counts by rank and your return.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Lottery simulator","description":"A simulator for virtually buying Korean Lotto 6/45. Run thousands of draws to see winning counts by rank and your return.","url":"https://moneyfinal.pages.dev/en/calc-lotto-sim","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.balls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.ball{width:40px;height:40px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--accent)}
+.btn{width:100%;background:var(--accent);border:none;color:#fff;padding:12px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:8px}
+.btn:hover{opacity:.9}
+.btn2{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:6px;font-size:13px;cursor:pointer}
+.result-hero{text-align:center;padding:16px 0 8px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:28px;font-weight:700;letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:9px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="calc.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Lottery simulator</h1>
+<div class="sub">How much do you lose by repeating virtual draws with your numbers?</div>
+
+<div class="card">
+  <div class="field"><label>Your numbers (auto-generated or entered by hand, 1–45 separated by commas)</label><input type="text" id="nums" placeholder="e.g. 3, 7, 12, 24, 33, 41"></div>
+  <div class="balls" id="balls"></div>
+  <button class="btn2" onclick="autoPick()" style="margin-bottom:14px">🎲 Generate numbers</button>
+  <div class="field"><label>Number of simulations (1 draw = costs ₩1,000 per game)</label><select id="trials">
+    <option value="52">52 draws (1 game a week × 1 year)</option>
+    <option value="520">520 draws (1 game a week × 10 years)</option>
+    <option value="2600" selected>2,600 draws (1 game a week × 50 years)</option>
+    <option value="26000">26,000 draws (10 games a week × 50 years)</option>
+    <option value="100000">100,000 draws (1 game a week × about 1,923 years)</option>
+    <option value="1000000">1,000,000 draws (10 games a week × about 1,923 years)</option>
+  </select></div>
+  <button class="btn" onclick="run()">Run simulation</button>
+</div>
+
+<div class="card" id="result" style="display:none">
+  <div class="result-hero">
+    <div class="rh-label">Net result (winnings − cost)</div>
+    <div class="rh-value" id="r-pnl">-</div>
+  </div>
+  <div class="brow"><span class="k">Total cost</span><span class="v" id="r-cost"></span></div>
+  <div class="brow"><span class="k">Total winnings (estimated)</span><span class="v" id="r-win" style="color:var(--green)"></span></div>
+  <div class="brow"><span class="k">Payback rate</span><span class="v" id="r-roi"></span></div>
+  <div class="brow"><span class="k">🥇 1st (6 matches)</span><span class="v" id="r-1"></span></div>
+  <div class="brow"><span class="k">🥈 2nd (5 + bonus)</span><span class="v" id="r-2"></span></div>
+  <div class="brow"><span class="k">🥉 3rd (5 matches)</span><span class="v" id="r-3"></span></div>
+  <div class="brow"><span class="k">4th (4 matches)</span><span class="v" id="r-4"></span></div>
+  <div class="brow"><span class="k">5th (3 matches)</span><span class="v" id="r-5"></span></div>
+</div>
+
+<div class="note">
+  🎯 Theoretical odds: 1st 1 in 8,145,060 · 2nd 1 in 1,357,510 · 3rd about 1 in 35,724 · 4th about 1 in 733 · 5th about 1 in 45<br>
+  · Prizes are fixed at ₩50,000 for 4th and ₩5,000 for 5th; 1st to 3rd vary by draw, so <b>average-level estimates</b> (1st ₩2 billion, 2nd ₩50 million, 3rd ₩1.5 million) are used, before tax.<br>
+  · This simulator is for fun and a feel for the odds; it differs from actual results and expected returns. Please buy lottery tickets responsibly.
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script src="/won.js"></script><script>
+function drawSix(){
+  const pool=Array.from({length:45},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  return pool.slice(0,7); 
+}
+function renderBalls(nums){
+  document.getElementById('balls').innerHTML=nums.map(n=>`<div class="ball">${n}</div>`).join('');
+}
+function autoPick(){
+  const n=drawSix().slice(0,6).sort((a,b)=>a-b);
+  document.getElementById('nums').value=n.join(', ');
+  renderBalls(n);
+}
+function getMyNums(){
+  const raw=(document.getElementById('nums').value||'').split(/[,\s]+/).map(s=>parseInt(s,10)).filter(n=>n>=1&&n<=45);
+  const uniq=[...new Set(raw)];
+  return uniq.length===6?uniq:null;
+}
+const PRIZE={1:2e9,2:5e7,3:15e5,4:5e4,5:5e3}; 
+function run(){
+  let my=getMyNums();
+  if(!my){autoPick();my=getMyNums();}
+  renderBalls([...my].sort((a,b)=>a-b));
+  const trials=parseInt(document.getElementById('trials').value,10);
+  const mySet=new Set(my);
+  const cnt={1:0,2:0,3:0,4:0,5:0};
+  for(let t=0;t<trials;t++){
+    const d=drawSix();
+    const bonus=d[6];
+    let m=0;
+    for(let i=0;i<6;i++)if(mySet.has(d[i]))m++;
+    if(m===6)cnt[1]++;
+    else if(m===5&&mySet.has(bonus))cnt[2]++;
+    else if(m===5)cnt[3]++;
+    else if(m===4)cnt[4]++;
+    else if(m===3)cnt[5]++;
+  }
+  const cost=trials*1000;
+  const win=cnt[1]*PRIZE[1]+cnt[2]*PRIZE[2]+cnt[3]*PRIZE[3]+cnt[4]*PRIZE[4]+cnt[5]*PRIZE[5];
+  const pnl=win-cost;
+  const el=document.getElementById('r-pnl');
+  el.textContent=(pnl>=0?'+':'')+won(pnl);
+  el.style.color=pnl>=0?'var(--green)':'var(--red)';
+  document.getElementById('r-cost').textContent=won(cost);
+  document.getElementById('r-win').textContent=won(win);
+  document.getElementById('r-roi').textContent=(win/cost*100).toFixed(1)+'%';
+  for(let i=1;i<=5;i++)document.getElementById('r-'+i).textContent=cnt[i].toLocaleString('en-US')+' times';
+  document.getElementById('result').style.display='block';
+}
+autoPick();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

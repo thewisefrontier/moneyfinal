@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Top stocks by market cap on KOSPI, KOSDAQ and the US market, index quotes, RSI technical indicators and company financial metrics at a glance.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/market"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/market">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/market">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/market">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/market">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/market">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/market">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Markets | MoneyFinal">
+<meta property="og:description" content="Top stocks by market cap on KOSPI, KOSDAQ and the US market, index quotes, RSI technical indicators and company financial metrics at a glance.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/market">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markets | MoneyFinal">
+<meta name="twitter:description" content="Top stocks by market cap on KOSPI, KOSDAQ and the US market, index quotes, RSI technical indicators and company financial metrics at a glance.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Markets","description":"Top stocks by market cap on KOSPI, KOSDAQ and the US market, index quotes, RSI technical indicators and company financial metrics at a glance.","url":"https://moneyfinal.pages.dev/en/market","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>Markets | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:1000px){.grid5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}.grid5{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.stock-row{grid-template-columns:auto 1fr auto auto auto auto;gap:12px}
+.us-row{grid-template-columns:auto 1fr auto auto auto auto;gap:12px}
+.s-rank{font-size:12px;color:var(--text2);width:20px}
+.s-name{font-size:13px;font-weight:600}
+.s-mkt{font-size:10px;color:var(--text2);margin-top:2px}
+.s-price{font-size:14px;font-weight:700;text-align:right}
+.s-change{font-size:11px;text-align:right}
+.s-rsi{font-size:12px;font-weight:600;text-align:right}
+.s-cap{font-size:11px;color:var(--text2);text-align:right}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="market.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+
+<div class="sec-hd"><div class="sec-title">Market indices</div></div>
+<div class="grid5">
+  <a class="kpi" href="/en/indicator-detail.html?code=KOSPI&from=market"><div class="kpi-label">KOSPI</div><div class="kpi-value" id="i-kospi">-</div><div class="kpi-sub" id="i-kospi-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=KOSDAQ&from=market"><div class="kpi-label">KOSDAQ</div><div class="kpi-value" id="i-kosdaq">-</div><div class="kpi-sub" id="i-kosdaq-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=KOSPI200&from=market"><div class="kpi-label">KOSPI 200</div><div class="kpi-value" id="i-kospi200">-</div><div class="kpi-sub" id="i-kospi200-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=USD_KRW&from=market"><div class="kpi-label">USD/KRW</div><div class="kpi-value" id="i-usd">-</div><div class="kpi-sub" id="i-usd-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=USD_INDEX&from=market"><div class="kpi-label">US dollar index</div><div class="kpi-value" id="i-dxy">-</div><div class="kpi-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=US_SP500&from=market"><div class="kpi-label">S&amp;P 500</div><div class="kpi-value" id="i-sp500">-</div><div class="kpi-sub" id="i-sp500-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=US_DJIA&from=market"><div class="kpi-label">Dow Jones</div><div class="kpi-value" id="i-djia">-</div><div class="kpi-sub" id="i-djia-sub"></div></a>
+  <a class="kpi" href="/en/indicator-detail.html?code=US_NASDAQ&from=market"><div class="kpi-label">Nasdaq</div><div class="kpi-value" id="i-nasdaq">-</div><div class="kpi-sub" id="i-nasdaq-sub"></div></a>
+</div>
+
+<div class="sec-hd"><div class="sec-title">Korean stocks</div></div>
+<div class="card">
+  <div class="card-hd"><span class="card-title">Top by market cap · RSI(14) technical indicator</span></div>
+  <div class="filter-tabs">
+    <button class="ft active" onclick="filterS('ALL',this)">All</button>
+    <button class="ft" onclick="filterS('KOSPI',this)">KOSPI</button>
+    <button class="ft" onclick="filterS('KOSDAQ',this)">KOSDAQ</button>
+  </div>
+  <div style="display:grid;grid-template-columns:auto 1fr auto auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+    <span>#</span><span>Stock</span><span style="text-align:right">Close</span><span style="text-align:right">Change</span><span style="text-align:right">RSI(14)</span><span style="text-align:right">Market cap</span>
+  </div>
+  <div id="stock-list"><div class="loading">Loading...</div></div>
+</div>
+
+<div class="grid2">
+  <div>
+    <div class="sec-hd"><div class="sec-title">Company financial metrics</div></div>
+    <div class="card">
+      <div class="card-hd"><span class="card-title">Top 20 stocks</span></div>
+      <div style="display:grid;grid-template-columns:1fr auto auto auto auto;gap:8px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+        <span>Company</span><span>PER</span><span>PBR</span><span>ROE</span><span>EPS</span>
+      </div>
+      <div id="finance-list"><div class="loading">Loading...</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-hd"><div class="sec-title">Market risk indicators</div></div>
+    <div class="grid4" id="risk-grid"><div class="loading" style="grid-column:1/-1">Loading...</div></div>
+  </div>
+</div>
+
+<div class="sec-hd"><div class="sec-title">US stocks</div></div>
+<div class="card">
+  <div class="card-hd"><span class="card-title">Top by market cap · RSI(14) technical indicator</span></div>
+  <div style="display:grid;grid-template-columns:auto 1fr auto auto auto auto;gap:12px;padding:8px 16px;font-size:11px;color:var(--text2);background:var(--bg3)">
+    <span>#</span><span>Stock</span><span style="text-align:right">Close</span><span style="text-align:right">Change</span><span style="text-align:right">RSI(14)</span><span style="text-align:right">Market cap</span>
+  </div>
+  <div id="us-stock-list"><div class="loading">Loading...</div></div>
+</div>
+
+<div class="sec-hd" style="margin-top:8px"><div class="sec-title">Derivatives indices</div></div>
+<div class="card">
+  <div class="card-hd"><span class="card-title">Overseas derivatives · structured securities</span></div>
+  <div id="deriv-list"><div class="loading">Loading...</div></div>
+</div>
+
+<div class="sec-hd" style="margin-top:8px"><div class="sec-title">암호화폐</div></div>
+<div class="grid4" id="crypto-grid" style="grid-template-columns:repeat(2,1fr)"><div class="loading" style="grid-column:1/-1">Loading...</div></div>
+
+</main>
+<div class="disclaimer">⚠️ This site provides reference information based on public data. You are solely responsible for your investment decisions and any losses.<br>Data sources: Korea Financial Supervisory Service · Bank of Korea ECOS · US Federal Reserve FRED · Korea Public Data Portal · Finnhub · Alpha Vantage</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmt(v,u='',d=2){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})+(u?' '+u:'');}
+function sc(s){return s==='red'?'down':s==='yellow'?'neutral':'up'}
+function bigNum(v){const n=parseFloat(v);if(isNaN(n))return'-';const abs=Math.abs(n);const t=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']].find(x=>abs>=x[0]);const s=t?(abs/t[0]).toFixed(abs/t[0]>=100?0:abs/t[0]>=10?1:2)+t[1]:String(Math.round(abs));return(n<0?'-':'')+s;}
+function idxKpi(i,id){document.getElementById(id).textContent=fmt(i.value,'',2);const el=document.getElementById(id+'-sub');if(!el)return;if(i.prev_value){const diff=i.value-i.prev_value;el.innerHTML=`<span class="${diff>0?'up':diff<0?'down':'neutral'}">${diff>0?'+':''}${fmt(diff,'',2)}</span>`;}}
+function latestByCode(list){const m={};(list||[]).forEach(s=>{const k=s.stock_code;if(!k)return;if(!m[k]||(s.base_date||'')>(m[k].base_date||''))m[k]=s;});return Object.values(m);}
+let stockAll=[];let rsiMap={};
+function stockLink(s){return `/en/stock-detail.html?code=${encodeURIComponent(s.stock_code||'')}&name=${encodeURIComponent(s.stock_name||'')}&market=${encodeURIComponent(s.market_type||'')}`;}
+function stockHtml(list){if(!list.length)return '<div class="empty">No data</div>';return list.slice(0,25).map((s,i)=>{const cap=s.market_cap?((s.market_cap/1e12).toFixed(1)+'T'):'';const chg=parseFloat(s.flt_rt||0);return `<a class="row stock-row" href="${stockLink(s)}" style="cursor:pointer"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.market_type||''} ${s.stock_code||''}</div></div><div class="s-price">${fmt(s.close_price,'',0)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-rsi">${rsiCell(s.stock_code)}</div><div class="s-cap">${cap}</div></a>`;}).join('');}
+function rsiCell(code){const r=rsiMap[code];if(!r)return '<span class="neutral">-</span>';const v=parseFloat(r.value);if(isNaN(v))return '<span class="neutral">-</span>';if(v>=70)return `<span style="color:var(--red)">${v.toFixed(1)} overbought</span>`;if(v<=30)return `<span style="color:var(--yellow)">${v.toFixed(1)} oversold</span>`;return `<span class="neutral">${v.toFixed(1)}</span>`;}
+function usStockHtml(list){if(!list.length)return '<div class="empty">No data</div>';return list.slice(0,25).map((s,i)=>{const cap=s.market_cap?('$'+(s.market_cap/1e9).toFixed(1)+'B'):'';const chg=parseFloat(s.flt_rt||0);return `<a class="row us-row" href="${stockLink(s)}" style="cursor:pointer"><div class="s-rank">${i+1}</div><div><div class="s-name">${s.stock_name}</div><div class="s-mkt">${s.stock_code||''} · ${s.base_date||''}</div></div><div class="s-price">$${fmt(s.close_price,'',2)}</div><div class="s-change ${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,'%')}</div><div class="s-rsi">${rsiCell(s.stock_code)}</div><div class="s-cap">${cap}</div></a>`;}).join('');}
+function filterS(mkt,btn){btn.closest('.filter-tabs').querySelectorAll('.ft').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('stock-list').innerHTML=stockHtml(mkt==='ALL'?stockAll:stockAll.filter(s=>s.market_type===mkt));}
+async function loadInvest(){
+  try{const r=await fetch('/data/market.json');const d=await r.json();const inds=d.indicators||[];
+    inds.forEach(i=>{
+      if(i.indicator_code&&i.indicator_code.indexOf('US_RSI_')===0)rsiMap[i.indicator_code.replace('US_RSI_','')]=i;
+      if(i.indicator_code&&i.indicator_code.indexOf('KR_RSI_')===0)rsiMap[i.indicator_code.replace('KR_RSI_','')]=i;
+      if(i.indicator_code==='KOSPI'){document.getElementById('i-kospi').textContent=fmt(i.value,'',2);document.getElementById('i-kospi-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
+      if(i.indicator_code==='KOSDAQ'){document.getElementById('i-kosdaq').textContent=fmt(i.value,'',2);document.getElementById('i-kosdaq-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
+      if(i.indicator_code==='KOSPI200'){document.getElementById('i-kospi200').textContent=fmt(i.value,'',2);document.getElementById('i-kospi200-sub').innerHTML=`<span class="${sc(i.signal)}">${i.summary_text||''}</span>`;}
+      if(i.indicator_code==='USD_KRW'){document.getElementById('i-usd').textContent='₩'+fmt(i.value,'',0);const diff=i.prev_value?Math.round(i.value-i.prev_value):null;document.getElementById('i-usd-sub').innerHTML=diff!==null?`<span class="${diff>0?'down':'up'}">${diff>0?'+':''}${diff} KRW</span>`:'';}      
+      if(i.indicator_code==='USD_INDEX')document.getElementById('i-dxy').textContent=fmt(i.value,'',2);
+      if(i.indicator_code==='US_SP500')idxKpi(i,'i-sp500');
+      if(i.indicator_code==='US_DJIA')idxKpi(i,'i-djia');
+      if(i.indicator_code==='US_NASDAQ')idxKpi(i,'i-nasdaq');
+    });
+    const rg=document.getElementById('risk-grid');const riskInds=inds.filter(i=>['VIX','WTI','GOLD','US_YIELD_CURVE'].includes(i.indicator_code));
+    rg.innerHTML=riskInds.length?riskInds.map(i=>`<a class="kpi" href="/en/indicator-detail.html?code=${i.indicator_code}&from=market"><div class="kpi-label">${i.indicator_name}</div><div class="kpi-value ${sc(i.signal)}">${fmt(i.value,'',2)}</div><div class="kpi-sub">${i.unit}</div></a>`).join(''):'<div class="empty" style="grid-column:1/-1">No data</div>';
+    const derivs=inds.filter(i=>['해외파생거래','파생결합증권'].includes(i.category)).slice(0,10);
+    document.getElementById('deriv-list').innerHTML=derivs.length?derivs.map(i=>`<div class="row ind-row"><div class="ind-name">${i.indicator_name}</div><div><span class="ind-val ${sc(i.signal)}" title="${fmt(i.value,i.unit,0)}">${bigNum(i.value)}</span> <span class="ind-unit">${i.unit}</span></div></div>`).join(''):'<div class="empty">Data coming soon</div>';
+    const cg=document.getElementById('crypto-grid');const cryptoInds=inds.filter(i=>i.category==='암호화폐');
+    cg.innerHTML=cryptoInds.length?cryptoInds.map(i=>`<div class="kpi"><div class="kpi-label">${i.indicator_name}</div><div class="kpi-value ${sc(i.signal)}">$${fmt(i.value,'',2)}</div><div class="kpi-sub">${i.summary_text?i.summary_text.split('(')[1]?.replace(')','')||'':''}</div></div>`).join(''):'<div class="empty" style="grid-column:1/-1">Data coming soon</div>';
+  }catch(e){}
+  try{const r=await fetch('/data/stocks.json');const d=await r.json();stockAll=latestByCode([...(d.kospi||[]),...(d.kosdaq||[])]).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('stock-list').innerHTML=stockHtml(stockAll);const us=latestByCode(d.us||[]).sort((a,b)=>(b.market_cap||0)-(a.market_cap||0));document.getElementById('us-stock-list').innerHTML=usStockHtml(us);}catch(e){document.getElementById('stock-list').innerHTML='<div class="empty">Stock data coming soon</div>';document.getElementById('us-stock-list').innerHTML='<div class="empty">Stock data coming soon</div>';}
+  try{const r=await fetch('/data/corp_finance.json');const d=await r.json();const cs=d.companies||[];document.getElementById('finance-list').innerHTML=cs.length?cs.slice(0,20).map(c=>`<div class="row" style="grid-template-columns:1fr auto auto auto auto;gap:8px"><div style="font-size:13px;font-weight:600">${c.corp_name}</div><div style="font-size:12px;text-align:right">${fmt(c.per,'',1)}</div><div style="font-size:12px;text-align:right">${fmt(c.pbr,'',1)}</div><div style="font-size:12px;text-align:right;color:var(--green)">${fmt(c.roe,'%',1)}</div><div style="font-size:12px;text-align:right">${fmt(c.eps,'',0)}</div></div>`).join(''):'<div class="empty">Company financial data coming soon</div>';}catch(e){document.getElementById('finance-list').innerHTML='<div class="empty">Company financial data coming soon</div>';}
+}
+loadInvest();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+<script src="/en-names.js"></script>
+</body>
+</html>

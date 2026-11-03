@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Stock Detail - Daily, Monthly and Yearly Prices · Company Info | MoneyFinal</title>
+<meta name="description" content="Daily, monthly and yearly price trends and company financials (PER, PBR, ROE, EPS) for top Korean and US stocks.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/stock-detail"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/stock-detail">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/stock-detail">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/stock-detail">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/stock-detail">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/stock-detail">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/stock-detail">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta name="robots" content="noindex">
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:900px;margin:0 auto;padding:24px 16px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px}
+.result-hero{text-align:center;padding:6px 12px 14px}
+.rh-value{font-size:30px;font-weight:700;letter-spacing:-1px}
+.rh-sub{font-size:13px;margin-top:6px}
+.tabs{display:flex;gap:6px;margin-bottom:14px}
+.tab{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:7px 6px;text-align:right;border-bottom:1px solid var(--border)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--text2);font-weight:600}
+.brow{display:flex;justify-content:space-between;padding:9px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.empty{color:var(--text2);text-align:center;padding:30px;font-size:13px}
+.sec-title{font-size:14px;font-weight:700;margin-bottom:10px}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.ai-report{font-size:13.5px;color:var(--text);line-height:1.9}
+.ai-report-meta{font-size:11px;color:var(--text2);margin-top:10px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="market.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="crumb"><a href="/en/market.html">Markets</a> &gt; <span id="crumb-name">Stock</span></div>
+<h1 id="stock-title">-</h1>
+<div class="sub" id="stock-sub"></div>
+<div class="sub" id="sim-link" style="margin-top:6px"></div>
+
+<div class="card" id="priceCard">
+  <div class="result-hero">
+    <div class="rh-value" id="p-last">-</div>
+    <div class="rh-sub" id="p-change"></div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-v="daily" onclick="setView(this)">Daily</button>
+    <button class="tab" data-v="monthly" onclick="setView(this)">Monthly</button>
+    <button class="tab" data-v="yearly" onclick="setView(this)">Yearly</button>
+  </div>
+  <div id="chartHolder"></div>
+  <div style="overflow-x:auto;margin-top:10px">
+    <table id="histTable"><thead><tr><th>Date</th><th>Close</th><th>Change</th><th>Market cap</th></tr></thead><tbody id="histBody"></tbody></table>
+  </div>
+</div>
+
+<div class="sec-title">Company financials</div>
+<div class="card" id="financeCard"><div class="empty">Loading...</div></div>
+
+<div class="sec-title">AI summary</div>
+<div class="card" id="aiReportCard"><div class="empty">Loading...</div></div>
+
+<div class="note">
+  ⚠️ Prices are for reference, based on public data and Finnhub, and may differ from real-time quotes. Company financials are provided only for some top stocks by market cap.<br>
+  · The AI summary is reference information auto-generated by Gemini using only the financial data shown above; it is not an investment recommendation. It is refreshed with the quarterly financial data cycle.<br>
+  · Daily, monthly and yearly data accumulate from when this site started collecting, so history may be limited early on.
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+function fmt(v,d=0){if(v===null||v===undefined)return'-';const n=parseFloat(v);if(isNaN(n))return'-';return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function fmtCap(v,isUs){const n=parseFloat(v);if(!n)return'-';return isUs?('$'+(n/1e9).toFixed(1)+'B'):('₩'+(n/1e12).toFixed(1)+'T');}
+
+const params=new URLSearchParams(location.search);
+const CODE=params.get('code')||'';
+const NAME=params.get('name')||CODE;
+const MARKET=params.get('market')||'KOSPI';
+const IS_US=MARKET==='US';
+document.getElementById('stock-title').textContent=NAME;
+if(/^[0-9][0-9A-Z]{5}$/.test(CODE))document.getElementById('sim-link').innerHTML='<a href="/en/sim.html?code='+encodeURIComponent(CODE)+'&years=3" style="color:var(--accent)">📈 What if you had invested 3 years ago? See it in the investment simulator →</a>';
+document.getElementById('crumb-name').textContent=NAME;
+document.getElementById('stock-sub').textContent=MARKET+' · '+CODE;
+
+let view='daily';
+function setView(btn){view=btn.dataset.v;btn.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');render();}
+
+function aggregate(rows,mode){
+  if(mode==='daily')return rows;
+  const keyFn=mode==='monthly'?d=>d.slice(0,7):d=>d.slice(0,4);
+  const byKey={};
+  rows.forEach(r=>{const k=keyFn(r.base_date);byKey[k]=r;}); 
+  return Object.keys(byKey).sort().map(k=>byKey[k]);
+}
+
+function svgEl(tag){return document.createElementNS('http://www.w3.org/2000/svg',tag);}
+function drawChart(rows){
+  const holder=document.getElementById('chartHolder');
+  if(rows.length<2){holder.innerHTML='';return;}
+  const W=820,H=200,padL=60,padR=16,padT=14,padB=24;
+  const vals=rows.map(r=>parseFloat(r.close_price)||0);
+  const minV=Math.min.apply(null,vals),maxV=Math.max.apply(null,vals);
+  const range=(maxV-minV)||1;
+  const x=i=>padL+i/(rows.length-1)*(W-padL-padR);
+  const y=v=>H-padB-(v-minV)/range*(H-padT-padB);
+  const css=getComputedStyle(document.documentElement);
+  const green=css.getPropertyValue('--green').trim(),text2=css.getPropertyValue('--text2').trim(),border=css.getPropertyValue('--border').trim();
+  const svg=svgEl('svg');svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.setAttribute('style','width:100%;height:auto;display:block');
+  for(let i=0;i<=3;i++){
+    const gv=minV+range*i/3,gy=y(gv);
+    const gl=svgEl('line');gl.setAttribute('x1',padL);gl.setAttribute('x2',W-padR);gl.setAttribute('y1',gy);gl.setAttribute('y2',gy);gl.setAttribute('stroke',border);svg.appendChild(gl);
+    const lbl=svgEl('text');lbl.setAttribute('x',padL-6);lbl.setAttribute('y',gy+4);lbl.setAttribute('text-anchor','end');lbl.setAttribute('font-size','10');lbl.setAttribute('fill',text2);lbl.textContent=fmt(gv,IS_US?2:0);svg.appendChild(lbl);
+  }
+  const step=Math.max(1,Math.floor(rows.length/6));
+  rows.forEach((r,i)=>{if(i%step!==0&&i!==rows.length-1)return;const xl=svgEl('text');xl.setAttribute('x',x(i));xl.setAttribute('y',H-padB+16);xl.setAttribute('text-anchor','middle');xl.setAttribute('font-size','9');xl.setAttribute('fill',text2);xl.textContent=r.base_date;svg.appendChild(xl);});
+  const points=rows.map((r,i)=>x(i)+','+y(parseFloat(r.close_price)||0)).join(' ');
+  const pl=svgEl('polyline');pl.setAttribute('points',points);pl.setAttribute('fill','none');pl.setAttribute('stroke',green);pl.setAttribute('stroke-width','2.5');pl.setAttribute('stroke-linejoin','round');svg.appendChild(pl);
+  holder.innerHTML='';holder.appendChild(svg);
+}
+
+function render(){
+  if(!window.__hist)return;
+  const rows=aggregate(window.__hist,view);
+  drawChart(rows);
+  const tbody=document.getElementById('histBody');
+  tbody.innerHTML=rows.slice().reverse().map(r=>{
+    const chg=parseFloat(r.flt_rt||0);
+    return `<tr><td>${r.base_date}</td><td>${IS_US?'$':'₩'}${fmt(r.close_price,IS_US?2:0)}</td><td class="${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,2)}%</td><td>${fmtCap(r.market_cap,IS_US)}</td></tr>`;
+  }).join('');
+  const last=rows[rows.length-1];
+  if(last){
+    document.getElementById('p-last').textContent=(IS_US?'$':'₩')+fmt(last.close_price,IS_US?2:0);
+    const chg=parseFloat(last.flt_rt||0);
+    document.getElementById('p-change').innerHTML=`<span class="${chg>0?'up':chg<0?'down':'neutral'}">${chg>0?'+':''}${fmt(chg,2)}%</span> · as of ${last.base_date}`;
+  }
+}
+
+async function load(){
+  try{
+    const r=await fetch('/data/stock_history.json');const d=await r.json();
+    const rows=(d.history||{})[CODE]||[];
+    if(!rows.length){document.getElementById('priceCard').innerHTML='<div class="empty">Price history for this stock is still being collected</div>';return;}
+    window.__hist=rows;
+    render();
+  }catch(e){document.getElementById('priceCard').innerHTML='<div class="empty">Could not load data</div>';}
+
+  try{
+    const r=await fetch('/data/corp_finance.json');const d=await r.json();
+    const c=(d.companies||[]).find(c=>c.stock_code===CODE);
+    const el=document.getElementById('financeCard');
+    if(!c){el.innerHTML='<div class="empty">Financials for this stock are not available yet (only some top stocks by market cap are covered)</div>';return;}
+    el.innerHTML=`
+      <div class="grid2">
+        <div class="brow"><span class="k">Fiscal year</span><span class="v">${c.fiscal_year}</span></div>
+        <div class="brow"><span class="k">PER</span><span class="v">${fmt(c.per,2)}</span></div>
+        <div class="brow"><span class="k">Revenue</span><span class="v">₩${fmt((c.revenue||0)/1e9,1)}B</span></div>
+        <div class="brow"><span class="k">PBR</span><span class="v">${fmt(c.pbr,2)}</span></div>
+        <div class="brow"><span class="k">Operating income</span><span class="v">₩${fmt((c.operating_profit||0)/1e9,1)}B</span></div>
+        <div class="brow"><span class="k">ROE</span><span class="v">${fmt(c.roe,2)}%</span></div>
+        <div class="brow"><span class="k">Net income</span><span class="v">₩${fmt((c.net_profit||0)/1e9,1)}B</span></div>
+        <div class="brow"><span class="k">EPS</span><span class="v">₩${fmt(c.eps,0)}</span></div>
+      </div>`;
+  }catch(e){document.getElementById('financeCard').innerHTML='<div class="empty">Could not load data</div>';}
+
+  try{
+    const r=await fetch('/data/stock_reports.json');const d=await r.json();
+    const rep=(d.reports||{})[CODE];
+    const el=document.getElementById('aiReportCard');
+    if(!rep){el.innerHTML='<div class="empty">No AI summary is available for this stock yet (generated only for stocks with financials)</div>';return;}
+    const escR=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const sentences=escR(rep.report_text||'').split(/(?<=\.)\s+/).filter(Boolean).join('<br><br>');
+    el.innerHTML=`<div class="ai-report">${sentences}</div><div class="ai-report-meta">${rep.based_on||''} basis · Auto-generated by Gemini · ${d.updated_at||''}</div>`;
+  }catch(e){document.getElementById('aiReportCard').innerHTML='<div class="empty">Could not load data</div>';}
+}
+load();
+
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+<script src="/en-names.js"></script>
+</body>
+</html>
