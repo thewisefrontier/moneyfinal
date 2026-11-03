@@ -1,0 +1,31 @@
+name: IPO 일정(한국 DART·미국 EDGAR)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 23 * * *'   # 매일 08:30 KST
+concurrency:
+  group: ipo-data
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 한국 공모(DART 증권신고서)
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python fetchers/ipo_kr.py
+      - name: 미국 공모(SEC EDGAR)
+        run: python fetchers/ipo_us.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/ipo/
+          git diff --staged --quiet || (git commit -m "data: IPO 일정 갱신" && git pull --rebase origin main && git push)
