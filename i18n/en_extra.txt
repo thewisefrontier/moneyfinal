@@ -97,3 +97,83 @@ ${sign}₩${Math.round(won).toLocaleString('ko-KR')}
 TIGER US Dividend Dow Jones, KODEX High Dividend Stocks 등 국내 상장 배당 ETF의 실제 분배금 이력과 세후 수령액을 계산합니다.
 --->
 Calculate actual distribution history and after-tax income for Korea-listed dividend ETFs such as TIGER US Dividend Dow Jones and KODEX High Dividend Stocks.
+====
+도쿄증권거래소 등 일본 상장 종목의 종가·등락률·시가총액 순위와 닛케이225·토픽스·달러엔 시세를 한눈에 봅니다. 종목명은 일본어와 영문 병기.
+--->
+Closing prices, daily changes and market-cap rankings for Japan-listed stocks, plus the Nikkei 225, TOPIX and USD/JPY, at a glance. Names are shown in both English and Japanese.
+====
+일본 시장 | 머니파이널
+--->
+Japan Market | MoneyFinal
+====
+일본 시장
+--->
+Japan Market
+====
+종목명 · 코드
+--->
+Company name · code
+====
+예: トヨタ, Toyota, 7203
+--->
+e.g. Toyota, トヨタ, 7203
+====
+전체 업종
+--->
+All industries
+====
+⚠️ 공시·시세 자료를 가공한 참고 정보이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 시세는 지연되거나 실제와 다를 수 있습니다.
+--->
+⚠️ This is reference information derived from filings and quotes. You are solely responsible for your investment decisions and any losses. Quotes may be delayed or differ from actual prices.
+====
+엔
+--->
+yen
+====
+닛케이225
+--->
+Nikkei 225
+====
+토픽스 ETF(1306)
+--->
+TOPIX ETF (1306)
+====
+달러/엔
+--->
+USD/JPY
+====
+시세 제공 종목
+--->
+Stocks with quotes
+====
+개
+--->
+⎵stocks
+====
+일본 상장사
+--->
+Japan-listed companies
+====
+조건에 맞는 종목이 없습니다
+--->
+No stocks match your filters
+====
+종목 <b>${rows.length}</b>개 · 시가총액 순
+--->
+<b>${rows.length}</b> stocks · by market cap
+====
+코드
+--->
+Code
+====
+거래량
+--->
+Volume
+====
+더 보기 (${Math.min(LIMIT+100,rows.length)}/${rows.length})
+--->
+Show more (${Math.min(LIMIT+100,rows.length)}/${rows.length})
+====
+<b>데이터 기준</b> · 종목 정보(이름·업종·결산월)는 금융청 EDINET 제출자 코드표를 가공했고(공공데이터 이용규약 제1.0판, 가공은 머니파이널), 시세는 Yahoo Finance입니다. 시가총액은 종가 기준 근사값이며 처음 며칠은 일부 종목이 비어 있을 수 있습니다. 토픽스는 지수 대신 연동 ETF(1306) 가격입니다.
+--->
+<b>Data basis</b> · Company information (name, industry, fiscal year-end) is processed from the EDINET filer code list of Japan’s Financial Services Agency (Public Data License 1.0; processing by MoneyFinal), and quotes come from Yahoo Finance. Market cap is an approximation based on the closing price, and some stocks may be blank for the first few days. TOPIX is shown as the price of the tracking ETF (1306), not the index.

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Closing prices, daily changes and market-cap rankings for Japan-listed stocks, plus the Nikkei 225, TOPIX and USD/JPY, at a glance. Names are shown in both English and Japanese.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/jp-market">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/jp-market">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/jp-market">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/jp-market">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/jp-market">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/jp-market">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/jp-market">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Japan Market | MoneyFinal">
+<meta property="og:description" content="Closing prices, daily changes and market-cap rankings for Japan-listed stocks, plus the Nikkei 225, TOPIX and USD/JPY, at a glance. Names are shown in both English and Japanese.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/jp-market">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Japan Market | MoneyFinal">
+<meta name="twitter:description" content="Closing prices, daily changes and market-cap rankings for Japan-listed stocks, plus the Nikkei 225, TOPIX and USD/JPY, at a glance. Names are shown in both English and Japanese.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Japan Market","description":"Closing prices, daily changes and market-cap rankings for Japan-listed stocks, plus the Nikkei 225, TOPIX and USD/JPY, at a glance. Names are shown in both English and Japanese.","url":"https://moneyfinal.pages.dev/en/jp-market","inLanguage":"en"}</script>
+<title>Japan Market | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
+.badge.b-buy{background:rgba(63,185,80,.18);color:var(--green)}
+.badge.b-sell{background:rgba(248,81,73,.18);color:var(--red)}
+.badge.b-etf{background:rgba(56,139,253,.18);color:var(--blue)}
+.filters{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;padding:12px 16px;border-top:1px solid var(--border)}
+.filters .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.filters .grp>span{font-size:11px;color:var(--text2);margin-right:2px}
+.legal{background:rgba(210,153,34,.12);border:1px solid var(--yellow);border-radius:8px;padding:12px 16px;font-size:12.5px;line-height:1.7;margin:16px 0}
+.more{display:block;margin:12px auto;padding:8px 22px}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="jp-market.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">Japan Market</div><span class="sec-more" id="asof"></span></div>
+<div class="grid4" id="kpis"><div class="loading">Loading...</div></div>
+<div class="card" style="overflow:visible">
+  <div class="uf-form" style="grid-template-columns:3fr 2fr">
+    <div class="fld"><label>Company name · code</label>
+      <div class="qrow"><input id="q" autocomplete="off" placeholder="e.g. Toyota, トヨタ, 7203"><button class="qgo" id="go" type="button" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div></div>
+    <div class="fld"><label>Industry</label><select id="ind"><option value="">All industries</option></select></div>
+  </div>
+</div>
+<div class="card"><div id="result" style="overflow-x:auto"><div class="loading">Loading...</div></div><div id="moreWrap"></div></div>
+<div class="note" id="notes"></div>
+</main>
+<div class="disclaimer">⚠️ This is reference information derived from filings and quotes. You are solely responsible for your investment decisions and any losses. Quotes may be delayed or differ from actual prices.</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+const $=id=>document.getElementById(id);
+const EN=document.documentElement.lang==='en';
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let ROWS=[],INDM=null,QT=null,Q='',IND='',LIMIT=100;
+async function J(p){const r=await fetch(p,{cache:'no-cache'});if(!r.ok)throw new Error(p);return r.json();}
+
+function big(n){
+  if(n==null)return'-';
+  if(EN){const a=Math.abs(n),t=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']].find(x=>a>=x[0]);return '¥'+(t?(a/t[0]).toFixed(a/t[0]>=100?0:a/t[0]>=10?1:2)+t[1]:Math.round(a));}
+  const jo=Math.floor(n/1e12),eok=Math.floor(n%1e12/1e8),man=Math.floor(n%1e8/1e4);let s='';if(jo)s+=jo+'T';if(eok)s+=eok+'B';if(!jo&&!eok&&man)s+=man+'M';return (s||'0')+'yen';
+}
+const yen=p=>p==null?'-':(EN?'¥':'')+p.toLocaleString(EN?'en-US':'en-US',{maximumFractionDigits:p<1000?1:0}).replace(EN?/x/:/,/g,'')+(EN?'':'yen');
+const pct=c=>c==null?'-':`<span class="${c>0?'up':c<0?'down':'neutral'}">${c>0?'+':''}${c.toFixed(2)}%</span>`;
+function kpi(label,v,sub){return `<div class="kpi"><div class="kpi-label">${label}</div><div class="kpi-value">${v}</div><div class="kpi-sub">${sub}</div></div>`;}
+async function init(){
+  try{[INDM,QT]=await Promise.all([J('/data/jp/index.json'),J('/data/jp/quotes.json')]);}catch(e){$('result').innerHTML='<div class="empty">Data is being prepared</div>';$('kpis').innerHTML='';return;}
+  ROWS=INDM.stocks.filter(s=>QT.q[s[0]]).map(s=>{const q=QT.q[s[0]];return {t:s[0],ja:s[1],en:s[2],ind:s[3],p:q[0],chg:q[1]?(q[0]/q[1]-1)*100:null,vol:q[2],cap:q[3]};});
+  ROWS.sort((a,b)=>(b.cap||0)-(a.cap||0));
+  $('asof').textContent=QT.asof+'  as of';
+  const sel=$('ind');Object.keys(INDM.ind_en).forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=EN?INDM.ind_en[k]:INDM.ind_ko[k];sel.appendChild(o);});
+  sel.addEventListener('change',()=>{IND=sel.value;LIMIT=100;render();});
+  const q=$('q');q.addEventListener('input',()=>{Q=q.value.trim().toLowerCase();LIMIT=100;render();});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();Q=q.value.trim().toLowerCase();render();}});
+  $('go').addEventListener('click',()=>{Q=q.value.trim().toLowerCase();q.focus();render();});
+  const i=QT.idx||{},c=(a)=>a?(a[0]/a[1]-1)*100:null;
+  $('kpis').innerHTML=[
+    kpi('Nikkei 225',i.N225?i.N225[0].toLocaleString(EN?'en-US':'en-US',{maximumFractionDigits:2}).replace(EN?/x/:/,/g,''):'-',pct(c(i.N225))),
+    kpi('TOPIX ETF (1306)',i.TOPIX_ETF?yen(i.TOPIX_ETF[0]):'-',pct(c(i.TOPIX_ETF))),
+    kpi('USD/JPY',i.USDJPY?i.USDJPY[0].toFixed(2):'-',pct(c(i.USDJPY))),
+    kpi('Stocks with quotes',ROWS.length.toLocaleString(EN?'en-US':'en-US').replace(EN?/x/:/,/g,'')+' stocks','Japan-listed companies')].join('');
+  render();
+}
+function nameCell(r){const a=EN?(r.en||r.ja):r.ja,b=EN?r.ja:r.en;return `${esc(a)}${b?` <small style="color:var(--text2)">${esc(b)}</small>`:''}`;}
+function render(){
+  let rows=ROWS.filter(r=>(!IND||r.ind===IND)&&(!Q||r.ja.toLowerCase().includes(Q)||r.en.toLowerCase().includes(Q)||r.t.startsWith(Q)));
+  if(!rows.length){$('result').innerHTML='<div class="empty">No stocks match your filters</div>';$('moreWrap').innerHTML='';notes();return;}
+  const shown=rows.slice(0,LIMIT);
+  $('result').innerHTML=`<div class="note" style="padding-bottom:0"><b>${rows.length}</b> stocks · by market cap</div><table class="bt"><tr><th>Stock</th><th>Code</th><th>Industry</th><th>Close</th><th>Change</th><th>Volume</th><th>Market cap</th></tr>`+
+   shown.map(r=>`<tr><td>${nameCell(r)}</td><td>${r.t}</td><td>${esc(EN?INDM.ind_en[r.ind]:INDM.ind_ko[r.ind])||'-'}</td><td>${yen(r.p)}</td><td>${pct(r.chg)}</td><td>${r.vol?r.vol.toLocaleString(EN?'en-US':'en-US').replace(EN?/x/:/,/g,''):'-'}</td><td>${big(r.cap)}</td></tr>`).join('')+'</table>';
+  $('moreWrap').innerHTML=rows.length>LIMIT?`<button class="btn more" id="more">Show more (${Math.min(LIMIT+100,rows.length)}/${rows.length})</button>`:'';
+  const mb=$('more');if(mb)mb.onclick=()=>{LIMIT+=100;render();};
+  notes();
+}
+function notes(){
+  $('notes').innerHTML='<b>Data basis</b> · Company information (name, industry, fiscal year-end) is processed from the EDINET filer code list of Japan’s Financial Services Agency (Public Data License 1.0; processing by MoneyFinal), and quotes come from Yahoo Finance. Market cap is an approximation based on the closing price, and some stocks may be blank for the first few days. TOPIX is shown as the price of the tracking ETF (1306), not the index.';
+}
+init();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

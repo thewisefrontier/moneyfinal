@@ -10,6 +10,7 @@
     ['rates.html', '예금·적금'],
     ['loans.html', '대출'],
     ['market.html', '시장'],
+    ['jp-market.html', '일본시장'],
     ['crypto.html', '코인'],
     ['savings.html', 'ISA'],
     ['annuity.html', '연금저축'],
@@ -38,13 +39,14 @@
     ['congress.html', 'Congress Trades'],
     ['ipo.html', 'IPO'],
     ['market.html', 'Markets'],
+    ['jp-market.html', 'Japan'],
     ['macro.html', 'Indicators'],
     ['bond.html', 'Bonds'],
     ['crypto.html', 'Crypto'],
     ['sim.html', 'Simulator'],
     ['calc.html', 'Calculators']
   ];
-  var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin', 'kr-fin', 'market', 'macro',
+  var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin', 'kr-fin', 'market', 'jp-market', 'macro',
     'macro-detail', 'indicator-detail', 'stock-detail', 'company', 'bond', 'crypto', 'sim', 'calc'];
   var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
   var isEn = /^\/en(\/|$)/.test(path), rest = path.replace(/^\/en/, '');

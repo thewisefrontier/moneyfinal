@@ -1,0 +1,27 @@
+name: 일본 종목(EDINET 코드표·Yahoo 시세)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 8 * * 1-5'   # 도쿄 마감(15:00 JST = 06:00 UTC) 뒤 평일 17:30 JST
+concurrency:
+  group: jp-data
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 일본 종목 마스터·시세 수집 (API 키 불필요, 시가총액은 매 실행 700종목씩 채움)
+        run: python fetchers/jp_stocks.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/jp/
+          git diff --staged --quiet || (git commit -m "data: 일본 종목 시세 갱신" && git pull --rebase origin main && git push)

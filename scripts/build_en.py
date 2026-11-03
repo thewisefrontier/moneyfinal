@@ -20,7 +20,7 @@ HANGUL = re.compile(r'[가-힣]')
 
 # 영어판에 싣는 페이지. 한국 예금·대출·연금저축·ISA·보험·AI 브리핑은 제외.
 CORE = ['dividend-etf.html', 'us-fin.html', 'kr-fin.html', 'compare.html', 'superinvestor.html', 'congress.html', 'ipo.html',
-        'market.html', 'macro.html', 'macro-detail.html', 'indicator-detail.html', 'stock-detail.html', 'company.html', 'bond.html',
+        'market.html', 'jp-market.html', 'macro.html', 'macro-detail.html', 'indicator-detail.html', 'stock-detail.html', 'company.html', 'bond.html',
         'crypto.html', 'sim.html', 'about.html', 'privacy.html', 'terms.html', '404.html',
         'calc.html', 'calc-age.html', 'calc-date.html', 'calc-dividend.html', 'calc-fire-dividend.html', 'calc-fire.html',
         'calc-freelancer.html', 'calc-fx.html', 'calc-loan.html', 'calc-lotto-sim.html', 'calc-lotto-tax.html', 'calc-pyeong.html',
