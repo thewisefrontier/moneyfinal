@@ -1,0 +1,1831 @@
+월배당 ETF 배당금 계산기 모음 | 머니파이널
+--->
+Monthly Dividend ETF Calculators | MoneyFinal
+====
+JEPI, QYLD, SCHD 등 월배당·분기배당 ETF와 리츠·BDC의 실시간 시세·배당수익률·운용정보를 한 표에서 비교합니다.
+--->
+Compare real-time prices, dividend yields and fund details for monthly and quarterly dividend ETFs such as JEPI, QYLD and SCHD, plus REITs and BDCs, in one table.
+====
+머니파이널
+--->
+MoneyFinal
+====
+월배당 ETF 배당금 계산기 모음
+--->
+Monthly Dividend ETF Calculators
+====
+<a href="index.html" class="logo">💰 머니파이널</a>
+--->
+<a href="index.html" class="logo">💰 MoneyFinal</a>
+====
+실제 시세·배당 이력을 기반으로 한 티커별 배당금 계산기 (82종목) · 티커를 클릭하면 상세 계산기로 이동합니다
+--->
+Ticker-by-ticker dividend calculators based on actual prices and payout history (82 tickers) · Click a ticker to open its detailed calculator
+====
+전체
+--->
+All
+====
+개별종목 옵션인컴
+--->
+Single-stock option income
+====
+분기배당 대표
+--->
+Quarterly payers
+====
+월배당 BDC
+--->
+Monthly BDCs
+====
+월배당 리츠
+--->
+Monthly REITs
+====
+월배당 모기지리츠
+--->
+Monthly mortgage REITs
+====
+채권인컴
+--->
+Bond income
+====
+커버드콜
+--->
+Covered call
+====
+티커·이름 검색
+--->
+Search ticker or name
+====
+검색
+--->
+Search
+====
+티커
+--->
+Ticker
+====
+현재가
+--->
+Price
+====
+배당수익률
+--->
+Dividend yield
+====
+주기
+--->
+Frequency
+====
+운용규모
+--->
+AUM
+====
+보수율
+--->
+Expense ratio
+====
+로딩 중...
+--->
+Loading...
+====
+© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a>
+--->
+© 2026 MoneyFinal · All about personal finance<br><a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+====
+월배당
+--->
+Monthly
+====
+분기배당
+--->
+Quarterly
+====
+반기배당
+--->
+Semiannual
+====
+연배당
+--->
+Annual
+====
+조건에 맞는 ETF가 없습니다
+--->
+No ETFs match your filters
+====
+S&P 500 등 미국 기업의 연간 손익계산서·재무상태표·현금흐름표와 마진·ROE·부채비율·잉여현금흐름을 SEC 공시 데이터(XBRL)로 12년치까지 확인합니다.
+--->
+Review up to 12 years of annual income statements, balance sheets and cash flow statements, plus margins, ROE, debt ratio and free cash flow, for S&P 500 and other US companies, from SEC filing data (XBRL).
+====
+미국 기업 재무제표 | 머니파이널
+--->
+US Company Financial Statements | MoneyFinal
+====
+미국 기업 재무제표
+--->
+US Company Financial Statements
+====
+기업 (티커 또는 영문 이름)
+--->
+Company (ticker or name)
+====
+예: AAPL, Microsoft, Coca-Cola
+--->
+e.g. AAPL, Microsoft, Coca-Cola
+====
+연간
+--->
+Annual
+====
+분기
+--->
+Quarterly
+====
+표시 개수
+--->
+Periods shown
+====
+기업을 선택해 주세요
+--->
+Select a company
+====
+<b>데이터 기준</b> · SEC(미국 증권거래위원회)에 제출된 10-K(연차보고서) XBRL 데이터입니다. 결산월이 기업마다 달라 연도 대신 <b>결산일</b>로 표시합니다. 금액은 달러이며 <b>억·만 단위</b>로 줄여 표기합니다. 같은 결산일이 정정 공시된 경우 가장 최근 값을 씁니다. 은행·보험·리츠처럼 매출총이익·영업이익 항목이 없는 업종은
+--->
+<b>Data basis</b> · XBRL data from 10-K annual reports filed with the SEC. Fiscal year-ends differ by company, so periods are labeled by <b>fiscal year-end date</b> instead of year. Amounts are in US dollars, abbreviated as <b>K, M, B and T</b>. If the same period was amended, the latest value is used. Industries without gross profit or operating income lines, such as banks, insurers and REITs, show
+====
+로 보이고, XBRL 계정이 기업마다 달라 일부 항목이 비어 있을 수 있습니다. 연간은 10-K, 분기는 10-Q 기준(최근 5년)입니다. 대상은 S&P 500 구성 종목과 이 사이트가 추적하는 일부 종목이며, 투자 권유가 아닌 참고 자료입니다.
+--->
+⎵and because XBRL accounts differ by company, some items may be blank. Annual figures come from 10-K filings and quarterly figures from 10-Q filings (last 5 years). Coverage is S&P 500 constituents plus some stocks this site tracks. This is reference material, not investment advice.
+====
+⚠️ 본 정보는 SEC 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: U.S. Securities and Exchange Commission (EDGAR)
+--->
+⚠️ This information is reference material derived from SEC filing data. You are solely responsible for your investment decisions and any losses. Source: U.S. Securities and Exchange Commission (EDGAR)
+====
+조
+--->
+T
+====
+억
+--->
+B
+====
+만
+--->
+M
+====
+달러
+--->
+USD
+====
+갱신 ·
+--->
+Updated ·
+====
+개 기업
+--->
+⎵companies
+====
+재무 데이터를 준비 중입니다
+--->
+Financial data is being prepared
+====
+최근 8분기
+--->
+Last 8 quarters
+====
+최근 12분기
+--->
+Last 12 quarters
+====
+최근 20분기
+--->
+Last 20 quarters
+====
+최근 5년
+--->
+Last 5 years
+====
+최근 8년
+--->
+Last 8 years
+====
+최근 12년
+--->
+Last 12 years
+====
+미국 시가총액 1위(추적 종목 기준 ·
+--->
+Largest US market cap (among tracked stocks ·
+====
+에 해당하는 기업이 없습니다 (S&P 500 등 일부 기업만 제공합니다)
+--->
+⎵— no company matches (only some companies such as the S&P 500 are covered)
+====
+데이터가 없습니다
+--->
+No data
+====
+이 기업은 분기 데이터가 없습니다 (연간 보기를 이용해 주세요)
+--->
+This company has no quarterly data (use the annual view)
+====
+전년동기 대비
+--->
+YoY
+====
+5년 성장
+--->
+5-yr growth
+====
+매출
+--->
+Revenue
+====
+순이익
+--->
+Net income
+====
+영업이익률
+--->
+Operating margin
+====
+매출총이익률
+--->
+Gross margin
+====
+순이익률
+--->
+Net margin
+====
+(최근 4분기 순이익 기준)
+--->
+(based on last 4 quarters of net income)
+====
+잉여현금흐름
+--->
+Free cash flow
+====
+영업CF
+--->
+Operating CF
+====
+부채비율
+--->
+Debt ratio
+====
+부채총계
+--->
+Total liabilities
+====
+총자산
+--->
+Total assets
+====
+(최근 4분기)
+--->
+(last 4 quarters)
+====
+희석 EPS
+--->
+Diluted EPS
+====
+4분기는 분기 공시에 없음
+--->
+Q4 is not in quarterly filings
+====
+최근 분기
+--->
+Latest quarter
+====
+최근 결산
+--->
+Latest fiscal year
+====
+항목
+--->
+Item
+====
+매출원가
+--->
+Cost of revenue
+====
+매출총이익
+--->
+Gross profit
+====
+연구개발비
+--->
+R&D expense
+====
+판매관리비
+--->
+SG&A expense
+====
+영업이익
+--->
+Operating income
+====
+이자비용
+--->
+Interest expense
+====
+법인세
+--->
+Income tax
+====
+가중평균 희석주식수
+--->
+Weighted diluted shares
+====
+주
+--->
+shares
+====
+현금및현금성자산
+--->
+Cash and equivalents
+====
+매출채권
+--->
+Accounts receivable
+====
+재고자산
+--->
+Inventories
+====
+유동자산
+--->
+Current assets
+====
+유동부채
+--->
+Current liabilities
+====
+장기차입금
+--->
+Long-term debt
+====
+자본총계
+--->
+Total equity
+====
+영업활동 현금흐름
+--->
+Cash flow from operations
+====
+투자활동 현금흐름
+--->
+Cash flow from investing
+====
+재무활동 현금흐름
+--->
+Cash flow from financing
+====
+설비투자(CAPEX)
+--->
+Capital expenditure (CAPEX)
+====
+감가상각비
+--->
+Depreciation
+====
+배당 지급
+--->
+Dividends paid
+====
+자사주 매입
+--->
+Share buybacks
+====
+잉여현금흐름(영업CF-CAPEX)
+--->
+Free cash flow (operating CF − CAPEX)
+====
+매출 증가율(전년동기 대비)
+--->
+Revenue growth (YoY)
+====
+매출 증가율
+--->
+Revenue growth
+====
+순이익 증가율(전년동기 대비)
+--->
+Net income growth (YoY)
+====
+순이익 증가율
+--->
+Net income growth
+====
+ROE(최근 4분기 순이익/분기말 자본)
+--->
+ROE (last 4 quarters of net income / quarter-end equity)
+====
+ROE(순이익/기말자본)
+--->
+ROE (net income / ending equity)
+====
+ROA(최근 4분기 순이익/분기말 자산)
+--->
+ROA (last 4 quarters of net income / quarter-end assets)
+====
+ROA(순이익/기말자산)
+--->
+ROA (net income / ending assets)
+====
+부채비율(부채/자본)
+--->
+Debt ratio (liabilities / equity)
+====
+유동비율
+--->
+Current ratio
+====
+FCF 마진
+--->
+FCF margin
+====
+배당+자사주매입 / 순이익
+--->
+Dividends + buybacks / net income
+====
+손익계산서
+--->
+Income Statement
+====
+재무상태표
+--->
+Balance Sheet
+====
+현금흐름표
+--->
+Cash Flow Statement
+====
+비율·지표
+--->
+Ratios & Metrics
+====
+분기 값은 10-Q의 단독 3개월 값이고, 4분기(Q4)는 10-K 연간 값에서 3분기 누계를 뺀 값입니다. 현금흐름은 누계 값의 차이로 계산했습니다. 4분기 EPS는 분기 공시(10-Q)에 없어
+--->
+Quarterly values are standalone three-month figures from 10-Q filings, and Q4 is the 10-K annual value minus the nine-month year-to-date total. Cash flows are computed from differences in year-to-date values. Q4 EPS is not in quarterly filings (10-Q), so it is shown as
+====
+로 표시합니다. ROE·ROA는 최근 4분기 순이익 합계를 분기말 자본·자산으로 나눈 값입니다. 결산월이 달라 분기 이름 대신 분기 말일을 표시합니다.
+--->
+ ROE and ROA divide the sum of the last four quarters of net income by quarter-end equity and assets. Because fiscal year-ends differ, quarters are labeled by quarter-end date instead of quarter name.
+====
+<span><i style="background:${c('--blue')}"></i>매출</span><span><i style="background:${c('--green')}"></i>순이익</span>
+--->
+<span><i style="background:${c('--blue')}"></i>Revenue</span><span><i style="background:${c('--green')}"></i>Net income</span>
+====
+한국·미국 기업 2~4개를 골라 매출, 영업이익률, ROE, 부채비율, 성장률을 한눈에 비교하고 연도별 추이를 겹쳐 봅니다.
+--->
+Pick 2–4 companies from Korea and the US and compare revenue, operating margin, ROE, debt ratio and growth side by side, with year-by-year trends overlaid.
+====
+기업 비교 | 머니파이널
+--->
+Company Comparison | MoneyFinal
+====
+기업 비교
+--->
+Company Comparison
+====
+한국 기업
+--->
+Korean companies
+====
+미국 기업
+--->
+US companies
+====
+비교할 기업 추가 (최대 4개)
+--->
+Add companies to compare (up to 4)
+====
+이름 또는 코드
+--->
+Name or code
+====
+<b>보는 법</b> · 한국은 DART 연결 재무(주요계정), 미국은 SEC 10-K·10-Q 데이터입니다. 분기 비교는 한국은 시가총액 상위 약 600개, 미국은 전 종목에서 가능합니다. 통화가 달라 <b>한국끼리 또는 미국끼리만</b> 비교합니다. 각 행에서 <b style="color:var(--accent)">파란 굵은 글씨</b>는 비교 대상 중 가장 높은 값(부채비율은 가장 낮은 값)일 뿐 좋고 나쁨의 판단이 아닙니다. 업종이 다르면 마진·부채비율의 기준이 달라 직접 비교가 어렵고, 금융회사는 매출액·부채비율이 일반 기업과 다릅니다. 결산월이 다른 기업은 결산 연도(결산일의 연도) 기준으로 맞췄습니다. 순이익·ROE·PER·PBR은 한국은 <b>지배주주 순이익·지배주주 지분</b> 기준입니다(없는 종목은 연결 합계). PER·PBR은 오늘 시가총액으로 계산한 한국 종목만 표시합니다. 투자 권유가 아닌 참고 자료입니다.
+--->
+<b>How to read</b> · Korean figures come from DART consolidated statements (key accounts) and US figures from SEC 10-K and 10-Q data. Quarterly comparison is available for roughly the top 600 Korean companies by market cap and for all US companies. Because currencies differ, <b>compare Korean companies with Korean ones, or US with US</b>. In each row, the <b style="color:var(--accent)">blue bold figure</b> is simply the highest among the companies compared (the lowest for debt ratio), not a judgment of good or bad. Margins and debt ratios differ by industry, so cross-industry comparisons are hard, and financial companies report revenue and debt differently from other firms. Companies with different fiscal year-ends are aligned by fiscal year (the year of the year-end date). For Korean companies, net income, ROE, PER and PBR use <b>net income attributable to owners of the parent and parent equity</b> (consolidated totals where unavailable). PER and PBR are shown only for Korean stocks, using today’s market cap. This is reference material, not investment advice.
+====
+⚠️ 본 정보는 공시 데이터를 가공한 참고 자료이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: 금융감독원 DART, SEC EDGAR
+--->
+⚠️ This information is reference material derived from filing data. You are solely responsible for your investment decisions and any losses. Sources: Korea’s Financial Supervisory Service (DART), SEC EDGAR
+====
+이름 또는 종목코드 (예: 삼성전자)
+--->
+Name or stock code (e.g. Samsung Electronics)
+====
+티커 또는 영문 이름 (예: AAPL, Microsoft)
+--->
+Ticker or name (e.g. AAPL, Microsoft)
+====
+배
+--->
+x
+====
+코스피
+--->
+KOSPI
+====
+코스닥
+--->
+KOSDAQ
+====
+원
+--->
+KRW
+====
+최근 결산일
+--->
+Latest fiscal year-end
+====
+자산총계
+--->
+Total assets
+====
+매출 3년 연평균 성장
+--->
+Revenue 3-yr CAGR
+====
+매출 5년 연평균 성장
+--->
+Revenue 5-yr CAGR
+====
+순이익 5년 연평균 성장
+--->
+Net income 5-yr CAGR
+====
+시가총액(오늘)
+--->
+Market cap (today)
+====
+PER(시총/순이익)
+--->
+PER (market cap / net income)
+====
+PBR(시총/자본)
+--->
+PBR (market cap / equity)
+====
+주당 배당금
+--->
+Dividend per share
+====
+배당+자사주 / 순이익
+--->
+Dividends + buybacks / net income
+====
+분기 결산일
+--->
+Quarter-end date
+====
+매출(분기)
+--->
+Revenue (quarter)
+====
+영업이익(분기)
+--->
+Operating income (quarter)
+====
+순이익(분기)
+--->
+Net income (quarter)
+====
+매출 증가율(전년 동기)
+--->
+Revenue growth (YoY)
+====
+순이익 증가율(전년 동기)
+--->
+Net income growth (YoY)
+====
+매출 증가율(전분기)
+--->
+Revenue growth (QoQ)
+====
+최근 4분기 매출 합계
+--->
+Revenue, last 4 quarters
+====
+최근 4분기 순이익 합계
+--->
+Net income, last 4 quarters
+====
+PER(시총/최근 4분기 순이익)
+--->
+PER (market cap / last 4 quarters of net income)
+====
+PBR(시총/최근 분기 자본)
+--->
+PBR (market cap / latest quarter equity)
+====
+잉여현금흐름(분기)
+--->
+Free cash flow (quarter)
+====
+매출 지수(시작
+--->
+Revenue index (start
+====
+순이익 지수(시작
+--->
+Net income index (start
+====
+ROE(최근 4분기 기준)
+--->
+ROE (last 4 quarters)
+====
+갱신
+--->
+Updated
+====
+결과 없음
+--->
+No results
+====
+에 해당하는 기업이 없습니다
+--->
+⎵— no company matches
+====
+최대 4개까지 비교할 수 있습니다. 위 목록에서 기업을 하나 빼고 추가해 주세요.
+--->
+You can compare up to 4. Remove one from the list above before adding another.
+====
+<small style="color:var(--text2)">(분기 없음)</small>
+--->
+<small style="color:var(--text2)">(no quarterly data)</small>
+====
+제거
+--->
+Remove
+====
+<span style="color:var(--text2);font-size:12px">기업을 검색해서 추가해 주세요 (2개 이상)</span>
+--->
+<span style="color:var(--text2);font-size:12px">Search and add companies (at least 2)</span>
+====
+분기 데이터가 있는 기업이 2개 이상 필요합니다
+--->
+At least 2 companies with quarterly data are needed
+====
+은 분기 데이터가 없습니다. 한국은 시가총액 상위 약 600개만 분기를 제공합니다)
+--->
+⎵has no quarterly data. Only about the top 600 Korean companies by market cap have quarterly data)
+====
+비교하려면 기업을 2개 이상 선택해 주세요
+--->
+Select at least 2 companies to compare
+====
+<span class="card-title">핵심 지표 비교 (
+--->
+<span class="card-title">Key metrics comparison (
+====
+· 기준
+--->
+· basis
+====
+최근 연간 결산
+--->
+Latest fiscal year
+====
+분기 데이터가 없는 기업은 제외했습니다: ${esc(skipped.join(', '))}
+--->
+Companies without quarterly data are excluded: ${esc(skipped.join(', '))}
+====
+⚠️ 공시 재작성(중단영업 재분류 등)으로 분기 값의 합이 연간 값과 다른 해:
+--->
+⚠️ Years in which the sum of quarterly values differs from the annual value because of restated filings (e.g. discontinued operations):
+====
+년)
+--->
+)
+====
+. 각 값은 공시 그대로입니다.
+--->
+. Each value is as filed.
+====
+회사마다 결산월이 달라 <b>결산일을 가장 가까운 달력 분기에 맞춰</b> 비교합니다(예: 1월 말 결산은 전년 4분기). 4분기(Q4) 값은 연간에서 3분기 누계를 뺀 값입니다.
+--->
+Fiscal year-ends differ by company, so <b>year-ends are aligned to the nearest calendar quarter</b> (e.g. a January year-end counts as the prior year’s Q4). Q4 values are the annual figure minus the nine-month year-to-date total.
+====
+분기별
+--->
+Quarterly
+====
+연도별
+--->
+Annual
+====
+추이 비교</span>
+--->
+trend comparison</span>
+====
+데이터 없음
+--->
+No data
+====
+표시할 값이 없습니다
+--->
+No values to show
+====
+결산 연도
+--->
+Fiscal year
+====
+지수는 각 기업이 비교 구간에서 처음 값이 있는 해를 100으로 맞춘 값이며 적자·결측 연도는 비어 있습니다. 규모가 다른 기업의 성장 속도를 견주는 용도입니다.
+--->
+Each index sets the first year with a value in the comparison window to 100; loss-making and missing years are left blank. It is meant for comparing growth speed across companies of different sizes.
+====
+분기는 가장 가까운 달력 분기로 맞춘 값입니다. 증가율은 전년 동기 대비이며 비교 대상 분기가 없는 구간은 비어 있습니다.
+--->
+Quarters are aligned to the nearest calendar quarter. Growth is year over year, and periods without a comparable quarter are left blank.
+====
+결산 연도는 결산일의 연도 기준입니다. 비율은 연간 값입니다.
+--->
+Fiscal year follows the year of the fiscal year-end date. Ratios are annual values.
+====
+워런 버핏, 빌 애크먼, 마이클 버리 등 유명 투자자들의 13F 공시를 모아 여러 명이 동시에 담고 있는 종목을 한눈에 비교.
+--->
+Combines the 13F filings of well-known investors such as Warren Buffett, Bill Ackman and Michael Burry to show stocks held by several of them at once.
+====
+슈퍼인베스터 13F 컨센서스 | 머니파이널
+--->
+Superinvestor 13F Consensus | MoneyFinal
+====
+슈퍼인베스터 13F 컨센서스
+--->
+Superinvestor 13F Consensus
+====
+유명 투자자 13F 공시 기반 컨센서스 종목
+--->
+Consensus holdings from famous investors’ 13F filings
+====
+워런 버핏, 빌 애크먼, 마이클 버리 등 집중투자형 유명 투자자들의 미국 SEC 13F 공시를 모아 여러 명이 동시에 담고 있는 종목 순으로 정리. 브릿지워터·시타델·국민연금 같은 대형 기관은 보유종목이 너무 많아 컨센서스 집계에선 빼고 개별 조회로만 확인 가능
+--->
+Collects the SEC 13F filings of well-known concentrated investors such as Warren Buffett, Bill Ackman and Michael Burry and ranks stocks by how many of them hold them at once. Large institutions such as Bridgewater, Citadel and pension funds hold too many positions, so they are excluded from the consensus count and can only be looked up individually.
+====
+추적 투자자
+--->
+Investors tracked
+====
+SEC EDGAR 13F 기준
+--->
+Based on SEC EDGAR 13F
+====
+최다 겹침 종목
+--->
+Most overlapped stock
+====
+업데이트
+--->
+Updated
+====
+분기 공시, 최대 45일 지연
+--->
+Quarterly filings, up to 45 days delayed
+====
+<span class="card-title">전체 목록</span>
+--->
+<span class="card-title">Full list</span>
+====
+전체 컨센서스
+--->
+Full consensus
+====
+종목명·티커·투자자 검색
+--->
+Search stock, ticker or investor
+====
+종목
+--->
+Stock
+====
+겹치는 투자자
+--->
+Overlapping investors
+====
+합산 평가금액
+--->
+Total market value
+====
+비중
+--->
+Weight
+====
+보유금액
+--->
+Value held
+====
+보유주식수
+--->
+Shares held
+====
+⚠️ 13F는 분기 공시로 분기 종료 후 최대 45일 지연되어 반영됩니다(실시간 보유 현황이 아닌 최대 4.5개월 전 스냅샷). 매수·매도 추천이 아니며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 출처: SEC EDGAR
+--->
+⚠️ 13F is a quarterly filing reported up to 45 days after quarter-end, so it is a snapshot up to about 4.5 months old, not live holdings. It is not a buy or sell recommendation, and you are solely responsible for your investment decisions and any losses. Source: SEC EDGAR
+====
+명
+--->
+⎵investors
+====
+집중투자형
+--->
+Concentrated
+====
+대형 기관 (컨센서스 미포함)
+--->
+Large institutions (excluded from consensus)
+====
+데이터를 불러오지 못했습니다
+--->
+Could not load data
+====
+검색 결과가 없습니다
+--->
+No results found
+====
+${c.holder_count}명
+--->
+${c.holder_count} investors
+====
+미국 하원 의원이 신고한 주식·ETF 거래 내역(STOCK Act 거래 신고서)을 종목별·의원별로 검색해 확인합니다. 하원 서기국 공시 기준.
+--->
+Search stock and ETF trades reported by US House members (STOCK Act periodic transaction reports) by stock or by member. Based on House Clerk filings.
+====
+미국 하원 의원 주식·ETF 거래 | 머니파이널
+--->
+US House Members’ Stock & ETF Trades | MoneyFinal
+====
+미국 하원 의원 주식·ETF 거래
+--->
+US House Members’ Stock & ETF Trades
+====
+최근 거래
+--->
+Recent trades
+====
+종목별
+--->
+By stock
+====
+의원별
+--->
+By member
+====
+스캔 신고서
+--->
+Scanned filings
+====
+의원 이름 · 종목명 · 티커
+--->
+Member name · stock name · ticker
+====
+예: Pelosi, NVDA, Apple, SPY
+--->
+e.g. Pelosi, NVDA, Apple, SPY
+====
+<span>분류</span>
+--->
+<span>Category</span>
+====
+주식
+--->
+Stocks
+====
+채권
+--->
+Bonds
+====
+기타
+--->
+Other
+====
+<span>거래</span>
+--->
+<span>Trade</span>
+====
+매수
+--->
+Buy
+====
+매도
+--->
+Sell
+====
+<span>기간(거래일)</span>
+--->
+<span>Period (trade date)</span>
+====
+30일
+--->
+30 days
+====
+90일
+--->
+90 days
+====
+1년
+--->
+1 year
+====
+<b>이용 안내</b> · 이 자료는 미국 하원 서기국(Clerk)에 제출된 거래 신고서(STOCK Act PTR)에서 가져왔습니다. 미국법(5 U.S.C. §13107)은 이 신고서를 <b>상업적 목적, 금전 모금, 신용평가에 쓰는 것을 금지</b>합니다. 머니파이널은 이 페이지에 광고나 후원 요청을 싣지 않습니다. 신고는 거래 후 최대 45일 늦게 공개되고, 금액은 정확한 값이 아니라 <b>구간</b>입니다. 상원 의원 거래는 포함하지 않았습니다. 특정 종목의 매수·매도 권유가 아니며, 의원의 거래가 이후 수익을 보장하지 않습니다.
+--->
+<b>Notice</b> · This data comes from periodic transaction reports (STOCK Act PTRs) filed with the Clerk of the US House of Representatives. US law (5 U.S.C. §13107) <b>prohibits using these reports for commercial purposes, soliciting money, or credit ratings</b>. MoneyFinal carries no ads or donation requests on this page. Reports can be published up to 45 days after a trade, and amounts are <b>ranges</b>, not exact values. Senate trades are not included. Nothing here is a recommendation to buy or sell any security, and a member’s trade does not guarantee later returns.
+====
+<b>데이터 기준</b> · 출처: 미국 하원 서기국 재산공개 시스템(<a href="https://disclosures-clerk.house.gov/FinancialDisclosure" target="_blank" rel="noopener" style="color:var(--accent)">disclosures-clerk.house.gov</a>)의 거래 신고서(PTR) PDF를 읽어 정리했고, 각 행의
+--->
+<b>Data basis</b> · Source: the House Clerk’s financial disclosure system (<a href="https://disclosures-clerk.house.gov/FinancialDisclosure" target="_blank" rel="noopener" style="color:var(--accent)">disclosures-clerk.house.gov</a>). We read and organized the transaction report (PTR) PDFs, and each row’s
+====
+원문
+--->
+original
+====
+에서 신고서를 직접 확인할 수 있습니다. 소유자는 본인·배우자(SP)·공동(JT)·자녀(DC)입니다. 매도(일부)는 보유분 중 일부 매도입니다. 스캔 이미지로만 공개된 신고서(약 13%)는 거래 내용을 읽지 못해
+--->
+lets you check the filing directly. Owners are the member, spouse (SP), joint (JT) and dependent child (DC). Sell (partial) means part of the holding was sold. Filings published only as scanned images (about 13%) could not be read, so only a list and original links are provided in the
+====
+탭에 목록과 원문 링크만 제공합니다. ETF는 신고서의 자산 분류와 이름·티커로 판별했고 틀릴 수 있습니다. 갱신: 매주.
+--->
+tab. ETFs were identified from the filing’s asset type and name or ticker and may be wrong. Updated weekly.
+====
+⚠️ 공시 자료를 가공한 참고 정보이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 이 자료를 상업적 목적, 모금, 신용평가에 사용하지 마세요.
+--->
+⚠️ This is reference information derived from public filings. You are solely responsible for your investment decisions and any losses. Do not use this data for commercial purposes, fundraising or credit ratings.
+====
+초과
+--->
++
+====
+본인
+--->
+Member
+====
+배우자
+--->
+Spouse
+====
+공동
+--->
+Joint
+====
+자녀
+--->
+Child
+====
+매도(일부)
+--->
+Sell (partial)
+====
+교환
+--->
+Exchange
+====
+옵션
+--->
+Options
+====
+펀드
+--->
+Funds
+====
+암호화폐
+--->
+Crypto
+====
+데이터를 준비 중입니다
+--->
+Data is being prepared
+====
+거래 건수
+--->
+Trades
+====
+최근
+--->
+Last
+====
+년 신고 기준
+--->
+⎵years of filings
+====
+최근 30일 거래
+--->
+Trades, last 30 days
+====
+건
+--->
+⎵trades
+====
+의원
+--->
+members
+====
+의원 수
+--->
+Members
+====
+하원 거래 신고자
+--->
+House members who filed trades
+====
+읽은 신고서
+--->
+Filings read
+====
+읽지 못한 스캔본
+--->
+Unread scans
+====
+종이로 제출돼 <b>스캔 이미지로만 공개된 신고서</b> ${list.length}건입니다. 이미지에는 글자 정보가 없어 자동으로 읽지 못했고, 손으로 체크한 양식은 자동 판독이 틀리기 쉬워 거래 내용을 싣지 않았습니다. 원문 PDF에서 직접 확인해 주세요.
+--->
+These are <b>filings submitted on paper and published only as scanned images</b>: ${list.length}. The images contain no text data, so they could not be read automatically, and hand-checked forms are too error-prone for automatic reading, so their trades are not shown. Please check the original PDFs.
+====
+신고일
+--->
+Filed
+====
+<a href="https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${x.y}/${x.doc}.pdf" target="_blank" rel="noopener" style="color:var(--accent)">PDF 열기</a>
+--->
+<a href="https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${x.y}/${x.doc}.pdf" target="_blank" rel="noopener" style="color:var(--accent)">Open PDF</a>
+====
+조건에 맞는 신고서가 없습니다
+--->
+No filings match
+====
+조건에 맞는 거래가 없습니다
+--->
+No trades match
+====
+조건에 맞는 거래 <b>${rows.length}건</b>
+--->
+<b>${rows.length}</b> matching trades
+====
+거래일
+--->
+Trade date
+====
+분류
+--->
+Category
+====
+구분
+--->
+Type
+====
+금액 구간
+--->
+Amount range
+====
+소유
+--->
+Owner
+====
+<span title="원문의 거래일이 신고일보다 늦어 오기일 수 있습니다. 값은 원문 그대로입니다." style="cursor:help">⚠️</span>
+--->
+<span title="The trade date in the original is later than the filing date, so it may be a typo. The value is shown as filed." style="cursor:help">⚠️</span>
+====
+더 보기 (${Math.min(LIMIT+200,rows.length)}/${rows.length})
+--->
+Show more (${Math.min(LIMIT+200,rows.length)}/${rows.length})
+====
+상위 ${list.length}개 (거래 건수 순). 행을 누르면 최근 거래 탭에서 그
+--->
+Top ${list.length} (by number of trades).
+====
+거래한 의원 수
+--->
+Members who traded
+====
+거래한 종목 수
+--->
+Stocks traded
+====
+최근 거래일
+--->
+Last trade date
+====
+한국 공모주 청약 일정(공모가·공모금액·주관사)과 미국 IPO 신고·확정 현황을 한눈에 봅니다. 한국은 금융감독원 DART, 미국은 SEC EDGAR 공시 기준.
+--->
+Korean IPO subscription schedules (offer price, deal size, underwriters) and US IPO filing and pricing status at a glance. Korea: Financial Supervisory Service DART. US: SEC EDGAR filings.
+====
+한국·미국 IPO 일정 | 머니파이널
+--->
+Korea & US IPO Calendar | MoneyFinal
+====
+한국·미국 IPO 일정
+--->
+Korea & US IPO Calendar
+====
+🇰🇷 한국
+--->
+🇰🇷 Korea
+====
+🇺🇸 미국
+--->
+🇺🇸 US
+====
+기업명 · 티커
+--->
+Company · ticker
+====
+기업명을 입력하세요
+--->
+Enter a company name
+====
+⚠️ 공시 자료를 가공한 참고 정보이며 투자 판단 및 손실에 대한 책임은 이용자 본인에게 있습니다. 일정과 공모가는 정정 공시로 바뀔 수 있으니 원문 공시를 꼭 확인하세요.
+--->
+⚠️ This is reference information derived from public filings. You are solely responsible for your investment decisions and any losses. Schedules and offer prices can change through amended filings, so always check the original filing.
+====
+청약 예정
+--->
+Subscription upcoming
+====
+청약 중
+--->
+Subscription open
+====
+청약 종료
+--->
+Subscription closed
+====
+신고
+--->
+Filed
+====
+공모가 확정
+--->
+Priced
+====
+철회
+--->
+Withdrawn
+====
+상태
+--->
+Status
+====
+종료
+--->
+Closed
+====
+단계
+--->
+Stage
+====
+스팩(SPAC)
+--->
+SPACs
+====
+제외
+--->
+Excluded
+====
+포함
+--->
+Included
+====
+한국 청약 중
+--->
+Korea: subscription open
+====
+오늘 기준
+--->
+As of today
+====
+한국 청약 예정
+--->
+Korea: subscription upcoming
+====
+스팩 제외
+--->
+Excluding SPACs
+====
+미국 공모가 확정(30일)
+--->
+US priced (30 days)
+====
+미국 신고 진행
+--->
+US filings in progress
+====
+공모가 미확정
+--->
+Not yet priced
+====
+조건에 맞는 공모가 없습니다
+--->
+No offerings match your filters
+====
+공모 <b>${rows.length}건</b> · 청약 예정·진행 건이 위에, 종료 건은 최신순으로 아래에 표시됩니다.
+--->
+<b>${rows.length}</b> offerings · Upcoming and open subscriptions are listed first, closed ones below by most recent.
+====
+기업
+--->
+Company
+====
+청약일
+--->
+Subscription dates
+====
+공모가
+--->
+Offer price
+====
+공모주식수
+--->
+Shares offered
+====
+공모금액
+--->
+Deal size
+====
+납입일
+--->
+Payment date
+====
+주관사
+--->
+Underwriters
+====
+공시
+--->
+Filing
+====
+<span class="badge">스팩</span>
+--->
+<span class="badge">SPAC</span>
+====
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${x.rcept}" target="_blank" rel="noopener" style="color:var(--accent)">신고서</a>
+--->
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${x.rcept}" target="_blank" rel="noopener" style="color:var(--accent)">Filing</a>
+====
+공모 <b>${rows.length}건</b> · 최근 활동일 순
+--->
+<b>${rows.length}</b> offerings · by most recent activity
+====
+거래소
+--->
+Exchange
+====
+최초 신고
+--->
+First filed
+====
+최근 활동
+--->
+Last activity
+====
+업종
+--->
+Industry
+====
+최종 설명서
+--->
+Final prospectus
+====
+신고서
+--->
+Registration
+====
+<b>데이터 기준</b> · 금융감독원 DART의 증권신고서(지분증권) 중 비상장 법인의 공모만 모았습니다(상장사의 유상증자 제외). 공모가는 신고서에 적힌 가격이며, 수요예측 일정·희망가격 밴드·상장일·경쟁률은 포함하지 않습니다. 확정 공모가는 정정 공시로 바뀝니다.
+--->
+<b>Data basis</b> · Offerings by unlisted companies taken from equity securities registration statements filed with Korea’s Financial Supervisory Service (DART); rights offerings by listed companies are excluded. The offer price is the price stated in the filing. Demand-forecasting schedules, price bands, listing dates and subscription rates are not included. Final offer prices change through amended filings.
+====
+<b>데이터 기준</b> · SEC EDGAR의 S-1·F-1(신고), 424B4(최종 설명서), RW(철회) 제출 내역입니다. 기존 상장사의 후속 공모는 제외했고 공모가·규모는 원문에서 확인하세요. 티커와 거래소는 상장 후에야 표시됩니다.
+--->
+<b>Data basis</b> · Filings of S-1 and F-1 (registration), 424B4 (final prospectus) and RW (withdrawal) with SEC EDGAR. Follow-on offerings by already-listed companies are excluded; check the original filing for offer price and size. Tickers and exchanges appear only after listing.
+====
+사이트 소개 | 머니파이널
+--->
+About | MoneyFinal
+====
+머니파이널은 공공 금융 데이터를 무료로 비교·분석해주는 개인 운영 재테크 정보 사이트입니다. 데이터 출처, 운영 원칙, 연락처를 안내합니다.
+--->
+MoneyFinal is a personally run personal-finance site that compares and analyzes public financial data for free. This page explains our data sources, operating principles and contact.
+====
+공공 금융 데이터를 무료로 비교·분석해주는 개인 운영 재테크 정보 사이트.
+--->
+A personally run personal-finance site that compares and analyzes public financial data for free.
+====
+세상의 모든 재테크 - 공공 금융 데이터 무료 비교·분석 서비스
+--->
+All about personal finance — free comparison and analysis of public financial data
+====
+머니파이널 운영자
+--->
+MoneyFinal operator
+====
+💰 머니파이널
+--->
+💰 MoneyFinal
+====
+세상의 모든 재테크
+--->
+All about personal finance
+====
+운영 목적
+--->
+Purpose
+====
+머니파이널은 흩어져 있는 <strong>공공 금융 데이터를 한 곳에 모아 무료로 비교·분석</strong>할 수 있게 하는 개인 프로젝트입니다. 예금·적금 금리, 대출 조건, 시장 지표, 세금 계산 등 재테크에 필요한 정보를 광고나 유료 결제 없이 접근할 수 있도록 만드는 것을 지향합니다.
+--->
+MoneyFinal is a personal project that <strong>gathers scattered public financial data in one place so you can compare and analyze it for free</strong>. We aim to make the information you need for personal finance, such as savings rates, loan terms, market indicators and tax calculations, accessible without ads or paid subscriptions.
+====
+운영 원칙
+--->
+Operating principles
+====
+<strong>무료·비로그인</strong>: 회원가입, 개인정보 입력, 유료 결제가 없습니다.
+--->
+<strong>Free, no login</strong>: no sign-up, no personal data entry and no payments.
+====
+<strong>공공데이터 우선</strong>: 정부·공공기관이 공식 개방한 API만 사용하며, 출처를 명시합니다.
+--->
+<strong>Public data first</strong>: we use only APIs officially opened by governments and public institutions, and we cite sources.
+====
+<strong>중립적 정보 제공</strong>: 특정 금융회사·상품을 추천·중개하지 않습니다.
+--->
+<strong>Neutral information</strong>: we do not recommend or broker any financial company or product.
+====
+<strong>투명한 계산</strong>: 계산기 결과의 산식과 기준을 페이지 내에 명시합니다.
+--->
+<strong>Transparent calculations</strong>: the formulas and assumptions behind each calculator are stated on the page.
+====
+데이터 출처
+--->
+Data sources
+====
+금융감독원 금융상품한눈에
+--->
+Korea Financial Supervisory Service (FINLIFE)
+====
+예금·적금·대출·연금저축 상품 정보
+--->
+Deposit, savings, loan and pension product information
+====
+금융감독원 DART
+--->
+Korea Financial Supervisory Service (DART)
+====
+기업 공시 정보
+--->
+Corporate disclosures
+====
+공공데이터포털
+--->
+Korea Public Data Portal
+====
+주식 시세, 상장 정보, 실손보험 등
+--->
+Stock prices, listing information, indemnity insurance and more
+====
+한국은행 ECOS
+--->
+Bank of Korea ECOS
+====
+기준금리, 통화량, 환율, 가계신용
+--->
+Policy rate, money supply, exchange rates and household credit
+====
+미국 연방준비제도 FRED
+--->
+US Federal Reserve (FRED)
+====
+미국 지수, 금리, 국제 경제 지표
+--->
+US indices, interest rates and global economic indicators
+====
+KRX 한국거래소
+--->
+Korea Exchange (KRX)
+====
+국내 주식 시장 지수
+--->
+Korean stock market indices
+====
+중요 고지
+--->
+Important notice
+====
+본 사이트는 <strong>투자 자문 서비스가 아닙니다</strong>. 제공되는 모든 정보는 참고 자료이며, 실제 금융 상품 가입·투자 결정 전 반드시 해당 금융회사 공식 채널을 통해 확인해야 합니다. 자세한 내용은 <a href="terms.html">이용약관</a>과 <a href="privacy.html">개인정보처리방침</a>을 참고해 주세요.
+--->
+This site is <strong>not an investment advisory service</strong>. All information is for reference only; before signing up for any financial product or making an investment decision, always confirm through the financial company’s official channels. See the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a> for details.
+====
+문의
+--->
+Contact
+====
+데이터 오류 제보, 기능 제안, 기타 문의
+--->
+Data error reports, feature suggestions and other inquiries
+====
+© 2026 머니파이널 · 세상의 모든 재테크<br>
+<a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a>
+--->
+© 2026 MoneyFinal · All about personal finance<br>
+<a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a>
+====
+개인정보처리방침 | 머니파이널
+--->
+Privacy Policy | MoneyFinal
+====
+머니파이널은 개인정보를 수집하지 않습니다. 쿠키 사용, 접속 로그, 광고 서비스에 관한 정책을 안내합니다.
+--->
+MoneyFinal does not collect personal information. This page explains our policies on cookies, access logs and advertising services.
+====
+머니파이널은 개인정보를 수집하지 않습니다.
+--->
+MoneyFinal does not collect personal information.
+====
+개인정보처리방침
+--->
+Privacy Policy
+====
+시행일: 2026-10-06
+--->
+Effective date: 2026-10-06
+====
+머니파이널은 이용자의 개인정보를 <strong>수집·저장·이용하지 않습니다</strong>. 회원가입, 로그인, 개인정보 입력 폼이 존재하지 않으며, 서비스 이용에 개인정보가 필요하지 않습니다.
+--->
+MoneyFinal <strong>does not collect, store or use</strong> users’ personal information. There is no sign-up, login or personal-data form, and using the service requires no personal information.
+====
+1. 수집하지 않는 정보
+--->
+1. Information we do not collect
+====
+당사는 이용자의 이름, 이메일, 전화번호, 주소, 계좌번호, 결제정보, 위치정보 등 어떠한 개인정보도 수집하지 않습니다. 이용자 식별을 위한 회원 식별자(ID) 또한 발급하지 않습니다.
+--->
+We do not collect any personal information, including name, email, phone number, address, bank account number, payment information or location. We also do not issue any member identifier (ID) to identify users.
+====
+2. 자동 수집되는 정보 (접속 로그)
+--->
+2. Information collected automatically (access logs)
+====
+사이트가 호스팅되는 Cloudflare Pages에서는 서비스 운영 및 보안 목적상 기술적 로그(방문 시각, IP 주소 일부, 접속 브라우저 정보 등)를 임시 저장할 수 있습니다. 이는 Cloudflare의 개인정보처리방침에 따라 처리되며, 당사는 해당 로그에 접근하지 않습니다.
+--->
+Cloudflare Pages, which hosts this site, may temporarily store technical logs (visit time, part of the IP address, browser information and the like) for operation and security. These are handled under Cloudflare’s privacy policy, and we do not access them.
+====
+Cloudflare 개인정보처리방침: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>
+--->
+Cloudflare Privacy Policy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>
+====
+3. 쿠키 사용
+--->
+3. Use of cookies
+====
+머니파이널은 사이트 자체적으로 쿠키를 설정하지 않습니다. 다만 이용자의 브라우저 로컬 스토리지에 다크·라이트 테마 설정이 저장될 수 있으며, 이는 개인정보에 해당하지 않고 이용자 브라우저에만 저장됩니다.
+--->
+MoneyFinal does not set its own cookies. However, your dark or light theme preference may be stored in your browser’s local storage; this is not personal information and stays only in your browser.
+====
+4. 광고 서비스 (Google AdSense)
+--->
+4. Advertising (Google AdSense)
+====
+머니파이널은 Google AdSense를 통해 광고를 게재합니다. Google을 포함한 제3자 광고 사업자는 이용자의 이전 방문 기록을 바탕으로 광고를 게재하기 위해 쿠키 및 유사 식별자를 사용할 수 있습니다. 머니파이널은 이 정보를 직접 수집하거나 저장하지 않습니다.
+--->
+MoneyFinal serves ads through Google AdSense. Third-party advertisers, including Google, may use cookies and similar identifiers to serve ads based on your previous visits. MoneyFinal does not collect or store this information directly.
+====
+Google의 광고 쿠키 사용으로 Google과 파트너는 이용자의 본 사이트 및 다른 사이트 방문 기록을 바탕으로 맞춤 광고를 게재할 수 있습니다.
+--->
+Through Google’s use of advertising cookies, Google and its partners may serve personalized ads based on your visits to this and other sites.
+====
+맞춤 광고는 <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google 광고 설정(adssettings.google.com)</a>에서 해제할 수 있으며, <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>에서 제3자 사업자의 맞춤 광고 쿠키 사용을 거부할 수도 있습니다.
+--->
+You can opt out of personalized ads at <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings (adssettings.google.com)</a>, and you can opt out of third-party vendors’ personalized-ad cookies at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>.
+====
+브라우저 설정에서 쿠키를 차단하거나 삭제할 수 있습니다. 다만 일부 기능이 제한될 수 있습니다.
+--->
+You can block or delete cookies in your browser settings, although some features may be limited.
+====
+Google이 광고 서비스에서 데이터를 사용하는 방식은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 정책(policies.google.com/technologies/partner-sites)</a>에서 확인할 수 있습니다.
+--->
+You can learn how Google uses data in its advertising services at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google policies (policies.google.com/technologies/partner-sites)</a>.
+====
+광고가 표시된다고 해서 광고 대상 금융상품을 머니파이널이 추천하거나 보증하는 것은 아닙니다. 통계 분석 서비스(Google Analytics 등)를 도입할 경우 본 방침에 별도로 안내합니다.
+--->
+The appearance of an ad does not mean MoneyFinal recommends or endorses the advertised financial product. If we introduce an analytics service (such as Google Analytics), we will describe it separately in this policy.
+====
+5. 제3자 제공
+--->
+5. Disclosure to third parties
+====
+당사가 수집하는 개인정보가 없으므로, 제3자에게 제공하는 개인정보도 없습니다.
+--->
+Because we collect no personal information, we provide none to third parties.
+====
+6. 이용자 권리
+--->
+6. Your rights
+====
+당사는 개인정보를 보유하지 않으므로 열람·정정·삭제 요청 대상 정보가 존재하지 않습니다. 다만 사이트 이용과 관련한 문의사항은 아래 연락처로 접수 가능합니다.
+--->
+Because we hold no personal information, there is nothing to access, correct or delete. You can still send questions about using the site to the contact below.
+====
+7. 방침 개정
+--->
+7. Changes to this policy
+====
+본 방침은 관련 법령 및 서비스 변경 사항에 따라 개정될 수 있으며, 개정 시 본 페이지 상단의 시행일을 갱신합니다.
+--->
+This policy may be revised to reflect changes in law or service, and we will update the effective date at the top of this page when it is.
+====
+8. 문의처
+--->
+8. Contact
+====
+개인정보 및 사이트 이용 관련 문의: <a href="mailto:thewisefrontier@gmail.com">thewisefrontier@gmail.com</a>
+--->
+Questions about privacy or site use: <a href="mailto:thewisefrontier@gmail.com">thewisefrontier@gmail.com</a>
+====
+이용약관 | 머니파이널
+--->
+Terms of Use | MoneyFinal
+====
+머니파이널 서비스 이용약관. 무료 정보 제공, 투자 손실 면책, 데이터 정확성 무보증 등 이용 조건을 안내합니다.
+--->
+MoneyFinal terms of use: free information service, disclaimer for investment losses, no warranty on data accuracy and other conditions of use.
+====
+머니파이널 서비스 이용약관.
+--->
+MoneyFinal terms of use.
+====
+이용약관
+--->
+Terms of Use
+====
+시행일: 2026-07-09
+--->
+Effective date: 2026-07-09
+====
+<strong>⚠️ 중요 고지</strong><br>
+머니파이널은 <strong>투자 자문 또는 금융 상품 판매·중개 서비스가 아닙니다</strong>. 본 사이트가 제공하는 모든 정보는 공공데이터를 재가공한 참고 자료로, 개별 이용자의 투자 판단을 대체할 수 없습니다.
+--->
+<strong>⚠️ Important notice</strong><br>
+MoneyFinal is <strong>not an investment advisory service or a service that sells or brokers financial products</strong>. All information on this site is reference material reprocessed from public data and cannot replace an individual user’s own investment judgment.
+====
+제1조 (목적)
+--->
+Article 1 (Purpose)
+====
+본 약관은 머니파이널(이하
+--->
+These Terms set the conditions of use and the limits of responsibility for the finance and personal-finance information service (the
+====
+서비스
+--->
+Service
+====
+)이 제공하는 금융·재테크 관련 정보 서비스의 이용 조건과 책임 범위를 정하는 것을 목적으로 합니다.
+--->
+) provided by MoneyFinal.
+====
+제2조 (서비스 성격)
+--->
+Article 2 (Nature of the Service)
+====
+본 서비스는 무료로 제공되며, 회원가입 또는 개인정보 입력이 필요하지 않습니다.
+--->
+The Service is provided free of charge and requires no sign-up or personal information.
+====
+본 서비스는 정부·공공기관(금융감독원, 한국은행, 공공데이터포털, 미국 연방준비제도 등)이 공개한 데이터를 수집·정리·비교하여 제공하는 정보 서비스입니다.
+--->
+The Service is an information service that collects, organizes and compares data published by governments and public institutions (Korea’s Financial Supervisory Service, Bank of Korea, Public Data Portal, the US Federal Reserve and others).
+====
+본 서비스는 <strong>투자자문업, 유사수신업, 금융상품판매업, 금융상품중개업 등 금융 관련 인허가 사업에 해당하지 않습니다</strong>.
+--->
+The Service is <strong>not an investment advisory business, an unregistered deposit-taking business, a financial product sales business, a financial product brokerage business or any other licensed financial business</strong>.
+====
+제3조 (데이터 정확성 및 무보증)
+--->
+Article 3 (Data Accuracy and No Warranty)
+====
+본 서비스가 제공하는 금리, 시세, 지표, 상품 조건 등의 데이터는 원천 공공 API의 응답을 기반으로 하며, 원천 데이터의 변경·지연·오류 가능성이 있습니다.
+--->
+Data such as interest rates, prices, indicators and product terms provided by the Service is based on responses from the underlying public APIs, and the source data may change, be delayed or contain errors.
+====
+이용자는 실제 금융 상품 가입, 투자 결정, 계약 체결 전 반드시 해당 금융회사·기관의 공식 채널을 통해 최신 정보를 재확인해야 합니다.
+--->
+Before signing up for any financial product, making an investment decision or entering a contract, users must reconfirm the latest information through the official channels of the relevant financial company or institution.
+====
+운영자는 데이터의 완전성·정확성·최신성을 보증하지 않으며, 이로 인한 이용자의 판단 오류에 대해 책임지지 않습니다.
+--->
+The operator does not warrant the completeness, accuracy or timeliness of the data and is not responsible for users’ errors of judgment resulting from it.
+====
+제4조 (책임 제한)
+--->
+Article 4 (Limitation of Liability)
+====
+이용자가 본 서비스의 정보를 활용하여 진행한 예금·적금 가입, 대출 계약, 주식·펀드 매매, 보험 가입, 세금 계산, 그 밖의 모든 금융 의사결정으로 인해 발생한 손실·손해·기회비용에 대해 운영자는 어떠한 책임도 지지 않습니다.
+--->
+The operator bears no responsibility for any loss, damage or opportunity cost arising from deposits, loans, stock or fund trades, insurance, tax calculations or any other financial decisions made using information from the Service.
+====
+계산기 페이지의 결과는 이론적 추정값이며, 실제 세금·이자·수령액은 개인 상황, 법령 개정, 금융회사 정책에 따라 달라질 수 있습니다.
+--->
+Results on calculator pages are theoretical estimates; actual taxes, interest and amounts received may differ depending on personal circumstances, changes in law and financial company policies.
+====
+본 서비스는 외부 링크(원문 공시, 금융회사 홈페이지 등)를 제공할 수 있으며, 외부 사이트의 내용에 대해 책임지지 않습니다.
+--->
+The Service may provide external links (original filings, financial company websites and so on), and the operator is not responsible for the content of external sites.
+====
+제5조 (지적재산권)
+--->
+Article 5 (Intellectual Property)
+====
+본 서비스가 제공하는 원천 공공데이터는 각 공공기관의 개방 정책(공공누리 등)에 따라 제공되며, 각 원천 기관에 저작권이 있습니다.
+--->
+The underlying public data provided by the Service is offered under each public institution’s open-data policy (such as KOGL), and copyright belongs to each source institution.
+====
+운영자가 자체 제작한 화면, 코드, 문구 등은 개인적·비상업적 이용을 허용하며, 상업적 재배포 및 대량 크롤링은 금지됩니다.
+--->
+Screens, code and wording created by the operator may be used for personal, non-commercial purposes; commercial redistribution and bulk crawling are prohibited.
+====
+제6조 (금지 행위)
+--->
+Article 6 (Prohibited Acts)
+====
+이용자는 다음 행위를 하여서는 안 됩니다.
+--->
+Users must not do any of the following.
+====
+자동화 스크립트로 대량의 요청을 발생시키는 행위
+--->
+Generating large volumes of requests with automated scripts
+====
+서비스의 정상 운영을 방해하는 행위
+--->
+Interfering with the normal operation of the Service
+====
+정보를 왜곡·조작하여 재배포하는 행위
+--->
+Distorting or manipulating information and redistributing it
+====
+기타 관계 법령에 위반되는 행위
+--->
+Any other act that violates applicable law
+====
+제7조 (서비스 변경 및 중단)
+--->
+Article 7 (Changes and Suspension of the Service)
+====
+운영자는 사전 통지 없이 서비스의 구성·기능·데이터 범위를 변경하거나 일시 중단할 수 있으며, 이로 인한 이용자의 손실에 대해 책임지지 않습니다.
+--->
+The operator may change the composition, features or data scope of the Service, or suspend it temporarily, without prior notice, and is not responsible for users’ losses as a result.
+====
+제8조 (약관 개정)
+--->
+Article 8 (Amendment of Terms)
+====
+본 약관은 관계 법령 및 서비스 변경 사항에 따라 개정될 수 있으며, 개정 시 본 페이지 상단의 시행일을 갱신합니다. 개정 후 서비스를 계속 이용하는 경우 개정된 약관에 동의한 것으로 봅니다.
+--->
+These Terms may be amended to reflect changes in law or service, and we will update the effective date at the top of this page when they are. Continued use of the Service after an amendment is regarded as acceptance of the amended Terms.
+====
+제9조 (준거법)
+--->
+Article 9 (Governing Law)
+====
+본 약관은 대한민국 법령에 따라 해석되며, 서비스 이용과 관련한 분쟁은 이용자 주소지 관할 법원을 제1심 관할 법원으로 합니다.
+--->
+These Terms are interpreted under the laws of the Republic of Korea, and disputes relating to use of the Service are subject to the first-instance jurisdiction of the court with jurisdiction over the user’s address.
+====
+제10조 (문의)
+--->
+Article 10 (Contact)
+====
+서비스 이용과 관련한 문의: <a href="mailto:thewisefrontier@gmail.com">thewisefrontier@gmail.com</a>
+--->
+Questions about use of the Service: <a href="mailto:thewisefrontier@gmail.com">thewisefrontier@gmail.com</a>
+====
+요청하신 페이지를 찾을 수 없습니다.
+--->
+The page you requested could not be found.
+====
+페이지를 찾을 수 없습니다 | 머니파이널
+--->
+Page Not Found | MoneyFinal
+====
+<a href="/" class="logo">💰 머니파이널</a>
+--->
+<a href="/en/" class="logo">💰 MoneyFinal</a>
+====
+<a href="/" style="color:var(--accent)">홈으로 가기</a> · <a href="/rates" style="color:var(--accent)">예금·적금 금리</a> · <a href="/market" style="color:var(--accent)">시장</a> · <a href="/kr-fin" style="color:var(--accent)">한국 재무</a>
+--->
+<a href="/en/" style="color:var(--accent)">Home</a> · <a href="/en/ipo" style="color:var(--accent)">IPO calendar</a> · <a href="/en/us-fin" style="color:var(--accent)">US financials</a> · <a href="/en/dividend-etf" style="color:var(--accent)">Dividend ETFs</a>
+====
+© 2026 머니파이널 · 세상의 모든 재테크<br><a href="/about">사이트 소개</a> · <a href="/privacy">개인정보처리방침</a> · <a href="/terms">이용약관</a>
+--->
+© 2026 MoneyFinal · All about personal finance<br><a href="/en/about">About</a> · <a href="/en/privacy">Privacy Policy</a> · <a href="/en/terms">Terms of Use</a>
+====
+<a href="dividend-etf.html">배당ETF</a> &gt
+--->
+<a href="dividend-etf.html">Dividend ETFs</a> &gt
+====
+ℹ️ ETF 정보
+--->
+ℹ️ ETF info
+====
+데이터 불러오는 중...
+--->
+Loading data...
+====
+📅 최근 배당 이력
+--->
+📅 Recent dividend history
+====
+보유 주수 (주)
+--->
+Shares held
+====
+주당 배당금 (USD, 최근 배당 기준)
+--->
+Dividend per share (USD, based on latest payout)
+====
+매수 단가 (USD, 현재가 자동입력·수정 가능)
+--->
+Purchase price (USD, auto-filled with current price, editable)
+====
+과세 방식
+--->
+Tax treatment
+====
+직접 입력
+--->
+Custom
+====
+세율 직접 입력 (%)
+--->
+Custom tax rate (%)
+====
+세후 실수령 배당금 (연간 환산, USD)
+--->
+After-tax dividend income (annualized, USD)
+====
+<span class="k">세전 배당금 (연간 환산)</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+--->
+<span class="k">Gross dividends (annualized)</span><span class="v" id="r-gross" style="color:var(--green)"></span>
+====
+<span class="k" id="r-tax-label">원천징수세</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+--->
+<span class="k" id="r-tax-label">Withholding tax</span><span class="v" id="r-tax" style="color:var(--red)"></span>
+====
+<span class="k">투자 원금 (매수단가 기준)</span><span class="v" id="r-prin"></span>
+--->
+<span class="k">Invested principal (at purchase price)</span><span class="v" id="r-prin"></span>
+====
+<span class="k">배당수익률 (연 환산, 세전)</span><span class="v" id="r-yield"></span>
+--->
+<span class="k">Dividend yield (annualized, pre-tax)</span><span class="v" id="r-yield"></span>
+====
+원천징수세 (
+--->
+Withholding tax (
+====
+배당락일
+--->
+Ex-dividend date
+====
+지급일
+--->
+Payment date
+====
+배당 이력 수집 예정입니다
+--->
+Dividend history coming soon
+====
+<span class="k">현재가</span><span class="v">${priceInfo?'$'+parseFloat(priceInfo.price).toFixed(2):'-'}${chgTxt}</span>
+--->
+<span class="k">Price</span><span class="v">${priceInfo?'$'+parseFloat(priceInfo.price).toFixed(2):'-'}${chgTxt}</span>
+====
+<span class="k">운용규모 (AUM)</span><span class="v">${(pf.net_assets/1e8).toFixed(1)}억 달러</span>
+--->
+<span class="k">Assets under management (AUM)</span><span class="v">${(pf.net_assets/1e8).toFixed(1)}억 달러</span>
+====
+<span class="k">총보수율</span><span class="v">${(pf.expense_ratio*100).toFixed(2)}%</span>
+--->
+<span class="k">Expense ratio</span><span class="v">${(pf.expense_ratio*100).toFixed(2)}%</span>
+====
+<span class="k">공식 배당수익률</span><span class="v">${(pf.dividend_yield*100).toFixed(2)}%</span>
+--->
+<span class="k">Official dividend yield</span><span class="v">${(pf.dividend_yield*100).toFixed(2)}%</span>
+====
+<span class="k">설정일</span><span class="v">${pf.inception_date||'-'}</span>
+--->
+<span class="k">Inception date</span><span class="v">${pf.inception_date||'-'}</span>
+====
+<span class="k">상위 구성종목</span><span class="v" style="font-weight:400;font-size:12px;text-align:right">${list}</span>
+--->
+<span class="k">Top holdings</span><span class="v" style="font-weight:400;font-size:12px;text-align:right">${list}</span>
+====
+프로필 정보 수집 예정입니다
+--->
+Profile information coming soon
+====
+배당 이력을 불러오지 못했습니다
+--->
+Could not load dividend history
+====
+정보를 불러오지 못했습니다
+--->
+Could not load information

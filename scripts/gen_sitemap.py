@@ -34,10 +34,18 @@ for p in sorted(glob.glob(os.path.join(ROOT, '*.html'))):
     lm, cf, pr = old.get(name if name != 'index' else '', (None, *NEW.get(name, ('weekly', '0.7'))))
     lm = json_date(html) or lm or today
     rows.append((name, lm, cf, pr))
+for p in sorted(glob.glob(os.path.join(ROOT, 'en', '*.html'))):  # 영어판(/en/)
+    base = os.path.basename(p)[:-5]
+    name = 'en' if base == 'index' else 'en/' + base
+    html = open(p, encoding='utf-8').read()
+    if 'content="noindex' in html or base == '404':
+        continue
+    lm, cf, pr = old.get(name, (None, 'weekly', '0.6'))
+    rows.append((name, json_date(html) or lm or today, cf, pr))
 rows.sort(key=lambda r: (r[0] != 'index', -float(r[3]), r[0]))
 out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for name, lm, cf, pr in rows:
-    loc = BASE + '/' + ('' if name == 'index' else name)
+    loc = BASE + '/' + ('' if name == 'index' else name) + ('/' if name == 'en' else '')
     out.append(f'  <url><loc>{loc}</loc><lastmod>{lm}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
 out.append('</urlset>')
 open(sm, 'w', encoding='utf-8', newline='\n').write('\n'.join(out) + '\n')

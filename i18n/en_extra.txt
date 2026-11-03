@@ -1,0 +1,19 @@
+분기 값은 10-Q의 단독 3개월 값이고, 4분기(Q4)는 10-K 연간 값에서 3분기 누계를 뺀 값입니다. 현금흐름은 누계 값의 차이로 계산했습니다. 4분기 EPS는 분기 공시(10-Q)에 없어 “-”로 표시합니다. ROE·ROA는 최근 4분기 순이익 합계를 분기말 자본·자산으로 나눈 값입니다. 결산월이 달라 분기 이름 대신 분기 말일을 표시합니다.
+--->
+Quarterly values are standalone three-month figures from 10-Q filings, and Q4 is the 10-K annual value minus the nine-month year-to-date total. Cash flows are computed from differences in year-to-date values. Q4 EPS is not in quarterly filings (10-Q), so it is shown as “-”. ROE and ROA divide the sum of the last four quarters of net income by quarter-end equity and assets. Because fiscal year-ends differ, quarters are labeled by quarter-end date instead of quarter name.
+====
+상위 ${list.length}개 (거래 건수 순). Click a row to see that ${by==='stock'?'stock':'member'}’s trades in the Recent trades tab.
+--->
+Top ${list.length} (by number of trades). Click a row to see that ${by==='stock'?'stock':'member'}’s trades in the Recent trades tab.
+====
+<span class="k">운용규모 (AUM)</span><span class="v">$${(pf.net_assets/1e9).toFixed(2)}B</span>
+--->
+<span class="k">Assets under management (AUM)</span><span class="v">$${(pf.net_assets/1e9).toFixed(2)}B</span>
+====
+월배당 ETF 배당금 계산기
+--->
+Monthly Dividend ETF Calculators
+====
+ipo.html::건
+--->
+⎵offerings

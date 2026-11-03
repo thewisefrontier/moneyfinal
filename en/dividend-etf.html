@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Monthly Dividend ETF Calculators | MoneyFinal</title>
+<meta name="description" content="Compare real-time prices, dividend yields and fund details for monthly and quarterly dividend ETFs such as JEPI, QYLD and SCHD, plus REITs and BDCs, in one table.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/dividend-etf">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/dividend-etf">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/dividend-etf">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/dividend-etf">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/dividend-etf">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/dividend-etf">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/dividend-etf">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Monthly Dividend ETF Calculators | MoneyFinal">
+<meta property="og:description" content="Compare real-time prices, dividend yields and fund details for monthly and quarterly dividend ETFs such as JEPI, QYLD and SCHD, plus REITs and BDCs, in one table.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/dividend-etf">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Monthly Dividend ETF Calculators | MoneyFinal">
+<meta name="twitter:description" content="Compare real-time prices, dividend yields and fund details for monthly and quarterly dividend ETFs such as JEPI, QYLD and SCHD, plus REITs and BDCs, in one table.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Monthly Dividend ETF Calculators","description":"Compare real-time prices, dividend yields and fund details for monthly and quarterly dividend ETFs such as JEPI, QYLD and SCHD, plus REITs and BDCs, in one table.","url":"https://moneyfinal.pages.dev/en/dividend-etf","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:20px 0 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:32px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.sec-title{font-size:14px;font-weight:700;margin-bottom:10px}
+table.hist{width:100%;border-collapse:collapse;font-size:12px}
+table.hist th{text-align:left;color:var(--text2);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist td{padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist tr:last-child td{border-bottom:none}
+.empty{color:var(--text2);text-align:center;padding:20px 0;font-size:13px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:6px}
+.badge.tax-free{background:rgba(63,185,80,.15);color:var(--green)}
+.badge.tax-other{background:rgba(210,153,34,.15);color:var(--yellow)}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}
+.toolbar{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.search-box{flex:1;min-width:160px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 12px;color:var(--text);font-size:13px;outline:none}
+table.etf-tbl{width:100%;border-collapse:collapse;font-size:12px}
+table.etf-tbl th{text-align:right;color:var(--text2);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;position:sticky;top:0;background:var(--bg2)}
+table.etf-tbl th:hover{color:var(--accent)}
+table.etf-tbl th:first-child,table.etf-tbl td:first-child{text-align:left}
+table.etf-tbl td{padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;text-align:right}
+table.etf-tbl td:first-child{white-space:normal}
+table.etf-tbl tr:hover{background:var(--bg3);cursor:pointer}
+table.etf-tbl tr:last-child td{border-bottom:none}
+.tk-code{font-weight:700}
+.tk-name{font-size:11px;color:var(--text2);display:block;margin-top:1px}
+.tbl-wrap{overflow-x:auto}
+.qrow{position:relative;flex:1;min-width:150px}
+.qrow input{width:100%;padding-right:44px;box-sizing:border-box}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="dividend-etf.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main style="max-width:1100px">
+<h1>Monthly Dividend ETF Calculators</h1>
+<div class="sub">Ticker-by-ticker dividend calculators based on actual prices and payout history (82 tickers) · Click a ticker to open its detailed calculator</div>
+<div class="card">
+  <div class="toolbar">
+    <button class="ft active" data-cat="all" onclick="setCat(this)">All</button><button class="ft" data-cat="Single-stock option income" onclick="setCat(this)">Single-stock option income</button><button class="ft" data-cat="Quarterly payers" onclick="setCat(this)">Quarterly payers</button><button class="ft" data-cat="Monthly BDCs" onclick="setCat(this)">Monthly BDCs</button><button class="ft" data-cat="Monthly REITs" onclick="setCat(this)">Monthly REITs</button><button class="ft" data-cat="Monthly mortgage REITs" onclick="setCat(this)">Monthly mortgage REITs</button><button class="ft" data-cat="Bond income" onclick="setCat(this)">Bond income</button><button class="ft" data-cat="Covered call" onclick="setCat(this)">Covered call</button>
+    <div class="qrow"><input type="text" class="search-box" id="q" placeholder="Search ticker or name" oninput="renderTbl()"><button class="qgo" type="button" aria-label="Search" title="Search" onclick="var i=document.getElementById('q');i.focus();i.dispatchEvent(new Event('input',{bubbles:true}))"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+  </div>
+  <div class="tbl-wrap">
+  <table class="etf-tbl">
+    <thead><tr>
+      <th data-k="ticker" onclick="setSort(this)">Ticker</th>
+      <th data-k="price" onclick="setSort(this)">Price</th>
+      <th data-k="yield" onclick="setSort(this)">Dividend yield</th>
+      <th data-k="freq" onclick="setSort(this)">Frequency</th>
+      <th data-k="aum" onclick="setSort(this)">AUM</th>
+      <th data-k="expense" onclick="setSort(this)">Expense ratio</th>
+    </tr></thead>
+    <tbody id="tbody"><tr><td colspan="6" class="empty">Loading...</td></tr></tbody>
+  </table>
+  </div>
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+
+const TICKER_META=[{ticker:"JEPI",name:"JPMorgan Equity Premium Income ETF",category:"Covered call"},{ticker:"JEPQ",name:"JPMorgan Nasdaq Equity Premium Income ETF",category:"Covered call"},{ticker:"QYLD",name:"Global X Nasdaq 100 Covered Call ETF",category:"Covered call"},{ticker:"RYLD",name:"Global X Russell 2000 Covered Call ETF",category:"Covered call"},{ticker:"XYLD",name:"Global X S&P 500 Covered Call ETF",category:"Covered call"},{ticker:"DIVO",name:"Amplify CWP Enhanced Dividend Income ETF",category:"Covered call"},{ticker:"SPYI",name:"NEOS S&P 500 High Income ETF",category:"Covered call"},{ticker:"QQQI",name:"NEOS Nasdaq 100 High Income ETF",category:"Covered call"},{ticker:"SVOL",name:"Simplify Volatility Premium ETF",category:"Covered call"},{ticker:"NUSI",name:"Nationwide Risk-Managed Income ETF",category:"Covered call"},{ticker:"FEPI",name:"REX FANG & Innovation Equity Premium Income ETF",category:"Covered call"},{ticker:"GPIX",name:"Goldman Sachs S&P 500 Core Premium Income ETF",category:"Covered call"},{ticker:"GPIQ",name:"Goldman Sachs Nasdaq-100 Core Premium Income ETF",category:"Covered call"},{ticker:"QDTE",name:"Roundhill Innovation-100 0DTE Covered Call ETF",category:"Covered call"},{ticker:"XDTE",name:"Roundhill S&P 500 0DTE Covered Call ETF",category:"Covered call"},{ticker:"YMAG",name:"YieldMax Magnificent 7 Fund of Option Income ETFs",category:"Covered call"},{ticker:"YMAX",name:"YieldMax Universe Fund of Option Income ETFs",category:"Covered call"},{ticker:"LFGY",name:"YieldMax Crypto Industry & Tech Portfolio Option Income ETF",category:"Covered call"},{ticker:"GDXY",name:"YieldMax Gold Miners Option Income Strategy ETF",category:"Covered call"},{ticker:"KLIP",name:"Global X China Internet Covered Call ETF",category:"Covered call"},{ticker:"IWMY",name:"YieldMax Russell 2000 Option Income Strategy ETF",category:"Covered call"},{ticker:"QYLG",name:"Global X Nasdaq 100 Covered Call & Growth ETF",category:"Covered call"},{ticker:"XYLG",name:"Global X S&P 500 Covered Call & Growth ETF",category:"Covered call"},{ticker:"TSLY",name:"YieldMax TSLA Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"NVDY",name:"YieldMax NVDA Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"CONY",name:"YieldMax COIN Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"MSTY",name:"YieldMax MSTR Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"AMZY",name:"YieldMax AMZN Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"FBY",name:"YieldMax META Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"GOOY",name:"YieldMax GOOGL Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"APLY",name:"YieldMax AAPL Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"NFLY",name:"YieldMax NFLX Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"XOMO",name:"YieldMax XOM Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"JPMO",name:"YieldMax JPM Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"DISO",name:"YieldMax DIS Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"PYPY",name:"YieldMax PYPL Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"SQY",name:"YieldMax SQ Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"ULTY",name:"YieldMax Ultra Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"OARK",name:"YieldMax Innovation Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"AIYY",name:"YieldMax AI Option Income ETF",category:"Single-stock option income"},{ticker:"SMCY",name:"YieldMax SMCI Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"PLTY",name:"YieldMax PLTR Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"ABNY",name:"YieldMax ABNB Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"AMDY",name:"YieldMax AMD Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"CVNY",name:"YieldMax CVNA Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"MRNY",name:"YieldMax MRNA Option Income Strategy ETF",category:"Single-stock option income"},{ticker:"O",name:"Realty Income Corp",category:"Monthly REITs"},{ticker:"MAIN",name:"Main Street Capital Corp",category:"Monthly BDCs"},{ticker:"STAG",name:"Stag Industrial",category:"Monthly REITs"},{ticker:"AGNC",name:"AGNC Investment Corp",category:"Monthly mortgage REITs"},{ticker:"ARR",name:"ARMOUR Residential REIT",category:"Monthly mortgage REITs"},{ticker:"GAIN",name:"Gladstone Investment Corp",category:"Monthly BDCs"},{ticker:"GOOD",name:"Gladstone Commercial Corp",category:"Monthly REITs"},{ticker:"LAND",name:"Gladstone Land Corp",category:"Monthly REITs"},{ticker:"PSEC",name:"Prospect Capital Corp",category:"Monthly BDCs"},{ticker:"EPR",name:"EPR Properties",category:"Monthly REITs"},{ticker:"ORC",name:"Orchid Island Capital",category:"Monthly mortgage REITs"},{ticker:"NLY",name:"Annaly Capital Management",category:"Monthly mortgage REITs"},{ticker:"ADC",name:"Agree Realty Corp",category:"Monthly REITs"},{ticker:"LTC",name:"LTC Properties",category:"Monthly REITs"},{ticker:"ABR",name:"Arbor Realty Trust",category:"Monthly mortgage REITs"},{ticker:"EFC",name:"Ellington Financial",category:"Monthly mortgage REITs"},{ticker:"TLTW",name:"iShares 20+ Year Treasury Bond BuyWrite Strategy ETF",category:"Bond income"},{ticker:"HYG",name:"iShares iBoxx High Yield Corp Bond ETF",category:"Bond income"},{ticker:"PFFA",name:"Virtus InfraCap US Preferred Stock ETF",category:"Bond income"},{ticker:"PFFD",name:"Global X US Preferred ETF",category:"Bond income"},{ticker:"JNK",name:"SPDR Bloomberg High Yield Bond ETF",category:"Bond income"},{ticker:"PFF",name:"iShares Preferred and Income Securities ETF",category:"Bond income"},{ticker:"SPHY",name:"SPDR Portfolio High Yield Bond ETF",category:"Bond income"},{ticker:"USHY",name:"iShares Broad USD High Yield Corp Bond ETF",category:"Bond income"},{ticker:"BKLN",name:"Invesco Senior Loan ETF",category:"Bond income"},{ticker:"SCHD",name:"Schwab US Dividend Equity ETF",category:"Quarterly payers"},{ticker:"VYM",name:"Vanguard High Dividend Yield ETF",category:"Quarterly payers"},{ticker:"DGRO",name:"iShares Core Dividend Growth ETF",category:"Quarterly payers"},{ticker:"VIG",name:"Vanguard Dividend Appreciation ETF",category:"Quarterly payers"},{ticker:"HDV",name:"iShares Core High Dividend ETF",category:"Quarterly payers"},{ticker:"SPHD",name:"Invesco S&P 500 High Dividend Low Volatility ETF",category:"Quarterly payers"},{ticker:"SDIV",name:"Global X SuperDividend ETF",category:"Quarterly payers"},{ticker:"DGRW",name:"WisdomTree US Quality Dividend Growth Fund",category:"Quarterly payers"},{ticker:"NOBL",name:"ProShares S&P 500 Dividend Aristocrats ETF",category:"Quarterly payers"},{ticker:"SPYD",name:"SPDR Portfolio S&P 500 High Dividend ETF",category:"Quarterly payers"},{ticker:"RDVY",name:"First Trust Rising Dividend Achievers ETF",category:"Quarterly payers"}];
+let CAT='all',SORT_KEY='yield',SORT_DIR='desc';
+let ROWS=[];
+function setCat(btn){CAT=btn.dataset.cat;btn.parentElement.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTbl();}
+function setSort(th){const k=th.dataset.k;if(SORT_KEY===k){SORT_DIR=SORT_DIR==='desc'?'asc':'desc';}else{SORT_KEY=k;SORT_DIR='desc';}renderTbl();}
+function usd(v){return v===null||v===undefined?'-':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function pct(v){return v===null||v===undefined?'-':v.toFixed(2)+'%';}
+function eokDollar(v){return v===null||v===undefined?'-':'$'+(v/1e9).toFixed(2)+'B';}
+async function loadData(){
+  try{
+    const r=await fetch('/data/dividends.json');const d=await r.json();
+    const prices=d.prices||{},profiles=d.profiles||{},byTicker=d.by_ticker||{};
+    ROWS=TICKER_META.map(m=>{
+      const p=prices[m.ticker],pf=profiles[m.ticker],rows=byTicker[m.ticker]||[];
+      let freq=null,annualDps=null;
+      if(rows.length>=2){
+        const d0=new Date(rows[0].ex_dividend_date),d1=new Date(rows[1].ex_dividend_date);
+        const gapDays=(d0-d1)/86400000;
+        freq=gapDays<=45?'Monthly':gapDays<=100?'Quarterly':gapDays<=200?'Semiannual':'Annual';
+      }
+      if(rows.length){
+        const n=freq==='Monthly'?12:freq==='Quarterly'?4:freq==='Semiannual'?2:1;
+        annualDps=parseFloat(rows[0].amount)*n;
+      }
+      const price=p?parseFloat(p.price):null;
+      const yieldPct=pf&&pf.dividend_yield?pf.dividend_yield*100:(price&&annualDps?annualDps/price*100:null);
+      return{...m,price,yieldPct,freq,aum:pf?pf.net_assets:null,expense:pf?pf.expense_ratio*100:null};
+    });
+  }catch(e){ROWS=TICKER_META.map(m=>({...m,price:null,yieldPct:null,freq:null,aum:null,expense:null}));}
+  renderTbl();
+}
+function renderTbl(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=ROWS.filter(r=>CAT==='all'||r.category===CAT);
+  if(q)list=list.filter(r=>(r.ticker+' '+r.name).toLowerCase().includes(q));
+  list=list.slice().sort((a,b)=>{
+    const map={ticker:'ticker',price:'price',yield:'yieldPct',freq:'freq',aum:'aum',expense:'expense'};
+    const k=map[SORT_KEY];
+    let av=a[k],bv=b[k];
+    if(av===null||av===undefined)av=SORT_DIR==='desc'?-Infinity:Infinity;
+    if(bv===null||bv===undefined)bv=SORT_DIR==='desc'?-Infinity:Infinity;
+    if(typeof av==='string')return SORT_DIR==='asc'?av.localeCompare(bv):bv.localeCompare(av);
+    return SORT_DIR==='asc'?av-bv:bv-av;
+  });
+  const tbody=document.getElementById('tbody');
+  if(!list.length){tbody.innerHTML='<tr><td colspan="6" class="empty">No ETFs match your filters</td></tr>';return;}
+  tbody.innerHTML=list.map(r=>`<tr onclick="location.href='dividend-${r.ticker.toLowerCase()}.html'">
+    <td><span class="tk-code">${r.ticker}</span><span class="tk-name">${r.name}</span></td>
+    <td>${usd(r.price)}</td>
+    <td class="${r.yieldPct?'up':''}">${pct(r.yieldPct)}</td>
+    <td>${r.freq||'-'}</td>
+    <td>${eokDollar(r.aum)}</td>
+    <td>${pct(r.expense)}</td>
+  </tr>`).join('');
+}
+loadData();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

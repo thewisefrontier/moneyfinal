@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Search stock and ETF trades reported by US House members (STOCK Act periodic transaction reports) by stock or by member. Based on House Clerk filings.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/congress">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/congress">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/congress">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/congress">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/congress">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/congress">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/congress">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="US House Members’ Stock & ETF Trades | MoneyFinal">
+<meta property="og:description" content="Search stock and ETF trades reported by US House members (STOCK Act periodic transaction reports) by stock or by member. Based on House Clerk filings.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/congress">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="US House Members’ Stock & ETF Trades | MoneyFinal">
+<meta name="twitter:description" content="Search stock and ETF trades reported by US House members (STOCK Act periodic transaction reports) by stock or by member. Based on House Clerk filings.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"US House Members’ Stock & ETF Trades","description":"Search stock and ETF trades reported by US House members (STOCK Act periodic transaction reports) by stock or by member. Based on House Clerk filings.","url":"https://moneyfinal.pages.dev/en/congress","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>US House Members’ Stock & ETF Trades | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
+.badge.b-buy{background:rgba(63,185,80,.18);color:var(--green)}
+.badge.b-sell{background:rgba(248,81,73,.18);color:var(--red)}
+.badge.b-etf{background:rgba(56,139,253,.18);color:var(--blue)}
+.filters{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;padding:12px 16px;border-top:1px solid var(--border)}
+.filters .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.filters .grp>span{font-size:11px;color:var(--text2);margin-right:2px}
+.legal{background:rgba(210,153,34,.12);border:1px solid var(--yellow);border-radius:8px;padding:12px 16px;font-size:12.5px;line-height:1.7;margin:16px 0}
+.more{display:block;margin:12px auto;padding:8px 22px}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="congress.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">US House Members’ Stock & ETF Trades</div><span class="sec-more" id="asof"></span></div>
+<div class="grid4" id="kpis"><div class="loading">Loading...</div></div>
+<div class="card" style="overflow:visible">
+  <div class="tabs" id="tabs"><button class="tab active" data-t="recent">Recent trades</button><button class="tab" data-t="stock">By stock</button><button class="tab" data-t="member">By member</button><button class="tab" data-t="scan">Scanned filings</button></div>
+  <div class="uf-form" style="grid-template-columns:1fr">
+    <div class="fld"><label>Member name · stock name · ticker</label>
+      <div class="qrow"><input id="q" autocomplete="off" placeholder="e.g. Pelosi, NVDA, Apple, SPY"><button class="qgo" id="go" type="button" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div></div>
+  </div>
+  <div class="filters" id="filters">
+    <div class="grp" data-f="cat"><span>Category</span><button class="ft active" data-v="">All</button><button class="ft" data-v="stock">Stocks</button><button class="ft" data-v="etf">ETF</button><button class="ft" data-v="bond">Bonds</button><button class="ft" data-v="other">Other</button></div>
+    <div class="grp" data-f="side"><span>Trade</span><button class="ft active" data-v="">All</button><button class="ft" data-v="buy">Buy</button><button class="ft" data-v="sell">Sell</button></div>
+    <div class="grp" data-f="days"><span>Period (trade date)</span><button class="ft" data-v="30">30 days</button><button class="ft active" data-v="90">90 days</button><button class="ft" data-v="365">1 year</button><button class="ft" data-v="0">All</button></div>
+  </div>
+</div>
+<div class="card"><div id="result" style="overflow-x:auto"><div class="loading">Loading...</div></div><div id="moreWrap"></div></div>
+<div class="legal"><b>Notice</b> · This data comes from periodic transaction reports (STOCK Act PTRs) filed with the Clerk of the US House of Representatives. US law (5 U.S.C. §13107) <b>prohibits using these reports for commercial purposes, soliciting money, or credit ratings</b>. MoneyFinal carries no ads or donation requests on this page. Reports can be published up to 45 days after a trade, and amounts are <b>ranges</b>, not exact values. Senate trades are not included. Nothing here is a recommendation to buy or sell any security, and a member’s trade does not guarantee later returns.</div>
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
+  <b>Data basis</b> · Source: the House Clerk’s financial disclosure system (<a href="https://disclosures-clerk.house.gov/FinancialDisclosure" target="_blank" rel="noopener" style="color:var(--accent)">disclosures-clerk.house.gov</a>). We read and organized the transaction report (PTR) PDFs, and each row’s "original"lets you check the filing directly. Owners are the member, spouse (SP), joint (JT) and dependent child (DC). Sell (partial) means part of the holding was sold. Filings published only as scanned images (about 13%) could not be read, so only a list and original links are provided in the 'Scanned filings' tab. ETFs were identified from the filing’s asset type and name or ticker and may be wrong. Updated weekly.
+</div>
+</main>
+<div class="disclaimer">⚠️ This is reference information derived from public filings. You are solely responsible for your investment decisions and any losses. Do not use this data for commercial purposes, fundraising or credit ratings.</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let ALL=[],SCANS=[],META=null,TAB='recent',F={cat:'',side:'',days:'90'},LIMIT=200,Q='';
+
+function usd(n){if(n==null)return'';if(n>=1e9)return'$'+(+(n/1e9).toFixed(2))+'B';if(n>=1e6)return'$'+(+(n/1e6).toFixed(2))+'M';return'$'+n.toLocaleString('en-US');}
+const amt=t=>t.lo==null?'-':t.hi==null?usd(t.lo)+' +':t.lo===t.hi?usd(t.lo):usd(t.lo)+' ~ '+usd(t.hi);
+const OWN={'':'Member',SP:'Spouse',JT:'Joint',DC:'Child'};
+const SIDE={buy:['Buy','b-buy'],sell:['Sell','b-sell'],sell_partial:['Sell (partial)','b-sell'],exchange:['Exchange','']};
+const CAT={stock:'Stocks',etf:'ETF',option:'Options',bond:'Bonds',fund:'Funds',crypto:'Crypto',other:'Other'};
+async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
+const ed=t=>t.fx?(t.nd||t.f):t.td;  
+function daysAgo(n){const d=new Date(META.updated_at+'T00:00:00');d.setDate(d.getDate()-n);return d.toISOString().slice(0,10);}
+
+async function init(){
+  try{META=await J('/data/congress/meta.json');}catch(e){$('result').innerHTML='<div class="empty">Data is being prepared</div>';$('kpis').innerHTML='';return;}
+  const parts=await Promise.all(META.years.map(y=>J('/data/congress/trades_'+y+'.json').catch(()=>null)));
+  parts.forEach((p,i)=>{if(p){ALL=ALL.concat(p.trades);Object.entries(p.scans||{}).forEach(([doc,v])=>SCANS.push({doc,y:META.years[i],m:v.m,sd:v.sd,f:v.f}));}});
+  SCANS.sort((a,b)=>b.f<a.f?-1:b.f>a.f?1:0);
+  ALL.sort((a,b)=>ed(b)<ed(a)?-1:ed(b)>ed(a)?1:0);
+  $('asof').textContent=META.updated_at+' Updated';
+  document.querySelectorAll('#tabs .tab').forEach(b=>b.addEventListener('click',()=>{TAB=b.dataset.t;document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.toggle('active',x===b));LIMIT=200;render();}));
+  document.querySelectorAll('#filters .grp').forEach(g=>g.addEventListener('click',e=>{const b=e.target.closest('.ft');if(!b)return;F[g.dataset.f]=b.dataset.v;g.querySelectorAll('.ft').forEach(x=>x.classList.toggle('active',x===b));LIMIT=200;render();}));
+  const q=$('q');q.addEventListener('input',()=>{Q=q.value.trim().toLowerCase();LIMIT=200;render();});
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();Q=q.value.trim().toLowerCase();render();}});
+  $('go').addEventListener('click',()=>{Q=q.value.trim().toLowerCase();q.focus();render();});
+  const u=new URLSearchParams(location.search);
+  if(u.get('q')){q.value=u.get('q');Q=q.value.toLowerCase();}
+  kpis();render();
+}
+function kpis(){
+  const since=daysAgo(30),recent=ALL.filter(t=>ed(t)>=since),mem=new Set(ALL.map(t=>t.m));
+  const c=Object.values(META.counts).reduce((a,x)=>({f:a.f+x.filings,t:a.t+x.trades,u:a.u+x.unparsed}),{f:0,t:0,u:0});
+  $('kpis').innerHTML=[['Trades',ALL.length.toLocaleString('en-US'),'Filings from the last '+META.years.length+' years'],['Trades, last 30 days',recent.length+'',new Set(recent.map(t=>t.m)).size+' members'],['Members',mem.size+'','House members who filed trades'],['Filings read',c.f+'','Unreadable scans: '+c.u]].map(x=>`<div class="kpi"><div class="kpi-label">${x[0]}</div><div class="kpi-value">${x[1]}</div><div class="kpi-sub">${x[2]}</div></div>`).join('');
+}
+function filtered(){
+  const since=F.days==='0'?'':daysAgo(+F.days);
+  return ALL.filter(t=>{
+    if(since&&ed(t)<since)return false;
+    if(F.cat){if(F.cat==='other'){if(['stock','etf','bond'].includes(t.cat))return false;}else if(t.cat!==F.cat)return false;}
+    if(F.side&&!(F.side==='buy'?t.tt==='buy':(t.tt==='sell'||t.tt==='sell_partial')))return false;
+    if(Q&&!((t.m||'').toLowerCase().includes(Q)||(t.asset||'').toLowerCase().includes(Q)||(t.tk||'').toLowerCase()===Q||(t.tk||'').toLowerCase().startsWith(Q)))return false;
+    return true;});
+}
+function sideBadge(t){const s=SIDE[t.tt]||[t.tt,''];return `<span class="badge ${s[1]}">${s[0]}</span>`;}
+function render(){
+  const rows=filtered();
+  if(TAB==='scan')renderScans();else if(TAB==='recent')renderRecent(rows);else if(TAB==='stock')renderGroup(rows,'stock');else renderGroup(rows,'member');
+}
+function renderScans(){
+  $('moreWrap').innerHTML='';
+  const list=SCANS.filter(x=>!Q||x.m.toLowerCase().includes(Q));
+  $('result').innerHTML=`<div class="note" style="padding-bottom:0">These are <b>filings submitted on paper and published only as scanned images</b>: ${list.length}. The images contain no text data, so they could not be read automatically, and hand-checked forms are too error-prone for automatic reading, so their trades are not shown. Please check the original PDFs.</div>`+
+   (list.length?'<table class="bt"><tr><th>Filed</th><th>members</th><th>original</th></tr>'+list.map(x=>`<tr><td>${x.f}</td><td>${esc(x.m)} <small style="color:var(--text2)">${esc(x.sd)}</small></td><td><a href="https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${x.y}/${x.doc}.pdf" target="_blank" rel="noopener" style="color:var(--accent)">Open PDF</a></td></tr>`).join('')+'</table>':'<div class="empty">No filings match</div>');
+}
+function renderRecent(rows){
+  if(!rows.length){$('result').innerHTML='<div class="empty">No trades match</div>';$('moreWrap').innerHTML='';return;}
+  const shown=rows.slice(0,LIMIT);
+  $('result').innerHTML=`<div class="note" style="padding-bottom:0"><b>${rows.length}</b> matching trades</div><table class="bt"><tr><th>Trade date</th><th>members</th><th>Stock</th><th>Category</th><th>Type</th><th>Amount range</th><th>Owner</th><th>Filed</th><th>original</th></tr>`+
+   shown.map(t=>`<tr><td>${t.td}${t.fx?' <span title="The trade date in the original is later than the filing date, so it may be a typo. The value is shown as filed." style="cursor:help">⚠️</span>':''}</td><td>${esc(t.m)} <small style="color:var(--text2)">${esc(t.sd)}</small></td><td>${esc(t.asset)}${t.tk?` <span class="badge">${esc(t.tk)}</span>`:''}</td><td><span class="badge ${t.cat==='etf'?'b-etf':''}">${CAT[t.cat]||'Other'}</span></td><td>${sideBadge(t)}</td><td>${amt(t)}</td><td>${OWN[t.own]||t.own}</td><td>${t.nd||t.f}</td><td><a href="https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/${t.f.slice(0,4)}/${t.doc}.pdf" target="_blank" rel="noopener" style="color:var(--accent)">PDF</a></td></tr>`).join('')+'</table>';
+  $('moreWrap').innerHTML=rows.length>LIMIT?`<button class="btn more" id="more">Show more (${Math.min(LIMIT+200,rows.length)}/${rows.length})</button>`:'';
+  const mb=$('more');if(mb)mb.onclick=()=>{LIMIT+=200;renderRecent(rows);};
+}
+function renderGroup(rows,by){
+  $('moreWrap').innerHTML='';
+  const g={};
+  rows.forEach(t=>{const k=by==='stock'?(t.tk||t.asset):t.m;const o=g[k]||(g[k]={k,name:by==='stock'?t.asset:t.m,tk:by==='stock'?t.tk:t.sd,n:0,b:0,s:0,peo:new Set(),last:'',cat:t.cat});
+    o.n++;if(t.tt==='buy')o.b++;else if(t.tt==='sell'||t.tt==='sell_partial')o.s++;o.peo.add(by==='stock'?t.m:(t.tk||t.asset));if(ed(t)>o.last)o.last=ed(t);});
+  const list=Object.values(g).sort((a,b)=>b.n-a.n).slice(0,300);
+  if(!list.length){$('result').innerHTML='<div class="empty">No trades match</div>';return;}
+  $('result').innerHTML=`<div class="note" style="padding-bottom:0">Top ${list.length} (by number of trades). Click a row to see that ${by==='stock'?'stock':'member'}’s trades in the Recent trades tab.</div><table class="bt"><tr><th>${by==='stock'?'Stock':'members'}</th><th>Trades</th><th>Buy</th><th>Sell</th><th>${by==='stock'?'Members who traded':'Stocks traded'}</th><th>Last trade date</th></tr>`+
+   list.map(o=>`<tr class="clk" style="cursor:pointer" data-k="${esc(by==='stock'&&o.tk?o.tk:o.name)}"><td>${esc(o.name)} ${o.tk?`<span class="badge">${esc(o.tk)}</span>`:''}${by==='stock'?`<span class="badge ${o.cat==='etf'?'b-etf':''}">${CAT[o.cat]||'Other'}</span>`:''}</td><td>${o.n}</td><td>${o.b}</td><td>${o.s}</td><td>${o.peo.size}</td><td>${o.last}</td></tr>`).join('')+'</table>';
+  $('result').querySelectorAll('tr.clk').forEach(tr=>tr.addEventListener('click',()=>{$('q').value=tr.dataset.k;Q=tr.dataset.k.toLowerCase();TAB='recent';document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.toggle('active',x.dataset.t==='recent'));LIMIT=200;render();window.scrollTo({top:0,behavior:'smooth'});}));
+}
+init();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

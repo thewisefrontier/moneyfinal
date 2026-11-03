@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SCHD Dividend Calculator (Actual Payout History) | MoneyFinal</title>
+<meta name="description" content="Estimates dividends and after-tax income by shares held, based on the actual payout history of SCHD (Schwab US Dividend Equity ETF).">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/dividend-schd"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/dividend-schd">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/dividend-schd">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/dividend-schd">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/dividend-schd">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/dividend-schd">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/dividend-schd">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="SCHD Dividend Calculator (Actual Payout History) | MoneyFinal">
+<meta property="og:description" content="Estimates dividends and after-tax income by shares held, based on the actual payout history of SCHD (Schwab US Dividend Equity ETF).">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/dividend-schd">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SCHD Dividend Calculator (Actual Payout History) | MoneyFinal">
+<meta name="twitter:description" content="Estimates dividends and after-tax income by shares held, based on the actual payout history of SCHD (Schwab US Dividend Equity ETF).">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"SCHD Dividend Calculator","description":"Estimates dividends and after-tax income by shares held, based on the actual payout history of SCHD (Schwab US Dividend Equity ETF).","url":"https://moneyfinal.pages.dev/en/dividend-schd","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:11px 12px;font-size:15px;outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.grid2{grid-template-columns:1fr}}
+.result-hero{text-align:center;padding:20px 0 12px}
+.rh-label{font-size:12px;color:var(--text2);margin-bottom:6px}
+.rh-value{font-size:32px;font-weight:700;color:var(--green);letter-spacing:-1px}
+.brow{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid var(--border);font-size:13px}
+.brow:last-child{border-bottom:none}
+.brow .k{color:var(--text2)}
+.brow .v{font-weight:600}
+.note{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7}
+.sec-title{font-size:14px;font-weight:700;margin-bottom:10px}
+table.hist{width:100%;border-collapse:collapse;font-size:12px}
+table.hist th{text-align:left;color:var(--text2);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist td{padding:6px 4px;border-bottom:1px solid var(--border)}
+table.hist tr:last-child td{border-bottom:none}
+.empty{color:var(--text2);text-align:center;padding:20px 0;font-size:13px}
+.crumb{font-size:12px;color:var(--text2);margin-bottom:10px}
+.crumb a{color:var(--accent)}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:6px}
+.badge.tax-free{background:rgba(63,185,80,.15);color:var(--green)}
+.badge.tax-other{background:rgba(210,153,34,.15);color:var(--yellow)}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.ticker .up{color:var(--green)}.ticker .down{color:var(--red)}.ticker .neutral{color:var(--text2)}</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="dividend-etf.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="crumb"><a href="/en/dividend-etf.html">Dividend ETFs</a> &gt; SCHD</div>
+<h1>SCHD Dividend Calculator</h1>
+<div class="sub">Schwab US Dividend Equity ETF · quarterly payer · based on actual payout history</div>
+
+<div class="card">
+  <div class="sec-title">ℹ️ ETF info</div>
+  <div id="profile-wrap"><div class="empty">Loading data...</div></div>
+</div>
+
+<div class="card">
+  <div class="sec-title">📅 Recent dividend history</div>
+  <div id="hist-wrap"><div class="empty">Loading data...</div></div>
+</div>
+
+<div class="card">
+  <div class="field"><label>Shares held</label><input type="text" id="shares" inputmode="numeric" value="100" oninput="calc()"></div>
+  <div class="grid2">
+    <div class="field"><label>Dividend per share (USD, based on latest payout)</label><input type="text" id="dps" inputmode="decimal" value="" oninput="calc()"></div>
+    <div class="field"><label>Purchase price (USD, auto-filled with current price, editable)</label><input type="text" id="price" inputmode="decimal" value="" oninput="calc()"></div>
+  </div>
+  <div class="field"><label>Tax treatment</label><select id="tax" onchange="calc()"><option value="30">US withholding for non-residents (30% default)</option><option value="15">Treaty rate (15%)</option><option value="0">No tax assumed</option><option value="custom">Custom</option></select></div>
+  <div class="field" id="custom-tax-field" style="display:none"><label>Custom tax rate (%)</label><input type="number" id="custom-tax" value="15" step="0.1" min="0" max="50" oninput="calc()"></div>
+</div>
+
+<div class="card">
+  <div class="result-hero">
+    <div class="rh-label">After-tax dividend income (annualized, USD)</div>
+    <div class="rh-value" id="r-net">-</div>
+  </div>
+  <div class="brow"><span class="k">Gross dividends (annualized)</span><span class="v" id="r-gross" style="color:var(--green)"></span></div>
+  <div class="brow"><span class="k" id="r-tax-label">Withholding tax</span><span class="v" id="r-tax" style="color:var(--red)"></span></div>
+  <div class="brow"><span class="k">Invested principal (at purchase price)</span><span class="v" id="r-prin"></span></div>
+  <div class="brow"><span class="k">Dividend yield (annualized, pre-tax)</span><span class="v" id="r-yield"></span></div>
+</div>
+
+<div class="note">
+  ⚠️ This page is based on the actual dividend history of SCHD collected from Yahoo Finance. Future dividends are estimates for reference only; actual payouts can change every month depending on the underlying assets and the issuer’s policy.<br>
+  · “Annualized” is a simple estimate: the latest dividend × payments per year (monthly = 12, quarterly = 4)<br>
+  · Dividends from US-listed ETFs and stocks are normally subject to 30% US withholding for non-residents, often reduced to 15% under a tax treaty<br>
+  · Your own tax treatment depends on where you live; this calculator is not tax advice
+</div>
+</main>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script src="/won.js"></script><script>
+function usd(v){return '$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4});}
+function num(id){return parseFloat((document.getElementById(id).value||'0').replace(/[^0-9.]/g,''))||0;}
+let payFreq=12;
+let latestKrw=null;
+function calc(){
+  const shares=num('shares');
+  const dps=num('dps');
+  const price=num('price');
+  const taxSel=document.getElementById('tax').value;
+  document.getElementById('custom-tax-field').style.display=taxSel==='custom'?'block':'none';
+  const taxRate=taxSel==='custom'?(parseFloat(document.getElementById('custom-tax').value)||0)/100:parseFloat(taxSel)/100;
+  if(!shares||!dps){document.getElementById('r-net').textContent='-';return;}
+  const annualDps=dps*payFreq;
+  const gross=shares*annualDps;
+  const tax=gross*taxRate;
+  const net=gross-tax;
+  const principal=shares*price;
+  const yieldPct=price>0?(annualDps/price*100):null;
+  document.getElementById('r-gross').textContent='+'+usd(gross);
+  document.getElementById('r-tax-label').textContent='Withholding tax ('+(taxRate*100).toFixed(1).replace(/\.0$/,'')+'%)';
+  document.getElementById('r-tax').textContent='-'+usd(tax);
+  document.getElementById('r-prin').textContent=price>0?usd(principal):'-';
+  document.getElementById('r-yield').textContent=yieldPct!==null?yieldPct.toFixed(2)+'%':'-';
+  document.getElementById('r-net').textContent=usd(net);
+}
+let userEditedPrice=false;
+document.getElementById('price').addEventListener('input',()=>{userEditedPrice=true;});
+async function loadDividendData(){
+  try{
+    const r=await fetch('/data/dividends.json');
+    const d=await r.json();
+    const rows=(d.by_ticker&&d.by_ticker['SCHD'])||[];
+    const wrap=document.getElementById('hist-wrap');
+    if(rows.length){
+      if(rows.length>=2){
+        const d0=new Date(rows[0].ex_dividend_date), d1=new Date(rows[1].ex_dividend_date);
+        const gapDays=(d0-d1)/86400000;
+        payFreq=gapDays<=45?12:gapDays<=100?4:gapDays<=200?2:1;
+      }
+      document.getElementById('dps').value=parseFloat(rows[0].amount).toFixed(4);
+      let h='<table class="hist"><tr><th>Ex-dividend date</th><th>Payment date</th><th style="text-align:right">Dividend per share</th></tr>';
+      rows.slice(0,12).forEach(row=>{h+=`<tr><td>${row.ex_dividend_date}</td><td>${row.payment_date||'-'}</td><td style="text-align:right">$${parseFloat(row.amount).toFixed(4)}</td></tr>`;});
+      h+='</table>';
+      wrap.innerHTML=h;
+    }else{
+      wrap.innerHTML='<div class="empty">Dividend history coming soon</div>';
+    }
+
+    const priceInfo=(d.prices||{})['SCHD'];
+    if(priceInfo&&!userEditedPrice){
+      document.getElementById('price').value=parseFloat(priceInfo.price).toFixed(2);
+    }
+
+    const pf=(d.profiles||{})['SCHD'];
+    const pwrap=document.getElementById('profile-wrap');
+    if(pf){
+      const chgTxt=priceInfo?` <span class="${priceInfo.change_pct>=0?'up':'down'}" style="font-size:11px">(${priceInfo.change_pct>=0?'+':''}${parseFloat(priceInfo.change_pct).toFixed(2)}%)</span>`:'';
+      let ph=`<div class="brow"><span class="k">Price</span><span class="v">${priceInfo?'$'+parseFloat(priceInfo.price).toFixed(2):'-'}${chgTxt}</span></div>`;
+      ph+=`<div class="brow"><span class="k">Assets under management (AUM)</span><span class="v">$${(pf.net_assets/1e9).toFixed(2)}B</span></div>`;
+      ph+=`<div class="brow"><span class="k">Expense ratio</span><span class="v">${(pf.expense_ratio*100).toFixed(2)}%</span></div>`;
+      ph+=`<div class="brow"><span class="k">Official dividend yield</span><span class="v">${(pf.dividend_yield*100).toFixed(2)}%</span></div>`;
+      ph+=`<div class="brow"><span class="k">Inception date</span><span class="v">${pf.inception_date||'-'}</span></div>`;
+      if(pf.top_holdings&&pf.top_holdings.length){
+        const list=pf.top_holdings.slice(0,5).map(h=>`${h.symbol} ${(parseFloat(h.weight)*100).toFixed(1)}%`).join(' · ');
+        ph+=`<div class="brow"><span class="k">Top holdings</span><span class="v" style="font-weight:400;font-size:12px;text-align:right">${list}</span></div>`;
+      }
+      pwrap.innerHTML=ph;
+    }else{
+      pwrap.innerHTML='<div class="empty">Profile information coming soon</div>';
+    }
+    calc();
+  }catch(e){
+    document.getElementById('hist-wrap').innerHTML='<div class="empty">Could not load dividend history</div>';
+    document.getElementById('profile-wrap').innerHTML='<div class="empty">Could not load information</div>';
+  }
+}
+loadDividendData();
+</script><script src="/ticker.js"></script><script>
+fetch('/data/market.json').then(r=>r.json()).then(d=>{const u=(d.indicators||[]).find(i=>i.indicator_code==='USD_KRW');if(u){latestKrw=parseFloat(u.value);calc();}}).catch(()=>{});
+</script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Pick 2–4 companies from Korea and the US and compare revenue, operating margin, ROE, debt ratio and growth side by side, with year-by-year trends overlaid.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/compare"><link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/compare">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/compare">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/compare">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/compare">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/compare">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/compare">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Company Comparison | MoneyFinal">
+<meta property="og:description" content="Pick 2–4 companies from Korea and the US and compare revenue, operating margin, ROE, debt ratio and growth side by side, with year-by-year trends overlaid.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/compare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Company Comparison | MoneyFinal">
+<meta name="twitter:description" content="Pick 2–4 companies from Korea and the US and compare revenue, operating margin, ROE, debt ratio and growth side by side, with year-by-year trends overlaid.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Company Comparison","description":"Pick 2–4 companies from Korea and the US and compare revenue, operating margin, ROE, debt ratio and growth side by side, with year-by-year trends overlaid.","url":"https://moneyfinal.pages.dev/en/compare","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>Company Comparison | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 14px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--bg3);border-radius:20px;padding:5px 6px 5px 12px;font-size:13px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip button{background:none;border:0;color:var(--text2);cursor:pointer;font-size:15px;line-height:1;padding:2px 6px;border-radius:50%}
+.chip button:hover{color:var(--red);background:var(--bg2)}
+.bt td.best{font-weight:700;color:var(--accent)}
+.bt th .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.mtabs{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px 0}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="compare.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<div class="sec-hd"><div class="sec-title">Company Comparison</div><span class="sec-more" id="asof"></span></div>
+<div class="card" style="overflow:visible">
+  <div class="tabs" id="mk"><button class="tab" data-m="kr">Korean companies</button><button class="tab active" data-m="us">US companies</button></div>
+  <div class="tabs" id="pm" style="padding-top:8px"><button class="tab active" data-p="a">Annual</button><button class="tab" data-p="q">Quarterly</button></div>
+  <div class="uf-form" style="grid-template-columns:1fr">
+    <div class="fld suggest"><label id="qlbl">Add companies to compare (up to 4)</label>
+      <div class="qrow"><input id="q" autocomplete="off" placeholder="Name or code"><button class="qgo" id="go" type="button" aria-label="Search" title="Search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+      <div class="sg-list" id="sg"></div></div>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+<div id="result"><div class="empty">Loading...</div></div>
+<div class="note" style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:24px">
+  <b>How to read</b> · Korean figures come from DART consolidated statements (key accounts) and US figures from SEC 10-K and 10-Q data. Quarterly comparison is available for roughly the top 600 Korean companies by market cap and for all US companies. Because currencies differ, <b>compare Korean companies with Korean ones, or US with US</b>. In each row, the <b style="color:var(--accent)">blue bold figure</b> is simply the highest among the companies compared (the lowest for debt ratio), not a judgment of good or bad. Margins and debt ratios differ by industry, so cross-industry comparisons are hard, and financial companies report revenue and debt differently from other firms. Companies with different fiscal year-ends are aligned by fiscal year (the year of the year-end date). For Korean companies, net income, ROE, PER and PBR use <b>net income attributable to owners of the parent and parent equity</b> (consolidated totals where unavailable). PER and PBR are shown only for Korean stocks, using today’s market cap. This is reference material, not investment advice.
+</div>
+</main>
+<div class="disclaimer">⚠️ This information is reference material derived from filing data. You are solely responsible for your investment decisions and any losses. Sources: Korea’s Financial Supervisory Service (DART), SEC EDGAR</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const PAL=['#388bfd','#3fb950','#d29922','#f85149'];
+const CFG={kr:{idx:'/data/kr_fin/index.json',dir:'/data/kr_fin/',key:c=>c.slice(0,2),ph:'Name or stock code (e.g. Samsung Electronics)'},us:{idx:'/data/us_fin/index.json',dir:'/data/us_fin/',key:c=>c[0].toUpperCase(),ph:'Ticker or name (e.g. AAPL, Microsoft)'}};
+let M='us',P='a',IDX={kr:null,us:null},SEL=[],SH={},MET='rev';
+
+function amt(n,unit){if(n==null)return'-';const neg=n<0,v=Math.abs(n);const t=[[1e12,'T'],[1e9,'B'],[1e6,'M'],[1e3,'K']].find(x=>v>=x[0]);const s=t?(v/t[0]).toFixed(v/t[0]>=100?0:v/t[0]>=10?1:2)+t[1]:Math.round(v)+'';return(neg?'-':'')+unit+s;}
+const pct=(v,d=1)=>v==null||!isFinite(v)?'-':(v*100).toFixed(d)+'%';
+const bei=v=>v==null||!isFinite(v)?'-':v.toFixed(1)+'x';
+async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
+
+async function loadIdx(m){
+  if(IDX[m])return IDX[m];
+  const d=await J(CFG[m].idx);
+  IDX[m]=d.stocks.map(r=>m==='kr'?{id:r[0],name:r[1],sub:(r[2]==='P'?'KOSPI':'KOSDAQ'),mc:r[3]}:{id:r[0],name:r[1],sub:r[2]||'',mc:null});
+  IDX[m].updated=d.updated_at;return IDX[m];
+}
+function scaleSet(src,m){const sc=m==='kr'?1e6:1,d={},qx=src.qx||[];
+  Object.keys(src.d).forEach(k=>d[k]=src.d[k].map(v=>v==null?null:(k==='dps'||k==='eps'||k==='sh'?v:v*sc)));return {e:src.e,d,qx};}
+
+async function loadCo(m,id){
+  const k=CFG[m].key(id),ck=m+k;
+  if(!SH[ck])SH[ck]=await J(CFG[m].dir+k+'.json');
+  const raw=SH[ck][id];if(!raw)return null;
+  const meta=IDX[m].find(x=>x.id===id);
+  return {m,id,name:raw.n||meta.name,A:scaleSet(m==='kr'?raw.a:raw,m),Q:raw.q?scaleSet(raw.q,m):null,mc:m==='kr'&&meta&&meta.mc?meta.mc*1e8:null};
+}
+
+function qlabel(end){const [y,mo,da]=end.split('-').map(Number),d=new Date(y,mo-1,da);
+  let best=null,bd=1e18;for(const yy of [y-1,y,y+1])for(const [m2,d2] of [[3,31],[6,30],[9,30],[12,31]]){const c=new Date(yy,m2-1,d2),x=Math.abs(c-d);if(x<bd){bd=x;best=[yy,m2/3];}}
+  return best[0]+'Q'+best[1];}
+function labShift(L,dq){const y=+L.slice(0,4),q=+L.slice(5),n=y*4+(q-1)+dq;return Math.floor(n/4)+'Q'+(n%4+1);}
+
+function view(c,ci){const s=P==='q'?c.Q:c.A;return {...c,ci,qx:P==='q'?(s.qx||[]):[],e:s.e,d:s.d,lab:P==='q'?s.e.map(qlabel):s.e.map(e=>e.slice(0,4))};}
+const NK=c=>c.d.nip?'nip':'ni',EKF=c=>c.d.eqp?'eqp':'eq';  
+const g=(c,k,i)=>c.d[k]&&i>=0&&i<c.e.length?c.d[k][i]:null;
+const div=(a,b)=>a!=null&&b!=null&&b!==0?a/b:null;
+const nm=(a,b)=>a!=null&&b!=null&&b>0?a/b:null;  
+const mg=(a,b)=>a!=null&&b!=null&&b>0&&a<=b?a/b:null;  
+function cagr(c,k,y){const i=c.at,j=i-y,a=c.d[k];if(!a||j<0||a[i]==null||a[j]==null||a[j]<=0||a[i]<=0)return null;return Math.pow(a[i]/a[j],1/y)-1;}
+function growth(c,k,dq){ 
+  const j=c.lab.indexOf(labShift(c.lab[c.at],dq)),a=g(c,k,c.at),b=g(c,k,j);return j>=0&&a!=null&&b!=null&&b>0?a/b-1:null;}
+function ttm(c,k){const i=c.at;let s=0;for(let j=i-3;j<=i;j++){const v=g(c,k,j);if(j<0||v==null||c.lab[j]!==labShift(c.lab[i],j-i))return null;s+=v;}return s;}
+function ttmAt(c,k,i){if(i<3)return null;let s=0;for(let j=i-3;j<=i;j++){const v=g(c,k,j);if(v==null||c.lab[j]!==labShift(c.lab[i],j-i))return null;s+=v;}return s;}
+function fcfOf(c,i){const a=g(c,'cfo',i),b=g(c,'capex',i);return a!=null&&b!=null?a-Math.abs(b):null;}
+
+function rowsA(){
+  const kr=M==='kr',u=kr?'₩':'$';
+  const R=[
+    ['Latest fiscal year-end',c=>c.e[c.at],x=>x,''],
+    ['Revenue',c=>g(c,'rev',c.at),x=>amt(x,u),'hi'],
+    ['Operating income',c=>g(c,'op',c.at),x=>amt(x,u),'hi'],
+    ['Net income',c=>g(c,NK(c),c.at),x=>amt(x,u),'hi'],
+    ['Total assets',c=>g(c,'ta',c.at),x=>amt(x,u),'hi'],
+    ['Operating margin',c=>mg(g(c,'op',c.at),g(c,'rev',c.at)),x=>pct(x),'hi'],
+    ['Net margin',c=>nm(g(c,NK(c),c.at),g(c,'rev',c.at)),x=>pct(x),'hi'],
+    ['ROE',c=>div(g(c,NK(c),c.at),g(c,EKF(c),c.at)),x=>pct(x),'hi'],
+    ['ROA',c=>div(g(c,'ni',c.at),g(c,'ta',c.at)),x=>pct(x),'hi'],
+    ['Debt ratio',c=>div(g(c,'tl',c.at),g(c,'eq',c.at)),x=>pct(x,0),'lo'],
+    ['Revenue 3-yr CAGR',c=>cagr(c,'rev',3),x=>pct(x),'hi'],
+    ['Revenue 5-yr CAGR',c=>cagr(c,'rev',5),x=>pct(x),'hi'],
+    ['Net income 5-yr CAGR',c=>cagr(c,NK(c),5),x=>pct(x),'hi']
+  ];
+  if(kr){
+    R.push(['Market cap (today)',c=>c.mc,x=>amt(x,u),'hi']);
+    R.push(['PER (market cap / net income)',c=>c.mc&&g(c,NK(c),c.at)>0?c.mc/g(c,NK(c),c.at):null,bei,'']);
+    R.push(['PBR (market cap / equity)',c=>c.mc&&g(c,EKF(c),c.at)>0?c.mc/g(c,EKF(c),c.at):null,bei,'']);
+    R.push(['Dividend per share',c=>g(c,'dps',c.at),x=>x==null?'-':'₩'+Math.round(x),'hi']);
+  }else{
+    R.push(['Free cash flow',c=>fcfOf(c,c.at),x=>amt(x,u),'hi']);
+    R.push(['FCF margin',c=>div(fcfOf(c,c.at),g(c,'rev',c.at)),x=>pct(x),'hi']);
+    R.push(['Diluted EPS',c=>g(c,'eps',c.at),x=>x==null?'-':(M==='kr'?'₩':'$')+x.toFixed(2),'hi']);
+    R.push(['Dividends + buybacks / net income',c=>div((g(c,'div',c.at)||0)+(g(c,'buyback',c.at)||0),g(c,'ni',c.at)),x=>pct(x,0),'']);
+  }
+  return R;
+}
+function rowsQ(){
+  const kr=M==='kr',u=kr?'₩':'$';
+  const R=[
+    ['Quarter-end date',c=>c.e[c.at],x=>x,''],
+    ['Revenue (quarter)',c=>g(c,'rev',c.at),x=>amt(x,u),'hi'],
+    ['Operating income (quarter)',c=>g(c,'op',c.at),x=>amt(x,u),'hi'],
+    ['Net income (quarter)',c=>g(c,NK(c),c.at),x=>amt(x,u),'hi'],
+    ['Operating margin',c=>mg(g(c,'op',c.at),g(c,'rev',c.at)),x=>pct(x),'hi'],
+    ['Net margin',c=>nm(g(c,NK(c),c.at),g(c,'rev',c.at)),x=>pct(x),'hi'],
+    ['Revenue growth (YoY)',c=>growth(c,'rev',-4),x=>pct(x),'hi'],
+    ['Net income growth (YoY)',c=>growth(c,NK(c),-4),x=>pct(x),'hi'],
+    ['Revenue growth (QoQ)',c=>growth(c,'rev',-1),x=>pct(x),'hi'],
+    ['ROE (last 4 quarters of net income / quarter-end equity)',c=>{const a=ttm(c,NK(c)),b=g(c,EKF(c),c.at);return a!=null&&b>0?a/b:null;},x=>pct(x),'hi'],
+    ['ROA (last 4 quarters of net income / quarter-end assets)',c=>{const a=ttm(c,'ni'),b=g(c,'ta',c.at);return a!=null&&b>0?a/b:null;},x=>pct(x),'hi'],
+    ['Debt ratio',c=>div(g(c,'tl',c.at),g(c,'eq',c.at)),x=>pct(x,0),'lo'],
+    ['Revenue, last 4 quarters',c=>ttm(c,'rev'),x=>amt(x,u),'hi'],
+    ['Net income, last 4 quarters',c=>ttm(c,NK(c)),x=>amt(x,u),'hi']
+  ];
+  if(kr){
+    R.push(['Market cap (today)',c=>c.mc,x=>amt(x,u),'hi']);
+    R.push(['PER (market cap / last 4 quarters of net income)',c=>{const t=ttm(c,NK(c));return c.mc&&t>0?c.mc/t:null;},bei,'']);
+    R.push(['PBR (market cap / latest quarter equity)',c=>c.mc&&g(c,EKF(c),c.at)>0?c.mc/g(c,EKF(c),c.at):null,bei,'']);
+  }else{
+    R.push(['Free cash flow (quarter)',c=>fcfOf(c,c.at),x=>amt(x,u),'hi']);
+  }
+  return R;
+}
+
+const METS_A={rev:'Revenue index (start=100)',ni:'Net income index (start=100)',opm:'Operating margin',npm:'Net margin',roe:'ROE',debt:'Debt ratio'};
+const METS_Q={revyoy:'Revenue growth (YoY)',niyoy:'Net income growth (YoY)',opm:'Operating margin',npm:'Net margin',roe:'ROE (last 4 quarters)',debt:'Debt ratio'};
+const isIdx=k=>P==='a'&&(k==='rev'||k==='ni');
+function trend(c,k){
+  const out={};
+  c.e.forEach((e,i)=>{const y=c.lab[i];let v=null;
+    if(k==='rev'||k==='ni')v=g(c,k==='ni'?NK(c):k,i);
+    else if(k==='opm')v=mg(g(c,'op',i),g(c,'rev',i));
+    else if(k==='npm')v=nm(g(c,NK(c),i),g(c,'rev',i));
+    else if(k==='roe'){let a=g(c,NK(c),i);if(P==='q'){a=ttmAt(c,NK(c),i);}const b=g(c,EKF(c),i);v=a!=null&&b>0?a/b:null;}
+    else if(k==='debt')v=div(g(c,'tl',i),g(c,'eq',i));
+    else if(k==='revyoy'||k==='niyoy'){const kk=k==='revyoy'?'rev':NK(c),j=c.lab.indexOf(labShift(y,-4)),a=g(c,kk,i),b=g(c,kk,j);v=j>=0&&a!=null&&b>0?a/b-1:null;}
+    if(v!=null)out[y]=v;});
+  return out;
+}
+
+async function init(){
+  document.querySelectorAll('#mk .tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.m===M)return;M=b.dataset.m;document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x===b));SEL=[];setup();}));
+  document.querySelectorAll('#pm .tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.p===P)return;P=b.dataset.p;document.querySelectorAll('#pm .tab').forEach(x=>x.classList.toggle('active',x===b));MET=P==='q'?'revyoy':'rev';render();}));
+  const u=new URLSearchParams(location.search);
+  if(u.get('m')==='us'){M='us';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='us'));}
+  if(u.get('p')==='q'){P='q';MET='revyoy';document.querySelectorAll('#pm .tab').forEach(x=>x.classList.toggle('active',x.dataset.p==='q'));}
+  const q=$('q'),sg=$('sg');
+  q.addEventListener('input',()=>suggest());
+  q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addFirst();}else if(e.key==='Escape')sg.style.display='none';});
+  $('go').addEventListener('click',addFirst);
+  sg.addEventListener('click',e=>{const d=e.target.closest('div[data-id]');if(d)add(d.dataset.id);});
+  document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
+  await setup(u.get('t')?u.get('t').split(','):null);
+}
+async function setup(ids){
+  $('q').placeholder=CFG[M].ph;$('q').value='';$('sg').style.display='none';
+  try{await loadIdx(M);}catch(e){$('result').innerHTML='<div class="empty">Financial data is being prepared</div>';return;}
+  $('asof').textContent=IDX[M].updated+' Updated';
+  let start=ids;
+  if(!start||!start.length){const pref=M==='kr'?['005930','000660','005380']:['NVDA','AAPL','MSFT'];start=pref.filter(t=>IDX[M].some(x=>x.id===t));if(start.length<2)start=IDX[M].slice(0,3).map(x=>x.id);}
+  SEL=[];for(const id of start.slice(0,4)){const c=await loadCo(M,id);if(c)SEL.push(c);}
+  render();
+}
+function rank(r,t){const id=r.id.toLowerCase(),n=r.name.toLowerCase();return (id===t||n===t)?0:n.startsWith(t)?1:id.startsWith(t)?2:3;}
+function hits(t){return IDX[M].filter(r=>!SEL.some(s=>s.id===r.id)&&(r.id.toLowerCase().startsWith(t)||r.name.toLowerCase().includes(t))).sort((a,b)=>rank(a,t)-rank(b,t));}
+function suggest(){
+  const t=$('q').value.trim().toLowerCase(),sg=$('sg');if(!t){sg.style.display='none';return;}
+  const h=hits(t).slice(0,10);
+  sg.innerHTML=h.map(r=>`<div data-id="${esc(r.id)}">${esc(r.name)} <small>${esc(r.id)}${r.sub?' · '+esc(r.sub):''}</small></div>`).join('')||'<div style="cursor:default">No results</div>';
+  sg.style.display='block';
+}
+async function addFirst(){
+  const raw=$('q').value.trim();if(!raw)return;
+  const h=hits(raw.toLowerCase());
+  if(h.length)add(h[0].id);else{$('sg').innerHTML='<div style="cursor:default">"'+esc(raw)+'" — no company matches</div>';$('sg').style.display='block';}
+}
+async function add(id){
+  $('sg').style.display='none';$('q').value='';
+  if(SEL.length>=4){$('sg').innerHTML='<div style="cursor:default">You can compare up to 4. Remove one from the list above before adding another.</div>';$('sg').style.display='block';$('q').value=id;return;}
+  const c=await loadCo(M,id);if(c){SEL.push(c);render();}
+}
+function remove(id){SEL=SEL.filter(c=>c.id!==id);render();}
+
+let V=[];
+function render(){
+  try{history.replaceState(null,'','?m='+M+(P==='q'?'&p=q':'')+'&t='+SEL.map(c=>encodeURIComponent(c.id)).join(','));}catch(e){}
+  $('chips').innerHTML=SEL.map((c,i)=>`<span class="chip"><i style="background:${PAL[i]}"></i>${esc(c.name)}${P==='q'&&!c.Q?' <small style="color:var(--text2)">(no quarterly data)</small>':''}<button type="button" data-id="${esc(c.id)}" aria-label="Remove" title="Remove">×</button></span>`).join('')||'<span style="color:var(--text2);font-size:12px">Search and add companies (at least 2)</span>';
+  $('chips').onclick=e=>{const b=e.target.closest('button[data-id]');if(b)remove(b.dataset.id);};
+  V=SEL.map((c,i)=>({c,i})).filter(x=>P==='a'||x.c.Q).map(x=>view(x.c,x.i));
+  const skipped=SEL.filter(c=>P==='q'&&!c.Q).map(c=>c.name);
+  if(V.length<2){$('result').innerHTML='<div class="card"><div class="empty">'+(P==='q'&&SEL.length>=2?'At least 2 companies with quarterly data are needed'+(skipped.length?' ('+esc(skipped.join(', '))+' has no quarterly data. Only about the top 600 Korean companies by market cap have quarterly data)':''):'Select at least 2 companies to compare')+'</div></div>';return;}
+  
+  let common=null;
+  if(P==='q'){const sets=V.map(v=>new Set(v.lab));const all=[...sets[0]].filter(l=>sets.every(s=>s.has(l))).sort();common=all.length?all[all.length-1]:null;}
+  V.forEach(v=>{v.at=common?v.lab.lastIndexOf(common):v.e.length-1;});
+  const R=P==='q'?rowsQ():rowsA();
+  let h='<div class="card"><div class="card-hd"><span class="card-title">Key metrics comparison ('+(P==='q'?'Quarterly'+(common?' · basis '+common.replace('Q',' ')+'Quarterly':''):'Latest fiscal year')+')</span></div><div style="overflow-x:auto"><table class="bt"><tr><th>Item</th>'+
+    V.map(c=>`<th><span class="dot" style="background:${PAL[c.ci]}"></span>${esc(c.name)}</th>`).join('')+'</tr>';
+  R.forEach(([lab,fn,fmt,dir])=>{
+    const vals=V.map(c=>fn(c));
+    let best=-1;
+    if(dir){const nums=vals.map((v,i)=>[v,i]).filter(x=>typeof x[0]==='number'&&isFinite(x[0]));
+      if(nums.length>=2){best=(dir==='hi'?nums.reduce((a,b)=>b[0]>a[0]?b:a):nums.reduce((a,b)=>b[0]<a[0]?b:a))[1];}}
+    h+=`<tr><td>${lab}</td>${vals.map((v,i)=>`<td${i===best?' class="best"':''}>${fmt(v)}</td>`).join('')}</tr>`;});
+  h+='</table></div>'+(skipped.length?`<div class="note">Companies without quarterly data are excluded: ${esc(skipped.join(', '))}</div>`:'')+(()=>{const rx=P==='q'?V.map(v=>[v.name,v.qx.filter(y=>v.lab.some(l=>l.slice(0,4)===y))]).filter(x=>x[1].length):[];return rx.length?'<div class="note">⚠️ Years in which the sum of quarterly values differs from the annual value because of restated filings (e.g. discontinued operations): '+rx.map(x=>esc(x[0])+'('+x[1].join(", ")+')').join(', ')+'. Each value is as filed.</div>':'';})()+(P==='q'?'<div class="note">Fiscal year-ends differ by company, so <b>year-ends are aligned to the nearest calendar quarter</b> (e.g. a January year-end counts as the prior year’s Q4). Q4 values are the annual figure minus the nine-month year-to-date total.</div>':'')+'</div>';
+  const METS=P==='q'?METS_Q:METS_A;
+  h+=`<div class="card"><div class="card-hd"><span class="card-title">${P==='q'?'Quarterly':'Annual'} trend comparison</span></div>
+  <div class="mtabs" id="mt">${Object.keys(METS).map(k=>`<button class="tab${k===MET?' active':''}" data-k="${k}">${METS[k]}</button>`).join('')}</div>
+  <div id="chart" style="padding:8px 8px 0"></div><div class="legend" id="lg"></div><div style="overflow-x:auto" id="ttab"></div>
+  <div class="note" id="tnote"></div></div>`;
+  $('result').innerHTML=h;
+  $('mt').onclick=e=>{const b=e.target.closest('.tab');if(!b)return;MET=b.dataset.k;document.querySelectorAll('#mt .tab').forEach(x=>x.classList.toggle('active',x===b));drawTrend();};
+  drawTrend();
+}
+function drawTrend(){
+  const METS=P==='q'?METS_Q:METS_A;if(!METS[MET])MET=Object.keys(METS)[0];
+  const idx=isIdx(MET),N=P==='q'?12:9;
+  const series=V.map(c=>trend(c,MET));
+  let years=[...new Set(series.flatMap(s=>Object.keys(s)))].sort().slice(-N);
+  if(!years.length){$('chart').innerHTML='<div class="empty">No data</div>';return;}
+  const data=series.map(s=>{
+    const o={};const first=years.find(y=>s[y]!=null&&(idx?s[y]>0:true));
+    years.forEach(y=>{let v=s[y];if(v==null){o[y]=null;return;}
+      if(idx){o[y]=first&&s[first]>0?v/s[first]*100:null;}else o[y]=v*100;});return o;});
+  const all=data.flatMap(o=>years.map(y=>o[y])).filter(v=>v!=null&&isFinite(v));
+  if(!all.length){$('chart').innerHTML='<div class="empty">No values to show</div>';return;}
+  let lo=Math.min(...all),hi=Math.max(...all);if(idx)lo=Math.min(lo,100);if(hi===lo){hi+=1;lo-=1;}const pad=(hi-lo)*.08;lo-=pad;hi+=pad;
+  const W=800,H=300,pl=58,pr=14,pt=14,pb=26,n=years.length;
+  const X=i=>pl+(W-pl-pr)*(n===1?0.5:i/(n-1)),Y=v=>pt+(H-pt-pb)*(1-(v-lo)/(hi-lo));
+  const cs=getComputedStyle(document.documentElement),c=k=>cs.getPropertyValue(k).trim();
+  const fmtY=v=>idx?Math.round(v):v.toFixed(Math.abs(hi-lo)<10?1:0)+'%';
+  let s=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">`;
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--border')}"/><text x="${pl-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${c('--text2')}">${fmtY(v)}</text>`;}
+  if(idx){const y=Y(100);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--text2')}" stroke-dasharray="4 4"/>`;}
+  else if(lo<0&&hi>0){const y=Y(0);s+=`<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="${c('--text2')}" stroke-dasharray="4 4"/>`;}
+  years.forEach((y,i)=>{s+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="${P==='q'?9:10}" fill="${c('--text2')}">${P==='q'?y.slice(2):y}</text>`;});
+  data.forEach((o,ci)=>{const pts=years.map((y,i)=>o[y]==null?null:[X(i),Y(o[y])]);
+    const path=pts.filter(Boolean).map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+    const col=PAL[V[ci].ci];
+    s+=`<polyline points="${path}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round"/>`;
+    pts.forEach(p=>{if(p)s+=`<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="${col}"/>`;});});
+  $('chart').innerHTML=s+'</svg>';
+  $('lg').innerHTML=V.map(cc=>`<span><i style="background:${PAL[cc.ci]}"></i>${esc(cc.name)}</span>`).join('');
+  $('ttab').innerHTML='<table class="bt"><tr><th>'+(P==='q'?'Quarterly':'Fiscal year')+'</th>'+V.map(cc=>`<th><span class="dot" style="background:${PAL[cc.ci]}"></span>${esc(cc.name)}</th>`).join('')+'</tr>'+
+    years.slice().reverse().map(y=>`<tr><td>${P==='q'?y.replace('Q',' ')+'Quarterly':y}</td>${series.map((s2,i)=>`<td>${s2[y]==null?'-':idx?(data[i][y]==null?'-':data[i][y].toFixed(0)):pct(s2[y])}</td>`).join('')}</tr>`).join('')+'</table>';
+  $('tnote').innerHTML=idx?'Each index sets the first year with a value in the comparison window to 100; loss-making and missing years are left blank. It is meant for comparing growth speed across companies of different sizes.':(P==='q'?'Quarters are aligned to the nearest calendar quarter. Growth is year over year, and periods without a comparable quarter are left blank.':'Fiscal year follows the year of the fiscal year-end date. Ratios are annual values.');
+}
+init();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

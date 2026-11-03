@@ -1,0 +1,13 @@
+{
+"re:(.+?) 배당금 계산기 \\(실제 배당 이력\\) \\| 머니파이널": "\\1 Dividend Calculator (Actual Payout History) | MoneyFinal",
+"re:(.+?) 배당금 계산기": "\\1 Dividend Calculator",
+"re:(\\S+?)\\((.+)\\) 실제 배당 이력을 바탕으로 보유 주수에 따른 예상 배당금과 세후 수령액을 계산합니다\\.": "Estimates dividends and after-tax income by shares held, based on the actual payout history of \\1 (\\2).",
+"re:(.+) · 개별종목 옵션인컴 · 실제 배당 이력 기반": "\\1 · single-stock option income · based on actual payout history",
+"re:(.+) · 커버드콜 · 실제 배당 이력 기반": "\\1 · covered call · based on actual payout history",
+"re:(.+) · 분기배당 대표 · 실제 배당 이력 기반": "\\1 · quarterly payer · based on actual payout history",
+"re:(.+) · 채권인컴 · 실제 배당 이력 기반": "\\1 · bond income · based on actual payout history",
+"re:(.+) · 월배당 리츠 · 실제 배당 이력 기반": "\\1 · monthly-pay REIT · based on actual payout history",
+"re:(.+) · 월배당 모기지리츠 · 실제 배당 이력 기반": "\\1 · monthly-pay mortgage REIT · based on actual payout history",
+"re:(.+) · 월배당 BDC · 실제 배당 이력 기반": "\\1 · monthly-pay BDC · based on actual payout history",
+"re:⚠️ 본 페이지는 Yahoo Finance에서 수집한 (\\S+?)의 실제 배당 이력을 기반으로 하되, 향후 배당금은 참고용 추정치입니다\\. 실제 배당금은 기초자산 실적과 운용사 정책에 따라 매월 달라질 수 있습니다\\.(<br>[\\s\\S]*)?": "⚠️ This page is based on the actual dividend history of \\1 collected from Yahoo Finance. Future dividends are estimates for reference only; actual payouts can change every month depending on the underlying assets and the issuer’s policy.\\2"
+}

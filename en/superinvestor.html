@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Combines the 13F filings of well-known investors such as Warren Buffett, Bill Ackman and Michael Burry to show stocks held by several of them at once.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/en/superinvestor">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/superinvestor">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/superinvestor">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/superinvestor">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/superinvestor">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/superinvestor">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/superinvestor">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MoneyFinal">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Superinvestor 13F Consensus | MoneyFinal">
+<meta property="og:description" content="Combines the 13F filings of well-known investors such as Warren Buffett, Bill Ackman and Michael Burry to show stocks held by several of them at once.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/en/superinvestor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Superinvestor 13F Consensus | MoneyFinal">
+<meta name="twitter:description" content="Combines the 13F filings of well-known investors such as Warren Buffett, Bill Ackman and Michael Burry to show stocks held by several of them at once.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Superinvestor 13F Consensus","description":"Consensus holdings from famous investors’ 13F filings","url":"https://moneyfinal.pages.dev/en/superinvestor","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","name":"MoneyFinal","url":"https://moneyfinal.pages.dev/en/"}}</script>
+<title>Superinvestor 13F Consensus | MoneyFinal</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:20px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card-title{font-size:13px;font-weight:600;flex-shrink:0}
+.search-box{flex:1;min-width:140px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:7px 10px;font-size:13px;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:640px}
+th{text-align:right;color:var(--text2);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:right;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg3)}
+.rank{color:var(--text2);width:22px;display:inline-block}
+.stock-name{font-weight:600}
+.coin-sym{color:var(--text2);font-size:11px;margin-left:4px}
+.holder-badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;justify-content:flex-end}
+.hb{font-size:10.5px;padding:2px 7px;border-radius:20px;background:var(--bg3);color:var(--text2);white-space:nowrap}
+.loading{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.qrow{position:relative;flex:1;min-width:140px}
+.qrow input{width:100%;padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<meta name="google-adsense-account" content="ca-pub-4162743270017653">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4162743270017653" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="/en/" class="logo">💰 MoneyFinal</a>
+  <nav id="site-nav" data-active="superinvestor.html"></nav>
+<script src="/nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main>
+<h1>Superinvestor 13F Consensus</h1>
+<div class="sub">Collects the SEC 13F filings of well-known concentrated investors such as Warren Buffett, Bill Ackman and Michael Burry and ranks stocks by how many of them hold them at once. Large institutions such as Bridgewater, Citadel and pension funds hold too many positions, so they are excluded from the consensus count and can only be looked up individually.</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="kpi-label">Investors tracked</div><div class="kpi-value" id="k-investors">-</div><div class="kpi-sub">Based on SEC EDGAR 13F</div></div>
+  <div class="kpi"><div class="kpi-label">Most overlapped stock</div><div class="kpi-value" id="k-top">-</div><div class="kpi-sub" id="k-top-sub">-</div></div>
+  <div class="kpi"><div class="kpi-label">Updated</div><div class="kpi-value" id="k-updated">-</div><div class="kpi-sub">Quarterly filings, up to 45 days delayed</div></div>
+</div>
+
+<div class="card">
+  <div class="card-hd">
+    <span class="card-title">Full list</span>
+    <select class="search-box" id="inv-sel" style="flex:0 0 auto;min-width:160px" onchange="renderTbl()">
+      <option value="">Full consensus</option>
+    </select>
+    <div class="qrow"><input type="text" class="search-box" id="q" placeholder="Search stock, ticker or investor" autocomplete="off" oninput="renderTbl()" onkeydown="if(event.key==='Enter'){event.preventDefault();searchGo();}"><button class="qgo" type="button" aria-label="Search" title="Search" onclick="searchGo()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead>
+    <tr id="thead-consensus">
+      <th style="text-align:left">Stock</th>
+      <th>Overlapping investors</th>
+      <th>Total market value</th>
+    </tr>
+    <tr id="thead-investor" hidden>
+      <th style="text-align:left">Stock</th>
+      <th>Weight</th>
+      <th>Value held</th>
+      <th>Shares held</th>
+    </tr>
+    </thead>
+    <tbody id="tbody"><tr><td colspan="3" class="loading">Loading...</td></tr></tbody>
+  </table>
+  </div>
+</div>
+</main>
+<div class="disclaimer">⚠️ 13F is a quarterly filing reported up to 45 days after quarter-end, so it is a snapshot up to about 4.5 months old, not live holdings. It is not a buy or sell recommendation, and you are solely responsible for your investment decisions and any losses. Source: SEC EDGAR</div>
+<footer>© 2026 MoneyFinal · All about personal finance<br><a href="/en/about.html">About</a> · <a href="/en/privacy.html">Privacy Policy</a> · <a href="/en/terms.html">Terms of Use</a></footer>
+<script src="/theme.js"></script><script>
+function usdBig(v){const n=parseFloat(v);if(isNaN(n))return'-';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return'$'+(n/1e9).toFixed(1)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(1)+'M';return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0});}
+
+let CONSENSUS=[],BY_INVESTOR={};
+
+async function load(){
+  try{
+    const r=await fetch('/data/superinvestors.json');let tx=await r.text();const NM={"\uc6cc\ub7f0 \ubc84\ud54f": "Warren Buffett", "\ube4c \uc560\ud06c\uba3c": "Bill Ackman", "\ub9c8\uc774\ud074 \ubc84\ub9ac": "Michael Burry", "\uce7c \uc544\uc774\uce78": "Carl Icahn", "\uc138\uc2a4 \ud074\ub77c\ub9cc": "Seth Klarman", "\uc2a4\ud0e0\ub9ac \ub4dc\ub7ec\ucf04\ubc00\ub7ec": "Stanley Druckenmiller", "\ub370\uc774\ube44\ub4dc \uc544\uc778\ud63c": "David Einhorn", "\ub370\uc774\ube44\ub4dc \ud14c\ud37c": "David Tepper", "\ub9ac \ub8e8": "Li Lu", "\ud558\uc6cc\ub4dc \ub9c9\uc2a4": "Howard Marks", "\uccb4\uc774\uc2a4 \ucf5c\uba3c": "Chase Coleman", "\ub12c\uc2a8 \ud3a0\uce20": "Nelson Peltz", "\ud504\ub818 \uc653\uc0ac": "Prem Watsa", "\ube0c\ub8e8\uc2a4 \ubc84\ucf54\uc704\uce20": "Bruce Berkowitz", "\uae00\ub80c \uadf8\ub9b0\ubc84\uadf8": "Glenn Greenberg", "\ud1b0 \uac8c\uc774\ub108": "Tom Gayner", "\ube4c \ubc00\ub7ec": "Bill Miller", "\ub300\ub2c8\uc5bc \ub85c\ube0c": "Daniel Loeb", "\uc548\ub4dc\ub808\uc544\uc2a4 \ud560\ubcf4\ub974\uc13c": "Andreas Halvorsen", "\uc2a4\ud2f0\ube10 \ub9cc\ub378": "Stephen Mandel", "\ube0c\ub9bf\uc9c0\uc6cc\ud130": "Bridgewater", "\uc2dc\ud0c0\ub378": "Citadel", "\uad6d\ubbfc\uc5f0\uae08\uacf5\ub2e8": "Korea National Pension Service"};Object.keys(NM).forEach(k=>{tx=tx.split(k).join(NM[k]);});const d=JSON.parse(tx);
+    CONSENSUS=d.consensus||[];
+    BY_INVESTOR=d.by_investor||{};
+    document.getElementById('k-investors').textContent=(d.investor_count||0)+' investors';
+    document.getElementById('k-updated').textContent=d.updated_at||'-';
+    if(CONSENSUS.length){
+      const top=CONSENSUS[0];
+      document.getElementById('k-top').textContent=top.holder_count+' investors';
+      document.getElementById('k-top-sub').textContent=top.name_of_issuer;
+    }
+    const sel=document.getElementById('inv-sel');
+    const names=Object.keys(BY_INVESTOR).sort();
+    const grpConc=document.createElement('optgroup');grpConc.label='Concentrated';
+    const grpInst=document.createElement('optgroup');grpInst.label='Large institutions (excluded from consensus)';
+    names.forEach(name=>{
+      const opt=document.createElement('option');
+      opt.value=name;opt.textContent=name;
+      (BY_INVESTOR[name].investor_type==='institutional'?grpInst:grpConc).appendChild(opt);
+    });
+    sel.appendChild(grpConc);
+    if(grpInst.children.length)sel.appendChild(grpInst);
+    renderTbl();
+  }catch(e){
+    document.getElementById('tbody').innerHTML='<tr><td colspan="4" class="empty">Could not load data</td></tr>';
+  }
+}
+function searchGo(){
+  
+  const input=document.getElementById('q'),t=input.value.trim().toLowerCase();
+  if(t&&!document.getElementById('inv-sel').value&&!CONSENSUS.some(c=>c.name_of_issuer.toLowerCase().includes(t)||(c.ticker||'').toLowerCase().includes(t))){
+    const inv=Object.keys(BY_INVESTOR).find(n=>n.toLowerCase().includes(t));
+    if(inv){document.getElementById('inv-sel').value=inv;input.value='';}
+  }
+  renderTbl();
+}
+function renderTbl(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const invName=document.getElementById('inv-sel').value;
+  const tbody=document.getElementById('tbody');
+
+  if(!invName){
+    document.getElementById('thead-consensus').hidden=false;
+    document.getElementById('thead-investor').hidden=true;
+    const list=CONSENSUS.filter(c=>!q||c.name_of_issuer.toLowerCase().includes(q)||(c.ticker||'').toLowerCase().includes(q));
+    if(!list.length){tbody.innerHTML='<tr><td colspan="3" class="empty">No results found</td></tr>';return;}
+    tbody.innerHTML=list.map((c,i)=>`<tr>
+      <td><span class="rank">${i+1}.</span><span class="stock-name">${c.name_of_issuer}</span>${c.ticker?`<span class="coin-sym">${c.ticker}</span>`:''}</td>
+      <td>${c.holder_count} investors<div class="holder-badges">${c.holders.map(h=>`<span class="hb">${h.investor_name}</span>`).join('')}</div></td>
+      <td>${usdBig(c.total_value_usd)}</td>
+    </tr>`).join('');
+    return;
+  }
+
+  document.getElementById('thead-consensus').hidden=true;
+  document.getElementById('thead-investor').hidden=false;
+  const inv=BY_INVESTOR[invName];
+  const list=(inv?.holdings||[]).filter(h=>!q||h.name_of_issuer.toLowerCase().includes(q)||(h.ticker||'').toLowerCase().includes(q));
+  if(!list.length){tbody.innerHTML='<tr><td colspan="4" class="empty">No results found</td></tr>';return;}
+  tbody.innerHTML=list.map((h,i)=>`<tr>
+    <td><span class="rank">${i+1}.</span><span class="stock-name">${h.name_of_issuer}</span>${h.ticker?`<span class="coin-sym">${h.ticker}</span>`:''}</td>
+    <td>${(h.weight_pct||0).toFixed(2)}%</td>
+    <td>${usdBig(h.value_usd)}</td>
+    <td>${(h.shares||0).toLocaleString('en-US')}</td>
+  </tr>`).join('');
+}
+load();
+</script><script src="/ticker.js"></script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script>
+</body>
+</html>

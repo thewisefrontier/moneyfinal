@@ -6,9 +6,23 @@
    파일로 통일하면서 올바른 계산으로 맞춤. */
 async function loadTicker() {
   try {
-    const r = await fetch('data/market.json');
+    const r = await fetch((document.documentElement.lang === 'en' ? '/' : '') + 'data/market.json');
     const d = await r.json();
     const inds = d.indicators || [];
+    if (document.documentElement.lang === 'en') {  // 영어판: 한국 지표 대신 미국·글로벌 지표
+      const E = { US_SP500: ['S&P 500', 0], US_NASDAQ: ['Nasdaq', 0], US_DJIA: ['Dow', 0], VIX: ['VIX', 2], FED_RATE: ['Fed funds', 2],
+        US_10Y_TREASURY: ['US 10Y', 2], USD_INDEX: ['USD index', 2], WTI: ['WTI', 2], BTC: ['BTC', 0], ETH: ['ETH', 0] };
+      let he = '';
+      Object.keys(E).forEach(k => {
+        const i = inds.find(x => x.indicator_code === k);
+        if (!i) return;
+        const n = parseFloat(i.value).toLocaleString('en-US', { minimumFractionDigits: E[k][1], maximumFractionDigits: E[k][1] });
+        const v = (['BTC', 'ETH', 'WTI'].includes(k) ? '$' : '') + n + (i.unit === '%' ? '%' : '');
+        he += `<div class="ti"><span class="name">${E[k][0]}</span><span class="${i.signal === 'red' ? 'down' : i.signal === 'yellow' ? 'neutral' : 'up'}">${v}</span></div>`;
+      });
+      document.getElementById('ticker-inner').innerHTML = he + he;
+      return;
+    }
     const L = {
       'USD_KRW': '원달러', 'BASE_RATE': '기준금리', 'FED_RATE': '미국금리',
       'USD_INDEX': '달러인덱스', 'US_YIELD_CURVE': '장단기금리차', 'M2_TOTAL': 'M2',

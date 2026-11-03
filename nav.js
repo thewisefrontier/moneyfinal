@@ -26,14 +26,34 @@
     ['macro.html', '경제지표'],
     ['calc.html', '계산기']
   ];
+  // 영어판(/en/): 한국 전용 메뉴를 빼고 영어 라벨. 영어판에 있는 페이지만 언어 전환 링크를 보여준다.
+  var EN = document.documentElement.lang === 'en';
+  var LINKS_EN = [
+    ['index.html', 'Home'],
+    ['dividend-etf.html', 'Dividend ETFs'],
+    ['us-fin.html', 'US Financials'],
+    ['compare.html', 'Compare'],
+    ['superinvestor.html', 'Superinvestors'],
+    ['congress.html', 'Congress Trades'],
+    ['ipo.html', 'IPO']
+  ];
+  var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin'];
+  var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+  var isEn = /^\/en(\/|$)/.test(path), rest = path.replace(/^\/en/, '');
+  var hasEn = rest === '' || EN_ONLY.indexOf(rest.slice(1)) >= 0 || /^\/dividend-(?!kr-)/.test(rest);
   var navs = document.querySelectorAll('#site-nav');
   for (var i = 0; i < navs.length; i++) {
     var nav = navs[i];
     var active = nav.getAttribute('data-active');
     var html = '';
-    for (var j = 0; j < LINKS.length; j++) {
-      var href = LINKS[j][0], label = LINKS[j][1];
-      html += '<a href="' + href + '"' + (href === active ? ' class="active"' : '') + '>' + label + '</a>';
+    var list = EN ? LINKS_EN : LINKS;
+    for (var j = 0; j < list.length; j++) {
+      var href = list[j][0], label = list[j][1];
+      var to = EN ? '/en/' + (href === 'index.html' ? '' : href.replace(/\.html$/, '')) : href;
+      html += '<a href="' + to + '"' + (href === active ? ' class="active"' : '') + '>' + label + '</a>';
+    }
+    if (hasEn) {
+      html += EN ? '<a href="' + (rest || '/') + '">한국어</a>' : '<a href="/en' + (rest || '/') + '">EN</a>';
     }
     nav.innerHTML = html;
   }
