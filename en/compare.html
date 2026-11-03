@@ -281,7 +281,7 @@ async function init(){
   document.querySelectorAll('#mk .tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.m===M)return;M=b.dataset.m;document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x===b));SEL=[];setup();}));
   document.querySelectorAll('#pm .tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.p===P)return;P=b.dataset.p;document.querySelectorAll('#pm .tab').forEach(x=>x.classList.toggle('active',x===b));MET=P==='q'?'revyoy':'rev';render();}));
   const u=new URLSearchParams(location.search);
-  if(u.get('m')==='us'){M='us';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='us'));}
+  if(u.get('m')==='kr'){M='kr';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='kr'));}
   if(u.get('p')==='q'){P='q';MET='revyoy';document.querySelectorAll('#pm .tab').forEach(x=>x.classList.toggle('active',x.dataset.p==='q'));}
   const q=$('q'),sg=$('sg');
   q.addEventListener('input',()=>suggest());
@@ -300,8 +300,8 @@ async function setup(ids){
   SEL=[];for(const id of start.slice(0,4)){const c=await loadCo(M,id);if(c)SEL.push(c);}
   render();
 }
-function rank(r,t){const id=r.id.toLowerCase(),n=r.name.toLowerCase();return (id===t||n===t)?0:n.startsWith(t)?1:id.startsWith(t)?2:3;}
-function hits(t){return IDX[M].filter(r=>!SEL.some(s=>s.id===r.id)&&(r.id.toLowerCase().startsWith(t)||r.name.toLowerCase().includes(t))).sort((a,b)=>rank(a,t)-rank(b,t));}
+function rank(r,t){const id=r.id.toLowerCase(),n=r.name.toLowerCase(),en=window.enLc?enLc(r.name):'';return (id===t||n===t||en===t)?0:(n.startsWith(t)||en.startsWith(t))?1:id.startsWith(t)?2:3;}
+function hits(t){return IDX[M].filter(r=>!SEL.some(s=>s.id===r.id)&&(r.id.toLowerCase().startsWith(t)||r.name.toLowerCase().includes(t)||(window.enLc&&enLc(r.name).includes(t)))).sort((a,b)=>rank(a,t)-rank(b,t));}
 function suggest(){
   const t=$('q').value.trim().toLowerCase(),sg=$('sg');if(!t){sg.style.display='none';return;}
   const h=hits(t).slice(0,10);

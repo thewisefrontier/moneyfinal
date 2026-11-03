@@ -148,3 +148,23 @@ PATCHES['calc-realty.html'] = [
     ("'적용 상한요율 '+(r.rate*100).toFixed(1)+'% · 부가세(10%) 포함 시 '+won(r.fee*1.1)", "'Rate cap applied '+(r.rate*100).toFixed(1)+'% · including VAT (10%): '+won(r.fee*1.1)"),
 ]
 PATCHES['calc-date.html'] = [("const WD=['일','월','화','수','목','금','토'];", "const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];")]
+
+# ---- 영어 이름 검색: en-names.js 의 enLc(한글이름)로 영문명도 함께 비교 ----
+_EN_Q = "r[1].toLowerCase().includes(t)||r[0].includes(t)"
+_EN_Q2 = "r[1].toLowerCase().includes(t)||r[0].includes(t)||(window.enLc&&enLc(r[1]).includes(t))"
+PATCHES['kr-fin.html'] += [
+    (_EN_Q, _EN_Q2),
+    ("const c=r[0].toLowerCase(),nm=r[1].toLowerCase();return (c===t||nm===t)?0:nm.startsWith(t)?1:2;",
+     "const c=r[0].toLowerCase(),nm=r[1].toLowerCase(),en=window.enLc?enLc(r[1]):'';return (c===t||nm===t||en===t)?0:(nm.startsWith(t)||en.startsWith(t))?1:2;"),
+]
+PATCHES['sim.html'] = PATCHES.get('sim.html', []) + [(_EN_Q, _EN_Q2)]
+PATCHES['compare.html'] += [
+    ("r.name.toLowerCase().includes(t))).sort(", "r.name.toLowerCase().includes(t)||(window.enLc&&enLc(r.name).includes(t)))).sort("),
+    ("const id=r.id.toLowerCase(),n=r.name.toLowerCase();return (id===t||n===t)?0:n.startsWith(t)?1:id.startsWith(t)?2:3;",
+     "const id=r.id.toLowerCase(),n=r.name.toLowerCase(),en=window.enLc?enLc(r.name):'';return (id===t||n===t||en===t)?0:(n.startsWith(t)||en.startsWith(t))?1:id.startsWith(t)?2:3;"),
+]
+PATCHES['ipo.html'] += [("x.corp.toLowerCase().includes(Q))", "x.corp.toLowerCase().includes(Q)||(window.enLc&&enLc(x.corp).includes(Q)))")]
+PATCHES['compare.html'] += [
+    ("if(u.get('m')==='us'){M='us';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='us'));}",
+     "if(u.get('m')==='kr'){M='kr';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='kr'));}"),
+]

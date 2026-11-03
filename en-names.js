@@ -17,6 +17,13 @@
     while ((n = w.nextNode())) { if (HAN.test(n.nodeValue)) list.push(n); }
     list.forEach(function (x) { var v = tr(x.nodeValue); if (v !== x.nodeValue) x.nodeValue = v; });
   }
+  // 영어 이름 검색용: 한글 이름 -> 소문자 영문명(없으면 ''). 페이지의 검색 함수가 한글명과 함께 비교한다.
+  window.enLc = function (ko) {
+    if (!N || !ko) return '';
+    var e = N[ko], pm;
+    if (!e && (pm = ko.match(/^(.+?)우(B|\(전환\))?$/)) && N[pm[1]]) e = N[pm[1]] + ' preferred';
+    return e ? e.toLowerCase() : '';
+  };
   fetch('/data/en_names.json').then(function (r) { return r.json(); }).then(function (d) {
     N = d.n; T = d.t.map(function (x) { return [new RegExp(x[0], 'g'), x[1]]; });
     walk(document.body);

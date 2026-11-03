@@ -157,8 +157,8 @@ const wonp=v=>v==null?'-':'₩'+Math.round(v).toLocaleString('en-US');
 async function J(p){const r=await fetch(p);if(!r.ok)throw new Error(p);return r.json();}
 async function shard(c){const k=c.slice(0,2);if(!SH[k])SH[k]=await J('/data/kr_fin/'+k+'.json');return SH[k][c];}
 
-function krRank(r,t){const c=r[0].toLowerCase(),nm=r[1].toLowerCase();return (c===t||nm===t)?0:nm.startsWith(t)?1:2;}
-function krHits(t){return IDX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)).sort((a,b)=>krRank(a,t)-krRank(b,t));}
+function krRank(r,t){const c=r[0].toLowerCase(),nm=r[1].toLowerCase(),en=window.enLc?enLc(r[1]):'';return (c===t||nm===t||en===t)?0:(nm.startsWith(t)||en.startsWith(t))?1:2;}
+function krHits(t){return IDX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)||(window.enLc&&enLc(r[1]).includes(t))).sort((a,b)=>krRank(a,t)-krRank(b,t));}
 async function init(){
   try{const d=await J('/data/kr_fin/index.json');IDX=d.stocks;$('asof').textContent=d.updated_at+' Updated · '+d.count+' companies';}
   catch(e){$('result').innerHTML='<div class="empty">Financial data is being prepared</div>';return;}

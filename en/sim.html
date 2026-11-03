@@ -248,11 +248,11 @@ async function init(){
   $('start').value=Math.max(0,yearsBackIdx(3));
   const q=$('q'),sg=$('sg');
   q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){sg.style.display='none';return;}
-    const hits=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)).slice(0,10);
+    const hits=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)||(window.enLc&&enLc(r[1]).includes(t))).slice(0,10);
     sg.innerHTML=hits.map(r=>`<div data-c="${r[0]}" data-n="${esc(r[1])}">${esc(r[1])}<small>${r[0]} · ${r[2]==='P'?'KOSPI':'KOSDAQ'}${r[3]<g.length-1?' · delisted':''}</small></div>`).join('');
     sg.style.display=hits.length?'block':'none';});
   sg.addEventListener('click',e=>{const d=e.target.closest('div[data-c]');if(!d)return;pick(d.dataset.c,d.dataset.n);});
-  $('qgo').addEventListener('click',()=>{const t=q.value.trim().toLowerCase().replace(/\s*\(\w+\)\s*$/,'');if(!t)return;const h=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t))[0];if(h){pick(h[0],h[1]);run();}else{sg.style.display='none';$('result').innerHTML='<div class="empty">"'+esc(q.value)+'" — no stock matches</div>';}});
+  $('qgo').addEventListener('click',()=>{const t=q.value.trim().toLowerCase().replace(/\s*\(\w+\)\s*$/,'');if(!t)return;const h=INDEX.filter(r=>r[1].toLowerCase().includes(t)||r[0].includes(t)||(window.enLc&&enLc(r[1]).includes(t)))[0];if(h){pick(h[0],h[1]);run();}else{sg.style.display='none';$('result').innerHTML='<div class="empty">"'+esc(q.value)+'" — no stock matches</div>';}});
   q.addEventListener('keydown',e=>{if(e.key==='Enter'){const d=sg.querySelector('div[data-c]');if(d){e.preventDefault();pick(d.dataset.c,d.dataset.n);run();}}else if(e.key==='Escape')sg.style.display='none';});
   document.addEventListener('click',e=>{if(!e.target.closest('.suggest'))sg.style.display='none';});
   $('go').addEventListener('click',run);
