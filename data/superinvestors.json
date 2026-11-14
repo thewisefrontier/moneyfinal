@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13",
+  "updated_at": "2026-11-14",
   "investor_count": 23,
   "consensus": [
     {
@@ -76016,1575 +76016,1554 @@
     "국민연금공단": {
       "fund_name": "National Pension Service",
       "investor_type": "institutional",
-      "period_of_report": "2026-06-30",
+      "period_of_report": "2026-09-30",
       "holdings": [
         {
           "name_of_issuer": "NVIDIA CORPORATION",
           "ticker": "NVDA",
-          "value_usd": 10171499316,
-          "shares": 50834621,
-          "weight_pct": 6.5589
+          "value_usd": 11654995331,
+          "shares": 51033345,
+          "weight_pct": 7.3422
         },
         {
           "name_of_issuer": "APPLE INC",
           "ticker": "AAPL",
-          "value_usd": 9120026489,
-          "shares": 31517924,
-          "weight_pct": 5.8809
+          "value_usd": 10546150291,
+          "shares": 31668219,
+          "weight_pct": 6.6437
         },
         {
           "name_of_issuer": "MICROSOFT CORP",
           "ticker": "MSFT",
-          "value_usd": 5684729680,
-          "shares": 15239745,
-          "weight_pct": 3.6657
+          "value_usd": 7856216499,
+          "shares": 15317248,
+          "weight_pct": 4.9491
         },
         {
           "name_of_issuer": "AMAZON COM INC",
           "ticker": "AMZN",
-          "value_usd": 4998167363,
-          "shares": 20970745,
-          "weight_pct": 3.223
+          "value_usd": 5253275179,
+          "shares": 21084789,
+          "weight_pct": 3.3094
         },
         {
           "name_of_issuer": "ALPHABET INC",
           "ticker": "GOOGL",
-          "value_usd": 4680938399,
-          "shares": 13098297,
-          "weight_pct": 3.0184
-        },
-        {
-          "name_of_issuer": "ALPHABET INC",
-          "ticker": "GOOG",
-          "value_usd": 3727875298,
-          "shares": 10550690,
-          "weight_pct": 2.4038
-        },
-        {
-          "name_of_issuer": "BROADCOM INC",
-          "ticker": "AVGO",
-          "value_usd": 3631259754,
-          "shares": 9612865,
-          "weight_pct": 2.3415
+          "value_usd": 4532127482,
+          "shares": 13171726,
+          "weight_pct": 2.8551
         },
         {
           "name_of_issuer": "INVESCO EXCH TRADED FD TR II",
           "ticker": "PBUS",
-          "value_usd": 3546096271,
+          "value_usd": 3627120117,
           "shares": 47382366,
-          "weight_pct": 2.2866
+          "weight_pct": 2.285
         },
         {
-          "name_of_issuer": "MICRON TECHNOLOGY INC",
-          "ticker": "MU",
-          "value_usd": 3331465626,
-          "shares": 2886160,
-          "weight_pct": 2.1482
-        },
-        {
-          "name_of_issuer": "ISHARES TR",
-          "ticker": "IVV",
-          "value_usd": 3084943766,
-          "shares": 4119355,
-          "weight_pct": 1.9893
+          "name_of_issuer": "ALPHABET INC",
+          "ticker": "GOOG",
+          "value_usd": 3612916309,
+          "shares": 10603147,
+          "weight_pct": 2.276
         },
         {
           "name_of_issuer": "META PLATFORMS INC",
           "ticker": "META",
-          "value_usd": 2732448252,
-          "shares": 4850873,
-          "weight_pct": 1.762
+          "value_usd": 3533591113,
+          "shares": 4872709,
+          "weight_pct": 2.226
         },
         {
-          "name_of_issuer": "TESLA INC",
-          "ticker": "TSLA",
-          "value_usd": 2532853621,
-          "shares": 6022001,
-          "weight_pct": 1.6333
+          "name_of_issuer": "BROADCOM INC",
+          "ticker": "AVGO",
+          "value_usd": 3393326316,
+          "shares": 9662366,
+          "weight_pct": 2.1377
+        },
+        {
+          "name_of_issuer": "ISHARES TR",
+          "ticker": "IVV",
+          "value_usd": 3154107736,
+          "shares": 4119355,
+          "weight_pct": 1.987
+        },
+        {
+          "name_of_issuer": "MICRON TECHNOLOGY INC",
+          "ticker": "MU",
+          "value_usd": 3086006044,
+          "shares": 2897359,
+          "weight_pct": 1.9441
         },
         {
           "name_of_issuer": "ADVANCED MICRO DEVICES INC",
           "ticker": "AMD",
-          "value_usd": 2091720396,
-          "shares": 3600765,
-          "weight_pct": 1.3488
+          "value_usd": 2217758470,
+          "shares": 3625210,
+          "weight_pct": 1.3971
+        },
+        {
+          "name_of_issuer": "TESLA INC",
+          "ticker": "TSLA",
+          "value_usd": 2152127730,
+          "shares": 6065578,
+          "weight_pct": 1.3558
         },
         {
           "name_of_issuer": "ELI LILLY & CO",
           "ticker": "LLY",
-          "value_usd": 2018379214,
-          "shares": 1682782,
-          "weight_pct": 1.3015
+          "value_usd": 1954046620,
+          "shares": 1688774,
+          "weight_pct": 1.231
         },
         {
           "name_of_issuer": "JPMORGAN CHASE & CO",
           "ticker": "JPM",
-          "value_usd": 1816546640,
-          "shares": 5549588,
-          "weight_pct": 1.1714
+          "value_usd": 1840135017,
+          "shares": 5562177,
+          "weight_pct": 1.1592
         },
         {
-          "name_of_issuer": "LAM RESEARCH CORP",
-          "ticker": "LRCX",
-          "value_usd": 1457235924,
-          "shares": 3362878,
-          "weight_pct": 0.9397
-        },
-        {
-          "name_of_issuer": "APPLIED MATLS INC",
-          "ticker": "AMAT",
-          "value_usd": 1418562873,
-          "shares": 1962051,
-          "weight_pct": 0.9147
+          "name_of_issuer": "EXXONMOBIL HOLDINGS CORP",
+          "ticker": "XOM",
+          "value_usd": 1579304029,
+          "shares": 9703865,
+          "weight_pct": 0.9949
         },
         {
           "name_of_issuer": "BERKSHIRE HATHAWAY INC DEL",
           "ticker": "BRKB",
-          "value_usd": 1403556421,
-          "shares": 2804925,
-          "weight_pct": 0.9051
-        },
-        {
-          "name_of_issuer": "INTEL CORP",
-          "ticker": "INTC",
-          "value_usd": 1396229068,
-          "shares": 9999492,
-          "weight_pct": 0.9003
+          "value_usd": 1412531777,
+          "shares": 2836694,
+          "weight_pct": 0.8898
         },
         {
           "name_of_issuer": "JOHNSON & JOHNSON",
           "ticker": "JNJ",
-          "value_usd": 1327493063,
-          "shares": 5226968,
-          "weight_pct": 0.856
-        },
-        {
-          "name_of_issuer": "EXXON MOBIL CORP",
-          "ticker": "XOM",
-          "value_usd": 1321264951,
-          "shares": 9664021,
-          "weight_pct": 0.852
+          "value_usd": 1391364897,
+          "shares": 5255590,
+          "weight_pct": 0.8765
         },
         {
           "name_of_issuer": "VISA INC",
           "ticker": "V",
-          "value_usd": 1185762956,
-          "shares": 3456128,
-          "weight_pct": 0.7646
+          "value_usd": 1245662361,
+          "shares": 3466625,
+          "weight_pct": 0.7847
+        },
+        {
+          "name_of_issuer": "INTEL CORP",
+          "ticker": "INTC",
+          "value_usd": 1211110815,
+          "shares": 10073283,
+          "weight_pct": 0.763
+        },
+        {
+          "name_of_issuer": "LAM RESEARCH CORP",
+          "ticker": "LRCX",
+          "value_usd": 1106190080,
+          "shares": 3367295,
+          "weight_pct": 0.6969
         },
         {
           "name_of_issuer": "WALMART INC",
           "ticker": "WMT",
-          "value_usd": 1168182441,
-          "shares": 10314166,
-          "weight_pct": 0.7533
-        },
-        {
-          "name_of_issuer": "CISCO SYS INC",
-          "ticker": "CSCO",
-          "value_usd": 1140935494,
-          "shares": 9713396,
-          "weight_pct": 0.7357
-        },
-        {
-          "name_of_issuer": "KLA CORP",
-          "ticker": "KLAC",
-          "value_usd": 1096673309,
-          "shares": 3634859,
-          "weight_pct": 0.7072
-        },
-        {
-          "name_of_issuer": "CATERPILLAR INC",
-          "ticker": "CAT",
-          "value_usd": 1075678918,
-          "shares": 1010122,
-          "weight_pct": 0.6936
+          "value_usd": 1073773165,
+          "shares": 10331696,
+          "weight_pct": 0.6764
         },
         {
           "name_of_issuer": "ABBVIE INC",
           "ticker": "ABBV",
-          "value_usd": 1008968950,
-          "shares": 4009573,
-          "weight_pct": 0.6506
+          "value_usd": 1057756168,
+          "shares": 4043565,
+          "weight_pct": 0.6663
         },
         {
-          "name_of_issuer": "GE AEROSPACE",
-          "ticker": "GE",
-          "value_usd": 910452623,
-          "shares": 2436124,
-          "weight_pct": 0.5871
+          "name_of_issuer": "CISCO SYS INC",
+          "ticker": "CSCO",
+          "value_usd": 1049780721,
+          "shares": 9753607,
+          "weight_pct": 0.6613
         },
         {
-          "name_of_issuer": "COSTCO WHOLESALE CORPORATION",
-          "ticker": "COST",
-          "value_usd": 904344107,
-          "shares": 966727,
-          "weight_pct": 0.5831
-        },
-        {
-          "name_of_issuer": "MASTERCARD INCORPORATED",
-          "ticker": "MA",
-          "value_usd": 886994390,
-          "shares": 1727014,
-          "weight_pct": 0.572
-        },
-        {
-          "name_of_issuer": "BANK OF AMER CORP",
-          "ticker": "BAC",
-          "value_usd": 885265895,
-          "shares": 15536432,
-          "weight_pct": 0.5708
-        },
-        {
-          "name_of_issuer": "WESTERN DIGITAL CORP",
-          "ticker": "WDC",
-          "value_usd": 882009725,
-          "shares": 1380902,
-          "weight_pct": 0.5687
-        },
-        {
-          "name_of_issuer": "MARVELL TECHNOLOGY INC",
-          "ticker": "MRVL",
-          "value_usd": 833056534,
-          "shares": 2796524,
-          "weight_pct": 0.5372
-        },
-        {
-          "name_of_issuer": "PROCTER & GAMBLE CO",
-          "ticker": "PG",
-          "value_usd": 826948565,
-          "shares": 5639311,
-          "weight_pct": 0.5332
-        },
-        {
-          "name_of_issuer": "UNITEDHEALTH GROUP INC",
-          "ticker": "UNH",
-          "value_usd": 818929089,
-          "shares": 1970332,
-          "weight_pct": 0.5281
-        },
-        {
-          "name_of_issuer": "SEAGATE TECHNOLOGY HLDNGS PL",
-          "ticker": "STX",
-          "value_usd": 805490325,
-          "shares": 834705,
-          "weight_pct": 0.5194
-        },
-        {
-          "name_of_issuer": "HOME DEPOT INC",
-          "ticker": "HD",
-          "value_usd": 791159990,
-          "shares": 2243280,
-          "weight_pct": 0.5102
-        },
-        {
-          "name_of_issuer": "COCA COLA CO",
-          "ticker": "KO",
-          "value_usd": 759894655,
-          "shares": 9350248,
-          "weight_pct": 0.49
-        },
-        {
-          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
-          "ticker": "TGRW",
-          "value_usd": 754666842,
-          "shares": 15814477,
-          "weight_pct": 0.4866
-        },
-        {
-          "name_of_issuer": "CHEVRON CORPORATION",
-          "ticker": "CVX",
-          "value_usd": 750205228,
-          "shares": 4525852,
-          "weight_pct": 0.4838
-        },
-        {
-          "name_of_issuer": "MERCK & CO INC",
-          "ticker": "MRK",
-          "value_usd": 744243987,
-          "shares": 5791782,
-          "weight_pct": 0.4799
-        },
-        {
-          "name_of_issuer": "NETFLIX INC.",
-          "ticker": "NFLX",
-          "value_usd": 693865700,
-          "shares": 9718007,
-          "weight_pct": 0.4474
-        },
-        {
-          "name_of_issuer": "GOLDMAN SACHS GROUP INC",
-          "ticker": "GS",
-          "value_usd": 678086164,
-          "shares": 670463,
-          "weight_pct": 0.4373
-        },
-        {
-          "name_of_issuer": "PHILIP MORRIS INTL INC",
-          "ticker": "PM",
-          "value_usd": 675325633,
-          "shares": 3732937,
-          "weight_pct": 0.4355
-        },
-        {
-          "name_of_issuer": "HARBOR ETF TRUST",
-          "ticker": "INFO",
-          "value_usd": 668030237,
-          "shares": 24565625,
-          "weight_pct": 0.4308
-        },
-        {
-          "name_of_issuer": "PALO ALTO NETWORKS INC",
-          "ticker": "PANW",
-          "value_usd": 667001700,
-          "shares": 1955902,
-          "weight_pct": 0.4301
-        },
-        {
-          "name_of_issuer": "GE VERNOVA INC",
-          "ticker": "GEV",
-          "value_usd": 663308333,
-          "shares": 564585,
-          "weight_pct": 0.4277
-        },
-        {
-          "name_of_issuer": "INTERNATIONAL BUSINESS MACHS",
-          "ticker": "IBM",
-          "value_usd": 660836470,
-          "shares": 2349975,
-          "weight_pct": 0.4261
-        },
-        {
-          "name_of_issuer": "TEXAS INSTRS INC",
-          "ticker": "TXN",
-          "value_usd": 632111088,
-          "shares": 2120680,
-          "weight_pct": 0.4076
-        },
-        {
-          "name_of_issuer": "ADVISORS INNER CIRCLE FD",
-          "ticker": "LSVD",
-          "value_usd": 627384496,
-          "shares": 18162000,
-          "weight_pct": 0.4046
-        },
-        {
-          "name_of_issuer": "LINDE PLC",
-          "ticker": "LIN",
-          "value_usd": 623718138,
-          "shares": 1201908,
-          "weight_pct": 0.4022
-        },
-        {
-          "name_of_issuer": "MORGAN STANLEY",
-          "ticker": "MS",
-          "value_usd": 618889886,
-          "shares": 2960629,
-          "weight_pct": 0.3991
+          "name_of_issuer": "APPLIED MATLS INC",
+          "ticker": "AMAT",
+          "value_usd": 1005748944,
+          "shares": 1966735,
+          "weight_pct": 0.6336
         },
         {
           "name_of_issuer": "PALANTIR TECHNOLOGIES INC",
           "ticker": "PLTR",
-          "value_usd": 610642496,
-          "shares": 5233929,
-          "weight_pct": 0.3938
+          "value_usd": 984655329,
+          "shares": 5264129,
+          "weight_pct": 0.6203
         },
         {
-          "name_of_issuer": "WELLS FARGO & CO",
-          "ticker": "WFC",
-          "value_usd": 605519725,
-          "shares": 7327199,
-          "weight_pct": 0.3905
+          "name_of_issuer": "MASTERCARD INCORPORATED",
+          "ticker": "MA",
+          "value_usd": 953739792,
+          "shares": 1729450,
+          "weight_pct": 0.6008
         },
         {
-          "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
-          "ticker": "SPCX",
-          "value_usd": 598010000,
-          "shares": 3500000,
-          "weight_pct": 0.3856
+          "name_of_issuer": "CHEVRON CORPORATION",
+          "ticker": "CVX",
+          "value_usd": 927040089,
+          "shares": 4539641,
+          "weight_pct": 0.584
         },
         {
-          "name_of_issuer": "AMPHENOL CORP",
-          "ticker": "APH",
-          "value_usd": 595623066,
-          "shares": 3378080,
-          "weight_pct": 0.3841
+          "name_of_issuer": "COSTCO WHOLESALE CORPORATION",
+          "ticker": "COST",
+          "value_usd": 883640638,
+          "shares": 970671,
+          "weight_pct": 0.5567
         },
         {
-          "name_of_issuer": "ORACLE CORP",
-          "ticker": "ORCL",
-          "value_usd": 567805044,
-          "shares": 3874480,
-          "weight_pct": 0.3661
+          "name_of_issuer": "BANK OF AMER CORP",
+          "ticker": "BAC",
+          "value_usd": 846216515,
+          "shares": 15546877,
+          "weight_pct": 0.5331
         },
         {
-          "name_of_issuer": "ANALOG DEVICES INC",
-          "ticker": "ADI",
-          "value_usd": 556955066,
-          "shares": 1402309,
-          "weight_pct": 0.3591
+          "name_of_issuer": "MERCK & CO INC",
+          "ticker": "MRK",
+          "value_usd": 845862443,
+          "shares": 5821089,
+          "weight_pct": 0.5329
         },
         {
-          "name_of_issuer": "RTX CORPORATION",
-          "ticker": "RTX",
-          "value_usd": 555811189,
-          "shares": 2929485,
-          "weight_pct": 0.3584
+          "name_of_issuer": "PROCTER & GAMBLE CO",
+          "ticker": "PG",
+          "value_usd": 823456774,
+          "shares": 5668067,
+          "weight_pct": 0.5187
         },
         {
-          "name_of_issuer": "CITIGROUP INC",
-          "ticker": "C",
-          "value_usd": 554119275,
-          "shares": 3959126,
-          "weight_pct": 0.3573
+          "name_of_issuer": "CATERPILLAR INC",
+          "ticker": "CAT",
+          "value_usd": 820600559,
+          "shares": 1012100,
+          "weight_pct": 0.517
         },
         {
-          "name_of_issuer": "CORNING INC",
-          "ticker": "GLW",
-          "value_usd": 542638557,
-          "shares": 2124412,
-          "weight_pct": 0.3499
+          "name_of_issuer": "COCA COLA CO",
+          "ticker": "KO",
+          "value_usd": 810768066,
+          "shares": 9418774,
+          "weight_pct": 0.5108
+        },
+        {
+          "name_of_issuer": "PALO ALTO NETWORKS INC",
+          "ticker": "PANW",
+          "value_usd": 784512831,
+          "shares": 1974561,
+          "weight_pct": 0.4942
+        },
+        {
+          "name_of_issuer": "SEAGATE TECHNOLOGY HLDNGS PL",
+          "ticker": "STX",
+          "value_usd": 771152794,
+          "shares": 836083,
+          "weight_pct": 0.4858
+        },
+        {
+          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
+          "ticker": "TGRW",
+          "value_usd": 766299972,
+          "shares": 15814477,
+          "weight_pct": 0.4827
+        },
+        {
+          "name_of_issuer": "GE AEROSPACE",
+          "ticker": "GE",
+          "value_usd": 764497787,
+          "shares": 2448038,
+          "weight_pct": 0.4816
+        },
+        {
+          "name_of_issuer": "MARVELL TECHNOLOGY INC",
+          "ticker": "MRVL",
+          "value_usd": 738368400,
+          "shares": 2794627,
+          "weight_pct": 0.4651
+        },
+        {
+          "name_of_issuer": "UNITEDHEALTH GROUP INC",
+          "ticker": "UNH",
+          "value_usd": 729596094,
+          "shares": 1987567,
+          "weight_pct": 0.4596
+        },
+        {
+          "name_of_issuer": "PHILIP MORRIS INTL INC",
+          "ticker": "PM",
+          "value_usd": 715372922,
+          "shares": 3748941,
+          "weight_pct": 0.4507
+        },
+        {
+          "name_of_issuer": "KLA CORP",
+          "ticker": "KLAC",
+          "value_usd": 707904474,
+          "shares": 3631583,
+          "weight_pct": 0.446
+        },
+        {
+          "name_of_issuer": "HARBOR ETF TRUST",
+          "ticker": "INFO",
+          "value_usd": 689286872,
+          "shares": 24565625,
+          "weight_pct": 0.4342
+        },
+        {
+          "name_of_issuer": "NETFLIX INC.",
+          "ticker": "NFLX",
+          "value_usd": 681231061,
+          "shares": 9790616,
+          "weight_pct": 0.4292
+        },
+        {
+          "name_of_issuer": "ADVISORS INNER CIRCLE FD",
+          "ticker": "LSVD",
+          "value_usd": 654558480,
+          "shares": 18162000,
+          "weight_pct": 0.4123
+        },
+        {
+          "name_of_issuer": "HOME DEPOT INC",
+          "ticker": "HD",
+          "value_usd": 641404042,
+          "shares": 2254575,
+          "weight_pct": 0.4041
+        },
+        {
+          "name_of_issuer": "WESTERN DIGITAL CORP",
+          "ticker": "WDC",
+          "value_usd": 627021643,
+          "shares": 1379707,
+          "weight_pct": 0.395
         },
         {
           "name_of_issuer": "ARISTA NETWORKS INC",
           "ticker": "ANET",
-          "value_usd": 521340315,
-          "shares": 3068874,
-          "weight_pct": 0.3362
+          "value_usd": 627069212,
+          "shares": 3080059,
+          "weight_pct": 0.395
         },
         {
-          "name_of_issuer": "ISHARES INC",
-          "ticker": "EWP",
-          "value_usd": 480600390,
-          "shares": 8092278,
-          "weight_pct": 0.3099
+          "name_of_issuer": "GOLDMAN SACHS GROUP INC",
+          "ticker": "GS",
+          "value_usd": 608711787,
+          "shares": 676076,
+          "weight_pct": 0.3835
         },
         {
-          "name_of_issuer": "QUALCOMM INC",
-          "ticker": "QCOM",
-          "value_usd": 475193029,
-          "shares": 2571530,
-          "weight_pct": 0.3064
+          "name_of_issuer": "TEXAS INSTRS INC",
+          "ticker": "TXN",
+          "value_usd": 599431533,
+          "shares": 2140139,
+          "weight_pct": 0.3776
         },
         {
-          "name_of_issuer": "AMGEN INC",
-          "ticker": "AMGN",
-          "value_usd": 465740276,
-          "shares": 1286149,
-          "weight_pct": 0.3003
+          "name_of_issuer": "WELLS FARGO & CO",
+          "ticker": "WFC",
+          "value_usd": 589780543,
+          "shares": 7367652,
+          "weight_pct": 0.3715
         },
         {
-          "name_of_issuer": "WELLTOWER INC",
-          "ticker": "WELL",
-          "value_usd": 457359757,
-          "shares": 2015067,
-          "weight_pct": 0.2949
-        },
-        {
-          "name_of_issuer": "PEPSICO INC",
-          "ticker": "PEP",
-          "value_usd": 456053603,
-          "shares": 3368195,
-          "weight_pct": 0.2941
-        },
-        {
-          "name_of_issuer": "NEXTERA ENERGY INC",
-          "ticker": "NEE",
-          "value_usd": 455247806,
-          "shares": 5186827,
-          "weight_pct": 0.2936
-        },
-        {
-          "name_of_issuer": "VERIZON COMMUNICATIONS INC",
-          "ticker": "VZ",
-          "value_usd": 453669247,
-          "shares": 10714909,
-          "weight_pct": 0.2925
-        },
-        {
-          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
-          "ticker": "TSPA",
-          "value_usd": 452170714,
-          "shares": 9513375,
-          "weight_pct": 0.2916
-        },
-        {
-          "name_of_issuer": "MCDONALDS CORP",
-          "ticker": "MCD",
-          "value_usd": 448276427,
-          "shares": 1658379,
-          "weight_pct": 0.2891
+          "name_of_issuer": "LINDE PLC",
+          "ticker": "LIN",
+          "value_usd": 572886412,
+          "shares": 1206966,
+          "weight_pct": 0.3609
         },
         {
           "name_of_issuer": "THERMO FISHER SCIENTIFIC INC",
           "ticker": "TMO",
-          "value_usd": 422118548,
-          "shares": 841947,
-          "weight_pct": 0.2722
+          "value_usd": 572722546,
+          "shares": 848415,
+          "weight_pct": 0.3608
         },
         {
-          "name_of_issuer": "DISNEY WALT CO",
-          "ticker": "DIS",
-          "value_usd": 417493808,
-          "shares": 4337598,
-          "weight_pct": 0.2692
+          "name_of_issuer": "AMPHENOL CORP",
+          "ticker": "APH",
+          "value_usd": 572055754,
+          "shares": 6785952,
+          "weight_pct": 0.3604
         },
         {
-          "name_of_issuer": "SCHWAB CHARLES CORP",
-          "ticker": "SCHW",
-          "value_usd": 416427243,
-          "shares": 4513138,
-          "weight_pct": 0.2685
+          "name_of_issuer": "MORGAN STANLEY",
+          "ticker": "MS",
+          "value_usd": 561459801,
+          "shares": 2985218,
+          "weight_pct": 0.3537
         },
         {
-          "name_of_issuer": "TJX COS INC NEW",
-          "ticker": "TJX",
-          "value_usd": 406939757,
-          "shares": 2686071,
-          "weight_pct": 0.2624
-        },
-        {
-          "name_of_issuer": "AMERICAN EXPRESS CO",
-          "ticker": "AXP",
-          "value_usd": 402904796,
-          "shares": 1191145,
-          "weight_pct": 0.2598
-        },
-        {
-          "name_of_issuer": "DEERE & CO",
-          "ticker": "DE",
-          "value_usd": 402322534,
-          "shares": 634248,
-          "weight_pct": 0.2594
+          "name_of_issuer": "ANALOG DEVICES INC",
+          "ticker": "ADI",
+          "value_usd": 558346316,
+          "shares": 1407442,
+          "weight_pct": 0.3517
         },
         {
           "name_of_issuer": "CROWDSTRIKE HLDGS INC",
           "ticker": "CRWD",
-          "value_usd": 396245182,
-          "shares": 519230,
-          "weight_pct": 0.2555
+          "value_usd": 554702082,
+          "shares": 2095192,
+          "weight_pct": 0.3494
         },
         {
-          "name_of_issuer": "CHUBB LIMITED",
-          "ticker": "CB",
-          "value_usd": 391173268,
-          "shares": 1148011,
-          "weight_pct": 0.2522
+          "name_of_issuer": "RTX CORPORATION",
+          "ticker": "RTX",
+          "value_usd": 546808683,
+          "shares": 2945374,
+          "weight_pct": 0.3445
         },
         {
-          "name_of_issuer": "GILEAD SCIENCES INC",
-          "ticker": "GILD",
-          "value_usd": 386902732,
-          "shares": 3062393,
-          "weight_pct": 0.2495
+          "name_of_issuer": "AMGEN INC",
+          "ticker": "AMGN",
+          "value_usd": 543704906,
+          "shares": 1289898,
+          "weight_pct": 0.3425
         },
         {
-          "name_of_issuer": "PROLOGIS INC.",
-          "ticker": "PLD",
-          "value_usd": 383678676,
-          "shares": 2832204,
-          "weight_pct": 0.2474
+          "name_of_issuer": "GE VERNOVA INC",
+          "ticker": "GEV",
+          "value_usd": 537788192,
+          "shares": 565801,
+          "weight_pct": 0.3388
         },
         {
-          "name_of_issuer": "ABBOTT LABORATORIES",
-          "ticker": "ABT",
-          "value_usd": 381876296,
-          "shares": 4208467,
-          "weight_pct": 0.2462
+          "name_of_issuer": "ORACLE CORP",
+          "ticker": "ORCL",
+          "value_usd": 535447483,
+          "shares": 3899836,
+          "weight_pct": 0.3373
         },
         {
-          "name_of_issuer": "UNION PAC CORP",
-          "ticker": "UNP",
-          "value_usd": 377034432,
-          "shares": 1386156,
-          "weight_pct": 0.2431
+          "name_of_issuer": "SPACE EXPLORATION TECHN CORP",
+          "ticker": "SPCX",
+          "value_usd": 528445382,
+          "shares": 3502886,
+          "weight_pct": 0.3329
         },
         {
-          "name_of_issuer": "AT&T INC",
-          "ticker": "T",
-          "value_usd": 369434680,
-          "shares": 17847086,
-          "weight_pct": 0.2382
+          "name_of_issuer": "INTERNATIONAL BUSINESS MACHS",
+          "ticker": "IBM",
+          "value_usd": 518858636,
+          "shares": 2359199,
+          "weight_pct": 0.3269
         },
         {
-          "name_of_issuer": "EATON CORP PLC",
-          "ticker": "ETN",
-          "value_usd": 368479174,
-          "shares": 864731,
-          "weight_pct": 0.2376
+          "name_of_issuer": "CITIGROUP INC",
+          "ticker": "C",
+          "value_usd": 512397160,
+          "shares": 3957346,
+          "weight_pct": 0.3228
         },
         {
-          "name_of_issuer": "BOEING CO",
-          "ticker": "BA",
-          "value_usd": 360648761,
-          "shares": 1666045,
-          "weight_pct": 0.2326
+          "name_of_issuer": "VERIZON COMMUNICATIONS INC",
+          "ticker": "VZ",
+          "value_usd": 492042398,
+          "shares": 10726889,
+          "weight_pct": 0.31
         },
         {
-          "name_of_issuer": "ALTRIA GROUP INC",
-          "ticker": "MO",
-          "value_usd": 359663660,
-          "shares": 4998800,
-          "weight_pct": 0.2319
-        },
-        {
-          "name_of_issuer": "BOOKING HOLDINGS INC",
-          "ticker": "BKNG",
-          "value_usd": 359371231,
-          "shares": 2016221,
-          "weight_pct": 0.2317
-        },
-        {
-          "name_of_issuer": "PARKER-HANNIFIN CORP",
-          "ticker": "PH",
-          "value_usd": 359105021,
-          "shares": 367138,
-          "weight_pct": 0.2316
-        },
-        {
-          "name_of_issuer": "CVS HEALTH CORP",
-          "ticker": "CVS",
-          "value_usd": 352166145,
-          "shares": 3404216,
-          "weight_pct": 0.2271
-        },
-        {
-          "name_of_issuer": "PFIZER INC",
-          "ticker": "PFE",
-          "value_usd": 349892971,
-          "shares": 14530439,
-          "weight_pct": 0.2256
-        },
-        {
-          "name_of_issuer": "CONOCOPHILLIPS",
-          "ticker": "COP",
-          "value_usd": 342208355,
-          "shares": 3291731,
-          "weight_pct": 0.2207
-        },
-        {
-          "name_of_issuer": "LOCKHEED MARTIN CORP",
-          "ticker": "LMT",
-          "value_usd": 331322216,
-          "shares": 650340,
-          "weight_pct": 0.2136
-        },
-        {
-          "name_of_issuer": "EQUINIX INC",
-          "ticker": "EQIX",
-          "value_usd": 331288220,
-          "shares": 317816,
-          "weight_pct": 0.2136
-        },
-        {
-          "name_of_issuer": "UBER TECHNOLOGIES INC",
-          "ticker": "UBER",
-          "value_usd": 328744002,
-          "shares": 4555765,
-          "weight_pct": 0.212
-        },
-        {
-          "name_of_issuer": "NEWMONT CORP",
-          "ticker": "NEM",
-          "value_usd": 328598105,
-          "shares": 3518181,
-          "weight_pct": 0.2119
+          "name_of_issuer": "ISHARES INC",
+          "ticker": "EWP",
+          "value_usd": 479791163,
+          "shares": 8092278,
+          "weight_pct": 0.3023
         },
         {
           "name_of_issuer": "SALESFORCE INC",
           "ticker": "CRM",
-          "value_usd": 322265129,
-          "shares": 2057099,
-          "weight_pct": 0.2078
+          "value_usd": 475040018,
+          "shares": 2069260,
+          "weight_pct": 0.2993
         },
         {
-          "name_of_issuer": "ROYAL CARIBBEAN GROUP",
-          "ticker": "RCL",
-          "value_usd": 322090683,
-          "shares": 1014363,
-          "weight_pct": 0.2077
+          "name_of_issuer": "QUALCOMM INC",
+          "ticker": "QCOM",
+          "value_usd": 474554502,
+          "shares": 2578540,
+          "weight_pct": 0.299
         },
         {
-          "name_of_issuer": "BANK OF NY MELLON CORP",
-          "ticker": "BNY",
-          "value_usd": 321476996,
-          "shares": 2223062,
-          "weight_pct": 0.2073
+          "name_of_issuer": "WELLTOWER INC",
+          "ticker": "WELL",
+          "value_usd": 467807618,
+          "shares": 2031826,
+          "weight_pct": 0.2947
         },
         {
-          "name_of_issuer": "BRISTOL-MYERS SQUIBB CO",
-          "ticker": "BMY",
-          "value_usd": 321412139,
-          "shares": 5578135,
-          "weight_pct": 0.2073
+          "name_of_issuer": "GILEAD SCIENCES INC",
+          "ticker": "GILD",
+          "value_usd": 459274323,
+          "shares": 3081344,
+          "weight_pct": 0.2893
         },
         {
-          "name_of_issuer": "BLACKROCK INC",
-          "ticker": "BLK",
-          "value_usd": 315171483,
-          "shares": 327771,
-          "weight_pct": 0.2032
+          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
+          "ticker": "TSPA",
+          "value_usd": 459115478,
+          "shares": 9513375,
+          "weight_pct": 0.2892
         },
         {
-          "name_of_issuer": "MCKESSON CORP",
-          "ticker": "MCK",
-          "value_usd": 307598715,
-          "shares": 407092,
-          "weight_pct": 0.1983
+          "name_of_issuer": "DISNEY WALT CO",
+          "ticker": "DIS",
+          "value_usd": 457596039,
+          "shares": 4362212,
+          "weight_pct": 0.2883
         },
         {
-          "name_of_issuer": "GENERAL MTRS CO",
-          "ticker": "GM",
-          "value_usd": 307160563,
-          "shares": 3984958,
-          "weight_pct": 0.1981
+          "name_of_issuer": "CHARLES SCHWAB CORP (THE)",
+          "ticker": "SCHW",
+          "value_usd": 444393187,
+          "shares": 4546687,
+          "weight_pct": 0.28
         },
         {
-          "name_of_issuer": "LOWES COS INC",
-          "ticker": "LOW",
-          "value_usd": 306022040,
-          "shares": 1387918,
-          "weight_pct": 0.1973
+          "name_of_issuer": "AT&T INC",
+          "ticker": "T",
+          "value_usd": 437299069,
+          "shares": 17922093,
+          "weight_pct": 0.2755
         },
         {
-          "name_of_issuer": "JOHNSON CONTROLS INTERNATION",
-          "ticker": "JCI",
-          "value_usd": 305040714,
-          "shares": 2087747,
-          "weight_pct": 0.1967
+          "name_of_issuer": "PEPSICO INC",
+          "ticker": "PEP",
+          "value_usd": 428142908,
+          "shares": 3378653,
+          "weight_pct": 0.2697
         },
         {
-          "name_of_issuer": "APPLOVIN CORP",
-          "ticker": "APP",
-          "value_usd": 301939206,
-          "shares": 586028,
-          "weight_pct": 0.1947
+          "name_of_issuer": "DEERE & CO",
+          "ticker": "DE",
+          "value_usd": 426613554,
+          "shares": 635267,
+          "weight_pct": 0.2688
         },
         {
-          "name_of_issuer": "HOWMET AEROSPACE INC",
-          "ticker": "HWM",
-          "value_usd": 298724700,
-          "shares": 1111079,
-          "weight_pct": 0.1926
+          "name_of_issuer": "ABBOTT LABORATORIES",
+          "ticker": "ABT",
+          "value_usd": 419175289,
+          "shares": 4241377,
+          "weight_pct": 0.2641
         },
         {
-          "name_of_issuer": "INTUITIVE SURGICAL INC",
-          "ticker": "ISRG",
-          "value_usd": 298186032,
-          "shares": 749814,
-          "weight_pct": 0.1923
+          "name_of_issuer": "PFIZER INC",
+          "ticker": "PFE",
+          "value_usd": 416063022,
+          "shares": 14588465,
+          "weight_pct": 0.2621
         },
         {
-          "name_of_issuer": "S&P GLOBAL INC",
-          "ticker": "SPGI",
-          "value_usd": 298148123,
-          "shares": 732083,
-          "weight_pct": 0.1923
+          "name_of_issuer": "CONOCOPHILLIPS",
+          "ticker": "COP",
+          "value_usd": 412332206,
+          "shares": 3294704,
+          "weight_pct": 0.2598
         },
         {
-          "name_of_issuer": "CUMMINS INC",
-          "ticker": "CMI",
-          "value_usd": 296823025,
-          "shares": 416179,
-          "weight_pct": 0.1914
+          "name_of_issuer": "NEWMONT CORP",
+          "ticker": "NEM",
+          "value_usd": 405214679,
+          "shares": 3513219,
+          "weight_pct": 0.2553
         },
         {
-          "name_of_issuer": "CAPITAL ONE FINL CORP",
-          "ticker": "COF",
-          "value_usd": 295407533,
-          "shares": 1472473,
-          "weight_pct": 0.1905
+          "name_of_issuer": "NEXTERA ENERGY INC",
+          "ticker": "NEE",
+          "value_usd": 394692652,
+          "shares": 5211152,
+          "weight_pct": 0.2486
         },
         {
-          "name_of_issuer": "PROGRESSIVE CORP",
-          "ticker": "PGR",
-          "value_usd": 292009761,
-          "shares": 1336735,
-          "weight_pct": 0.1883
+          "name_of_issuer": "MCDONALDS CORP",
+          "ticker": "MCD",
+          "value_usd": 384339124,
+          "shares": 1664238,
+          "weight_pct": 0.2421
         },
         {
-          "name_of_issuer": "DANAHER CORP DEL",
-          "ticker": "DHR",
-          "value_usd": 285900766,
-          "shares": 1500949,
-          "weight_pct": 0.1844
+          "name_of_issuer": "UNION PAC CORP",
+          "ticker": "UNP",
+          "value_usd": 380951794,
+          "shares": 1399889,
+          "weight_pct": 0.24
         },
         {
-          "name_of_issuer": "STARBUCKS CORP",
-          "ticker": "SBUX",
-          "value_usd": 285711590,
-          "shares": 2795886,
-          "weight_pct": 0.1842
+          "name_of_issuer": "CHUBB LIMITED",
+          "ticker": "CB",
+          "value_usd": 374841518,
+          "shares": 1152472,
+          "weight_pct": 0.2361
         },
         {
-          "name_of_issuer": "CADENCE DESIGN SYSTEM INC",
-          "ticker": "CDNS",
-          "value_usd": 285511554,
-          "shares": 760715,
-          "weight_pct": 0.1841
+          "name_of_issuer": "EATON CORP PLC",
+          "ticker": "ETN",
+          "value_usd": 374428668,
+          "shares": 871352,
+          "weight_pct": 0.2359
         },
         {
-          "name_of_issuer": "ROSS STORES INC",
-          "ticker": "ROST",
-          "value_usd": 284355255,
-          "shares": 1335942,
-          "weight_pct": 0.1834
-        },
-        {
-          "name_of_issuer": "DELL TECHNOLOGIES INC",
-          "ticker": "DELL",
-          "value_usd": 282148521,
-          "shares": 653939,
-          "weight_pct": 0.1819
-        },
-        {
-          "name_of_issuer": "SOUTHERN CO",
-          "ticker": "SO",
-          "value_usd": 280715324,
-          "shares": 2932978,
-          "weight_pct": 0.181
-        },
-        {
-          "name_of_issuer": "SEMPRA",
-          "ticker": "SRE",
-          "value_usd": 280015443,
-          "shares": 3020337,
-          "weight_pct": 0.1806
-        },
-        {
-          "name_of_issuer": "SPOTIFY TECHNOLOGY S A",
-          "ticker": "SPOT",
-          "value_usd": 277865017,
-          "shares": 605199,
-          "weight_pct": 0.1792
-        },
-        {
-          "name_of_issuer": "SIMON PPTY GROUP INC NEW",
-          "ticker": "SPG",
-          "value_usd": 273527305,
-          "shares": 1223015,
-          "weight_pct": 0.1764
-        },
-        {
-          "name_of_issuer": "AMERICAN ELEC PWR CO INC",
-          "ticker": "AEP",
-          "value_usd": 269620907,
-          "shares": 1970769,
-          "weight_pct": 0.1739
-        },
-        {
-          "name_of_issuer": "DUKE ENERGY CORP NEW",
-          "ticker": "DUK",
-          "value_usd": 268856426,
-          "shares": 2124004,
-          "weight_pct": 0.1734
-        },
-        {
-          "name_of_issuer": "SERVICENOW INC",
-          "ticker": "NOW",
-          "value_usd": 268576227,
-          "shares": 2705240,
-          "weight_pct": 0.1732
-        },
-        {
-          "name_of_issuer": "VERTEX PHARMACEUTICALS INC",
-          "ticker": "VRTX",
-          "value_usd": 268000737,
-          "shares": 539530,
-          "weight_pct": 0.1728
-        },
-        {
-          "name_of_issuer": "GENERAL DYNAMICS CORP",
-          "ticker": "GD",
-          "value_usd": 267848657,
-          "shares": 756122,
-          "weight_pct": 0.1727
-        },
-        {
-          "name_of_issuer": "CSX CORP",
-          "ticker": "CSX",
-          "value_usd": 264618189,
-          "shares": 5567393,
-          "weight_pct": 0.1706
-        },
-        {
-          "name_of_issuer": "TRAVELERS COMPANIES INC",
-          "ticker": "TRV",
-          "value_usd": 263061734,
-          "shares": 796867,
-          "weight_pct": 0.1696
-        },
-        {
-          "name_of_issuer": "TRANE TECHNOLOGIES PLC",
-          "ticker": "TT",
-          "value_usd": 261717553,
-          "shares": 532856,
-          "weight_pct": 0.1688
-        },
-        {
-          "name_of_issuer": "COMCAST CORP NEW",
-          "ticker": "CMCSA",
-          "value_usd": 259876873,
-          "shares": 10585616,
-          "weight_pct": 0.1676
-        },
-        {
-          "name_of_issuer": "UNITED PARCEL SVCS INC",
-          "ticker": "UPS",
-          "value_usd": 255762818,
-          "shares": 2379189,
-          "weight_pct": 0.1649
-        },
-        {
-          "name_of_issuer": "AMERICAN TOWER CORP",
-          "ticker": "AMT",
-          "value_usd": 253839376,
-          "shares": 1551870,
-          "weight_pct": 0.1637
-        },
-        {
-          "name_of_issuer": "EOG RES INC",
-          "ticker": "EOG",
-          "value_usd": 253838669,
-          "shares": 1956669,
-          "weight_pct": 0.1637
-        },
-        {
-          "name_of_issuer": "MEDTRONIC PLC",
-          "ticker": "MDT",
-          "value_usd": 247426235,
-          "shares": 3162805,
-          "weight_pct": 0.1595
-        },
-        {
-          "name_of_issuer": "PNC FINL SVCS GROUP INC",
-          "ticker": "PNC",
-          "value_usd": 246645714,
-          "shares": 1001729,
-          "weight_pct": 0.159
-        },
-        {
-          "name_of_issuer": "US BANCORP",
-          "ticker": "USB",
-          "value_usd": 246051178,
-          "shares": 4073695,
-          "weight_pct": 0.1587
-        },
-        {
-          "name_of_issuer": "ADOBE INC",
-          "ticker": "ADBE",
-          "value_usd": 245880691,
-          "shares": 1199301,
-          "weight_pct": 0.1586
-        },
-        {
-          "name_of_issuer": "WILLIAMS COS INC",
-          "ticker": "WMB",
-          "value_usd": 245769452,
-          "shares": 3306019,
-          "weight_pct": 0.1585
-        },
-        {
-          "name_of_issuer": "NXP SEMICONDUCTORS N V",
-          "ticker": "NXPI",
-          "value_usd": 244051792,
-          "shares": 868419,
-          "weight_pct": 0.1574
-        },
-        {
-          "name_of_issuer": "FREEPORT MCMORAN INC",
-          "ticker": "FCX",
-          "value_usd": 240845242,
-          "shares": 3829627,
-          "weight_pct": 0.1553
+          "name_of_issuer": "PROLOGIS INC.",
+          "ticker": "PLD",
+          "value_usd": 369368053,
+          "shares": 2844794,
+          "weight_pct": 0.2327
         },
         {
           "name_of_issuer": "MARATHON PETE CORP",
           "ticker": "MPC",
-          "value_usd": 237391129,
-          "shares": 928506,
-          "weight_pct": 0.1531
+          "value_usd": 369304882,
+          "shares": 933956,
+          "weight_pct": 0.2326
         },
         {
-          "name_of_issuer": "REGENERON PHARMACEUTICALS",
-          "ticker": "REGN",
-          "value_usd": 236829845,
-          "shares": 379815,
-          "weight_pct": 0.1527
+          "name_of_issuer": "SERVICENOW INC",
+          "ticker": "NOW",
+          "value_usd": 365846496,
+          "shares": 2729994,
+          "weight_pct": 0.2305
         },
         {
-          "name_of_issuer": "SHERWIN WILLIAMS CO",
-          "ticker": "SHW",
-          "value_usd": 236008291,
-          "shares": 685433,
-          "weight_pct": 0.1522
+          "name_of_issuer": "AMERICAN EXPRESS CO",
+          "ticker": "AXP",
+          "value_usd": 363893054,
+          "shares": 1196623,
+          "weight_pct": 0.2292
+        },
+        {
+          "name_of_issuer": "TJX COS INC NEW",
+          "ticker": "TJX",
+          "value_usd": 357677328,
+          "shares": 2703328,
+          "weight_pct": 0.2253
+        },
+        {
+          "name_of_issuer": "PARKER-HANNIFIN CORP",
+          "ticker": "PH",
+          "value_usd": 352400934,
+          "shares": 368844,
+          "weight_pct": 0.222
+        },
+        {
+          "name_of_issuer": "BLACKROCK INC",
+          "ticker": "BLK",
+          "value_usd": 349609276,
+          "shares": 330353,
+          "weight_pct": 0.2202
+        },
+        {
+          "name_of_issuer": "BRISTOL-MYERS SQUIBB CO",
+          "ticker": "BMY",
+          "value_usd": 348003864,
+          "shares": 5576985,
+          "weight_pct": 0.2192
+        },
+        {
+          "name_of_issuer": "DELL TECHNOLOGIES INC",
+          "ticker": "DELL",
+          "value_usd": 347373143,
+          "shares": 645735,
+          "weight_pct": 0.2188
+        },
+        {
+          "name_of_issuer": "MCKESSON CORP",
+          "ticker": "MCK",
+          "value_usd": 342044824,
+          "shares": 400610,
+          "weight_pct": 0.2155
+        },
+        {
+          "name_of_issuer": "ALTRIA GROUP INC",
+          "ticker": "MO",
+          "value_usd": 336564243,
+          "shares": 4997984,
+          "weight_pct": 0.212
         },
         {
           "name_of_issuer": "CLOUDFLARE INC",
           "ticker": "NET",
-          "value_usd": 235465611,
-          "shares": 959987,
-          "weight_pct": 0.1518
+          "value_usd": 335193961,
+          "shares": 965198,
+          "weight_pct": 0.2112
         },
         {
-          "name_of_issuer": "AUTOMATIC DATA PROCESSING IN",
-          "ticker": "ADP",
-          "value_usd": 230956948,
-          "shares": 1031288,
-          "weight_pct": 0.1489
+          "name_of_issuer": "DANAHER CORP DEL",
+          "ticker": "DHR",
+          "value_usd": 334660137,
+          "shares": 1510540,
+          "weight_pct": 0.2108
         },
         {
-          "name_of_issuer": "HCA HEALTHCARE INC",
-          "ticker": "HCA",
-          "value_usd": 230650346,
-          "shares": 591578,
-          "weight_pct": 0.1487
+          "name_of_issuer": "LOCKHEED MARTIN CORP",
+          "ticker": "LMT",
+          "value_usd": 330354549,
+          "shares": 648708,
+          "weight_pct": 0.2081
         },
         {
-          "name_of_issuer": "ROBINHOOD MKTS INC",
-          "ticker": "HOOD",
-          "value_usd": 230467307,
-          "shares": 2298238,
-          "weight_pct": 0.1486
+          "name_of_issuer": "CORNING INC",
+          "ticker": "GLW",
+          "value_usd": 328326649,
+          "shares": 2135319,
+          "weight_pct": 0.2068
         },
         {
-          "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
-          "ticker": "ELV",
-          "value_usd": 228059708,
-          "shares": 589713,
-          "weight_pct": 0.1471
+          "name_of_issuer": "BOOKING HOLDINGS INC",
+          "ticker": "BKNG",
+          "value_usd": 327353309,
+          "shares": 2009412,
+          "weight_pct": 0.2062
         },
         {
-          "name_of_issuer": "STRYKER CORPORATION",
-          "ticker": "SYK",
-          "value_usd": 227058200,
-          "shares": 721186,
-          "weight_pct": 0.1464
+          "name_of_issuer": "EQUINIX INC",
+          "ticker": "EQIX",
+          "value_usd": 323849244,
+          "shares": 320142,
+          "weight_pct": 0.204
         },
         {
-          "name_of_issuer": "3M CO",
-          "ticker": "MMM",
-          "value_usd": 226923827,
-          "shares": 1401543,
-          "weight_pct": 0.1463
+          "name_of_issuer": "BANK OF NY MELLON CORP",
+          "ticker": "BNY",
+          "value_usd": 321764725,
+          "shares": 2224744,
+          "weight_pct": 0.2027
         },
         {
-          "name_of_issuer": "MOODYS CORP",
-          "ticker": "MCO",
-          "value_usd": 226879857,
-          "shares": 500927,
-          "weight_pct": 0.1463
+          "name_of_issuer": "BOEING CO",
+          "ticker": "BA",
+          "value_usd": 314010353,
+          "shares": 1687774,
+          "weight_pct": 0.1978
         },
         {
-          "name_of_issuer": "QUANTA SVCS INC",
-          "ticker": "PWR",
-          "value_usd": 224603517,
-          "shares": 311932,
-          "weight_pct": 0.1448
+          "name_of_issuer": "UBER TECHNOLOGIES INC",
+          "ticker": "UBER",
+          "value_usd": 311690630,
+          "shares": 4549564,
+          "weight_pct": 0.1964
         },
         {
-          "name_of_issuer": "MARRIOTT INTL INC NEW",
-          "ticker": "MAR",
-          "value_usd": 224414480,
-          "shares": 605560,
-          "weight_pct": 0.1447
+          "name_of_issuer": "ROSS STORES INC",
+          "ticker": "ROST",
+          "value_usd": 311464598,
+          "shares": 1334467,
+          "weight_pct": 0.1962
         },
         {
-          "name_of_issuer": "TE CONNECTIVITY PLC",
-          "ticker": "TEL",
-          "value_usd": 222233695,
-          "shares": 1102295,
-          "weight_pct": 0.1433
+          "name_of_issuer": "JOHNSON CONTROLS INTERNATION",
+          "ticker": "JCI",
+          "value_usd": 311261357,
+          "shares": 2093921,
+          "weight_pct": 0.1961
         },
         {
-          "name_of_issuer": "WASTE MGMT INC DEL",
-          "ticker": "WM",
-          "value_usd": 220035605,
-          "shares": 987238,
-          "weight_pct": 0.1419
+          "name_of_issuer": "GENERAL MTRS CO",
+          "ticker": "GM",
+          "value_usd": 308797258,
+          "shares": 4010354,
+          "weight_pct": 0.1945
         },
         {
-          "name_of_issuer": "THE CIGNA GROUP",
-          "ticker": "CI",
-          "value_usd": 218948088,
-          "shares": 794211,
-          "weight_pct": 0.1412
+          "name_of_issuer": "INTUITIVE SURGICAL INC",
+          "ticker": "ISRG",
+          "value_usd": 302342011,
+          "shares": 743531,
+          "weight_pct": 0.1905
         },
         {
-          "name_of_issuer": "COLGATE PALMOLIVE CO",
-          "ticker": "CL",
-          "value_usd": 218637914,
-          "shares": 2384794,
-          "weight_pct": 0.141
+          "name_of_issuer": "SPOTIFY TECHNOLOGY S A",
+          "ticker": "SPOT",
+          "value_usd": 295308416,
+          "shares": 605910,
+          "weight_pct": 0.186
         },
         {
-          "name_of_issuer": "CRH PLC",
-          "ticker": "CRH",
-          "value_usd": 216160009,
-          "shares": 2020187,
-          "weight_pct": 0.1394
+          "name_of_issuer": "SANDISK CORP",
+          "ticker": "SNDK",
+          "value_usd": 294382428,
+          "shares": 169196,
+          "weight_pct": 0.1855
         },
         {
-          "name_of_issuer": "ECOLAB INC",
-          "ticker": "ECL",
-          "value_usd": 214046312,
-          "shares": 768265,
-          "weight_pct": 0.138
+          "name_of_issuer": "CVS HEALTH CORP",
+          "ticker": "CVS",
+          "value_usd": 293536493,
+          "shares": 3425563,
+          "weight_pct": 0.1849
         },
         {
-          "name_of_issuer": "VERTIV HOLDINGS CO",
-          "ticker": "VRT",
-          "value_usd": 213939266,
-          "shares": 638968,
-          "weight_pct": 0.138
+          "name_of_issuer": "S&P GLOBAL INC",
+          "ticker": "SPGI",
+          "value_usd": 290017105,
+          "shares": 735207,
+          "weight_pct": 0.1827
         },
         {
-          "name_of_issuer": "T-MOBILE US INC",
-          "ticker": "TMUS",
-          "value_usd": 213470306,
-          "shares": 1272702,
-          "weight_pct": 0.1377
-        },
-        {
-          "name_of_issuer": "OREILLY AUTOMOTIVE INC",
-          "ticker": "ORLY",
-          "value_usd": 209890055,
-          "shares": 2279184,
-          "weight_pct": 0.1353
-        },
-        {
-          "name_of_issuer": "SYNOPSYS INC",
-          "ticker": "SNPS",
-          "value_usd": 209713566,
-          "shares": 470136,
-          "weight_pct": 0.1352
-        },
-        {
-          "name_of_issuer": "CENCORA INC",
-          "ticker": "COR",
-          "value_usd": 208758025,
-          "shares": 737713,
-          "weight_pct": 0.1346
-        },
-        {
-          "name_of_issuer": "HILTON WORLDWIDE HLDGS INC",
-          "ticker": "HLT",
-          "value_usd": 207317716,
-          "shares": 627361,
-          "weight_pct": 0.1337
-        },
-        {
-          "name_of_issuer": "CONSTELLATION ENERGY CORP",
-          "ticker": "CEG",
-          "value_usd": 205990130,
-          "shares": 829368,
-          "weight_pct": 0.1328
-        },
-        {
-          "name_of_issuer": "EMERSON ELEC CO",
-          "ticker": "EMR",
-          "value_usd": 205424258,
-          "shares": 1435028,
-          "weight_pct": 0.1325
-        },
-        {
-          "name_of_issuer": "FEDEX CORP",
-          "ticker": "FDX",
-          "value_usd": 202121031,
-          "shares": 645486,
-          "weight_pct": 0.1303
-        },
-        {
-          "name_of_issuer": "NORTHROP GRUMMAN CORP",
-          "ticker": "NOC",
-          "value_usd": 201911875,
-          "shares": 396442,
-          "weight_pct": 0.1302
-        },
-        {
-          "name_of_issuer": "MONDELEZ INTL INC",
-          "ticker": "MDLZ",
-          "value_usd": 200392290,
-          "shares": 3464597,
-          "weight_pct": 0.1292
-        },
-        {
-          "name_of_issuer": "ILLINOIS TOOL WKS INC",
-          "ticker": "ITW",
-          "value_usd": 198283450,
-          "shares": 733107,
-          "weight_pct": 0.1279
-        },
-        {
-          "name_of_issuer": "MERCADOLIBRE",
-          "ticker": "MELI",
-          "value_usd": 197109414,
-          "shares": 116125,
-          "weight_pct": 0.1271
-        },
-        {
-          "name_of_issuer": "BLACKSTONE INC",
-          "ticker": "BX",
-          "value_usd": 196642691,
-          "shares": 1671137,
-          "weight_pct": 0.1268
+          "name_of_issuer": "REGENERON PHARMACEUTICALS",
+          "ticker": "REGN",
+          "value_usd": 288840208,
+          "shares": 380920,
+          "weight_pct": 0.182
         },
         {
           "name_of_issuer": "ACCENTURE PLC IRELAND",
           "ticker": "ACN",
-          "value_usd": 194730805,
-          "shares": 1564857,
-          "weight_pct": 0.1256
+          "value_usd": 288035762,
+          "shares": 1570790,
+          "weight_pct": 0.1815
         },
         {
-          "name_of_issuer": "MOTOROLA SOLUTIONS INC",
-          "ticker": "MSI",
-          "value_usd": 193007273,
-          "shares": 464753,
-          "weight_pct": 0.1245
+          "name_of_issuer": "ADOBE INC",
+          "ticker": "ADBE",
+          "value_usd": 285526441,
+          "shares": 1189991,
+          "weight_pct": 0.1799
         },
         {
-          "name_of_issuer": "MARSH & MCLENNAN COS INC",
-          "ticker": "MRSH",
-          "value_usd": 188097762,
-          "shares": 1128564,
-          "weight_pct": 0.1213
+          "name_of_issuer": "TRAVELERS COMPANIES INC",
+          "ticker": "TRV",
+          "value_usd": 284001927,
+          "shares": 796617,
+          "weight_pct": 0.1789
         },
         {
-          "name_of_issuer": "INTUIT",
-          "ticker": "INTU",
-          "value_usd": 182760291,
-          "shares": 700231,
-          "weight_pct": 0.1178
+          "name_of_issuer": "CAPITAL ONE FINL CORP",
+          "ticker": "COF",
+          "value_usd": 283859044,
+          "shares": 1470239,
+          "weight_pct": 0.1788
         },
         {
-          "name_of_issuer": "WARNER BROS DISCOVERY INC",
-          "ticker": "WBD",
-          "value_usd": 181076453,
-          "shares": 6792065,
-          "weight_pct": 0.1168
+          "name_of_issuer": "VERTEX PHARMACEUTICALS INC",
+          "ticker": "VRTX",
+          "value_usd": 283816296,
+          "shares": 542867,
+          "weight_pct": 0.1788
         },
         {
-          "name_of_issuer": "TRANSDIGM GROUP INC",
-          "ticker": "TDG",
-          "value_usd": 180135765,
-          "shares": 135233,
-          "weight_pct": 0.1162
+          "name_of_issuer": "PROGRESSIVE CORP",
+          "ticker": "PGR",
+          "value_usd": 278930422,
+          "shares": 1345475,
+          "weight_pct": 0.1757
+        },
+        {
+          "name_of_issuer": "MEDTRONIC PLC",
+          "ticker": "MDT",
+          "value_usd": 276734619,
+          "shares": 3207030,
+          "weight_pct": 0.1743
+        },
+        {
+          "name_of_issuer": "EOG RES INC",
+          "ticker": "EOG",
+          "value_usd": 271435140,
+          "shares": 1970348,
+          "weight_pct": 0.171
+        },
+        {
+          "name_of_issuer": "ROYAL CARIBBEAN GROUP",
+          "ticker": "RCL",
+          "value_usd": 271249780,
+          "shares": 1020273,
+          "weight_pct": 0.1709
+        },
+        {
+          "name_of_issuer": "FREEPORT MCMORAN INC",
+          "ticker": "FCX",
+          "value_usd": 269519040,
+          "shares": 3850272,
+          "weight_pct": 0.1698
+        },
+        {
+          "name_of_issuer": "AUTOMATIC DATA PROCESSING IN",
+          "ticker": "ADP",
+          "value_usd": 267733895,
+          "shares": 1037487,
+          "weight_pct": 0.1687
+        },
+        {
+          "name_of_issuer": "STARBUCKS CORP",
+          "ticker": "SBUX",
+          "value_usd": 264104929,
+          "shares": 2810823,
+          "weight_pct": 0.1664
+        },
+        {
+          "name_of_issuer": "ROBINHOOD MKTS INC",
+          "ticker": "HOOD",
+          "value_usd": 262320300,
+          "shares": 2331736,
+          "weight_pct": 0.1653
+        },
+        {
+          "name_of_issuer": "CSX CORP",
+          "ticker": "CSX",
+          "value_usd": 262000876,
+          "shares": 5633216,
+          "weight_pct": 0.1651
+        },
+        {
+          "name_of_issuer": "LOWES COS INC",
+          "ticker": "LOW",
+          "value_usd": 257331683,
+          "shares": 1396341,
+          "weight_pct": 0.1621
+        },
+        {
+          "name_of_issuer": "AMERICAN TOWER CORP",
+          "ticker": "AMT",
+          "value_usd": 255748274,
+          "shares": 1562394,
+          "weight_pct": 0.1611
+        },
+        {
+          "name_of_issuer": "GENERAL DYNAMICS CORP",
+          "ticker": "GD",
+          "value_usd": 253724518,
+          "shares": 764622,
+          "weight_pct": 0.1598
+        },
+        {
+          "name_of_issuer": "HOWMET AEROSPACE INC",
+          "ticker": "HWM",
+          "value_usd": 253149929,
+          "shares": 1119241,
+          "weight_pct": 0.1595
+        },
+        {
+          "name_of_issuer": "CADENCE DESIGN SYSTEM INC",
+          "ticker": "CDNS",
+          "value_usd": 252815390,
+          "shares": 765678,
+          "weight_pct": 0.1593
+        },
+        {
+          "name_of_issuer": "HCA HEALTHCARE INC",
+          "ticker": "HCA",
+          "value_usd": 252827234,
+          "shares": 592462,
+          "weight_pct": 0.1593
+        },
+        {
+          "name_of_issuer": "SIMON PPTY GROUP INC NEW",
+          "ticker": "SPG",
+          "value_usd": 246492526,
+          "shares": 1227797,
+          "weight_pct": 0.1553
+        },
+        {
+          "name_of_issuer": "SOUTHERN CO",
+          "ticker": "SO",
+          "value_usd": 244685395,
+          "shares": 2951929,
+          "weight_pct": 0.1541
+        },
+        {
+          "name_of_issuer": "DUKE ENERGY CORP NEW",
+          "ticker": "DUK",
+          "value_usd": 243998616,
+          "shares": 2140151,
+          "weight_pct": 0.1537
+        },
+        {
+          "name_of_issuer": "TRANE TECHNOLOGIES PLC",
+          "ticker": "TT",
+          "value_usd": 241881617,
+          "shares": 535160,
+          "weight_pct": 0.1524
         },
         {
           "name_of_issuer": "SNOWFLAKE INC",
           "ticker": "SNOW",
-          "value_usd": 175693821,
-          "shares": 690349,
-          "weight_pct": 0.1133
+          "value_usd": 237939200,
+          "shares": 700728,
+          "weight_pct": 0.1499
         },
         {
-          "name_of_issuer": "NORFOLK SOUTHN CORP",
-          "ticker": "NSC",
-          "value_usd": 172412308,
-          "shares": 548054,
-          "weight_pct": 0.1112
+          "name_of_issuer": "SEMPRA",
+          "ticker": "SRE",
+          "value_usd": 236425628,
+          "shares": 3032653,
+          "weight_pct": 0.1489
         },
         {
-          "name_of_issuer": "TRUIST FINL CORP",
-          "ticker": "TFC",
-          "value_usd": 170691192,
-          "shares": 3426158,
-          "weight_pct": 0.1101
+          "name_of_issuer": "US BANCORP",
+          "ticker": "USB",
+          "value_usd": 236218704,
+          "shares": 4089659,
+          "weight_pct": 0.1488
         },
         {
-          "name_of_issuer": "CME GROUP INC",
-          "ticker": "CME",
-          "value_usd": 170187277,
-          "shares": 770671,
-          "weight_pct": 0.1097
+          "name_of_issuer": "AMERICAN ELEC PWR CO INC",
+          "ticker": "AEP",
+          "value_usd": 234689852,
+          "shares": 1978168,
+          "weight_pct": 0.1478
         },
         {
-          "name_of_issuer": "BOSTON SCIENTIFIC CORP",
-          "ticker": "BSX",
-          "value_usd": 168995643,
-          "shares": 3959598,
-          "weight_pct": 0.109
+          "name_of_issuer": "TE CONNECTIVITY PLC",
+          "ticker": "TEL",
+          "value_usd": 233794530,
+          "shares": 1107611,
+          "weight_pct": 0.1473
         },
         {
-          "name_of_issuer": "PACCAR INC",
-          "ticker": "PCAR",
-          "value_usd": 168242955,
-          "shares": 1400624,
-          "weight_pct": 0.1085
+          "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
+          "ticker": "ELV",
+          "value_usd": 233148137,
+          "shares": 599630,
+          "weight_pct": 0.1469
         },
         {
-          "name_of_issuer": "HONEYWELL INTL INC",
-          "ticker": "HON",
-          "value_usd": 168056205,
-          "shares": 750586,
-          "weight_pct": 0.1084
+          "name_of_issuer": "COMCAST CORP NEW",
+          "ticker": "CMCSA",
+          "value_usd": 231976419,
+          "shares": 10660681,
+          "weight_pct": 0.1461
         },
         {
-          "name_of_issuer": "HONEYWELL AEROSPACE INC",
-          "ticker": "HONA",
-          "value_usd": 165939553,
-          "shares": 750586,
-          "weight_pct": 0.107
+          "name_of_issuer": "3M CO",
+          "ticker": "MMM",
+          "value_usd": 231633214,
+          "shares": 1411107,
+          "weight_pct": 0.1459
         },
         {
-          "name_of_issuer": "AUTODESK INC",
-          "ticker": "ADSK",
-          "value_usd": 165232892,
-          "shares": 849876,
-          "weight_pct": 0.1065
+          "name_of_issuer": "MOODYS CORP",
+          "ticker": "MCO",
+          "value_usd": 227618584,
+          "shares": 501219,
+          "weight_pct": 0.1434
         },
         {
-          "name_of_issuer": "AON PLC",
-          "ticker": "AON",
-          "value_usd": 160833827,
-          "shares": 484892,
-          "weight_pct": 0.1037
+          "name_of_issuer": "WILLIAMS COS INC",
+          "ticker": "WMB",
+          "value_usd": 225566194,
+          "shares": 3318614,
+          "weight_pct": 0.1421
         },
         {
-          "name_of_issuer": "FORTINET INC",
-          "ticker": "FTNT",
-          "value_usd": 156830965,
-          "shares": 1020902,
-          "weight_pct": 0.1011
+          "name_of_issuer": "PNC FINL SVCS GROUP INC",
+          "ticker": "PNC",
+          "value_usd": 225178052,
+          "shares": 1013129,
+          "weight_pct": 0.1419
         },
         {
           "name_of_issuer": "HEWLETT PACKARD ENTERPRISE C",
           "ticker": "HPE",
-          "value_usd": 155292032,
-          "shares": 3442519,
-          "weight_pct": 0.1001
+          "value_usd": 224491379,
+          "shares": 3513717,
+          "weight_pct": 0.1414
         },
         {
-          "name_of_issuer": "CINTAS CORP",
-          "ticker": "CTAS",
-          "value_usd": 153624420,
-          "shares": 903248,
-          "weight_pct": 0.0991
+          "name_of_issuer": "EMERSON ELEC CO",
+          "ticker": "EMR",
+          "value_usd": 224320820,
+          "shares": 1446298,
+          "weight_pct": 0.1413
         },
         {
-          "name_of_issuer": "DOORDASH INC",
-          "ticker": "DASH",
-          "value_usd": 148956122,
-          "shares": 807219,
-          "weight_pct": 0.0961
+          "name_of_issuer": "SHERWIN WILLIAMS CO",
+          "ticker": "SHW",
+          "value_usd": 223016538,
+          "shares": 689877,
+          "weight_pct": 0.1405
         },
         {
-          "name_of_issuer": "CHENIERE ENERGY INC",
-          "ticker": "LNG",
-          "value_usd": 147304970,
-          "shares": 616313,
-          "weight_pct": 0.095
+          "name_of_issuer": "UNITED PARCEL SVCS INC",
+          "ticker": "UPS",
+          "value_usd": 222202563,
+          "shares": 2378024,
+          "weight_pct": 0.14
         },
         {
-          "name_of_issuer": "AUTOZONE INC",
-          "ticker": "AZO",
-          "value_usd": 145891465,
-          "shares": 45649,
-          "weight_pct": 0.0941
+          "name_of_issuer": "CENCORA INC",
+          "ticker": "COR",
+          "value_usd": 220874109,
+          "shares": 735634,
+          "weight_pct": 0.1391
         },
         {
-          "name_of_issuer": "INTERCONTINENTAL EXCHANGE IN",
-          "ticker": "ICE",
-          "value_usd": 144447056,
-          "shares": 1173317,
-          "weight_pct": 0.0931
+          "name_of_issuer": "CUMMINS INC",
+          "ticker": "CMI",
+          "value_usd": 216999176,
+          "shares": 420077,
+          "weight_pct": 0.1367
+        },
+        {
+          "name_of_issuer": "MARRIOTT INTL INC NEW",
+          "ticker": "MAR",
+          "value_usd": 216542210,
+          "shares": 608829,
+          "weight_pct": 0.1364
+        },
+        {
+          "name_of_issuer": "THE CIGNA GROUP",
+          "ticker": "CI",
+          "value_usd": 215609032,
+          "shares": 793176,
+          "weight_pct": 0.1358
         },
         {
           "name_of_issuer": "VALERO ENERGY CORP",
           "ticker": "VLO",
-          "value_usd": 143157357,
-          "shares": 549675,
-          "weight_pct": 0.0923
+          "value_usd": 213017277,
+          "shares": 549566,
+          "weight_pct": 0.1342
         },
         {
-          "name_of_issuer": "FORD MTR CO",
-          "ticker": "F",
-          "value_usd": 138298411,
-          "shares": 9949526,
-          "weight_pct": 0.0892
+          "name_of_issuer": "ECOLAB INC",
+          "ticker": "ECL",
+          "value_usd": 212185539,
+          "shares": 772764,
+          "weight_pct": 0.1337
         },
         {
-          "name_of_issuer": "TERADYNE INC",
-          "ticker": "TER",
-          "value_usd": 136604966,
-          "shares": 282335,
-          "weight_pct": 0.0881
+          "name_of_issuer": "T-MOBILE US INC",
+          "ticker": "TMUS",
+          "value_usd": 210289703,
+          "shares": 1289488,
+          "weight_pct": 0.1325
         },
         {
-          "name_of_issuer": "BLOOM ENERGY CORP",
-          "ticker": "BE",
-          "value_usd": 135950138,
-          "shares": 449125,
-          "weight_pct": 0.0877
+          "name_of_issuer": "WARNER BROS DISCOVERY INC",
+          "ticker": "WBD",
+          "value_usd": 210360062,
+          "shares": 6796771,
+          "weight_pct": 0.1325
         },
         {
-          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
-          "ticker": "TDVG",
-          "value_usd": 135451112,
-          "shares": 2762617,
-          "weight_pct": 0.0873
+          "name_of_issuer": "CONSTELLATION ENERGY CORP",
+          "ticker": "CEG",
+          "value_usd": 209748632,
+          "shares": 825717,
+          "weight_pct": 0.1321
         },
         {
-          "name_of_issuer": "KKR & CO INC",
-          "ticker": "KKR",
-          "value_usd": 135387982,
-          "shares": 1475136,
-          "weight_pct": 0.0873
+          "name_of_issuer": "NXP SEMICONDUCTORS N V",
+          "ticker": "NXPI",
+          "value_usd": 208247064,
+          "shares": 876719,
+          "weight_pct": 0.1312
         },
         {
-          "name_of_issuer": "COMFORT SYS USA INC",
-          "ticker": "FIX",
-          "value_usd": 133958019,
-          "shares": 67589,
-          "weight_pct": 0.0864
+          "name_of_issuer": "MOTOROLA SOLUTIONS INC",
+          "ticker": "MSI",
+          "value_usd": 208052586,
+          "shares": 466517,
+          "weight_pct": 0.1311
         },
         {
-          "name_of_issuer": "CIENA CORP",
-          "ticker": "CIEN",
-          "value_usd": 133555451,
-          "shares": 272251,
-          "weight_pct": 0.0861
+          "name_of_issuer": "SYNOPSYS INC",
+          "ticker": "SNPS",
+          "value_usd": 206944452,
+          "shares": 475800,
+          "weight_pct": 0.1304
         },
         {
-          "name_of_issuer": "ALLSTATE CORP",
-          "ticker": "ALL",
-          "value_usd": 129546671,
-          "shares": 544451,
-          "weight_pct": 0.0835
+          "name_of_issuer": "WASTE MGMT INC DEL",
+          "ticker": "WM",
+          "value_usd": 203354530,
+          "shares": 997227,
+          "weight_pct": 0.1281
         },
         {
-          "name_of_issuer": "NIKE INC",
-          "ticker": "NKE",
-          "value_usd": 126788672,
-          "shares": 3088640,
-          "weight_pct": 0.0818
+          "name_of_issuer": "COLGATE PALMOLIVE CO",
+          "ticker": "CL",
+          "value_usd": 203318328,
+          "shares": 2383009,
+          "weight_pct": 0.1281
         },
         {
-          "name_of_issuer": "FLEX LTD",
-          "ticker": "FLEX",
-          "value_usd": 126033411,
-          "shares": 777648,
-          "weight_pct": 0.0813
+          "name_of_issuer": "QUANTA SVCS INC",
+          "ticker": "PWR",
+          "value_usd": 202976619,
+          "shares": 315912,
+          "weight_pct": 0.1279
         },
         {
-          "name_of_issuer": "TARGET CORP",
-          "ticker": "TGT",
-          "value_usd": 125394220,
-          "shares": 960066,
-          "weight_pct": 0.0809
+          "name_of_issuer": "CME GROUP INC",
+          "ticker": "CME",
+          "value_usd": 202545907,
+          "shares": 773135,
+          "weight_pct": 0.1276
         },
         {
-          "name_of_issuer": "MONSTER BEVERAGE CORP NEW",
-          "ticker": "MNST",
-          "value_usd": 124325453,
-          "shares": 1293440,
-          "weight_pct": 0.0802
+          "name_of_issuer": "MONDELEZ INTL INC",
+          "ticker": "MDLZ",
+          "value_usd": 201928660,
+          "shares": 3492367,
+          "weight_pct": 0.1272
+        },
+        {
+          "name_of_issuer": "MERCADOLIBRE",
+          "ticker": "MELI",
+          "value_usd": 201776492,
+          "shares": 116733,
+          "weight_pct": 0.1271
+        },
+        {
+          "name_of_issuer": "STRYKER CORPORATION",
+          "ticker": "SYK",
+          "value_usd": 201254737,
+          "shares": 730799,
+          "weight_pct": 0.1268
+        },
+        {
+          "name_of_issuer": "HILTON WORLDWIDE HLDGS INC",
+          "ticker": "HLT",
+          "value_usd": 200325572,
+          "shares": 629717,
+          "weight_pct": 0.1262
+        },
+        {
+          "name_of_issuer": "OREILLY AUTOMOTIVE INC",
+          "ticker": "ORLY",
+          "value_usd": 196533364,
+          "shares": 2301058,
+          "weight_pct": 0.1238
+        },
+        {
+          "name_of_issuer": "INTUIT",
+          "ticker": "INTU",
+          "value_usd": 193870449,
+          "shares": 703168,
+          "weight_pct": 0.1221
+        },
+        {
+          "name_of_issuer": "MARSH & MCLENNAN COS INC",
+          "ticker": "MRSH",
+          "value_usd": 193528260,
+          "shares": 1133534,
+          "weight_pct": 0.1219
+        },
+        {
+          "name_of_issuer": "NORTHROP GRUMMAN CORP",
+          "ticker": "NOC",
+          "value_usd": 192584588,
+          "shares": 398330,
+          "weight_pct": 0.1213
+        },
+        {
+          "name_of_issuer": "ILLINOIS TOOL WKS INC",
+          "ticker": "ITW",
+          "value_usd": 189327464,
+          "shares": 735881,
+          "weight_pct": 0.1193
+        },
+        {
+          "name_of_issuer": "BLACKSTONE INC",
+          "ticker": "BX",
+          "value_usd": 188348302,
+          "shares": 1680331,
+          "weight_pct": 0.1187
+        },
+        {
+          "name_of_issuer": "FORTINET INC",
+          "ticker": "FTNT",
+          "value_usd": 186141179,
+          "shares": 1041291,
+          "weight_pct": 0.1173
         },
         {
           "name_of_issuer": "PHILLIPS 66",
           "ticker": "PSX",
-          "value_usd": 123881700,
-          "shares": 732811,
-          "weight_pct": 0.0799
+          "value_usd": 184993286,
+          "shares": 724583,
+          "weight_pct": 0.1165
         },
         {
-          "name_of_issuer": "UNITED RENTALS INC",
-          "ticker": "URI",
-          "value_usd": 123549585,
-          "shares": 109057,
-          "weight_pct": 0.0797
+          "name_of_issuer": "FEDEX CORP",
+          "ticker": "FDX",
+          "value_usd": 181434412,
+          "shares": 636411,
+          "weight_pct": 0.1143
         },
         {
-          "name_of_issuer": "GALLAGHER ARTHUR J & CO",
-          "ticker": "AJG",
-          "value_usd": 118532271,
-          "shares": 516323,
-          "weight_pct": 0.0764
+          "name_of_issuer": "INTERCONTINENTAL EXCHANGE IN",
+          "ticker": "ICE",
+          "value_usd": 179267999,
+          "shares": 1179162,
+          "weight_pct": 0.1129
         },
         {
-          "name_of_issuer": "SLB LIMITED",
-          "ticker": "SLB",
-          "value_usd": 118388784,
-          "shares": 2546543,
-          "weight_pct": 0.0763
+          "name_of_issuer": "AUTODESK INC",
+          "ticker": "ADSK",
+          "value_usd": 177168882,
+          "shares": 847698,
+          "weight_pct": 0.1116
         },
         {
-          "name_of_issuer": "CREDO TECHNOLOGY GROUP HOLDI",
-          "ticker": "CRDO",
-          "value_usd": 116250738,
-          "shares": 427471,
-          "weight_pct": 0.075
+          "name_of_issuer": "CINTAS CORP",
+          "ticker": "CTAS",
+          "value_usd": 177110189,
+          "shares": 907978,
+          "weight_pct": 0.1116
         },
         {
-          "name_of_issuer": "CARDINAL HEALTH INC",
-          "ticker": "CAH",
-          "value_usd": 113432762,
-          "shares": 477491,
-          "weight_pct": 0.0731
+          "name_of_issuer": "BOSTON SCIENTIFIC CORP",
+          "ticker": "BSX",
+          "value_usd": 175447508,
+          "shares": 4019416,
+          "weight_pct": 0.1105
         },
         {
-          "name_of_issuer": "EBAY INC.",
-          "ticker": "EBAY",
-          "value_usd": 111059273,
-          "shares": 993819,
-          "weight_pct": 0.0716
+          "name_of_issuer": "NORFOLK SOUTHN CORP",
+          "ticker": "NSC",
+          "value_usd": 171282408,
+          "shares": 554312,
+          "weight_pct": 0.1079
         },
         {
-          "name_of_issuer": "AIRBNB INC",
-          "ticker": "ABNB",
-          "value_usd": 108232111,
-          "shares": 756339,
-          "weight_pct": 0.0698
+          "name_of_issuer": "APPLOVIN CORP",
+          "ticker": "APP",
+          "value_usd": 169753721,
+          "shares": 584491,
+          "weight_pct": 0.1069
         },
         {
-          "name_of_issuer": "METLIFE INC",
-          "ticker": "MET",
-          "value_usd": 108194868,
-          "shares": 1278748,
-          "weight_pct": 0.0698
+          "name_of_issuer": "CRH PLC",
+          "ticker": "CRH",
+          "value_usd": 168044339,
+          "shares": 2029521,
+          "weight_pct": 0.1059
+        },
+        {
+          "name_of_issuer": "CHENIERE ENERGY INC",
+          "ticker": "LNG",
+          "value_usd": 165262828,
+          "shares": 614657,
+          "weight_pct": 0.1041
+        },
+        {
+          "name_of_issuer": "TRUIST FINL CORP",
+          "ticker": "TFC",
+          "value_usd": 160416305,
+          "shares": 3464715,
+          "weight_pct": 0.1011
+        },
+        {
+          "name_of_issuer": "HONEYWELL INTL INC",
+          "ticker": "HON",
+          "value_usd": 158265751,
+          "shares": 750288,
+          "weight_pct": 0.0997
+        },
+        {
+          "name_of_issuer": "PACCAR INC",
+          "ticker": "PCAR",
+          "value_usd": 154390883,
+          "shares": 1405982,
+          "weight_pct": 0.0973
+        },
+        {
+          "name_of_issuer": "VERTIV HOLDINGS CO",
+          "ticker": "VRT",
+          "value_usd": 154209397,
+          "shares": 639051,
+          "weight_pct": 0.0971
+        },
+        {
+          "name_of_issuer": "DOORDASH INC",
+          "ticker": "DASH",
+          "value_usd": 150435928,
+          "shares": 819591,
+          "weight_pct": 0.0948
+        },
+        {
+          "name_of_issuer": "TARGET CORP",
+          "ticker": "TGT",
+          "value_usd": 150436815,
+          "shares": 960092,
+          "weight_pct": 0.0948
+        },
+        {
+          "name_of_issuer": "TRANSDIGM GROUP INC",
+          "ticker": "TDG",
+          "value_usd": 147633079,
+          "shares": 136369,
+          "weight_pct": 0.093
+        },
+        {
+          "name_of_issuer": "STRATEGY INC",
+          "ticker": "MSTR",
+          "value_usd": 137940214,
+          "shares": 901040,
+          "weight_pct": 0.0869
+        },
+        {
+          "name_of_issuer": "KKR & CO INC",
+          "ticker": "KKR",
+          "value_usd": 135720372,
+          "shares": 1486532,
+          "weight_pct": 0.0855
+        },
+        {
+          "name_of_issuer": "AON PLC",
+          "ticker": "AON",
+          "value_usd": 135040788,
+          "shares": 487917,
+          "weight_pct": 0.0851
+        },
+        {
+          "name_of_issuer": "T ROWE PRICE EXCHANGE-TRADED",
+          "ticker": "TDVG",
+          "value_usd": 133323896,
+          "shares": 2762617,
+          "weight_pct": 0.084
         },
         {
           "name_of_issuer": "DATADOG INC",
           "ticker": "DDOG",
-          "value_usd": 108177237,
-          "shares": 415491,
-          "weight_pct": 0.0698
+          "value_usd": 132094560,
+          "shares": 482361,
+          "weight_pct": 0.0832
         },
         {
-          "name_of_issuer": "APOLLO GLOBAL MGMT INC",
-          "ticker": "APO",
-          "value_usd": 104090439,
-          "shares": 879811,
-          "weight_pct": 0.0671
+          "name_of_issuer": "AUTOZONE INC",
+          "ticker": "AZO",
+          "value_usd": 130115830,
+          "shares": 45977,
+          "weight_pct": 0.082
+        },
+        {
+          "name_of_issuer": "SLB LIMITED",
+          "ticker": "SLB",
+          "value_usd": 125591049,
+          "shares": 2577813,
+          "weight_pct": 0.0791
+        },
+        {
+          "name_of_issuer": "AIRBNB INC",
+          "ticker": "ABNB",
+          "value_usd": 122638443,
+          "shares": 763389,
+          "weight_pct": 0.0773
+        },
+        {
+          "name_of_issuer": "BLOOM ENERGY CORP",
+          "ticker": "BE",
+          "value_usd": 122478063,
+          "shares": 442191,
+          "weight_pct": 0.0772
+        },
+        {
+          "name_of_issuer": "METLIFE INC",
+          "ticker": "MET",
+          "value_usd": 121504158,
+          "shares": 1290401,
+          "weight_pct": 0.0765
+        },
+        {
+          "name_of_issuer": "FORD MTR CO",
+          "ticker": "F",
+          "value_usd": 120833952,
+          "shares": 10019399,
+          "weight_pct": 0.0761
+        },
+        {
+          "name_of_issuer": "ALLSTATE CORP",
+          "ticker": "ALL",
+          "value_usd": 120100361,
+          "shares": 541334,
+          "weight_pct": 0.0757
+        },
+        {
+          "name_of_issuer": "GALLAGHER ARTHUR J & CO",
+          "ticker": "AJG",
+          "value_usd": 119330500,
+          "shares": 523127,
+          "weight_pct": 0.0752
+        },
+        {
+          "name_of_issuer": "HONEYWELL AEROSPACE INC",
+          "ticker": "HONA",
+          "value_usd": 115944835,
+          "shares": 748176,
+          "weight_pct": 0.073
+        },
+        {
+          "name_of_issuer": "TERADYNE INC",
+          "ticker": "TER",
+          "value_usd": 113847615,
+          "shares": 283973,
+          "weight_pct": 0.0717
+        },
+        {
+          "name_of_issuer": "UNITED RENTALS INC",
+          "ticker": "URI",
+          "value_usd": 111382811,
+          "shares": 111296,
+          "weight_pct": 0.0702
+        },
+        {
+          "name_of_issuer": "NETAPP INC",
+          "ticker": "NTAP",
+          "value_usd": 111495548,
+          "shares": 530729,
+          "weight_pct": 0.0702
+        },
+        {
+          "name_of_issuer": "COMFORT SYS USA INC",
+          "ticker": "FIX",
+          "value_usd": 109987060,
+          "shares": 66494,
+          "weight_pct": 0.0693
+        },
+        {
+          "name_of_issuer": "BECTON DICKINSON & CO",
+          "ticker": "BDX",
+          "value_usd": 109770318,
+          "shares": 613242,
+          "weight_pct": 0.0692
+        },
+        {
+          "name_of_issuer": "NIKE INC",
+          "ticker": "NKE",
+          "value_usd": 109005592,
+          "shares": 3079254,
+          "weight_pct": 0.0687
+        },
+        {
+          "name_of_issuer": "MONSTER BEVERAGE CORP NEW",
+          "ticker": "MNST",
+          "value_usd": 108018009,
+          "shares": 2595339,
+          "weight_pct": 0.068
+        },
+        {
+          "name_of_issuer": "CARDINAL HEALTH INC",
+          "ticker": "CAH",
+          "value_usd": 105804313,
+          "shares": 475525,
+          "weight_pct": 0.0667
+        },
+        {
+          "name_of_issuer": "EBAY INC.",
+          "ticker": "EBAY",
+          "value_usd": 105235960,
+          "shares": 992324,
+          "weight_pct": 0.0663
         },
         {
           "name_of_issuer": "DIGITAL RLTY TR INC",
           "ticker": "DLR",
-          "value_usd": 103851653,
-          "shares": 578303,
-          "weight_pct": 0.067
-        },
-        {
-          "name_of_issuer": "COHERENT CORP",
-          "ticker": "COHR",
-          "value_usd": 103428851,
-          "shares": 262197,
-          "weight_pct": 0.0667
-        },
-        {
-          "name_of_issuer": "REALTY INCOME CORP",
-          "ticker": "O",
-          "value_usd": 103389554,
-          "shares": 1668650,
-          "weight_pct": 0.0667
-        },
-        {
-          "name_of_issuer": "ASTERA LABS INC",
-          "ticker": "ALAB",
-          "value_usd": 101153082,
-          "shares": 209418,
-          "weight_pct": 0.0652
+          "value_usd": 103267985,
+          "shares": 588321,
+          "weight_pct": 0.0651
         },
         {
           "name_of_issuer": "AIR PRODUCTS AND CHEMICALS I",
@@ -77594,10 +77573,24 @@
           "weight_pct": 0.0647
         },
         {
-          "name_of_issuer": "ELECTRONIC ARTS INC",
-          "ticker": "EA",
-          "value_usd": 99731661,
-          "shares": 486401,
+          "name_of_issuer": "KEYSIGHT TECHNOLOGIES INC",
+          "ticker": "KEYS",
+          "value_usd": 102639258,
+          "shares": 281945,
+          "weight_pct": 0.0647
+        },
+        {
+          "name_of_issuer": "APOLLO GLOBAL MGMT INC",
+          "ticker": "APO",
+          "value_usd": 102621645,
+          "shares": 884212,
+          "weight_pct": 0.0646
+        },
+        {
+          "name_of_issuer": "IQVIA HLDGS INC",
+          "ticker": "IQV",
+          "value_usd": 102132351,
+          "shares": 379886,
           "weight_pct": 0.0643
         },
         {
@@ -77608,53 +77601,25 @@
           "weight_pct": 0.064
         },
         {
-          "name_of_issuer": "KEYSIGHT TECHNOLOGIES INC",
-          "ticker": "KEYS",
-          "value_usd": 99030602,
-          "shares": 282888,
-          "weight_pct": 0.0639
+          "name_of_issuer": "CIENA CORP",
+          "ticker": "CIEN",
+          "value_usd": 94636062,
+          "shares": 268990,
+          "weight_pct": 0.0596
+        },
+        {
+          "name_of_issuer": "PAYPAL HLDGS INC",
+          "ticker": "PYPL",
+          "value_usd": 93977798,
+          "shares": 1789031,
+          "weight_pct": 0.0592
         },
         {
           "name_of_issuer": "KINDER MORGAN INC DEL",
           "ticker": "KMI",
-          "value_usd": 97414476,
-          "shares": 3047059,
-          "weight_pct": 0.0628
-        },
-        {
-          "name_of_issuer": "AFLAC INC",
-          "ticker": "AFL",
-          "value_usd": 92512712,
-          "shares": 789021,
-          "weight_pct": 0.0597
-        },
-        {
-          "name_of_issuer": "CARNIVAL CORP LTD",
-          "ticker": "CCL",
-          "value_usd": 92245987,
-          "shares": 3228771,
-          "weight_pct": 0.0595
-        },
-        {
-          "name_of_issuer": "L3HARRIS TECHNOLOGIES INC",
-          "ticker": "LHX",
-          "value_usd": 91717469,
-          "shares": 315625,
-          "weight_pct": 0.0591
-        },
-        {
-          "name_of_issuer": "CORTEVA INC",
-          "ticker": "CTVA",
-          "value_usd": 91515252,
-          "shares": 1080591,
-          "weight_pct": 0.059
-        },
-        {
-          "name_of_issuer": "JABIL INC",
-          "ticker": "JBL",
-          "value_usd": 91364928,
-          "shares": 237016,
-          "weight_pct": 0.0589
+          "value_usd": 93214815,
+          "shares": 3091702,
+          "weight_pct": 0.0587
         },
         {
           "name_of_issuer": "PRUDENTIAL FINL INC",
@@ -77671,32 +77636,11 @@
           "weight_pct": 0.0583
         },
         {
-          "name_of_issuer": "BECTON DICKINSON & CO",
-          "ticker": "BDX",
-          "value_usd": 90290591,
-          "shares": 596647,
-          "weight_pct": 0.0582
-        },
-        {
-          "name_of_issuer": "ONEOK INC NEW",
-          "ticker": "OKE",
-          "value_usd": 90100617,
-          "shares": 1036354,
-          "weight_pct": 0.0581
-        },
-        {
-          "name_of_issuer": "VICI PPTYS INC",
-          "ticker": "VICI",
-          "value_usd": 90070716,
-          "shares": 3392494,
-          "weight_pct": 0.0581
-        },
-        {
-          "name_of_issuer": "D R HORTON INC",
-          "ticker": "DHI",
-          "value_usd": 89317365,
-          "shares": 548363,
-          "weight_pct": 0.0576
+          "name_of_issuer": "BIOGEN INC",
+          "ticker": "BIIB",
+          "value_usd": 91515960,
+          "shares": 405153,
+          "weight_pct": 0.0577
         },
         {
           "name_of_issuer": "LUMENTUM HLDGS INC",
@@ -77706,10 +77650,10 @@
           "weight_pct": 0.0576
         },
         {
-          "name_of_issuer": "EXPEDIA GROUP INC",
-          "ticker": "EXPE",
-          "value_usd": 88909856,
-          "shares": 347467,
+          "name_of_issuer": "REALTY INCOME CORP",
+          "ticker": "O",
+          "value_usd": 91004411,
+          "shares": 1675956,
           "weight_pct": 0.0573
         },
         {
@@ -77718,6 +77662,13 @@
           "value_usd": 88181654,
           "shares": 519939,
           "weight_pct": 0.0569
+        },
+        {
+          "name_of_issuer": "NATERA INC",
+          "ticker": "NTRA",
+          "value_usd": 90007345,
+          "shares": 217772,
+          "weight_pct": 0.0567
         },
         {
           "name_of_issuer": "MONOLITHIC PWR SYS INC",
@@ -77734,67 +77685,25 @@
           "weight_pct": 0.0566
         },
         {
-          "name_of_issuer": "BIOGEN INC",
-          "ticker": "BIIB",
-          "value_usd": 87734188,
-          "shares": 406064,
-          "weight_pct": 0.0566
+          "name_of_issuer": "EXPEDIA GROUP INC",
+          "ticker": "EXPE",
+          "value_usd": 89438900,
+          "shares": 339607,
+          "weight_pct": 0.0563
         },
         {
-          "name_of_issuer": "PUBLIC STORAGE",
-          "ticker": "PSA",
-          "value_usd": 87733239,
-          "shares": 275622,
-          "weight_pct": 0.0566
+          "name_of_issuer": "FLEX LTD",
+          "ticker": "FLEX",
+          "value_usd": 87024198,
+          "shares": 791201,
+          "weight_pct": 0.0548
         },
         {
-          "name_of_issuer": "DOMINION ENERGY INC",
-          "ticker": "D",
-          "value_usd": 87171707,
-          "shares": 1276493,
-          "weight_pct": 0.0562
-        },
-        {
-          "name_of_issuer": "EDISON INTL",
-          "ticker": "EIX",
-          "value_usd": 86886351,
-          "shares": 1167043,
-          "weight_pct": 0.056
-        },
-        {
-          "name_of_issuer": "WW GRAINGER INC",
-          "ticker": "GWW",
-          "value_usd": 86861540,
-          "shares": 63850,
-          "weight_pct": 0.056
-        },
-        {
-          "name_of_issuer": "KEURIG DR PEPPER INC",
-          "ticker": "KDP",
-          "value_usd": 86727987,
-          "shares": 2649801,
-          "weight_pct": 0.0559
-        },
-        {
-          "name_of_issuer": "CARRIER GLOBAL CORPORATION",
-          "ticker": "CARR",
-          "value_usd": 86457278,
-          "shares": 1178695,
-          "weight_pct": 0.0558
-        },
-        {
-          "name_of_issuer": "NEBIUS GROUP N.V.",
-          "ticker": "NBIS",
-          "value_usd": 86248720,
-          "shares": 312303,
-          "weight_pct": 0.0556
-        },
-        {
-          "name_of_issuer": "ROCKWELL AUTOMATION INC",
-          "ticker": "ROK",
-          "value_usd": 86052330,
-          "shares": 173815,
-          "weight_pct": 0.0555
+          "name_of_issuer": "AFLAC INC",
+          "ticker": "AFL",
+          "value_usd": 86913421,
+          "shares": 777540,
+          "weight_pct": 0.0548
         },
         {
           "name_of_issuer": "AMERIPRISE FINL INC",
@@ -77804,53 +77713,18 @@
           "weight_pct": 0.0547
         },
         {
-          "name_of_issuer": "PG&E CORP",
-          "ticker": "PCG",
-          "value_usd": 83947594,
-          "shares": 4990939,
-          "weight_pct": 0.0541
-        },
-        {
-          "name_of_issuer": "NETAPP INC",
-          "ticker": "NTAP",
-          "value_usd": 83478318,
-          "shares": 539405,
+          "name_of_issuer": "CORTEVA INC",
+          "ticker": "CTVA",
+          "value_usd": 85418339,
+          "shares": 1100043,
           "weight_pct": 0.0538
-        },
-        {
-          "name_of_issuer": "SYNCHRONY FINANCIAL",
-          "ticker": "SYF",
-          "value_usd": 83253228,
-          "shares": 1094717,
-          "weight_pct": 0.0537
         },
         {
           "name_of_issuer": "AMETEK INC",
           "ticker": "AME",
-          "value_usd": 82015241,
-          "shares": 338990,
-          "weight_pct": 0.0529
-        },
-        {
-          "name_of_issuer": "CBRE GROUP INC",
-          "ticker": "CBRE",
-          "value_usd": 81877108,
-          "shares": 607893,
-          "weight_pct": 0.0528
-        },
-        {
-          "name_of_issuer": "TEVA PHARMACEUTICAL INDS LTD",
-          "ticker": "TEVA",
-          "value_usd": 81515720,
-          "shares": 2406013,
-          "weight_pct": 0.0526
-        },
-        {
-          "name_of_issuer": "MICROCHIP TECHNOLOGY INC.",
-          "ticker": "MCHP",
-          "value_usd": 81335534,
-          "shares": 891837,
-          "weight_pct": 0.0524
+          "value_usd": 84466764,
+          "shares": 340963,
+          "weight_pct": 0.0532
         },
         {
           "name_of_issuer": "NUCOR CORP",
@@ -77860,312 +77734,340 @@
           "weight_pct": 0.0524
         },
         {
-          "name_of_issuer": "TAPESTRY INC",
-          "ticker": "TPR",
-          "value_usd": 80672214,
-          "shares": 551115,
-          "weight_pct": 0.052
-        },
-        {
-          "name_of_issuer": "TAKE-TWO INTERACTIVE SOFTWAR",
-          "ticker": "TTWO",
-          "value_usd": 80367320,
-          "shares": 321495,
-          "weight_pct": 0.0518
-        },
-        {
-          "name_of_issuer": "EXELON CORP",
-          "ticker": "EXC",
-          "value_usd": 80183323,
-          "shares": 1719934,
-          "weight_pct": 0.0517
-        },
-        {
-          "name_of_issuer": "FERGUSON ENTERPRISES INC",
-          "ticker": "FERG",
-          "value_usd": 80077041,
-          "shares": 337408,
-          "weight_pct": 0.0516
-        },
-        {
-          "name_of_issuer": "BAKER HUGHES COMPANY",
-          "ticker": "BKR",
-          "value_usd": 79916337,
-          "shares": 1439934,
-          "weight_pct": 0.0515
-        },
-        {
-          "name_of_issuer": "AMRIZE LTD",
-          "ticker": "AMRZ",
-          "value_usd": 79578073,
-          "shares": 1493022,
-          "weight_pct": 0.0513
-        },
-        {
-          "name_of_issuer": "KROGER CO",
-          "ticker": "KR",
-          "value_usd": 79412842,
-          "shares": 1430089,
-          "weight_pct": 0.0512
-        },
-        {
           "name_of_issuer": "FASTENAL CO",
           "ticker": "FAST",
-          "value_usd": 79160500,
-          "shares": 1648147,
-          "weight_pct": 0.051
+          "value_usd": 82445508,
+          "shares": 1664557,
+          "weight_pct": 0.0519
         },
         {
-          "name_of_issuer": "STRATEGY INC",
-          "ticker": "MSTR",
-          "value_usd": 78883933,
-          "shares": 907442,
-          "weight_pct": 0.0509
-        },
-        {
-          "name_of_issuer": "CHIPOTLE MEXICAN GRILL INC",
-          "ticker": "CMG",
-          "value_usd": 78636730,
-          "shares": 2312845,
-          "weight_pct": 0.0507
-        },
-        {
-          "name_of_issuer": "INTERACTIVE BROKERS GROUP IN",
-          "ticker": "IBKR",
-          "value_usd": 77905935,
-          "shares": 895059,
-          "weight_pct": 0.0502
-        },
-        {
-          "name_of_issuer": "DOLLAR GEN CORP",
-          "ticker": "DG",
-          "value_usd": 76733707,
-          "shares": 666612,
-          "weight_pct": 0.0495
-        },
-        {
-          "name_of_issuer": "PAYPAL HLDGS INC",
-          "ticker": "PYPL",
-          "value_usd": 76546309,
-          "shares": 1772726,
-          "weight_pct": 0.0494
-        },
-        {
-          "name_of_issuer": "SYSCO CORP",
-          "ticker": "SYY",
-          "value_usd": 76142717,
-          "shares": 911016,
-          "weight_pct": 0.0491
-        },
-        {
-          "name_of_issuer": "KIMBERLY-CLARK CORP",
-          "ticker": "KMB",
-          "value_usd": 75917591,
-          "shares": 691606,
-          "weight_pct": 0.049
-        },
-        {
-          "name_of_issuer": "YUM BRANDS INC",
-          "ticker": "YUM",
-          "value_usd": 75167131,
-          "shares": 470206,
-          "weight_pct": 0.0485
-        },
-        {
-          "name_of_issuer": "EQT CORP",
-          "ticker": "EQT",
-          "value_usd": 75114163,
-          "shares": 1412717,
-          "weight_pct": 0.0484
-        },
-        {
-          "name_of_issuer": "VENTAS INC",
-          "ticker": "VTR",
-          "value_usd": 74256514,
-          "shares": 836222,
-          "weight_pct": 0.0479
-        },
-        {
-          "name_of_issuer": "VISTRA CORP",
-          "ticker": "VST",
-          "value_usd": 74090680,
-          "shares": 467066,
-          "weight_pct": 0.0478
-        },
-        {
-          "name_of_issuer": "FIFTH THIRD BANCORP",
-          "ticker": "FITB",
-          "value_usd": 73794587,
-          "shares": 1309111,
-          "weight_pct": 0.0476
-        },
-        {
-          "name_of_issuer": "HARTFORD INSURANCE GROUP INC",
-          "ticker": "HIG",
-          "value_usd": 73511494,
-          "shares": 554720,
-          "weight_pct": 0.0474
-        },
-        {
-          "name_of_issuer": "ARCHER DANIELS MIDLAND CO",
-          "ticker": "ADM",
-          "value_usd": 72970328,
-          "shares": 955109,
-          "weight_pct": 0.0471
-        },
-        {
-          "name_of_issuer": "AMERICAN INTL GROUP INC",
-          "ticker": "AIG",
-          "value_usd": 72699692,
-          "shares": 975442,
-          "weight_pct": 0.0469
-        },
-        {
-          "name_of_issuer": "IQVIA HLDGS INC",
-          "ticker": "IQV",
-          "value_usd": 72645503,
-          "shares": 375973,
-          "weight_pct": 0.0468
-        },
-        {
-          "name_of_issuer": "WABTEC",
-          "ticker": "WAB",
-          "value_usd": 72260888,
-          "shares": 268030,
-          "weight_pct": 0.0466
-        },
-        {
-          "name_of_issuer": "TARGA RES CORP",
-          "ticker": "TRGP",
-          "value_usd": 71853476,
-          "shares": 267970,
-          "weight_pct": 0.0463
-        },
-        {
-          "name_of_issuer": "EMCOR GROUP INC",
-          "ticker": "EME",
-          "value_usd": 71509930,
-          "shares": 86169,
-          "weight_pct": 0.0461
-        },
-        {
-          "name_of_issuer": "BLOCK INC",
-          "ticker": "XYZ",
-          "value_usd": 71209796,
-          "shares": 936971,
-          "weight_pct": 0.0459
-        },
-        {
-          "name_of_issuer": "HUMANA INC",
-          "ticker": "HUM",
-          "value_usd": 70860473,
-          "shares": 178391,
-          "weight_pct": 0.0457
-        },
-        {
-          "name_of_issuer": "ON SEMICONDUCTOR CORP",
-          "ticker": "ON",
-          "value_usd": 70759219,
-          "shares": 748458,
-          "weight_pct": 0.0456
-        },
-        {
-          "name_of_issuer": "PULTE GROUP INC",
-          "ticker": "PHM",
-          "value_usd": 70580550,
-          "shares": 514398,
-          "weight_pct": 0.0455
-        },
-        {
-          "name_of_issuer": "PRICE T ROWE GROUP INC",
-          "ticker": "TROW",
-          "value_usd": 70433684,
-          "shares": 619524,
-          "weight_pct": 0.0454
-        },
-        {
-          "name_of_issuer": "NORTHERN TR CORP",
-          "ticker": "NTRS",
-          "value_usd": 70022230,
-          "shares": 402797,
-          "weight_pct": 0.0452
-        },
-        {
-          "name_of_issuer": "ARCH CAP GROUP LTD",
-          "ticker": "ACGL",
-          "value_usd": 69798564,
-          "shares": 719128,
-          "weight_pct": 0.045
-        },
-        {
-          "name_of_issuer": "QNITY ELECTRONICS INC",
-          "ticker": "Q",
-          "value_usd": 69506206,
-          "shares": 425609,
-          "weight_pct": 0.0448
-        },
-        {
-          "name_of_issuer": "REPUBLIC SVCS INC",
-          "ticker": "RSG",
-          "value_usd": 69492420,
-          "shares": 326133,
-          "weight_pct": 0.0448
-        },
-        {
-          "name_of_issuer": "ROCKET LAB CORP",
-          "ticker": "RKLB",
-          "value_usd": 69306190,
-          "shares": 681812,
-          "weight_pct": 0.0447
-        },
-        {
-          "name_of_issuer": "WASTE CONNECTIONS INC",
-          "ticker": "WCN",
-          "value_usd": 68442581,
-          "shares": 410598,
-          "weight_pct": 0.0441
-        },
-        {
-          "name_of_issuer": "IDEXX LABS INC",
-          "ticker": "IDXX",
-          "value_usd": 68071324,
-          "shares": 129305,
-          "weight_pct": 0.0439
-        },
-        {
-          "name_of_issuer": "ROBLOX CORP",
-          "ticker": "RBLX",
-          "value_usd": 67622835,
-          "shares": 1243524,
-          "weight_pct": 0.0436
-        },
-        {
-          "name_of_issuer": "PAYCHEX INC",
-          "ticker": "PAYX",
-          "value_usd": 67425668,
-          "shares": 685708,
-          "weight_pct": 0.0435
-        },
-        {
-          "name_of_issuer": "AXON ENTERPRISE INC",
-          "ticker": "AXON",
-          "value_usd": 66283163,
-          "shares": 118234,
-          "weight_pct": 0.0427
-        },
-        {
-          "name_of_issuer": "MSCI INC",
-          "ticker": "MSCI",
-          "value_usd": 65991753,
-          "shares": 117834,
-          "weight_pct": 0.0426
+          "name_of_issuer": "AGILENT TECHNOLOGIES INC",
+          "ticker": "A",
+          "value_usd": 82033172,
+          "shares": 476079,
+          "weight_pct": 0.0517
         },
         {
           "name_of_issuer": "GARMIN LTD",
           "ticker": "GRMN",
-          "value_usd": 65695963,
-          "shares": 276568,
-          "weight_pct": 0.0424
+          "value_usd": 80755213,
+          "shares": 281534,
+          "weight_pct": 0.0509
+        },
+        {
+          "name_of_issuer": "CARNIVAL CORP LTD",
+          "ticker": "CCL",
+          "value_usd": 80583937,
+          "shares": 3283779,
+          "weight_pct": 0.0508
+        },
+        {
+          "name_of_issuer": "WW GRAINGER INC",
+          "ticker": "GWW",
+          "value_usd": 80113580,
+          "shares": 64309,
+          "weight_pct": 0.0505
+        },
+        {
+          "name_of_issuer": "BAKER HUGHES COMPANY",
+          "ticker": "BKR",
+          "value_usd": 80115954,
+          "shares": 1459307,
+          "weight_pct": 0.0505
+        },
+        {
+          "name_of_issuer": "CREDO TECHNOLOGY GROUP HOLDI",
+          "ticker": "CRDO",
+          "value_usd": 79922142,
+          "shares": 410299,
+          "weight_pct": 0.0503
+        },
+        {
+          "name_of_issuer": "VEEVA SYS INC",
+          "ticker": "VEEV",
+          "value_usd": 79627705,
+          "shares": 278955,
+          "weight_pct": 0.0502
+        },
+        {
+          "name_of_issuer": "KEURIG DR PEPPER INC",
+          "ticker": "KDP",
+          "value_usd": 79080360,
+          "shares": 2606472,
+          "weight_pct": 0.0498
+        },
+        {
+          "name_of_issuer": "PUBLIC STORAGE",
+          "ticker": "PSA",
+          "value_usd": 78972039,
+          "shares": 279211,
+          "weight_pct": 0.0497
+        },
+        {
+          "name_of_issuer": "CBRE GROUP INC",
+          "ticker": "CBRE",
+          "value_usd": 78934666,
+          "shares": 614421,
+          "weight_pct": 0.0497
+        },
+        {
+          "name_of_issuer": "DOMINION ENERGY INC",
+          "ticker": "D",
+          "value_usd": 78414554,
+          "shares": 1295680,
+          "weight_pct": 0.0494
+        },
+        {
+          "name_of_issuer": "DOLLAR GEN CORP",
+          "ticker": "DG",
+          "value_usd": 78291298,
+          "shares": 654719,
+          "weight_pct": 0.0493
+        },
+        {
+          "name_of_issuer": "VICI PPTYS INC",
+          "ticker": "VICI",
+          "value_usd": 77986320,
+          "shares": 3395138,
+          "weight_pct": 0.0491
+        },
+        {
+          "name_of_issuer": "WABTEC",
+          "ticker": "WAB",
+          "value_usd": 77894129,
+          "shares": 271238,
+          "weight_pct": 0.0491
+        },
+        {
+          "name_of_issuer": "SYNCHRONY FINANCIAL",
+          "ticker": "SYF",
+          "value_usd": 77387746,
+          "shares": 1090429,
+          "weight_pct": 0.0488
+        },
+        {
+          "name_of_issuer": "TWILIO INC",
+          "ticker": "TWLO",
+          "value_usd": 76919612,
+          "shares": 263009,
+          "weight_pct": 0.0485
+        },
+        {
+          "name_of_issuer": "ASTERA LABS INC",
+          "ticker": "ALAB",
+          "value_usd": 76557451,
+          "shares": 215300,
+          "weight_pct": 0.0482
+        },
+        {
+          "name_of_issuer": "KROGER CO",
+          "ticker": "KR",
+          "value_usd": 76329161,
+          "shares": 1302101,
+          "weight_pct": 0.0481
+        },
+        {
+          "name_of_issuer": "ROCKWELL AUTOMATION INC",
+          "ticker": "ROK",
+          "value_usd": 76195810,
+          "shares": 175030,
+          "weight_pct": 0.048
+        },
+        {
+          "name_of_issuer": "NEBIUS GROUP N.V.",
+          "ticker": "NBIS",
+          "value_usd": 75950529,
+          "shares": 321988,
+          "weight_pct": 0.0478
+        },
+        {
+          "name_of_issuer": "FERGUSON ENTERPRISES INC",
+          "ticker": "FERG",
+          "value_usd": 75797212,
+          "shares": 340478,
+          "weight_pct": 0.0477
+        },
+        {
+          "name_of_issuer": "ARCHER DANIELS MIDLAND CO",
+          "ticker": "ADM",
+          "value_usd": 75426082,
+          "shares": 950190,
+          "weight_pct": 0.0475
+        },
+        {
+          "name_of_issuer": "L3HARRIS TECHNOLOGIES INC",
+          "ticker": "LHX",
+          "value_usd": 75223349,
+          "shares": 317693,
+          "weight_pct": 0.0474
+        },
+        {
+          "name_of_issuer": "COHERENT CORP",
+          "ticker": "COHR",
+          "value_usd": 74905143,
+          "shares": 260259,
+          "weight_pct": 0.0472
+        },
+        {
+          "name_of_issuer": "COGNIZANT TECHNOLOGY SOLUTIO",
+          "ticker": "CTSH",
+          "value_usd": 74523862,
+          "shares": 1297421,
+          "weight_pct": 0.0469
+        },
+        {
+          "name_of_issuer": "INTERACTIVE BROKERS GROUP IN",
+          "ticker": "IBKR",
+          "value_usd": 74330519,
+          "shares": 870177,
+          "weight_pct": 0.0468
+        },
+        {
+          "name_of_issuer": "AMERICAN INTL GROUP INC",
+          "ticker": "AIG",
+          "value_usd": 73480001,
+          "shares": 987369,
+          "weight_pct": 0.0463
+        },
+        {
+          "name_of_issuer": "TARGA RES CORP",
+          "ticker": "TRGP",
+          "value_usd": 73469717,
+          "shares": 271798,
+          "weight_pct": 0.0463
+        },
+        {
+          "name_of_issuer": "WATERS CORP",
+          "ticker": "WAT",
+          "value_usd": 73068360,
+          "shares": 166295,
+          "weight_pct": 0.046
+        },
+        {
+          "name_of_issuer": "SYSCO CORP",
+          "ticker": "SYY",
+          "value_usd": 71394677,
+          "shares": 915786,
+          "weight_pct": 0.045
+        },
+        {
+          "name_of_issuer": "MICROCHIP TECHNOLOGY INC.",
+          "ticker": "MCHP",
+          "value_usd": 71097801,
+          "shares": 914206,
+          "weight_pct": 0.0448
+        },
+        {
+          "name_of_issuer": "VENTAS INC",
+          "ticker": "VTR",
+          "value_usd": 71064647,
+          "shares": 835858,
+          "weight_pct": 0.0448
+        },
+        {
+          "name_of_issuer": "EXELON CORP",
+          "ticker": "EXC",
+          "value_usd": 70556742,
+          "shares": 1746454,
+          "weight_pct": 0.0444
+        },
+        {
+          "name_of_issuer": "PAYCHEX INC",
+          "ticker": "PAYX",
+          "value_usd": 70433903,
+          "shares": 715065,
+          "weight_pct": 0.0444
+        },
+        {
+          "name_of_issuer": "EQT CORP",
+          "ticker": "EQT",
+          "value_usd": 69699722,
+          "shares": 1435332,
+          "weight_pct": 0.0439
+        },
+        {
+          "name_of_issuer": "REPUBLIC SVCS INC",
+          "ticker": "RSG",
+          "value_usd": 69497401,
+          "shares": 331145,
+          "weight_pct": 0.0438
+        },
+        {
+          "name_of_issuer": "BLOCK INC",
+          "ticker": "XYZ",
+          "value_usd": 69117465,
+          "shares": 939990,
+          "weight_pct": 0.0435
+        },
+        {
+          "name_of_issuer": "D R HORTON INC",
+          "ticker": "DHI",
+          "value_usd": 68809424,
+          "shares": 503545,
+          "weight_pct": 0.0433
+        },
+        {
+          "name_of_issuer": "IDEXX LABS INC",
+          "ticker": "IDXX",
+          "value_usd": 68546837,
+          "shares": 131268,
+          "weight_pct": 0.0432
+        },
+        {
+          "name_of_issuer": "FIFTH THIRD BANCORP",
+          "ticker": "FITB",
+          "value_usd": 68479503,
+          "shares": 1353885,
+          "weight_pct": 0.0431
+        },
+        {
+          "name_of_issuer": "CHIPOTLE MEXICAN GRILL INC",
+          "ticker": "CMG",
+          "value_usd": 67879341,
+          "shares": 2124549,
+          "weight_pct": 0.0428
+        },
+        {
+          "name_of_issuer": "VISTRA CORP",
+          "ticker": "VST",
+          "value_usd": 67723570,
+          "shares": 489509,
+          "weight_pct": 0.0427
+        },
+        {
+          "name_of_issuer": "JABIL INC",
+          "ticker": "JBL",
+          "value_usd": 67565283,
+          "shares": 235534,
+          "weight_pct": 0.0426
+        },
+        {
+          "name_of_issuer": "KIMBERLY-CLARK CORP",
+          "ticker": "KMB",
+          "value_usd": 67459279,
+          "shares": 692032,
+          "weight_pct": 0.0425
+        },
+        {
+          "name_of_issuer": "HARTFORD INSURANCE GROUP INC",
+          "ticker": "HIG",
+          "value_usd": 67431250,
+          "shares": 551089,
+          "weight_pct": 0.0425
+        },
+        {
+          "name_of_issuer": "HUMANA INC",
+          "ticker": "HUM",
+          "value_usd": 67494009,
+          "shares": 176885,
+          "weight_pct": 0.0425
+        },
+        {
+          "name_of_issuer": "NORTHERN TR CORP",
+          "ticker": "NTRS",
+          "value_usd": 66452969,
+          "shares": 392377,
+          "weight_pct": 0.0419
         },
         {
           "name_of_issuer": "ILLUMINA INC",
@@ -78175,200 +78077,193 @@
           "weight_pct": 0.0419
         },
         {
-          "name_of_issuer": "M & T BK CORP",
-          "ticker": "MTB",
-          "value_usd": 64826070,
-          "shares": 272367,
+          "name_of_issuer": "ARCH CAP GROUP LTD",
+          "ticker": "ACGL",
+          "value_usd": 66387444,
+          "shares": 718790,
           "weight_pct": 0.0418
-        },
-        {
-          "name_of_issuer": "CONSOLIDATED EDISON INC",
-          "ticker": "ED",
-          "value_usd": 64667881,
-          "shares": 584542,
-          "weight_pct": 0.0417
-        },
-        {
-          "name_of_issuer": "XCEL ENERGY INC",
-          "ticker": "XEL",
-          "value_usd": 64521371,
-          "shares": 803504,
-          "weight_pct": 0.0416
-        },
-        {
-          "name_of_issuer": "KENVUE INC",
-          "ticker": "KVUE",
-          "value_usd": 64384437,
-          "shares": 3369149,
-          "weight_pct": 0.0415
-        },
-        {
-          "name_of_issuer": "STEEL DYNAMICS INC",
-          "ticker": "STLD",
-          "value_usd": 64167112,
-          "shares": 279644,
-          "weight_pct": 0.0414
-        },
-        {
-          "name_of_issuer": "CITIZENS FINL GROUP INC",
-          "ticker": "CFG",
-          "value_usd": 63595182,
-          "shares": 907595,
-          "weight_pct": 0.041
-        },
-        {
-          "name_of_issuer": "WATERS CORP",
-          "ticker": "WAT",
-          "value_usd": 63306377,
-          "shares": 168799,
-          "weight_pct": 0.0408
         },
         {
           "name_of_issuer": "ROPER TECHNOLOGIES INC",
           "ticker": "ROP",
-          "value_usd": 63245091,
-          "shares": 186900,
+          "value_usd": 66092299,
+          "shares": 189154,
+          "weight_pct": 0.0416
+        },
+        {
+          "name_of_issuer": "NASDAQ INC",
+          "ticker": "NDAQ",
+          "value_usd": 65969514,
+          "shares": 716982,
+          "weight_pct": 0.0416
+        },
+        {
+          "name_of_issuer": "CARRIER GLOBAL CORPORATION",
+          "ticker": "CARR",
+          "value_usd": 65542559,
+          "shares": 1194724,
+          "weight_pct": 0.0413
+        },
+        {
+          "name_of_issuer": "STEEL DYNAMICS INC",
+          "ticker": "STLD",
+          "value_usd": 64949459,
+          "shares": 293080,
+          "weight_pct": 0.0409
+        },
+        {
+          "name_of_issuer": "TAKE-TWO INTERACTIVE SOFTWAR",
+          "ticker": "TTWO",
+          "value_usd": 64692275,
+          "shares": 311770,
           "weight_pct": 0.0408
         },
         {
-          "name_of_issuer": "HERSHEY CO",
-          "ticker": "HSY",
-          "value_usd": 62864963,
-          "shares": 358307,
+          "name_of_issuer": "OCCIDENTAL PETE CORP",
+          "ticker": "OXY",
+          "value_usd": 64717596,
+          "shares": 1169877,
+          "weight_pct": 0.0408
+        },
+        {
+          "name_of_issuer": "HP INC",
+          "ticker": "HPQ",
+          "value_usd": 64666708,
+          "shares": 2067350,
+          "weight_pct": 0.0407
+        },
+        {
+          "name_of_issuer": "WASTE CONNECTIONS INC",
+          "ticker": "WCN",
+          "value_usd": 64361673,
+          "shares": 418123,
           "weight_pct": 0.0405
         },
         {
-          "name_of_issuer": "ENTERGY CORP NEW",
-          "ticker": "ETR",
-          "value_usd": 62803840,
-          "shares": 546786,
-          "weight_pct": 0.0405
+          "name_of_issuer": "YUM BRANDS INC",
+          "ticker": "YUM",
+          "value_usd": 64070120,
+          "shares": 469929,
+          "weight_pct": 0.0404
         },
         {
-          "name_of_issuer": "AGILENT TECHNOLOGIES INC",
-          "ticker": "A",
-          "value_usd": 62363818,
-          "shares": 469501,
+          "name_of_issuer": "MSCI INC",
+          "ticker": "MSCI",
+          "value_usd": 63938942,
+          "shares": 118700,
+          "weight_pct": 0.0403
+        },
+        {
+          "name_of_issuer": "EMCOR GROUP INC",
+          "ticker": "EME",
+          "value_usd": 63835135,
+          "shares": 84607,
           "weight_pct": 0.0402
         },
         {
-          "name_of_issuer": "HALLIBURTON CO",
-          "ticker": "HAL",
-          "value_usd": 61497981,
-          "shares": 1811428,
-          "weight_pct": 0.0397
-        },
-        {
-          "name_of_issuer": "NATERA INC",
-          "ticker": "NTRA",
-          "value_usd": 61139769,
-          "shares": 225234,
-          "weight_pct": 0.0394
-        },
-        {
-          "name_of_issuer": "ZOOM COMMUNICATIONS INC",
-          "ticker": "ZM",
-          "value_usd": 60756457,
-          "shares": 703933,
+          "name_of_issuer": "PG&E CORP",
+          "ticker": "PCG",
+          "value_usd": 62284219,
+          "shares": 5084426,
           "weight_pct": 0.0392
         },
         {
-          "name_of_issuer": "WILLIAMS SONOMA INC",
-          "ticker": "WSM",
-          "value_usd": 60620452,
-          "shares": 260062,
-          "weight_pct": 0.0391
+          "name_of_issuer": "RESMED INC",
+          "ticker": "RMD",
+          "value_usd": 62270604,
+          "shares": 281640,
+          "weight_pct": 0.0392
         },
         {
-          "name_of_issuer": "VULCAN MATLS CO",
-          "ticker": "VMC",
-          "value_usd": 60548737,
-          "shares": 205243,
-          "weight_pct": 0.039
-        },
-        {
-          "name_of_issuer": "ZOETIS INC",
-          "ticker": "ZTS",
-          "value_usd": 60353418,
-          "shares": 839875,
+          "name_of_issuer": "M & T BK CORP",
+          "ticker": "MTB",
+          "value_usd": 61706355,
+          "shares": 283577,
           "weight_pct": 0.0389
         },
         {
-          "name_of_issuer": "CENTENE CORP DEL",
-          "ticker": "CNC",
-          "value_usd": 60317674,
-          "shares": 939674,
-          "weight_pct": 0.0389
+          "name_of_issuer": "COINBASE GLOBAL INC",
+          "ticker": "COIN",
+          "value_usd": 61288625,
+          "shares": 328784,
+          "weight_pct": 0.0386
         },
         {
-          "name_of_issuer": "FIRST SOLAR INC",
-          "ticker": "FSLR",
-          "value_usd": 60113877,
-          "shares": 254763,
-          "weight_pct": 0.0388
+          "name_of_issuer": "METTLER TOLEDO INTERNATIONAL",
+          "ticker": "MTD",
+          "value_usd": 60295971,
+          "shares": 39906,
+          "weight_pct": 0.038
         },
         {
-          "name_of_issuer": "ALNYLAM PHARMACEUTICALS INC",
-          "ticker": "ALNY",
-          "value_usd": 59692744,
-          "shares": 198295,
-          "weight_pct": 0.0385
+          "name_of_issuer": "CITIZENS FINL GROUP INC",
+          "ticker": "CFG",
+          "value_usd": 60204934,
+          "shares": 944243,
+          "weight_pct": 0.0379
         },
         {
-          "name_of_issuer": "PUBLIC SVC ENTERPRISE GROUP",
-          "ticker": "PEG",
-          "value_usd": 59425271,
-          "shares": 732199,
-          "weight_pct": 0.0383
-        },
-        {
-          "name_of_issuer": "REGIONS FINANCIAL CORP NEW",
-          "ticker": "RF",
-          "value_usd": 58405350,
-          "shares": 1933952,
-          "weight_pct": 0.0377
+          "name_of_issuer": "KENVUE INC",
+          "ticker": "KVUE",
+          "value_usd": 59981837,
+          "shares": 3396480,
+          "weight_pct": 0.0378
         },
         {
           "name_of_issuer": "SEA LTD",
           "ticker": "SE",
-          "value_usd": 58019028,
-          "shares": 605437,
-          "weight_pct": 0.0374
+          "value_usd": 59593667,
+          "shares": 612096,
+          "weight_pct": 0.0375
+        },
+        {
+          "name_of_issuer": "CBOE GLOBAL MKTS INC",
+          "ticker": "CBOE",
+          "value_usd": 59148809,
+          "shares": 214860,
+          "weight_pct": 0.0373
+        },
+        {
+          "name_of_issuer": "WILLIAMS SONOMA INC",
+          "ticker": "WSM",
+          "value_usd": 58906306,
+          "shares": 258429,
+          "weight_pct": 0.0371
+        },
+        {
+          "name_of_issuer": "HALLIBURTON CO",
+          "ticker": "HAL",
+          "value_usd": 58809044,
+          "shares": 1849341,
+          "weight_pct": 0.037
+        },
+        {
+          "name_of_issuer": "CONSOLIDATED EDISON INC",
+          "ticker": "ED",
+          "value_usd": 58470866,
+          "shares": 572066,
+          "weight_pct": 0.0368
+        },
+        {
+          "name_of_issuer": "DIAMONDBACK ENERGY INC",
+          "ticker": "FANG",
+          "value_usd": 58449007,
+          "shares": 317986,
+          "weight_pct": 0.0368
+        },
+        {
+          "name_of_issuer": "CENTENE CORP DEL",
+          "ticker": "CNC",
+          "value_usd": 57929820,
+          "shares": 932547,
+          "weight_pct": 0.0365
         },
         {
           "name_of_issuer": "PRINCIPAL FINANCIAL GROUP IN",
           "ticker": "PFG",
-          "value_usd": 57974431,
-          "shares": 537896,
-          "weight_pct": 0.0374
-        },
-        {
-          "name_of_issuer": "HUNTINGTON BANCSHARES INC",
-          "ticker": "HBAN",
-          "value_usd": 57776591,
-          "shares": 3258691,
-          "weight_pct": 0.0373
-        },
-        {
-          "name_of_issuer": "OLD DOMINION FREIGHT LINE IN",
-          "ticker": "ODFL",
-          "value_usd": 57676898,
-          "shares": 266283,
-          "weight_pct": 0.0372
-        },
-        {
-          "name_of_issuer": "IRON MTN INC DEL",
-          "ticker": "IRM",
-          "value_usd": 57447683,
-          "shares": 454815,
-          "weight_pct": 0.037
-        },
-        {
-          "name_of_issuer": "DOVER CORP",
-          "ticker": "DOV",
-          "value_usd": 57379122,
-          "shares": 255837,
-          "weight_pct": 0.037
+          "value_usd": 57801029,
+          "shares": 516265,
+          "weight_pct": 0.0364
         },
         {
           "name_of_issuer": "WORKDAY INC",
@@ -78378,1509 +78273,1607 @@
           "weight_pct": 0.0364
         },
         {
-          "name_of_issuer": "NASDAQ INC",
-          "ticker": "NDAQ",
-          "value_usd": 56164294,
-          "shares": 712564,
-          "weight_pct": 0.0362
+          "name_of_issuer": "DEXCOM INC",
+          "ticker": "DXCM",
+          "value_usd": 57608153,
+          "shares": 667611,
+          "weight_pct": 0.0363
         },
         {
-          "name_of_issuer": "PPG INDS INC",
-          "ticker": "PPG",
-          "value_usd": 55926091,
-          "shares": 461094,
-          "weight_pct": 0.0361
+          "name_of_issuer": "XCEL ENERGY INC",
+          "ticker": "XEL",
+          "value_usd": 57118684,
+          "shares": 810424,
+          "weight_pct": 0.036
         },
         {
-          "name_of_issuer": "OCCIDENTAL PETE CORP",
-          "ticker": "OXY",
-          "value_usd": 55461257,
-          "shares": 1141883,
+          "name_of_issuer": "REVOLUTION MEDICINES INC",
+          "ticker": "RVMD",
+          "value_usd": 57146231,
+          "shares": 278409,
+          "weight_pct": 0.036
+        },
+        {
+          "name_of_issuer": "ON SEMICONDUCTOR CORP",
+          "ticker": "ON",
+          "value_usd": 57062907,
+          "shares": 742330,
+          "weight_pct": 0.0359
+        },
+        {
+          "name_of_issuer": "HERSHEY CO",
+          "ticker": "HSY",
+          "value_usd": 56750790,
+          "shares": 360071,
           "weight_pct": 0.0358
         },
         {
           "name_of_issuer": "GE HEALTHCARE TECHNOLOGIES I",
           "ticker": "GEHC",
-          "value_usd": 55186478,
-          "shares": 862154,
+          "value_usd": 56577474,
+          "shares": 865496,
           "weight_pct": 0.0356
         },
         {
-          "name_of_issuer": "MARTIN MARIETTA MATLS INC",
-          "ticker": "MLM",
-          "value_usd": 54913951,
-          "shares": 95221,
-          "weight_pct": 0.0354
+          "name_of_issuer": "ENTERGY CORP NEW",
+          "ticker": "ETR",
+          "value_usd": 56033759,
+          "shares": 564515,
+          "weight_pct": 0.0353
         },
         {
-          "name_of_issuer": "RESMED INC",
-          "ticker": "RMD",
-          "value_usd": 54851899,
-          "shares": 281465,
-          "weight_pct": 0.0354
-        },
-        {
-          "name_of_issuer": "TELEDYNE TECHNOLOGIES INC",
-          "ticker": "TDY",
-          "value_usd": 54631781,
-          "shares": 81919,
-          "weight_pct": 0.0352
-        },
-        {
-          "name_of_issuer": "OTIS WORLDWIDE CORP",
-          "ticker": "OTIS",
-          "value_usd": 54519032,
-          "shares": 761439,
-          "weight_pct": 0.0352
-        },
-        {
-          "name_of_issuer": "LIVE NATION ENTERTAINMENT IN",
-          "ticker": "LYV",
-          "value_usd": 54361880,
-          "shares": 296881,
-          "weight_pct": 0.0351
-        },
-        {
-          "name_of_issuer": "FISERV INC",
-          "ticker": "FISV",
-          "value_usd": 54359515,
-          "shares": 1108247,
+          "name_of_issuer": "PRICE T ROWE GROUP INC",
+          "ticker": "TROW",
+          "value_usd": 55666542,
+          "shares": 534998,
           "weight_pct": 0.0351
         },
         {
           "name_of_issuer": "AERCAP HOLDINGS NV",
           "ticker": "AER",
-          "value_usd": 54110037,
-          "shares": 371176,
-          "weight_pct": 0.0349
-        },
-        {
-          "name_of_issuer": "TWILIO INC",
-          "ticker": "TWLO",
-          "value_usd": 53915473,
-          "shares": 261307,
-          "weight_pct": 0.0348
-        },
-        {
-          "name_of_issuer": "DIAMONDBACK ENERGY INC",
-          "ticker": "FANG",
-          "value_usd": 53864617,
-          "shares": 306432,
+          "value_usd": 55118138,
+          "shares": 384045,
           "weight_pct": 0.0347
         },
         {
-          "name_of_issuer": "CASEYS GEN STORES INC",
-          "ticker": "CASY",
-          "value_usd": 53621302,
-          "shares": 67466,
-          "weight_pct": 0.0346
-        },
-        {
-          "name_of_issuer": "COINBASE GLOBAL INC",
-          "ticker": "COIN",
-          "value_usd": 53490336,
-          "shares": 365896,
+          "name_of_issuer": "ZOETIS INC",
+          "ticker": "ZTS",
+          "value_usd": 54814315,
+          "shares": 784968,
           "weight_pct": 0.0345
         },
         {
-          "name_of_issuer": "EVERSOURCE ENERGY",
-          "ticker": "ES",
-          "value_usd": 52730143,
-          "shares": 729627,
-          "weight_pct": 0.034
+          "name_of_issuer": "QNITY ELECTRONICS INC",
+          "ticker": "Q",
+          "value_usd": 54122645,
+          "shares": 430433,
+          "weight_pct": 0.0341
         },
         {
-          "name_of_issuer": "EXTRA SPACE STORAGE INC",
-          "ticker": "EXR",
-          "value_usd": 52430343,
-          "shares": 360842,
-          "weight_pct": 0.0338
+          "name_of_issuer": "ZOOM COMMUNICATIONS INC",
+          "ticker": "ZM",
+          "value_usd": 54126242,
+          "shares": 596301,
+          "weight_pct": 0.0341
         },
         {
-          "name_of_issuer": "INGERSOLL RAND INC",
-          "ticker": "IR",
-          "value_usd": 52408418,
-          "shares": 639205,
-          "weight_pct": 0.0338
-        },
-        {
-          "name_of_issuer": "COREWEAVE INC",
-          "ticker": "CRWV",
-          "value_usd": 52243967,
-          "shares": 524854,
+          "name_of_issuer": "EDISON INTL",
+          "ticker": "EIX",
+          "value_usd": 53492836,
+          "shares": 995586,
           "weight_pct": 0.0337
         },
         {
-          "name_of_issuer": "CINCINNATI FINL CORP",
-          "ticker": "CINF",
-          "value_usd": 51644248,
-          "shares": 278947,
-          "weight_pct": 0.0333
+          "name_of_issuer": "REGIONS FINANCIAL CORP NEW",
+          "ticker": "RF",
+          "value_usd": 53507059,
+          "shares": 1990590,
+          "weight_pct": 0.0337
         },
         {
           "name_of_issuer": "MONGODB INC",
           "ticker": "MDB",
-          "value_usd": 51623463,
-          "shares": 153687,
-          "weight_pct": 0.0333
+          "value_usd": 53447142,
+          "shares": 153315,
+          "weight_pct": 0.0337
         },
         {
-          "name_of_issuer": "DARDEN RESTAURANTS INC",
-          "ticker": "DRI",
-          "value_usd": 51367769,
-          "shares": 249346,
-          "weight_pct": 0.0331
-        },
-        {
-          "name_of_issuer": "REVOLUTION MEDICINES INC",
-          "ticker": "RVMD",
-          "value_usd": 51240557,
-          "shares": 273604,
-          "weight_pct": 0.033
-        },
-        {
-          "name_of_issuer": "CROWN CASTLE INC",
-          "ticker": "CCI",
-          "value_usd": 51089276,
-          "shares": 674624,
-          "weight_pct": 0.0329
-        },
-        {
-          "name_of_issuer": "CBOE GLOBAL MKTS INC",
-          "ticker": "CBOE",
-          "value_usd": 50859264,
-          "shares": 209582,
-          "weight_pct": 0.0328
-        },
-        {
-          "name_of_issuer": "METTLER TOLEDO INTERNATIONAL",
-          "ticker": "MTD",
-          "value_usd": 50712037,
-          "shares": 39696,
-          "weight_pct": 0.0327
-        },
-        {
-          "name_of_issuer": "NRG ENERGY INC",
-          "ticker": "NRG",
-          "value_usd": 50460371,
-          "shares": 345477,
-          "weight_pct": 0.0325
-        },
-        {
-          "name_of_issuer": "FAIR ISAAC CORP",
-          "ticker": "FICO",
-          "value_usd": 50207045,
-          "shares": 42022,
-          "weight_pct": 0.0324
-        },
-        {
-          "name_of_issuer": "FTAI AVIATION LTD",
-          "ticker": "FTAI",
-          "value_usd": 50114330,
-          "shares": 185245,
-          "weight_pct": 0.0323
-        },
-        {
-          "name_of_issuer": "WEC ENERGY GROUP INC",
-          "ticker": "WEC",
-          "value_usd": 49953856,
-          "shares": 427797,
-          "weight_pct": 0.0322
-        },
-        {
-          "name_of_issuer": "COGNIZANT TECHNOLOGY SOLUTIO",
-          "ticker": "CTSH",
-          "value_usd": 49403678,
-          "shares": 1275592,
-          "weight_pct": 0.0319
+          "name_of_issuer": "TAPESTRY INC",
+          "ticker": "TPR",
+          "value_usd": 53177700,
+          "shares": 462254,
+          "weight_pct": 0.0335
         },
         {
           "name_of_issuer": "RAYMOND JAMES FINL INC",
           "ticker": "RJF",
-          "value_usd": 49309866,
-          "shares": 324343,
+          "value_usd": 52833987,
+          "shares": 334350,
+          "weight_pct": 0.0333
+        },
+        {
+          "name_of_issuer": "IRON MTN INC DEL",
+          "ticker": "IRM",
+          "value_usd": 51411678,
+          "shares": 463377,
+          "weight_pct": 0.0324
+        },
+        {
+          "name_of_issuer": "HUNTINGTON BANCSHARES INC",
+          "ticker": "HBAN",
+          "value_usd": 51258828,
+          "shares": 3359032,
+          "weight_pct": 0.0323
+        },
+        {
+          "name_of_issuer": "LIVE NATION ENTERTAINMENT IN",
+          "ticker": "LYV",
+          "value_usd": 51183284,
+          "shares": 302323,
+          "weight_pct": 0.0322
+        },
+        {
+          "name_of_issuer": "VULCAN MATLS CO",
+          "ticker": "VMC",
+          "value_usd": 50886954,
+          "shares": 208016,
+          "weight_pct": 0.0321
+        },
+        {
+          "name_of_issuer": "AXON ENTERPRISE INC",
+          "ticker": "AXON",
+          "value_usd": 50707470,
+          "shares": 120012,
+          "weight_pct": 0.0319
+        },
+        {
+          "name_of_issuer": "TELEDYNE TECHNOLOGIES INC",
+          "ticker": "TDY",
+          "value_usd": 50420450,
+          "shares": 83091,
           "weight_pct": 0.0318
         },
         {
-          "name_of_issuer": "VEEVA SYS INC",
-          "ticker": "VEEV",
-          "value_usd": 49010293,
-          "shares": 276161,
+          "name_of_issuer": "ALNYLAM PHARMACEUTICALS INC",
+          "ticker": "ALNY",
+          "value_usd": 50393931,
+          "shares": 204239,
+          "weight_pct": 0.0317
+        },
+        {
+          "name_of_issuer": "OTIS WORLDWIDE CORP",
+          "ticker": "OTIS",
+          "value_usd": 50086756,
+          "shares": 778712,
           "weight_pct": 0.0316
         },
         {
-          "name_of_issuer": "CURTISS WRIGHT CORP",
-          "ticker": "CW",
-          "value_usd": 48442081,
-          "shares": 63928,
-          "weight_pct": 0.0312
-        },
-        {
-          "name_of_issuer": "XYLEM INC",
-          "ticker": "XYL",
-          "value_usd": 48391982,
-          "shares": 409373,
-          "weight_pct": 0.0312
-        },
-        {
-          "name_of_issuer": "FIRSTENERGY CORP",
-          "ticker": "FE",
-          "value_usd": 48207034,
-          "shares": 1014031,
-          "weight_pct": 0.0311
-        },
-        {
-          "name_of_issuer": "HP INC",
-          "ticker": "HPQ",
-          "value_usd": 47369930,
-          "shares": 2159067,
-          "weight_pct": 0.0305
-        },
-        {
-          "name_of_issuer": "HUBBELL INC",
-          "ticker": "HUBB",
-          "value_usd": 47255424,
-          "shares": 90320,
-          "weight_pct": 0.0305
-        },
-        {
-          "name_of_issuer": "AVALONBAY CMNTYS INC",
-          "ticker": "AVB",
-          "value_usd": 46128856,
-          "shares": 244469,
-          "weight_pct": 0.0297
+          "name_of_issuer": "FISERV INC",
+          "ticker": "FISV",
+          "value_usd": 50134891,
+          "shares": 1109670,
+          "weight_pct": 0.0316
         },
         {
           "name_of_issuer": "LPL FINL HLDGS INC",
           "ticker": "LPLA",
-          "value_usd": 45437519,
-          "shares": 161309,
-          "weight_pct": 0.0293
+          "value_usd": 50144167,
+          "shares": 163977,
+          "weight_pct": 0.0316
         },
         {
-          "name_of_issuer": "WEST PHARMACEUTICAL SVSC INC",
-          "ticker": "WST",
-          "value_usd": 45331289,
-          "shares": 126271,
-          "weight_pct": 0.0292
+          "name_of_issuer": "PULTE GROUP INC",
+          "ticker": "PHM",
+          "value_usd": 50051920,
+          "shares": 431259,
+          "weight_pct": 0.0315
         },
         {
-          "name_of_issuer": "DTE ENERGY CO",
-          "ticker": "DTE",
-          "value_usd": 45084302,
-          "shares": 295887,
-          "weight_pct": 0.0291
+          "name_of_issuer": "ROCKET LAB CORP",
+          "ticker": "RKLB",
+          "value_usd": 49904259,
+          "shares": 716192,
+          "weight_pct": 0.0314
         },
         {
           "name_of_issuer": "WILLIS TOWERS WATSON PLC LTD",
           "ticker": "WTW",
-          "value_usd": 44663167,
-          "shares": 170881,
-          "weight_pct": 0.0288
+          "value_usd": 49097386,
+          "shares": 170341,
+          "weight_pct": 0.0309
         },
         {
-          "name_of_issuer": "AMEREN CORP",
-          "ticker": "AEE",
-          "value_usd": 44537195,
-          "shares": 393995,
-          "weight_pct": 0.0287
+          "name_of_issuer": "ROBLOX CORP",
+          "ticker": "RBLX",
+          "value_usd": 48802741,
+          "shares": 1151823,
+          "weight_pct": 0.0307
         },
         {
-          "name_of_issuer": "DEXCOM INC",
-          "ticker": "DXCM",
-          "value_usd": 44471811,
-          "shares": 660309,
-          "weight_pct": 0.0287
+          "name_of_issuer": "INGERSOLL RAND INC",
+          "ticker": "IR",
+          "value_usd": 48752173,
+          "shares": 649077,
+          "weight_pct": 0.0307
         },
         {
-          "name_of_issuer": "VERISK ANALYTICS INC",
-          "ticker": "VRSK",
-          "value_usd": 44212135,
-          "shares": 246266,
-          "weight_pct": 0.0285
+          "name_of_issuer": "DOVER CORP",
+          "ticker": "DOV",
+          "value_usd": 48580065,
+          "shares": 259717,
+          "weight_pct": 0.0306
         },
         {
-          "name_of_issuer": "ATMOS ENERGY CORP",
-          "ticker": "ATO",
-          "value_usd": 43147606,
-          "shares": 250465,
-          "weight_pct": 0.0278
+          "name_of_issuer": "WEST PHARMACEUTICAL SVSC INC",
+          "ticker": "WST",
+          "value_usd": 48641487,
+          "shares": 131194,
+          "weight_pct": 0.0306
+        },
+        {
+          "name_of_issuer": "EXTRA SPACE STORAGE INC",
+          "ticker": "EXR",
+          "value_usd": 48384370,
+          "shares": 367914,
+          "weight_pct": 0.0305
+        },
+        {
+          "name_of_issuer": "OLD DOMINION FREIGHT LINE IN",
+          "ticker": "ODFL",
+          "value_usd": 48234516,
+          "shares": 277465,
+          "weight_pct": 0.0304
+        },
+        {
+          "name_of_issuer": "EVERSOURCE ENERGY",
+          "ticker": "ES",
+          "value_usd": 48063796,
+          "shares": 749124,
+          "weight_pct": 0.0303
         },
         {
           "name_of_issuer": "VERISIGN INC",
           "ticker": "VRSN",
-          "value_usd": 43053236,
-          "shares": 171145,
-          "weight_pct": 0.0278
+          "value_usd": 47807463,
+          "shares": 169524,
+          "weight_pct": 0.0301
         },
         {
-          "name_of_issuer": "CENTERPOINT ENERGY INC",
-          "ticker": "CNP",
-          "value_usd": 42771780,
-          "shares": 971203,
-          "weight_pct": 0.0276
+          "name_of_issuer": "MARTIN MARIETTA MATLS INC",
+          "ticker": "MLM",
+          "value_usd": 46601546,
+          "shares": 97125,
+          "weight_pct": 0.0294
         },
         {
-          "name_of_issuer": "COPART INC",
-          "ticker": "CPRT",
-          "value_usd": 42522557,
-          "shares": 1508427,
-          "weight_pct": 0.0274
+          "name_of_issuer": "AMRIZE LTD",
+          "ticker": "AMRZ",
+          "value_usd": 46577957,
+          "shares": 1245733,
+          "weight_pct": 0.0293
         },
         {
-          "name_of_issuer": "ARES MANAGEMENT CORPORATION",
-          "ticker": "ARES",
-          "value_usd": 40898967,
-          "shares": 367433,
-          "weight_pct": 0.0264
+          "name_of_issuer": "CROWN CASTLE INC",
+          "ticker": "CCI",
+          "value_usd": 45172104,
+          "shares": 677751,
+          "weight_pct": 0.0285
+        },
+        {
+          "name_of_issuer": "VIVMARK RESIDENTIAL",
+          "ticker": "EQR",
+          "value_usd": 45314079,
+          "shares": 745788,
+          "weight_pct": 0.0285
+        },
+        {
+          "name_of_issuer": "PUBLIC SVC ENTERPRISE GROUP",
+          "ticker": "PEG",
+          "value_usd": 45147430,
+          "shares": 670440,
+          "weight_pct": 0.0284
         },
         {
           "name_of_issuer": "TECHNIPFMC PLC",
           "ticker": "FTI",
-          "value_usd": 40511024,
-          "shares": 611026,
-          "weight_pct": 0.0261
+          "value_usd": 44734965,
+          "shares": 658642,
+          "weight_pct": 0.0282
+        },
+        {
+          "name_of_issuer": "CINCINNATI FINL CORP",
+          "ticker": "CINF",
+          "value_usd": 44442396,
+          "shares": 278863,
+          "weight_pct": 0.028
+        },
+        {
+          "name_of_issuer": "FIRSTENERGY CORP",
+          "ticker": "FE",
+          "value_usd": 44471139,
+          "shares": 1026336,
+          "weight_pct": 0.028
+        },
+        {
+          "name_of_issuer": "WEC ENERGY GROUP INC",
+          "ticker": "WEC",
+          "value_usd": 43916800,
+          "shares": 435769,
+          "weight_pct": 0.0277
+        },
+        {
+          "name_of_issuer": "COREWEAVE INC",
+          "ticker": "CRWV",
+          "value_usd": 43547977,
+          "shares": 499862,
+          "weight_pct": 0.0274
+        },
+        {
+          "name_of_issuer": "COPART INC",
+          "ticker": "CPRT",
+          "value_usd": 42150464,
+          "shares": 1545105,
+          "weight_pct": 0.0266
+        },
+        {
+          "name_of_issuer": "XYLEM INC",
+          "ticker": "XYL",
+          "value_usd": 42109180,
+          "shares": 415811,
+          "weight_pct": 0.0265
+        },
+        {
+          "name_of_issuer": "DARDEN RESTAURANTS INC",
+          "ticker": "DRI",
+          "value_usd": 41957860,
+          "shares": 217117,
+          "weight_pct": 0.0264
         },
         {
           "name_of_issuer": "ROYALTY PHARMA PLC",
           "ticker": "RPRX",
-          "value_usd": 39651470,
-          "shares": 707178,
-          "weight_pct": 0.0256
+          "value_usd": 41641961,
+          "shares": 713536,
+          "weight_pct": 0.0262
         },
         {
-          "name_of_issuer": "PPL CORP",
-          "ticker": "PPL",
-          "value_usd": 39614775,
-          "shares": 1089815,
-          "weight_pct": 0.0255
+          "name_of_issuer": "ARES MANAGEMENT CORPORATION",
+          "ticker": "ARES",
+          "value_usd": 41482448,
+          "shares": 357084,
+          "weight_pct": 0.0261
+        },
+        {
+          "name_of_issuer": "AMEREN CORP",
+          "ticker": "AEE",
+          "value_usd": 39785392,
+          "shares": 400336,
+          "weight_pct": 0.0251
+        },
+        {
+          "name_of_issuer": "ATMOS ENERGY CORP",
+          "ticker": "ATO",
+          "value_usd": 39920516,
+          "shares": 255181,
+          "weight_pct": 0.0251
+        },
+        {
+          "name_of_issuer": "PPG INDS INC",
+          "ticker": "PPG",
+          "value_usd": 39742949,
+          "shares": 380935,
+          "weight_pct": 0.025
         },
         {
           "name_of_issuer": "AMERICAN WTR WKS CO INC NEW",
           "ticker": "AWK",
-          "value_usd": 38968338,
-          "shares": 296157,
-          "weight_pct": 0.0251
+          "value_usd": 39004909,
+          "shares": 301266,
+          "weight_pct": 0.0246
         },
         {
-          "name_of_issuer": "XPO INC",
-          "ticker": "XPO",
-          "value_usd": 37695145,
-          "shares": 183619,
-          "weight_pct": 0.0243
+          "name_of_issuer": "FIRST SOLAR INC",
+          "ticker": "FSLR",
+          "value_usd": 37225879,
+          "shares": 212525,
+          "weight_pct": 0.0235
         },
         {
-          "name_of_issuer": "DOW HLDGS INC",
-          "ticker": "DOW",
-          "value_usd": 36578159,
-          "shares": 1336921,
-          "weight_pct": 0.0236
+          "name_of_issuer": "PPL CORP",
+          "ticker": "PPL",
+          "value_usd": 36623015,
+          "shares": 1113500,
+          "weight_pct": 0.0231
+        },
+        {
+          "name_of_issuer": "DTE ENERGY CO",
+          "ticker": "DTE",
+          "value_usd": 36444752,
+          "shares": 299218,
+          "weight_pct": 0.023
+        },
+        {
+          "name_of_issuer": "CENTERPOINT ENERGY INC",
+          "ticker": "CNP",
+          "value_usd": 35525837,
+          "shares": 965376,
+          "weight_pct": 0.0224
         },
         {
           "name_of_issuer": "DOLLAR TREE INC",
           "ticker": "DLTR",
-          "value_usd": 36526295,
-          "shares": 301995,
-          "weight_pct": 0.0236
+          "value_usd": 34835504,
+          "shares": 305521,
+          "weight_pct": 0.0219
         },
         {
-          "name_of_issuer": "MEDLINE INC",
-          "ticker": "MDLN",
-          "value_usd": 35496000,
-          "shares": 900000,
-          "weight_pct": 0.0229
+          "name_of_issuer": "CASEYS GEN STORES INC",
+          "ticker": "CASY",
+          "value_usd": 33479903,
+          "shares": 55024,
+          "weight_pct": 0.0211
         },
         {
           "name_of_issuer": "OMNICOM GROUP INC",
           "ticker": "OMC",
-          "value_usd": 31679521,
-          "shares": 434979,
-          "weight_pct": 0.0204
+          "value_usd": 32962237,
+          "shares": 447674,
+          "weight_pct": 0.0208
+        },
+        {
+          "name_of_issuer": "HUBBELL INC",
+          "ticker": "HUBB",
+          "value_usd": 32611118,
+          "shares": 71894,
+          "weight_pct": 0.0205
+        },
+        {
+          "name_of_issuer": "VERISK ANALYTICS INC",
+          "ticker": "VRSK",
+          "value_usd": 32175502,
+          "shares": 191692,
+          "weight_pct": 0.0203
+        },
+        {
+          "name_of_issuer": "MEDLINE INC",
+          "ticker": "MDLN",
+          "value_usd": 31586404,
+          "shares": 910271,
+          "weight_pct": 0.0199
         },
         {
           "name_of_issuer": "GLOBAL PMTS INC",
           "ticker": "GPN",
-          "value_usd": 28815753,
-          "shares": 397130,
-          "weight_pct": 0.0186
+          "value_usd": 31586036,
+          "shares": 386752,
+          "weight_pct": 0.0199
         },
         {
-          "name_of_issuer": "FEDEX FGHT HLDG CO INC",
-          "ticker": "FDXF",
-          "value_usd": 26648178,
-          "shares": 176478,
-          "weight_pct": 0.0172
+          "name_of_issuer": "DOW HLDGS INC",
+          "ticker": "DOW",
+          "value_usd": 29679252,
+          "shares": 1077678,
+          "weight_pct": 0.0187
+        },
+        {
+          "name_of_issuer": "CURTISS WRIGHT CORP",
+          "ticker": "CW",
+          "value_usd": 26337203,
+          "shares": 48430,
+          "weight_pct": 0.0166
+        },
+        {
+          "name_of_issuer": "XPO INC",
+          "ticker": "XPO",
+          "value_usd": 26001573,
+          "shares": 147753,
+          "weight_pct": 0.0164
+        },
+        {
+          "name_of_issuer": "NRG ENERGY INC",
+          "ticker": "NRG",
+          "value_usd": 23822685,
+          "shares": 249061,
+          "weight_pct": 0.015
+        },
+        {
+          "name_of_issuer": "FTAI AVIATION LTD",
+          "ticker": "FTAI",
+          "value_usd": 23164054,
+          "shares": 138682,
+          "weight_pct": 0.0146
         },
         {
           "name_of_issuer": "EXPAND ENERGY CORPORATION",
           "ticker": "EXE",
-          "value_usd": 22240785,
-          "shares": 243895,
-          "weight_pct": 0.0143
-        },
-        {
-          "name_of_issuer": "CHARTER COMMUNICATIONS INC",
-          "ticker": "CHTR",
-          "value_usd": 22030036,
-          "shares": 154912,
-          "weight_pct": 0.0142
+          "value_usd": 22272918,
+          "shares": 264870,
+          "weight_pct": 0.014
         },
         {
           "name_of_issuer": "AMCOR PLC",
           "ticker": "AMCR",
-          "value_usd": 21914465,
-          "shares": 505524,
-          "weight_pct": 0.0141
-        },
-        {
-          "name_of_issuer": "CONSTELLATION BRANDS INC",
-          "ticker": "STZ",
-          "value_usd": 21231254,
-          "shares": 152644,
+          "value_usd": 21788088,
+          "shares": 520499,
           "weight_pct": 0.0137
         },
         {
-          "name_of_issuer": "LAS VEGAS SANDS CORP",
-          "ticker": "LVS",
-          "value_usd": 17478527,
-          "shares": 378405,
-          "weight_pct": 0.0113
-        },
-        {
-          "name_of_issuer": "ZIMMER BIOMET HOLDINGS INC",
-          "ticker": "ZBH",
-          "value_usd": 17169531,
-          "shares": 199437,
-          "weight_pct": 0.0111
+          "name_of_issuer": "FEDEX FGHT HLDG CO INC",
+          "ticker": "FDXF",
+          "value_usd": 19941505,
+          "shares": 182314,
+          "weight_pct": 0.0126
         },
         {
           "name_of_issuer": "LEIDOS HOLDINGS INC",
           "ticker": "LDOS",
-          "value_usd": 17084473,
-          "shares": 165917,
-          "weight_pct": 0.011
+          "value_usd": 19987795,
+          "shares": 164063,
+          "weight_pct": 0.0126
+        },
+        {
+          "name_of_issuer": "FAIR ISAAC CORP",
+          "ticker": "FICO",
+          "value_usd": 19820491,
+          "shares": 33454,
+          "weight_pct": 0.0125
+        },
+        {
+          "name_of_issuer": "ZIMMER BIOMET HOLDINGS INC",
+          "ticker": "ZBH",
+          "value_usd": 19557435,
+          "shares": 220167,
+          "weight_pct": 0.0123
         },
         {
           "name_of_issuer": "UNITED THERAPEUTICS CORP DEL",
           "ticker": "UTHR",
-          "value_usd": 16734420,
-          "shares": 30885,
-          "weight_pct": 0.0108
+          "value_usd": 18216716,
+          "shares": 33617,
+          "weight_pct": 0.0115
         },
         {
-          "name_of_issuer": "NU HLDGS LTD",
-          "ticker": "NU",
-          "value_usd": 16375045,
-          "shares": 1225677,
-          "weight_pct": 0.0106
-        },
-        {
-          "name_of_issuer": "FIDELITY NATL INFORMATION SV",
-          "ticker": "FIS",
-          "value_usd": 16121981,
-          "shares": 414660,
-          "weight_pct": 0.0104
-        },
-        {
-          "name_of_issuer": "TYSON FOODS INC",
-          "ticker": "TSN",
-          "value_usd": 15997826,
-          "shares": 279438,
-          "weight_pct": 0.0103
+          "name_of_issuer": "CHARTER COMMUNICATIONS INC",
+          "ticker": "CHTR",
+          "value_usd": 18157324,
+          "shares": 163727,
+          "weight_pct": 0.0114
         },
         {
           "name_of_issuer": "ULTA BEAUTY INC",
           "ticker": "ULTA",
-          "value_usd": 15269281,
-          "shares": 33858,
-          "weight_pct": 0.0098
+          "value_usd": 18117005,
+          "shares": 33171,
+          "weight_pct": 0.0114
         },
         {
-          "name_of_issuer": "HUNT J B TRANS SVCS INC",
-          "ticker": "JBHT",
-          "value_usd": 14696677,
-          "shares": 50778,
-          "weight_pct": 0.0095
+          "name_of_issuer": "CONSTELLATION BRANDS INC",
+          "ticker": "STZ",
+          "value_usd": 16938762,
+          "shares": 149821,
+          "weight_pct": 0.0107
         },
         {
-          "name_of_issuer": "PDD HOLDINGS INC",
-          "ticker": "PDD",
-          "value_usd": 14598085,
-          "shares": 191375,
+          "name_of_issuer": "LAS VEGAS SANDS CORP",
+          "ticker": "LVS",
+          "value_usd": 14886478,
+          "shares": 393718,
           "weight_pct": 0.0094
         },
         {
           "name_of_issuer": "KEYCORP",
           "ticker": "KEY",
-          "value_usd": 14469638,
-          "shares": 627750,
-          "weight_pct": 0.0093
-        },
-        {
-          "name_of_issuer": "TEXTRON INC",
-          "ticker": "TXT",
-          "value_usd": 14342719,
-          "shares": 156358,
+          "value_usd": 14637392,
+          "shares": 729317,
           "weight_pct": 0.0092
         },
         {
-          "name_of_issuer": "GENERAL MILLS INC",
-          "ticker": "GIS",
-          "value_usd": 14288880,
-          "shares": 410600,
-          "weight_pct": 0.0092
-        },
-        {
-          "name_of_issuer": "SNAP ON INC",
-          "ticker": "SNA",
-          "value_usd": 13826866,
-          "shares": 34361,
-          "weight_pct": 0.0089
+          "name_of_issuer": "TYSON FOODS INC",
+          "ticker": "TSN",
+          "value_usd": 14267449,
+          "shares": 282356,
+          "weight_pct": 0.009
         },
         {
           "name_of_issuer": "EXPEDITORS INTL WASH INC",
           "ticker": "EXPD",
-          "value_usd": 13130321,
-          "shares": 80564,
+          "value_usd": 13906900,
+          "shares": 75319,
+          "weight_pct": 0.0088
+        },
+        {
+          "name_of_issuer": "NU HLDGS LTD",
+          "ticker": "NU",
+          "value_usd": 13517386,
+          "shares": 1067724,
           "weight_pct": 0.0085
         },
         {
           "name_of_issuer": "LABCORP HOLDINGS INC",
           "ticker": "LH",
-          "value_usd": 12082000,
-          "shares": 43150,
-          "weight_pct": 0.0078
+          "value_usd": 13399704,
+          "shares": 43490,
+          "weight_pct": 0.0084
         },
         {
-          "name_of_issuer": "FORTIVE CORP",
-          "ticker": "FTV",
-          "value_usd": 11649130,
-          "shares": 190688,
+          "name_of_issuer": "FIDELITY NATL INFORMATION SV",
+          "ticker": "FIS",
+          "value_usd": 13069229,
+          "shares": 397241,
+          "weight_pct": 0.0082
+        },
+        {
+          "name_of_issuer": "GENERAL MILLS INC",
+          "ticker": "GIS",
+          "value_usd": 13028177,
+          "shares": 405105,
+          "weight_pct": 0.0082
+        },
+        {
+          "name_of_issuer": "SNAP ON INC",
+          "ticker": "SNA",
+          "value_usd": 12672558,
+          "shares": 34877,
+          "weight_pct": 0.008
+        },
+        {
+          "name_of_issuer": "TEXTRON INC",
+          "ticker": "TXT",
+          "value_usd": 12044324,
+          "shares": 158062,
+          "weight_pct": 0.0076
+        },
+        {
+          "name_of_issuer": "HUNT J B TRANS SVCS INC",
+          "ticker": "JBHT",
+          "value_usd": 11830064,
+          "shares": 52801,
           "weight_pct": 0.0075
+        },
+        {
+          "name_of_issuer": "PDD HOLDINGS INC",
+          "ticker": "PDD",
+          "value_usd": 11669722,
+          "shares": 149727,
+          "weight_pct": 0.0074
         },
         {
           "name_of_issuer": "KRAFT HEINZ CO",
           "ticker": "KHC",
-          "value_usd": 11537425,
-          "shares": 488460,
-          "weight_pct": 0.0074
-        },
-        {
-          "name_of_issuer": "DECKERS OUTDOOR CORP",
-          "ticker": "DECK",
-          "value_usd": 11411003,
-          "shares": 114926,
-          "weight_pct": 0.0074
-        },
-        {
-          "name_of_issuer": "C H ROBINSON WORLDWIDE IN",
-          "ticker": "CHRW",
-          "value_usd": 10349471,
-          "shares": 54951,
-          "weight_pct": 0.0067
+          "value_usd": 11515155,
+          "shares": 506829,
+          "weight_pct": 0.0073
         },
         {
           "name_of_issuer": "QUEST DIAGNOSTICS INC",
           "ticker": "DGX",
-          "value_usd": 9763901,
-          "shares": 46067,
-          "weight_pct": 0.0063
+          "value_usd": 10639412,
+          "shares": 45649,
+          "weight_pct": 0.0067
         },
         {
           "name_of_issuer": "BROADRIDGE FINL SOLUTIONS IN",
           "ticker": "BR",
-          "value_usd": 9594717,
-          "shares": 70060,
-          "weight_pct": 0.0062
+          "value_usd": 10686730,
+          "shares": 66336,
+          "weight_pct": 0.0067
+        },
+        {
+          "name_of_issuer": "FORTIVE CORP",
+          "ticker": "FTV",
+          "value_usd": 10246346,
+          "shares": 186943,
+          "weight_pct": 0.0065
+        },
+        {
+          "name_of_issuer": "DECKERS OUTDOOR CORP",
+          "ticker": "DECK",
+          "value_usd": 9319523,
+          "shares": 119267,
+          "weight_pct": 0.0059
         },
         {
           "name_of_issuer": "BALL CORP",
           "ticker": "BALL",
-          "value_usd": 9517560,
-          "shares": 152525,
-          "weight_pct": 0.0061
+          "value_usd": 8894650,
+          "shares": 158748,
+          "weight_pct": 0.0056
         },
         {
           "name_of_issuer": "LOEWS CORP",
           "ticker": "L",
-          "value_usd": 8715245,
-          "shares": 76983,
-          "weight_pct": 0.0056
+          "value_usd": 8225429,
+          "shares": 78765,
+          "weight_pct": 0.0052
+        },
+        {
+          "name_of_issuer": "EVERPURE INC",
+          "ticker": "P",
+          "value_usd": 7759570,
+          "shares": 59333,
+          "weight_pct": 0.0049
+        },
+        {
+          "name_of_issuer": "ATLASSIAN CORPORATION",
+          "ticker": "TEAM",
+          "value_usd": 7721303,
+          "shares": 43066,
+          "weight_pct": 0.0049
+        },
+        {
+          "name_of_issuer": "C H ROBINSON WORLDWIDE IN",
+          "ticker": "CHRW",
+          "value_usd": 7380837,
+          "shares": 49884,
+          "weight_pct": 0.0046
         },
         {
           "name_of_issuer": "NVR INC",
           "ticker": "NVR",
-          "value_usd": 8653018,
-          "shares": 1270,
-          "weight_pct": 0.0056
+          "value_usd": 7139092,
+          "shares": 1160,
+          "weight_pct": 0.0045
         },
         {
-          "name_of_issuer": "CREDICORP LTD",
-          "ticker": "BAP",
-          "value_usd": 6777913,
-          "shares": 17398,
-          "weight_pct": 0.0044
-        },
-        {
-          "name_of_issuer": "CF INDUSTRIES HOLD",
-          "ticker": "CF",
-          "value_usd": 6575821,
-          "shares": 60741,
-          "weight_pct": 0.0042
+          "name_of_issuer": "LAUDER ESTEE COS INC",
+          "ticker": "EL",
+          "value_usd": 7198859,
+          "shares": 77599,
+          "weight_pct": 0.0045
         },
         {
           "name_of_issuer": "COCA-COLA EUROPACIFIC PARTNE",
           "ticker": "CCEP",
-          "value_usd": 6534771,
-          "shares": 65302,
+          "value_usd": 6627627,
+          "shares": 65162,
           "weight_pct": 0.0042
         },
         {
-          "name_of_issuer": "VERALTO CORP",
-          "ticker": "VLTO",
-          "value_usd": 6457500,
-          "shares": 72818,
-          "weight_pct": 0.0042
-        },
-        {
-          "name_of_issuer": "GEN DIGITAL INC",
-          "ticker": "GEN",
-          "value_usd": 6420898,
-          "shares": 257971,
+          "name_of_issuer": "CREDICORP LTD",
+          "ticker": "BAP",
+          "value_usd": 6535283,
+          "shares": 17204,
           "weight_pct": 0.0041
         },
         {
           "name_of_issuer": "STERIS PLC",
           "ticker": "STE",
-          "value_usd": 6362583,
-          "shares": 30216,
+          "value_usd": 6430296,
+          "shares": 30619,
           "weight_pct": 0.0041
         },
         {
-          "name_of_issuer": "DELTA AIR LINES INC",
-          "ticker": "DAL",
-          "value_usd": 6257706,
-          "shares": 66813,
+          "name_of_issuer": "CF INDUSTRIES HOLD",
+          "ticker": "CF",
+          "value_usd": 6422746,
+          "shares": 55753,
           "weight_pct": 0.004
+        },
+        {
+          "name_of_issuer": "VERALTO CORP",
+          "ticker": "VLTO",
+          "value_usd": 6221913,
+          "shares": 65966,
+          "weight_pct": 0.0039
         },
         {
           "name_of_issuer": "OKTA INC",
           "ticker": "OKTA",
-          "value_usd": 5989200,
-          "shares": 43893,
+          "value_usd": 6125668,
+          "shares": 29294,
           "weight_pct": 0.0039
-        },
-        {
-          "name_of_issuer": "BEST BUY INC",
-          "ticker": "BBY",
-          "value_usd": 5983973,
-          "shares": 78861,
-          "weight_pct": 0.0039
-        },
-        {
-          "name_of_issuer": "UNITED AIRLS HLDGS INC",
-          "ticker": "UAL",
-          "value_usd": 5953778,
-          "shares": 43781,
-          "weight_pct": 0.0038
-        },
-        {
-          "name_of_issuer": "F5 INC",
-          "ticker": "FFIV",
-          "value_usd": 5861292,
-          "shares": 14091,
-          "weight_pct": 0.0038
-        },
-        {
-          "name_of_issuer": "SMURFIT WESTROCK PLC",
-          "ticker": "SW",
-          "value_usd": 5437123,
-          "shares": 117534,
-          "weight_pct": 0.0035
-        },
-        {
-          "name_of_issuer": "LAUDER ESTEE COS INC",
-          "ticker": "EL",
-          "value_usd": 5326441,
-          "shares": 67466,
-          "weight_pct": 0.0034
-        },
-        {
-          "name_of_issuer": "FIDELITY NATL FINL INC",
-          "ticker": "FNF",
-          "value_usd": 5290833,
-          "shares": 112189,
-          "weight_pct": 0.0034
-        },
-        {
-          "name_of_issuer": "MARKEL GROUP INC",
-          "ticker": "MKL",
-          "value_usd": 5025095,
-          "shares": 2573,
-          "weight_pct": 0.0032
-        },
-        {
-          "name_of_issuer": "MASCO CORP",
-          "ticker": "MAS",
-          "value_usd": 4986760,
-          "shares": 61285,
-          "weight_pct": 0.0032
-        },
-        {
-          "name_of_issuer": "INCYTE CORP",
-          "ticker": "INCY",
-          "value_usd": 4843986,
-          "shares": 42731,
-          "weight_pct": 0.0031
         },
         {
           "name_of_issuer": "PTC INC",
           "ticker": "PTC",
-          "value_usd": 4635288,
-          "shares": 40800,
-          "weight_pct": 0.003
+          "value_usd": 6106698,
+          "shares": 43526,
+          "weight_pct": 0.0038
         },
         {
-          "name_of_issuer": "EVERPURE INC",
-          "ticker": "P",
-          "value_usd": 4399634,
-          "shares": 55840,
-          "weight_pct": 0.0028
+          "name_of_issuer": "BEST BUY INC",
+          "ticker": "BBY",
+          "value_usd": 5870872,
+          "shares": 66533,
+          "weight_pct": 0.0037
         },
         {
-          "name_of_issuer": "REDDIT INC",
-          "ticker": "RDDT",
-          "value_usd": 4352519,
-          "shares": 25075,
-          "weight_pct": 0.0028
+          "name_of_issuer": "XP INC",
+          "ticker": "XP",
+          "value_usd": 5887439,
+          "shares": 280421,
+          "weight_pct": 0.0037
         },
         {
-          "name_of_issuer": "H WORLD GROUP LTD",
-          "ticker": "HTHT",
-          "value_usd": 4287731,
-          "shares": 102774,
-          "weight_pct": 0.0028
+          "name_of_issuer": "SMURFIT WESTROCK PLC",
+          "ticker": "SW",
+          "value_usd": 5368866,
+          "shares": 121743,
+          "weight_pct": 0.0034
         },
         {
-          "name_of_issuer": "ROCKET COS INC",
-          "ticker": "RKT",
-          "value_usd": 4283748,
-          "shares": 271984,
-          "weight_pct": 0.0028
+          "name_of_issuer": "F5 INC",
+          "ticker": "FFIV",
+          "value_usd": 5156075,
+          "shares": 11582,
+          "weight_pct": 0.0032
+        },
+        {
+          "name_of_issuer": "OCCIDENTAL PETROLEUM",
+          "ticker": "OXYWS",
+          "value_usd": 4992787,
+          "shares": 150159,
+          "weight_pct": 0.0031
         },
         {
           "name_of_issuer": "SOUTHERN COPPER CORP",
           "ticker": "SCCO",
-          "value_usd": 4141115,
-          "shares": 23764,
+          "value_usd": 4833572,
+          "shares": 23853,
+          "weight_pct": 0.003
+        },
+        {
+          "name_of_issuer": "FOX CORP",
+          "ticker": "FOXA",
+          "value_usd": 4687473,
+          "shares": 74820,
+          "weight_pct": 0.003
+        },
+        {
+          "name_of_issuer": "GEN DIGITAL INC",
+          "ticker": "GEN",
+          "value_usd": 4272320,
+          "shares": 194020,
           "weight_pct": 0.0027
         },
         {
-          "name_of_issuer": "OCCIDENTAL PETE CORP",
-          "ticker": "OXYWS",
-          "value_usd": 3998734,
-          "shares": 150159,
+          "name_of_issuer": "REDDIT INC",
+          "ticker": "RDDT",
+          "value_usd": 4355388,
+          "shares": 30577,
+          "weight_pct": 0.0027
+        },
+        {
+          "name_of_issuer": "DELTA AIR LINES INC",
+          "ticker": "DAL",
+          "value_usd": 4083531,
+          "shares": 48928,
+          "weight_pct": 0.0026
+        },
+        {
+          "name_of_issuer": "INCYTE CORP",
+          "ticker": "INCY",
+          "value_usd": 4100659,
+          "shares": 33792,
           "weight_pct": 0.0026
         },
         {
           "name_of_issuer": "DUPONT DE NEMOURS INC",
           "ticker": "DD",
-          "value_usd": 3951600,
-          "shares": 29133,
-          "weight_pct": 0.0025
-        },
-        {
-          "name_of_issuer": "IONQ INC",
-          "ticker": "IONQ",
-          "value_usd": 3908006,
-          "shares": 73376,
-          "weight_pct": 0.0025
-        },
-        {
-          "name_of_issuer": "APTIV PLC",
-          "ticker": "APTV",
-          "value_usd": 3898673,
-          "shares": 63517,
-          "weight_pct": 0.0025
-        },
-        {
-          "name_of_issuer": "ATLASSIAN CORPORATION",
-          "ticker": "TEAM",
-          "value_usd": 3862274,
-          "shares": 49650,
-          "weight_pct": 0.0025
-        },
-        {
-          "name_of_issuer": "FOX CORP",
-          "ticker": "FOXA",
-          "value_usd": 3748218,
-          "shares": 71860,
+          "value_usd": 3860071,
+          "shares": 29718,
           "weight_pct": 0.0024
         },
         {
           "name_of_issuer": "YUM CHINA HLDGS INC",
           "ticker": "YUMC",
-          "value_usd": 3746635,
-          "shares": 91672,
-          "weight_pct": 0.0024
-        },
-        {
-          "name_of_issuer": "TEXAS PACIFIC LAND CORPORATI",
-          "ticker": "TPL",
-          "value_usd": 3688430,
-          "shares": 8428,
-          "weight_pct": 0.0024
-        },
-        {
-          "name_of_issuer": "BERKLEY W R CORP",
-          "ticker": "WRB",
-          "value_usd": 3634905,
-          "shares": 51537,
+          "value_usd": 3616060,
+          "shares": 87982,
           "weight_pct": 0.0023
-        },
-        {
-          "name_of_issuer": "NISOURCE INC",
-          "ticker": "NI",
-          "value_usd": 3526118,
-          "shares": 74156,
-          "weight_pct": 0.0023
-        },
-        {
-          "name_of_issuer": "XP INC",
-          "ticker": "XP",
-          "value_usd": 3377186,
-          "shares": 207699,
-          "weight_pct": 0.0022
-        },
-        {
-          "name_of_issuer": "BUNGE GLOBAL SA",
-          "ticker": "BG",
-          "value_usd": 3357833,
-          "shares": 31461,
-          "weight_pct": 0.0022
-        },
-        {
-          "name_of_issuer": "CDW CORP",
-          "ticker": "CDW",
-          "value_usd": 3274099,
-          "shares": 23280,
-          "weight_pct": 0.0021
-        },
-        {
-          "name_of_issuer": "CMS ENERGY CORP",
-          "ticker": "CMS",
-          "value_usd": 3232584,
-          "shares": 42256,
-          "weight_pct": 0.0021
-        },
-        {
-          "name_of_issuer": "EVEREST GROUP LTD",
-          "ticker": "EG",
-          "value_usd": 3217571,
-          "shares": 9007,
-          "weight_pct": 0.0021
         },
         {
           "name_of_issuer": "BURLINGTON STORES INC",
           "ticker": "BURL",
-          "value_usd": 3215520,
-          "shares": 10150,
+          "value_usd": 3677336,
+          "shares": 13763,
+          "weight_pct": 0.0023
+        },
+        {
+          "name_of_issuer": "CORPAY INC",
+          "ticker": "CPAY",
+          "value_usd": 3599990,
+          "shares": 9264,
+          "weight_pct": 0.0023
+        },
+        {
+          "name_of_issuer": "HEICO CORP NEW",
+          "ticker": "HEI",
+          "value_usd": 3719412,
+          "shares": 12268,
+          "weight_pct": 0.0023
+        },
+        {
+          "name_of_issuer": "FIDELITY NATL FINL INC",
+          "ticker": "FNF",
+          "value_usd": 3464702,
+          "shares": 89643,
+          "weight_pct": 0.0022
+        },
+        {
+          "name_of_issuer": "SS&C TECH HLDGS",
+          "ticker": "SSNC",
+          "value_usd": 3433623,
+          "shares": 44552,
+          "weight_pct": 0.0022
+        },
+        {
+          "name_of_issuer": "ZSCALER INC",
+          "ticker": "ZS",
+          "value_usd": 3551870,
+          "shares": 17811,
+          "weight_pct": 0.0022
+        },
+        {
+          "name_of_issuer": "RELIANCE INC",
+          "ticker": "RS",
+          "value_usd": 3492376,
+          "shares": 9077,
+          "weight_pct": 0.0022
+        },
+        {
+          "name_of_issuer": "HEICO CORP NEW",
+          "ticker": "HEIA",
+          "value_usd": 3535690,
+          "shares": 15485,
+          "weight_pct": 0.0022
+        },
+        {
+          "name_of_issuer": "UNITED AIRLS HLDGS INC",
+          "ticker": "UAL",
+          "value_usd": 3318625,
+          "shares": 29911,
+          "weight_pct": 0.0021
+        },
+        {
+          "name_of_issuer": "MASCO CORP",
+          "ticker": "MAS",
+          "value_usd": 3367574,
+          "shares": 49964,
+          "weight_pct": 0.0021
+        },
+        {
+          "name_of_issuer": "BERKLEY W R CORP",
+          "ticker": "WRB",
+          "value_usd": 3294196,
+          "shares": 48774,
           "weight_pct": 0.0021
         },
         {
           "name_of_issuer": "NORDSON CORP",
           "ticker": "NDSN",
-          "value_usd": 3132447,
-          "shares": 10383,
-          "weight_pct": 0.002
-        },
-        {
-          "name_of_issuer": "CLOROX CO DEL",
-          "ticker": "CLX",
-          "value_usd": 3037569,
-          "shares": 31827,
-          "weight_pct": 0.002
-        },
-        {
-          "name_of_issuer": "SUN CMNTYS INC",
-          "ticker": "SUI",
-          "value_usd": 3026049,
-          "shares": 25236,
-          "weight_pct": 0.002
+          "value_usd": 3374888,
+          "shares": 10294,
+          "weight_pct": 0.0021
         },
         {
           "name_of_issuer": "CHURCH & DWIGHT CO INC",
           "ticker": "CHD",
-          "value_usd": 2994658,
-          "shares": 30911,
-          "weight_pct": 0.0019
-        },
-        {
-          "name_of_issuer": "SUPER MICRO COMPUTER INC",
-          "ticker": "SMCI",
-          "value_usd": 2929128,
-          "shares": 99868,
-          "weight_pct": 0.0019
+          "value_usd": 3357247,
+          "shares": 35632,
+          "weight_pct": 0.0021
         },
         {
           "name_of_issuer": "INTERNATIONAL FLAVORS&FRAGRA",
           "ticker": "IFF",
-          "value_usd": 2914187,
-          "shares": 36786,
-          "weight_pct": 0.0019
+          "value_usd": 3264151,
+          "shares": 39101,
+          "weight_pct": 0.0021
         },
         {
-          "name_of_issuer": "CORPAY INC",
-          "ticker": "CPAY",
-          "value_usd": 2903115,
-          "shares": 8711,
-          "weight_pct": 0.0019
-        },
-        {
-          "name_of_issuer": "ALLIANT ENERGY CORP",
-          "ticker": "LNT",
-          "value_usd": 2857671,
-          "shares": 37458,
-          "weight_pct": 0.0018
-        },
-        {
-          "name_of_issuer": "HEICO CORP NEW",
-          "ticker": "HEI",
-          "value_usd": 2846670,
-          "shares": 7992,
-          "weight_pct": 0.0018
-        },
-        {
-          "name_of_issuer": "INSMED INC",
-          "ticker": "INSM",
-          "value_usd": 2844408,
-          "shares": 26678,
-          "weight_pct": 0.0018
-        },
-        {
-          "name_of_issuer": "SS&C TECH HLDGS",
-          "ticker": "SSNC",
-          "value_usd": 2844124,
-          "shares": 45836,
-          "weight_pct": 0.0018
-        },
-        {
-          "name_of_issuer": "CNH INDL N V",
-          "ticker": "CNH",
-          "value_usd": 2753888,
-          "shares": 245226,
-          "weight_pct": 0.0018
+          "name_of_issuer": "H WORLD GROUP LTD",
+          "ticker": "HTHT",
+          "value_usd": 3249119,
+          "shares": 75914,
+          "weight_pct": 0.002
         },
         {
           "name_of_issuer": "NEUROCRINE BIOSCIENCES INC",
           "ticker": "NBIX",
-          "value_usd": 2748806,
-          "shares": 16310,
-          "weight_pct": 0.0018
+          "value_usd": 3251966,
+          "shares": 22927,
+          "weight_pct": 0.002
         },
         {
-          "name_of_issuer": "INSULET CORP",
-          "ticker": "PODD",
-          "value_usd": 2735324,
-          "shares": 17966,
-          "weight_pct": 0.0018
+          "name_of_issuer": "NISOURCE INC",
+          "ticker": "NI",
+          "value_usd": 3070665,
+          "shares": 78735,
+          "weight_pct": 0.0019
         },
         {
-          "name_of_issuer": "CARLISLE COS INC",
-          "ticker": "CSL",
-          "value_usd": 2715547,
-          "shares": 7486,
+          "name_of_issuer": "CMS ENERGY CORP",
+          "ticker": "CMS",
+          "value_usd": 3026831,
+          "shares": 47984,
+          "weight_pct": 0.0019
+        },
+        {
+          "name_of_issuer": "TEXAS PACIFIC LAND CORPORATI",
+          "ticker": "TPL",
+          "value_usd": 2914549,
+          "shares": 8945,
           "weight_pct": 0.0018
         },
         {
           "name_of_issuer": "SAMSARA INC",
           "ticker": "IOT",
-          "value_usd": 2653390,
-          "shares": 81819,
+          "value_usd": 2786579,
+          "shares": 73081,
+          "weight_pct": 0.0018
+        },
+        {
+          "name_of_issuer": "INVITATION HOMES INC",
+          "ticker": "INVH",
+          "value_usd": 2811201,
+          "shares": 106768,
+          "weight_pct": 0.0018
+        },
+        {
+          "name_of_issuer": "MARKEL GROUP INC",
+          "ticker": "MKL",
+          "value_usd": 2739920,
+          "shares": 1600,
           "weight_pct": 0.0017
         },
         {
-          "name_of_issuer": "EQUITY RESIDENTIAL",
-          "ticker": "EQR",
-          "value_usd": 2647300,
-          "shares": 38971,
+          "name_of_issuer": "CDW CORP",
+          "ticker": "CDW",
+          "value_usd": 2705714,
+          "shares": 21112,
           "weight_pct": 0.0017
+        },
+        {
+          "name_of_issuer": "SUPER MICRO COMPUTER INC",
+          "ticker": "SMCI",
+          "value_usd": 2660638,
+          "shares": 64783,
+          "weight_pct": 0.0017
+        },
+        {
+          "name_of_issuer": "LYONDELLBASELL INDUSTRIES NV",
+          "ticker": "LYB",
+          "value_usd": 2718216,
+          "shares": 47298,
+          "weight_pct": 0.0017
+        },
+        {
+          "name_of_issuer": "LIBERTY MEDIA CORP DEL",
+          "ticker": "FWONK",
+          "value_usd": 2701222,
+          "shares": 29234,
+          "weight_pct": 0.0017
+        },
+        {
+          "name_of_issuer": "EVEREST GROUP LTD",
+          "ticker": "EG",
+          "value_usd": 2599280,
+          "shares": 7118,
+          "weight_pct": 0.0016
+        },
+        {
+          "name_of_issuer": "ALLIANT ENERGY CORP",
+          "ticker": "LNT",
+          "value_usd": 2519910,
+          "shares": 39809,
+          "weight_pct": 0.0016
         },
         {
           "name_of_issuer": "FOX CORP",
           "ticker": "FOX",
-          "value_usd": 2625288,
-          "shares": 56048,
-          "weight_pct": 0.0017
-        },
-        {
-          "name_of_issuer": "JACOBS SOLUTIONS INC",
-          "ticker": "J",
-          "value_usd": 2484720,
-          "shares": 19720,
+          "value_usd": 2616824,
+          "shares": 46480,
           "weight_pct": 0.0016
         },
         {
           "name_of_issuer": "TRACTOR SUPPLY CO",
           "ticker": "TSCO",
-          "value_usd": 2403055,
-          "shares": 76022,
-          "weight_pct": 0.0015
-        },
-        {
-          "name_of_issuer": "TRANSUNION",
-          "ticker": "TRU",
-          "value_usd": 2365543,
-          "shares": 32791,
-          "weight_pct": 0.0015
-        },
-        {
-          "name_of_issuer": "LYONDELLBASELL INDUSTRIES NV",
-          "ticker": "LYB",
-          "value_usd": 2342504,
-          "shares": 44492,
-          "weight_pct": 0.0015
-        },
-        {
-          "name_of_issuer": "ZSCALER INC",
-          "ticker": "ZS",
-          "value_usd": 2328975,
-          "shares": 16500,
-          "weight_pct": 0.0015
-        },
-        {
-          "name_of_issuer": "EQUIFAX INC",
-          "ticker": "EFX",
-          "value_usd": 2328581,
-          "shares": 14671,
-          "weight_pct": 0.0015
+          "value_usd": 2525510,
+          "shares": 80713,
+          "weight_pct": 0.0016
         },
         {
           "name_of_issuer": "TRADEWEB MKTS INC",
           "ticker": "TW",
-          "value_usd": 2304837,
-          "shares": 23127,
-          "weight_pct": 0.0015
-        },
-        {
-          "name_of_issuer": "RELIANCE INC",
-          "ticker": "RS",
-          "value_usd": 2213206,
-          "shares": 5924,
-          "weight_pct": 0.0014
-        },
-        {
-          "name_of_issuer": "CEREBRAS SYSTEMS INC",
-          "ticker": "CBRS",
-          "value_usd": 2210000,
-          "shares": 10000,
-          "weight_pct": 0.0014
-        },
-        {
-          "name_of_issuer": "IDEX CORP",
-          "ticker": "IEX",
-          "value_usd": 2166011,
-          "shares": 9544,
-          "weight_pct": 0.0014
-        },
-        {
-          "name_of_issuer": "GRACO INC",
-          "ticker": "GGG",
-          "value_usd": 2160178,
-          "shares": 28570,
-          "weight_pct": 0.0014
-        },
-        {
-          "name_of_issuer": "AST SPACEMOBILE INC",
-          "ticker": "ASTS",
-          "value_usd": 2153522,
-          "shares": 24235,
-          "weight_pct": 0.0014
-        },
-        {
-          "name_of_issuer": "WEYERHAEUSER CO",
-          "ticker": "WY",
-          "value_usd": 2109521,
-          "shares": 88117,
-          "weight_pct": 0.0014
+          "value_usd": 2476328,
+          "shares": 24557,
+          "weight_pct": 0.0016
         },
         {
           "name_of_issuer": "AFFIRM HLDGS INC",
           "ticker": "AFRM",
-          "value_usd": 2102930,
-          "shares": 25787,
-          "weight_pct": 0.0014
+          "value_usd": 2599310,
+          "shares": 37546,
+          "weight_pct": 0.0016
+        },
+        {
+          "name_of_issuer": "FIRST CTZNS BANCSHARES INC D",
+          "ticker": "FCNCA",
+          "value_usd": 2558768,
+          "shares": 1242,
+          "weight_pct": 0.0016
+        },
+        {
+          "name_of_issuer": "INSMED INC",
+          "ticker": "INSM",
+          "value_usd": 2414974,
+          "shares": 21158,
+          "weight_pct": 0.0015
+        },
+        {
+          "name_of_issuer": "IDEX CORP",
+          "ticker": "IEX",
+          "value_usd": 2308981,
+          "shares": 10128,
+          "weight_pct": 0.0015
         },
         {
           "name_of_issuer": "BROWN & BROWN INC",
           "ticker": "BRO",
-          "value_usd": 2082501,
-          "shares": 32463,
-          "weight_pct": 0.0013
-        },
-        {
-          "name_of_issuer": "HEICO CORP NEW",
-          "ticker": "HEIA",
-          "value_usd": 2063796,
-          "shares": 8002,
-          "weight_pct": 0.0013
-        },
-        {
-          "name_of_issuer": "TOAST INC",
-          "ticker": "TOST",
-          "value_usd": 2043268,
-          "shares": 73446,
-          "weight_pct": 0.0013
-        },
-        {
-          "name_of_issuer": "CHECK POINT SOFTWARE TECH LT",
-          "ticker": "CHKP",
-          "value_usd": 2032959,
-          "shares": 15468,
-          "weight_pct": 0.0013
+          "value_usd": 2371263,
+          "shares": 38937,
+          "weight_pct": 0.0015
         },
         {
           "name_of_issuer": "ENTEGRIS INC",
           "ticker": "ENTG",
-          "value_usd": 1918746,
-          "shares": 10668,
+          "value_usd": 2390395,
+          "shares": 15516,
+          "weight_pct": 0.0015
+        },
+        {
+          "name_of_issuer": "INTERNATIONAL PAPER CO",
+          "ticker": "IP",
+          "value_usd": 2394078,
+          "shares": 72176,
+          "weight_pct": 0.0015
+        },
+        {
+          "name_of_issuer": "AURA MINERALS INC",
+          "ticker": "AUGO",
+          "value_usd": 2446948,
+          "shares": 31100,
+          "weight_pct": 0.0015
+        },
+        {
+          "name_of_issuer": "JACOBS SOLUTIONS INC",
+          "ticker": "J",
+          "value_usd": 2247376,
+          "shares": 16614,
+          "weight_pct": 0.0014
+        },
+        {
+          "name_of_issuer": "EVERGY INC",
+          "ticker": "EVRG",
+          "value_usd": 2265269,
+          "shares": 28879,
+          "weight_pct": 0.0014
+        },
+        {
+          "name_of_issuer": "SOFI TECHNOLOGIES INC",
+          "ticker": "SOFI",
+          "value_usd": 2292888,
+          "shares": 145858,
+          "weight_pct": 0.0014
+        },
+        {
+          "name_of_issuer": "SUN CMNTYS INC",
+          "ticker": "SUI",
+          "value_usd": 2042562,
+          "shares": 18438,
+          "weight_pct": 0.0013
+        },
+        {
+          "name_of_issuer": "EQUIFAX INC",
+          "ticker": "EFX",
+          "value_usd": 2138611,
+          "shares": 15583,
+          "weight_pct": 0.0013
+        },
+        {
+          "name_of_issuer": "GENUINE PARTS CO",
+          "ticker": "GPC",
+          "value_usd": 1986566,
+          "shares": 15799,
+          "weight_pct": 0.0013
+        },
+        {
+          "name_of_issuer": "PACKAGING CORP AMER",
+          "ticker": "PKG",
+          "value_usd": 2096353,
+          "shares": 9144,
+          "weight_pct": 0.0013
+        },
+        {
+          "name_of_issuer": "WP CAREY INC",
+          "ticker": "WPC",
+          "value_usd": 2032161,
+          "shares": 31443,
+          "weight_pct": 0.0013
+        },
+        {
+          "name_of_issuer": "AST SPACEMOBILE INC",
+          "ticker": "ASTS",
+          "value_usd": 1898058,
+          "shares": 32247,
           "weight_pct": 0.0012
         },
         {
-          "name_of_issuer": "GAMING & LEISURE P",
-          "ticker": "GLPI",
-          "value_usd": 1772828,
-          "shares": 39812,
+          "name_of_issuer": "NEWS CORP NEW",
+          "ticker": "NWSA",
+          "value_usd": 1844888,
+          "shares": 64394,
+          "weight_pct": 0.0012
+        },
+        {
+          "name_of_issuer": "ESSEX PPTY TR INC",
+          "ticker": "ESS",
+          "value_usd": 1917249,
+          "shares": 7117,
+          "weight_pct": 0.0012
+        },
+        {
+          "name_of_issuer": "CEREBRAS SYSTEMS INC",
+          "ticker": "CBRS",
+          "value_usd": 1776500,
+          "shares": 10000,
           "weight_pct": 0.0011
         },
         {
-          "name_of_issuer": "SBA COMMUNICATIONS CORP",
-          "ticker": "SBAC",
-          "value_usd": 1764424,
-          "shares": 9999,
+          "name_of_issuer": "WEYERHAEUSER CO",
+          "ticker": "WY",
+          "value_usd": 1781670,
+          "shares": 93526,
+          "weight_pct": 0.0011
+        },
+        {
+          "name_of_issuer": "TOAST INC",
+          "ticker": "TOST",
+          "value_usd": 1811411,
+          "shares": 62484,
           "weight_pct": 0.0011
         },
         {
           "name_of_issuer": "MCCORMICK & CO INC",
           "ticker": "MKC",
-          "value_usd": 1725977,
-          "shares": 34232,
+          "value_usd": 1686826,
+          "shares": 36354,
           "weight_pct": 0.0011
         },
         {
           "name_of_issuer": "FULL TRUCK ALLIANCE CO LTD",
           "ticker": "YMM",
-          "value_usd": 1709008,
-          "shares": 210469,
+          "value_usd": 1709351,
+          "shares": 206693,
           "weight_pct": 0.0011
-        },
-        {
-          "name_of_issuer": "GENUINE PARTS CO",
-          "ticker": "GPC",
-          "value_usd": 1700918,
-          "shares": 14417,
-          "weight_pct": 0.0011
-        },
-        {
-          "name_of_issuer": "TYLER TECHNOLOGIES INC",
-          "ticker": "TYL",
-          "value_usd": 1697145,
-          "shares": 5803,
-          "weight_pct": 0.0011
-        },
-        {
-          "name_of_issuer": "ROLLINS INC",
-          "ticker": "ROL",
-          "value_usd": 1673106,
-          "shares": 40084,
-          "weight_pct": 0.0011
-        },
-        {
-          "name_of_issuer": "INTERNATIONAL PAPER CO",
-          "ticker": "IP",
-          "value_usd": 1600391,
-          "shares": 42005,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "LULULEMON ATHLETICA INC",
-          "ticker": "LULU",
-          "value_usd": 1581621,
-          "shares": 13852,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "LENNOX INTL INC",
-          "ticker": "LII",
-          "value_usd": 1552122,
-          "shares": 2709,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "LIBERTY MEDIA CORP DEL",
-          "ticker": "FWONK",
-          "value_usd": 1549926,
-          "shares": 16291,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "EVERGY INC",
-          "ticker": "EVRG",
-          "value_usd": 1505697,
-          "shares": 17421,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "NEWS CORP NEW",
-          "ticker": "NWSA",
-          "value_usd": 1503010,
-          "shares": 60532,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "PACKAGING CORP AMER",
-          "ticker": "PKG",
-          "value_usd": 1502355,
-          "shares": 6305,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "RPM INTL INC",
-          "ticker": "RPM",
-          "value_usd": 1483074,
-          "shares": 13343,
-          "weight_pct": 0.001
-        },
-        {
-          "name_of_issuer": "ESSEX PPTY TR INC",
-          "ticker": "ESS",
-          "value_usd": 1467572,
-          "shares": 5033,
-          "weight_pct": 0.0009
-        },
-        {
-          "name_of_issuer": "INVITATION HOMES INC",
-          "ticker": "INVH",
-          "value_usd": 1452950,
-          "shares": 48095,
-          "weight_pct": 0.0009
         },
         {
           "name_of_issuer": "KIMCO REALTY CORP",
           "ticker": "KIM",
-          "value_usd": 1442339,
-          "shares": 56897,
-          "weight_pct": 0.0009
+          "value_usd": 1752791,
+          "shares": 78919,
+          "weight_pct": 0.0011
         },
         {
           "name_of_issuer": "REGENCY CTRS CORP",
           "ticker": "REG",
-          "value_usd": 1436596,
-          "shares": 18016,
-          "weight_pct": 0.0009
-        },
-        {
-          "name_of_issuer": "MID-AMER APT CMNTYS INC",
-          "ticker": "MAA",
-          "value_usd": 1433583,
-          "shares": 10318,
-          "weight_pct": 0.0009
-        },
-        {
-          "name_of_issuer": "KANZHUN LIMITED",
-          "ticker": "BZ",
-          "value_usd": 1429715,
-          "shares": 111089,
-          "weight_pct": 0.0009
-        },
-        {
-          "name_of_issuer": "FIRST CTZNS BANCSHARES INC D",
-          "ticker": "FCNCA",
-          "value_usd": 1421180,
-          "shares": 683,
-          "weight_pct": 0.0009
+          "value_usd": 1698956,
+          "shares": 23636,
+          "weight_pct": 0.0011
         },
         {
           "name_of_issuer": "LENNAR CORP",
           "ticker": "LEN",
-          "value_usd": 1401147,
-          "shares": 15484,
-          "weight_pct": 0.0009
+          "value_usd": 1800039,
+          "shares": 22062,
+          "weight_pct": 0.0011
         },
         {
-          "name_of_issuer": "WATSCO INC",
-          "ticker": "WSO",
-          "value_usd": 1401046,
-          "shares": 3362,
-          "weight_pct": 0.0009
+          "name_of_issuer": "FABRINET",
+          "ticker": "FN",
+          "value_usd": 1740356,
+          "shares": 4102,
+          "weight_pct": 0.0011
+        },
+        {
+          "name_of_issuer": "BUNGE GLOBAL SA",
+          "ticker": "BG",
+          "value_usd": 1654410,
+          "shares": 15469,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "TRANSUNION",
+          "ticker": "TRU",
+          "value_usd": 1652929,
+          "shares": 27044,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "SBA COMMUNICATIONS CORP",
+          "ticker": "SBAC",
+          "value_usd": 1655961,
+          "shares": 10342,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "MID-AMER APT CMNTYS INC",
+          "ticker": "MAA",
+          "value_usd": 1665668,
+          "shares": 14147,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "KANZHUN LIMITED",
+          "ticker": "BZ",
+          "value_usd": 1596594,
+          "shares": 107878,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "IREN LIMITED",
+          "ticker": "IREN",
+          "value_usd": 1515422,
+          "shares": 37070,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "PINNACLE FINL PARTNERS INC",
+          "ticker": "PNFP",
+          "value_usd": 1587438,
+          "shares": 16958,
+          "weight_pct": 0.001
+        },
+        {
+          "name_of_issuer": "SHARKNINJA INC",
+          "ticker": "SN",
+          "value_usd": 1530660,
+          "shares": 8498,
+          "weight_pct": 0.001
         },
         {
           "name_of_issuer": "TENCENT MUSIC ENTMT GROUP",
           "ticker": "TME",
-          "value_usd": 1397506,
-          "shares": 167366,
-          "weight_pct": 0.0009
-        },
-        {
-          "name_of_issuer": "WP CAREY INC",
-          "ticker": "WPC",
-          "value_usd": 1357499,
-          "shares": 18986,
+          "value_usd": 1366490,
+          "shares": 172319,
           "weight_pct": 0.0009
         },
         {
           "name_of_issuer": "COMPANIA DE MINAS BUENAVENTU",
           "ticker": "BVN",
-          "value_usd": 1336093,
-          "shares": 45616,
+          "value_usd": 1447406,
+          "shares": 45833,
           "weight_pct": 0.0009
+        },
+        {
+          "name_of_issuer": "CARLISLE COS INC",
+          "ticker": "CSL",
+          "value_usd": 1327985,
+          "shares": 4122,
+          "weight_pct": 0.0008
+        },
+        {
+          "name_of_issuer": "CHECK POINT SOFTWARE TECH LT",
+          "ticker": "CHKP",
+          "value_usd": 1331375,
+          "shares": 10373,
+          "weight_pct": 0.0008
+        },
+        {
+          "name_of_issuer": "ROLLINS INC",
+          "ticker": "ROL",
+          "value_usd": 1280251,
+          "shares": 42505,
+          "weight_pct": 0.0008
+        },
+        {
+          "name_of_issuer": "LENNOX INTL INC",
+          "ticker": "LII",
+          "value_usd": 1326355,
+          "shares": 3736,
+          "weight_pct": 0.0008
         },
         {
           "name_of_issuer": "FLUTTER ENTMT PLC",
           "ticker": "FLUT",
-          "value_usd": 1315541,
-          "shares": 12876,
+          "value_usd": 1304301,
+          "shares": 17498,
           "weight_pct": 0.0008
         },
         {
-          "name_of_issuer": "SOFI TECHNOLOGIES INC",
-          "ticker": "SOFI",
-          "value_usd": 1287607,
-          "shares": 71813,
+          "name_of_issuer": "MILLICOM INTL CELLULAR S A",
+          "ticker": "TIGO",
+          "value_usd": 1322785,
+          "shares": 15180,
           "weight_pct": 0.0008
         },
         {
-          "name_of_issuer": "ALLEGION PLC",
-          "ticker": "ALLE",
-          "value_usd": 1257807,
-          "shares": 8953,
+          "name_of_issuer": "MASTEC INC",
+          "ticker": "MTZ",
+          "value_usd": 1313763,
+          "shares": 6150,
           "weight_pct": 0.0008
         },
         {
-          "name_of_issuer": "PENTAIR PLC",
-          "ticker": "PNR",
-          "value_usd": 1255384,
-          "shares": 16376,
-          "weight_pct": 0.0008
+          "name_of_issuer": "INSULET CORP",
+          "ticker": "PODD",
+          "value_usd": 1171490,
+          "shares": 8979,
+          "weight_pct": 0.0007
         },
         {
-          "name_of_issuer": "ECHOSTAR CORP",
-          "ticker": "ECHO",
-          "value_usd": 1245811,
-          "shares": 12274,
-          "weight_pct": 0.0008
+          "name_of_issuer": "GAMING & LEISURE P",
+          "ticker": "GLPI",
+          "value_usd": 1138037,
+          "shares": 29972,
+          "weight_pct": 0.0007
         },
         {
-          "name_of_issuer": "IREN LIMITED",
-          "ticker": "IREN",
-          "value_usd": 1213263,
-          "shares": 26531,
-          "weight_pct": 0.0008
+          "name_of_issuer": "WATSCO INC",
+          "ticker": "WSO",
+          "value_usd": 1081511,
+          "shares": 3573,
+          "weight_pct": 0.0007
         },
         {
           "name_of_issuer": "COSTAR GROUP INC",
           "ticker": "CSGP",
-          "value_usd": 1196265,
+          "value_usd": 1157403,
           "shares": 42241,
-          "weight_pct": 0.0008
+          "weight_pct": 0.0007
         },
         {
           "name_of_issuer": "JBS N.V.",
           "ticker": "JBS",
-          "value_usd": 1149343,
-          "shares": 96991,
-          "weight_pct": 0.0007
-        },
-        {
-          "name_of_issuer": "FUTU HLDGS LTD",
-          "ticker": "FUTU",
-          "value_usd": 1139410,
-          "shares": 12155,
+          "value_usd": 1107617,
+          "shares": 98106,
           "weight_pct": 0.0007
         },
         {
           "name_of_issuer": "VIPSHOP HLDGS LTD",
           "ticker": "VIPS",
-          "value_usd": 1132271,
-          "shares": 85390,
+          "value_usd": 1042521,
+          "shares": 83335,
           "weight_pct": 0.0007
-        },
-        {
-          "name_of_issuer": "ANNALY CAPITAL MANAGEMENT IN",
-          "ticker": "NLY",
-          "value_usd": 868351,
-          "shares": 38835,
-          "weight_pct": 0.0006
-        },
-        {
-          "name_of_issuer": "COOPER COS INC",
-          "ticker": "COO",
-          "value_usd": 842664,
-          "shares": 11751,
-          "weight_pct": 0.0005
-        },
-        {
-          "name_of_issuer": "GRAB HOLDINGS LIMITED",
-          "ticker": "GRAB",
-          "value_usd": 818678,
-          "shares": 217156,
-          "weight_pct": 0.0005
         },
         {
           "name_of_issuer": "RIVIAN AUTOMOTIVE INC",
           "ticker": "RIVN",
-          "value_usd": 790414,
-          "shares": 45557,
-          "weight_pct": 0.0005
+          "value_usd": 1106546,
+          "shares": 74066,
+          "weight_pct": 0.0007
         },
         {
-          "name_of_issuer": "DICKS SPORTING GOODS INC",
-          "ticker": "DKS",
-          "value_usd": 740308,
-          "shares": 3264,
-          "weight_pct": 0.0005
+          "name_of_issuer": "CLOROX CO DEL",
+          "ticker": "CLX",
+          "value_usd": 914927,
+          "shares": 11294,
+          "weight_pct": 0.0006
         },
         {
-          "name_of_issuer": "AVERY DENNISON CORP",
-          "ticker": "AVY",
-          "value_usd": 730088,
-          "shares": 4497,
-          "weight_pct": 0.0005
-        },
-        {
-          "name_of_issuer": "TRIMBLE INC",
-          "ticker": "TRMB",
-          "value_usd": 692619,
-          "shares": 13533,
-          "weight_pct": 0.0004
+          "name_of_issuer": "GRAB HOLDINGS LIMITED",
+          "ticker": "GRAB",
+          "value_usd": 907215,
+          "shares": 291709,
+          "weight_pct": 0.0006
         },
         {
           "name_of_issuer": "CARLYLE GROUP INC",
           "ticker": "CG",
-          "value_usd": 668496,
-          "shares": 15875,
-          "weight_pct": 0.0004
+          "value_usd": 954656,
+          "shares": 24071,
+          "weight_pct": 0.0006
         },
         {
-          "name_of_issuer": "COREBRIDGE FINL INC",
-          "ticker": "CRBG",
-          "value_usd": 591124,
-          "shares": 20647,
-          "weight_pct": 0.0004
+          "name_of_issuer": "CNH INDL N V",
+          "ticker": "CNH",
+          "value_usd": 857403,
+          "shares": 66724,
+          "weight_pct": 0.0005
+        },
+        {
+          "name_of_issuer": "GRACO INC",
+          "ticker": "GGG",
+          "value_usd": 725831,
+          "shares": 9446,
+          "weight_pct": 0.0005
+        },
+        {
+          "name_of_issuer": "ALLEGION PLC",
+          "ticker": "ALLE",
+          "value_usd": 840814,
+          "shares": 5468,
+          "weight_pct": 0.0005
         },
         {
           "name_of_issuer": "DOMINOS PIZZA INC",
           "ticker": "DPZ",
-          "value_usd": 355840,
-          "shares": 1202,
+          "value_usd": 741834,
+          "shares": 2476,
+          "weight_pct": 0.0005
+        },
+        {
+          "name_of_issuer": "HYATT HOTELS CORP",
+          "ticker": "H",
+          "value_usd": 859237,
+          "shares": 5419,
+          "weight_pct": 0.0005
+        },
+        {
+          "name_of_issuer": "COOPER COS INC",
+          "ticker": "COO",
+          "value_usd": 709791,
+          "shares": 12556,
+          "weight_pct": 0.0004
+        },
+        {
+          "name_of_issuer": "DICKS SPORTING GOODS INC",
+          "ticker": "DKS",
+          "value_usd": 675210,
+          "shares": 5028,
+          "weight_pct": 0.0004
+        },
+        {
+          "name_of_issuer": "NVENT ELEC PLC",
+          "ticker": "NVT",
+          "value_usd": 700817,
+          "shares": 4370,
+          "weight_pct": 0.0004
+        },
+        {
+          "name_of_issuer": "ATI INC",
+          "ticker": "ATI",
+          "value_usd": 648884,
+          "shares": 3426,
+          "weight_pct": 0.0004
+        },
+        {
+          "name_of_issuer": "PENTAIR PLC",
+          "ticker": "PNR",
+          "value_usd": 509181,
+          "shares": 9609,
+          "weight_pct": 0.0003
+        },
+        {
+          "name_of_issuer": "COEUR MNG INC",
+          "ticker": "CDE",
+          "value_usd": 506141,
+          "shares": 28758,
+          "weight_pct": 0.0003
+        },
+        {
+          "name_of_issuer": "ROCKET COS INC",
+          "ticker": "RKT",
+          "value_usd": 287370,
+          "shares": 24967,
           "weight_pct": 0.0002
         },
         {
-          "name_of_issuer": "PINNACLE FINL PARTNERS INC",
-          "ticker": "PNFP",
-          "value_usd": 266828,
-          "shares": 2645,
+          "name_of_issuer": "FUTU HLDGS LTD",
+          "ticker": "FUTU",
+          "value_usd": 246527,
+          "shares": 2230,
           "weight_pct": 0.0002
+        },
+        {
+          "name_of_issuer": "ANNALY CAPITAL MANAGEMENT IN",
+          "ticker": "NLY",
+          "value_usd": 377233,
+          "shares": 19970,
+          "weight_pct": 0.0002
+        },
+        {
+          "name_of_issuer": "CIRCLE INTERNET GROUP INC",
+          "ticker": "CRCL",
+          "value_usd": 339280,
+          "shares": 4129,
+          "weight_pct": 0.0002
+        },
+        {
+          "name_of_issuer": "COREBRIDGE FINL INC",
+          "ticker": "CRBG",
+          "value_usd": 206603,
+          "shares": 6238,
+          "weight_pct": 0.0001
         }
       ]
     }
