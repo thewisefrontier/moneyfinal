@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14",
+  "updated_at": "2026-11-15",
   "investor_count": 23,
   "consensus": [
     {
@@ -89,9 +89,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 892310000,
-          "weight_pct": 16.4759,
-          "period_of_report": "2026-06-30"
+          "value_usd": 932781000,
+          "weight_pct": 18.4861,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "스탠리 드러켄밀러",
@@ -144,7 +144,7 @@
         }
       ],
       "holder_count": 9,
-      "total_value_usd": 8821402202
+      "total_value_usd": 8861873202
     },
     {
       "cusip": "30303M102",
@@ -233,9 +233,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 484744000,
-          "weight_pct": 8.9505,
-          "period_of_report": "2026-06-30"
+          "value_usd": 323679000,
+          "weight_pct": 6.4148,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "데이비드 테퍼",
@@ -267,7 +267,7 @@
         }
       ],
       "holder_count": 7,
-      "total_value_usd": 12638759499
+      "total_value_usd": 12477694499
     },
     {
       "cusip": "874039100",
@@ -335,9 +335,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 240628000,
-          "weight_pct": 4.443,
-          "period_of_report": "2026-06-30"
+          "value_usd": 252018000,
+          "weight_pct": 4.9946,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "체이스 콜먼",
@@ -376,7 +376,7 @@
         }
       ],
       "holder_count": 6,
-      "total_value_usd": 3129714795
+      "total_value_usd": 3141104795
     },
     {
       "cusip": "037833100",
@@ -673,9 +673,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 322427000,
-          "weight_pct": 5.9534,
-          "period_of_report": "2026-06-30"
+          "value_usd": 216451000,
+          "weight_pct": 4.2897,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "톰 게이너",
@@ -700,7 +700,7 @@
         }
       ],
       "holder_count": 4,
-      "total_value_usd": 1019682505
+      "total_value_usd": 913706505
     },
     {
       "cusip": "84615Q103",
@@ -1317,9 +1317,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 227871000,
-          "weight_pct": 4.2075,
-          "period_of_report": "2026-06-30"
+          "value_usd": 186759000,
+          "weight_pct": 3.7012,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "톰 게이너",
@@ -1337,7 +1337,7 @@
         }
       ],
       "holder_count": 3,
-      "total_value_usd": 647320782
+      "total_value_usd": 606208782
     },
     {
       "cusip": "007903107",
@@ -1430,6 +1430,36 @@
       "total_value_usd": 278027877
     },
     {
+      "cusip": "12572Q105",
+      "name_of_issuer": "CME GROUP INC",
+      "ticker": "CME",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 179570000,
+          "weight_pct": 3.5588,
+          "period_of_report": "2026-09-30"
+        },
+        {
+          "investor_name": "톰 게이너",
+          "fund_name": "Markel Group",
+          "value_usd": 13033505,
+          "weight_pct": 0.1015,
+          "period_of_report": "2026-09-30"
+        },
+        {
+          "investor_name": "안드레아스 할보르센",
+          "fund_name": "Viking Global Investors",
+          "value_usd": 33782573,
+          "weight_pct": 0.0963,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 3,
+      "total_value_usd": 226386078
+    },
+    {
       "cusip": "235851102",
       "name_of_issuer": "Danaher Corp Del",
       "ticker": "DHR",
@@ -1520,36 +1550,6 @@
       "total_value_usd": 183558714
     },
     {
-      "cusip": "12572Q105",
-      "name_of_issuer": "CME GROUP INC",
-      "ticker": "CME",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 136694000,
-          "weight_pct": 2.524,
-          "period_of_report": "2026-06-30"
-        },
-        {
-          "investor_name": "톰 게이너",
-          "fund_name": "Markel Group",
-          "value_usd": 13033505,
-          "weight_pct": 0.1015,
-          "period_of_report": "2026-09-30"
-        },
-        {
-          "investor_name": "안드레아스 할보르센",
-          "fund_name": "Viking Global Investors",
-          "value_usd": 33782573,
-          "weight_pct": 0.0963,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 3,
-      "total_value_usd": 183510078
-    },
-    {
       "cusip": "743315103",
       "name_of_issuer": "PROGRESSIVE CORP",
       "ticker": "PGR",
@@ -1617,9 +1617,9 @@
         {
           "investor_name": "칼 아이칸",
           "fund_name": "Icahn Enterprises",
-          "value_usd": 57960000,
-          "weight_pct": 0.7013,
-          "period_of_report": "2026-06-30"
+          "value_usd": 40427700,
+          "weight_pct": 0.4288,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "하워드 막스",
@@ -1637,7 +1637,7 @@
         }
       ],
       "holder_count": 3,
-      "total_value_usd": 116351255
+      "total_value_usd": 98818955
     },
     {
       "cusip": "025816109",
@@ -1746,13 +1746,13 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 489612000,
-          "weight_pct": 9.0403,
-          "period_of_report": "2026-06-30"
+          "value_usd": 480104000,
+          "weight_pct": 9.5148,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 2,
-      "total_value_usd": 2163113194
+      "total_value_usd": 2153605194
     },
     {
       "cusip": "009158106",
@@ -1923,9 +1923,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 493140000,
-          "weight_pct": 9.1055,
-          "period_of_report": "2026-06-30"
+          "value_usd": 495805000,
+          "weight_pct": 9.826,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "글렌 그린버그",
@@ -1936,7 +1936,7 @@
         }
       ],
       "holder_count": 2,
-      "total_value_usd": 870930736
+      "total_value_usd": 873595736
     },
     {
       "cusip": "71377A103",
@@ -2383,9 +2383,9 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 344269000,
-          "weight_pct": 6.3567,
-          "period_of_report": "2026-06-30"
+          "value_usd": 349868000,
+          "weight_pct": 6.9338,
+          "period_of_report": "2026-09-30"
         },
         {
           "investor_name": "톰 게이너",
@@ -2396,7 +2396,7 @@
         }
       ],
       "holder_count": 2,
-      "total_value_usd": 385275604
+      "total_value_usd": 390874604
     },
     {
       "cusip": "78442P106",
@@ -2790,52 +2790,6 @@
       "total_value_usd": 179494173
     },
     {
-      "cusip": "60855R100",
-      "name_of_issuer": "MOLINA HEALTHCARE INC",
-      "ticker": "MOH",
-      "holders": [
-        {
-          "investor_name": "마이클 버리",
-          "fund_name": "Scion Asset Management",
-          "value_usd": 23920000,
-          "weight_pct": 1.7318,
-          "period_of_report": "2025-09-30"
-        },
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 144906000,
-          "weight_pct": 2.6756,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 2,
-      "total_value_usd": 168826000
-    },
-    {
-      "cusip": "40054J109",
-      "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
-      "ticker": "AERO",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 87843000,
-          "weight_pct": 1.622,
-          "period_of_report": "2026-06-30"
-        },
-        {
-          "investor_name": "하워드 막스",
-          "fund_name": "Oaktree Capital Management",
-          "value_usd": 71436348,
-          "weight_pct": 0.9913,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 2,
-      "total_value_usd": 159279348
-    },
-    {
       "cusip": "056752108",
       "name_of_issuer": "Baidu Inc",
       "ticker": "BIDU",
@@ -2880,6 +2834,29 @@
       ],
       "holder_count": 2,
       "total_value_usd": 150590964
+    },
+    {
+      "cusip": "40054J109",
+      "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
+      "ticker": "AERO",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 77058000,
+          "weight_pct": 1.5272,
+          "period_of_report": "2026-09-30"
+        },
+        {
+          "investor_name": "하워드 막스",
+          "fund_name": "Oaktree Capital Management",
+          "value_usd": 71436348,
+          "weight_pct": 0.9913,
+          "period_of_report": "2026-06-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 148494348
     },
     {
       "cusip": "893641100",
@@ -2951,29 +2928,6 @@
       "total_value_usd": 123837373
     },
     {
-      "cusip": "26969P108",
-      "name_of_issuer": "EAGLE MATLS INC",
-      "ticker": "EXP",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 119422000,
-          "weight_pct": 2.205,
-          "period_of_report": "2026-06-30"
-        },
-        {
-          "investor_name": "톰 게이너",
-          "fund_name": "Markel Group",
-          "value_usd": 2522545,
-          "weight_pct": 0.0196,
-          "period_of_report": "2026-09-30"
-        }
-      ],
-      "holder_count": 2,
-      "total_value_usd": 121944545
-    },
-    {
       "cusip": "57636Q104",
       "name_of_issuer": "MASTERCARD INCORPORATED",
       "ticker": "MA",
@@ -2997,6 +2951,29 @@
       "total_value_usd": 115054023
     },
     {
+      "cusip": "82982L103",
+      "name_of_issuer": "SITEONE LANDSCAPE SUPPLY INC",
+      "ticker": "SITE",
+      "holders": [
+        {
+          "investor_name": "톰 게이너",
+          "fund_name": "Markel Group",
+          "value_usd": 718506,
+          "weight_pct": 0.0056,
+          "period_of_report": "2026-09-30"
+        },
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 112436000,
+          "weight_pct": 2.2283,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 113154506
+    },
+    {
       "cusip": "227046109",
       "name_of_issuer": "CROCS INC",
       "ticker": "CROX",
@@ -3018,6 +2995,52 @@
       ],
       "holder_count": 2,
       "total_value_usd": 110500088
+    },
+    {
+      "cusip": "60855R100",
+      "name_of_issuer": "MOLINA HEALTHCARE INC",
+      "ticker": "MOH",
+      "holders": [
+        {
+          "investor_name": "마이클 버리",
+          "fund_name": "Scion Asset Management",
+          "value_usd": 23920000,
+          "weight_pct": 1.7318,
+          "period_of_report": "2025-09-30"
+        },
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 85021000,
+          "weight_pct": 1.685,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 108941000
+    },
+    {
+      "cusip": "26969P108",
+      "name_of_issuer": "EAGLE MATLS INC",
+      "ticker": "EXP",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 90771000,
+          "weight_pct": 1.7989,
+          "period_of_report": "2026-09-30"
+        },
+        {
+          "investor_name": "톰 게이너",
+          "fund_name": "Markel Group",
+          "value_usd": 2522545,
+          "weight_pct": 0.0196,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 2,
+      "total_value_usd": 93293545
     },
     {
       "cusip": "866966104",
@@ -3620,13 +3643,13 @@
         {
           "investor_name": "칼 아이칸",
           "fund_name": "Icahn Enterprises",
-          "value_usd": 4458616003,
-          "weight_pct": 53.9517,
-          "period_of_report": "2026-06-30"
+          "value_usd": 4447740626,
+          "weight_pct": 47.1755,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 1,
-      "total_value_usd": 4458616003
+      "total_value_usd": 4447740626
     },
     {
       "cusip": "829933100",
@@ -3643,6 +3666,22 @@
       ],
       "holder_count": 1,
       "total_value_usd": 3686802237
+    },
+    {
+      "cusip": "12662P108",
+      "name_of_issuer": "CVR Energy Inc",
+      "ticker": "CVI",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 3630583606,
+          "weight_pct": 38.5082,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 3630583606
     },
     {
       "cusip": "92343E102",
@@ -3675,22 +3714,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 2165670000
-    },
-    {
-      "cusip": "12662P108",
-      "name_of_issuer": "CVR Energy Inc",
-      "ticker": "CVI",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 1960899637,
-          "weight_pct": 23.728,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 1960899637
     },
     {
       "cusip": "369604301",
@@ -4285,6 +4308,22 @@
       "total_value_usd": 516728060
     },
     {
+      "cusip": "126633205",
+      "name_of_issuer": "CVR Partners, LP",
+      "ticker": "UAN",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 515453836,
+          "weight_pct": 5.4672,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 515453836
+    },
+    {
       "cusip": "859241101",
       "name_of_issuer": "STERLING INFRASTRUCTURE INC",
       "ticker": "STRL",
@@ -4381,22 +4420,6 @@
       "total_value_usd": 470378663
     },
     {
-      "cusip": "126633205",
-      "name_of_issuer": "CVR Partners, LP",
-      "ticker": "UAN",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 464233266,
-          "weight_pct": 5.6175,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 464233266
-    },
-    {
       "cusip": "546347105",
       "name_of_issuer": "LOUISIANA PAC CORP",
       "ticker": "LPX",
@@ -4427,22 +4450,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 435819735
-    },
-    {
-      "cusip": "155923105",
-      "name_of_issuer": "Centuri Holdings, Inc.",
-      "ticker": "CTRI",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 433521971,
-          "weight_pct": 5.2459,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 433521971
     },
     {
       "cusip": "284902509",
@@ -4507,6 +4514,22 @@
       ],
       "holder_count": 1,
       "total_value_usd": 408549657
+    },
+    {
+      "cusip": "372460105",
+      "name_of_issuer": "GENUINE PARTS CO",
+      "ticker": "GPC",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 389540000,
+          "weight_pct": 7.72,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 389540000
     },
     {
       "cusip": "87162W100",
@@ -4587,38 +4610,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 339186841
-    },
-    {
-      "cusip": "459506101",
-      "name_of_issuer": "International Flavors and Fragrances Inc.",
-      "ticker": "IFF",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 338665500,
-          "weight_pct": 4.098,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 338665500
-    },
-    {
-      "cusip": "372460105",
-      "name_of_issuer": "GENUINE PARTS CO",
-      "ticker": "GPC",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 332253000,
-          "weight_pct": 6.1348,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 332253000
     },
     {
       "cusip": "38141G104",
@@ -4717,6 +4708,22 @@
       "total_value_usd": 289820707
     },
     {
+      "cusip": "155923105",
+      "name_of_issuer": "Centuri Holdings, Inc.",
+      "ticker": "CTRI",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 287294322,
+          "weight_pct": 3.0472,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 287294322
+    },
+    {
       "cusip": "05329W102",
       "name_of_issuer": "AUTONATION INC",
       "ticker": "AN",
@@ -4779,6 +4786,22 @@
       ],
       "holder_count": 1,
       "total_value_usd": 264414000
+    },
+    {
+      "cusip": "95082P105",
+      "name_of_issuer": "WESCO INTL INC",
+      "ticker": "WCC",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 258374000,
+          "weight_pct": 5.1205,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 258374000
     },
     {
       "cusip": "G3421J106",
@@ -4909,6 +4932,22 @@
       "total_value_usd": 250882253
     },
     {
+      "cusip": "459506101",
+      "name_of_issuer": "International Flavors and Fragrances Inc.",
+      "ticker": "IFF",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 249916413,
+          "weight_pct": 2.6508,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 249916413
+    },
+    {
       "cusip": "74164M108",
       "name_of_issuer": "PRIMERICA INC",
       "ticker": "PRI",
@@ -4987,22 +5026,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 232375000
-    },
-    {
-      "cusip": "95082P105",
-      "name_of_issuer": "WESCO INTL INC",
-      "ticker": "WCC",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 228979000,
-          "weight_pct": 4.2279,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 228979000
     },
     {
       "cusip": "01741R102",
@@ -5245,20 +5268,20 @@
       "total_value_usd": 180581098
     },
     {
-      "cusip": "879369106",
-      "name_of_issuer": "TELEFLEX INCORPORATED",
-      "ticker": "TFX",
+      "cusip": "43849R105",
+      "name_of_issuer": "HONEYWELL AEROSPACE INC",
+      "ticker": "HONA",
       "holders": [
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 178605000,
-          "weight_pct": 3.2978,
-          "period_of_report": "2026-06-30"
+          "value_usd": 175426000,
+          "weight_pct": 3.4766,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 1,
-      "total_value_usd": 178605000
+      "total_value_usd": 175426000
     },
     {
       "cusip": "55616P104",
@@ -5291,22 +5314,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 166932100
-    },
-    {
-      "cusip": "G66721104",
-      "name_of_issuer": "NORWEGIAN CRUISE LINE HLDGS",
-      "ticker": "NCLH",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 163180000,
-          "weight_pct": 3.013,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 163180000
     },
     {
       "cusip": "31620R303",
@@ -5371,22 +5378,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 143086001
-    },
-    {
-      "cusip": "278768106",
-      "name_of_issuer": "EchoStar Corporation",
-      "ticker": "ECHO",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 142561013,
-          "weight_pct": 1.7251,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 142561013
     },
     {
       "cusip": "829401108",
@@ -5620,13 +5611,13 @@
         {
           "investor_name": "세스 클라만",
           "fund_name": "Baupost Group",
-          "value_usd": 121767000,
-          "weight_pct": 2.2483,
-          "period_of_report": "2026-06-30"
+          "value_usd": 124452000,
+          "weight_pct": 2.4664,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 1,
-      "total_value_usd": 121767000
+      "total_value_usd": 124452000
     },
     {
       "cusip": "00187Y100",
@@ -5693,22 +5684,6 @@
       "total_value_usd": 119530403
     },
     {
-      "cusip": "477143101",
-      "name_of_issuer": "JetBlue Airways Corp.",
-      "ticker": "JBLU",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 118371366,
-          "weight_pct": 1.4324,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 118371366
-    },
-    {
       "cusip": "06849F108",
       "name_of_issuer": "BARRICK MINING CORP",
       "ticker": "B",
@@ -5723,6 +5698,22 @@
       ],
       "holder_count": 1,
       "total_value_usd": 117759575
+    },
+    {
+      "cusip": "36165L108",
+      "name_of_issuer": "GDS HLDGS LTD",
+      "ticker": "GDS",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 117731000,
+          "weight_pct": 2.3332,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 117731000
     },
     {
       "cusip": "25243Q205",
@@ -5755,22 +5746,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 114992000
-    },
-    {
-      "cusip": "36165L108",
-      "name_of_issuer": "GDS HLDGS LTD",
-      "ticker": "GDS",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 113208000,
-          "weight_pct": 2.0903,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 113208000
     },
     {
       "cusip": "10950A106",
@@ -5851,22 +5826,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 107910794
-    },
-    {
-      "cusip": "03064D108",
-      "name_of_issuer": "AMERICOLD REALTY TRUST INC",
-      "ticker": "COLD",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 107371000,
-          "weight_pct": 1.9825,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 107371000
     },
     {
       "cusip": "21873S108",
@@ -6013,6 +5972,22 @@
       "total_value_usd": 96914825
     },
     {
+      "cusip": "03064D108",
+      "name_of_issuer": "AMERICOLD REALTY TRUST INC",
+      "ticker": "COLD",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 95487000,
+          "weight_pct": 1.8924,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 95487000
+    },
+    {
       "cusip": "67401P405",
       "name_of_issuer": "OAKTREE SPECIALTY LENDING CORP",
       "ticker": "OCSL",
@@ -6029,22 +6004,6 @@
       "total_value_usd": 93994056
     },
     {
-      "cusip": "G61188127",
-      "name_of_issuer": "LIBERTY GLOBAL LTD",
-      "ticker": "LBTYK",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 93975000,
-          "weight_pct": 1.7352,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 93975000
-    },
-    {
       "cusip": "29445S100",
       "name_of_issuer": "EQUIPMENTSHARE COM INC",
       "ticker": "EQPT",
@@ -6059,22 +6018,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 90035840
-    },
-    {
-      "cusip": "610236101",
-      "name_of_issuer": "Monro, Inc.",
-      "ticker": "MNRO",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 86894384,
-          "weight_pct": 1.0515,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 86894384
     },
     {
       "cusip": "81762P102",
@@ -6139,6 +6082,22 @@
       ],
       "holder_count": 1,
       "total_value_usd": 84259199
+    },
+    {
+      "cusip": "G0750C108",
+      "name_of_issuer": "AXALTA COATING SYS LTD",
+      "ticker": "AXTA",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 80594000,
+          "weight_pct": 1.5972,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 80594000
     },
     {
       "cusip": "80004C200",
@@ -6292,13 +6251,29 @@
         {
           "investor_name": "칼 아이칸",
           "fund_name": "Icahn Enterprises",
-          "value_usd": 73642490,
-          "weight_pct": 0.8911,
-          "period_of_report": "2026-06-30"
+          "value_usd": 72349232,
+          "weight_pct": 0.7674,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 1,
-      "total_value_usd": 73642490
+      "total_value_usd": 72349232
+    },
+    {
+      "cusip": "610236101",
+      "name_of_issuer": "Monro, Inc.",
+      "ticker": "MNRO",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 71049236,
+          "weight_pct": 0.7536,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 71049236
     },
     {
       "cusip": "00217Y104",
@@ -6356,13 +6331,13 @@
         {
           "investor_name": "칼 아이칸",
           "fund_name": "Icahn Enterprises",
-          "value_usd": 69252220,
-          "weight_pct": 0.838,
-          "period_of_report": "2026-06-30"
+          "value_usd": 68561946,
+          "weight_pct": 0.7272,
+          "period_of_report": "2026-09-30"
         }
       ],
       "holder_count": 1,
-      "total_value_usd": 69252220
+      "total_value_usd": 68561946
     },
     {
       "cusip": "773903109",
@@ -6619,22 +6594,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 60111243
-    },
-    {
-      "cusip": "025537101",
-      "name_of_issuer": "American Electric Power Company",
-      "ticker": "AEP",
-      "holders": [
-        {
-          "investor_name": "칼 아이칸",
-          "fund_name": "Icahn Enterprises",
-          "value_usd": 59472675,
-          "weight_pct": 0.7197,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 59472675
     },
     {
       "cusip": "G9001E128",
@@ -7037,6 +6996,22 @@
       "total_value_usd": 46159155
     },
     {
+      "cusip": "278768106",
+      "name_of_issuer": "EchoStar Corporation",
+      "ticker": "ECHO",
+      "holders": [
+        {
+          "investor_name": "칼 아이칸",
+          "fund_name": "Icahn Enterprises",
+          "value_usd": 44705000,
+          "weight_pct": 0.4742,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 44705000
+    },
+    {
       "cusip": "G48833118",
       "name_of_issuer": "WEATHERFORD INTL PLC",
       "ticker": "WFRD",
@@ -7083,22 +7058,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 43712216
-    },
-    {
-      "cusip": "G0750C108",
-      "name_of_issuer": "AXALTA COATING SYS LTD",
-      "ticker": "AXTA",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 43608000,
-          "weight_pct": 0.8052,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 43608000
     },
     {
       "cusip": "G491BT108",
@@ -7371,22 +7330,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 36544752
-    },
-    {
-      "cusip": "67011P100",
-      "name_of_issuer": "DNOW INC",
-      "ticker": "DNOW",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 36160000,
-          "weight_pct": 0.6677,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 36160000
     },
     {
       "cusip": "37611X209",
@@ -8253,6 +8196,22 @@
       "total_value_usd": 21968000
     },
     {
+      "cusip": "71531U102",
+      "name_of_issuer": "PERSHING SQUARE INC",
+      "ticker": "PS",
+      "holders": [
+        {
+          "investor_name": "세스 클라만",
+          "fund_name": "Baupost Group",
+          "value_usd": 21928000,
+          "weight_pct": 0.4346,
+          "period_of_report": "2026-09-30"
+        }
+      ],
+      "holder_count": 1,
+      "total_value_usd": 21928000
+    },
+    {
       "cusip": "31556C106",
       "name_of_issuer": "FERVO ENERGY CO",
       "ticker": "FRVO",
@@ -9099,22 +9058,6 @@
       ],
       "holder_count": 1,
       "total_value_usd": 13114291
-    },
-    {
-      "cusip": "71531U102",
-      "name_of_issuer": "PERSHING SQUARE INC",
-      "ticker": "PS",
-      "holders": [
-        {
-          "investor_name": "세스 클라만",
-          "fund_name": "Baupost Group",
-          "value_usd": 12881000,
-          "weight_pct": 0.2378,
-          "period_of_report": "2026-06-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 12881000
     },
     {
       "cusip": "46266C105",
@@ -12077,22 +12020,6 @@
       "total_value_usd": 737505
     },
     {
-      "cusip": "82982L103",
-      "name_of_issuer": "SITEONE LANDSCAPE SUPPLY INC",
-      "ticker": "SITE",
-      "holders": [
-        {
-          "investor_name": "톰 게이너",
-          "fund_name": "Markel Group",
-          "value_usd": 718506,
-          "weight_pct": 0.0056,
-          "period_of_report": "2026-09-30"
-        }
-      ],
-      "holder_count": 1,
-      "total_value_usd": 718506
-    },
-    {
       "cusip": "53680QAA6",
       "name_of_issuer": "LITHIUM ARGENTINA AG",
       "ticker": null,
@@ -12806,259 +12733,231 @@
     "칼 아이칸": {
       "fund_name": "Icahn Enterprises",
       "investor_type": "concentrated",
-      "period_of_report": "2026-06-30",
+      "period_of_report": "2026-09-30",
       "holdings": [
         {
           "name_of_issuer": "Icahn Enterprises LP",
           "ticker": "IEP",
-          "value_usd": 4458616003,
-          "shares": 618393343,
-          "weight_pct": 53.9517
+          "value_usd": 4447740626,
+          "shares": 658924537,
+          "weight_pct": 47.1755
         },
         {
           "name_of_issuer": "CVR Energy Inc",
           "ticker": "CVI",
-          "value_usd": 1960899637,
+          "value_usd": 3630583606,
           "shares": 71201875,
-          "weight_pct": 23.728
+          "weight_pct": 38.5082
         },
         {
           "name_of_issuer": "CVR Partners, LP",
           "ticker": "UAN",
-          "value_usd": 464233266,
+          "value_usd": 515453836,
           "shares": 4164274,
-          "weight_pct": 5.6175
+          "weight_pct": 5.4672
         },
         {
           "name_of_issuer": "Centuri Holdings, Inc.",
           "ticker": "CTRI",
-          "value_usd": 433521971,
+          "value_usd": 287294322,
           "shares": 14336044,
-          "weight_pct": 5.2459
+          "weight_pct": 3.0472
         },
         {
           "name_of_issuer": "International Flavors and Fragrances Inc.",
           "ticker": "IFF",
-          "value_usd": 338665500,
-          "shares": 4275000,
-          "weight_pct": 4.098
-        },
-        {
-          "name_of_issuer": "EchoStar Corporation",
-          "ticker": "ECHO",
-          "value_usd": 142561013,
-          "shares": 1404542,
-          "weight_pct": 1.7251
-        },
-        {
-          "name_of_issuer": "JetBlue Airways Corp.",
-          "ticker": "JBLU",
-          "value_usd": 118371366,
-          "shares": 20658179,
-          "weight_pct": 1.4324
-        },
-        {
-          "name_of_issuer": "Monro, Inc.",
-          "ticker": "MNRO",
-          "value_usd": 86894384,
-          "shares": 5078573,
-          "weight_pct": 1.0515
+          "value_usd": 249916413,
+          "shares": 2993728,
+          "weight_pct": 2.6508
         },
         {
           "name_of_issuer": "Caesars Entertainment, Inc.",
           "ticker": "CZR",
-          "value_usd": 73642490,
+          "value_usd": 72349232,
           "shares": 2440109,
-          "weight_pct": 0.8911
+          "weight_pct": 0.7674
+        },
+        {
+          "name_of_issuer": "Monro, Inc.",
+          "ticker": "MNRO",
+          "value_usd": 71049236,
+          "shares": 5078573,
+          "weight_pct": 0.7536
         },
         {
           "name_of_issuer": "SandRidge Energy, Inc.",
           "ticker": "SD",
-          "value_usd": 69252220,
-          "shares": 5054907,
-          "weight_pct": 0.838
+          "value_usd": 68561946,
+          "shares": 5082427,
+          "weight_pct": 0.7272
         },
         {
-          "name_of_issuer": "American Electric Power Company",
-          "ticker": "AEP",
-          "value_usd": 59472675,
-          "shares": 434710,
-          "weight_pct": 0.7197
+          "name_of_issuer": "EchoStar Corporation",
+          "ticker": "ECHO",
+          "value_usd": 44705000,
+          "shares": 500000,
+          "weight_pct": 0.4742
         },
         {
           "name_of_issuer": "Bausch Plus Lomb Corp.",
           "ticker": "BLCO",
-          "value_usd": 57960000,
-          "shares": 3500000,
-          "weight_pct": 0.7013
+          "value_usd": 40427700,
+          "shares": 2378100,
+          "weight_pct": 0.4288
         }
       ]
     },
     "세스 클라만": {
       "fund_name": "Baupost Group",
       "investor_type": "concentrated",
-      "period_of_report": "2026-06-30",
+      "period_of_report": "2026-09-30",
       "holdings": [
         {
           "name_of_issuer": "AMAZON COM INC",
           "ticker": "AMZN",
-          "value_usd": 892310000,
+          "value_usd": 932781000,
           "shares": 3743854,
-          "weight_pct": 16.4759
+          "weight_pct": 18.4861
         },
         {
           "name_of_issuer": "ELEVANCE HEALTH INC FORMERLY",
           "ticker": "ELV",
-          "value_usd": 493140000,
+          "value_usd": 495805000,
           "shares": 1275154,
-          "weight_pct": 9.1055
+          "weight_pct": 9.826
         },
         {
           "name_of_issuer": "RESTAURANT BRANDS INTL INC",
           "ticker": "QSR",
-          "value_usd": 489612000,
+          "value_usd": 480104000,
           "shares": 6753112,
-          "weight_pct": 9.0403
-        },
-        {
-          "name_of_issuer": "ALPHABET INC",
-          "ticker": "GOOG",
-          "value_usd": 484744000,
-          "shares": 1371931,
-          "weight_pct": 8.9505
-        },
-        {
-          "name_of_issuer": "FERGUSON ENTERPRISES INC",
-          "ticker": "FERG",
-          "value_usd": 344269000,
-          "shares": 1450594,
-          "weight_pct": 6.3567
+          "weight_pct": 9.5148
         },
         {
           "name_of_issuer": "GENUINE PARTS CO",
           "ticker": "GPC",
-          "value_usd": 332253000,
-          "shares": 2816178,
-          "weight_pct": 6.1348
+          "value_usd": 389540000,
+          "shares": 3097978,
+          "weight_pct": 7.72
         },
         {
-          "name_of_issuer": "UNION PAC CORP",
-          "ticker": "UNP",
-          "value_usd": 322427000,
-          "shares": 1185395,
-          "weight_pct": 5.9534
+          "name_of_issuer": "FERGUSON ENTERPRISES INC",
+          "ticker": "FERG",
+          "value_usd": 349868000,
+          "shares": 1571594,
+          "weight_pct": 6.9338
         },
         {
-          "name_of_issuer": "VISA INC",
-          "ticker": "V",
-          "value_usd": 240628000,
-          "shares": 701355,
-          "weight_pct": 4.443
+          "name_of_issuer": "ALPHABET INC",
+          "ticker": "GOOG",
+          "value_usd": 323679000,
+          "shares": 949931,
+          "weight_pct": 6.4148
         },
         {
           "name_of_issuer": "WESCO INTL INC",
           "ticker": "WCC",
-          "value_usd": 228979000,
-          "shares": 662881,
-          "weight_pct": 4.2279
+          "value_usd": 258374000,
+          "shares": 718523,
+          "weight_pct": 5.1205
+        },
+        {
+          "name_of_issuer": "VISA INC",
+          "ticker": "V",
+          "value_usd": 252018000,
+          "shares": 701355,
+          "weight_pct": 4.9946
+        },
+        {
+          "name_of_issuer": "UNION PAC CORP",
+          "ticker": "UNP",
+          "value_usd": 216451000,
+          "shares": 795395,
+          "weight_pct": 4.2897
         },
         {
           "name_of_issuer": "AON PLC",
           "ticker": "AON",
-          "value_usd": 227871000,
-          "shares": 687000,
-          "weight_pct": 4.2075
-        },
-        {
-          "name_of_issuer": "TELEFLEX INCORPORATED",
-          "ticker": "TFX",
-          "value_usd": 178605000,
-          "shares": 1409000,
-          "weight_pct": 3.2978
-        },
-        {
-          "name_of_issuer": "NORWEGIAN CRUISE LINE HLDGS",
-          "ticker": "NCLH",
-          "value_usd": 163180000,
-          "shares": 7730000,
-          "weight_pct": 3.013
-        },
-        {
-          "name_of_issuer": "MOLINA HEALTHCARE INC",
-          "ticker": "MOH",
-          "value_usd": 144906000,
-          "shares": 633609,
-          "weight_pct": 2.6756
+          "value_usd": 186759000,
+          "shares": 674779,
+          "weight_pct": 3.7012
         },
         {
           "name_of_issuer": "CME GROUP INC",
           "ticker": "CME",
-          "value_usd": 136694000,
-          "shares": 619000,
-          "weight_pct": 2.524
+          "value_usd": 179570000,
+          "shares": 685435,
+          "weight_pct": 3.5588
+        },
+        {
+          "name_of_issuer": "HONEYWELL AEROSPACE INC",
+          "ticker": "HONA",
+          "value_usd": 175426000,
+          "shares": 1132000,
+          "weight_pct": 3.4766
         },
         {
           "name_of_issuer": "HERBALIFE LTD",
           "ticker": "HLF",
-          "value_usd": 121767000,
-          "shares": 9259844,
-          "weight_pct": 2.2483
-        },
-        {
-          "name_of_issuer": "EAGLE MATLS INC",
-          "ticker": "EXP",
-          "value_usd": 119422000,
-          "shares": 530763,
-          "weight_pct": 2.205
+          "value_usd": 124452000,
+          "shares": 10259844,
+          "weight_pct": 2.4664
         },
         {
           "name_of_issuer": "GDS HLDGS LTD",
           "ticker": "GDS",
-          "value_usd": 113208000,
+          "value_usd": 117731000,
           "shares": 3769818,
-          "weight_pct": 2.0903
+          "weight_pct": 2.3332
+        },
+        {
+          "name_of_issuer": "SITEONE LANDSCAPE SUPPLY INC",
+          "ticker": "SITE",
+          "value_usd": 112436000,
+          "shares": 1245000,
+          "weight_pct": 2.2283
         },
         {
           "name_of_issuer": "AMERICOLD REALTY TRUST INC",
           "ticker": "COLD",
-          "value_usd": 107371000,
+          "value_usd": 95487000,
           "shares": 6830230,
-          "weight_pct": 1.9825
+          "weight_pct": 1.8924
         },
         {
-          "name_of_issuer": "LIBERTY GLOBAL LTD",
-          "ticker": "LBTYK",
-          "value_usd": 93975000,
-          "shares": 8543161,
-          "weight_pct": 1.7352
+          "name_of_issuer": "EAGLE MATLS INC",
+          "ticker": "EXP",
+          "value_usd": 90771000,
+          "shares": 530763,
+          "weight_pct": 1.7989
         },
         {
-          "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
-          "ticker": "AERO",
-          "value_usd": 87843000,
-          "shares": 4880188,
-          "weight_pct": 1.622
+          "name_of_issuer": "MOLINA HEALTHCARE INC",
+          "ticker": "MOH",
+          "value_usd": 85021000,
+          "shares": 449609,
+          "weight_pct": 1.685
         },
         {
           "name_of_issuer": "AXALTA COATING SYS LTD",
           "ticker": "AXTA",
-          "value_usd": 43608000,
-          "shares": 1274356,
-          "weight_pct": 0.8052
+          "value_usd": 80594000,
+          "shares": 2506031,
+          "weight_pct": 1.5972
         },
         {
-          "name_of_issuer": "DNOW INC",
-          "ticker": "DNOW",
-          "value_usd": 36160000,
-          "shares": 2788000,
-          "weight_pct": 0.6677
+          "name_of_issuer": "GRUPO AEROMEXICO SAB DE CV",
+          "ticker": "AERO",
+          "value_usd": 77058000,
+          "shares": 4880188,
+          "weight_pct": 1.5272
         },
         {
           "name_of_issuer": "PERSHING SQUARE INC",
           "ticker": "PS",
-          "value_usd": 12881000,
+          "value_usd": 21928000,
           "shares": 392000,
-          "weight_pct": 0.2378
+          "weight_pct": 0.4346
         }
       ]
     },
