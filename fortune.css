@@ -36,3 +36,99 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-card{background:var(--fz-card);border:1px solid var(--fz-line);border-radius:16px;padding:18px}
 .fz-note{font-size:12px;color:var(--fz-text2);line-height:1.8;margin:26px 0 8px}
 @media(prefers-reduced-motion:reduce){.fz-tool{transition:none}.fz-tool:hover{transform:none}}
+
+/* 띠별 운세 / 공용 점괘 카드 */
+.fz-head{display:flex;align-items:center;gap:14px;margin:6px 0 16px}
+.fz-head h1{font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-.02em}
+.fz-head p{font-size:13px;color:var(--fz-text2);margin-top:2px}
+.fz-signs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+@media(max-width:700px){.fz-signs{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:380px){.fz-signs{grid-template-columns:repeat(3,1fr)}}
+.fz-sign{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:12px;border:1px solid var(--fz-line);background:var(--fz-card);color:var(--fz-text);cursor:pointer;font:inherit}
+.fz-sign .e{font-size:26px;line-height:1.1}.fz-sign .n{font-size:13px;font-weight:700}.fz-sign .y{font-size:10px;color:var(--fz-text2)}
+.fz-sign:hover{border-color:var(--fz-amber)}
+.fz-sign[aria-pressed="true"]{border-color:var(--fz-amber);background:var(--fz-card2);box-shadow:0 0 0 2px var(--fz-amber) inset}
+.fz-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 14px}
+.fz-tab{padding:8px 16px;border-radius:999px;border:1px solid var(--fz-line);background:transparent;color:var(--fz-text2);cursor:pointer;font:inherit;font-size:13px;font-weight:600}
+.fz-tab[aria-pressed="true"]{background:var(--fz-amber);border-color:var(--fz-amber);color:#2b252e}
+.fz-scroll{position:relative;background:var(--fz-card);border:1px solid var(--fz-line);border-radius:6px;padding:30px clamp(16px,4vw,30px) 26px;box-shadow:var(--fz-shadow);margin:8px 0 4px}
+.fz-scroll::before,.fz-scroll::after{content:"";position:absolute;left:-8px;right:-8px;height:12px;border-radius:6px;background:linear-gradient(180deg,#8a6b4a,#5b4430)}
+.fz-scroll::before{top:-6px}.fz-scroll::after{bottom:-6px}
+.fz-scroll-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.fz-scroll-top h2{font-size:clamp(18px,3.4vw,24px);font-weight:800}
+.fz-scroll-top .d{font-size:12px;color:var(--fz-text2);margin-top:2px}
+.fz-say-line{font-size:14px;color:var(--fz-text2);margin:0 0 14px;line-height:1.8}
+.fz-cat{padding:14px 0;border-top:1px dashed var(--fz-line)}
+.fz-cat:first-of-type{border-top:0;padding-top:0}
+.fz-cat-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.fz-cat-h b{font-size:15px}
+.fz-stars{color:var(--fz-amber);letter-spacing:2px;font-size:15px;white-space:nowrap}
+.fz-stars i{font-style:normal;color:var(--fz-line)}
+.fz-cat p{font-size:14px;line-height:1.85}
+.fz-advice{font-size:13px;color:var(--fz-text2);margin-top:4px;line-height:1.75}
+.fz-advice::before{content:"역술인의 한마디 · ";color:var(--fz-amber);font-weight:700}
+.fz-lucky{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.fz-chip{padding:6px 12px;border-radius:999px;background:var(--fz-card2);border:1px solid var(--fz-line);font-size:12.5px}
+.fz-chip b{color:var(--fz-amber);margin-right:4px}
+.fz-tl{display:flex;align-items:flex-end;gap:6px;height:92px;margin-top:10px}
+.fz-tl div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;font-size:10px;color:var(--fz-text2);min-width:0}
+.fz-tl span{display:block;width:100%;max-width:26px;border-radius:5px 5px 2px 2px;background:var(--fz-line)}
+.fz-tl .best span{background:var(--fz-amber)}
+.fz-share{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+
+/* 사주 입력 폼·기둥 표 */
+.fz-form{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:700px){.fz-form{grid-template-columns:repeat(2,1fr)}}
+.fz-form label,.fz-form fieldset{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--fz-text2);border:0;padding:0;margin:0}
+.fz-form input,.fz-form select{background:var(--fz-card2);color:var(--fz-text);border:1px solid var(--fz-line);border-radius:8px;padding:9px 10px;font-size:14px;width:100%}
+.fz-form input[type=radio],.fz-form input[type=checkbox]{width:auto}
+.fz-form fieldset label{flex-direction:row;align-items:center;gap:6px;display:inline-flex;margin-right:12px;color:var(--fz-text);font-size:14px}
+.fz-form legend{font-size:12.5px;color:var(--fz-text2);margin-bottom:6px;padding:0}
+.fz-leap{flex-direction:row!important;align-items:center;align-self:end;color:var(--fz-text)!important;font-size:14px!important}
+.fz-err{color:#e0584f;font-size:13px;margin:4px 0 10px}
+.fz-pils{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 4px}
+.fz-pil{background:var(--fz-card2);border:1px solid var(--fz-line);border-radius:12px;padding:10px 4px;text-align:center}
+.fz-pil.dim{opacity:.5}
+.fz-pil .l{font-size:12px;color:var(--fz-text2);margin-bottom:6px}
+.fz-pil .tg{font-size:11.5px;color:var(--fz-text2);min-height:16px}
+.fz-pil .ch{font-size:clamp(26px,6vw,38px);font-weight:700;line-height:1.15;margin:4px 0}
+.fz-pil .ch small{display:block;font-size:10.5px;font-weight:500;color:var(--fz-text2)}
+.fz-els{display:grid;gap:6px;margin:4px 0 10px}
+.fz-el{display:grid;grid-template-columns:64px 1fr 24px;align-items:center;gap:8px;font-size:12.5px}
+.fz-el i{display:block;height:9px;border-radius:5px;background:var(--fz-line);overflow:hidden}
+.fz-el b{display:block;height:100%}
+.fz-el em{font-style:normal;text-align:right;color:var(--fz-text2)}
+
+/* 타로: 카드 뒷면·뒤집기 */
+.fz-cats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
+.fz-deck{display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px 0 4px}
+.fz-card3d{width:min(46vw,200px);aspect-ratio:2/3.4;perspective:900px;cursor:pointer;background:none;border:0;padding:0}
+.fz-card3d .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.fz-card3d.flipped .in{transform:rotateY(180deg)}
+.fz-face{position:absolute;inset:0;border-radius:12px;backface-visibility:hidden;overflow:hidden;box-shadow:var(--fz-shadow)}
+.fz-back{background:radial-gradient(circle at 50% 50%,#6a4f6e 0,#443944 46%,#2b252e 100%);border:2px solid var(--fz-amber);display:flex;align-items:center;justify-content:center}
+.fz-back::before{content:"";position:absolute;inset:8px;border:1px solid rgba(240,179,107,.55);border-radius:8px}
+.fz-back .tg{width:44%;aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--fz-seal) 0 180deg,#2e4a8a 180deg 360deg);border:2px solid var(--fz-amber);box-shadow:0 0 22px rgba(240,179,107,.45)}
+.fz-front{transform:rotateY(180deg);background:#f4ecd8}
+.fz-front img{display:block;width:100%;height:100%;object-fit:cover}
+.fz-front.rev img{transform:rotate(180deg)}
+.fz-tarot-hint{font-size:13px;color:var(--fz-text2)}
+.fz-meaning h3{font-size:18px;font-weight:800;margin-bottom:2px}
+.fz-meaning .dir{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;background:var(--fz-card2);border:1px solid var(--fz-line);color:var(--fz-amber);margin-bottom:10px}
+@media(prefers-reduced-motion:reduce){.fz-card3d .in{transition:none}}
+
+/* 행운의 아이템(한국어 전용) + 핫딜월드 상품 */
+.fz-luckyitem{margin-top:16px;padding:14px;border-radius:12px;background:var(--fz-card2);border:1px dashed var(--fz-line)}
+.fz-li-h{display:flex;align-items:center;gap:10px}
+.fz-li-h .e{font-size:26px}
+.fz-li-h small{display:block;font-size:11px;color:var(--fz-amber);font-weight:700}
+.fz-li-h b{font-size:15px}
+.fz-luckyitem p{font-size:13px;color:var(--fz-text2);line-height:1.7;margin:8px 0 0}
+.fz-deals{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.fz-deal{display:flex;flex-direction:column;gap:4px;padding:8px;border-radius:10px;background:var(--fz-card);border:1px solid var(--fz-line);text-decoration:none;color:inherit}
+.fz-deal:hover{border-color:var(--fz-amber)}
+.fz-deal img,.fz-deal .ph{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:var(--fz-card2);display:flex;align-items:center;justify-content:center;font-size:34px}
+.fz-deal .t{font-size:12px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fz-deal .p{font-size:13px;font-weight:800;color:var(--fz-text)}
+.fz-deal .p em{font-style:normal;color:var(--fz-seal);margin-left:4px}
+.fz-li-note{margin-top:8px;font-size:11px;color:var(--fz-text2)}

@@ -1,0 +1,27 @@
+name: 운세 행운의 아이템 핫딜(핫딜월드 피드)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 2 * * *'   # 매일 11:10 KST
+concurrency:
+  group: lucky-deals
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: pip}
+      - run: pip install -r requirements.txt
+      - name: 핫딜월드 공개 피드에서 행운의 아이템 상품 매칭 (키·D1 불필요)
+        run: python fetchers/lucky_deals.py
+      - name: 커밋 및 배포
+        run: |
+          git config user.name "moneyfinal-bot"
+          git config user.email "bot@moneyfinal.kr"
+          git add data/lucky_deals.json
+          git diff --staged --quiet || (git commit -m "data: 운세 행운의 아이템 핫딜 갱신" && git pull --rebase origin main && git push)
