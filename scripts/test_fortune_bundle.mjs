@@ -24,6 +24,8 @@ assert.ok(d.card && typeof d.reversed === 'boolean');
 
 const s = F.calculateSaju({ year: 1990, month: 5, day: 15, hour: 12, minute: 0, isLunar: false, isLeapMonth: false, gender: 'male' });
 assert.ok(s, '사주 계산 결과');
+assert.equal(typeof F.stemHanja('갑'), 'string');
+assert.ok(F.DAY_MASTER_NICKNAME['갑']);
 console.log('daily keys:', Object.keys(a).join(','));
 console.log('saju keys:', Object.keys(s).join(','));
 console.log('OK');
