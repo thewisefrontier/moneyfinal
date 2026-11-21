@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="조선시대 역술인이 운영하는 운세방에서 띠별 운세, 사주팔자, 타로를 무료로 확인하세요. 입력 정보는 서버로 보내지 않습니다.">
+<link rel="canonical" href="https://moneyfinal.pages.dev/fortune">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="머니파이널">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="조선 역술인의 운세방 | 머니파이널">
+<meta property="og:description" content="조선시대 역술인이 운영하는 운세방에서 띠별 운세, 사주팔자, 타로를 무료로 확인하세요. 입력 정보는 서버로 보내지 않습니다.">
+<meta property="og:url" content="https://moneyfinal.pages.dev/fortune">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="조선 역술인의 운세방 | 머니파이널">
+<meta name="twitter:description" content="조선시대 역술인이 운영하는 운세방에서 띠별 운세, 사주팔자, 타로를 무료로 확인하세요. 입력 정보는 서버로 보내지 않습니다.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"조선 역술인의 운세방","description":"조선시대 역술인이 운영하는 운세방에서 띠별 운세, 사주팔자, 타로를 무료로 확인하세요. 입력 정보는 서버로 보내지 않습니다.","url":"https://moneyfinal.pages.dev/fortune","inLanguage":"ko"}</script>
+<title>조선 역술인의 운세방 | 머니파이널</title>
+<style>:root[data-theme="dark"]{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2128;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--red:#f85149;--yellow:#d29922;--blue:#388bfd;--accent:#388bfd}
+:root[data-theme="light"]{--bg:#fff;--bg2:#f6f8fa;--bg3:#eaeef2;--border:#d0d7de;--text:#1f2328;--text2:#656d76;--green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--blue:#0969da;--accent:#0969da}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:30px;z-index:100}
+.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;white-space:nowrap;flex-shrink:0}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}nav::-webkit-scrollbar{display:none}nav a{flex-shrink:0}
+nav a{color:var(--text2);text-decoration:none;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--text);background:var(--bg3)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:13px}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text2);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1}
+@media(max-width:860px){.menu-btn{display:block}nav{display:none;position:fixed;top:82px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:8px;max-height:calc(100vh - 82px);overflow-y:auto;z-index:102}nav.open{display:flex}nav a{padding:12px 14px;width:100%}}
+main{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sec-title{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.sec-title::before{content:"";display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.sec-more{font-size:12px;color:var(--text2)}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.card-hd{padding:12px 16px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:600}
+.filter-tabs{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.ft{font-size:12px;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:none;color:var(--text2);cursor:pointer;transition:all .15s}
+.ft.active,.ft:hover{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){.grid4{grid-template-columns:repeat(2,1fr)}}
+.kpi{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .15s}
+.kpi:hover{border-color:var(--accent)}
+.kpi-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:4px}
+.kpi-sub{font-size:12px;color:var(--text2)}
+.row{display:grid;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;transition:background .1s}
+.row:last-child{border-bottom:none}
+.row:hover{background:var(--bg3)}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--text2)}
+.loading{color:var(--text2);font-size:13px;padding:20px;text-align:center}
+.empty{color:var(--text2);font-size:13px;padding:40px;text-align:center}
+.disclaimer{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--text2);text-align:center;margin-top:24px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:11px;color:var(--text2);margin-top:40px}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;height:30px;display:flex;align-items:center;position:sticky;top:0;z-index:101}
+.ticker-inner{display:flex;gap:28px;animation:ticker 50s linear infinite;white-space:nowrap;padding:0 16px}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2)}
+.ti .name{color:var(--text);font-weight:500}
+.rate-row{grid-template-columns:2fr 1fr auto}
+.rb{font-size:13px;font-weight:600}
+.rp{font-size:11px;color:var(--text2);margin-top:2px}
+.period{font-size:11px;color:var(--text2);background:var(--bg3);padding:2px 8px;border-radius:4px;text-align:center;align-self:center}
+.rmax{font-size:15px;font-weight:700;color:var(--green);text-align:right}
+.rbase{font-size:11px;color:var(--text2);text-align:right;margin-top:2px}
+.ind-row{grid-template-columns:1fr auto}
+.ind-name{font-size:13px;font-weight:500}
+.ind-val{font-size:14px;font-weight:700;text-align:right}
+.ind-unit{font-size:11px;color:var(--text2)}
+.briefing{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:24px}
+.br-date{font-size:11px;color:var(--text2);margin-bottom:6px}
+.br-hl{font-size:16px;font-weight:600;margin-bottom:16px}
+.br-sec-label{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.br-text{font-size:13.5px;color:var(--text);line-height:1.9;margin-bottom:12px}
+.uf-form{display:grid;grid-template-columns:3fr 1fr 1fr;gap:12px;padding:16px;align-items:end}
+.fld label{display:block;font-size:11px;color:var(--text2);margin-bottom:4px;font-weight:600}
+.fld input,.fld select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:13px}
+.suggest{position:relative}
+.sg-list{position:absolute;left:0;right:0;top:100%;z-index:50;background:var(--bg2);border:1px solid var(--border);border-radius:6px;max-height:260px;overflow-y:auto;display:none}
+.sg-list div{padding:8px 10px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border)}
+.sg-list div:hover{background:var(--bg3)}
+.sg-list small{color:var(--text2);margin-left:6px}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 16px}
+@media(max-width:700px){.stat .s .v{font-size:14px;word-break:keep-all}.stat{grid-template-columns:repeat(2,1fr)}.uf-form{grid-template-columns:1fr}}
+.stat .s{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.stat .s .l{font-size:11px;color:var(--text2)}.stat .s .v{font-size:17px;font-weight:700;margin-top:2px}
+.bt{width:100%;border-collapse:collapse;font-size:13px}
+.bt th,.bt td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--border);white-space:nowrap}
+.bt th:first-child,.bt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg2)}
+.bt th{font-size:11px;color:var(--text2);font-weight:600}
+.bt tr.sub td:first-child{padding-left:26px;color:var(--text2)}
+.bt tr.bold td{font-weight:700}
+.bt tr:last-child td{border-bottom:none}
+.note{font-size:12px;color:var(--text2);line-height:1.7;padding:12px 16px}
+.note b{color:var(--text)}
+.badge{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--bg3);color:var(--text2);margin-left:4px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 16px;font-size:12px;color:var(--text2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.tabs{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+.tab{background:var(--bg2);border:1px solid var(--border);color:var(--text2);border-radius:20px;padding:6px 16px;font-size:13px;cursor:pointer}
+.tab.active{border-color:var(--accent);color:var(--accent);background:rgba(56,139,253,.1)}
+.pop{padding:0 16px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.qrow{position:relative}
+.qrow input{padding-right:44px}
+.qgo{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--text2);cursor:pointer;padding:6px 8px;border-radius:6px;display:flex;align-items:center}
+.qgo:hover,.qgo:focus-visible{color:var(--accent);background:var(--bg3);outline:none}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn:hover{filter:brightness(1.1)}
+.badge.b-buy{background:rgba(63,185,80,.18);color:var(--green)}
+.badge.b-sell{background:rgba(248,81,73,.18);color:var(--red)}
+.badge.b-etf{background:rgba(56,139,253,.18);color:var(--blue)}
+.filters{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;padding:12px 16px;border-top:1px solid var(--border)}
+.filters .grp{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.filters .grp>span{font-size:11px;color:var(--text2);margin-right:2px}
+.legal{background:rgba(210,153,34,.12);border:1px solid var(--yellow);border-radius:8px;padding:12px 16px;font-size:12.5px;line-height:1.7;margin:16px 0}
+.more{display:block;margin:12px auto;padding:8px 22px}
+</style>
+<meta name="google-site-verification" content="IjCp7SUW7MVLd7KkVW7YMpmy7A0OZjiAnQ5DgIehxhQ" />
+<link rel="stylesheet" href="fortune.css">
+</head>
+<body class="fz-page">
+<div class="ticker"><div class="ticker-inner" id="ticker-inner"></div></div>
+<header><a href="index.html" class="logo">💰 머니파이널</a>
+  <nav id="site-nav" data-active="fortune.html"></nav>
+<script src="nav.js"></script>
+  <div style="display:flex;gap:6px"><button class="theme-btn" onclick="toggleTheme()">🌙</button><button class="menu-btn" onclick="toggleNav()">☰</button></div></header>
+<main class="fz-wrap">
+
+<section class="fz-hero">
+  <img src="assets/fortune/hero-room.webp" alt="등불이 켜진 조선시대 운세방에서 점괘를 살피는 젊은 역술인" width="1344" height="768" fetchpriority="high">
+  <div class="fz-hero-body">
+    <div class="fz-kicker">朝鮮 · 運勢房</div>
+    <h1 class="fz-title">조선 역술인의 운세방</h1>
+    <p class="fz-sub">저녁 등불 아래, 젊은 역술인이 오늘의 기운을 살펴 점괘를 써 드립니다. 띠별 운세, 사주, 타로를 무료로 보세요.</p>
+    <a class="fz-btn" href="fortune-zodiac.html">오늘의 점괘 보기</a>
+  </div>
+</section>
+
+<section class="fz-section">
+  <h2 class="fz-h2">역술인의 한마디</h2>
+  <div class="fz-diviner">
+    <div class="fz-diviner-img"><img src="assets/fortune/diviner.webp" alt="산통을 든 젊은 역술인" width="640" height="640" loading="lazy"></div>
+    <p class="fz-say">어서 오십시오, 길손이시여. 이곳은 별과 절기가 만나는 작은 운세방입니다. 오늘 하루의 기운이 궁금하시다면 아래에서 도구를 하나 골라 주십시오. 제가 두루마리에 점괘를 적어 드리겠습니다.<small>— 운세방 주인</small></p>
+  </div>
+</section>
+
+<section class="fz-section">
+  <h2 class="fz-h2">오늘의 도구</h2>
+  <div class="fz-grid">
+    <a class="fz-tool" href="fortune-zodiac.html">
+      <div class="fz-tool-img"><img src="assets/fortune/tool-zodiac.webp" alt="열두 동물이 그려진 병풍" width="640" height="640" loading="lazy"></div>
+      <div class="fz-tool-body"><div class="fz-tool-name">띠별 운세</div><div class="fz-tool-desc">병풍 속 열두 띠 중 내 띠를 고르면 오늘·이번 주·이번 달·올해의 운세를 바로 봅니다.</div></div>
+    </a>
+    <a class="fz-tool" href="fortune-saju.html">
+      <div class="fz-tool-img"><img src="assets/fortune/tool-saju.webp" alt="붓과 두루마리가 놓인 낮은 책상" width="640" height="640" loading="lazy"></div>
+      <div class="fz-tool-body"><div class="fz-tool-name">사주팔자</div><div class="fz-tool-desc">태어난 해·달·날·시로 네 기둥을 세워 타고난 기질과 오행의 균형을 풀어 드립니다.</div></div>
+    </a>
+    <a class="fz-tool" href="fortune-tarot.html">
+      <div class="fz-tool-img"><img src="assets/fortune/tool-tarot.webp" alt="촛불 아래 펼쳐진 점괘 카드" width="640" height="640" loading="lazy"></div>
+      <div class="fz-tool-body"><div class="fz-tool-name">타로 한 장</div><div class="fz-tool-desc">마음속 질문을 정하고 카드 한 장을 뽑아 오늘의 메시지를 확인합니다.</div></div>
+    </a>
+  </div>
+</section>
+<p class="fz-note">⚠️ 운세 결과는 오락과 참고를 위한 것이며 특정 결과를 보장하지 않습니다. 중요한 결정의 근거로 삼지 마세요. 입력한 정보는 서버로 전송되지 않고 이 기기의 브라우저에서만 계산됩니다.</p>
+</main>
+<footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
+<script src="theme.js"></script><script src="ticker.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ec3e89757844a3582c90d3524a2cead"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

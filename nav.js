@@ -11,6 +11,7 @@
     ['loans.html', '대출'],
     ['market.html', '시장'],
     ['jp-market.html', '일본시장'],
+    ['fortune.html', '운세'],
     ['crypto.html', '코인'],
     ['savings.html', 'ISA'],
     ['annuity.html', '연금저축'],
@@ -40,6 +41,7 @@
     ['ipo.html', 'IPO'],
     ['market.html', 'Markets'],
     ['jp-market.html', 'Japan'],
+    ['fortune.html', 'Fortune'],
     ['macro.html', 'Indicators'],
     ['bond.html', 'Bonds'],
     ['crypto.html', 'Crypto'],
@@ -47,10 +49,10 @@
     ['calc.html', 'Calculators']
   ];
   var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin', 'kr-fin', 'market', 'jp-market', 'macro',
-    'macro-detail', 'indicator-detail', 'stock-detail', 'company', 'bond', 'crypto', 'sim', 'calc'];
+    'macro-detail', 'indicator-detail', 'stock-detail', 'company', 'bond', 'crypto', 'sim', 'calc', 'fortune'];
   var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
   var isEn = /^\/en(\/|$)/.test(path), rest = path.replace(/^\/en/, '');
-  var hasEn = rest === '' || EN_ONLY.indexOf(rest.slice(1)) >= 0 || /^\/(dividend|calc)-/.test(rest);
+  var hasEn = rest === '' || EN_ONLY.indexOf(rest.slice(1)) >= 0 || /^\/(dividend|calc|fortune)-/.test(rest);
   var navs = document.querySelectorAll('#site-nav');
   for (var i = 0; i < navs.length; i++) {
     var nav = navs[i];
