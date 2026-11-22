@@ -41,6 +41,7 @@ for (let d = 0; d < 400; d++) {
   for (const z of F.ZODIAC_SIGNS) {
     walk(F.getDailyFortune(z.key), 'daily', SKIP);
     for (const p of ['week', 'month', 'year']) walk(F.getPeriodFortune(p, z.key), p, SKIP);
+    for (const p of ['month', 'year']) walk(F.getPeriodFortuneNext(p, z.key), 'next-' + p, SKIP);
   }
 }
 OFF = 0;

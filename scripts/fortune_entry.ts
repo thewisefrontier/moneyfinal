@@ -16,10 +16,20 @@ function inYear<T>(year: number, fn: () => T): T {
 const getSajuYearFlow = (dayStem: string, year: number) => inYear(year, () => getSajuFlow(dayStem)[0]);
 const getSajuMonthlyFlowOf = (dayStem: string, year: number) => inYear(year, () => getSajuMonthlyFlow(dayStem));
 
+const nowKst = () => new Date(Date.now() + 9 * 60 * 60 * 1000);
+// 다음 달(그달 15일)·내년(7월 1일)의 기간 운세 — Date.now()를 잠시 그 시점으로 바꿔 핫딜월드 getPeriodFortune을 그대로 쓴다.
+const getPeriodFortuneNext = (period: "month" | "year", key: string) => {
+  const k = nowKst(), real = Date.now;
+  const t = period === "month" ? Date.UTC(k.getUTCFullYear(), k.getUTCMonth() + 1, 15, 3) : Date.UTC(k.getUTCFullYear() + 1, 6, 1, 3);
+  Date.now = () => t;
+  try { return getPeriodFortune(period, key); } finally { Date.now = real; }
+};
+
 (globalThis as unknown as { Fortune: unknown }).Fortune = {
   ZODIAC_SIGNS,
   getDailyFortune,
   getPeriodFortune,
+  getPeriodFortuneNext,
   calculateSaju,
   interpretSaju,
   getSajuFlow,

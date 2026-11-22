@@ -159,7 +159,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 const F=window.Fortune,$=id=>document.getElementById(id);
 const FZ=window.FZ,EN=!!FZ,T=EN?FZ.T:(x=>x);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const PERIODS=[['today','Today'],['week','This week'],['month','This month'],['year','This year']];
+const PERIODS=[['today','Today'],['week','This week'],['month','This month'],['nmonth','Next month'],['year','This year'],['nyear','Next year']];
 const CATS=[['general','Overall'],['love','Love'],['money','Money'],['health','Health']];
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const q=new URLSearchParams(location.search);
@@ -174,7 +174,7 @@ function drawSigns(){
 }
 function draw(){
   const z=F.ZODIAC_SIGNS.find(x=>x.key===sign),pl=PERIODS.find(p=>p[0]===per)[1];
-  const d=per==='today'?F.getDailyFortune(sign):F.getPeriodFortune(per,sign);
+  const nx={nmonth:'month',nyear:'year'}[per],d=per==='today'?F.getDailyFortune(sign):nx?F.getPeriodFortuneNext(nx,sign):F.getPeriodFortune(per,sign);
   const when=per==='today'?d.date+' (Korea time)':T(d.rangeLabel);
   const lucky=per==='today'
     ?`<span class="fz-chip"><b>Lucky color</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>Lucky number</b>${d.luckyNumber}</span><span class="fz-chip"><b>Lucky time</b>${esc(T(d.luckyTime))}</span>`

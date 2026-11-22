@@ -93,7 +93,7 @@ ZODIAC_JS = '''<script src="fortune.bundle.js"></script><script src="fortune-luc
 const F=window.Fortune,$=id=>document.getElementById(id);
 const FZ=window.FZ,EN=!!FZ,T=EN?FZ.T:(x=>x);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const PERIODS=[['today','오늘'],['week','이번 주'],['month','이번 달'],['year','올해']];
+const PERIODS=[['today','오늘'],['week','이번 주'],['month','이번 달'],['nmonth','다음 달'],['year','올해'],['nyear','내년']];
 const CATS=[['general','총운'],['love','애정운'],['money','금전운'],['health','건강운']];
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 const q=new URLSearchParams(location.search);
@@ -108,7 +108,7 @@ function drawSigns(){
 }
 function draw(){
   const z=F.ZODIAC_SIGNS.find(x=>x.key===sign),pl=PERIODS.find(p=>p[0]===per)[1];
-  const d=per==='today'?F.getDailyFortune(sign):F.getPeriodFortune(per,sign);
+  const nx={nmonth:'month',nyear:'year'}[per],d=per==='today'?F.getDailyFortune(sign):nx?F.getPeriodFortuneNext(nx,sign):F.getPeriodFortune(per,sign);
   const when=per==='today'?d.date+' (한국 시간 기준)':T(d.rangeLabel);
   const lucky=per==='today'
     ?`<span class="fz-chip"><b>행운의 색</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>행운의 시간</b>${esc(T(d.luckyTime))}</span>`
