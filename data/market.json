@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21",
+  "updated_at": "2026-11-22",
   "indicators": [
     {
       "id": 35663,
@@ -13,7 +13,7 @@
       "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
       "reference_date": "2026-11-20",
       "summary_text": "회사채(3년, AA-) 4.33%",
-      "fetched_at": "2026-11-21T11:59:42.720841+09:00",
+      "fetched_at": "2026-11-22T10:53:39.470904+09:00",
       "created_at": "2026-11-21 02:59:43"
     },
     {
@@ -28,7 +28,7 @@
       "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
       "reference_date": "2026-11-20",
       "summary_text": "국고채(10년) 3.86%",
-      "fetched_at": "2026-11-21T11:59:42.165801+09:00",
+      "fetched_at": "2026-11-22T10:53:38.861219+09:00",
       "created_at": "2026-11-21 02:59:43"
     },
     {
@@ -43,7 +43,7 @@
       "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
       "reference_date": "2026-11-20",
       "summary_text": "국고채(5년) 3.73%",
-      "fetched_at": "2026-11-21T11:59:41.642517+09:00",
+      "fetched_at": "2026-11-22T10:53:38.272613+09:00",
       "created_at": "2026-11-21 02:59:43"
     },
     {
@@ -58,11 +58,11 @@
       "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
       "reference_date": "2026-11-20",
       "summary_text": "국고채(3년) 3.64%",
-      "fetched_at": "2026-11-21T11:59:41.127856+09:00",
+      "fetched_at": "2026-11-22T10:53:37.666848+09:00",
       "created_at": "2026-11-21 02:59:42"
     },
     {
-      "id": 35631,
+      "id": 35740,
       "indicator_code": "KOSPI200",
       "indicator_name": "코스피 200",
       "category": "주식지수",
@@ -71,13 +71,13 @@
       "unit": "pt",
       "signal": "green",
       "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "코스피 200 755.34pt (+0.00%)",
-      "fetched_at": "2026-11-21T11:59:37.830213+09:00",
-      "created_at": "2026-11-21 02:59:37"
+      "fetched_at": "2026-11-22T10:53:33.871153+09:00",
+      "created_at": "2026-11-22 01:53:34"
     },
     {
-      "id": 35630,
+      "id": 35739,
       "indicator_code": "KOSDAQ",
       "indicator_name": "코스닥 지수",
       "category": "주식지수",
@@ -86,13 +86,13 @@
       "unit": "pt",
       "signal": "red",
       "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "코스닥 645.68pt (-5.71%)",
-      "fetched_at": "2026-11-21T11:59:37.633591+09:00",
-      "created_at": "2026-11-21 02:59:37"
+      "fetched_at": "2026-11-22T10:53:33.670721+09:00",
+      "created_at": "2026-11-22 01:53:34"
     },
     {
-      "id": 35629,
+      "id": 35738,
       "indicator_code": "KOSPI",
       "indicator_name": "코스피 지수",
       "category": "주식지수",
@@ -101,103 +101,103 @@
       "unit": "pt",
       "signal": "red",
       "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "코스피 4869.96pt (-5.21%)",
-      "fetched_at": "2026-11-21T11:59:37.467501+09:00",
-      "created_at": "2026-11-21 02:59:37"
+      "fetched_at": "2026-11-22T10:53:33.444321+09:00",
+      "created_at": "2026-11-22 01:53:34"
     },
     {
-      "id": 35628,
+      "id": 35737,
       "indicator_code": "OIL_KEROSENE",
       "indicator_name": "등유 가격",
       "category": "원자재",
-      "value": 1568.63,
-      "prev_value": 1568.82,
+      "value": 1568.43,
+      "prev_value": 1568.68,
       "unit": "원/L",
       "signal": "green",
       "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-      "reference_date": "2026-11-21",
-      "summary_text": "등유 1,568.63원/L (전국 평균, -0.19)",
-      "fetched_at": "2026-11-21T11:59:36.411624+09:00",
-      "created_at": "2026-11-21 02:59:36"
+      "reference_date": "2026-11-22",
+      "summary_text": "등유 1,568.43원/L (전국 평균, -0.25)",
+      "fetched_at": "2026-11-22T10:53:32.367359+09:00",
+      "created_at": "2026-11-22 01:53:32"
     },
     {
-      "id": 35627,
+      "id": 35736,
       "indicator_code": "OIL_DIESEL",
       "indicator_name": "경유 가격",
       "category": "원자재",
-      "value": 1841.29,
-      "prev_value": 1841.29,
+      "value": 1840.97,
+      "prev_value": 1841.09,
       "unit": "원/L",
       "signal": "green",
       "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-      "reference_date": "2026-11-21",
-      "summary_text": "경유 1,841.29원/L (전국 평균, +0.00)",
-      "fetched_at": "2026-11-21T11:59:36.411602+09:00",
-      "created_at": "2026-11-21 02:59:36"
+      "reference_date": "2026-11-22",
+      "summary_text": "경유 1,840.97원/L (전국 평균, -0.12)",
+      "fetched_at": "2026-11-22T10:53:32.367348+09:00",
+      "created_at": "2026-11-22 01:53:32"
     },
     {
-      "id": 35626,
+      "id": 35735,
       "indicator_code": "OIL_GASOLINE",
       "indicator_name": "휘발유 가격",
       "category": "원자재",
-      "value": 1854.35,
-      "prev_value": 1854.43,
+      "value": 1854.26,
+      "prev_value": 1854.26,
       "unit": "원/L",
       "signal": "green",
       "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-      "reference_date": "2026-11-21",
-      "summary_text": "휘발유 1,854.35원/L (전국 평균, -0.08)",
-      "fetched_at": "2026-11-21T11:59:36.411571+09:00",
-      "created_at": "2026-11-21 02:59:36"
+      "reference_date": "2026-11-22",
+      "summary_text": "휘발유 1,854.26원/L (전국 평균, +0.00)",
+      "fetched_at": "2026-11-22T10:53:32.367328+09:00",
+      "created_at": "2026-11-22 01:53:32"
     },
     {
-      "id": 35625,
+      "id": 35734,
       "indicator_code": "GOLD",
       "indicator_name": "금 가격 (국제 금선물 환산)",
       "category": "원자재",
-      "value": 151420.41,
+      "value": 150410.65,
       "prev_value": 157688.59,
       "unit": "원/g",
       "signal": "green",
       "source": "Yahoo Finance GC=F 환산 (data.go.kr 장애 시 폴백)",
-      "reference_date": "2026-11-21",
-      "summary_text": "금 151,420원/g (-3.98%, 국제시세 환산)",
-      "fetched_at": "2026-11-21T11:59:35.289208+09:00",
-      "created_at": "2026-11-21 02:59:35"
+      "reference_date": "2026-11-22",
+      "summary_text": "금 150,411원/g (-4.62%, 국제시세 환산)",
+      "fetched_at": "2026-11-22T10:53:31.082236+09:00",
+      "created_at": "2026-11-22 01:53:31"
     },
     {
-      "id": 35624,
+      "id": 35733,
       "indicator_code": "ETH",
       "indicator_name": "이더리움",
       "category": "암호화폐",
-      "value": 1617.4948629241878,
+      "value": 1684.608500436836,
       "prev_value": null,
       "unit": "USD",
-      "signal": "red",
+      "signal": "green",
       "source": "CoinMarketCap",
-      "reference_date": "2026-11-21",
-      "summary_text": "이더리움 $1,617.49 (-7.31%)",
-      "fetched_at": "2026-11-21T11:59:33.850579+09:00",
-      "created_at": "2026-11-21 02:59:33"
+      "reference_date": "2026-11-22",
+      "summary_text": "이더리움 $1,684.61 (+3.95%)",
+      "fetched_at": "2026-11-22T10:53:29.430761+09:00",
+      "created_at": "2026-11-22 01:53:29"
     },
     {
-      "id": 35623,
+      "id": 35732,
       "indicator_code": "BTC",
       "indicator_name": "비트코인",
       "category": "암호화폐",
-      "value": 58508.69057540643,
+      "value": 60053.611155972816,
       "prev_value": null,
       "unit": "USD",
-      "signal": "red",
+      "signal": "green",
       "source": "CoinMarketCap",
-      "reference_date": "2026-11-21",
-      "summary_text": "비트코인 $58,508.69 (-5.69%)",
-      "fetched_at": "2026-11-21T11:59:33.850515+09:00",
-      "created_at": "2026-11-21 02:59:33"
+      "reference_date": "2026-11-22",
+      "summary_text": "비트코인 $60,053.61 (+1.99%)",
+      "fetched_at": "2026-11-22T10:53:29.430736+09:00",
+      "created_at": "2026-11-22 01:53:29"
     },
     {
-      "id": 35622,
+      "id": 35731,
       "indicator_code": "NATGAS",
       "indicator_name": "천연가스 가격",
       "category": "원자재",
@@ -206,13 +206,13 @@
       "unit": "USD/MMBtu",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:31.629771+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:26.979965+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35621,
+      "id": 35730,
       "indicator_code": "US_UNEMPLOYMENT",
       "indicator_name": "미국 실업률",
       "category": "고용",
@@ -221,13 +221,13 @@
       "unit": "%",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:31.445360+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:26.684517+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35620,
+      "id": 35729,
       "indicator_code": "US_10Y_TREASURY",
       "indicator_name": "미국 10년물 국채금리",
       "category": "금리",
@@ -236,13 +236,13 @@
       "unit": "%",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:31.271805+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:26.342963+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35619,
+      "id": 35728,
       "indicator_code": "US_NASDAQ",
       "indicator_name": "나스닥 종합지수",
       "category": "주식지수",
@@ -251,13 +251,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:31.053322+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:25.771852+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35618,
+      "id": 35727,
       "indicator_code": "US_DJIA",
       "indicator_name": "다우존스 산업평균",
       "category": "주식지수",
@@ -266,13 +266,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:30.891626+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:25.439953+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35617,
+      "id": 35726,
       "indicator_code": "US_SP500",
       "indicator_name": "S&P 500",
       "category": "주식지수",
@@ -281,13 +281,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:30.720701+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:24.993505+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35616,
+      "id": 35725,
       "indicator_code": "WTI",
       "indicator_name": "WTI 원유가격",
       "category": "원자재",
@@ -296,13 +296,13 @@
       "unit": "USD/배럴",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:30.524824+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:24.705025+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35615,
+      "id": 35724,
       "indicator_code": "VIX",
       "indicator_name": "VIX 공포지수",
       "category": "시장위험",
@@ -311,13 +311,13 @@
       "unit": "Index",
       "signal": "yellow",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:30.307935+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:24.344676+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35614,
+      "id": 35723,
       "indicator_code": "US_YIELD_CURVE",
       "indicator_name": "미국 장단기 금리차(10Y-2Y)",
       "category": "금리",
@@ -326,13 +326,13 @@
       "unit": "%",
       "signal": "yellow",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:29.944125+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:24.062644+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35613,
+      "id": 35722,
       "indicator_code": "USD_INDEX",
       "indicator_name": "달러 인덱스(DXY)",
       "category": "환율",
@@ -341,13 +341,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:29.739387+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:23.648047+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35612,
+      "id": 35721,
       "indicator_code": "US_CPI",
       "indicator_name": "미국 소비자물가지수(CPI)",
       "category": "물가",
@@ -356,13 +356,13 @@
       "unit": "Index",
       "signal": "green",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:29.565651+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:23.385220+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35611,
+      "id": 35720,
       "indicator_code": "FED_RATE",
       "indicator_name": "미국 기준금리",
       "category": "금리",
@@ -371,13 +371,13 @@
       "unit": "%",
       "signal": "yellow",
       "source": "FRED (미국 연준)",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:29.413377+09:00",
-      "created_at": "2026-11-21 02:59:31"
+      "fetched_at": "2026-11-22T10:53:22.990254+09:00",
+      "created_at": "2026-11-22 01:53:27"
     },
     {
-      "id": 35610,
+      "id": 35719,
       "indicator_code": "USD_KRW",
       "indicator_name": "원달러 환율",
       "category": "환율",
@@ -386,10 +386,10 @@
       "unit": "원",
       "signal": "yellow",
       "source": "한국은행 ECOS",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": null,
-      "fetched_at": "2026-11-21T11:59:28.850073+09:00",
-      "created_at": "2026-11-21 02:59:28"
+      "fetched_at": "2026-11-22T10:53:22.276475+09:00",
+      "created_at": "2026-11-22 01:53:22"
     },
     {
       "id": 35500,
@@ -403,7 +403,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:23.056480+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044362+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -418,7 +418,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056449+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044345+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -433,7 +433,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056401+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044328+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -448,7 +448,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:23.056360+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044308+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -463,7 +463,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056328+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044290+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -478,7 +478,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056296+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044272+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -493,7 +493,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056261+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044254+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -508,7 +508,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056184+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044237+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -523,7 +523,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056123+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044219+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -538,7 +538,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056099+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044197+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -553,7 +553,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056070+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044180+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -568,7 +568,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056047+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044162+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -583,7 +583,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056024+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044145+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -598,7 +598,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.056001+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044128+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -613,7 +613,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055978+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044110+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -628,7 +628,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055954+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044093+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -643,7 +643,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:23.055928+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044074+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -658,7 +658,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055904+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044056+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -673,7 +673,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055880+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044039+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -688,7 +688,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055856+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044021+09:00",
       "created_at": "2026-11-20 02:49:53"
     },
     {
@@ -703,7 +703,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055831+09:00",
+      "fetched_at": "2026-11-22T10:53:15.044002+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -718,7 +718,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055807+09:00",
+      "fetched_at": "2026-11-22T10:53:15.043985+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -733,7 +733,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055781+09:00",
+      "fetched_at": "2026-11-22T10:53:15.043966+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -748,7 +748,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055753+09:00",
+      "fetched_at": "2026-11-22T10:53:15.043946+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -763,7 +763,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:23.055704+09:00",
+      "fetched_at": "2026-11-22T10:53:15.043905+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -778,7 +778,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396628+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193560+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -793,7 +793,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396599+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193542+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -808,7 +808,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396570+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193525+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -823,7 +823,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396541+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193508+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -838,7 +838,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396512+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193489+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -853,7 +853,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396478+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193463+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -868,7 +868,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396448+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193446+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -883,7 +883,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396404+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193428+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -898,7 +898,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396375+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193411+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -913,7 +913,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396346+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193393+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -928,7 +928,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396317+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193375+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -943,7 +943,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396288+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193358+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -958,7 +958,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396260+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193340+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -973,7 +973,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396229+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193322+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -988,7 +988,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396200+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193304+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1003,7 +1003,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396171+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193285+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1018,7 +1018,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396141+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193266+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1033,7 +1033,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:59:22.396106+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193245+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1048,7 +1048,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396076+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193226+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1063,7 +1063,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396047+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193208+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1078,7 +1078,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.396016+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193190+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1093,7 +1093,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.395985+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193171+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1108,7 +1108,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.395954+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193153+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1123,7 +1123,7 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.395920+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193131+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
@@ -1138,11 +1138,11 @@
       "source": "자체계산(금융위 주식시세정보)",
       "reference_date": "2026-11-20",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:59:22.395856+09:00",
+      "fetched_at": "2026-11-22T10:53:14.193085+09:00",
       "created_at": "2026-11-20 02:49:52"
     },
     {
-      "id": 35559,
+      "id": 35668,
       "indicator_code": "US_RSI_TSLA",
       "indicator_name": "TSLA RSI(14)",
       "category": "미국주식기술지표",
@@ -1151,13 +1151,13 @@
       "unit": "",
       "signal": "green",
       "source": "Yahoo Finance",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:56:52.214684+09:00",
-      "created_at": "2026-11-21 02:56:52"
+      "fetched_at": "2026-11-22T10:50:49.539185+09:00",
+      "created_at": "2026-11-22 01:50:49"
     },
     {
-      "id": 35558,
+      "id": 35667,
       "indicator_code": "US_RSI_NVDA",
       "indicator_name": "NVDA RSI(14)",
       "category": "미국주식기술지표",
@@ -1166,43 +1166,43 @@
       "unit": "",
       "signal": "yellow",
       "source": "Yahoo Finance",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:56:52.053106+09:00",
-      "created_at": "2026-11-21 02:56:52"
+      "fetched_at": "2026-11-22T10:50:49.377094+09:00",
+      "created_at": "2026-11-22 01:50:49"
     },
     {
-      "id": 35557,
+      "id": 35666,
       "indicator_code": "US_RSI_GOOGL",
       "indicator_name": "GOOGL RSI(14)",
       "category": "미국주식기술지표",
-      "value": 27.777929444698913,
+      "value": 27.777929447667674,
       "prev_value": null,
       "unit": "",
       "signal": "yellow",
       "source": "Yahoo Finance",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "과매도 구간",
-      "fetched_at": "2026-11-21T11:56:51.866750+09:00",
-      "created_at": "2026-11-21 02:56:52"
+      "fetched_at": "2026-11-22T10:50:49.212283+09:00",
+      "created_at": "2026-11-22 01:50:49"
     },
     {
-      "id": 35556,
+      "id": 35665,
       "indicator_code": "US_RSI_MSFT",
       "indicator_name": "MSFT RSI(14)",
       "category": "미국주식기술지표",
-      "value": 35.014003349248526,
+      "value": 35.014003395953495,
       "prev_value": null,
       "unit": "",
       "signal": "green",
       "source": "Yahoo Finance",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:56:51.689846+09:00",
-      "created_at": "2026-11-21 02:56:52"
+      "fetched_at": "2026-11-22T10:50:49.064038+09:00",
+      "created_at": "2026-11-22 01:50:49"
     },
     {
-      "id": 35555,
+      "id": 35664,
       "indicator_code": "US_RSI_AAPL",
       "indicator_name": "AAPL RSI(14)",
       "category": "미국주식기술지표",
@@ -1211,10 +1211,10 @@
       "unit": "",
       "signal": "green",
       "source": "Yahoo Finance",
-      "reference_date": "2026-11-21",
+      "reference_date": "2026-11-22",
       "summary_text": "중립 구간",
-      "fetched_at": "2026-11-21T11:56:51.495352+09:00",
-      "created_at": "2026-11-21 02:56:52"
+      "fetched_at": "2026-11-22T10:50:48.878299+09:00",
+      "created_at": "2026-11-22 01:50:49"
     },
     {
       "id": 35231,
@@ -59101,7 +59101,7 @@
         "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
         "reference_date": "2026-11-20",
         "summary_text": "회사채(3년, AA-) 4.33%",
-        "fetched_at": "2026-11-21T11:59:42.720841+09:00",
+        "fetched_at": "2026-11-22T10:53:39.470904+09:00",
         "created_at": "2026-11-21 02:59:43"
       },
       {
@@ -59116,7 +59116,7 @@
         "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
         "reference_date": "2026-11-20",
         "summary_text": "국고채(10년) 3.86%",
-        "fetched_at": "2026-11-21T11:59:42.165801+09:00",
+        "fetched_at": "2026-11-22T10:53:38.861219+09:00",
         "created_at": "2026-11-21 02:59:43"
       },
       {
@@ -59131,7 +59131,7 @@
         "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
         "reference_date": "2026-11-20",
         "summary_text": "국고채(5년) 3.73%",
-        "fetched_at": "2026-11-21T11:59:41.642517+09:00",
+        "fetched_at": "2026-11-22T10:53:38.272613+09:00",
         "created_at": "2026-11-21 02:59:43"
       },
       {
@@ -59146,7 +59146,7 @@
         "source": "한국은행 ECOS (data.go.kr 장애 시 폴백, 개별종목 아닌 대표금리)",
         "reference_date": "2026-11-20",
         "summary_text": "국고채(3년) 3.64%",
-        "fetched_at": "2026-11-21T11:59:41.127856+09:00",
+        "fetched_at": "2026-11-22T10:53:37.666848+09:00",
         "created_at": "2026-11-21 02:59:42"
       },
       {
@@ -69802,7 +69802,7 @@
     ],
     "주식지수": [
       {
-        "id": 35631,
+        "id": 35740,
         "indicator_code": "KOSPI200",
         "indicator_name": "코스피 200",
         "category": "주식지수",
@@ -69811,13 +69811,13 @@
         "unit": "pt",
         "signal": "green",
         "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "코스피 200 755.34pt (+0.00%)",
-        "fetched_at": "2026-11-21T11:59:37.830213+09:00",
-        "created_at": "2026-11-21 02:59:37"
+        "fetched_at": "2026-11-22T10:53:33.871153+09:00",
+        "created_at": "2026-11-22 01:53:34"
       },
       {
-        "id": 35630,
+        "id": 35739,
         "indicator_code": "KOSDAQ",
         "indicator_name": "코스닥 지수",
         "category": "주식지수",
@@ -69826,13 +69826,13 @@
         "unit": "pt",
         "signal": "red",
         "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "코스닥 645.68pt (-5.71%)",
-        "fetched_at": "2026-11-21T11:59:37.633591+09:00",
-        "created_at": "2026-11-21 02:59:37"
+        "fetched_at": "2026-11-22T10:53:33.670721+09:00",
+        "created_at": "2026-11-22 01:53:34"
       },
       {
-        "id": 35629,
+        "id": 35738,
         "indicator_code": "KOSPI",
         "indicator_name": "코스피 지수",
         "category": "주식지수",
@@ -69841,13 +69841,13 @@
         "unit": "pt",
         "signal": "red",
         "source": "Yahoo Finance (data.go.kr 장애 시 폴백)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "코스피 4869.96pt (-5.21%)",
-        "fetched_at": "2026-11-21T11:59:37.467501+09:00",
-        "created_at": "2026-11-21 02:59:37"
+        "fetched_at": "2026-11-22T10:53:33.444321+09:00",
+        "created_at": "2026-11-22 01:53:34"
       },
       {
-        "id": 35619,
+        "id": 35728,
         "indicator_code": "US_NASDAQ",
         "indicator_name": "나스닥 종합지수",
         "category": "주식지수",
@@ -69856,13 +69856,13 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:31.053322+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:25.771852+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35618,
+        "id": 35727,
         "indicator_code": "US_DJIA",
         "indicator_name": "다우존스 산업평균",
         "category": "주식지수",
@@ -69871,13 +69871,13 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:30.891626+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:25.439953+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35617,
+        "id": 35726,
         "indicator_code": "US_SP500",
         "indicator_name": "S&P 500",
         "category": "주식지수",
@@ -69886,75 +69886,75 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:30.720701+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:24.993505+09:00",
+        "created_at": "2026-11-22 01:53:27"
       }
     ],
     "원자재": [
       {
-        "id": 35628,
+        "id": 35737,
         "indicator_code": "OIL_KEROSENE",
         "indicator_name": "등유 가격",
         "category": "원자재",
-        "value": 1568.63,
-        "prev_value": 1568.82,
+        "value": 1568.43,
+        "prev_value": 1568.68,
         "unit": "원/L",
         "signal": "green",
         "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-        "reference_date": "2026-11-21",
-        "summary_text": "등유 1,568.63원/L (전국 평균, -0.19)",
-        "fetched_at": "2026-11-21T11:59:36.411624+09:00",
-        "created_at": "2026-11-21 02:59:36"
+        "reference_date": "2026-11-22",
+        "summary_text": "등유 1,568.43원/L (전국 평균, -0.25)",
+        "fetched_at": "2026-11-22T10:53:32.367359+09:00",
+        "created_at": "2026-11-22 01:53:32"
       },
       {
-        "id": 35627,
+        "id": 35736,
         "indicator_code": "OIL_DIESEL",
         "indicator_name": "경유 가격",
         "category": "원자재",
-        "value": 1841.29,
-        "prev_value": 1841.29,
+        "value": 1840.97,
+        "prev_value": 1841.09,
         "unit": "원/L",
         "signal": "green",
         "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-        "reference_date": "2026-11-21",
-        "summary_text": "경유 1,841.29원/L (전국 평균, +0.00)",
-        "fetched_at": "2026-11-21T11:59:36.411602+09:00",
-        "created_at": "2026-11-21 02:59:36"
+        "reference_date": "2026-11-22",
+        "summary_text": "경유 1,840.97원/L (전국 평균, -0.12)",
+        "fetched_at": "2026-11-22T10:53:32.367348+09:00",
+        "created_at": "2026-11-22 01:53:32"
       },
       {
-        "id": 35626,
+        "id": 35735,
         "indicator_code": "OIL_GASOLINE",
         "indicator_name": "휘발유 가격",
         "category": "원자재",
-        "value": 1854.35,
-        "prev_value": 1854.43,
+        "value": 1854.26,
+        "prev_value": 1854.26,
         "unit": "원/L",
         "signal": "green",
         "source": "오피넷 한국석유공사 (data.go.kr 장애 시 폴백, 전국 소매 평균가)",
-        "reference_date": "2026-11-21",
-        "summary_text": "휘발유 1,854.35원/L (전국 평균, -0.08)",
-        "fetched_at": "2026-11-21T11:59:36.411571+09:00",
-        "created_at": "2026-11-21 02:59:36"
+        "reference_date": "2026-11-22",
+        "summary_text": "휘발유 1,854.26원/L (전국 평균, +0.00)",
+        "fetched_at": "2026-11-22T10:53:32.367328+09:00",
+        "created_at": "2026-11-22 01:53:32"
       },
       {
-        "id": 35625,
+        "id": 35734,
         "indicator_code": "GOLD",
         "indicator_name": "금 가격 (국제 금선물 환산)",
         "category": "원자재",
-        "value": 151420.41,
+        "value": 150410.65,
         "prev_value": 157688.59,
         "unit": "원/g",
         "signal": "green",
         "source": "Yahoo Finance GC=F 환산 (data.go.kr 장애 시 폴백)",
-        "reference_date": "2026-11-21",
-        "summary_text": "금 151,420원/g (-3.98%, 국제시세 환산)",
-        "fetched_at": "2026-11-21T11:59:35.289208+09:00",
-        "created_at": "2026-11-21 02:59:35"
+        "reference_date": "2026-11-22",
+        "summary_text": "금 150,411원/g (-4.62%, 국제시세 환산)",
+        "fetched_at": "2026-11-22T10:53:31.082236+09:00",
+        "created_at": "2026-11-22 01:53:31"
       },
       {
-        "id": 35622,
+        "id": 35731,
         "indicator_code": "NATGAS",
         "indicator_name": "천연가스 가격",
         "category": "원자재",
@@ -69963,13 +69963,13 @@
         "unit": "USD/MMBtu",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:31.629771+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:26.979965+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35616,
+        "id": 35725,
         "indicator_code": "WTI",
         "indicator_name": "WTI 원유가격",
         "category": "원자재",
@@ -69978,47 +69978,47 @@
         "unit": "USD/배럴",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:30.524824+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:24.705025+09:00",
+        "created_at": "2026-11-22 01:53:27"
       }
     ],
     "암호화폐": [
       {
-        "id": 35624,
+        "id": 35733,
         "indicator_code": "ETH",
         "indicator_name": "이더리움",
         "category": "암호화폐",
-        "value": 1617.4948629241878,
+        "value": 1684.608500436836,
         "prev_value": null,
         "unit": "USD",
-        "signal": "red",
+        "signal": "green",
         "source": "CoinMarketCap",
-        "reference_date": "2026-11-21",
-        "summary_text": "이더리움 $1,617.49 (-7.31%)",
-        "fetched_at": "2026-11-21T11:59:33.850579+09:00",
-        "created_at": "2026-11-21 02:59:33"
+        "reference_date": "2026-11-22",
+        "summary_text": "이더리움 $1,684.61 (+3.95%)",
+        "fetched_at": "2026-11-22T10:53:29.430761+09:00",
+        "created_at": "2026-11-22 01:53:29"
       },
       {
-        "id": 35623,
+        "id": 35732,
         "indicator_code": "BTC",
         "indicator_name": "비트코인",
         "category": "암호화폐",
-        "value": 58508.69057540643,
+        "value": 60053.611155972816,
         "prev_value": null,
         "unit": "USD",
-        "signal": "red",
+        "signal": "green",
         "source": "CoinMarketCap",
-        "reference_date": "2026-11-21",
-        "summary_text": "비트코인 $58,508.69 (-5.69%)",
-        "fetched_at": "2026-11-21T11:59:33.850515+09:00",
-        "created_at": "2026-11-21 02:59:33"
+        "reference_date": "2026-11-22",
+        "summary_text": "비트코인 $60,053.61 (+1.99%)",
+        "fetched_at": "2026-11-22T10:53:29.430736+09:00",
+        "created_at": "2026-11-22 01:53:29"
       }
     ],
     "고용": [
       {
-        "id": 35621,
+        "id": 35730,
         "indicator_code": "US_UNEMPLOYMENT",
         "indicator_name": "미국 실업률",
         "category": "고용",
@@ -70027,15 +70027,15 @@
         "unit": "%",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:31.445360+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:26.684517+09:00",
+        "created_at": "2026-11-22 01:53:27"
       }
     ],
     "금리": [
       {
-        "id": 35620,
+        "id": 35729,
         "indicator_code": "US_10Y_TREASURY",
         "indicator_name": "미국 10년물 국채금리",
         "category": "금리",
@@ -70044,13 +70044,13 @@
         "unit": "%",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:31.271805+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:26.342963+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35614,
+        "id": 35723,
         "indicator_code": "US_YIELD_CURVE",
         "indicator_name": "미국 장단기 금리차(10Y-2Y)",
         "category": "금리",
@@ -70059,13 +70059,13 @@
         "unit": "%",
         "signal": "yellow",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:29.944125+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:24.062644+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35611,
+        "id": 35720,
         "indicator_code": "FED_RATE",
         "indicator_name": "미국 기준금리",
         "category": "금리",
@@ -70074,10 +70074,10 @@
         "unit": "%",
         "signal": "yellow",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:29.413377+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:22.990254+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
         "id": 35231,
@@ -70097,7 +70097,7 @@
     ],
     "시장위험": [
       {
-        "id": 35615,
+        "id": 35724,
         "indicator_code": "VIX",
         "indicator_name": "VIX 공포지수",
         "category": "시장위험",
@@ -70106,15 +70106,15 @@
         "unit": "Index",
         "signal": "yellow",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:30.307935+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:24.344676+09:00",
+        "created_at": "2026-11-22 01:53:27"
       }
     ],
     "환율": [
       {
-        "id": 35613,
+        "id": 35722,
         "indicator_code": "USD_INDEX",
         "indicator_name": "달러 인덱스(DXY)",
         "category": "환율",
@@ -70123,13 +70123,13 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:29.739387+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:23.648047+09:00",
+        "created_at": "2026-11-22 01:53:27"
       },
       {
-        "id": 35610,
+        "id": 35719,
         "indicator_code": "USD_KRW",
         "indicator_name": "원달러 환율",
         "category": "환율",
@@ -70138,15 +70138,15 @@
         "unit": "원",
         "signal": "yellow",
         "source": "한국은행 ECOS",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:28.850073+09:00",
-        "created_at": "2026-11-21 02:59:28"
+        "fetched_at": "2026-11-22T10:53:22.276475+09:00",
+        "created_at": "2026-11-22 01:53:22"
       }
     ],
     "물가": [
       {
-        "id": 35612,
+        "id": 35721,
         "indicator_code": "US_CPI",
         "indicator_name": "미국 소비자물가지수(CPI)",
         "category": "물가",
@@ -70155,10 +70155,10 @@
         "unit": "Index",
         "signal": "green",
         "source": "FRED (미국 연준)",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": null,
-        "fetched_at": "2026-11-21T11:59:29.565651+09:00",
-        "created_at": "2026-11-21 02:59:31"
+        "fetched_at": "2026-11-22T10:53:23.385220+09:00",
+        "created_at": "2026-11-22 01:53:27"
       }
     ],
     "한국주식기술지표": [
@@ -70174,7 +70174,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:23.056480+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044362+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70189,7 +70189,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056449+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044345+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70204,7 +70204,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056401+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044328+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70219,7 +70219,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:23.056360+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044308+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70234,7 +70234,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056328+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044290+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70249,7 +70249,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056296+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044272+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70264,7 +70264,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056261+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044254+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70279,7 +70279,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056184+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044237+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70294,7 +70294,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056123+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044219+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70309,7 +70309,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056099+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044197+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70324,7 +70324,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056070+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044180+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70339,7 +70339,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056047+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044162+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70354,7 +70354,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056024+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044145+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70369,7 +70369,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.056001+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044128+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70384,7 +70384,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055978+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044110+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70399,7 +70399,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055954+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044093+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70414,7 +70414,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:23.055928+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044074+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70429,7 +70429,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055904+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044056+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70444,7 +70444,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055880+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044039+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70459,7 +70459,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055856+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044021+09:00",
         "created_at": "2026-11-20 02:49:53"
       },
       {
@@ -70474,7 +70474,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055831+09:00",
+        "fetched_at": "2026-11-22T10:53:15.044002+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70489,7 +70489,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055807+09:00",
+        "fetched_at": "2026-11-22T10:53:15.043985+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70504,7 +70504,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055781+09:00",
+        "fetched_at": "2026-11-22T10:53:15.043966+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70519,7 +70519,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055753+09:00",
+        "fetched_at": "2026-11-22T10:53:15.043946+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70534,7 +70534,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:23.055704+09:00",
+        "fetched_at": "2026-11-22T10:53:15.043905+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70549,7 +70549,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396628+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193560+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70564,7 +70564,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396599+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193542+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70579,7 +70579,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396570+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193525+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70594,7 +70594,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396541+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193508+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70609,7 +70609,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396512+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193489+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70624,7 +70624,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396478+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193463+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70639,7 +70639,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396448+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193446+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70654,7 +70654,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396404+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193428+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70669,7 +70669,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396375+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193411+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70684,7 +70684,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396346+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193393+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70699,7 +70699,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396317+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193375+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70714,7 +70714,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396288+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193358+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70729,7 +70729,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396260+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193340+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70744,7 +70744,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396229+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193322+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70759,7 +70759,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396200+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193304+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70774,7 +70774,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396171+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193285+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70789,7 +70789,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396141+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193266+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70804,7 +70804,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:59:22.396106+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193245+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70819,7 +70819,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396076+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193226+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70834,7 +70834,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396047+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193208+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70849,7 +70849,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.396016+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193190+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70864,7 +70864,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.395985+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193171+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70879,7 +70879,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.395954+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193153+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70894,7 +70894,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.395920+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193131+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -70909,7 +70909,7 @@
         "source": "자체계산(금융위 주식시세정보)",
         "reference_date": "2026-11-20",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:59:22.395856+09:00",
+        "fetched_at": "2026-11-22T10:53:14.193085+09:00",
         "created_at": "2026-11-20 02:49:52"
       },
       {
@@ -71170,7 +71170,7 @@
     ],
     "미국주식기술지표": [
       {
-        "id": 35559,
+        "id": 35668,
         "indicator_code": "US_RSI_TSLA",
         "indicator_name": "TSLA RSI(14)",
         "category": "미국주식기술지표",
@@ -71179,13 +71179,13 @@
         "unit": "",
         "signal": "green",
         "source": "Yahoo Finance",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:56:52.214684+09:00",
-        "created_at": "2026-11-21 02:56:52"
+        "fetched_at": "2026-11-22T10:50:49.539185+09:00",
+        "created_at": "2026-11-22 01:50:49"
       },
       {
-        "id": 35558,
+        "id": 35667,
         "indicator_code": "US_RSI_NVDA",
         "indicator_name": "NVDA RSI(14)",
         "category": "미국주식기술지표",
@@ -71194,43 +71194,43 @@
         "unit": "",
         "signal": "yellow",
         "source": "Yahoo Finance",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:56:52.053106+09:00",
-        "created_at": "2026-11-21 02:56:52"
+        "fetched_at": "2026-11-22T10:50:49.377094+09:00",
+        "created_at": "2026-11-22 01:50:49"
       },
       {
-        "id": 35557,
+        "id": 35666,
         "indicator_code": "US_RSI_GOOGL",
         "indicator_name": "GOOGL RSI(14)",
         "category": "미국주식기술지표",
-        "value": 27.777929444698913,
+        "value": 27.777929447667674,
         "prev_value": null,
         "unit": "",
         "signal": "yellow",
         "source": "Yahoo Finance",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "과매도 구간",
-        "fetched_at": "2026-11-21T11:56:51.866750+09:00",
-        "created_at": "2026-11-21 02:56:52"
+        "fetched_at": "2026-11-22T10:50:49.212283+09:00",
+        "created_at": "2026-11-22 01:50:49"
       },
       {
-        "id": 35556,
+        "id": 35665,
         "indicator_code": "US_RSI_MSFT",
         "indicator_name": "MSFT RSI(14)",
         "category": "미국주식기술지표",
-        "value": 35.014003349248526,
+        "value": 35.014003395953495,
         "prev_value": null,
         "unit": "",
         "signal": "green",
         "source": "Yahoo Finance",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:56:51.689846+09:00",
-        "created_at": "2026-11-21 02:56:52"
+        "fetched_at": "2026-11-22T10:50:49.064038+09:00",
+        "created_at": "2026-11-22 01:50:49"
       },
       {
-        "id": 35555,
+        "id": 35664,
         "indicator_code": "US_RSI_AAPL",
         "indicator_name": "AAPL RSI(14)",
         "category": "미국주식기술지표",
@@ -71239,10 +71239,10 @@
         "unit": "",
         "signal": "green",
         "source": "Yahoo Finance",
-        "reference_date": "2026-11-21",
+        "reference_date": "2026-11-22",
         "summary_text": "중립 구간",
-        "fetched_at": "2026-11-21T11:56:51.495352+09:00",
-        "created_at": "2026-11-21 02:56:52"
+        "fetched_at": "2026-11-22T10:50:48.878299+09:00",
+        "created_at": "2026-11-22 01:50:49"
       }
     ],
     "해외파생거래": [
