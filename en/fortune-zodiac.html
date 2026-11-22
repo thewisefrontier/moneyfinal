@@ -145,7 +145,7 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <h2>How is your zodiac animal decided?</h2>
 <p>Your animal is set by the Earthly Branch (地支) of your birth year. There are twelve branches (Ja, Chuk, In, Myo, Jin, Sa, O, Mi, Sin, Yu, Sul and Hae), paired in turn with the Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Sheep, Monkey, Rooster, Dog and Pig. The cycle goes around once every 12 years.</p>
 <table><tr><th>Rat</th><th>Ox</th><th>Tiger</th><th>Rabbit</th><th>Dragon</th><th>Snake</th></tr><tr><td>1996·2008</td><td>1997·2009</td><td>1998·2010</td><td>1999·2011</td><td>2000·2012</td><td>2001·2013</td></tr>
-<tr><th>Horse</th><th>Sheep</th><th>Monkey</th><th>Rooster</th><th>Dog</th><th>Pig</th></tr><tr><td>1990·2002</td><td>1991·2003</td><td>1992·2004</td><td>1993·2005</td><td>1994·2006</td><td>1995·2007</td></tr></table>
+<tr><th>Horse</th><th>Sheep</th><th>Monkey</th><th>Rooster</th><th>Dog</th><th>Pig</th></tr><tr><td>2002·2014</td><td>2003·2015</td><td>2004·2016</td><td>2005·2017</td><td>2006·2018</td><td>2007·2019</td></tr></table>
 <p>If you were born in January or early February, your animal can be confusing. It is usually set by the Lunar New Year, but in Saju the year changes at Ipchun, the start of spring (around February 4 in the solar calendar). In years when the two dates differ, feel free to read both animals.</p>
 <h2>Frequently asked questions</h2>
 <details><summary>Does everyone with the same animal get the same fortune?</summary><p>The zodiac fortune here is a light reading based on your animal alone, so everyone with the same animal sees the same result. For a reading tailored to your exact birth date and time, try Saju.</p></details>
@@ -169,7 +169,7 @@ let per=PERIODS.some(p=>p[0]===q.get('p'))?q.get('p'):'today';
 const ZN=z=>EN?FZ.data.zodiac[z.label]:z.label;
 const stars=s=>{const n=Math.max(1,Math.min(5,Math.round((s-45)/10)));return '<span class="fz-stars" aria-label="'+n+' out of 5 stars">'+'★'.repeat(n)+'<i>'+'★'.repeat(5-n)+'</i></span>';};
 function drawSigns(){
-  $('signs').innerHTML=F.ZODIAC_SIGNS.map(z=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?esc(z.years.split('·').slice(0,2).join(', ')):esc(z.years.split('·')[0])+'and more'}</span></button>`).join('');
+  $('signs').innerHTML=F.ZODIAC_SIGNS.map((z,zi)=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?(1996+zi)+', '+(2008+zi):(1996+zi)+'and more'}</span></button>`).join('');
   $('tabs').innerHTML=PERIODS.map(p=>`<button type="button" class="fz-tab" data-p="${p[0]}" aria-pressed="${p[0]===per}">${p[1]}</button>`).join('');
 }
 function draw(){

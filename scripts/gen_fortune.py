@@ -103,7 +103,7 @@ let per=PERIODS.some(p=>p[0]===q.get('p'))?q.get('p'):'today';
 const ZN=z=>EN?FZ.data.zodiac[z.label]:z.label;
 const stars=s=>{const n=Math.max(1,Math.min(5,Math.round((s-45)/10)));return '<span class="fz-stars" aria-label="5점 만점에 '+n+'점">'+'★'.repeat(n)+'<i>'+'★'.repeat(5-n)+'</i></span>';};
 function drawSigns(){
-  $('signs').innerHTML=F.ZODIAC_SIGNS.map(z=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?esc(z.years.split('·').slice(0,2).join(', ')):esc(z.years.split('·')[0])+'년생 외'}</span></button>`).join('');
+  $('signs').innerHTML=F.ZODIAC_SIGNS.map((z,zi)=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?(1996+zi)+', '+(2008+zi):(1996+zi)+'년생 외'}</span></button>`).join('');
   $('tabs').innerHTML=PERIODS.map(p=>`<button type="button" class="fz-tab" data-p="${p[0]}" aria-pressed="${p[0]===per}">${p[1]}</button>`).join('');
 }
 function draw(){
@@ -246,7 +246,7 @@ INFO_ZODIAC = '''
 <h2>열두 띠는 어떻게 정해지나요?</h2>
 <p>띠는 태어난 해의 지지(地支)로 정해집니다. 지지는 자·축·인·묘·진·사·오·미·신·유·술·해 열두 글자이고, 각각 쥐·소·호랑이·토끼·용·뱀·말·양·원숭이·닭·개·돼지에 짝지어 12년마다 한 바퀴를 돕니다.</p>
 <table><tr><th>쥐</th><th>소</th><th>호랑이</th><th>토끼</th><th>용</th><th>뱀</th></tr><tr><td>1996·2008</td><td>1997·2009</td><td>1998·2010</td><td>1999·2011</td><td>2000·2012</td><td>2001·2013</td></tr>
-<tr><th>말</th><th>양</th><th>원숭이</th><th>닭</th><th>개</th><th>돼지</th></tr><tr><td>1990·2002</td><td>1991·2003</td><td>1992·2004</td><td>1993·2005</td><td>1994·2006</td><td>1995·2007</td></tr></table>
+<tr><th>말</th><th>양</th><th>원숭이</th><th>닭</th><th>개</th><th>돼지</th></tr><tr><td>2002·2014</td><td>2003·2015</td><td>2004·2016</td><td>2005·2017</td><td>2006·2018</td><td>2007·2019</td></tr></table>
 <p>1월이나 2월 초에 태어났다면 띠가 헷갈릴 수 있습니다. 일반적으로는 음력 설을 기준으로 하지만, 사주에서는 입춘(양력 2월 4일 무렵)에 해가 바뀐다고 봅니다. 두 기준이 다른 해에는 두 띠를 모두 살펴보셔도 좋습니다.</p>
 <h2>자주 묻는 질문</h2>
 <details><summary>같은 띠면 모두 같은 운세인가요?</summary><p>이 화면의 띠별 운세는 띠만 기준으로 한 가벼운 점괘라 같은 띠는 같은 결과를 봅니다. 내 생년월일시에 맞춘 풀이를 원하시면 사주팔자를 보세요.</p></details>
