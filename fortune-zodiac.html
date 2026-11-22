@@ -169,7 +169,7 @@ let per=PERIODS.some(p=>p[0]===q.get('p'))?q.get('p'):'today';
 const ZN=z=>EN?FZ.data.zodiac[z.label]:z.label;
 const stars=s=>{const n=Math.max(1,Math.min(5,Math.round((s-45)/10)));return '<span class="fz-stars" aria-label="5점 만점에 '+n+'점">'+'★'.repeat(n)+'<i>'+'★'.repeat(5-n)+'</i></span>';};
 function drawSigns(){
-  $('signs').innerHTML=F.ZODIAC_SIGNS.map((z,zi)=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?(1996+zi)+', '+(2008+zi):(1996+zi)+'년생 외'}</span></button>`).join('');
+  $('signs').innerHTML=F.ZODIAC_SIGNS.map((z,zi)=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e"><img src="/assets/fortune/zodiac/${z.key}.webp" alt="" width="52" height="52" loading="lazy"></span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?(1996+zi)+', '+(2008+zi):(1996+zi)+'년생 외'}</span></button>`).join('');
   $('tabs').innerHTML=PERIODS.map(p=>`<button type="button" class="fz-tab" data-p="${p[0]}" aria-pressed="${p[0]===per}">${p[1]}</button>`).join('');
 }
 function draw(){
@@ -180,7 +180,7 @@ function draw(){
     ?`<span class="fz-chip"><b>행운의 색</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>행운의 시간</b>${esc(T(d.luckyTime))}</span>`
     :`<span class="fz-chip"><b>행운의 색</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>${esc(T(d.luckyExtra.label))}</b>${esc(T(d.luckyExtra.value))}</span>`;
   const tl=per==='today'||!d.timeline?'':`<div class="fz-cat"><div class="fz-cat-h"><b>흐름</b></div><div class="fz-tl">${d.timeline.map((t,i)=>`<div class="${i===d.bestIndex?'best':''}"><span style="height:${Math.max(8,Math.round((t.score-40)*1.4))}px"></span>${esc(T(t.label))}</div>`).join('')}</div></div>`;
-  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${z.emoji}</span><div><h2>${EN?'Year of the '+esc(ZN(z))+' · '+pl:esc(z.label)+' · '+pl+'의 점괘'}</h2><div class="d">${esc(when)}</div></div></div>
+  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal fz-seal-img"><img src="/assets/fortune/zodiac/${z.key}.webp" alt="" width="52" height="52"></span><div><h2>${EN?'Year of the '+esc(ZN(z))+' · '+pl:esc(z.label)+' · '+pl+'의 점괘'}</h2><div class="d">${esc(when)}</div></div></div>
   <p class="fz-say-line">${EN?'Born under the '+esc(ZN(z))+', I see. I have read the stars and the seasons and written down your fortune for '+pl.toLowerCase()+'.':esc(z.label)+'이시군요. 별과 절기를 살펴 '+pl+'의 기운을 적었습니다.'}</p>
   ${CATS.map(c=>`<div class="fz-cat"><div class="fz-cat-h"><b>${c[1]}</b>${stars(d[c[0]].score)}</div><p>${esc(T(d[c[0]].text))}</p><div class="fz-advice" data-l="역술인의 한마디">${esc(T(d[c[0]].advice))}</div></div>`).join('')}
   ${tl}<div class="fz-lucky">${lucky}</div><div id="lucky"></div></article>`;

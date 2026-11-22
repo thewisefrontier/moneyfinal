@@ -157,3 +157,8 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-dd button{display:block;width:100%;background:none;border:0;color:var(--fz-text);text-align:center;padding:7px 10px;font-size:14px;cursor:pointer}
 .fz-dd button:hover{background:var(--fz-card2)}
 .fz-dd button.on{color:var(--fz-amber);font-weight:700;background:var(--fz-card2)}
+
+.fz-sign .e{display:block;line-height:0}
+.fz-sign .e img,.fz-seal-img img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--fz-amber);display:block}
+.fz-seal-img{transform:none!important;background:none!important;padding:0!important;width:auto!important;height:auto!important;box-shadow:none!important}
+@media(max-width:380px){.fz-sign .e img{width:44px;height:44px}}
