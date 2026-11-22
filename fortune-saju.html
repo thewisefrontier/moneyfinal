@@ -250,11 +250,12 @@ function flowsHtml(ds){
     <p class="fz-note">가장 좋은 날은 ${esc(T(wk[bi].weekday))}요일, 조심할 날은 ${esc(T(wk[wi].weekday))}요일입니다.</p>
     <div class="fz-flows">${dcard(wk[bi],'가장 좋은 날')}${bi!==wi?dcard(wk[wi],'조심할 날'):''}</div></div>`;
 }
-function show(r,hasHour){
+function show(r,hasHour,by){
   const it=F.interpretSaju(r),nick=F.DAY_MASTER_NICKNAME[r.dayPillar.stem]||{name:'',emoji:'🔮'};
   const tg=r.tenGods,max=Math.max(1,...Object.values(r.elementCounts));
   const els=Object.keys(EL).map(k=>`<div class="fz-el"><span>${EL[k][0]} ${esc(L.el(k))}</span><i><b style="width:${Math.round(r.elementCounts[k]/max*100)}%;background:${EL[k][1]}"></b></i><em>${r.elementCounts[k]}</em></div>`).join('');
-  const luck=r.luckPillars?`<div class="fz-cat"><div class="fz-cat-h"><b>대운 흐름</b><span class="fz-chip"><b>시작</b>${r.luckPillars.startAge}${EN?'':'세'}</span></div><div class="fz-lucky">${r.luckPillars.pillars.slice(0,8).map(x=>`<span class="fz-chip"><b>${x.age}${EN?'':'세'}</b>${esc(L.pair(x.korean))}</span>`).join('')}</div></div>`:'';
+  const age=new Date(Date.now()+9*36e5).getUTCFullYear()-by+1;
+  const luck=r.luckPillars?`<div class="fz-cat"><div class="fz-cat-h"><b>대운 흐름</b><span class="fz-chip"><b>시작</b>${r.luckPillars.startAge}${EN?'':'세'}</span></div><div class="fz-lucky">${r.luckPillars.pillars.slice(0,8).map((x,i,arr)=>`<span class="fz-chip${age>=x.age&&(!arr[i+1]||age<arr[i+1].age)?' now':''}"><b>${x.age}${EN?'':'세'}</b>${esc(L.pair(x.korean))}</span>`).join('')}</div></div>`:'';
   $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${nick.emoji}</span><div><h2>${EN?'Your Saju · '+esc(L.stem(r.dayPillar.stem))+'-'+esc(L.br(r.dayPillar.branch))+' Day Pillar':'나의 사주 · '+esc(r.dayPillar.stem)+esc(r.dayPillar.branch)+'일주'}</h2><div class="d">${EN?'Your Day Master is '+esc(L.stem(r.dayPillar.stem))+' ('+esc(ZD.stems[r.dayPillar.stem][2])+' '+esc(L.el(F.stemElement(r.dayPillar.stem)))+'), like '+esc(T(nick.name))+'.':'일간은 '+esc(r.dayPillar.stem)+', 자연물로는 '+esc(nick.name)+'에 해당합니다'}</div></div></div>
   <p class="fz-say-line">태어난 날의 기운을 네 기둥으로 세워 보았습니다.${hasHour?'':' 태어난 시각을 모르시니 시주 없이 세 기둥으로 풀었습니다.'}</p>
   <div class="fz-pils">${pillar(r.hourPillar,tg.hour,'시주')}${pillar(r.dayPillar,tg.day,'일주')}${pillar(r.monthPillar,tg.month,'월주')}${pillar(r.yearPillar,tg.year,'년주')}</div>
@@ -267,7 +268,7 @@ function show(r,hasHour){
 $('f').addEventListener('submit',e=>{
   e.preventDefault();err('');
   const v=read();if(v.e){err(v.e);return;}
-  try{const r=F.calculateSaju(v.in);store.set('fz_saju',JSON.stringify(v.in));show(r,v.hasHour);}
+  try{const r=F.calculateSaju(v.in);store.set('fz_saju',JSON.stringify(v.in));show(r,v.hasHour,v.in.year);}
   catch(x){err('이 날짜로는 계산하지 못했습니다. 달력(양력·음력)과 윤달 선택을 다시 확인해 주세요.');}
 });
 $('clr').addEventListener('click',()=>{store.del('fz_saju');$('f').reset();$('leapw').hidden=true;$('hh').disabled=$('mm').disabled=false;$('result').innerHTML='';err('');});
