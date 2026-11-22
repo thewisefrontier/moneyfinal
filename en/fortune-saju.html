@@ -220,6 +220,36 @@ function pillar(p,tg,label){
   <div class="ch" style="color:${EL[se][1]}">${F.stemHanja(p.stem)}<small>${EN?esc(L.stem(p.stem))+' · '+esc(L.el(se)):esc(p.stem)+'·'+EL[se][0]}</small></div>
   <div class="ch" style="color:${EL[be][1]}">${F.branchHanja(p.branch)}<small>${EN?esc(L.br(p.branch))+' · '+esc(ZD.branches[p.branch][1]):esc(p.branch)+'·'+EL[be][0]}</small></div><div class="tg">${esc(L.tg(tg.branch))}</div></div>`;
 }
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const SF=EN?{y:' year',m:' month',d:' day'}:{y:'Year',m:'Month',d:'Day'};
+const pr=x=>EN?L.pair(x.slice(0,2)):x.slice(0,2);
+const lbl=(x,k)=>pr(x)+SF[k];
+const mn=n=>EN?MON[n-1]:n+'Month';
+const bars=(a,best)=>`<div class="fz-tl">${a.map((t,i)=>`<div class="${i===best?'best':''}"><span style="height:${Math.max(8,Math.round((t.score-40)*1.4))}px"></span>${esc(t.l)}</div>`).join('')}</div>`;
+const flowCard=(title,sub,f,k)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${title}</b><span class="fz-chip"><b>${esc(L.tg(f.tenGod))}</b></span></div><div class="fz-flow-s">${esc(sub)}</div><p>${esc(T(f.text))}</p></div>`;
+function monthsHtml(ds,yr,isNow){
+  const ms=F.getSajuMonthlyFlowOf(ds,yr),bi=ms.reduce((b,m,i)=>m.score>ms[b].score?i:b,0),wi=ms.reduce((w,m,i)=>m.score<ms[w].score?i:w,0);
+  const nowM=new Date(Date.now()+9*36e5).getUTCMonth();
+  const card=(m,tags)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${mn(m.month)} · ${esc(lbl(m.label,'m'))}</b><span class="fz-chip"><b>${esc(L.tg(m.tenGod))}</b></span></div>${tags?`<div class="fz-flow-s">${tags}</div>`:''}<p>${esc(T(m.text))}</p></div>`;
+  const pick=[[bi,'Best month'],[wi,'Watch out']];if(isNow&&nowM!==bi&&nowM!==wi)pick.push([nowM,'This month']);
+  return `<div class="fz-cat"><div class="fz-cat-h"><b>${yr}: month by month</b></div>${bars(ms.map(m=>({score:m.score,l:mn(m.month)})),bi)}
+  <p class="fz-note">Your best month is ${mn(ms[bi].month)}, and the one to be careful in is ${mn(ms[wi].month)}.</p><div class="fz-flows">${pick.map(x=>card(ms[x[0]],x[1])).join('')}</div></div>`;
+}
+function flowsHtml(ds){
+  const yNow=new Date(Date.now()+9*36e5).getUTCFullYear(),cur=F.getSajuFlow(ds);
+  const fy=F.getSajuYearFlow(ds,yNow),fn=F.getSajuYearFlow(ds,yNow+1),wk=F.getSajuWeeklyFlow(ds);
+  const bi=wk.reduce((b,d,i)=>d.score>wk[b].score?i:b,0),wi=wk.reduce((w,d,i)=>d.score<wk[w].score?i:w,0);
+  const dcard=(d,tag)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${esc(T(d.weekday))} ${esc(d.date)} · ${esc(lbl(d.label,'d'))}</b><span class="fz-chip"><b>${esc(L.tg(d.tenGod))}</b></span></div><div class="fz-flow-s">${tag}</div><p>${esc(T(d.text))}</p></div>`;
+  return `<div class="fz-cat"><div class="fz-cat-h"><b>This year and next year</b></div><div class="fz-flows">
+    ${flowCard('This year '+yNow,lbl(fy.label,'y'),fy)}${flowCard('Next year '+(yNow+1),lbl(fn.label,'y'),fn)}</div>
+    <p class="fz-note">Read from which Ten God (sipsin) that year’s Heavenly Stem is to your Day Master.</p></div>
+  <div class="fz-cat"><div class="fz-cat-h"><b>This month and today</b></div><div class="fz-flows">
+    ${flowCard('This month',lbl(cur[1].label,'m'),cur[1])}${flowCard('Today',lbl(cur[2].label,'d'),cur[2])}</div></div>
+  ${monthsHtml(ds,yNow,true)}${monthsHtml(ds,yNow+1,false)}
+  <div class="fz-cat"><div class="fz-cat-h"><b>This week, day by day</b></div>${bars(wk.map(d=>({score:d.score,l:T(d.weekday)})),bi)}
+    <p class="fz-note">Your best day is ${esc(T(wk[bi].weekday))}, and the one to be careful on is ${esc(T(wk[wi].weekday))}.</p>
+    <div class="fz-flows">${dcard(wk[bi],'Best day')}${bi!==wi?dcard(wk[wi],'Watch out'):''}</div></div>`;
+}
 function show(r,hasHour){
   const it=F.interpretSaju(r),nick=F.DAY_MASTER_NICKNAME[r.dayPillar.stem]||{name:'',emoji:'🔮'};
   const tg=r.tenGods,max=Math.max(1,...Object.values(r.elementCounts));
@@ -230,7 +260,7 @@ function show(r,hasHour){
   <div class="fz-pils">${pillar(r.hourPillar,tg.hour,'Hour Pillar')}${pillar(r.dayPillar,tg.day,'Day Pillar')}${pillar(r.monthPillar,tg.month,'Month Pillar')}${pillar(r.yearPillar,tg.year,'Year Pillar')}</div>
   <div class="fz-cat"><div class="fz-cat-h"><b>Innate temperament</b></div><p>${esc(T(it.dayMasterText))}</p></div>
   <div class="fz-cat"><div class="fz-cat-h"><b>Balance of the five elements</b></div><div class="fz-els">${els}</div><p>${esc(T(it.elementSummaryText))}</p><div class="fz-lucky"><span class="fz-chip"><b>Balancing color</b>${esc(T(it.luckyColor))}</span></div></div>
-  ${luck}<div id="lucky"></div></article>`;
+  ${flowsHtml(r.dayPillar.stem)}${luck}<div id="lucky"></div></article>`;
   if(window.FZ_luckyMount)FZ_luckyMount($('lucky'),it.luckyItem);
   $('result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 }

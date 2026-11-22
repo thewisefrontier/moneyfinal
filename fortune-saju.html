@@ -220,6 +220,36 @@ function pillar(p,tg,label){
   <div class="ch" style="color:${EL[se][1]}">${F.stemHanja(p.stem)}<small>${EN?esc(L.stem(p.stem))+' · '+esc(L.el(se)):esc(p.stem)+'·'+EL[se][0]}</small></div>
   <div class="ch" style="color:${EL[be][1]}">${F.branchHanja(p.branch)}<small>${EN?esc(L.br(p.branch))+' · '+esc(ZD.branches[p.branch][1]):esc(p.branch)+'·'+EL[be][0]}</small></div><div class="tg">${esc(L.tg(tg.branch))}</div></div>`;
 }
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const SF=EN?{y:' year',m:' month',d:' day'}:{y:'년',m:'월',d:'일'};
+const pr=x=>EN?L.pair(x.slice(0,2)):x.slice(0,2);
+const lbl=(x,k)=>pr(x)+SF[k];
+const mn=n=>EN?MON[n-1]:n+'월';
+const bars=(a,best)=>`<div class="fz-tl">${a.map((t,i)=>`<div class="${i===best?'best':''}"><span style="height:${Math.max(8,Math.round((t.score-40)*1.4))}px"></span>${esc(t.l)}</div>`).join('')}</div>`;
+const flowCard=(title,sub,f,k)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${title}</b><span class="fz-chip"><b>${esc(L.tg(f.tenGod))}</b></span></div><div class="fz-flow-s">${esc(sub)}</div><p>${esc(T(f.text))}</p></div>`;
+function monthsHtml(ds,yr,isNow){
+  const ms=F.getSajuMonthlyFlowOf(ds,yr),bi=ms.reduce((b,m,i)=>m.score>ms[b].score?i:b,0),wi=ms.reduce((w,m,i)=>m.score<ms[w].score?i:w,0);
+  const nowM=new Date(Date.now()+9*36e5).getUTCMonth();
+  const card=(m,tags)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${mn(m.month)} · ${esc(lbl(m.label,'m'))}</b><span class="fz-chip"><b>${esc(L.tg(m.tenGod))}</b></span></div>${tags?`<div class="fz-flow-s">${tags}</div>`:''}<p>${esc(T(m.text))}</p></div>`;
+  const pick=[[bi,'가장 좋은 달'],[wi,'조심할 달']];if(isNow&&nowM!==bi&&nowM!==wi)pick.push([nowM,'이번 달']);
+  return `<div class="fz-cat"><div class="fz-cat-h"><b>${yr}년 월별 흐름</b></div>${bars(ms.map(m=>({score:m.score,l:mn(m.month)})),bi)}
+  <p class="fz-note">가장 좋은 달은 ${mn(ms[bi].month)}, 조심할 달은 ${mn(ms[wi].month)}입니다.</p><div class="fz-flows">${pick.map(x=>card(ms[x[0]],x[1])).join('')}</div></div>`;
+}
+function flowsHtml(ds){
+  const yNow=new Date(Date.now()+9*36e5).getUTCFullYear(),cur=F.getSajuFlow(ds);
+  const fy=F.getSajuYearFlow(ds,yNow),fn=F.getSajuYearFlow(ds,yNow+1),wk=F.getSajuWeeklyFlow(ds);
+  const bi=wk.reduce((b,d,i)=>d.score>wk[b].score?i:b,0),wi=wk.reduce((w,d,i)=>d.score<wk[w].score?i:w,0);
+  const dcard=(d,tag)=>`<div class="fz-flow"><div class="fz-flow-h"><b>${esc(T(d.weekday))} ${esc(d.date)} · ${esc(lbl(d.label,'d'))}</b><span class="fz-chip"><b>${esc(L.tg(d.tenGod))}</b></span></div><div class="fz-flow-s">${tag}</div><p>${esc(T(d.text))}</p></div>`;
+  return `<div class="fz-cat"><div class="fz-cat-h"><b>올해와 내년의 운</b></div><div class="fz-flows">
+    ${flowCard('올해 '+yNow,lbl(fy.label,'y'),fy)}${flowCard('내년 '+(yNow+1),lbl(fn.label,'y'),fn)}</div>
+    <p class="fz-note">그해 천간이 내 일간에게 어떤 십신인지로 읽은 풀이입니다.</p></div>
+  <div class="fz-cat"><div class="fz-cat-h"><b>이번 달과 오늘</b></div><div class="fz-flows">
+    ${flowCard('이번 달',lbl(cur[1].label,'m'),cur[1])}${flowCard('오늘',lbl(cur[2].label,'d'),cur[2])}</div></div>
+  ${monthsHtml(ds,yNow,true)}${monthsHtml(ds,yNow+1,false)}
+  <div class="fz-cat"><div class="fz-cat-h"><b>이번 주 요일별 흐름</b></div>${bars(wk.map(d=>({score:d.score,l:T(d.weekday)})),bi)}
+    <p class="fz-note">가장 좋은 날은 ${esc(T(wk[bi].weekday))}요일, 조심할 날은 ${esc(T(wk[wi].weekday))}요일입니다.</p>
+    <div class="fz-flows">${dcard(wk[bi],'가장 좋은 날')}${bi!==wi?dcard(wk[wi],'조심할 날'):''}</div></div>`;
+}
 function show(r,hasHour){
   const it=F.interpretSaju(r),nick=F.DAY_MASTER_NICKNAME[r.dayPillar.stem]||{name:'',emoji:'🔮'};
   const tg=r.tenGods,max=Math.max(1,...Object.values(r.elementCounts));
@@ -230,7 +260,7 @@ function show(r,hasHour){
   <div class="fz-pils">${pillar(r.hourPillar,tg.hour,'시주')}${pillar(r.dayPillar,tg.day,'일주')}${pillar(r.monthPillar,tg.month,'월주')}${pillar(r.yearPillar,tg.year,'년주')}</div>
   <div class="fz-cat"><div class="fz-cat-h"><b>타고난 기질</b></div><p>${esc(T(it.dayMasterText))}</p></div>
   <div class="fz-cat"><div class="fz-cat-h"><b>오행의 균형</b></div><div class="fz-els">${els}</div><p>${esc(T(it.elementSummaryText))}</p><div class="fz-lucky"><span class="fz-chip"><b>보완하는 색</b>${esc(T(it.luckyColor))}</span></div></div>
-  ${luck}<div id="lucky"></div></article>`;
+  ${flowsHtml(r.dayPillar.stem)}${luck}<div id="lucky"></div></article>`;
   if(window.FZ_luckyMount)FZ_luckyMount($('lucky'),it.luckyItem);
   $('result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 }

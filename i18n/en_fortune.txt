@@ -697,3 +697,51 @@ If you don’t know your birth hour, check
 을 체크하세요. 시주 없이 연·월·일 세 기둥으로 풀이하며, 시주가 빠지므로 풀이 범위가 조금 줄어듭니다.
 --->
 . The reading then uses three pillars (year, month and day) without the hour pillar, so it covers a little less.
+====
+가장 좋은 달
+--->
+Best month
+====
+조심할 달
+--->
+Watch out
+====
+<b>${yr}년 월별 흐름</b>
+--->
+<b>${yr}: month by month</b>
+====
+가장 좋은 달은 ${mn(ms[bi].month)}, 조심할 달은 ${mn(ms[wi].month)}입니다.
+--->
+Your best month is ${mn(ms[bi].month)}, and the one to be careful in is ${mn(ms[wi].month)}.
+====
+<b>올해와 내년의 운</b>
+--->
+<b>This year and next year</b>
+====
+내년
+--->
+Next year
+====
+그해 천간이 내 일간에게 어떤 십신인지로 읽은 풀이입니다.
+--->
+Read from which Ten God (sipsin) that year’s Heavenly Stem is to your Day Master.
+====
+<b>이번 달과 오늘</b>
+--->
+<b>This month and today</b>
+====
+<b>이번 주 요일별 흐름</b>
+--->
+<b>This week, day by day</b>
+====
+가장 좋은 날은 ${esc(T(wk[bi].weekday))}요일, 조심할 날은 ${esc(T(wk[wi].weekday))}요일입니다.
+--->
+Your best day is ${esc(T(wk[bi].weekday))}, and the one to be careful on is ${esc(T(wk[wi].weekday))}.
+====
+가장 좋은 날
+--->
+Best day
+====
+조심할 날
+--->
+Watch out

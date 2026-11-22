@@ -61,6 +61,11 @@ for (let i = 0; i < 300; i++) {
     if (p && (!ctx.FZ.data.stems[p.stem] || !ctx.FZ.data.branches[p.branch])) miss.set(p.stem + p.branch, '천간·지지 용어 표');
   }
 }
+for (const ds of Object.keys(F.DAY_MASTER_NICKNAME)) {  // 사주 흐름(올해·내년·월별·요일별)
+  for (const y of [2026, 2027, 2028]) { chk(F.getSajuYearFlow(ds, y).text, 'saju.year'); for (const m of F.getSajuMonthlyFlowOf(ds, y)) chk(m.text, 'saju.month'); }
+  for (const f of F.getSajuFlow(ds)) chk(f.text, 'saju.flow');
+  for (const d of F.getSajuWeeklyFlow(ds)) { chk(d.text, 'saju.day'); chk(d.weekday, 'saju.weekday'); if (!ctx.FZ.data.tenGods[d.tenGod]) miss.set(d.tenGod, '십신 용어 표'); }
+}
 for (const n of Object.values(F.DAY_MASTER_NICKNAME)) chk(n.name, 'nickname');
 
 for (const c of F.TAROT_CARDS) {
