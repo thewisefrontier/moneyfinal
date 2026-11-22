@@ -11,7 +11,6 @@
     ['loans.html', '대출'],
     ['market.html', '시장'],
     ['jp-market.html', '일본시장'],
-    ['fortune.html', '운세'],
     ['crypto.html', '코인'],
     ['savings.html', 'ISA'],
     ['annuity.html', '연금저축'],
@@ -26,6 +25,7 @@
     ['ipo.html', 'IPO'],
     ['sim.html', '시뮬레이터'],
     ['macro.html', '경제지표'],
+    ['fortune.html', '운세'],
     ['calc.html', '계산기']
   ];
   // 영어판(/en/): 한국 전용 메뉴를 빼고 영어 라벨. 영어판에 있는 페이지만 언어 전환 링크를 보여준다.
@@ -45,8 +45,8 @@
     ['bond.html', 'Bonds'],
     ['crypto.html', 'Crypto'],
     ['sim.html', 'Simulator'],
-    ['calc.html', 'Calculators'],
-    ['fortune.html', 'Fortune']
+    ['fortune.html', 'Fortune'],
+    ['calc.html', 'Calculators']
   ];
   var EN_ONLY = ['about', 'privacy', 'terms', 'compare', 'congress', 'dividend-etf', 'ipo', 'superinvestor', 'us-fin', 'kr-fin', 'market', 'jp-market', 'macro',
     'macro-detail', 'indicator-detail', 'stock-detail', 'company', 'bond', 'crypto', 'sim', 'calc', 'fortune'];

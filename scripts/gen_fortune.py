@@ -132,14 +132,18 @@ SAJU = '''
 <div class="fz-head"><span class="fz-seal">命</span><div><h1>사주팔자</h1><p>태어난 해·달·날·시로 네 기둥을 세워 타고난 기질과 오행의 균형을 풀어 드립니다.</p></div></div>
 <form class="fz-card" id="f" novalidate>
   <div class="fz-form">
-    <label>달력<select id="cal"><option value="0">양력</option><option value="1">음력</option></select></label>
-    <label class="fz-leap" id="leapw" hidden><input type="checkbox" id="leap"> 윤달</label>
-    <label>태어난 해<input id="y" type="number" inputmode="numeric" min="1900" max="2100" placeholder="1990" required></label>
-    <label>월<select id="m"></select></label>
-    <label>일<select id="d"></select></label>
-    <label>태어난 시각<select id="hh"></select></label>
-    <label>분<input id="mm" type="number" inputmode="numeric" min="0" max="59" value="0"></label>
-    <fieldset><legend>성별</legend><label><input type="radio" name="g" value="male" checked> 남</label> <label><input type="radio" name="g" value="female"> 여</label></fieldset>
+    <div class="fz-row"><label class="fz-opt"><input type="radio" name="cal" value="0" checked> 양력</label><label class="fz-opt"><input type="radio" name="cal" value="1"> 음력</label><label class="fz-opt" id="leapw" hidden><input type="checkbox" id="leap"> 윤달</label></div>
+    <div class="fz-row fz-date">
+      <div class="fz-dw fz-dw-y"><input id="y" type="text" inputmode="numeric" autocomplete="off" placeholder="년" aria-label="년"></div>
+      <div class="fz-dw"><input id="m" type="text" inputmode="numeric" autocomplete="off" placeholder="월" aria-label="월"></div>
+      <div class="fz-dw"><input id="d" type="text" inputmode="numeric" autocomplete="off" placeholder="일" aria-label="일"></div>
+    </div>
+    <div class="fz-row fz-time">
+      <select id="hh" aria-label="시"><option value="">시</option></select>
+      <select id="mm" aria-label="분"></select>
+      <label class="fz-opt"><input type="checkbox" id="tu"> 시간 모름</label>
+    </div>
+    <div class="fz-row"><label class="fz-opt"><input type="radio" name="g" value="male" checked> 남</label><label class="fz-opt"><input type="radio" name="g" value="female"> 여</label></div>
   </div>
   <p class="fz-err" id="err" role="alert" hidden></p>
   <button class="fz-btn" type="submit">사주 보기</button> <button class="fz-btn ghost" type="button" id="clr">저장된 입력 지우기</button>
@@ -156,15 +160,35 @@ const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},se
 const ZD=EN?FZ.data:null;
 const L={stem:s=>EN?ZD.stems[s][0]:s,br:b=>EN?ZD.branches[b][0]:b,el:k=>EN?ZD.elements[k]:k,tg:x=>EN?(ZD.tenGods[x]||x):x,pair:p=>EN&&p&&p.length===2?ZD.stems[p[0]][0]+'-'+ZD.branches[p[1]][0]:p};
 const EL={'목':['木','#5aa86a'],'화':['火','#e0584f'],'토':['土','#c49a45'],'금':['金','#a5aab8'],'수':['水','#5b8fd9']};
-$('m').innerHTML=Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}월</option>`).join('');
-$('d').innerHTML=Array.from({length:31},(_,i)=>`<option value="${i+1}">${i+1}일</option>`).join('');
-$('hh').innerHTML='<option value="">모름</option>'+Array.from({length:24},(_,i)=>`<option value="${i}">${i}시</option>`).join('');
-$('cal').addEventListener('change',()=>{$('leapw').hidden=$('cal').value!=='1';});
+$('hh').insertAdjacentHTML('beforeend',Array.from({length:24},(_,i)=>`<option value="${i}">${i}시</option>`).join(''));
+$('mm').innerHTML=[0,10,20,30,40,50].map(m=>`<option value="${m}">${m}분</option>`).join('');
+const isLunar=()=>document.querySelector('input[name=cal]:checked').value==='1';
+const dim=(y,m)=>(!y||!m)?31:isLunar()?30:new Date(y,m,0).getDate();
+function dd(id,opts,def){  // 숫자를 직접 치거나, 칸을 누르면 뜨는 스크롤 목록에서 고른다(핫딜월드 사주 입력과 같은 방식)
+  const el=$(id),suf=EN?'':el.placeholder,list=document.createElement('div');
+  list.className='fz-dd';list.hidden=true;el.parentNode.appendChild(list);
+  function build(){const cur=+el.value;list.innerHTML=opts().map(n=>`<button type="button" data-v="${n}"${n===cur?' class="on"':''}>${n}${suf}</button>`).join('');}
+  function open(){build();list.hidden=false;const t=list.querySelector('.on')||list.querySelector('[data-v="'+def+'"]');if(t)list.scrollTop=t.offsetTop-list.clientHeight/2+t.offsetHeight/2;}
+  el.addEventListener('focus',open);
+  el.addEventListener('blur',()=>{list.hidden=true;});
+  list.addEventListener('mousedown',e=>e.preventDefault());
+  list.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;el.value=b.dataset.v;list.hidden=true;el.dispatchEvent(new Event('input'));});
+  el.addEventListener('input',()=>{el.value=el.value.replace(/\D/g,'').slice(0,id==='y'?4:2);if(!list.hidden)build();});
+  return {build};
+}
+const yr=new Date().getFullYear();
+dd('y',()=>Array.from({length:yr-1900+1},(_,i)=>1900+i),1984);
+dd('m',()=>Array.from({length:12},(_,i)=>i+1),1);
+dd('d',()=>Array.from({length:dim(+$('y').value,+$('m').value)},(_,i)=>i+1),1);
+function clampDay(){const n=dim(+$('y').value,+$('m').value);if(+$('d').value>n)$('d').value=n;}
+['y','m','d'].forEach(k=>$(k).addEventListener('input',clampDay));
+document.querySelectorAll('input[name=cal]').forEach(r=>r.addEventListener('change',()=>{$('leapw').hidden=!isLunar();clampDay();}));
+$('tu').addEventListener('change',()=>{$('hh').disabled=$('mm').disabled=$('tu').checked;});
 function err(t){const e=$('err');e.textContent=t;e.hidden=!t;}
 function read(){
-  const y=+$('y').value,m=+$('m').value,d=+$('d').value,lunar=$('cal').value==='1',hh=$('hh').value,mi=+$('mm').value||0;
+  const y=+$('y').value,m=+$('m').value,d=+$('d').value,lunar=isLunar(),hh=$('tu').checked?'':$('hh').value,mi=+$('mm').value||0;
+  if(!$('y').value||!$('m').value||!$('d').value)return {e:'생년월일을 입력해 주세요.'};
   if(!Number.isInteger(y)||y<1900||y>2100)return {e:'태어난 해는 1900년부터 2100년 사이로 입력해 주세요.'};
-  if(mi<0||mi>59)return {e:'분은 0부터 59 사이로 입력해 주세요.'};
   if(!lunar){const t=new Date(y,m-1,d);if(t.getFullYear()!==y||t.getMonth()!==m-1||t.getDate()!==d)return {e:'존재하지 않는 날짜입니다. 월과 일을 다시 확인해 주세요.'};}
   else if(d>30)return {e:'음력은 한 달이 30일까지입니다.'};
   return {in:{year:y,month:m,day:d,hour:hh===''?null:+hh,minute:mi,isLunar:lunar,isLeapMonth:lunar&&$('leap').checked,gender:document.querySelector('input[name=g]:checked').value},hasHour:hh!==''};
@@ -196,8 +220,8 @@ $('f').addEventListener('submit',e=>{
   try{const r=F.calculateSaju(v.in);store.set('fz_saju',JSON.stringify(v.in));show(r,v.hasHour);}
   catch(x){err('이 날짜로는 계산하지 못했습니다. 달력(양력·음력)과 윤달 선택을 다시 확인해 주세요.');}
 });
-$('clr').addEventListener('click',()=>{store.del('fz_saju');$('f').reset();$('leapw').hidden=true;$('result').innerHTML='';err('');});
-try{const s=JSON.parse(store.get('fz_saju')||'null');if(s){$('cal').value=s.isLunar?'1':'0';$('leapw').hidden=!s.isLunar;$('leap').checked=!!s.isLeapMonth;$('y').value=s.year;$('m').value=s.month;$('d').value=s.day;$('hh').value=s.hour==null?'':s.hour;$('mm').value=s.minute||0;document.querySelector('input[name=g][value='+s.gender+']').checked=true;}}catch(e){}
+$('clr').addEventListener('click',()=>{store.del('fz_saju');$('f').reset();$('leapw').hidden=true;$('hh').disabled=$('mm').disabled=false;$('result').innerHTML='';err('');});
+try{const s=JSON.parse(store.get('fz_saju')||'null');if(s){document.querySelector('input[name=cal][value="'+(s.isLunar?1:0)+'"]').checked=true;$('leapw').hidden=!s.isLunar;$('leap').checked=!!s.isLeapMonth;$('y').value=s.year;$('m').value=s.month;$('d').value=s.day;$('tu').checked=s.hour==null;$('hh').value=s.hour==null?'':s.hour;$('mm').value=Math.floor((s.minute||0)/10)*10;$('hh').disabled=$('mm').disabled=s.hour==null;document.querySelector('input[name=g][value='+s.gender+']').checked=true;}}catch(e){}
 </script>'''
 
 TAROT = '''
@@ -264,7 +288,7 @@ INFO_SAJU = '''
 <h2>이 풀이는 어디까지 보나요?</h2>
 <p>이 화면은 일간(성격 경향)과 오행 분포, 대운의 시작 나이처럼 만세력으로 기계적으로 계산되는 범위만 풀이합니다. 전문 명리학의 격국·용신 판단까지는 다루지 않으니 재미와 참고로 보시고, 중요한 결정의 근거로 삼지는 마세요.</p>
 <h2>자주 묻는 질문</h2>
-<details><summary>태어난 시각을 모르면 어떻게 하나요?</summary><p>시각 칸을 '모름'으로 두면 시주 없이 연·월·일 세 기둥으로 풀이합니다. 시주가 빠지므로 풀이 범위가 조금 줄어듭니다.</p></details>
+<details><summary>태어난 시각을 모르면 어떻게 하나요?</summary><p>시각을 모르면 '시간 모름'을 체크하세요. 시주 없이 연·월·일 세 기둥으로 풀이하며, 시주가 빠지므로 풀이 범위가 조금 줄어듭니다.</p></details>
 <details><summary>양력과 음력 중 무엇으로 넣어야 하나요?</summary><p>아는 쪽으로 넣으시면 됩니다. 음력으로 넣을 때 그 달이 윤달이었다면 '윤달'을 체크하세요. 만세력이 양력과 음력을 서로 바꿔 계산합니다.</p></details>
 <details><summary>입력한 정보는 저장되나요?</summary><p>서버로 전송되지 않고 이 기기의 브라우저에서만 계산됩니다. 다음에 다시 입력하지 않도록 이 기기에만 저장해 두며, '저장된 입력 지우기'로 언제든 지울 수 있습니다.</p></details>
 </section>

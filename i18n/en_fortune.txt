@@ -669,3 +669,31 @@ Month
 fortune-saju.html::일
 --->
 Day
+====
+fortune-saju.html::년
+--->
+Year
+====
+fortune-saju.html::시
+--->
+Hour
+====
+시간 모름
+--->
+Time unknown
+====
+${m}분
+--->
+${m} min
+====
+생년월일을 입력해 주세요.
+--->
+Please enter your birth date.
+====
+시각을 모르면
+--->
+If you don’t know your birth hour, check
+====
+을 체크하세요. 시주 없이 연·월·일 세 기둥으로 풀이하며, 시주가 빠지므로 풀이 범위가 조금 줄어듭니다.
+--->
+. The reading then uses three pillars (year, month and day) without the hour pillar, so it covers a little less.

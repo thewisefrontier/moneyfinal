@@ -103,7 +103,7 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-cats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
 .fz-deck{display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px 0 4px}
 .fz-card3d{width:min(46vw,200px);aspect-ratio:2/3.4;perspective:900px;cursor:pointer;background:none;border:0;padding:0}
-.fz-card3d .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.fz-card3d .in{display:block;position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
 .fz-card3d.flipped .in{transform:rotateY(180deg)}
 .fz-face{position:absolute;inset:0;border-radius:12px;backface-visibility:hidden;overflow:hidden;box-shadow:var(--fz-shadow)}
 .fz-back{background:radial-gradient(circle at 50% 50%,#6a4f6e 0,#443944 46%,#2b252e 100%);border:2px solid var(--fz-amber);display:flex;align-items:center;justify-content:center}
@@ -144,3 +144,16 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-info details{border:1px solid var(--fz-line);border-radius:12px;background:var(--fz-card);margin:8px 0;padding:0 14px}
 .fz-info summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:14px}
 .fz-info details p{color:var(--fz-text2);font-size:13.5px}
+
+.fz-form{display:flex;flex-direction:column;gap:12px}
+.fz-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fz-form .fz-opt{display:inline-flex;flex-direction:row;align-items:center;gap:6px;color:var(--fz-text);font-size:14px}
+.fz-date .fz-dw{position:relative;flex:1;min-width:0}
+.fz-date .fz-dw-y{flex:1.4}
+.fz-date input{text-align:center}
+.fz-time select{flex:1;min-width:0}
+.fz-time select:disabled{opacity:.5}
+.fz-dd{position:absolute;top:100%;left:0;right:0;margin-top:4px;max-height:190px;overflow-y:auto;background:var(--fz-card);border:1px solid var(--fz-line);border-radius:8px;box-shadow:var(--fz-shadow);z-index:20}
+.fz-dd button{display:block;width:100%;background:none;border:0;color:var(--fz-text);text-align:center;padding:7px 10px;font-size:14px;cursor:pointer}
+.fz-dd button:hover{background:var(--fz-card2)}
+.fz-dd button.on{color:var(--fz-amber);font-weight:700;background:var(--fz-card2)}
