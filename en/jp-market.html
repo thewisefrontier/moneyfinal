@@ -180,7 +180,7 @@ async function init(){
     kpi('Nikkei 225',i.N225?i.N225[0].toLocaleString(EN?'en-US':'en-US',{maximumFractionDigits:2}).replace(EN?/x/:/,/g,''):'-',pct(c(i.N225))),
     kpi('TOPIX ETF (1306)',i.TOPIX_ETF?yen(i.TOPIX_ETF[0]):'-',pct(c(i.TOPIX_ETF))),
     kpi('USD/JPY',i.USDJPY?i.USDJPY[0].toFixed(2):'-',pct(c(i.USDJPY))),
-    kpi('Stocks with quotes',ROWS.length.toLocaleString(EN?'en-US':'en-US').replace(EN?/x/:/,/g,'')+' stocks','Japan-listed companies')].join('');
+    kpi('Stocks with quotes',ROWS.length.toLocaleString(EN?'en-US':'en-US').replace(EN?/x/:/,/g,'')+'Dog','Japan-listed companies')].join('');
   render();
 }
 function nameCell(r){const a=EN?(r.en||r.ja):r.ja,b=EN?r.ja:r.en;return `${esc(a)}${b?` <small style="color:var(--text2)">${esc(b)}</small>`:''}`;}

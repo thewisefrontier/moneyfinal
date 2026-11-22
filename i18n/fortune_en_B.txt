@@ -1,0 +1,125 @@
+0	Big Tree
+1	Flower Plant
+2	Sun
+3	Candle Flame
+4	Great Mountain
+5	Earth
+6	Rock and Iron
+7	Jewel
+8	Ocean
+9	Dew and Rain
+10	Like a big tree, you tend to be upright, with strong leadership. You have the drive to push toward your goals, though at times you can come across as stubborn. At work you naturally end up leading from the front, and with people you offer solid, dependable trust.
+11	Like a flowering plant, you tend to be flexible and highly adaptable. You are gentle but quietly persistent, and you blend in well with those around you. Rather than pushing hard, you are good at adjusting yourself to the situation, and in relationships you often serve as a buffer that eases conflict.
+12	Like the sun, you tend to be bright and proactive. You are passionate and expressive, though you need to practice keeping your moods in check. You shine especially when you step in front of people, and you are often seen as someone who brings energy to those around you.
+13	Like a candle flame, you tend to have a soft but steady passion. You are delicate and considerate, and you look after the people around you well. You are the type who keeps making quiet efforts even when you do not show it, so the longer people know you, the more of them come to see your worth.
+14	Like a great mountain, you tend to be solid and reassuring. You are broad-minded, but once you settle on an idea, it rarely changes. In a crisis you provide a steady center that does not waver, but when change is needed you have to consciously make room for flexibility.
+15	Like the earth, you tend to be gentle and very practical. You make sound, realistic judgments and put those around you at ease. You lean toward stability over flash, so you stand out in work that calls for steadiness, and people find you comfortable to be around.
+16	Like rock and iron, you tend to be firm and decisive. You value loyalty, though your firmness can sometimes look like a lack of flexibility. You have the grit to follow through on what you judge to be right, and the way you stick to your principles becomes the foundation of the trust people place in you.
+17	Like a jewel, you tend to be sensitive and refined. You pursue perfection, so you are strict with yourself. Your eye for detail is a strength, but too much self-criticism can wear you out, so you need to pace yourself.
+18	Like the ocean, you tend to be broad and accepting. You are wise and adaptable, and you handle a variety of situations well. You see the big picture, so you often shine when it comes to bringing different people’s opinions together.
+19	Like dew and rain, you tend to be clear and delicate. You are intuitive and highly sensitive. You have a knack for noticing subtle changes that are not visible on the surface, so you stand out in creative fields and in work that involves understanding people’s feelings.
+20	growth and drive (Wood 木)
+21	passion and expression (Fire 火)
+22	stability and trust (Earth 土)
+23	decisiveness and principle (Metal 金)
+24	wisdom and flexibility (Water 水)
+25	Green
+26	Red
+27	Yellow
+28	White
+29	Black or Navy
+30	Furniture and Home Decor
+31	Kitchenware
+32	Fashion Apparel and Accessories
+33	Beauty
+34	That said, too much drive can bring you into conflict with others, so it helps to build a habit of pausing for a beat before you push ahead.
+35	That said, too much passion can turn into mood swings, so it helps to practice slowing down when you feel yourself heating up.
+36	That said, valuing stability can make it easy to put off change, so you may want to shake up your familiar ways once in a while.
+37	That said, strong principles can look like a lack of flexibility, so try applying your standards a little more loosely depending on the situation.
+38	That said, thinking too much can slow down your decisions, so when you find yourself deliberating for long, it helps to start with something small.
+39	If you tend to hesitate over new attempts, practicing one small goal at a time will help fill in the energy you lack.
+40	If you tend to hold back your feelings, showing more openly what you like can be a good way to find balance.
+41	If your plans tend to waver, simply keeping your daily routine steady can bring back a sense of stability.
+42	If you tend to put off decisions, it helps to set clear criteria and practice judging by them.
+43	If you tend not to get enough time alone, try deliberately setting aside time to quietly sort out your thoughts.
+44	A personality reading based on the Day Master could not be prepared.
+45	Your Five Elements are spread fairly evenly, so this is a balanced Saju that does not lean toward any one energy. Rather than tilting to one side, you can draw on many energies as the situation requires, so your strength may be the ability to adapt to a wide range of settings.
+46	In your chart as a whole, the energy of ${ELEMENT_TRAITS[max[0]]} stands out, while the energy of ${ELEMENT_TRAITS[min[0]]} is relatively weak. ${ELEMENT_EXCESS_TIP[max[0]]} ${ELEMENT_LACK_TIP[min[0]]} Another option is to bring colors or directions that make up for the weaker energy into your daily life.
+47	Your Luck Cycle (Daeun) flows ${result.luckPillars.forward ? "순행" : "역행"} starting at age ${result.luckPillars.startAge}. A Luck Cycle divides life into 10-year periods that mark shifts in its larger flow, and the stem-branch pair in the table indicates the overall energy of that decade.
+48	This is a year when people and energy similar to you increase. Your independence and self-assertion grow. If teamwork clicks, it can be a big help, but money tends to get divided up, so managing spending is the key.
+49	This is a month with many chances to mix with people in a position similar to yours. If you avoid contests of pride, you can gain solid allies.
+50	This is a day when you want to make your own will known. Take a beat so that stubbornness does not get ahead of you.
+51	This is a year when competition and challenge stand out. Your drive grows, but be careful with unexpected spending and with decisions about partnerships or loan guarantees.
+52	This is a month when your competitive streak rises. Double-check any deal where big money changes hands.
+53	This is a day to avoid impulsive spending and overreaching competition.
+54	This is a year with plenty of energy for expressing yourself and enjoying life. Matters related to hobbies, talents and food go well, and your mind gets more breathing room.
+55	This is a relaxed and creative month. It is a good time to bring out new ideas.
+56	This is a day when something enjoyable comes your way. Eat something tasty or spend time on a hobby.
+57	This is a year when your talent shows strongly, but your words and actions can easily turn rough. It favors creative work, presentations and technical fields, but be careful about friction with superiors.
+58	This is a month when you have a lot you want to say. If you polish how you express it, you may actually win recognition.
+59	Watch out for slips of the tongue. This is a day when even honesty needs some wrapping paper.
+60	This is a year when your range of activity widens and the flow of money grows. Big opportunities and big expenses arrive together, so stay mindful of the balance between income and spending.
+61	This is a month when people and money move actively. Keep your ears open for news about deals, sales and investments.
+62	This is a day when unexpected income or an unexpected meeting may arise. Just be careful not to overspend.
+63	This is a year of saving steadily and strengthening stability. Diligent effort turns into income, and the foundation of your life becomes firmer.
+64	This is a month when things build up step by step as planned. It is good for saving, settling accounts and tidying up contracts.
+65	This is a day when diligence is rewarded. Wrap up what needs doing one step at a time.
+66	This is a year when pressure and responsibility grow, but you grow a step further through the discipline they bring. The burden at work or in an organization may increase, so look after your health and make sure to rest.
+67	This is a month with some tension. If you take care of rules and deadlines first, you may actually be evaluated more favorably.
+68	This is a day when a sudden request or a bit of pressure may come your way. Stay calm and set your priorities.
+69	This is a year that comes with honor, stability and responsibility. It is a good time to receive public recognition such as a promotion, a qualification or a contract, and trust builds up.
+70	This is an orderly and tidy month. The more you keep your promises and follow the rules, the more trust you build.
+71	This is a day when the more properly you behave, the more recognition you earn. You can leave a good impression at formal occasions.
+72	This is a year when your unconventional perspective and intuition deepen. It is good for study, research and learning specialized skills, but you may overthink and be slow to decide.
+73	This is a good month for digging deep on your own. Try focusing on one field.
+74	This is a day when your instincts are sharp. Just be careful not to become too suspicious.
+75	This is a year when help and learning follow. Your luck with helpful people, documents and studies is good, and with a steadier mind, it is also a good time to learn something new.
+76	This is a month when you may receive help. Matters involving documents, contracts and study go smoothly.
+77	This is a day when someone’s advice or support gives you strength. Try being the first to say thank you.
+78	This year
+79	This month
+80	Today
+81	Year ${now.yearString}
+82	Month ${now.monthString}
+83	Day ${now.dayString}
+84	Tiger (In)
+85	Horse (O)
+86	Dog (Sul)
+87	Rabbit (Myo)
+88	Monkey (Sin)
+89	Rat (Ja)
+90	Dragon (Jin)
+91	Rooster (Yu)
+92	Snake (Sa)
+93	Ox (Chuk)
+94	Pig (Hae)
+95	Sheep (Mi)
+96	庚辰 (Gyeong-jin)
+97	庚戌 (Gyeong-sul)
+98	壬辰 (Im-jin)
+99	戊戌 (Mu-sul)
+100	This is an energy of charm and popularity that draws people in. You lift the mood and are popular with the opposite sex, but you need a steady center when choosing your relationships.
+101	This is an energy of movement and change. Your range of activity is wide, including travel, business trips and moving, and you meet opportunities outside rather than staying in one place for long.
+102	This is an energy of artistic, scholarly or spiritual sensitivity and solitude. Time spent absorbed in your own world can become a talent, but you can easily feel lonely.
+103	This is the energy of a helpful person who assists you in hard times. You often receive unexpected help in a crisis.
+104	This is an energy of very strong decisiveness and drive. Your leadership is outstanding, but you can become quite stubborn, so it helps to soften your words and attitude.
+105	Year Pillar
+106	Month Pillar
+107	Day Pillar
+108	Hour Pillar
+109	Year Branch
+110	Day Branch
+111	Peach Blossom Star (Doha-sal)
+112	${label} ${p.branch} (based on ${baseLabel})
+113	Traveling Horse Star (Yeokma-sal)
+114	Canopy Flower Star (Hwagae-sal)
+115	Heavenly Noble Star (Cheon-eul Gwi-in)
+116	Commanding Star (Goegang-sal)
+117	Day Pillar ${r.dayPillar.label}
+118	Mon
+119	Tue
+120	Wed
+121	Thu
+122	Fri
+123	Sat
+124	Sun

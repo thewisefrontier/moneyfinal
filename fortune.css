@@ -66,7 +66,7 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-stars i{font-style:normal;color:var(--fz-line)}
 .fz-cat p{font-size:14px;line-height:1.85}
 .fz-advice{font-size:13px;color:var(--fz-text2);margin-top:4px;line-height:1.75}
-.fz-advice::before{content:"역술인의 한마디 · ";color:var(--fz-amber);font-weight:700}
+.fz-advice::before{content:attr(data-l) " · ";color:var(--fz-amber);font-weight:700}
 .fz-lucky{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .fz-chip{padding:6px 12px;border-radius:999px;background:var(--fz-card2);border:1px solid var(--fz-line);font-size:12.5px}
 .fz-chip b{color:var(--fz-amber);margin-right:4px}
@@ -132,3 +132,15 @@ body.fz-page{background:var(--fz-bg);color:var(--fz-text)}
 .fz-deal .p{font-size:13px;font-weight:800;color:var(--fz-text)}
 .fz-deal .p em{font-style:normal;color:var(--fz-seal);margin-left:4px}
 .fz-li-note{margin-top:8px;font-size:11px;color:var(--fz-text2)}
+
+/* 설명 글·자주 묻는 질문 */
+.fz-info{margin:30px 0 8px;line-height:1.9;font-size:14.5px}
+.fz-info h2{font-size:18px;font-weight:800;margin:26px 0 10px;display:flex;align-items:center;gap:10px}
+.fz-info h2::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--fz-amber)}
+.fz-info p{margin:0 0 12px;color:var(--fz-text)}
+.fz-info table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 14px}
+.fz-info th,.fz-info td{border:1px solid var(--fz-line);padding:7px 8px;text-align:center}
+.fz-info th{background:var(--fz-card2);color:var(--fz-text2);font-weight:600}
+.fz-info details{border:1px solid var(--fz-line);border-radius:12px;background:var(--fz-card);margin:8px 0;padding:0 14px}
+.fz-info summary{cursor:pointer;padding:12px 0;font-weight:700;font-size:14px}
+.fz-info details p{color:var(--fz-text2);font-size:13.5px}

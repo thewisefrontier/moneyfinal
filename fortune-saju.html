@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="양력·음력 생년월일시를 입력하면 만세력으로 네 기둥을 세우고 일간 기질, 오행의 균형, 대운 흐름을 풀어 드립니다. 입력 정보는 서버로 보내지 않습니다.">
 <link rel="canonical" href="https://moneyfinal.pages.dev/fortune-saju">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/fortune-saju">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/fortune-saju">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/fortune-saju">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="머니파이널">
@@ -149,13 +152,29 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 </form>
 <div id="result" aria-live="polite"></div>
 <div class="fz-share"><a class="fz-btn ghost" href="fortune.html">운세방으로 돌아가기</a><a class="fz-btn ghost" href="fortune-zodiac.html">띠별 운세 보기</a></div>
+
+<section class="fz-info">
+<h2>사주팔자란?</h2>
+<p>사주(四柱)는 태어난 연·월·일·시 네 개의 기둥이고, 각 기둥을 천간 한 글자와 지지 한 글자로 적기 때문에 모두 여덟 글자(팔자, 八字)가 됩니다. 천간은 갑·을·병·정·무·기·경·신·임·계 열 글자, 지지는 자·축·인·묘·진·사·오·미·신·유·술·해 열두 글자입니다.</p>
+<h2>일간과 오행</h2>
+<p>네 기둥 가운데 태어난 날의 천간을 일간(日干)이라 하며, 사주에서 '나'를 상징합니다. 모든 글자는 나무(木)·불(火)·흙(土)·쇠(金)·물(水)의 오행에 속하고, 여덟 글자에 오행이 얼마나 고르게 퍼져 있는지가 타고난 기질과 보완할 점을 읽는 단서가 됩니다.</p>
+<h2>이 풀이는 어디까지 보나요?</h2>
+<p>이 화면은 일간(성격 경향)과 오행 분포, 대운의 시작 나이처럼 만세력으로 기계적으로 계산되는 범위만 풀이합니다. 전문 명리학의 격국·용신 판단까지는 다루지 않으니 재미와 참고로 보시고, 중요한 결정의 근거로 삼지는 마세요.</p>
+<h2>자주 묻는 질문</h2>
+<details><summary>태어난 시각을 모르면 어떻게 하나요?</summary><p>시각 칸을 '모름'으로 두면 시주 없이 연·월·일 세 기둥으로 풀이합니다. 시주가 빠지므로 풀이 범위가 조금 줄어듭니다.</p></details>
+<details><summary>양력과 음력 중 무엇으로 넣어야 하나요?</summary><p>아는 쪽으로 넣으시면 됩니다. 음력으로 넣을 때 그 달이 윤달이었다면 '윤달'을 체크하세요. 만세력이 양력과 음력을 서로 바꿔 계산합니다.</p></details>
+<details><summary>입력한 정보는 저장되나요?</summary><p>서버로 전송되지 않고 이 기기의 브라우저에서만 계산됩니다. 다음에 다시 입력하지 않도록 이 기기에만 저장해 두며, '저장된 입력 지우기'로 언제든 지울 수 있습니다.</p></details>
+</section>
 <p class="fz-note">⚠️ 운세 결과는 오락과 참고를 위한 것이며 특정 결과를 보장하지 않습니다. 중요한 결정의 근거로 삼지 마세요. 입력한 정보는 서버로 전송되지 않고 이 기기의 브라우저에서만 계산됩니다.</p>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script src="theme.js"></script><script src="fortune.bundle.js"></script><script src="fortune-lucky.js"></script><script>
 const F=window.Fortune,$=id=>document.getElementById(id);
+const FZ=window.FZ,EN=!!FZ,T=EN?FZ.T:(x=>x);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const ZD=EN?FZ.data:null;
+const L={stem:s=>EN?ZD.stems[s][0]:s,br:b=>EN?ZD.branches[b][0]:b,el:k=>EN?ZD.elements[k]:k,tg:x=>EN?(ZD.tenGods[x]||x):x,pair:p=>EN&&p&&p.length===2?ZD.stems[p[0]][0]+'-'+ZD.branches[p[1]][0]:p};
 const EL={'목':['木','#5aa86a'],'화':['火','#e0584f'],'토':['土','#c49a45'],'금':['金','#a5aab8'],'수':['水','#5b8fd9']};
 $('m').innerHTML=Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1}월</option>`).join('');
 $('d').innerHTML=Array.from({length:31},(_,i)=>`<option value="${i+1}">${i+1}일</option>`).join('');
@@ -173,20 +192,20 @@ function read(){
 function pillar(p,tg,label){
   if(!p)return `<div class="fz-pil dim"><div class="l">${label}</div><div class="tg">—</div><div class="ch">—</div><div class="ch">—</div><div class="tg">—</div></div>`;
   const se=F.stemElement(p.stem),be=F.branchElement(p.branch);
-  return `<div class="fz-pil"><div class="l">${label}</div><div class="tg">${esc(tg.stem)}</div>
-  <div class="ch" style="color:${EL[se][1]}">${F.stemHanja(p.stem)}<small>${esc(p.stem)}·${EL[se][0]}</small></div>
-  <div class="ch" style="color:${EL[be][1]}">${F.branchHanja(p.branch)}<small>${esc(p.branch)}·${EL[be][0]}</small></div><div class="tg">${esc(tg.branch)}</div></div>`;
+  return `<div class="fz-pil"><div class="l">${label}</div><div class="tg">${esc(L.tg(tg.stem))}</div>
+  <div class="ch" style="color:${EL[se][1]}">${F.stemHanja(p.stem)}<small>${EN?esc(L.stem(p.stem))+' · '+esc(L.el(se)):esc(p.stem)+'·'+EL[se][0]}</small></div>
+  <div class="ch" style="color:${EL[be][1]}">${F.branchHanja(p.branch)}<small>${EN?esc(L.br(p.branch))+' · '+esc(ZD.branches[p.branch][1]):esc(p.branch)+'·'+EL[be][0]}</small></div><div class="tg">${esc(L.tg(tg.branch))}</div></div>`;
 }
 function show(r,hasHour){
   const it=F.interpretSaju(r),nick=F.DAY_MASTER_NICKNAME[r.dayPillar.stem]||{name:'',emoji:'🔮'};
   const tg=r.tenGods,max=Math.max(1,...Object.values(r.elementCounts));
-  const els=Object.keys(EL).map(k=>`<div class="fz-el"><span>${EL[k][0]} ${k}</span><i><b style="width:${Math.round(r.elementCounts[k]/max*100)}%;background:${EL[k][1]}"></b></i><em>${r.elementCounts[k]}</em></div>`).join('');
-  const luck=r.luckPillars?`<div class="fz-cat"><div class="fz-cat-h"><b>대운 흐름</b><span class="fz-chip"><b>시작</b>${r.luckPillars.startAge}세</span></div><div class="fz-lucky">${r.luckPillars.pillars.slice(0,8).map(x=>`<span class="fz-chip"><b>${x.age}세</b>${esc(x.korean)}</span>`).join('')}</div></div>`:'';
-  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${nick.emoji}</span><div><h2>나의 사주 · ${esc(r.dayPillar.stem)}${esc(r.dayPillar.branch)}일주</h2><div class="d">일간은 ${esc(r.dayPillar.stem)}, 자연물로는 ${esc(nick.name)}에 해당합니다</div></div></div>
+  const els=Object.keys(EL).map(k=>`<div class="fz-el"><span>${EL[k][0]} ${esc(L.el(k))}</span><i><b style="width:${Math.round(r.elementCounts[k]/max*100)}%;background:${EL[k][1]}"></b></i><em>${r.elementCounts[k]}</em></div>`).join('');
+  const luck=r.luckPillars?`<div class="fz-cat"><div class="fz-cat-h"><b>대운 흐름</b><span class="fz-chip"><b>시작</b>${r.luckPillars.startAge}${EN?'':'세'}</span></div><div class="fz-lucky">${r.luckPillars.pillars.slice(0,8).map(x=>`<span class="fz-chip"><b>${x.age}${EN?'':'세'}</b>${esc(L.pair(x.korean))}</span>`).join('')}</div></div>`:'';
+  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${nick.emoji}</span><div><h2>${EN?'Your Saju · '+esc(L.stem(r.dayPillar.stem))+'-'+esc(L.br(r.dayPillar.branch))+' Day Pillar':'나의 사주 · '+esc(r.dayPillar.stem)+esc(r.dayPillar.branch)+'일주'}</h2><div class="d">${EN?'Your Day Master is '+esc(L.stem(r.dayPillar.stem))+' ('+esc(ZD.stems[r.dayPillar.stem][2])+' '+esc(L.el(F.stemElement(r.dayPillar.stem)))+'), like '+esc(T(nick.name))+'.':'일간은 '+esc(r.dayPillar.stem)+', 자연물로는 '+esc(nick.name)+'에 해당합니다'}</div></div></div>
   <p class="fz-say-line">태어난 날의 기운을 네 기둥으로 세워 보았습니다.${hasHour?'':' 태어난 시각을 모르시니 시주 없이 세 기둥으로 풀었습니다.'}</p>
   <div class="fz-pils">${pillar(r.hourPillar,tg.hour,'시주')}${pillar(r.dayPillar,tg.day,'일주')}${pillar(r.monthPillar,tg.month,'월주')}${pillar(r.yearPillar,tg.year,'년주')}</div>
-  <div class="fz-cat"><div class="fz-cat-h"><b>타고난 기질</b></div><p>${esc(it.dayMasterText)}</p></div>
-  <div class="fz-cat"><div class="fz-cat-h"><b>오행의 균형</b></div><div class="fz-els">${els}</div><p>${esc(it.elementSummaryText)}</p><div class="fz-lucky"><span class="fz-chip"><b>보완하는 색</b>${esc(it.luckyColor)}</span></div></div>
+  <div class="fz-cat"><div class="fz-cat-h"><b>타고난 기질</b></div><p>${esc(T(it.dayMasterText))}</p></div>
+  <div class="fz-cat"><div class="fz-cat-h"><b>오행의 균형</b></div><div class="fz-els">${els}</div><p>${esc(T(it.elementSummaryText))}</p><div class="fz-lucky"><span class="fz-chip"><b>보완하는 색</b>${esc(T(it.luckyColor))}</span></div></div>
   ${luck}<div id="lucky"></div></article>`;
   if(window.FZ_luckyMount)FZ_luckyMount($('lucky'),it.luckyItem);
   $('result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});

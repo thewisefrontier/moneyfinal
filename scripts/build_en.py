@@ -24,7 +24,8 @@ CORE = ['dividend-etf.html', 'us-fin.html', 'kr-fin.html', 'compare.html', 'supe
         'crypto.html', 'sim.html', 'about.html', 'privacy.html', 'terms.html', '404.html',
         'calc.html', 'calc-age.html', 'calc-date.html', 'calc-dividend.html', 'calc-fire-dividend.html', 'calc-fire.html',
         'calc-freelancer.html', 'calc-fx.html', 'calc-loan.html', 'calc-lotto-sim.html', 'calc-lotto-tax.html', 'calc-pyeong.html',
-        'calc-realty.html', 'calc-salary.html']
+        'calc-realty.html', 'calc-salary.html',
+        'fortune.html', 'fortune-zodiac.html', 'fortune-saju.html', 'fortune-tarot.html']
 
 
 NAME_PAGES = {'market.html', 'macro.html', 'macro-detail.html', 'indicator-detail.html', 'stock-detail.html', 'company.html', 'kr-fin.html',

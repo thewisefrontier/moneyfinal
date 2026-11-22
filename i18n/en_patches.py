@@ -168,3 +168,9 @@ PATCHES['compare.html'] += [
     ("if(u.get('m')==='us'){M='us';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='us'));}",
      "if(u.get('m')==='kr'){M='kr';document.querySelectorAll('#mk .tab').forEach(x=>x.classList.toggle('active',x.dataset.m==='kr'));}"),
 ]
+
+# ---- 운세(조선 역술인의 운세방): 영어 표시 계층을 먼저 싣고, 핫딜월드 상품 링크는 한국어판 전용이라 뺀다 ----
+for _p in ('fortune-zodiac.html', 'fortune-saju.html'):
+    PATCHES[_p] = [('<script src="fortune.bundle.js"></script><script src="fortune-lucky.js"></script>',
+                    '<script src="fortune-en.js"></script><script src="fortune.bundle.js"></script>')]
+PATCHES['fortune-tarot.html'] = [('<script src="fortune.bundle.js"></script>', '<script src="fortune-en.js"></script><script src="fortune.bundle.js"></script>')]

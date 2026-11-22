@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="쥐띠부터 돼지띠까지, 내 띠를 고르면 오늘·이번 주·이번 달·올해의 총운, 애정운, 금전운, 건강운을 조선 역술인이 적어 드립니다.">
 <link rel="canonical" href="https://moneyfinal.pages.dev/fortune-zodiac">
+<link rel="alternate" hreflang="ko" href="https://moneyfinal.pages.dev/fortune-zodiac">
+<link rel="alternate" hreflang="en" href="https://moneyfinal.pages.dev/en/fortune-zodiac">
+<link rel="alternate" hreflang="x-default" href="https://moneyfinal.pages.dev/fortune-zodiac">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="머니파이널">
@@ -137,11 +140,24 @@ footer{border-top:1px solid var(--border);padding:20px;text-align:center;font-si
 <div class="fz-tabs" id="tabs"></div>
 <div id="result" aria-live="polite"></div>
 <div class="fz-share"><a class="fz-btn ghost" href="fortune.html">운세방으로 돌아가기</a><a class="fz-btn ghost" href="fortune-saju.html">사주도 보기</a></div>
+
+<section class="fz-info">
+<h2>열두 띠는 어떻게 정해지나요?</h2>
+<p>띠는 태어난 해의 지지(地支)로 정해집니다. 지지는 자·축·인·묘·진·사·오·미·신·유·술·해 열두 글자이고, 각각 쥐·소·호랑이·토끼·용·뱀·말·양·원숭이·닭·개·돼지에 짝지어 12년마다 한 바퀴를 돕니다.</p>
+<table><tr><th>쥐</th><th>소</th><th>호랑이</th><th>토끼</th><th>용</th><th>뱀</th></tr><tr><td>1996</td><td>1997</td><td>1998</td><td>1999</td><td>2000</td><td>2001</td></tr>
+<tr><th>말</th><th>양</th><th>원숭이</th><th>닭</th><th>개</th><th>돼지</th></tr><tr><td>1990</td><td>1991</td><td>1992</td><td>1993</td><td>1994</td><td>1995</td></tr></table>
+<p>1월이나 2월 초에 태어났다면 띠가 헷갈릴 수 있습니다. 일반적으로는 음력 설을 기준으로 하지만, 사주에서는 입춘(양력 2월 4일 무렵)에 해가 바뀐다고 봅니다. 두 기준이 다른 해에는 두 띠를 모두 살펴보셔도 좋습니다.</p>
+<h2>자주 묻는 질문</h2>
+<details><summary>같은 띠면 모두 같은 운세인가요?</summary><p>이 화면의 띠별 운세는 띠만 기준으로 한 가벼운 점괘라 같은 띠는 같은 결과를 봅니다. 내 생년월일시에 맞춘 풀이를 원하시면 사주팔자를 보세요.</p></details>
+<details><summary>오늘 운세는 언제 바뀌나요?</summary><p>한국 시간 자정에 새 점괘로 바뀝니다. 같은 날에는 몇 번을 열어도 같은 결과가 나옵니다.</p></details>
+<details><summary>이번 주·이번 달·올해는 어떻게 다른가요?</summary><p>기간이 길수록 하루하루의 기복보다 큰 흐름을 담습니다. 주·월 점괘에는 기간 안에서 가장 좋은 날이나 시기를 막대 그래프로 보여 드립니다.</p></details>
+</section>
 <p class="fz-note">⚠️ 운세 결과는 오락과 참고를 위한 것이며 특정 결과를 보장하지 않습니다. 중요한 결정의 근거로 삼지 마세요. 입력한 정보는 서버로 전송되지 않고 이 기기의 브라우저에서만 계산됩니다.</p>
 </main>
 <footer>© 2026 머니파이널 · 세상의 모든 재테크<br><a href="about.html">사이트 소개</a> · <a href="privacy.html">개인정보처리방침</a> · <a href="terms.html">이용약관</a></footer>
 <script src="theme.js"></script><script src="fortune.bundle.js"></script><script src="fortune-lucky.js"></script><script>
 const F=window.Fortune,$=id=>document.getElementById(id);
+const FZ=window.FZ,EN=!!FZ,T=EN?FZ.T:(x=>x);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const PERIODS=[['today','오늘'],['week','이번 주'],['month','이번 달'],['year','올해']];
 const CATS=[['general','총운'],['love','애정운'],['money','금전운'],['health','건강운']];
@@ -150,22 +166,23 @@ const q=new URLSearchParams(location.search);
 let sign=(F.ZODIAC_SIGNS.some(z=>z.key===q.get('s'))&&q.get('s'))||store.get('fz_sign')||'rat';
 if(!F.ZODIAC_SIGNS.some(z=>z.key===sign))sign='rat';
 let per=PERIODS.some(p=>p[0]===q.get('p'))?q.get('p'):'today';
+const ZN=z=>EN?FZ.data.zodiac[z.label]:z.label;
 const stars=s=>{const n=Math.max(1,Math.min(5,Math.round((s-45)/10)));return '<span class="fz-stars" aria-label="5점 만점에 '+n+'점">'+'★'.repeat(n)+'<i>'+'★'.repeat(5-n)+'</i></span>';};
 function drawSigns(){
-  $('signs').innerHTML=F.ZODIAC_SIGNS.map(z=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(z.label)}</span><span class="y">${esc(z.years.split('·')[0])}년생 외</span></button>`).join('');
+  $('signs').innerHTML=F.ZODIAC_SIGNS.map(z=>`<button type="button" class="fz-sign" data-k="${z.key}" aria-pressed="${z.key===sign}"><span class="e">${z.emoji}</span><span class="n">${esc(ZN(z))}</span><span class="y">${EN?esc(z.years.split('·').slice(0,2).join(', ')):esc(z.years.split('·')[0])+'년생 외'}</span></button>`).join('');
   $('tabs').innerHTML=PERIODS.map(p=>`<button type="button" class="fz-tab" data-p="${p[0]}" aria-pressed="${p[0]===per}">${p[1]}</button>`).join('');
 }
 function draw(){
   const z=F.ZODIAC_SIGNS.find(x=>x.key===sign),pl=PERIODS.find(p=>p[0]===per)[1];
   const d=per==='today'?F.getDailyFortune(sign):F.getPeriodFortune(per,sign);
-  const when=per==='today'?d.date+' (한국 시간 기준)':d.rangeLabel;
+  const when=per==='today'?d.date+' (한국 시간 기준)':T(d.rangeLabel);
   const lucky=per==='today'
-    ?`<span class="fz-chip"><b>행운의 색</b>${esc(d.luckyColor)}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>행운의 시간</b>${esc(d.luckyTime)}</span>`
-    :`<span class="fz-chip"><b>행운의 색</b>${esc(d.luckyColor)}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>${esc(d.luckyExtra.label)}</b>${esc(d.luckyExtra.value)}</span>`;
-  const tl=per==='today'||!d.timeline?'':`<div class="fz-cat"><div class="fz-cat-h"><b>흐름</b></div><div class="fz-tl">${d.timeline.map((t,i)=>`<div class="${i===d.bestIndex?'best':''}"><span style="height:${Math.max(8,Math.round((t.score-40)*1.4))}px"></span>${esc(t.label)}</div>`).join('')}</div></div>`;
-  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${z.emoji}</span><div><h2>${esc(z.label)} · ${pl}의 점괘</h2><div class="d">${esc(when)}</div></div></div>
-  <p class="fz-say-line">${esc(z.label)}이시군요. 별과 절기를 살펴 ${pl}의 기운을 적었습니다.</p>
-  ${CATS.map(c=>`<div class="fz-cat"><div class="fz-cat-h"><b>${c[1]}</b>${stars(d[c[0]].score)}</div><p>${esc(d[c[0]].text)}</p><div class="fz-advice">${esc(d[c[0]].advice)}</div></div>`).join('')}
+    ?`<span class="fz-chip"><b>행운의 색</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>행운의 시간</b>${esc(T(d.luckyTime))}</span>`
+    :`<span class="fz-chip"><b>행운의 색</b>${esc(T(d.luckyColor))}</span><span class="fz-chip"><b>행운의 숫자</b>${d.luckyNumber}</span><span class="fz-chip"><b>${esc(T(d.luckyExtra.label))}</b>${esc(T(d.luckyExtra.value))}</span>`;
+  const tl=per==='today'||!d.timeline?'':`<div class="fz-cat"><div class="fz-cat-h"><b>흐름</b></div><div class="fz-tl">${d.timeline.map((t,i)=>`<div class="${i===d.bestIndex?'best':''}"><span style="height:${Math.max(8,Math.round((t.score-40)*1.4))}px"></span>${esc(T(t.label))}</div>`).join('')}</div></div>`;
+  $('result').innerHTML=`<article class="fz-scroll"><div class="fz-scroll-top"><span class="fz-seal">${z.emoji}</span><div><h2>${EN?'Year of the '+esc(ZN(z))+' · '+pl:esc(z.label)+' · '+pl+'의 점괘'}</h2><div class="d">${esc(when)}</div></div></div>
+  <p class="fz-say-line">${EN?'Born under the '+esc(ZN(z))+', I see. I have read the stars and the seasons and written down your fortune for '+pl.toLowerCase()+'.':esc(z.label)+'이시군요. 별과 절기를 살펴 '+pl+'의 기운을 적었습니다.'}</p>
+  ${CATS.map(c=>`<div class="fz-cat"><div class="fz-cat-h"><b>${c[1]}</b>${stars(d[c[0]].score)}</div><p>${esc(T(d[c[0]].text))}</p><div class="fz-advice" data-l="역술인의 한마디">${esc(T(d[c[0]].advice))}</div></div>`).join('')}
   ${tl}<div class="fz-lucky">${lucky}</div><div id="lucky"></div></article>`;
   if(window.FZ_luckyMount)FZ_luckyMount($('lucky'),d.luckyItem);
 }
