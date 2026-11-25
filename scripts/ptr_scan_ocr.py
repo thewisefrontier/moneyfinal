@@ -314,18 +314,16 @@ def main(years, limit=None, docs_only=None, max_pages=12):
 
 
 if __name__ == '__main__':
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    lim = int(sys.argv[sys.argv.index('--limit') + 1]) if '--limit' in sys.argv else None
-    if lim is not None and str(lim) in args:
-        args.remove(str(lim))
-    yrs = [int(a) for a in args] or [2026, 2025, 2024]
-    mp = int(sys.argv[sys.argv.index('--max-pages') + 1]) if '--max-pages' in sys.argv else 12
-    if '--max-pages' in sys.argv and str(mp) in args:
-        args.remove(str(mp))
-    DAILY_CAP = int(sys.argv[sys.argv.index('--max-calls') + 1]) if '--max-calls' in sys.argv else DAILY_CAP
-    if '--max-calls' in sys.argv and str(DAILY_CAP) in args:
-        args.remove(str(DAILY_CAP))
-    r = main(yrs, lim, max_pages=mp)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('years', nargs='*', type=int)
+    ap.add_argument('--limit', type=int, default=None)
+    ap.add_argument('--max-pages', type=int, default=12)
+    ap.add_argument('--max-calls', type=int, default=None)
+    o = ap.parse_args()  # 옵션 값(--max-calls 40의 40)이 연도로 읽히던 버그(2026-11-22~ Actions 매일 실패) 방지
+    if o.max_calls is not None:
+        DAILY_CAP = o.max_calls
+    r = main(o.years or [2026, 2025, 2024], o.limit, max_pages=o.max_pages)
     if r:
         for t in r['trades'][:12]:
             print(t)

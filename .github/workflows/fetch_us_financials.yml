@@ -2,8 +2,9 @@ name: 미국 기업 재무제표
 on:
   workflow_dispatch:
   schedule:
-    # 10-K는 결산 후 2~3개월 사이에 몰려 나오므로 매월 둘째 주 일요일 전후로 갱신 (SEC companyfacts, 호출 약 520회)
-    - cron: '0 3 8-14 * 0'
+    # 매주 일요일 갱신 (SEC companyfacts, 호출 약 520회). 예전 '8-14일 + 일요일' 식은 cron에서 일·요일 조건이 OR로 풀려
+    # 실제로는 매주 일요일 + 8~14일 매일 돌았으므로, 의도(주 1회)대로 명확히 바꿈.
+    - cron: '0 3 * * 0'
 jobs:
   run:
     runs-on: ubuntu-latest

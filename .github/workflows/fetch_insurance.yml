@@ -20,8 +20,9 @@ jobs:
       # 로컬(scripts/local_daily_update.py)로 옮김. 러너에서 다시 뚫리면 복구.
       # - name: 실손보험 수집
       #   env:
-      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      #     CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      #     CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
       #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
       #   run: python fetchers/insurance_info.py
       # 2026-09-24: 위 수집 스텝 자체가 이미 꺼져 있어서 이 export가 갱신할
@@ -30,8 +31,9 @@ jobs:
       # 초과의 원인 중 하나였음. 수집 스텝을 복구하기 전까진 같이 꺼둠.
       # - name: Export
       #   env:
-      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      #     CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      #     CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
       #   run: python exporters/export_data.py
       # - name: 커밋 및 배포
       #   run: |

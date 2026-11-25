@@ -25,14 +25,16 @@ jobs:
       # 로컬(scripts/local_daily_update.py)로 옮김. 러너에서 다시 뚫리면 복구.
       # - name: 은행통계
       #   env:
-      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      #     CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      #     CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
       #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
       #   run: python fetchers/bank_stats.py
       # - name: 금융회사 건전성(BIS)
       #   env:
-      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      #     SUPABASE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      #     CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      #     CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
       #     DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY_DEC }}
       #   run: python fetchers/financial_corp_info.py
       - name: Export
