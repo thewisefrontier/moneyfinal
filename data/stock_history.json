@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25",
+  "updated_at": "2026-11-26",
   "history": {
     "138040": [
       {
@@ -928,6 +928,14 @@
         "close_price": 123900,
         "flt_rt": 0.73,
         "volume": 83345,
+        "market_cap": 21386981489400
+      },
+      {
+        "stock_code": "138040",
+        "base_date": "2026-11-26",
+        "close_price": 123300,
+        "flt_rt": -0.4,
+        "volume": 61040,
         "market_cap": 21386981489400
       }
     ],
@@ -1859,6 +1867,14 @@
         "flt_rt": -0.89,
         "volume": 295753,
         "market_cap": 21364340020500
+      },
+      {
+        "stock_code": "011200",
+        "base_date": "2026-11-26",
+        "close_price": 22200,
+        "flt_rt": 0.23,
+        "volume": 320400,
+        "market_cap": 21364340020500
       }
     ],
     "096770": [
@@ -2788,6 +2804,14 @@
         "close_price": 90000,
         "flt_rt": -2.28,
         "volume": 184517,
+        "market_cap": 23346190022800
+      },
+      {
+        "stock_code": "096770",
+        "base_date": "2026-11-26",
+        "close_price": 93900,
+        "flt_rt": 4.33,
+        "volume": 265818,
         "market_cap": 23346190022800
       }
     ],
@@ -3719,6 +3743,14 @@
         "flt_rt": -0.32,
         "volume": 493112,
         "market_cap": 22177275365700
+      },
+      {
+        "stock_code": "316140",
+        "base_date": "2026-11-26",
+        "close_price": 31350,
+        "flt_rt": -0.16,
+        "volume": 570876,
+        "market_cap": 22177275365700
       }
     ],
     "000810": [
@@ -4648,6 +4680,14 @@
         "close_price": 504000,
         "flt_rt": -1.37,
         "volume": 28635,
+        "market_cap": 26877778746000
+      },
+      {
+        "stock_code": "000810",
+        "base_date": "2026-11-26",
+        "close_price": 513000,
+        "flt_rt": -0.19,
+        "volume": 30121,
         "market_cap": 26877778746000
       }
     ],
@@ -5579,6 +5619,14 @@
         "flt_rt": -1.62,
         "volume": 307043,
         "market_cap": 31513800533000
+      },
+      {
+        "stock_code": "086790",
+        "base_date": "2026-11-26",
+        "close_price": 120200,
+        "flt_rt": -0.58,
+        "volume": 368989,
+        "market_cap": 31513800533000
       }
     ],
     "005490": [
@@ -6508,6 +6556,14 @@
         "close_price": 253250,
         "flt_rt": -0.88,
         "volume": 60439,
+        "market_cap": 21831040688500
+      },
+      {
+        "stock_code": "005490",
+        "base_date": "2026-11-26",
+        "close_price": 249000,
+        "flt_rt": -0.99,
+        "volume": 70914,
         "market_cap": 21831040688500
       }
     ],
@@ -7439,6 +7495,14 @@
         "flt_rt": -5.82,
         "volume": 282075,
         "market_cap": 23535000000000
+      },
+      {
+        "stock_code": "010120",
+        "base_date": "2026-11-26",
+        "close_price": 113900,
+        "flt_rt": -0.35,
+        "volume": 223069,
+        "market_cap": 23535000000000
       }
     ],
     "068270": [
@@ -8368,6 +8432,14 @@
         "close_price": 216500,
         "flt_rt": 3.59,
         "volume": 433521,
+        "market_cap": 45114967288800
+      },
+      {
+        "stock_code": "068270",
+        "base_date": "2026-11-26",
+        "close_price": 216000,
+        "flt_rt": -0.46,
+        "volume": 202568,
         "market_cap": 45114967288800
       }
     ],
@@ -9299,6 +9371,14 @@
         "flt_rt": 2.69,
         "volume": 522173,
         "market_cap": 26406103651200
+      },
+      {
+        "stock_code": "035420",
+        "base_date": "2026-11-26",
+        "close_price": 160000,
+        "flt_rt": 0.63,
+        "volume": 241217,
+        "market_cap": 26406103651200
       }
     ],
     "055550": [
@@ -10228,6 +10308,14 @@
         "close_price": 84700,
         "flt_rt": -2.19,
         "volume": 283354,
+        "market_cap": 41358566055900
+      },
+      {
+        "stock_code": "055550",
+        "base_date": "2026-11-26",
+        "close_price": 85100,
+        "flt_rt": 0,
+        "volume": 300907,
         "market_cap": 41358566055900
       }
     ],
@@ -11159,6 +11247,14 @@
         "flt_rt": -10.66,
         "volume": 70825,
         "market_cap": 33750008246500
+      },
+      {
+        "stock_code": "034730",
+        "base_date": "2026-11-26",
+        "close_price": 433500,
+        "flt_rt": 1.17,
+        "volume": 69165,
+        "market_cap": 33750008246500
       }
     ],
     "006400": [
@@ -12088,6 +12184,14 @@
         "close_price": 421500,
         "flt_rt": -6.33,
         "volume": 265349,
+        "market_cap": 39527202465000
+      },
+      {
+        "stock_code": "006400",
+        "base_date": "2026-11-26",
+        "close_price": 426000,
+        "flt_rt": 1.91,
+        "volume": 340091,
         "market_cap": 39527202465000
       }
     ],
@@ -13019,6 +13123,14 @@
         "flt_rt": -2.18,
         "volume": 470743,
         "market_cap": 54267223302000
+      },
+      {
+        "stock_code": "105560",
+        "base_date": "2026-11-26",
+        "close_price": 146300,
+        "flt_rt": -1.22,
+        "volume": 733510,
+        "market_cap": 54267223302000
       }
     ],
     "012450": [
@@ -13948,6 +14060,14 @@
         "close_price": 635000,
         "flt_rt": 1.11,
         "volume": 46719,
+        "market_cap": 40838213592000
+      },
+      {
+        "stock_code": "012450",
+        "base_date": "2026-11-26",
+        "close_price": 626000,
+        "flt_rt": -1.11,
+        "volume": 78022,
         "market_cap": 40838213592000
       }
     ],
@@ -14879,6 +14999,14 @@
         "flt_rt": -3.98,
         "volume": 348488,
         "market_cap": 25589176629800
+      },
+      {
+        "stock_code": "066570",
+        "base_date": "2026-11-26",
+        "close_price": 137200,
+        "flt_rt": 0.15,
+        "volume": 177809,
+        "market_cap": 25589176629800
       }
     ],
     "207940": [
@@ -15808,6 +15936,14 @@
         "close_price": 1339000,
         "flt_rt": 3.8,
         "volume": 41686,
+        "market_cap": 67862534166000
+      },
+      {
+        "stock_code": "207940",
+        "base_date": "2026-11-26",
+        "close_price": 1353000,
+        "flt_rt": -0.73,
+        "volume": 30905,
         "market_cap": 67862534166000
       }
     ],
@@ -16739,6 +16875,14 @@
         "flt_rt": -0.21,
         "volume": 454782,
         "market_cap": 41735149486200
+      },
+      {
+        "stock_code": "000270",
+        "base_date": "2026-11-26",
+        "close_price": 93600,
+        "flt_rt": -2.5,
+        "volume": 899580,
+        "market_cap": 41735149486200
       }
     ],
     "034020": [
@@ -17668,6 +17812,14 @@
         "close_price": 40150,
         "flt_rt": -6.3,
         "volume": 1221863,
+        "market_cap": 38049332072400
+      },
+      {
+        "stock_code": "034020",
+        "base_date": "2026-11-26",
+        "close_price": 40800,
+        "flt_rt": 2,
+        "volume": 735723,
         "market_cap": 38049332072400
       }
     ],
@@ -18599,6 +18751,14 @@
         "flt_rt": -1.39,
         "volume": 138291,
         "market_cap": 29506062172500
+      },
+      {
+        "stock_code": "012330",
+        "base_date": "2026-11-26",
+        "close_price": 334000,
+        "flt_rt": -4.43,
+        "volume": 131074,
+        "market_cap": 29506062172500
       }
     ],
     "329180": [
@@ -19528,6 +19688,14 @@
         "close_price": 242000,
         "flt_rt": -3.39,
         "volume": 118027,
+        "market_cap": 32013173625000
+      },
+      {
+        "stock_code": "329180",
+        "base_date": "2026-11-26",
+        "close_price": 240250,
+        "flt_rt": -1.33,
+        "volume": 90348,
         "market_cap": 32013173625000
       }
     ],
@@ -20459,6 +20627,14 @@
         "flt_rt": -8.66,
         "volume": 181794,
         "market_cap": 46704263328000
+      },
+      {
+        "stock_code": "028260",
+        "base_date": "2026-11-26",
+        "close_price": 247000,
+        "flt_rt": 1.44,
+        "volume": 80364,
+        "market_cap": 46704263328000
       }
     ],
     "032830": [
@@ -21388,6 +21564,14 @@
         "close_price": 220000,
         "flt_rt": -10.93,
         "volume": 203267,
+        "market_cap": 49000000000000
+      },
+      {
+        "stock_code": "032830",
+        "base_date": "2026-11-26",
+        "close_price": 223500,
+        "flt_rt": 1.59,
+        "volume": 81717,
         "market_cap": 49000000000000
       }
     ],
@@ -22319,6 +22503,14 @@
         "flt_rt": -1.11,
         "volume": 126768,
         "market_cap": 89622000000000
+      },
+      {
+        "stock_code": "373220",
+        "base_date": "2026-11-26",
+        "close_price": 303500,
+        "flt_rt": -1.62,
+        "volume": 121337,
+        "market_cap": 89622000000000
       }
     ],
     "009150": [
@@ -23248,6 +23440,14 @@
         "close_price": 768000,
         "flt_rt": -10.49,
         "volume": 495957,
+        "market_cap": 83806326912000
+      },
+      {
+        "stock_code": "009150",
+        "base_date": "2026-11-26",
+        "close_price": 804000,
+        "flt_rt": 6.49,
+        "volume": 552522,
         "market_cap": 83806326912000
       }
     ],
@@ -24179,6 +24379,14 @@
         "flt_rt": -1.55,
         "volume": 241113,
         "market_cap": 60124348386000
+      },
+      {
+        "stock_code": "005380",
+        "base_date": "2026-11-26",
+        "close_price": 260500,
+        "flt_rt": -3.34,
+        "volume": 207732,
+        "market_cap": 60124348386000
       }
     ],
     "402340": [
@@ -25108,6 +25316,14 @@
         "close_price": 642000,
         "flt_rt": -10.21,
         "volume": 377747,
+        "market_cap": 102241098450000
+      },
+      {
+        "stock_code": "402340",
+        "base_date": "2026-11-26",
+        "close_price": 659000,
+        "flt_rt": 3.78,
+        "volume": 320630,
         "market_cap": 102241098450000
       }
     ],
@@ -26039,6 +26255,14 @@
         "flt_rt": -10.26,
         "volume": 3045373,
         "market_cap": 134718124983700
+      },
+      {
+        "stock_code": "005935",
+        "base_date": "2026-11-26",
+        "close_price": 137100,
+        "flt_rt": 1.71,
+        "volume": 2157401,
+        "market_cap": 134718124983700
       }
     ],
     "000660": [
@@ -26968,6 +27192,14 @@
         "close_price": 1049000,
         "flt_rt": -9.41,
         "volume": 2043787,
+        "market_cap": 932838750105000
+      },
+      {
+        "stock_code": "000660",
+        "base_date": "2026-11-26",
+        "close_price": 1067000,
+        "flt_rt": 3.59,
+        "volume": 2134289,
         "market_cap": 932838750105000
       }
     ],
@@ -27899,6 +28131,14 @@
         "flt_rt": -9.05,
         "volume": 12906500,
         "market_cap": 1259873040024000
+      },
+      {
+        "stock_code": "005930",
+        "base_date": "2026-11-26",
+        "close_price": 173400,
+        "flt_rt": 1.58,
+        "volume": 8379918,
+        "market_cap": 1259873040024000
       }
     ],
     "131290": [
@@ -28828,6 +29068,14 @@
         "close_price": 156500,
         "flt_rt": -5.78,
         "volume": 103299,
+        "market_cap": 2842787253000
+      },
+      {
+        "stock_code": "131290",
+        "base_date": "2026-11-26",
+        "close_price": 155200,
+        "flt_rt": 1.9,
+        "volume": 43966,
         "market_cap": 2842787253000
       }
     ],
@@ -29759,6 +30007,14 @@
         "flt_rt": -6.87,
         "volume": 82787,
         "market_cap": 3736763053500
+      },
+      {
+        "stock_code": "031980",
+        "base_date": "2026-11-26",
+        "close_price": 118600,
+        "flt_rt": 0.25,
+        "volume": 81798,
+        "market_cap": 3736763053500
       }
     ],
     "067310": [
@@ -30688,6 +30944,14 @@
         "close_price": 21100,
         "flt_rt": -8.26,
         "volume": 602306,
+        "market_cap": 2383697653650
+      },
+      {
+        "stock_code": "067310",
+        "base_date": "2026-11-26",
+        "close_price": 20900,
+        "flt_rt": 1.21,
+        "volume": 705180,
         "market_cap": 2383697653650
       }
     ],
@@ -31619,6 +31883,14 @@
         "flt_rt": -7.02,
         "volume": 131787,
         "market_cap": 3403588895000
+      },
+      {
+        "stock_code": "319660",
+        "base_date": "2026-11-26",
+        "close_price": 77300,
+        "flt_rt": 1.18,
+        "volume": 97450,
+        "market_cap": 3403588895000
       }
     ],
     "064760": [
@@ -32548,6 +32820,14 @@
         "close_price": 162200,
         "flt_rt": -5.64,
         "volume": 27352,
+        "market_cap": 2386805316000
+      },
+      {
+        "stock_code": "064760",
+        "base_date": "2026-11-26",
+        "close_price": 161800,
+        "flt_rt": 2.21,
+        "volume": 21783,
         "market_cap": 2386805316000
       }
     ],
@@ -33479,6 +33759,14 @@
         "flt_rt": -5.24,
         "volume": 146187,
         "market_cap": 2463474515000
+      },
+      {
+        "stock_code": "084370",
+        "base_date": "2026-11-26",
+        "close_price": 71200,
+        "flt_rt": 1.86,
+        "volume": 107935,
+        "market_cap": 2463474515000
       }
     ],
     "357780": [
@@ -34408,6 +34696,14 @@
         "close_price": 249500,
         "flt_rt": -0.2,
         "volume": 9584,
+        "market_cap": 2356905498000
+      },
+      {
+        "stock_code": "357780",
+        "base_date": "2026-11-26",
+        "close_price": 244500,
+        "flt_rt": -0.81,
+        "volume": 12128,
         "market_cap": 2356905498000
       }
     ],
@@ -35339,6 +35635,14 @@
         "flt_rt": 4.2,
         "volume": 28579,
         "market_cap": 2253982657300
+      },
+      {
+        "stock_code": "145020",
+        "base_date": "2026-11-26",
+        "close_price": 208000,
+        "flt_rt": -1.65,
+        "volume": 18650,
+        "market_cap": 2253982657300
       }
     ],
     "214450": [
@@ -36268,6 +36572,14 @@
         "close_price": 278000,
         "flt_rt": 5.1,
         "volume": 60558,
+        "market_cap": 2488320696000
+      },
+      {
+        "stock_code": "214450",
+        "base_date": "2026-11-26",
+        "close_price": 269500,
+        "flt_rt": -3.06,
+        "volume": 29890,
         "market_cap": 2488320696000
       }
     ],
@@ -37199,6 +37511,14 @@
         "flt_rt": -7.84,
         "volume": 378589,
         "market_cap": 2259449844800
+      },
+      {
+        "stock_code": "080220",
+        "base_date": "2026-11-26",
+        "close_price": 47050,
+        "flt_rt": 0.11,
+        "volume": 490930,
+        "market_cap": 2259449844800
       }
     ],
     "226950": [
@@ -38128,6 +38448,14 @@
         "close_price": 81900,
         "flt_rt": 3.67,
         "volume": 105269,
+        "market_cap": 2362972831400
+      },
+      {
+        "stock_code": "226950",
+        "base_date": "2026-11-26",
+        "close_price": 92800,
+        "flt_rt": 14.99,
+        "volume": 263198,
         "market_cap": 2362972831400
       }
     ],
@@ -39059,6 +39387,14 @@
         "flt_rt": -4.22,
         "volume": 546477,
         "market_cap": 4367993701000
+      },
+      {
+        "stock_code": "222800",
+        "base_date": "2026-11-26",
+        "close_price": 105300,
+        "flt_rt": 3.34,
+        "volume": 502226,
+        "market_cap": 4367993701000
       }
     ],
     "403870": [
@@ -39988,6 +40324,14 @@
         "close_price": 39550,
         "flt_rt": -4,
         "volume": 1401523,
+        "market_cap": 3925710000000
+      },
+      {
+        "stock_code": "403870",
+        "base_date": "2026-11-26",
+        "close_price": 38750,
+        "flt_rt": -0.13,
+        "volume": 1545299,
         "market_cap": 3925710000000
       }
     ],
@@ -40919,6 +41263,14 @@
         "flt_rt": -9.77,
         "volume": 90195,
         "market_cap": 3143523701400
+      },
+      {
+        "stock_code": "095340",
+        "base_date": "2026-11-26",
+        "close_price": 119800,
+        "flt_rt": 3.81,
+        "volume": 59697,
+        "market_cap": 3143523701400
       }
     ],
     "310210": [
@@ -41848,6 +42200,14 @@
         "close_price": 115700,
         "flt_rt": 8.74,
         "volume": 68723,
+        "market_cap": 2468556253800
+      },
+      {
+        "stock_code": "310210",
+        "base_date": "2026-11-26",
+        "close_price": 136000,
+        "flt_rt": 16.04,
+        "volume": 124981,
         "market_cap": 2468556253800
       }
     ],
@@ -42779,6 +43139,14 @@
         "flt_rt": -9.08,
         "volume": 526620,
         "market_cap": 4692420935600
+      },
+      {
+        "stock_code": "240810",
+        "base_date": "2026-11-26",
+        "close_price": 65100,
+        "flt_rt": 2.04,
+        "volume": 405433,
+        "market_cap": 4692420935600
       }
     ],
     "141080": [
@@ -43708,6 +44076,14 @@
         "close_price": 53600,
         "flt_rt": 1.9,
         "volume": 145322,
+        "market_cap": 2524724307600
+      },
+      {
+        "stock_code": "141080",
+        "base_date": "2026-11-26",
+        "close_price": 56600,
+        "flt_rt": 5.4,
+        "volume": 176114,
         "market_cap": 2524724307600
       }
     ],
@@ -44639,6 +45015,14 @@
         "flt_rt": -7.75,
         "volume": 45172,
         "market_cap": 4977098200000
+      },
+      {
+        "stock_code": "039030",
+        "base_date": "2026-11-26",
+        "close_price": 288000,
+        "flt_rt": 2.13,
+        "volume": 49520,
+        "market_cap": 4977098200000
       }
     ],
     "440110": [
@@ -45568,6 +45952,14 @@
         "close_price": 25950,
         "flt_rt": -9.9,
         "volume": 340719,
+        "market_cap": 2352712717650
+      },
+      {
+        "stock_code": "440110",
+        "base_date": "2026-11-26",
+        "close_price": 26150,
+        "flt_rt": 2.55,
+        "volume": 251722,
         "market_cap": 2352712717650
       }
     ],
@@ -46499,6 +46891,14 @@
         "flt_rt": -1.02,
         "volume": 341972,
         "market_cap": 3300981300000
+      },
+      {
+        "stock_code": "108490",
+        "base_date": "2026-11-26",
+        "close_price": 285500,
+        "flt_rt": -1.04,
+        "volume": 223752,
+        "market_cap": 3300981300000
       }
     ],
     "298380": [
@@ -47428,6 +47828,14 @@
         "close_price": 35700,
         "flt_rt": 3.93,
         "volume": 182845,
+        "market_cap": 2477445237750
+      },
+      {
+        "stock_code": "298380",
+        "base_date": "2026-11-26",
+        "close_price": 36900,
+        "flt_rt": 3.65,
+        "volume": 205282,
         "market_cap": 2477445237750
       }
     ],
@@ -48359,6 +48767,14 @@
         "flt_rt": 0.25,
         "volume": 114028,
         "market_cap": 2436663075000
+      },
+      {
+        "stock_code": "087010",
+        "base_date": "2026-11-26",
+        "close_price": 86300,
+        "flt_rt": 4.48,
+        "volume": 93106,
+        "market_cap": 2436663075000
       }
     ],
     "028300": [
@@ -49288,6 +49704,14 @@
         "close_price": 28100,
         "flt_rt": 1.44,
         "volume": 268018,
+        "market_cap": 5541046076800
+      },
+      {
+        "stock_code": "028300",
+        "base_date": "2026-11-26",
+        "close_price": 29100,
+        "flt_rt": 3.01,
+        "volume": 358913,
         "market_cap": 5541046076800
       }
     ],
@@ -50219,6 +50643,14 @@
         "flt_rt": -4.33,
         "volume": 304153,
         "market_cap": 4694649960000
+      },
+      {
+        "stock_code": "058470",
+        "base_date": "2026-11-26",
+        "close_price": 47650,
+        "flt_rt": 4.15,
+        "volume": 364548,
+        "market_cap": 4694649960000
       }
     ],
     "000250": [
@@ -51148,6 +51580,14 @@
         "close_price": 149300,
         "flt_rt": 3.32,
         "volume": 89154,
+        "market_cap": 4672728422400
+      },
+      {
+        "stock_code": "000250",
+        "base_date": "2026-11-26",
+        "close_price": 163200,
+        "flt_rt": 7.51,
+        "volume": 102157,
         "market_cap": 4672728422400
       }
     ],
@@ -52079,6 +52519,14 @@
         "flt_rt": -9.41,
         "volume": 690061,
         "market_cap": 8361953667900
+      },
+      {
+        "stock_code": "036930",
+        "base_date": "2026-11-26",
+        "close_price": 140200,
+        "flt_rt": 5.65,
+        "volume": 1332456,
+        "market_cap": 8361953667900
       }
     ],
     "277810": [
@@ -53008,6 +53456,14 @@
         "close_price": 472000,
         "flt_rt": 0,
         "volume": 132969,
+        "market_cap": 6838449945000
+      },
+      {
+        "stock_code": "277810",
+        "base_date": "2026-11-26",
+        "close_price": 483000,
+        "flt_rt": 4.21,
+        "volume": 153240,
         "market_cap": 6838449945000
       }
     ],
@@ -53939,6 +54395,14 @@
         "flt_rt": -3.15,
         "volume": 286615,
         "market_cap": 9870926250400
+      },
+      {
+        "stock_code": "086520",
+        "base_date": "2026-11-26",
+        "close_price": 65200,
+        "flt_rt": -1.66,
+        "volume": 418980,
+        "market_cap": 9870926250400
       }
     ],
     "196170": [
@@ -54869,6 +55333,14 @@
         "flt_rt": 4.45,
         "volume": 616985,
         "market_cap": 15637577358500
+      },
+      {
+        "stock_code": "196170",
+        "base_date": "2026-11-26",
+        "close_price": 173700,
+        "flt_rt": 2.42,
+        "volume": 343444,
+        "market_cap": 15637577358500
       }
     ],
     "247540": [
@@ -55798,6 +56270,14 @@
         "close_price": 86100,
         "flt_rt": -2.6,
         "volume": 188056,
+        "market_cap": 9078664275200
+      },
+      {
+        "stock_code": "247540",
+        "base_date": "2026-11-26",
+        "close_price": 82800,
+        "flt_rt": -1.78,
+        "volume": 186968,
         "market_cap": 9078664275200
       }
     ],
@@ -56975,6 +57455,14 @@
         "base_date": "2026-11-25",
         "close_price": 416.78,
         "flt_rt": 1.8026,
+        "volume": 0,
+        "market_cap": 768738890000
+      },
+      {
+        "stock_code": "V",
+        "base_date": "2026-11-26",
+        "close_price": 424.39,
+        "flt_rt": 1.8259,
         "volume": 0,
         "market_cap": 768738890000
       }
@@ -58155,6 +58643,14 @@
         "flt_rt": 0.139,
         "volume": 0,
         "market_cap": 842093819967
+      },
+      {
+        "stock_code": "JPM",
+        "base_date": "2026-11-26",
+        "close_price": 316.74,
+        "flt_rt": -0.1135,
+        "volume": 0,
+        "market_cap": 841137806956
       }
     ],
     "META": [
@@ -59333,6 +59829,14 @@
         "flt_rt": -1.3019,
         "volume": 0,
         "market_cap": 1507722036855
+      },
+      {
+        "stock_code": "META",
+        "base_date": "2026-11-26",
+        "close_price": 609.89,
+        "flt_rt": 3.4027,
+        "volume": 0,
+        "market_cap": 1559025875764
       }
     ],
     "TSLA": [
@@ -60509,6 +61013,14 @@
         "base_date": "2026-11-25",
         "close_price": 384.68,
         "flt_rt": -0.2024,
+        "volume": 0,
+        "market_cap": 1501178406279
+      },
+      {
+        "stock_code": "TSLA",
+        "base_date": "2026-11-26",
+        "close_price": 380.14,
+        "flt_rt": -1.1802,
         "volume": 0,
         "market_cap": 1501178406279
       }
@@ -61689,6 +62201,14 @@
         "flt_rt": -3.977,
         "volume": 0,
         "market_cap": 1437244429162
+      },
+      {
+        "stock_code": "AVGO",
+        "base_date": "2026-11-26",
+        "close_price": 300.86,
+        "flt_rt": -0.0731,
+        "volume": 0,
+        "market_cap": 1436194222490
       }
     ],
     "AMZN": [
@@ -62867,6 +63387,14 @@
         "flt_rt": -1.2138,
         "volume": 0,
         "market_cap": 2728046502630
+      },
+      {
+        "stock_code": "AMZN",
+        "base_date": "2026-11-26",
+        "close_price": 244.43,
+        "flt_rt": -3.1155,
+        "volume": 0,
+        "market_cap": 2643055176528
       }
     ],
     "MSFT": [
@@ -64045,6 +64573,14 @@
         "flt_rt": 0.7371,
         "volume": 0,
         "market_cap": 3684357795888
+      },
+      {
+        "stock_code": "MSFT",
+        "base_date": "2026-11-26",
+        "close_price": 489.93,
+        "flt_rt": -1.2497,
+        "volume": 0,
+        "market_cap": 3638315426813
       }
     ],
     "AAPL": [
@@ -65223,6 +65759,14 @@
         "flt_rt": 1.4295,
         "volume": 0,
         "market_cap": 5145409355572
+      },
+      {
+        "stock_code": "AAPL",
+        "base_date": "2026-11-26",
+        "close_price": 355.58,
+        "flt_rt": 0.4265,
+        "volume": 0,
+        "market_cap": 5167353254664
       }
     ],
     "GOOGL": [
@@ -66401,6 +66945,14 @@
         "flt_rt": -1.0812,
         "volume": 0,
         "market_cap": 3430640700000
+      },
+      {
+        "stock_code": "GOOGL",
+        "base_date": "2026-11-26",
+        "close_price": 273.1,
+        "flt_rt": -2.1322,
+        "volume": 0,
+        "market_cap": 3357491400000
       }
     ],
     "NVDA": [
@@ -67579,6 +68131,14 @@
         "flt_rt": -5.8588,
         "volume": 0,
         "market_cap": 3744658069238
+      },
+      {
+        "stock_code": "NVDA",
+        "base_date": "2026-11-26",
+        "close_price": 149.3,
+        "flt_rt": -3.913,
+        "volume": 0,
+        "market_cap": 3598130113071
       }
     ]
   }
